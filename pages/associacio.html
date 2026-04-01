@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Asociación · Gourmets de Tarragona</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/seccions.css">
+<style>
+.page-hero{background:var(--navy-dark);padding:140px 4% 80px;text-align:center;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:url('../assets/img/hero.jpg');background-size:cover;background-position:center;opacity:.12;}
+.page-hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto;}
+.page-hero .slabel{color:rgba(255,255,255,.45);}
+.page-hero .stitle{color:#fff;font-size:clamp(2rem,4vw,3.2rem);}
+.page-hero-desc{font-size:1rem;color:rgba(255,255,255,.6);font-weight:300;line-height:1.85;margin-top:8px;}
+
+.salut-grid{display:grid;grid-template-columns:260px 1fr;gap:64px;align-items:center;}
+.salut-avatar{width:100%;aspect-ratio:3/4;background:var(--navy);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;}
+.salut-avatar-ini{font-family:var(--font-serif);font-size:4rem;color:rgba(255,255,255,.2);line-height:1;}
+.salut-foto{position:relative;}
+.salut-foto::after{content:'';position:absolute;bottom:-14px;left:-14px;width:55%;height:55%;border:3px solid var(--gold);opacity:.35;z-index:0;}
+.salut-foto img{position:relative;z-index:1;width:100%;aspect-ratio:3/4;object-fit:cover;}
+.salut-cometes{font-family:var(--font-serif);font-size:5rem;color:var(--gold);opacity:.3;line-height:.6;display:block;margin-bottom:16px;}
+.salut-text{font-family:var(--font-serif);font-size:1.05rem;font-style:italic;color:#444;line-height:1.9;margin-bottom:24px;}
+.salut-nom{font-family:var(--font-serif);font-size:1.1rem;font-weight:600;color:var(--navy-dark);display:block;}
+.salut-carrec{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:block;margin-top:4px;}
+
+.missio-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+
+.proceso-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);}
+.paso{padding:36px 28px;text-align:center;border-right:1px solid var(--border);transition:background .3s;}
+.paso:nth-child(3){border-right:none;}
+.paso:nth-child(4),.paso:nth-child(5),.paso:nth-child(6){border-top:1px solid var(--border);}
+.paso:nth-child(6){border-right:none;}
+.paso:hover{background:var(--cream);}
+.paso-num{font-family:var(--font-serif);font-size:2.8rem;color:var(--navy);opacity:.15;margin-bottom:10px;line-height:1;}
+.paso h4{font-family:var(--font-serif);font-size:1.05rem;color:var(--navy-dark);margin-bottom:8px;}
+.paso p{font-size:.85rem;color:var(--muted);line-height:1.75;font-weight:300;}
+
+.criteria-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px;}
+.crit-card{background:#fff;border:1px solid var(--border);padding:28px 18px;text-align:center;transition:transform .3s,box-shadow .3s;}
+.crit-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.crit-num{font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--navy);opacity:.12;line-height:1;margin-bottom:8px;}
+.crit-ico{font-size:1.3rem;color:var(--gold);margin-bottom:10px;display:block;}
+.crit-nom{font-family:var(--font-serif);font-size:.98rem;color:var(--navy-dark);margin-bottom:6px;font-weight:600;}
+.crit-desc{font-size:.78rem;color:var(--muted);line-height:1.6;font-weight:300;}
+.crit-score{margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:.62rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);}
+.stars{color:var(--gold);font-size:.7rem;letter-spacing:2px;margin-top:3px;}
+
+.bacus-bloc{background:var(--navy-dark);padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;}
+.bacus-text .stitle{color:#fff;}
+.bacus-text .slabel{color:rgba(184,146,74,.8);}
+.bacus-text p{font-size:.93rem;color:rgba(255,255,255,.58);font-weight:300;line-height:1.85;margin-bottom:12px;}
+.bacus-criteris{display:flex;flex-direction:column;gap:12px;}
+.bacus-crit{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.05);padding:14px 18px;border-left:3px solid rgba(184,146,74,.4);}
+.bacus-crit-nom{font-size:.88rem;color:rgba(255,255,255,.78);font-weight:400;flex:1;}
+.bacus-crit-score{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(184,146,74,.65);white-space:nowrap;}
+
+.junta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.junta-card{background:#fff;border:1px solid var(--border);padding:28px 18px;text-align:center;transition:transform .3s,box-shadow .3s;}
+.junta-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.junta-avatar{width:60px;height:60px;border-radius:50%;background:var(--navy);margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.3rem;color:#fff;}
+.junta-nombre{font-family:var(--font-serif);font-size:.95rem;color:var(--navy-dark);margin-bottom:5px;line-height:1.3;}
+.junta-cargo{font-size:.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);}
+
+.estatuts-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;}
+.estatut-resum h3{font-family:var(--font-serif);font-size:1.1rem;color:var(--navy-dark);margin-bottom:6px;margin-top:22px;}
+.estatut-resum h3:first-child{margin-top:0;}
+.estatut-resum p{font-size:.87rem;color:var(--muted);line-height:1.75;font-weight:300;}
+.estatuts-doc{background:var(--cream);border:1px solid var(--border);padding:40px;text-align:center;position:sticky;top:100px;}
+.estatuts-doc-ico{font-size:3rem;color:var(--navy);opacity:.18;margin-bottom:16px;}
+.estatuts-doc h3{font-family:var(--font-serif);font-size:1.2rem;color:var(--navy-dark);margin-bottom:10px;}
+.estatuts-doc p{font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:22px;}
+.btn-download{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:#fff;padding:13px 26px;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;transition:.2s;}
+.btn-download:hover{background:var(--navy-dark);}
+.estatuts-data{font-size:.68rem;color:var(--muted);margin-top:14px;letter-spacing:1px;}
+
+@media(max-width:1024px){
+  .salut-grid{grid-template-columns:200px 1fr;gap:40px;}
+  .criteria-grid{grid-template-columns:repeat(2,1fr);}
+  .junta-grid{grid-template-columns:repeat(2,1fr);}
+  .bacus-bloc{grid-template-columns:1fr;padding:36px;}
+  .estatuts-grid{grid-template-columns:1fr;}
+  .estatuts-doc{position:static;}
+}
+@media(max-width:680px){
+  .salut-grid,.missio-grid{grid-template-columns:1fr;gap:36px;}
+  .criteria-grid{grid-template-columns:1fr 1fr;}
+  .junta-grid{grid-template-columns:1fr 1fr;}
+  .proceso-grid{grid-template-columns:1fr;}
+  .paso{border-right:none!important;border-bottom:1px solid var(--border);}
+  .page-hero{padding:120px 5% 60px;}
+}
+</style>
+</head>
+<body>
+<nav id="nav" class="solid">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona"></a>
+    <div class="nav-menu">
+      <div class="nav-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
+      <div class="nav-item"><span data-i18n="nav_asoc"></span><div class="dropdown"><a href="associacio.html" data-i18n="nav_quienes"></a><a href="associacio.html#funcionament" data-i18n="nav_como"></a><a href="associacio.html#valoracio" data-i18n="nav_sistema"></a></div></div>
+      <div class="nav-item"><span data-i18n="nav_rest"></span><div class="dropdown"><a href="restaurants.html" data-i18n="nav_visites"></a><a href="restaurants.html#historic" data-i18n="nav_historic"></a></div></div>
+      <div class="nav-item"><span data-i18n="nav_premios"></span><div class="dropdown"><a href="premis.html" data-i18n="nav_gastronia"></a><a href="premis.html#bacus" data-i18n="nav_bacus"></a><a href="premis.html#palmares" data-i18n="nav_palmares"></a></div></div>
+      <div class="nav-item"><span data-i18n="nav_eventos"></span><div class="dropdown"><a href="esdeveniments.html" data-i18n="nav_cenes"></a><a href="esdeveniments.html#cates" data-i18n="nav_cates"></a></div></div>
+      <div class="nav-item"><a href="blog.html" data-i18n="nav_blog"></a></div>
+      <div class="nav-item"><a href="contacte.html" data-i18n="nav_contacto"></a></div>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
+    <div class="mobile-item"><span onclick="toggleMobileSub(this)" data-i18n="nav_asoc_short"></span><div class="mobile-sub"><a href="associacio.html" data-i18n="nav_quienes"></a></div></div>
+    <div class="mobile-item"><a href="restaurants.html" data-i18n="nav_rest_short"></a></div>
+    <div class="mobile-item"><a href="blog.html" data-i18n="nav_blog"></a></div>
+    <div class="mobile-item"><a href="contacte.html" data-i18n="nav_contacto"></a></div>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="slabel" data-i18n="asoc_hero_label"></p>
+    <h1 class="stitle" data-i18n="asoc_hero_title"></h1>
+    <p class="page-hero-desc" data-i18n="asoc_hero_desc"></p>
+  </div>
+</div>
+
+<!-- SALUTACIÓ PRESIDENT -->
+<section class="sec sec-gray">
+  <div class="sec-inner">
+    <div class="salut-grid">
+      <div class="salut-foto">
+        <div class="salut-avatar"><div class="salut-avatar-ini">JM</div></div>
+        <!-- Quan tinguis foto: <img src="../assets/img/president.jpg" alt="Juan Manuel Rodríguez Yarritu"> -->
+      </div>
+      <div>
+        <span class="salut-cometes">"</span>
+        <p class="salut-text" data-i18n="salut_text"></p>
+        <span class="salut-nom">Juan Manuel Rodríguez Yarritu</span>
+        <span class="salut-carrec" data-i18n="salut_carrec"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSIÓ -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="missio-grid">
+      <div>
+        <p class="slabel" data-i18n="missio_label"></p>
+        <h2 class="stitle" data-i18n="missio_title"></h2>
+        <div class="sdiv"></div>
+        <p class="about-p" data-i18n="missio_p1"></p>
+        <p class="about-p" data-i18n="missio_p2"></p>
+        <p class="about-p" data-i18n="missio_p3"></p>
+        <a href="contacte.html" class="btn-primary" style="margin-top:24px;display:inline-block;" data-i18n="missio_cta"></a>
+      </div>
+      <div class="img-frame"><img src="../assets/img/about.jpg" alt="Gourmets de Tarragona"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCÉS -->
+<section class="sec sec-gray" id="funcionament">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:48px;">
+      <p class="slabel" style="justify-content:center;display:flex;" data-i18n="proceso_label"></p>
+      <h2 class="stitle" data-i18n="proceso_title"></h2>
+      <div class="sdiv" style="margin:0 auto;"></div>
+    </div>
+    <div class="proceso-grid">
+      <div class="paso"><div class="paso-num">01</div><h4 data-i18n="paso1_title"></h4><p data-i18n="paso1_desc"></p></div>
+      <div class="paso"><div class="paso-num">02</div><h4 data-i18n="paso2_title"></h4><p data-i18n="paso2_desc"></p></div>
+      <div class="paso"><div class="paso-num">03</div><h4 data-i18n="paso3_title"></h4><p data-i18n="paso3_desc"></p></div>
+      <div class="paso"><div class="paso-num">04</div><h4 data-i18n="paso4_title"></h4><p data-i18n="paso4_desc"></p></div>
+      <div class="paso"><div class="paso-num">05</div><h4 data-i18n="paso5_title"></h4><p data-i18n="paso5_desc"></p></div>
+      <div class="paso"><div class="paso-num">06</div><h4 data-i18n="paso6_title"></h4><p data-i18n="paso6_desc"></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VALORACIÓ -->
+<section class="sec" id="valoracio">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:16px;">
+      <p class="slabel" style="justify-content:center;display:flex;" data-i18n="val_label"></p>
+      <h2 class="stitle" data-i18n="val_title"></h2>
+      <div class="sdiv" style="margin:0 auto;"></div>
+      <p style="font-size:.93rem;color:var(--muted);max-width:640px;margin:0 auto 40px;line-height:1.8;" data-i18n="val_desc"></p>
+    </div>
+
+    <p class="slabel" style="margin-bottom:20px;" data-i18n="gastronia_val_label"></p>
+    <div class="criteria-grid">
+      <div class="crit-card"><div class="crit-num">01</div><i class="fa fa-table-cells crit-ico"></i><p class="crit-nom" data-i18n="c1_nom"></p><p class="crit-desc" data-i18n="c1_desc"></p><div class="crit-score" data-i18n="puntuacio"></div><div class="stars">★★★★★</div></div>
+      <div class="crit-card"><div class="crit-num">02</div><i class="fa fa-palette crit-ico"></i><p class="crit-nom" data-i18n="c2_nom"></p><p class="crit-desc" data-i18n="c2_desc"></p><div class="crit-score" data-i18n="puntuacio"></div><div class="stars">★★★★★</div></div>
+      <div class="crit-card"><div class="crit-num">03</div><i class="fa fa-concierge-bell crit-ico"></i><p class="crit-nom" data-i18n="c3_nom"></p><p class="crit-desc" data-i18n="c3_desc"></p><div class="crit-score" data-i18n="puntuacio"></div><div class="stars">★★★★★</div></div>
+      <div class="crit-card"><div class="crit-num">04</div><i class="fa fa-leaf crit-ico"></i><p class="crit-nom" data-i18n="c4_nom"></p><p class="crit-desc" data-i18n="c4_desc"></p><div class="crit-score" data-i18n="puntuacio"></div><div class="stars">★★★★★</div></div>
+      <div class="crit-card"><div class="crit-num">05</div><i class="fa fa-wine-glass-alt crit-ico"></i><p class="crit-nom" data-i18n="c5_nom"></p><p class="crit-desc" data-i18n="c5_desc"></p><div class="crit-score" data-i18n="puntuacio"></div><div class="stars">★★★★★</div></div>
+      <div class="crit-card"><div class="crit-num">06</div><i class="fa fa-fire crit-ico"></i><p class="crit-nom" data-i18n="c6_nom"></p><p class="crit-desc" data-i18n="c6_desc"></p><div class="crit-score" data-i18n="puntuacio"></div><div class="stars">★★★★★</div></div>
+      <div class="crit-card"><div class="crit-num">07</div><i class="fa fa-cake-candles crit-ico"></i><p class="crit-nom" data-i18n="c7_nom"></p><p class="crit-desc" data-i18n="c7_desc"></p><div class="crit-score" data-i18n="puntuacio"></div><div class="stars">★★★★★</div></div>
+      <div class="crit-card"><div class="crit-num">08</div><i class="fa fa-comment crit-ico"></i><p class="crit-nom" data-i18n="c8_nom"></p><p class="crit-desc" data-i18n="c8_desc"></p><div class="crit-score" data-i18n="puntuacio"></div><div class="stars">★★★★★</div></div>
+    </div>
+
+    <div class="bacus-bloc">
+      <div class="bacus-text">
+        <p class="slabel" data-i18n="bacus_val_label"></p>
+        <h3 class="stitle" data-i18n="bacus_val_title"></h3>
+        <div class="sdiv"></div>
+        <p data-i18n="bacus_val_desc"></p>
+        <p data-i18n="bacus_val_desc2"></p>
+      </div>
+      <div class="bacus-criteris">
+        <div class="bacus-crit"><i class="fa fa-eye" style="color:rgba(184,146,74,.6);width:18px;"></i><span class="bacus-crit-nom" data-i18n="bv1"></span><span class="bacus-crit-score" data-i18n="puntuacio"></span></div>
+        <div class="bacus-crit"><i class="fa fa-wind" style="color:rgba(184,146,74,.6);width:18px;"></i><span class="bacus-crit-nom" data-i18n="bv2"></span><span class="bacus-crit-score" data-i18n="puntuacio"></span></div>
+        <div class="bacus-crit"><i class="fa fa-wine-glass" style="color:rgba(184,146,74,.6);width:18px;"></i><span class="bacus-crit-nom" data-i18n="bv3"></span><span class="bacus-crit-score" data-i18n="puntuacio"></span></div>
+        <div class="bacus-crit"><i class="fa fa-link" style="color:rgba(184,146,74,.6);width:18px;"></i><span class="bacus-crit-nom" data-i18n="bv4"></span><span class="bacus-crit-score" data-i18n="puntuacio"></span></div>
+        <div class="bacus-crit"><i class="fa fa-star" style="color:rgba(184,146,74,.6);width:18px;"></i><span class="bacus-crit-nom" data-i18n="bv5"></span><span class="bacus-crit-score" data-i18n="puntuacio"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JUNTA -->
+<section class="sec sec-gray">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:48px;">
+      <p class="slabel" style="justify-content:center;display:flex;" data-i18n="junta_label"></p>
+      <h2 class="stitle" data-i18n="junta_title"></h2>
+      <div class="sdiv" style="margin:0 auto;"></div>
+    </div>
+    <div class="junta-grid">
+      <div class="junta-card"><div class="junta-avatar">JM</div><p class="junta-nombre">Juan Manuel Rodríguez Yarritu</p><p class="junta-cargo" data-i18n="cargo_president"></p></div>
+      <div class="junta-card"><div class="junta-avatar">JF</div><p class="junta-nombre">Jacob Folch Roma</p><p class="junta-cargo" data-i18n="cargo_vicepresident"></p></div>
+      <div class="junta-card"><div class="junta-avatar">VG</div><p class="junta-nombre">Vicente Guillén Mejías</p><p class="junta-cargo" data-i18n="cargo_secretari"></p></div>
+      <div class="junta-card"><div class="junta-avatar">EG</div><p class="junta-nombre">Eloi Gonzalbo Tarragó</p><p class="junta-cargo" data-i18n="cargo_rrpp"></p></div>
+      <div class="junta-card"><div class="junta-avatar">VB</div><p class="junta-nombre">Vicente Baquero Rosario</p><p class="junta-cargo" data-i18n="cargo_gastronomic"></p></div>
+      <div class="junta-card"><div class="junta-avatar">DM</div><p class="junta-nombre">Dámaso Molina Sereno</p><p class="junta-cargo" data-i18n="cargo_cultural"></p></div>
+      <div class="junta-card"><div class="junta-avatar">AM</div><p class="junta-nombre">Ángeles Muñoz</p><p class="junta-cargo" data-i18n="cargo_secretaria"></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTATUTS -->
+<section class="sec" id="estatuts">
+  <div class="sec-inner">
+    <div style="margin-bottom:48px;">
+      <p class="slabel" data-i18n="est_label"></p>
+      <h2 class="stitle" data-i18n="est_title"></h2>
+      <div class="sdiv"></div>
+    </div>
+    <div class="estatuts-grid">
+      <div class="estatut-resum">
+        <h3 data-i18n="est_cap1"></h3><p data-i18n="est_cap1_desc"></p>
+        <h3 data-i18n="est_cap2"></h3><p data-i18n="est_cap2_desc"></p>
+        <h3 data-i18n="est_cap3"></h3><p data-i18n="est_cap3_desc"></p>
+        <h3 data-i18n="est_cap4"></h3><p data-i18n="est_cap4_desc"></p>
+        <h3 data-i18n="est_cap5"></h3><p data-i18n="est_cap5_desc"></p>
+      </div>
+      <div class="estatuts-doc">
+        <div class="estatuts-doc-ico"><i class="fa fa-file-pdf"></i></div>
+        <h3 data-i18n="est_doc_title"></h3>
+        <p data-i18n="est_doc_desc"></p>
+        <a href="../assets/ESTATUTOS.pdf" target="_blank" class="btn-download">
+          <i class="fa fa-download" style="font-size:.85rem;"></i>
+          <span data-i18n="est_doc_btn"></span>
+        </a>
+        <p class="estatuts-data" data-i18n="est_doc_data"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec" style="background:var(--navy-dark);text-align:center;">
+  <div class="sec-inner">
+    <p class="slabel" style="color:rgba(255,255,255,.4);justify-content:center;display:flex;" data-i18n="cta_label"></p>
+    <h2 class="stitle" style="color:#fff;" data-i18n="cta_title"></h2>
+    <div class="sdiv" style="margin:0 auto;background:rgba(255,255,255,.2);"></div>
+    <p class="about-p" style="color:rgba(255,255,255,.55);max-width:520px;margin:0 auto 32px;" data-i18n="cta_desc"></p>
+    <a href="contacte.html" class="btn-primary" data-i18n="cta_btn"></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona">
+      <p data-i18n="footer_desc"></p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4 data-i18n="footer_nav"></h4><ul><li><a href="associacio.html" data-i18n="nav_quienes"></a></li><li><a href="restaurants.html" data-i18n="nav_rest_short"></a></li><li><a href="premis.html" data-i18n="nav_premios_short"></a></li><li><a href="blog.html" data-i18n="nav_blog"></a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_legal"></h4><ul><li><a href="#" data-i18n="footer_avis"></a></li><li><a href="#" data-i18n="footer_privacitat"></a></li><li><a href="../assets/ESTATUTOS.pdf" target="_blank" data-i18n="est_label"></a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_contacte"></h4><p>gourmetsdetarragona@gmail.com</p><p>Tarragona, Catalunya</p></div>
+  </div>
+  <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
+</footer>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+const pageTranslations = {
+  asoc_hero_label:{es:'La Asociación',ca:"L'Associació"},
+  asoc_hero_title:{es:'Quiénes somos y cómo funcionamos',ca:'Qui som i com funcionem'},
+  asoc_hero_desc:{es:'Una comunidad de apasionados de la gastronomía que se reúnen para descubrir, valorar y celebrar lo mejor de la cocina tarraconense.',ca:"Una comunitat d'apassionats de la gastronomia que es reuneixen per descobrir, valorar i celebrar el millor de la cuina tarragonina."},
+  salut_text:{es:'Bienvenidos a Gourmets de Tarragona. Nuestra asociación nació de una pasión compartida: la gastronomía como forma de conocer el territorio, sus gentes y su cultura. A lo largo de los años hemos construido una comunidad comprometida con la honestidad, el rigor y el placer de la buena mesa. Espero que este espacio os inspire tanto como nos inspira a nosotros.',ca:"Benvinguts a Gourmets de Tarragona. La nostra associació va néixer d'una passió compartida: la gastronomia com a forma de conèixer el territori, les seves gents i la seva cultura. Al llarg dels anys hem construït una comunitat compromesa amb l'honestedat, el rigor i el plaer de la bona taula. Espero que aquest espai us inspiri tant com ens inspira a nosaltres."},
+  salut_carrec:{es:'Presidente · Gourmets de Tarragona',ca:'President · Gourmets de Tarragona'},
+  missio_label:{es:'Nuestra misión',ca:'La nostra missió'},
+  missio_title:{es:'El arte de descubrir la buena mesa',ca:"L'art de descobrir la bona taula"},
+  missio_p1:{es:'Gourmets de Tarragona nace del respeto profundo por la gastronomía del Camp de Tarragona y por todas las personas que, con su trabajo diario y su pasión, hacen posible que nuestro territorio siga creciendo culinariamente.',ca:"Gourmets de Tarragona neix del respecte profund per la gastronomia del Camp de Tarragona i per totes les persones que, amb el seu treball diari i la seva passió, fan possible que el nostre territori continuï creixent culinàriament."},
+  missio_p2:{es:'Somos gourmets independientes que creen en el poder de la gastronomía para unir personas, territorios y tradiciones. Nuestro compromiso ha sido siempre mantener una mirada honesta, constructiva y vinculada al producto local.',ca:"Som gourmets independents que creuen en el poder de la gastronomia per unir persones, territoris i tradicions. El nostre compromís ha estat sempre mantenir una mirada honesta, constructiva i vinculada al producte local."},
+  missio_p3:{es:'Promovemos la gastronomía del Camp de Tarragona poniendo en valor el producto, la restauración y las personas que sostienen el sector día a día.',ca:"Promovem la gastronomia del Camp de Tarragona posant en valor el producte, la restauració i les persones que sostenen el sector dia a dia."},
+  missio_cta:{es:'Contactar con nosotros',ca:'Contactar amb nosaltres'},
+  proceso_label:{es:'El proceso',ca:'El procés'},
+  proceso_title:{es:'Cómo funciona cada visita',ca:'Com funciona cada visita'},
+  paso1_title:{es:'Selección',ca:'Selecció'},paso1_desc:{es:'El comité selecciona los restaurantes a visitar cada temporada.',ca:'El comitè selecciona els restaurants a visitar cada temporada.'},
+  paso2_title:{es:'Previa',ca:'Prèvia'},paso2_desc:{es:'Se publica una crónica previa con historia, chef, carta y curiosidades.',ca:'Es publica una crònica prèvia amb història, cuiner, carta i curiositats.'},
+  paso3_title:{es:'Visita',ca:'Visita'},paso3_desc:{es:'Los socios viven la experiencia completa: aperitivos, menú y maridaje.',ca:"Els socis viuen l'experiència completa: aperitius, menú i maridatge."},
+  paso4_title:{es:'Valoración',ca:'Valoració'},paso4_desc:{es:'Cada socio puntúa de 1 a 5 en cada uno de los 8 criterios, de forma independiente.',ca:"Cada soci puntua de l'1 al 5 en cadascun dels 8 criteris, de forma independent."},
+  paso5_title:{es:'Crónica',ca:'Crònica'},paso5_desc:{es:'Se publica la crónica con fotografías y la puntuación media obtenida.',ca:'Es publica la crònica amb fotografies i la puntuació mitjana obtinguda.'},
+  paso6_title:{es:'Premios',ca:'Premis'},paso6_desc:{es:'Al final del año se otorgan el Trofeo Gastronía y el Premio Baccus.',ca:"Al final de l'any s'atorguen el Trofeu Gastronía i el Premi Bacus."},
+  val_label:{es:'Sistema de valoración',ca:'Sistema de valoració'},
+  val_title:{es:'Qué evaluamos en cada visita',ca:'Què avaluem en cada visita'},
+  val_desc:{es:'Cada socio vota de forma completamente independiente. La puntuación final es la media de todas las valoraciones individuales de los socios asistentes.',ca:"Cada soci vota de forma completament independent. La puntuació final és la mitjana de totes les valoracions individuals dels socis assistents."},
+  puntuacio:{es:'Puntuación 1 — 5',ca:'Puntuació 1 — 5'},
+  gastronia_val_label:{es:'Trofeo Gastronía · 8 criterios de valoración',ca:'Trofeu Gastronía · 8 criteris de valoració'},
+  c1_nom:{es:'Presentación de la mesa',ca:'Presentació de la taula'},c1_desc:{es:'Montaje, vajilla, cristalería, cubertería y disposición general.',ca:'Muntatge, vaixella, cristalleria, coberteria i disposició general.'},
+  c2_nom:{es:'Ambiente y decoración',ca:'Ambient i decoració'},c2_desc:{es:'Interiorismo, iluminación, música y confort del espacio.',ca:"Interiorisme, il·luminació, música i confort de l'espai."},
+  c3_nom:{es:'Servicio',ca:'Servei'},c3_desc:{es:'Profesionalidad, ritmo, trato al cliente y conocimiento del producto.',ca:'Professionalitat, ritme, tracte al client i coneixement del producte.'},
+  c4_nom:{es:'Materia prima',ca:'Matèria primera'},c4_desc:{es:'Calidad, origen y selección del producto utilizado.',ca:'Qualitat, origen i selecció del producte utilitzat.'},
+  c5_nom:{es:'Maridaje',ca:'Maridatge'},c5_desc:{es:'Coherencia y criterio en la selección de vinos y bebidas.',ca:'Coherència i criteri en la selecció de vins i begudes.'},
+  c6_nom:{es:'Elaboración y complejidad',ca:'Elaboració i complexitat'},c6_desc:{es:'Técnica culinaria, creatividad y ejecución de los platos.',ca:'Tècnica culinària, creativitat i execució dels plats.'},
+  c7_nom:{es:'Postres',ca:'Postres'},c7_desc:{es:'Calidad, creatividad y acabado del apartado dulce.',ca:"Qualitat, creativitat i acabat de l'apartat dolç."},
+  c8_nom:{es:'Explicaciones del chef',ca:'Explicacions del cuiner'},c8_desc:{es:'Claridad, pasión y capacidad de comunicar la propuesta gastronómica.',ca:'Claredat, passió i capacitat de comunicar la proposta gastronòmica.'},
+  bacus_val_label:{es:'Premio Baccus · Valoración de vinos',ca:'Premi Bacus · Valoració de vins'},
+  bacus_val_title:{es:'El mejor vino de la temporada',ca:'El millor vi de la temporada'},
+  bacus_val_desc:{es:'En cada visita, los socios valoran también los vinos servidos durante el maridaje. La puntuación acumulada a lo largo de todas las visitas determina el ganador del Premio Baccus.',ca:"En cada visita, els socis valoren també els vins servits durant el maridatge. La puntuació acumulada al llarg de totes les visites determina el guanyador del Premi Bacus."},
+  bacus_val_desc2:{es:'La bodega o vino ganador es invitado de honor a la Cena de Entrega de Premios.',ca:"El celler o vi guanyador és convidat d'honor al Sopar de Lliurament de Premis."},
+  bv1:{es:'Aspecto visual y color',ca:'Aspecte visual i color'},
+  bv2:{es:'Aromas y nariz',ca:'Aromes i nas'},
+  bv3:{es:'Sabor y paso en boca',ca:'Sabor i pas en boca'},
+  bv4:{es:'Maridaje con el menú',ca:'Maridatge amb el menú'},
+  bv5:{es:'Valoración global',ca:'Valoració global'},
+  junta_label:{es:'La Junta',ca:'La Junta'},
+  junta_title:{es:'Quienes llevan el timón',ca:'Qui porta el timó'},
+  cargo_president:{es:'Presidente',ca:'President'},
+  cargo_vicepresident:{es:'Vicepresidente',ca:'Vicepresident'},
+  cargo_secretari:{es:'Secretario y Tesorero',ca:'Secretari i Tresorer'},
+  cargo_rrpp:{es:'Vocal de Relaciones Públicas',ca:'Vocal de Relacions Públiques'},
+  cargo_gastronomic:{es:'Vocal Gastronómico',ca:'Vocal Gastronòmic'},
+  cargo_cultural:{es:'Vocal Cultural',ca:'Vocal Cultural'},
+  cargo_secretaria:{es:'Secretaría',ca:'Secretaria'},
+  est_label:{es:'Estatutos',ca:'Estatuts'},
+  est_title:{es:'Estatutos de la Asociación',ca:"Estatuts de l'Associació"},
+  est_cap1:{es:'Capítulo I · Denominación y fines',ca:'Capítol I · Denominació i fins'},
+  est_cap1_desc:{es:'Constituida al amparo del artículo 22 de la Constitución, con fines de búsqueda, conocimiento y difusión de la gastronomía. Sin ánimo de lucro.',ca:"Constituïda a l'empara de l'article 22 de la Constitució, amb fins de recerca, coneixement i difusió de la gastronomia. Sense ànim de lucre."},
+  est_cap2:{es:'Capítulo II · Los miembros',ca:'Capítol II · Els membres'},
+  est_cap2_desc:{es:'Pueden ser miembros todas las personas mayores de 18 años. Los derechos incluyen voto en la Asamblea General y elegibilidad a cargos directivos.',ca:"Poden ser membres totes les persones majors de 18 anys. Els drets inclouen vot a l'Assemblea General i elegibilitat a càrrecs directius."},
+  est_cap3:{es:'Capítulo III · La Asamblea General',ca:"Capítol III · L'Assemblea General"},
+  est_cap3_desc:{es:'Órgano soberano. Se reúne en sesión ordinaria mínimo una vez al año. Decide por mayoría simple los asuntos de su competencia.',ca:"Òrgan sobirà. Es reuneix en sessió ordinària mínim un cop l'any. Decideix per majoria simple els assumptes de la seva competència."},
+  est_cap4:{es:'Capítulo IV · La Junta Directiva',ca:'Capítol IV · La Junta Directiva'},
+  est_cap4_desc:{es:'Rige, administra y representa la asociación. Sus miembros son elegidos por la Asamblea General por un período de dos años.',ca:"Regeix, administra i representa l'associació. Els seus membres són elegits per l'Assemblea General per un període de dos anys."},
+  est_cap5:{es:'Capítulos V–X · Régimen económico y disolución',ca:'Capítols V–X · Règim econòmic i dissolució'},
+  est_cap5_desc:{es:'Los recursos provienen de cuotas, subvenciones y donaciones. La asociación puede disolverse por acuerdo extraordinario de la Asamblea General.',ca:"Els recursos provenen de quotes, subvencions i donacions. L'associació es pot dissoldre per acord extraordinari de l'Assemblea General."},
+  est_doc_title:{es:'Documento oficial',ca:'Document oficial'},
+  est_doc_desc:{es:'Acta fundacional y estatutos completos firmados por los socios fundadores. Tarragona, 25 de mayo de 2001.',ca:"Acta fundacional i estatuts complets signats pels socis fundadors. Tarragona, 25 de maig de 2001."},
+  est_doc_btn:{es:'Descargar estatutos (PDF)',ca:'Descarregar estatuts (PDF)'},
+  est_doc_data:{es:'Firmado el 25 de mayo de 2001 · Tarragona',ca:'Signat el 25 de maig de 2001 · Tarragona'},
+  cta_label:{es:'¿Te unes?',ca:"T'hi apuntes?"},
+  cta_title:{es:'Forma parte de nuestra mesa',ca:'Forma part de la nostra taula'},
+  cta_desc:{es:'Si compartes nuestra pasión por la gastronomía y quieres formar parte de la asociación, escríbenos.',ca:"Si comparteixes la nostra passió per la gastronomia i vols formar part de l'associació, escriu-nos."},
+  cta_btn:{es:'Contactar',ca:'Contactar'},
+};
+Object.assign(translations, pageTranslations);
+</script>
+</body>
+</html>
