@@ -385,8 +385,8 @@
   <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
 </footer>
 
-<script src="../assets/js/i18n.js"></script>
 <script>
+window.translations = window.translations || {};
 const pageTranslations = {
   back_blog:             { es: 'Volver al Blog',              ca: 'Tornar al Blog' },
   cronica_badge:         { es: 'Visita Gourmets · Temporada 2026', ca: 'Visita Gourmets · Temporada 2026' },
@@ -436,8 +436,10 @@ const pageTranslations = {
   cronica_btn_blog:      { es: 'Volver al Blog',     ca: 'Tornar al Blog' },
   cronica_btn_recorregut:{ es: 'Ver el recorrido 2026', ca: 'Veure el recorregut 2026' },
 };
-Object.assign(translations, pageTranslations);
+// Afegim les traduccions i reaplicem
+Object.assign(window.translations, pageTranslations);
 </script>
+<script src="../assets/js/i18n.js"></script>
 
 <script src="../assets/js/main.js"></script>
 </body>

@@ -7,7 +7,7 @@
    La llengua es guarda a localStorage per persistir entre pàgines.
    ============================================================ */
 
-const translations = {
+window.translations = {
 
   /* ---- NAV ---- */
   nav_inicio:     { es: 'Inicio',            ca: 'Inici' },
@@ -163,7 +163,7 @@ let currentLang = localStorage.getItem('gdt-lang') || 'es';
 function applyTranslations(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (translations[key] && translations[key][lang] !== undefined) {
+    if (window.translations[key] && window.translations[key] && window.translations[key][lang] !== undefined) {
       /* innerHTML per permetre <br> i entitats HTML dins les traduccions */
       el.innerHTML = translations[key][lang];
     }
