@@ -1,0 +1,151 @@
+/* ============================================================
+   HERO.CSS — Gourmets de Tarragona
+   ============================================================ */
+
+#hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #0b1626;
+}
+
+/* Foto de fons */
+.hero-bg {
+  position: absolute; inset: 0;
+  background-image: url('../img/hero.jpg');
+  background-size: cover; background-position: center;
+  opacity: .32;
+  /* Fallback mentre no hi ha foto local:
+  background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80'); */
+}
+
+/* Gradient fosc cap a baix */
+.hero-gradient {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(11,22,38,.97) 0%,
+    rgba(11,22,38,.60) 45%,
+    rgba(11,22,38,.15) 100%
+  );
+}
+
+/* Línia vertical daurada esquerra */
+.hero-left-line {
+  position: absolute; left: 3.5%; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(184,146,74,.35) 20%,
+    rgba(184,146,74,.35) 80%,
+    transparent 100%
+  );
+}
+
+/* Contingut principal */
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 0 4.5% 72px 5.5%;
+  max-width: 720px;
+}
+
+.hero-label {
+  font-size: .72rem; letter-spacing: 5px; text-transform: uppercase;
+  color: rgba(184,146,74,.9); margin-bottom: 22px;
+  display: flex; align-items: center; gap: 14px;
+  animation: fadeUp .8s ease .1s both;
+}
+.hero-label::before {
+  content: ''; display: block;
+  width: 28px; height: 1px; background: rgba(184,146,74,.6); flex-shrink: 0;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  color: #fff; line-height: 1.06; font-weight: 700;
+  margin-bottom: 20px;
+  animation: fadeUp .8s ease .22s both;
+}
+.hero-title em { font-style: italic; color: rgba(212,169,106,.92); }
+
+.hero-sub {
+  font-size: 1rem; color: rgba(255,255,255,.58);
+  font-weight: 300; line-height: 1.85; max-width: 440px;
+  margin-bottom: 38px;
+  animation: fadeUp .8s ease .34s both;
+}
+
+.hero-btns {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  animation: fadeUp .8s ease .46s both;
+}
+.btn-hero-primary {
+  display: inline-block; padding: 14px 32px;
+  background: #fff; color: var(--navy-dark);
+  font-size: .78rem; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700;
+  transition: .2s;
+}
+.btn-hero-primary:hover { background: var(--cream); }
+.btn-hero-ghost {
+  display: inline-block; padding: 13px 32px;
+  border: 1.5px solid rgba(255,255,255,.38); color: rgba(255,255,255,.82);
+  font-size: .78rem; letter-spacing: 2.5px; text-transform: uppercase;
+  background: none; transition: .2s;
+}
+.btn-hero-ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); color: #fff; }
+
+/* Meta dret */
+.hero-meta {
+  position: absolute; right: 4%; bottom: 72px; z-index: 2;
+  text-align: right;
+  animation: fadeUp .8s ease .55s both;
+}
+.hero-meta-item {
+  font-size: .68rem; letter-spacing: 3.5px; text-transform: uppercase;
+  color: rgba(255,255,255,.22); margin-bottom: 6px;
+}
+
+/* Scroll hint */
+.hero-scroll {
+  position: absolute; bottom: 28px; left: 5.5%; z-index: 2;
+  display: flex; align-items: center; gap: 12px;
+  animation: fadeUp .8s ease .7s both;
+}
+.hero-scroll span {
+  font-size: .68rem; letter-spacing: 4px; text-transform: uppercase;
+  color: rgba(255,255,255,.22);
+}
+.hero-scroll-line {
+  width: 48px; height: 1px;
+  background: linear-gradient(to right, rgba(255,255,255,.25), transparent);
+}
+
+/* Strip sota el hero */
+.strip {
+  background: var(--navy); padding: 18px 0;
+}
+.strip-inner {
+  max-width: var(--max); margin: 0 auto; padding: 0 4%;
+  display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+}
+.strip-item {
+  font-size: .72rem; letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(255,255,255,.45);
+  display: flex; align-items: center; gap: 10px;
+}
+.strip-item::before {
+  content: ''; width: 4px; height: 4px; border-radius: 50%;
+  background: rgba(184,146,74,.7); flex-shrink: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 680px) {
+  .hero-content { padding: 0 5% 60px; }
+  .hero-meta    { display: none; }
+  .strip-inner  { gap: 24px; }
+  .btn-hero-primary,
+  .btn-hero-ghost { padding: 12px 22px; font-size: .72rem; }
+}
