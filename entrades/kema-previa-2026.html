@@ -289,8 +289,10 @@
   <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
 </footer>
 
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/main.js"></script>
 <script>
-window.translations = window.translations || {};
+// Traduccions específiques de pàgina
 const pageTranslations = {
   back_blog:        { es: 'Volver al Blog',          ca: 'Tornar al Blog' },
   back_blog_btn:    { es: '← Volver al Blog',        ca: '← Tornar al Blog' },
@@ -318,10 +320,9 @@ const pageTranslations = {
   previa_foto_peu:  { es: 'La brasa como eje gastronómico — producto directo, fuego y sabor', ca: 'La brasa com a eix gastronòmic — producte directe, foc i sabor' },
 };
 // Afegim les traduccions i reaplicem
-Object.assign(window.translations, pageTranslations);
+Object.assign(translations, pageTranslations);
+applyTranslations(currentLang);
 </script>
-<script src="../assets/js/i18n.js"></script>
 
-<script src="../assets/js/main.js"></script>
 </body>
 </html>
