@@ -224,12 +224,19 @@
         <p data-i18n="bacus_val_desc"></p>
         <p data-i18n="bacus_val_desc2"></p>
       </div>
-      <div class="bacus-criteris">
-        <div class="bacus-crit"><i class="fa fa-eye" style="color:rgba(184,146,74,.6);width:18px;"></i><span class="bacus-crit-nom" data-i18n="bv1"></span><span class="bacus-crit-score" data-i18n="puntuacio"></span></div>
-        <div class="bacus-crit"><i class="fa fa-wind" style="color:rgba(184,146,74,.6);width:18px;"></i><span class="bacus-crit-nom" data-i18n="bv2"></span><span class="bacus-crit-score" data-i18n="puntuacio"></span></div>
-        <div class="bacus-crit"><i class="fa fa-wine-glass" style="color:rgba(184,146,74,.6);width:18px;"></i><span class="bacus-crit-nom" data-i18n="bv3"></span><span class="bacus-crit-score" data-i18n="puntuacio"></span></div>
-        <div class="bacus-crit"><i class="fa fa-link" style="color:rgba(184,146,74,.6);width:18px;"></i><span class="bacus-crit-nom" data-i18n="bv4"></span><span class="bacus-crit-score" data-i18n="puntuacio"></span></div>
-        <div class="bacus-crit"><i class="fa fa-star" style="color:rgba(184,146,74,.6);width:18px;"></i><span class="bacus-crit-nom" data-i18n="bv5"></span><span class="bacus-crit-score" data-i18n="puntuacio"></span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;text-align:center;">
+        <i class="fa fa-wine-glass-alt" style="font-size:3.5rem;color:rgba(184,146,74,.5);"></i>
+        <div>
+          <p style="font-size:.65rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(184,146,74,.7);margin-bottom:8px;" data-i18n="puntuacio"></p>
+          <div style="display:flex;gap:10px;justify-content:center;">
+            <span style="width:44px;height:44px;border:1.5px solid rgba(184,146,74,.3);color:rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;">1</span>
+            <span style="width:44px;height:44px;border:1.5px solid rgba(184,146,74,.3);color:rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;">2</span>
+            <span style="width:44px;height:44px;border:1.5px solid rgba(184,146,74,.3);color:rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;">3</span>
+            <span style="width:44px;height:44px;border:1.5px solid rgba(184,146,74,.5);background:rgba(184,146,74,.15);color:rgba(184,146,74,.9);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;">4</span>
+            <span style="width:44px;height:44px;border:1.5px solid rgba(184,146,74,.3);color:rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;">5</span>
+          </div>
+        </div>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.4);font-style:italic;" data-i18n="bacus_val_exemple"></p>
       </div>
     </div>
   </div>
@@ -351,13 +358,9 @@ const pageTranslations = {
   c8_nom:{es:'Explicaciones del chef',ca:'Explicacions del cuiner'},c8_desc:{es:'Claridad, pasión y capacidad de comunicar la propuesta gastronómica.',ca:'Claredat, passió i capacitat de comunicar la proposta gastronòmica.'},
   bacus_val_label:{es:'Premio Baccus · Valoración de vinos',ca:'Premi Bacus · Valoració de vins'},
   bacus_val_title:{es:'El mejor vino de la temporada',ca:'El millor vi de la temporada'},
-  bacus_val_desc:{es:'En cada visita, los socios valoran también los vinos servidos durante el maridaje. La puntuación acumulada a lo largo de todas las visitas determina el ganador del Premio Baccus.',ca:"En cada visita, els socis valoren també els vins servits durant el maridatge. La puntuació acumulada al llarg de totes les visites determina el guanyador del Premi Bacus."},
+  bacus_val_desc:{es:'En cada visita, los socios valoran los vinos servidos durante el maridaje con una única puntuación global del 1 al 5. La puntuación acumulada a lo largo de todas las visitas determina el ganador del Premio Baccus.',ca:"En cada visita, els socis valoren els vins servits durant el maridatge amb una única puntuació global de l'1 al 5. La puntuació acumulada al llarg de totes les visites determina el guanyador del Premi Bacus."},
   bacus_val_desc2:{es:'La bodega o vino ganador es invitado de honor a la Cena de Entrega de Premios.',ca:"El celler o vi guanyador és convidat d'honor al Sopar de Lliurament de Premis."},
-  bv1:{es:'Aspecto visual y color',ca:'Aspecte visual i color'},
-  bv2:{es:'Aromas y nariz',ca:'Aromes i nas'},
-  bv3:{es:'Sabor y paso en boca',ca:'Sabor i pas en boca'},
-  bv4:{es:'Maridaje con el menú',ca:'Maridatge amb el menú'},
-  bv5:{es:'Valoración global',ca:'Valoració global'},
+  bacus_val_exemple:{es:'Ejemplo: un vino puntuado con 4 sobre 5',ca:"Exemple: un vi puntuat amb 4 sobre 5"},
   junta_label:{es:'La Junta',ca:'La Junta'},
   junta_title:{es:'Quienes llevan el timón',ca:'Qui porta el timó'},
   cargo_president:{es:'Presidente',ca:'President'},
