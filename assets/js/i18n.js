@@ -209,6 +209,5 @@ function setLang(lang) {
   applyTranslations(lang);
 }
 
-/* S'aplica automàticament. Les pàgines amb pageTranslations poden
-   tornar a cridar applyTranslations() per actualitzar amb les seves claus. */
-document.addEventListener('DOMContentLoaded', () => applyTranslations(currentLang));
+/* Aplica immediatament — els scripts van al final del body, el DOM ja existeix */
+applyTranslations(currentLang);
