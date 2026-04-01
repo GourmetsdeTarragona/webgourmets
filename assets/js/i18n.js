@@ -123,6 +123,22 @@ const translations = {
   ev_reservar:{ es: 'Reservar',          ca: 'Reservar' },
   events_cta: { es: 'Ver todos los eventos', ca: 'Veure tots els esdeveniments' },
 
+  /* ---- RECORREGUT ---- */
+  rec_label:       { es: 'Temporada 2026',           ca: 'Temporada 2026' },
+  rec_title:       { es: 'Recorrido Gourmet',         ca: 'Recorregut Gourmet' },
+  rec_desc:        { es: 'Ocho restaurantes, una temporada, un territorio. Evaluamos con criterio y compartimos con honestidad.', ca: 'Vuit restaurants, una temporada, un territori. Avaluem amb criteri i compartim amb honestedat.' },
+  rec_visitada:    { es: 'Visitado',                  ca: 'Visitat' },
+  rec_pendent:     { es: 'Próximamente',              ca: 'Pròximament' },
+  rec_zona:        { es: 'Camp de Tarragona',         ca: 'Camp de Tarragona' },
+  rec_kema_cuina:  { es: 'Brasas & Cocktail',         ca: 'Brases & Còctel' },
+  rec_kema_desc:   { es: 'Primera visita de la temporada. Cocina de brasa con producto de calidad, técnica y una oferta de coctelería diferencial.', ca: 'Primera visita de la temporada. Cuina de brasa amb producte de qualitat, tècnica i una oferta de cocteleria diferencial.' },
+  rec_link_previa: { es: 'Leer la previa →',          ca: 'Llegir la prèvia →' },
+  rec_link_cronica:{ es: 'Crónica completa →',        ca: 'Crònica completa →' },
+  rec_seg_visita:  { es: '2ª Visita',                 ca: '2a Visita' },
+  rec_ter_visita:  { es: '3ª Visita',                 ca: '3a Visita' },
+  rec_seg_desc:    { es: 'El recorrido continúa. Próxima visita pendiente de confirmar.', ca: 'El recorregut continua. Propera visita pendent de confirmar.' },
+  rec_cta:         { es: 'Ver todas las visitas',     ca: 'Veure totes les visites' },
+
   /* ---- FOOTER ---- */
   footer_desc: {
     es: 'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',
