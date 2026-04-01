@@ -21,7 +21,7 @@
 /* Logo */
 .nav-logo img { height: 50px; width: auto; display: block; transition: filter .3s; }
 /* Hero: logo transparent */
-#nav:not(.solid) .nav-logo img { filter: brightness(0) invert(1); }
+#nav:not(.solid) .nav-logo img { filter: brightness(0) invert(1) !important; }
 /* Solid: logo normal */
 #nav.solid .nav-logo img { filter: none; }
 
@@ -122,4 +122,8 @@
 }
 @media (max-width: 480px) {
   .nav-inner { padding: 10px 5%; }
+}
+
+#nav:not(.solid) .nav-logo img {
+  filter: none;
 }
