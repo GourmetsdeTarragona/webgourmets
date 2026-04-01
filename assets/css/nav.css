@@ -19,11 +19,11 @@
 }
 
 /* Logo */
-.nav-logo img { height: 50px; width: auto; display: block; transition: opacity .3s; }
+.nav-logo img { height: 50px; width: auto; display: block; transition: filter .3s; }
 /* Hero: logo transparent */
-#nav:not(.solid) .nav-logo img { content: url("../img/logo-transparent.png"); }
+#nav:not(.solid) .nav-logo img { filter: brightness(0) invert(1); }
 /* Solid: logo normal */
-#nav.solid .nav-logo img { content: url("../img/logo.png"); }
+#nav.solid .nav-logo img { filter: none; }
 
 /* Menú desktop */
 .nav-menu { display: flex; align-items: center; gap: 0; }
