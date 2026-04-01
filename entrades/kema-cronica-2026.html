@@ -387,61 +387,7 @@
 
 <script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/main.js"></script>
-<script>
-// Traduccions específiques de pàgina
-const pageTranslations = {
-  back_blog:             { es: 'Volver al Blog',              ca: 'Tornar al Blog' },
-  cronica_badge:         { es: 'Visita Gourmets · Temporada 2026', ca: 'Visita Gourmets · Temporada 2026' },
-  cronica_subtitol:      { es: 'Primera visita de la asociación en 2026. Kema propone la brasa y el fuego como eje gastronómico, con producto de mar y tierra y una oferta líquida diferencial.', ca: "Primera visita de l'associació en 2026. Kema proposa la brasa i el foc com a eix gastronòmic, amb producte de mar i terra i una oferta líquida diferencial." },
-  cronica_l1:            { es: 'La propuesta',                ca: 'La proposta' },
-  cronica_t1:            { es: 'Brasa y fuego como eje gastronómico', ca: 'Brasa i foc com a eix gastronòmic' },
-  cronica_p1:            { es: 'En el marco del recorrido gastronómico de la temporada, la asociación <strong>Gourmets de Tarragona</strong> realizó su primera visita al restaurante <strong>Kema</strong>, en Cambrils, una plaza gastronómica históricamente vinculada al producto del mar y a la cocina marinera.', ca: "En el marc del recorregut gastronòmic de la temporada, l'associació <strong>Gourmets de Tarragona</strong> va realitzar la seva primera visita al restaurant <strong>Kema</strong>, a Cambrils, una plaça gastronòmica històricament vinculada al producte del mar i a la cuina marinera." },
-  cronica_p2:            { es: 'Kema plantea una propuesta centrada en la cocina de brasa, incorporando producto tanto de mar como de tierra y ofreciendo una mirada distinta dentro de una tradición muy definida. Una apuesta con personalidad propia que, en el contexto de Cambrils, no pasa desapercibida.', ca: "Kema planteja una proposta centrada en la cuina de brasa, incorporant producte tant de mar com de terra i oferint una mirada distinta dins d'una tradició molt definida. Una aposta amb personalitat pròpia que, en el context de Cambrils, no passa desapercebuda." },
-  cronica_p3:            { es: 'La minuta se estructuró en forma de actos, ordenando el recorrido de manera clara y progresiva, como una secuencia que avanza desde la apertura hasta el cierre.', ca: "La minuta es va estructurar en forma d'actes, ordenant el recorregut de manera clara i progressiva, com una seqüència que avança des de l'obertura fins al tancament." },
-  cronica_acte1_label:   { es: 'Primer acto',    ca: 'Primer acte' },
-  cronica_acte1_title:   { es: 'Obertura',        ca: 'Obertura' },
-  cronica_acte1_p1:      { es: 'La obertura fijó el tono con una primera serie de bocados pensados para abrir registros y anticipar el carácter del menú.', ca: "L'obertura va fixar el to amb una primera sèrie de bocats pensats per obrir registres i anticipar el caràcter del menú." },
-  cronica_acte1_p2:      { es: 'La <strong>Gilda del Kema a la brasa con caballa marinada y emulsión de escabetx</strong>, el <strong>Panipuri de tártar de camarón rojo con cremoso de tubérculos y huevas de salmón</strong>, y la <strong>"Papa Arrugà" con costilla de Black Angus y aroma McCallan 12 años</strong> introdujeron distintos matices desde el primer momento, con guiños a distintas tradiciones culinarias integrados con naturalidad dentro de un discurso propio.', ca: "La <strong>Gilda del Kema a la brasa amb caballa marinada i emulsió d'escabetx</strong>, el <strong>Panipuri de tàrtar de camarón vermell amb cremós de tubercles i huevas de salmó</strong>, i la <strong>"Papa Arrugà" amb costella de Black Angus i aroma McCallan 12 anys</strong> van introduir distints matisos des del primer moment, amb guiños a diverses tradicions culinàries integrats amb naturalitat dins d'un discurs propi." },
-  cronica_acte2_label:   { es: 'Segundo acto',   ca: 'Segon acte' },
-  cronica_acte2_title:   { es: 'Intermezzo',      ca: 'Intermezzo' },
-  cronica_acte2_p1:      { es: 'El intermezzo funcionó como transición y cambio de profundidad, con platos que elevaron la complejidad del recorrido antes de entrar en su núcleo principal.', ca: "L'intermezzo va funcionar com a transició i canvi de profunditat, amb plats que van elevar la complexitat del recorregut abans d'entrar al seu nucli principal." },
-  cronica_acte2_p2:      { es: 'El <strong>Micuit de Foie con ahumado, calvados, compota de pera rústica e hibiscus</strong>, el <strong>"Sam de Cevitxe" de lubina salvaje con leche de tigre y torreznos de Soria</strong>, y la <strong>Gamba en Gabardina con salsa satay, cacahuetes y coco</strong> configuraron un tramo donde el menú ganó en contraste y ambición.', ca: "El <strong>Micuit de Foie amb fumat, calvados, compota de pera rústica i hibiscus</strong>, el <strong>"Sam de Cevitxe" de llobarro salvatge amb llet de tigre i torreznos de Soria</strong>, i la <strong>Gamba en Gabardina amb salsa satay, cacauets i coco</strong> van configurar un tram on el menú va guanyar en contrast i ambició." },
-  cronica_acte2_p3:      { es: 'El intermezzo se cerró con dos platos que ya anticipaban el territorio de las arias: el <strong>Mar y Montaña de carpaccio de presa ibérica con meloso de atún Balfegó</strong>, y el <strong>Steak Tartar de vaca roja gallega con ajos escalibados, pan tostado y tuétano</strong>.', ca: "L'intermezzo es va tancar amb dos plats que ja anticipaven el territori de les àries: el <strong>Mar i Muntanya de carpaccio de presa ibèrica amb melós de tonyina Balfegó</strong>, i el <strong>Steak Tartar de vaca vermella gallega amb alls escalivats, pa torrat i moll de l'os</strong>." },
-  cronica_acte3_label:   { es: 'Tercer acto',    ca: 'Tercer acte' },
-  cronica_acte3_title:   { es: 'Arias',           ca: 'Àries' },
-  cronica_acte3_p1:      { es: 'Las arias representaron el momento de mayor exposición de la propuesta, donde la cocina buscó definir con más claridad su voz e intención.', ca: "Les àries van representar el moment de major exposició de la proposta, on la cuina va buscar definir amb més claredat la seva veu i intenció." },
-  cronica_acte3_p2:      { es: 'El <strong>Bacalà "Skrei" a la robata con guisantes, tirabeques y "vizcaína" de almendra</strong> se presentó como uno de los platos más singulares del recorrido, con una reinterpretación de la salsa clásica que aportó un giro de carácter propio.', ca: "El <strong>Bacallà "Skrei" a la robata amb pèsols, tirabeques i "vizcaïna" d'ametlla</strong> es va presentar com un dels plats més singulars del recorregut, amb una reinterpretació de la salsa clàssica que va aportar un gir de caràcter propi." },
-  cronica_acte3_p3:      { es: 'El <strong>Rib-Eye de vaca gallega con mantequilla ahumada, risotto de setas y trufa</strong> cerró la parte estructural del menú con solvencia y producto de nivel. Técnicamente bien resuelto, aunque en este tramo, como en algún momento anterior, se echó en falta una mayor contundencia en la construcción del sabor.', ca: "El <strong>Rib-Eye de vaca gallega amb mantequilla fumada, risotto de bolets i tòfona</strong> va tancar la part estructural del menú amb solvència i producte de nivell. Tècnicament ben resolt, tot i que en aquest tram es va trobar a faltar una major contundència en la construcció del sabor." },
-  cronica_ribeye_peu:    { es: 'Rib-eye de vaca gallega con mantequilla ahumada, risotto de setas y trufa', ca: 'Rib-eye de vaca gallega amb mantequilla fumada, risotto de bolets i tòfona' },
-  cronica_acte4_label:   { es: 'Cuarto acto',     ca: 'Quart acte' },
-  cronica_acte4_title:   { es: 'Pre-Finale',       ca: 'Pre-Finale' },
-  cronica_acte4_p1:      { es: 'Un <strong>Frozen Moscow Mule Cocktail</strong> actuó como interludio refrescante, marcando el límite entre la parte salada y el cierre dulce del menú con buen criterio y sentido del ritmo.', ca: "Un <strong>Frozen Moscow Mule Cocktail</strong> va actuar com a interludi refrescant, marcant el límit entre la part salada i el tancament dolç del menú amb bon criteri i sentit del ritme." },
-  cronica_acte5_label:   { es: 'Quinto acto',     ca: 'Cinquè acte' },
-  cronica_acte5_title:   { es: 'Finale',           ca: 'Finale' },
-  cronica_acte5_p1:      { es: '<strong>La Deconstrucción</strong> cerró el recorrido con una reinterpretación del cheesecake con texturas de frutos rojos del bosque. Un postre elegante en su planteamiento, más atento al equilibrio que al efectismo, que puso el punto final a la experiencia con ligereza.', ca: "<strong>La Deconstrucció</strong> va tancar el recorregut amb una reinterpretació del cheesecake amb textures de fruits vermells del bosc. Un postre elegant en el seu plantejament, més atent a l'equilibri que a l'efectisme, que va posar el punt final a l'experiència amb lleugeresa." },
-  cronica_vins_label:    { es: 'Los vinos de la velada',      ca: 'Els vins de la vetllada' },
-  cronica_vins_title:    { es: 'Un maridaje con criterio y territorio', ca: 'Un maridatge amb criteri i territori' },
-  cronica_vins_desc:     { es: 'El recorrido de maridajes fue uno de los elementos más elaborados de la propuesta, con una selección de referencias del territorio que acompañó cada acto con coherencia y criterio. Las explicaciones del responsable de la bodega aportaron contexto a cada referencia con un discurso técnico accesible para el conjunto de los asistentes.', ca: "El recorregut de maridatges va ser un dels elements més elaborats de la proposta, amb una selecció de referències del territori que va acompanyar cada acte amb coherència i criteri. Les explicacions del responsable de la bodega van aportar context a cada referència amb un discurs tècnic accessible per al conjunt dels assistents." },
-  cronica_vins_nota:     { es: 'Como es habitual en las visitas de la asociación, la valoración final de los socios se reflejará posteriormente en las votaciones del recorrido gastronómico anual.', ca: "Com és habitual en les visites de l'associació, la valoració final dels socis es reflectirà posteriorment en les votacions del recorregut gastronòmic anual." },
-  cronica_sala_label:    { es: 'Sala y servicio',  ca: 'Sala i servei' },
-  cronica_sala_title:    { es: 'Uno de los puntos fuertes de la velada', ca: 'Un dels punts forts de la vetllada' },
-  cronica_sala_p1:       { es: 'El servicio fue uno de los puntos fuertes de la velada. Buen ritmo, coordinación fluida entre cocina y sala, y una presencia constante que acompañó la experiencia sin interferir en su desarrollo.', ca: "El servei va ser un dels punts forts de la vetllada. Bon ritme, coordinació fluida entre cuina i sala, i una presència constant que va acompanyar l'experiència sense interferir en el seu desenvolupament." },
-  cronica_sala_p2:       { es: 'Un equipo que demostró experiencia en la gestión de mesas numerosas y que supo mantener el nivel durante toda la cena.', ca: "Un equip que va demostrar experiència en la gestió de taules nombroses i que va saber mantenir el nivell durant tota la cena." },
-  cronica_grup_peu:      { es: 'Miembros de la asociación <strong>Gourmets de Tarragona</strong> durante la visita al <strong>Kema · Cambrils</strong> — Marzo 2026', ca: "Membres de l'associació <strong>Gourmets de Tarragona</strong> durant la visita al <strong>Kema · Cambrils</strong> — Març 2026" },
-  cronica_fitxa1_label:  { es: 'Restaurante',      ca: 'Restaurant' },
-  cronica_fitxa2_label:  { es: 'Tipo de cocina',   ca: 'Tipus de cuina' },
-  cronica_fitxa2_valor:  { es: 'Brasa contemporánea', ca: 'Brasa contemporània' },
-  cronica_fitxa3_label:  { es: 'Recorrido',         ca: 'Recorregut' },
-  cronica_fitxa3_valor:  { es: '1ª Visita · Temporada 2026', ca: '1a Visita · Temporada 2026' },
-  cronica_nota_final:    { es: 'Como es habitual en las visitas de la asociación, la valoración final de los socios se reflejará posteriormente en las votaciones del recorrido gastronómico anual.', ca: "Com és habitual en les visites de l'associació, la valoració final dels socis es reflectirà posteriorment en les votacions del recorregut gastronòmic anual." },
-  cronica_btn_previa:    { es: '← Leer la previa',  ca: '← Llegir la prèvia' },
-  cronica_btn_blog:      { es: 'Volver al Blog',     ca: 'Tornar al Blog' },
-  cronica_btn_recorregut:{ es: 'Ver el recorrido 2026', ca: 'Veure el recorregut 2026' },
-};
-// Afegim les traduccions i reaplicem
-Object.assign(translations, pageTranslations);
-applyTranslations(currentLang);
-</script>
+
 
 </body>
 </html>
