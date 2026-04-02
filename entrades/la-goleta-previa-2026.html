@@ -162,6 +162,7 @@ const t = {
     goleta_fitxa_data:'Visita: 9 de abril 2026',
     goleta_cta_desc:'Durante la cena compartiremos algunos momentos en stories. La crónica completa llegará días después.',
     goleta_cta_btn:'Leer la crónica completa →',
+    goleta_foto_terrassa_peu:'La terraza de La Goleta — vistas a la Platja dels Capellans, Salou',
   },
   ca: {
     nav_inicio:'Inici', nav_asoc:"L'Associació", nav_rest:'Restaurants',
@@ -222,6 +223,7 @@ const t = {
     goleta_fitxa_data:"Visita: 9 d'abril 2026",
     goleta_cta_desc:"Durant el sopar compartirem alguns moments a les stories. La crònica completa arribarà dies després.",
     goleta_cta_btn:'Llegir la crònica completa →',
+    goleta_foto_terrassa_peu:"La terrassa de La Goleta — vistes a la Platja dels Capellans, Salou",
   }
 };
 let currentLang = localStorage.getItem('gdt-lang') || 'es';
@@ -277,7 +279,7 @@ function setLang(lang) {
 
 <!-- HERO — foto marina de la Costa Daurada -->
 <header class="entrada-hero">
-  <div class="entrada-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600&q=80');"></div>
+  <div class="entrada-hero-bg" style="background-image:url('../assets/img/goleta/capellans-beach.jpg');"></div>
   <div class="entrada-hero-grad"></div>
   <div class="entrada-hero-line"></div>
   <div class="entrada-hero-content">
@@ -319,22 +321,33 @@ function setLang(lang) {
     </div>
     <div class="e-img">
       <!-- Foto de marisc / producte del mar -->
-      <img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=800&q=80" alt="Marisc mediterrani — La Goleta">
+      <img src="../assets/img/goleta/taula-mar.jpg" alt="Taula amb vistes al mar — La Goleta">
     </div>
   </div>
 
   <!-- FOTO GRAN — platja / mar -->
   <div class="e-foto-gran">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1400&q=80" alt="Platja dels Capellans, Salou">
+    <img src="../assets/img/goleta/terrassa-goleta.jpg" alt="Terrassa de La Goleta — Salou">
     <div class="e-foto-gran-peu" data-i18n="goleta_foto2_peu"></div>
   </div>
 
   <!-- HISTORIA -->
+  <div style="display:grid;grid-template-columns:1fr 260px;gap:40px;align-items:start;">
+  <div>
   <span class="e-label" data-i18n="goleta_hist_label"></span>
   <h2 class="e-title" data-i18n="goleta_hist_title"></h2>
   <div class="e-divider"></div>
   <p class="e-p" data-i18n="goleta_hist_p1"></p>
   <p class="e-p" data-i18n="goleta_hist_p2"></p>
+  </div>
+  <div style="padding-top:8px;"><img src="../assets/img/goleta/aniversari-40.jpg" alt="La Goleta 40 anys" style="width:100%;object-fit:cover;"></div>
+  </div>
+
+  <!-- FOTO TERRASSA -->
+  <div class="e-foto-gran" style="margin:40px 0;">
+    <img src="../assets/img/goleta/terrassa-mar.jpg" alt="Terrassa de La Goleta amb vistes a la Platja dels Capellans">
+    <div class="e-foto-gran-peu" data-i18n="goleta_foto_terrassa_peu"></div>
+  </div>
 
   <!-- CONVIDAT -->
   <div class="e-convidat">
