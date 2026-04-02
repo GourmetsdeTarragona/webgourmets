@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Cookies · Gourmets de Tarragona</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/seccions.css">
+<style>
+.page-hero{background:var(--navy-dark);padding:130px 4% 60px;text-align:center;}
+.page-hero .slabel{color:rgba(255,255,255,.4);justify-content:center;display:flex;}
+.page-hero .stitle{color:#fff;font-size:clamp(1.8rem,3vw,2.6rem);margin-top:10px;}
+.legal-body{max-width:780px;margin:0 auto;padding:64px 4% 80px;}
+.legal-body h2{font-family:var(--font-serif);font-size:1.2rem;color:var(--navy-dark);margin:36px 0 10px;}
+.legal-body h2:first-child{margin-top:0;}
+.legal-body p{font-size:.93rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:14px;}
+.legal-body a{color:var(--navy-dark);border-bottom:1px solid var(--gold);}
+.legal-data{font-size:.72rem;color:var(--muted);letter-spacing:1px;margin-bottom:36px;text-transform:uppercase;}
+.legal-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:48px;padding-top:32px;border-top:1px solid var(--border);}
+.legal-links a{font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);border-bottom:1px solid transparent;transition:.2s;}
+.legal-links a:hover{color:var(--navy-dark);border-bottom-color:var(--gold);}
+</style>
+<script>
+const t = {
+  es:{
+    nav_inicio:'Inicio',nav_asoc:'La Asociación',nav_rest:'Restaurantes',
+    nav_premios:'Premios',nav_blog:'Blog Gourmet',nav_contacto:'Contacto',
+    nav_quienes:'Quiénes somos',nav_como:'Cómo funcionamos',
+    nav_visites:'Visitas 2025-26',nav_gastronia:'Trofeo Gastronía',
+    nav_bacus:'Premio Baccus',nav_rest_short:'Restaurantes',nav_premios_short:'Premios',
+    footer_desc:'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',
+    footer_nav:'Navegación',footer_legal:'Legal',footer_contacte:'Contacto',
+    footer_avis:'Aviso Legal',footer_privacitat:'Política de Privacidad',
+    footer_copy:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',
+    legal_label:'Cookies',legal_title:'Política de Cookies',
+    legal_contingut:`<h2>1. ¿Qué son las cookies?</h2>
+<p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Sirven para recordar tus preferencias y mejorar tu experiencia de navegación.</p>
+<h2>2. Cookies que utilizamos</h2>
+<p>Este sitio web utiliza únicamente una cookie propia de carácter técnico: <strong>gdt-lang</strong>, que almacena tu preferencia de idioma (español o catalán). No utilizamos cookies de terceros, de publicidad ni de seguimiento.</p>
+<h2>3. Gestión de cookies</h2>
+<p>Puedes configurar tu navegador para rechazar o eliminar las cookies. Ten en cuenta que si eliminas la cookie de idioma, deberás seleccionar tu preferencia de nuevo en cada visita.</p>
+<h2>4. Más información</h2>
+<p>Para cualquier consulta sobre el uso de cookies, puedes contactarnos en <a href="mailto:gourmetsdetarragona@gmail.com">gourmetsdetarragona@gmail.com</a>.</p>`,
+  },
+  ca:{
+    nav_inicio:'Inici',nav_asoc:"L'Associació",nav_rest:'Restaurants',
+    nav_premios:'Premis',nav_blog:'Blog Gourmet',nav_contacto:'Contacte',
+    nav_quienes:'Qui som',nav_como:'Com funcionem',
+    nav_visites:'Visites 2025-26',nav_gastronia:'Trofeu Gastronía',
+    nav_bacus:'Premi Bacus',nav_rest_short:'Restaurants',nav_premios_short:'Premis',
+    footer_desc:"Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.",
+    footer_nav:'Navegació',footer_legal:'Legal',footer_contacte:'Contacte',
+    footer_avis:'Avís Legal',footer_privacitat:'Política de Privacitat',
+    footer_copy:'© 2026 Gourmets de Tarragona · Tots els drets reservats',
+    legal_label:'Cookies',legal_title:'Política de Cookies',
+    legal_contingut:`<h2>1. Què són les cookies?</h2>
+<p>Les cookies són petits fitxers de text que s'emmagatzemen al teu dispositiu quan visites un lloc web. Serveixen per recordar les teves preferències i millorar la teva experiència de navegació.</p>
+<h2>2. Cookies que utilitzem</h2>
+<p>Aquest lloc web utilitza únicament una cookie pròpia de caràcter tècnic: <strong>gdt-lang</strong>, que emmagatzema la teva preferència d'idioma (castellà o català). No utilitzem cookies de tercers, de publicitat ni de seguiment.</p>
+<h2>3. Gestió de cookies</h2>
+<p>Pots configurar el teu navegador per rebutjar o eliminar les cookies. Tingues en compte que si elimines la cookie d'idioma, hauràs de seleccionar la teva preferència de nou a cada visita.</p>
+<h2>4. Més informació</h2>
+<p>Per a qualsevol consulta sobre l'ús de cookies, pots contactar-nos a <a href="mailto:gourmetsdetarragona@gmail.com">gourmetsdetarragona@gmail.com</a>.</p>`,
+  }
+};
+let currentLang = localStorage.getItem('gdt-lang') || 'es';
+function applyTranslations(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[lang] && t[lang][key] !== undefined) el.innerHTML = t[lang][key];
+  });
+  document.getElementById('html-root')?.setAttribute('lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(btn =>
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang));
+}
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('gdt-lang', lang);
+  applyTranslations(lang);
+}
+</script>
+</head>
+<body>
+<nav id="nav" class="solid">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona"></a>
+    <div class="nav-menu">
+      <div class="nav-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
+      <div class="nav-item"><span data-i18n="nav_asoc"></span><div class="dropdown"><a href="associacio.html" data-i18n="nav_quienes"></a></div></div>
+      <div class="nav-item"><span data-i18n="nav_rest"></span><div class="dropdown"><a href="restaurants.html" data-i18n="nav_visites"></a></div></div>
+      <div class="nav-item"><span data-i18n="nav_premios"></span><div class="dropdown"><a href="premis.html" data-i18n="nav_gastronia"></a></div></div>
+      <div class="nav-item"><a href="blog.html" data-i18n="nav_blog"></a></div>
+      <div class="nav-item"><a href="contacte.html" data-i18n="nav_contacto"></a></div>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="page-hero">
+  <p class="slabel" data-i18n="legal_label"></p>
+  <h1 class="stitle" data-i18n="legal_title"></h1>
+</div>
+<div class="legal-body">
+  <p class="legal-data">Tarragona · Abril 2026</p>
+  <div data-i18n="legal_contingut"></div>
+  <div class="legal-links">
+    <a href="avis-legal.html" data-i18n="footer_avis"></a>
+    <a href="privacitat.html" data-i18n="footer_privacitat"></a>
+    <a href="cookies.html">Cookies</a>
+    <a href="contacte.html" data-i18n="nav_contacto"></a>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona"><p data-i18n="footer_desc"></p></div>
+    <div class="footer-col"><h4 data-i18n="footer_nav"></h4><ul><li><a href="associacio.html" data-i18n="nav_quienes"></a></li><li><a href="blog.html" data-i18n="nav_blog"></a></li><li><a href="contacte.html" data-i18n="nav_contacto"></a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_legal"></h4><ul><li><a href="avis-legal.html" data-i18n="footer_avis"></a></li><li><a href="privacitat.html" data-i18n="footer_privacitat"></a></li><li><a href="cookies.html">Cookies</a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_contacte"></h4><p>gourmetsdetarragona@gmail.com</p></div>
+  </div>
+  <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>applyTranslations(currentLang);</script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto · Gourmets de Tarragona</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/seccions.css">
+<style>
+.page-hero{background:var(--navy-dark);padding:140px 4% 72px;text-align:center;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:url('../assets/img/hero.jpg');background-size:cover;background-position:center;opacity:.08;}
+.page-hero-inner{position:relative;z-index:1;max-width:600px;margin:0 auto;}
+.page-hero .slabel{color:rgba(255,255,255,.4);justify-content:center;display:flex;}
+.page-hero .stitle{color:#fff;font-size:clamp(2rem,4vw,3rem);margin-top:10px;}
+.page-hero-desc{font-size:.95rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.8;margin-top:10px;}
+
+.contacte-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.contacte-info-item{display:flex;gap:18px;align-items:flex-start;margin-bottom:28px;}
+.contacte-info-ico{width:44px;height:44px;background:var(--navy);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.contacte-info-ico i{color:#fff;font-size:.9rem;}
+.contacte-info-label{font-size:.62rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.contacte-info-val{font-size:.95rem;color:var(--navy-dark);font-weight:300;line-height:1.6;}
+.contacte-info-val a{color:var(--navy-dark);transition:color .2s;}
+.contacte-info-val a:hover{color:var(--gold);}
+.contacte-social{display:flex;gap:12px;margin-top:32px;}
+.contacte-social a{width:44px;height:44px;background:var(--navy);display:flex;align-items:center;justify-content:center;color:#fff;transition:.2s;}
+.contacte-social a:hover{background:var(--gold);}
+
+.contacte-form-wrap{background:var(--cream);border:1px solid var(--border);padding:44px;}
+.form-group{margin-bottom:20px;}
+.form-label{font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--navy-dark);display:block;margin-bottom:8px;}
+.form-input{width:100%;padding:12px 16px;border:1px solid var(--border);background:#fff;font-family:var(--font-body);font-size:.9rem;color:var(--navy-dark);transition:border-color .2s;outline:none;}
+.form-input:focus{border-color:var(--navy);}
+.form-textarea{resize:vertical;min-height:130px;}
+.form-submit{width:100%;background:var(--navy);color:#fff;border:none;padding:14px;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:.2s;font-family:var(--font-body);}
+.form-submit:hover{background:var(--navy-dark);}
+.form-note{font-size:.78rem;color:var(--muted);margin-top:10px;text-align:center;line-height:1.6;}
+
+@media(max-width:768px){
+  .contacte-grid{grid-template-columns:1fr;gap:40px;}
+  .page-hero{padding:120px 5% 52px;}
+  .contacte-form-wrap{padding:28px 20px;}
+}
+</style>
+
+<script>
+const t = {
+  es:{
+    nav_inicio:'Inicio',nav_asoc:'La Asociación',nav_rest:'Restaurantes',
+    nav_premios:'Premios',nav_blog:'Blog Gourmet',nav_contacto:'Contacto',
+    nav_quienes:'Quiénes somos',nav_como:'Cómo funcionamos',
+    nav_visites:'Visitas 2025–26',nav_gastronia:'Trofeo Gastronía',
+    nav_bacus:'Premio Baccus',nav_rest_short:'Restaurantes',nav_premios_short:'Premios',
+    footer_desc:'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',
+    footer_nav:'Navegación',footer_legal:'Legal',footer_contacte:'Contacto',
+    footer_avis:'Aviso Legal',footer_privacitat:'Política de Privacidad',
+    footer_copy:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',
+    c_label:'Contacto',
+    c_title:'¿Hablamos?',
+    c_desc:'Si eres restaurador, periodista gastronómico, sumiller o simplemente compartes nuestra pasión, escríbenos.',
+    c_info_title:'Información de contacto',
+    c_email_label:'Correo electrónico',
+    c_ubicacio_label:'Ubicación',
+    c_ubicacio_val:'Tarragona, Catalunya',
+    c_xarxes_label:'Redes sociales',
+    c_form_title:'Envíanos un mensaje',
+    c_nom_label:'Nombre',
+    c_nom_ph:'Tu nombre',
+    c_email2_label:'Email',
+    c_email2_ph:'tu@email.com',
+    c_assumpte_label:'Asunto',
+    c_assumpte_ph:'¿En qué podemos ayudarte?',
+    c_msg_label:'Mensaje',
+    c_msg_ph:'Escríbenos aquí...',
+    c_enviar:'Enviar mensaje',
+    c_note:'Respondemos en un plazo de 48 horas. Tu información no será compartida con terceros.',
+  },
+  ca:{
+    nav_inicio:'Inici',nav_asoc:"L'Associació",nav_rest:'Restaurants',
+    nav_premios:'Premis',nav_blog:'Blog Gourmet',nav_contacto:'Contacte',
+    nav_quienes:'Qui som',nav_como:'Com funcionem',
+    nav_visites:'Visites 2025–26',nav_gastronia:'Trofeu Gastronía',
+    nav_bacus:'Premi Bacus',nav_rest_short:'Restaurants',nav_premios_short:'Premis',
+    footer_desc:"Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.",
+    footer_nav:'Navegació',footer_legal:'Legal',footer_contacte:'Contacte',
+    footer_avis:'Avís Legal',footer_privacitat:'Política de Privacitat',
+    footer_copy:'© 2026 Gourmets de Tarragona · Tots els drets reservats',
+    c_label:'Contacte',
+    c_title:'Parlem?',
+    c_desc:"Si ets restaurador, periodista gastronòmic, sommelier o simplement comparteixes la nostra passió, escriu-nos.",
+    c_info_title:'Informació de contacte',
+    c_email_label:'Correu electrònic',
+    c_ubicacio_label:'Ubicació',
+    c_ubicacio_val:'Tarragona, Catalunya',
+    c_xarxes_label:'Xarxes socials',
+    c_form_title:'Envia\'ns un missatge',
+    c_nom_label:'Nom',
+    c_nom_ph:'El teu nom',
+    c_email2_label:'Email',
+    c_email2_ph:'tu@email.com',
+    c_assumpte_label:'Assumpte',
+    c_assumpte_ph:'En què et podem ajudar?',
+    c_msg_label:'Missatge',
+    c_msg_ph:'Escriu-nos aquí...',
+    c_enviar:'Enviar missatge',
+    c_note:"Responem en un termini de 48 hores. La teva informació no serà compartida amb tercers.",
+  }
+};
+let currentLang = localStorage.getItem('gdt-lang') || 'es';
+function applyTranslations(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[lang] && t[lang][key] !== undefined) el.innerHTML = t[lang][key];
+  });
+  // Placeholders
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const key = el.getAttribute('data-i18n-ph');
+    if (t[lang] && t[lang][key] !== undefined) el.placeholder = t[lang][key];
+  });
+  document.getElementById('html-root')?.setAttribute('lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(btn =>
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang));
+}
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('gdt-lang', lang);
+  applyTranslations(lang);
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" class="solid">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona"></a>
+    <div class="nav-menu">
+      <div class="nav-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
+      <div class="nav-item"><span data-i18n="nav_asoc"></span><div class="dropdown"><a href="associacio.html" data-i18n="nav_quienes"></a><a href="associacio.html#funcionament" data-i18n="nav_como"></a></div></div>
+      <div class="nav-item"><span data-i18n="nav_rest"></span><div class="dropdown"><a href="restaurants.html" data-i18n="nav_visites"></a></div></div>
+      <div class="nav-item"><span data-i18n="nav_premios"></span><div class="dropdown"><a href="premis.html" data-i18n="nav_gastronia"></a><a href="premis.html#bacus" data-i18n="nav_bacus"></a></div></div>
+      <div class="nav-item"><a href="blog.html" data-i18n="nav_blog"></a></div>
+      <div class="nav-item"><a href="contacte.html" data-i18n="nav_contacto"></a></div>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
+    <div class="mobile-item"><a href="restaurants.html" data-i18n="nav_rest_short"></a></div>
+    <div class="mobile-item"><a href="blog.html" data-i18n="nav_blog"></a></div>
+    <div class="mobile-item"><a href="contacte.html" data-i18n="nav_contacto"></a></div>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="slabel" data-i18n="c_label"></p>
+    <h1 class="stitle" data-i18n="c_title"></h1>
+    <p class="page-hero-desc" data-i18n="c_desc"></p>
+  </div>
+</div>
+
+<!-- CONTINGUT -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="contacte-grid">
+
+      <!-- INFO -->
+      <div>
+        <p class="slabel" data-i18n="c_info_title"></p>
+        <div class="sdiv"></div>
+
+        <div class="contacte-info-item">
+          <div class="contacte-info-ico"><i class="fa fa-envelope"></i></div>
+          <div>
+            <div class="contacte-info-label" data-i18n="c_email_label"></div>
+            <div class="contacte-info-val">
+              <a href="mailto:gourmetsdetarragona@gmail.com">gourmetsdetarragona@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacte-info-item">
+          <div class="contacte-info-ico"><i class="fa fa-map-marker-alt"></i></div>
+          <div>
+            <div class="contacte-info-label" data-i18n="c_ubicacio_label"></div>
+            <div class="contacte-info-val" data-i18n="c_ubicacio_val"></div>
+          </div>
+        </div>
+
+        <div class="contacte-info-item">
+          <div class="contacte-info-ico"><i class="fa fa-share-alt"></i></div>
+          <div>
+            <div class="contacte-info-label" data-i18n="c_xarxes_label"></div>
+            <div class="contacte-social">
+              <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMULARI -->
+      <div class="contacte-form-wrap">
+        <p class="slabel" data-i18n="c_form_title"></p>
+        <div class="sdiv"></div>
+        <div class="form-group">
+          <label class="form-label" data-i18n="c_nom_label"></label>
+          <input type="text" class="form-input" data-i18n-ph="c_nom_ph">
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-i18n="c_email2_label"></label>
+          <input type="email" class="form-input" data-i18n-ph="c_email2_ph">
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-i18n="c_assumpte_label"></label>
+          <input type="text" class="form-input" data-i18n-ph="c_assumpte_ph">
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-i18n="c_msg_label"></label>
+          <textarea class="form-input form-textarea" data-i18n-ph="c_msg_ph"></textarea>
+        </div>
+        <button class="form-submit" onclick="window.location.href='mailto:gourmetsdetarragona@gmail.com'" data-i18n="c_enviar"></button>
+        <p class="form-note" data-i18n="c_note"></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona">
+      <p data-i18n="footer_desc"></p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4 data-i18n="footer_nav"></h4><ul><li><a href="associacio.html" data-i18n="nav_quienes"></a></li><li><a href="restaurants.html" data-i18n="nav_rest_short"></a></li><li><a href="premis.html" data-i18n="nav_premios_short"></a></li><li><a href="blog.html" data-i18n="nav_blog"></a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_legal"></h4><ul>
+      <li><a href="avis-legal.html" data-i18n="footer_avis"></a></li>
+      <li><a href="privacitat.html" data-i18n="footer_privacitat"></a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+    </ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_contacte"></h4><p>gourmetsdetarragona@gmail.com</p><p>Tarragona, Catalunya</p></div>
+  </div>
+  <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script>applyTranslations(currentLang);</script>
+</body>
+</html>
