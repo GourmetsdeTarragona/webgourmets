@@ -479,17 +479,33 @@ function setLang(lang) {
 <script src="../assets/js/main.js"></script>
 <script>
 const tlNums = ['01','02','03','04','05','06'];
-const tlTitleKeys = ['paso1_title','paso2_title','paso3_title','paso4_title','paso5_title','paso6_title'];
-const tlDescKeys  = ['paso1_desc', 'paso2_desc', 'paso3_desc', 'paso4_desc', 'paso5_desc', 'paso6_desc'];
+const tlData = {
+  es: [
+    {title:'Selección',    desc:'El comité selecciona los restaurantes a visitar cada temporada, buscando variedad de cocinas, estilos y niveles.'},
+    {title:'Previa',       desc:'Se publica una crónica previa con historia del restaurante, el chef, la carta y curiosidades para preparar la visita.'},
+    {title:'Visita',       desc:'Los socios viven la experiencia completa: aperitivos, menú de degustación y maridaje.'},
+    {title:'Valoración',   desc:'Cada socio puntúa de 1 a 5 en cada uno de los 8 criterios establecidos, de forma completamente independiente.'},
+    {title:'Crónica',      desc:'Se publica la crónica completa con fotografías, notas y la puntuación media obtenida por el restaurante.'},
+    {title:'Premios',      desc:'Al final del año se suman las valoraciones y se otorgan el Trofeo Gastronía y el Premio Baccus en la gala anual.'},
+  ],
+  ca: [
+    {title:'Selecció',     desc:'El comitè selecciona els restaurants a visitar cada temporada, buscant varietat de cuines, estils i nivells.'},
+    {title:'Prèvia',       desc:"Es publica una crònica prèvia amb història del restaurant, el cuiner, la carta i curiositats per preparar la visita."},
+    {title:'Visita',       desc:"Els socis viuen l'experiència completa: aperitius, menú de degustació i maridatge."},
+    {title:'Valoració',    desc:"Cada soci puntua de l'1 al 5 en cadascun dels 8 criteris establerts, de forma completament independent."},
+    {title:'Crònica',      desc:'Es publica la crònica completa amb fotografies, notes i la puntuació mitjana obtinguda pel restaurant.'},
+    {title:'Premis',       desc:"Al final de l'any se sumen les valoracions i s'atorguen el Trofeu Gastronía i el Premi Bacus en la gala anual."},
+  ]
+};
 
 function activaPas(i) {
   document.querySelectorAll('.tl-step').forEach((s,j) => s.classList.toggle('actiu', i===j));
-  document.getElementById('tl-num').textContent  = tlNums[i];
-  document.getElementById('tl-title').textContent = t[currentLang][tlTitleKeys[i]] || '';
-  document.getElementById('tl-text').textContent  = t[currentLang][tlDescKeys[i]]  || '';
+  const d = tlData[currentLang][i];
+  document.getElementById('tl-num').textContent   = tlNums[i];
+  document.getElementById('tl-title').textContent = d.title;
+  document.getElementById('tl-text').textContent  = d.desc;
 }
 </script>
 <script>applyTranslations(currentLang); activaPas(0);</script>
 </body>
 </html>
-
