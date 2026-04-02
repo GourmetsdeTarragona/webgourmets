@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Gourmet · Gourmets de Tarragona</title>
+<meta name="description" content="Blog gastronòmic de l'associació Gourmets de Tarragona. Prèvies, cròniques, notícies i vins del Camp de Tarragona.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/seccions.css">
+<style>
+/* ── HERO BLOG ── */
+.blog-hero{
+  background:var(--navy-dark);
+  padding:140px 4% 64px;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.blog-hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80');
+  background-size:cover;background-position:center;
+  opacity:.1;
+}
+.blog-hero-inner{position:relative;z-index:1;max-width:640px;margin:0 auto;}
+.blog-hero .slabel{color:rgba(255,255,255,.4);justify-content:center;display:flex;margin-bottom:12px;}
+.blog-hero-title{font-family:var(--font-serif);font-size:clamp(2.2rem,4vw,3.2rem);color:#fff;margin-bottom:14px;font-weight:700;}
+.blog-hero-desc{font-size:.95rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.8;}
+
+/* ── FILTRE CATEGORIES ── */
+.blog-filtres{
+  position:sticky;top:72px;z-index:100;
+  background:rgba(245,242,237,.97);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+  padding:0 4%;
+}
+.blog-filtres-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;gap:0;overflow-x:auto;
+  scrollbar-width:none;
+}
+.blog-filtres-inner::-webkit-scrollbar{display:none;}
+.filtre-btn{
+  display:flex;align-items:center;gap:7px;
+  padding:16px 20px;
+  font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--muted);border:none;background:none;cursor:pointer;
+  border-bottom:2px solid transparent;
+  white-space:nowrap;transition:.2s;
+}
+.filtre-btn:hover{color:var(--navy-dark);}
+.filtre-btn.actiu{color:var(--navy-dark);border-bottom-color:var(--gold);}
+.filtre-btn .filtre-dot{
+  width:7px;height:7px;border-radius:50%;flex-shrink:0;
+}
+.filtre-btn .filtre-n{
+  font-size:.6rem;background:var(--cream);
+  padding:2px 6px;border-radius:20px;color:var(--muted);
+  font-weight:700;letter-spacing:0;
+}
+
+/* ── DESTACAT ── */
+.blog-destacat{
+  max-width:1100px;margin:52px auto 0;padding:0 4%;
+}
+.destacat-card{
+  display:grid;grid-template-columns:1.1fr 1fr;
+  background:#fff;border:1px solid var(--border);
+  overflow:hidden;
+  transition:box-shadow .3s;
+}
+.destacat-card:hover{box-shadow:var(--shadow-md);}
+.destacat-img{
+  position:relative;overflow:hidden;
+  min-height:420px;
+}
+.destacat-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .5s;
+}
+.destacat-card:hover .destacat-img img{transform:scale(1.03);}
+.destacat-cat{
+  position:absolute;top:20px;left:20px;
+  font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  padding:6px 12px;color:#fff;
+}
+.destacat-body{
+  padding:52px 48px;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.destacat-meta{
+  display:flex;align-items:center;gap:14px;
+  margin-bottom:18px;
+}
+.destacat-data{font-size:.72rem;color:var(--muted);letter-spacing:1px;}
+.destacat-title{
+  font-family:var(--font-serif);
+  font-size:clamp(1.6rem,2.5vw,2.1rem);
+  color:var(--navy-dark);line-height:1.2;
+  margin-bottom:16px;font-weight:700;
+}
+.destacat-exc{
+  font-size:.95rem;font-weight:300;color:var(--muted);
+  line-height:1.85;margin-bottom:28px;
+}
+.destacat-link{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--navy-dark);border-bottom:2px solid var(--gold);
+  padding-bottom:3px;transition:color .2s;width:fit-content;
+}
+.destacat-link:hover{color:var(--gold);}
+.destacat-badge{
+  font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  padding:4px 10px;margin-right:4px;
+}
+
+/* ── GRID ENTRADES ── */
+.blog-grid-wrap{
+  max-width:1100px;margin:48px auto 80px;padding:0 4%;
+}
+.blog-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+.blog-card{
+  background:#fff;border:1px solid var(--border);
+  overflow:hidden;transition:transform .3s,box-shadow .3s;
+  display:flex;flex-direction:column;
+}
+.blog-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.blog-card-img{
+  height:200px;overflow:hidden;position:relative;
+}
+.blog-card-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .5s;
+}
+.blog-card:hover .blog-card-img img{transform:scale(1.05);}
+.blog-card-cat{
+  position:absolute;top:12px;left:12px;
+  font-size:.58rem;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;padding:5px 10px;color:#fff;
+}
+.blog-card-body{padding:22px;flex:1;display:flex;flex-direction:column;}
+.blog-card-meta{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:10px;
+}
+.blog-card-data{font-size:.68rem;color:var(--muted);letter-spacing:.5px;}
+.blog-card-title{
+  font-family:var(--font-serif);font-size:1.15rem;
+  color:var(--navy-dark);line-height:1.3;
+  margin-bottom:10px;font-weight:600;
+}
+.blog-card-exc{
+  font-size:.85rem;font-weight:300;color:var(--muted);
+  line-height:1.7;margin-bottom:16px;flex:1;
+}
+.blog-card-link{
+  font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--navy-dark);border-bottom:1px solid var(--gold);
+  padding-bottom:2px;transition:color .2s;width:fit-content;
+  margin-top:auto;
+}
+.blog-card-link:hover{color:var(--gold);}
+
+/* ── CARD PROXIMA VISITA ── */
+.blog-card-proxima{
+  background:var(--navy-dark);border:none;
+  justify-content:center;align-items:center;text-align:center;
+  padding:36px 28px;min-height:320px;
+}
+.blog-card-proxima:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.proxima-ico{font-size:2rem;margin-bottom:16px;opacity:.3;}
+.proxima-label{font-size:.62rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(184,146,74,.8);margin-bottom:10px;}
+.proxima-rest{font-family:var(--font-serif);font-size:1.4rem;color:#fff;margin-bottom:6px;}
+.proxima-data{font-size:.82rem;color:rgba(255,255,255,.45);margin-bottom:20px;}
+.proxima-link{
+  font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  background:rgba(184,146,74,.15);color:rgba(184,146,74,.9);
+  border:1px solid rgba(184,146,74,.3);padding:8px 18px;
+  transition:.2s;display:inline-block;
+}
+.proxima-link:hover{background:var(--gold);color:#fff;border-color:var(--gold);}
+
+/* ── COLORS CATEGORIES ── */
+.cat-previa{background:var(--navy);}
+.cat-cronica{background:var(--gold);}
+.cat-noticia{background:#555;}
+.cat-vi{background:#6b2737;}
+.cat-event{background:#2a7a4b;}
+
+/* ── EMPTY STATE ── */
+.blog-empty{
+  grid-column:1/-1;text-align:center;
+  padding:60px 20px;color:var(--muted);
+}
+.blog-empty i{font-size:2.5rem;opacity:.2;margin-bottom:16px;display:block;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .destacat-card{grid-template-columns:1fr;}
+  .destacat-img{min-height:280px;}
+  .blog-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:680px){
+  .blog-hero{padding:120px 5% 52px;}
+  .destacat-body{padding:32px 24px;}
+  .blog-grid{grid-template-columns:1fr;}
+  .blog-filtres{top:60px;}
+}
+</style>
+
+<script>
+/* ── I18N BLOG — inline ── */
+const t = {
+  es:{
+    nav_inicio:'Inicio',nav_asoc:'La Asociación',nav_rest:'Restaurantes',
+    nav_premios:'Premios',nav_blog:'Blog Gourmet',nav_contacto:'Contacto',
+    nav_quienes:'Quiénes somos',nav_como:'Cómo funcionamos',
+    nav_visites:'Visitas 2025–26',nav_gastronia:'Trofeo Gastronía',
+    nav_bacus:'Premio Baccus',nav_rest_short:'Restaurantes',nav_premios_short:'Premios',
+    footer_desc:'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',
+    footer_nav:'Navegación',footer_legal:'Legal',footer_contacte:'Contacto',
+    footer_avis:'Aviso Legal',footer_privacitat:'Política de Privacidad',
+    footer_copy:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',
+    blog_label:'Blog Gourmet',
+    blog_title:'Gastronomía con criterio',
+    blog_desc:'Previas, crónicas, noticias y vinos del Camp de Tarragona. Todo lo que rodea a la mesa de los Gourmets.',
+    cat_tots:'Todos',cat_previa:'Previas',cat_cronica:'Crónicas',
+    cat_noticia:'Noticias',cat_vi:'Vinos',cat_event:'Eventos',
+    dest_label:'Última entrada',
+    dest_link:'Leer la entrada completa →',
+    card_link:'Leer →',
+    proxima_label:'Próxima visita',
+    proxima_data:'9 de abril 2026',
+    proxima_link:'Ver la previa →',
+    badge_previa:'Previa',badge_cronica:'Crónica',
+    badge_noticia:'Noticia',badge_vi:'Vinos',badge_event:'Evento',
+  },
+  ca:{
+    nav_inicio:'Inici',nav_asoc:"L'Associació",nav_rest:'Restaurants',
+    nav_premios:'Premis',nav_blog:'Blog Gourmet',nav_contacto:'Contacte',
+    nav_quienes:'Qui som',nav_como:'Com funcionem',
+    nav_visites:'Visites 2025–26',nav_gastronia:'Trofeu Gastronía',
+    nav_bacus:'Premi Bacus',nav_rest_short:'Restaurants',nav_premios_short:'Premis',
+    footer_desc:"Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.",
+    footer_nav:'Navegació',footer_legal:'Legal',footer_contacte:'Contacte',
+    footer_avis:'Avís Legal',footer_privacitat:'Política de Privacitat',
+    footer_copy:'© 2026 Gourmets de Tarragona · Tots els drets reservats',
+    blog_label:'Blog Gourmet',
+    blog_title:'Gastronomia amb criteri',
+    blog_desc:'Prèvies, cròniques, notícies i vins del Camp de Tarragona. Tot el que envolta la taula dels Gourmets.',
+    cat_tots:'Tots',cat_previa:'Prèvies',cat_cronica:'Cròniques',
+    cat_noticia:'Notícies',cat_vi:'Vins',cat_event:'Esdeveniments',
+    dest_label:'Última entrada',
+    dest_link:'Llegir l\'entrada completa →',
+    card_link:'Llegir →',
+    proxima_label:'Propera visita',
+    proxima_data:'9 d\'abril 2026',
+    proxima_link:'Veure la prèvia →',
+    badge_previa:'Prèvia',badge_cronica:'Crònica',
+    badge_noticia:'Notícia',badge_vi:'Vins',badge_event:'Esdeveniment',
+  }
+};
+let currentLang = localStorage.getItem('gdt-lang') || 'es';
+function applyTranslations(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[lang] && t[lang][key] !== undefined) el.innerHTML = t[lang][key];
+  });
+  document.getElementById('html-root')?.setAttribute('lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(btn =>
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang));
+}
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('gdt-lang', lang);
+  applyTranslations(lang);
+  filterEntrades(currentCat);
+}
+
+/* ── FILTRE JS ── */
+let currentCat = 'tots';
+function filterEntrades(cat) {
+  currentCat = cat;
+  document.querySelectorAll('.filtre-btn').forEach(btn =>
+    btn.classList.toggle('actiu', btn.dataset.cat === cat));
+  document.querySelectorAll('.blog-card[data-cat]').forEach(card => {
+    const show = cat === 'tots' || card.dataset.cat === cat;
+    card.style.display = show ? 'flex' : 'none';
+  });
+  // Destacat
+  const dest = document.querySelector('.destacat-card');
+  if (dest) {
+    const show = cat === 'tots' || dest.dataset.cat === cat;
+    dest.closest('.blog-destacat').style.display = show ? 'block' : 'none';
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" class="solid">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona"></a>
+    <div class="nav-menu">
+      <div class="nav-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
+      <div class="nav-item"><span data-i18n="nav_asoc"></span><div class="dropdown"><a href="associacio.html" data-i18n="nav_quienes"></a><a href="associacio.html#funcionament" data-i18n="nav_como"></a></div></div>
+      <div class="nav-item"><span data-i18n="nav_rest"></span><div class="dropdown"><a href="restaurants.html" data-i18n="nav_visites"></a></div></div>
+      <div class="nav-item"><span data-i18n="nav_premios"></span><div class="dropdown"><a href="premis.html" data-i18n="nav_gastronia"></a><a href="premis.html#bacus" data-i18n="nav_bacus"></a></div></div>
+      <div class="nav-item"><a href="blog.html" data-i18n="nav_blog"></a></div>
+      <div class="nav-item"><a href="contacte.html" data-i18n="nav_contacto"></a></div>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
+    <div class="mobile-item"><a href="restaurants.html" data-i18n="nav_rest_short"></a></div>
+    <div class="mobile-item"><a href="blog.html" data-i18n="nav_blog"></a></div>
+    <div class="mobile-item"><a href="contacte.html" data-i18n="nav_contacto"></a></div>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <div class="blog-hero-inner">
+    <p class="slabel" data-i18n="blog_label"></p>
+    <h1 class="blog-hero-title" data-i18n="blog_title"></h1>
+    <p class="blog-hero-desc" data-i18n="blog_desc"></p>
+  </div>
+</div>
+
+<!-- FILTRES -->
+<div class="blog-filtres">
+  <div class="blog-filtres-inner">
+    <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
+      <span data-i18n="cat_tots"></span>
+      <span class="filtre-n">4</span>
+    </button>
+    <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
+      <span class="filtre-dot cat-previa" style="background:var(--navy);"></span>
+      <span data-i18n="cat_previa"></span>
+      <span class="filtre-n">2</span>
+    </button>
+    <button class="filtre-btn" data-cat="cronica" onclick="filterEntrades('cronica')">
+      <span class="filtre-dot" style="background:var(--gold);"></span>
+      <span data-i18n="cat_cronica"></span>
+      <span class="filtre-n">1</span>
+    </button>
+    <button class="filtre-btn" data-cat="noticia" onclick="filterEntrades('noticia')">
+      <span class="filtre-dot" style="background:#555;"></span>
+      <span data-i18n="cat_noticia"></span>
+      <span class="filtre-n">1</span>
+    </button>
+    <button class="filtre-btn" data-cat="vi" onclick="filterEntrades('vi')">
+      <span class="filtre-dot" style="background:#6b2737;"></span>
+      <span data-i18n="cat_vi"></span>
+      <span class="filtre-n">0</span>
+    </button>
+    <button class="filtre-btn" data-cat="event" onclick="filterEntrades('event')">
+      <span class="filtre-dot" style="background:#2a7a4b;"></span>
+      <span data-i18n="cat_event"></span>
+      <span class="filtre-n">0</span>
+    </button>
+  </div>
+</div>
+
+<!-- DESTACAT — La Goleta Prèvia (la més recent) -->
+<div class="blog-destacat">
+  <div class="destacat-card" data-cat="previa">
+    <div class="destacat-img">
+      <img src="../assets/img/goleta/capellans-beach.jpg" alt="La Goleta · Salou">
+      <span class="destacat-cat cat-previa" data-i18n="badge_previa"></span>
+    </div>
+    <div class="destacat-body">
+      <div class="destacat-meta">
+        <span class="destacat-badge cat-previa destacat-cat" style="position:static;font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;color:#fff;" data-i18n="badge_previa"></span>
+        <span class="destacat-data">2 Abril 2026</span>
+      </div>
+      <h2 class="destacat-title">La Goleta · Salou<br><em style="font-style:italic;color:var(--gold);font-size:.8em;">40 anys davant la Platja dels Capellans</em></h2>
+      <p class="destacat-exc">Quaranta anys d'un restaurant que ha fet del producte del litoral la seva raó de ser. El 9 d'abril, els Gourmets de Tarragona visiten un dels referents de la Costa Daurada en el marc del seu 40è aniversari.</p>
+      <a href="../entrades/la-goleta-previa-2026.html" class="destacat-link" data-i18n="dest_link"></a>
+    </div>
+  </div>
+</div>
+
+<!-- GRID ENTRADES -->
+<div class="blog-grid-wrap">
+  <div class="blog-grid">
+
+    <!-- Kema Crònica -->
+    <article class="blog-card" data-cat="cronica">
+      <div class="blog-card-img">
+        <img src="../assets/img/kema/hero.jpg" alt="Kema · Cambrils">
+        <span class="blog-card-cat cat-cronica" data-i18n="badge_cronica"></span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-data">Març 2026</span>
+        </div>
+        <h3 class="blog-card-title">Kema · Cambrils<br><small style="font-family:var(--font-body);font-size:.78rem;color:var(--muted);font-weight:300;">Crònica de la 1a visita</small></h3>
+        <p class="blog-card-exc">Brasa, producte de qualitat i cocteleria diferencial. Crònica completa de la primera visita de la temporada 2026.</p>
+        <a href="../entrades/kema-cronica-2026.html" class="blog-card-link" data-i18n="card_link"></a>
+      </div>
+    </article>
+
+    <!-- Kema Prèvia -->
+    <article class="blog-card" data-cat="previa">
+      <div class="blog-card-img">
+        <img src="../assets/img/kema/brasa-carn.jpg" alt="Kema · Prèvia">
+        <span class="blog-card-cat cat-previa" data-i18n="badge_previa"></span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-data">Febrer 2026</span>
+        </div>
+        <h3 class="blog-card-title">Kema · Cambrils<br><small style="font-family:var(--font-body);font-size:.78rem;color:var(--muted);font-weight:300;">Prèvia de la 1a visita</small></h3>
+        <p class="blog-card-exc">Una proposta 360° on el foc mana. Tot el que calia saber abans de la primera visita de la temporada.</p>
+        <a href="../entrades/kema-previa-2026.html" class="blog-card-link" data-i18n="card_link"></a>
+      </div>
+    </article>
+
+    <!-- Notícia — 40 anys La Goleta -->
+    <article class="blog-card" data-cat="noticia">
+      <div class="blog-card-img">
+        <img src="../assets/img/goleta/aniversari-40.jpg" alt="La Goleta 40 anys">
+        <span class="blog-card-cat cat-noticia" data-i18n="badge_noticia"></span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-data">Març 2026</span>
+        </div>
+        <h3 class="blog-card-title">La Goleta celebra 40 anys</h3>
+        <p class="blog-card-exc">El restaurant de la Platja dels Capellans compleix quatre dècades. Un referent de la Costa Daurada que ha sabut mantenir-se fidel als seus principis.</p>
+        <a href="../entrades/la-goleta-previa-2026.html" class="blog-card-link" data-i18n="card_link"></a>
+      </div>
+    </article>
+
+    <!-- Card Propera Visita -->
+    <div class="blog-card blog-card-proxima" data-cat="tots">
+      <div class="proxima-ico">🗓</div>
+      <div class="proxima-label" data-i18n="proxima_label"></div>
+      <div class="proxima-rest">La Goleta · Salou</div>
+      <div class="proxima-data" data-i18n="proxima_data"></div>
+      <a href="../entrades/la-goleta-previa-2026.html" class="proxima-link" data-i18n="proxima_link"></a>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona">
+      <p data-i18n="footer_desc"></p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4 data-i18n="footer_nav"></h4><ul><li><a href="associacio.html" data-i18n="nav_quienes"></a></li><li><a href="restaurants.html" data-i18n="nav_rest_short"></a></li><li><a href="premis.html" data-i18n="nav_premios_short"></a></li><li><a href="blog.html" data-i18n="nav_blog"></a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_legal"></h4><ul><li><a href="#" data-i18n="footer_avis"></a></li><li><a href="#" data-i18n="footer_privacitat"></a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_contacte"></h4><p>gourmetsdetarragona@gmail.com</p><p>Tarragona, Catalunya</p></div>
+  </div>
+  <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script>applyTranslations(currentLang);</script>
+</body>
+</html>
