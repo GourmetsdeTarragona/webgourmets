@@ -477,6 +477,18 @@ function setLang(lang) {
 </footer>
 
 <script src="../assets/js/main.js"></script>
-<script>applyTranslations(currentLang);</script>
+<script>
+const tlNums = ['01','02','03','04','05','06'];
+const tlTitleKeys = ['paso1_title','paso2_title','paso3_title','paso4_title','paso5_title','paso6_title'];
+const tlDescKeys  = ['paso1_desc', 'paso2_desc', 'paso3_desc', 'paso4_desc', 'paso5_desc', 'paso6_desc'];
+
+function activaPas(i) {
+  document.querySelectorAll('.tl-step').forEach((s,j) => s.classList.toggle('actiu', i===j));
+  document.getElementById('tl-num').textContent  = tlNums[i];
+  document.getElementById('tl-title').textContent = t[currentLang][tlTitleKeys[i]] || '';
+  document.getElementById('tl-text').textContent  = t[currentLang][tlDescKeys[i]]  || '';
+}
+</script>
+<script>applyTranslations(currentLang); activaPas(0);</script>
 </body>
 </html>
