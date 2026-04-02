@@ -31,15 +31,17 @@
 
 .missio-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
 
-.proceso-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);}
-.paso{padding:36px 28px;text-align:center;border-right:1px solid var(--border);transition:background .3s;}
-.paso:nth-child(3){border-right:none;}
-.paso:nth-child(4),.paso:nth-child(5),.paso:nth-child(6){border-top:1px solid var(--border);}
-.paso:nth-child(6){border-right:none;}
-.paso:hover{background:var(--cream);}
-.paso-num{font-family:var(--font-serif);font-size:2.8rem;color:var(--navy);opacity:.15;margin-bottom:10px;line-height:1;}
-.paso h4{font-family:var(--font-serif);font-size:1.05rem;color:var(--navy-dark);margin-bottom:8px;}
-.paso p{font-size:.85rem;color:var(--muted);line-height:1.75;font-weight:300;}
+.timeline-connector{position:relative;display:flex;align-items:flex-start;justify-content:space-between;gap:0;margin-bottom:32px;}
+.timeline-connector::before{content:'';position:absolute;top:28px;left:calc(100%/12);right:calc(100%/12);height:2px;background:linear-gradient(90deg,var(--gold),var(--dorado-clar,#d4a96a),var(--gold));z-index:0;}
+.tl-step{display:flex;flex-direction:column;align-items:center;text-align:center;flex:1;position:relative;z-index:1;cursor:pointer;}
+.tl-circle{width:56px;height:56px;border-radius:50%;background:var(--navy-dark);border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.1rem;font-weight:600;color:var(--gold);transition:all .25s;box-shadow:0 0 0 0 rgba(184,146,74,0);}
+.tl-step:hover .tl-circle,.tl-step.actiu .tl-circle{background:var(--gold);color:#fff;box-shadow:0 0 0 6px rgba(184,146,74,.15);}
+.tl-icon{font-size:1.1rem;margin-top:12px;margin-bottom:4px;opacity:.6;}
+.tl-title{font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy-dark);}
+.tl-detail{background:var(--cream);border:1px solid var(--border);border-radius:0;padding:28px 36px;display:flex;gap:24px;align-items:flex-start;min-height:80px;}
+.tl-detail-num{font-family:var(--font-serif);font-size:3.5rem;font-weight:700;color:var(--gold);opacity:.2;line-height:1;flex-shrink:0;margin-top:-6px;}
+.tl-detail-title{font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:8px;}
+.tl-detail-text{font-size:.9rem;color:var(--muted);line-height:1.8;font-weight:300;}
 
 .criteria-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px;}
 .crit-card{background:#fff;border:1px solid var(--border);padding:28px 18px;text-align:center;transition:transform .3s,box-shadow .3s;}
@@ -305,13 +307,44 @@ function setLang(lang) {
       <h2 class="stitle" data-i18n="proceso_title"></h2>
       <div class="sdiv" style="margin:0 auto;"></div>
     </div>
-    <div class="proceso-grid">
-      <div class="paso"><div class="paso-num">01</div><h4 data-i18n="paso1_title"></h4><p data-i18n="paso1_desc"></p></div>
-      <div class="paso"><div class="paso-num">02</div><h4 data-i18n="paso2_title"></h4><p data-i18n="paso2_desc"></p></div>
-      <div class="paso"><div class="paso-num">03</div><h4 data-i18n="paso3_title"></h4><p data-i18n="paso3_desc"></p></div>
-      <div class="paso"><div class="paso-num">04</div><h4 data-i18n="paso4_title"></h4><p data-i18n="paso4_desc"></p></div>
-      <div class="paso"><div class="paso-num">05</div><h4 data-i18n="paso5_title"></h4><p data-i18n="paso5_desc"></p></div>
-      <div class="paso"><div class="paso-num">06</div><h4 data-i18n="paso6_title"></h4><p data-i18n="paso6_desc"></p></div>
+    <div class="timeline-connector">
+      <div class="tl-step actiu" onclick="activaPas(0)">
+        <div class="tl-circle">1</div>
+        <div class="tl-icon">🔍</div>
+        <div class="tl-title" data-i18n="paso1_title"></div>
+      </div>
+      <div class="tl-step" onclick="activaPas(1)">
+        <div class="tl-circle">2</div>
+        <div class="tl-icon">📝</div>
+        <div class="tl-title" data-i18n="paso2_title"></div>
+      </div>
+      <div class="tl-step" onclick="activaPas(2)">
+        <div class="tl-circle">3</div>
+        <div class="tl-icon">🍽</div>
+        <div class="tl-title" data-i18n="paso3_title"></div>
+      </div>
+      <div class="tl-step" onclick="activaPas(3)">
+        <div class="tl-circle">4</div>
+        <div class="tl-icon">⭐</div>
+        <div class="tl-title" data-i18n="paso4_title"></div>
+      </div>
+      <div class="tl-step" onclick="activaPas(4)">
+        <div class="tl-circle">5</div>
+        <div class="tl-icon">📰</div>
+        <div class="tl-title" data-i18n="paso5_title"></div>
+      </div>
+      <div class="tl-step" onclick="activaPas(5)">
+        <div class="tl-circle">6</div>
+        <div class="tl-icon">🏆</div>
+        <div class="tl-title" data-i18n="paso6_title"></div>
+      </div>
+    </div>
+    <div class="tl-detail">
+      <div class="tl-detail-num" id="tl-num">01</div>
+      <div>
+        <div class="tl-detail-title" id="tl-title"></div>
+        <div class="tl-detail-text" id="tl-text"></div>
+      </div>
     </div>
   </div>
 </section>
