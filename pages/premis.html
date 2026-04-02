@@ -14,7 +14,7 @@
 <style>
 /* ── HERO ── */
 .page-hero{background:var(--navy-dark);padding:140px 4% 80px;text-align:center;position:relative;overflow:hidden;}
-.page-hero::before{content:'';position:absolute;inset:0;background-image:url('../assets/img/hero.jpg');background-size:cover;background-position:center;opacity:.08;}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:url('../assets/img/gala2025/sala-gala.jpg');background-size:cover;background-position:center;opacity:.15;}
 .page-hero-inner{position:relative;z-index:1;max-width:640px;margin:0 auto;}
 .page-hero .slabel{color:rgba(255,255,255,.4);justify-content:center;display:flex;}
 .page-hero .stitle{color:#fff;font-size:clamp(2rem,4vw,3rem);margin-top:10px;}
@@ -132,6 +132,7 @@ const t = {
     p_historic_label:'Historial',
     p_historic_title:'Palmarès histórico',
     p_wip:'En proceso de recuperación',
+    p_gala_peu:'Gala de entrega de premios 2025 · Vermuts Rofes · Reus',
   },
   ca:{
     nav_inicio:'Inici',nav_asoc:"L'Associació",nav_rest:'Restaurants',
@@ -167,6 +168,7 @@ const t = {
     p_historic_label:'Historial',
     p_historic_title:'Palmarès històric',
     p_wip:'En procés de recuperació',
+    p_gala_peu:'Gala de lliurament de premis 2025 · Vermuts Rofes · Reus',
   }
 };
 let currentLang = localStorage.getItem('gdt-lang') || 'es';
@@ -277,35 +279,74 @@ function setLang(lang) {
     <div class="palmares-grid">
 
       <!-- 1r Gastronía: Buidasacs -->
-      <div class="palmares-card">
-        <div class="palmares-pos">1</div>
-        <div class="palmares-premi-label" data-i18n="p_1gastronia"></div>
-        <div class="palmares-rest">Buidasacs</div>
-        <div class="palmares-lloc">Reus · Camp de Tarragona</div>
-        <p class="palmares-desc" data-i18n="p_buidasacs_desc"></p>
-        <span class="palmares-badge" data-i18n="p_guanyador"></span>
+      <div class="palmares-card" style="padding:0;overflow:hidden;">
+        <div style="height:260px;overflow:hidden;position:relative;">
+          <img src="../assets/img/gala2025/gastronia1-buidasacs.jpg" alt="Lliurament 1r Gastronía — Buidasacs" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.85) 0%,transparent 60%);"></div>
+          <div class="palmares-premi-label" style="position:absolute;bottom:16px;left:24px;margin:0;" data-i18n="p_1gastronia"></div>
+        </div>
+        <div style="padding:28px 32px;">
+          <div class="palmares-pos" style="top:16px;right:16px;">1</div>
+          <div class="palmares-rest">Buidasacs</div>
+          <div class="palmares-lloc">Reus · Camp de Tarragona</div>
+          <p class="palmares-desc" data-i18n="p_buidasacs_desc"></p>
+          <span class="palmares-badge" data-i18n="p_guanyador"></span>
+        </div>
       </div>
 
       <!-- 2n Gastronía: Cambium -->
-      <div class="palmares-card">
-        <div class="palmares-pos">2</div>
-        <div class="palmares-premi-label" data-i18n="p_2gastronia"></div>
-        <div class="palmares-rest">Cambium</div>
-        <div class="palmares-lloc">Cambrils · Baix Camp</div>
-        <p class="palmares-desc" data-i18n="p_cambium_desc"></p>
-        <span class="palmares-badge" data-i18n="p_guanyador"></span>
+      <div class="palmares-card" style="padding:0;overflow:hidden;">
+        <div style="height:260px;overflow:hidden;position:relative;">
+          <img src="../assets/img/gala2025/gastronia2-cambium.jpg" alt="Lliurament 2n Gastronía — Cambium" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.85) 0%,transparent 60%);"></div>
+          <div class="palmares-premi-label" style="position:absolute;bottom:16px;left:24px;margin:0;" data-i18n="p_2gastronia"></div>
+        </div>
+        <div style="padding:28px 32px;">
+          <div class="palmares-pos" style="top:16px;right:16px;">2</div>
+          <div class="palmares-rest">Cambium</div>
+          <div class="palmares-lloc">Cambrils · Baix Camp</div>
+          <p class="palmares-desc" data-i18n="p_cambium_desc"></p>
+          <span class="palmares-badge" data-i18n="p_guanyador"></span>
+        </div>
       </div>
 
       <!-- Bacus: Cirerets de Mas Alta -->
-      <div class="palmares-card palmares-card-bacus" style="grid-column:1/-1;">
-        <div class="palmares-premi-label" data-i18n="p_bacus_premi"></div>
-        <div class="palmares-rest">Cirerets de Mas Alta</div>
-        <div class="palmares-lloc">D.O. Montsant · Priorat</div>
-        <p class="palmares-desc" data-i18n="p_cirerets_desc"></p>
-        <span class="palmares-badge" data-i18n="p_guanyador_bacus"></span>
+      <div class="palmares-card palmares-card-bacus" style="grid-column:1/-1;padding:0;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;">
+          <div style="height:280px;overflow:hidden;position:relative;">
+            <img src="../assets/img/gala2025/bacus-cirerets.jpg" alt="Lliurament Bacus — Cirerets de Mas Alta" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+            <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(11,22,38,.5),transparent 60%);"></div>
+          </div>
+          <div style="height:280px;overflow:hidden;">
+            <img src="../assets/img/gala2025/trofeus.jpg" alt="Trofeus Gastronía i Bacus 2025" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+        </div>
+        <div style="padding:28px 32px;">
+          <div class="palmares-premi-label" data-i18n="p_bacus_premi"></div>
+          <div class="palmares-rest">Cirerets de Mas Alta</div>
+          <div class="palmares-lloc">D.O. Montsant · Priorat</div>
+          <p class="palmares-desc" data-i18n="p_cirerets_desc"></p>
+          <span class="palmares-badge" data-i18n="p_guanyador_bacus"></span>
+        </div>
       </div>
 
     </div>
+  </div>
+
+  <!-- GALERIA GALA -->
+  <div style="max-width:1100px;margin:32px auto 0;padding:0 4%;">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;">
+      <div style="height:240px;overflow:hidden;">
+        <img src="../assets/img/gala2025/sala-gala.jpg" alt="Sala de la Gala 2025 — Vermuts Rofes" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div style="height:240px;overflow:hidden;">
+        <img src="../assets/img/gala2025/vermuts-rofes.jpg" alt="Vermuts Rofes — espai de la gala" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div style="height:240px;overflow:hidden;">
+        <img src="../assets/img/gala2025/trofeus.jpg" alt="Els tres trofeus de la temporada 2025" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+    </div>
+    <p style="font-size:.72rem;color:rgba(255,255,255,.3);text-align:center;margin-top:10px;font-style:italic;" data-i18n="p_gala_peu"></p>
   </div>
 </div>
 
