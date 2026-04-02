@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurantes · Gourmets de Tarragona</title>
+<meta name="description" content="Recorrido gastronómico de los Gourmets de Tarragona. Visitas 2026 y historial de temporadas anteriores.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/seccions.css">
+<style>
+/* ── HERO ── */
+.page-hero{background:var(--navy-dark);padding:140px 4% 72px;text-align:center;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:url('../assets/img/hero.jpg');background-size:cover;background-position:center;opacity:.08;}
+.page-hero-inner{position:relative;z-index:1;max-width:640px;margin:0 auto;}
+.page-hero .slabel{color:rgba(255,255,255,.4);justify-content:center;display:flex;}
+.page-hero .stitle{color:#fff;font-size:clamp(2rem,4vw,3rem);margin-top:10px;}
+.page-hero-desc{font-size:.95rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.8;margin-top:10px;}
+
+/* ── CARDS TEMPORADA ACTUAL ── */
+.rest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.rest-card{background:#fff;border:1px solid var(--border);overflow:hidden;transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;}
+.rest-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.rest-card-img{height:220px;overflow:hidden;position:relative;background:var(--cream);}
+.rest-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.rest-card:hover .rest-card-img img{transform:scale(1.05);}
+.rest-card-badges{position:absolute;top:12px;left:12px;display:flex;align-items:center;gap:8px;}
+.rest-badge{font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;color:#fff;}
+.badge-visitada{background:var(--gold);}
+.badge-proxima{background:#2a7a4b;}
+.badge-pendent{background:rgba(255,255,255,.2);backdrop-filter:blur(4px);color:rgba(255,255,255,.8);}
+.rest-num{background:var(--navy);color:#fff;font-size:.58rem;font-weight:700;letter-spacing:.1em;padding:5px 10px;}
+.rest-card-pending-inner{height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:var(--cream);}
+.rest-card-pending-inner i{font-size:2rem;opacity:.12;color:var(--navy);}
+.rest-card-pending-label{font-size:.65rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);opacity:.5;}
+.rest-card-body{padding:24px;flex:1;display:flex;flex-direction:column;}
+.rest-card-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.rest-card-lloc{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);}
+.rest-card-data{font-size:.62rem;color:var(--muted);}
+.rest-card-nom{font-family:var(--font-serif);font-size:1.35rem;font-weight:700;color:var(--navy-dark);margin-bottom:4px;line-height:1.2;}
+.rest-card-cuina{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+.rest-card-desc{font-size:.87rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:16px;flex:1;}
+.rest-card-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;}
+.rest-link{font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;}
+.rest-link:hover{color:var(--gold);}
+.rest-link-primary{background:var(--navy);color:#fff;border:none;padding:6px 14px;border-bottom:none;}
+.rest-link-primary:hover{background:var(--navy-dark);color:#fff;}
+
+/* ── HISTORIAL ── */
+.historic-bloc{margin-bottom:48px;}
+.historic-any{
+  display:flex;align-items:center;gap:20px;margin-bottom:20px;
+}
+.historic-any-num{
+  font-family:var(--font-serif);font-size:2.2rem;font-weight:700;
+  color:var(--navy);opacity:.18;line-height:1;min-width:70px;
+}
+.historic-any-line{flex:1;height:1px;background:var(--border);}
+.historic-taula{width:100%;border-collapse:collapse;}
+.historic-taula tr{border-bottom:1px solid var(--border);transition:background .2s;}
+.historic-taula tr:hover{background:var(--cream);}
+.historic-taula tr:last-child{border-bottom:none;}
+.historic-taula td{padding:14px 16px;font-size:.9rem;font-weight:300;color:var(--navy-dark);}
+.historic-taula td:first-child{font-weight:700;font-size:.72rem;letter-spacing:1px;color:var(--gold);min-width:32px;}
+.historic-taula td:last-child{color:var(--muted);font-size:.82rem;text-align:right;}
+.historic-wip{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:.62rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--muted);opacity:.5;
+}
+.historic-wip i{font-size:.6rem;}
+
+@media(max-width:1024px){.rest-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:680px){
+  .rest-grid{grid-template-columns:1fr;}
+  .page-hero{padding:120px 5% 52px;}
+  .historic-taula td{padding:12px 8px;}
+}
+</style>
+
+<script>
+const t = {
+  es:{
+    nav_inicio:'Inicio',nav_asoc:'La Asociación',nav_rest:'Restaurantes',
+    nav_premios:'Premios',nav_blog:'Blog Gourmet',nav_contacto:'Contacto',
+    nav_quienes:'Quiénes somos',nav_como:'Cómo funcionamos',
+    nav_visites:'Visitas 2025–26',nav_gastronia:'Trofeo Gastronía',
+    nav_bacus:'Premio Baccus',nav_rest_short:'Restaurantes',nav_premios_short:'Premios',
+    footer_desc:'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',
+    footer_nav:'Navegación',footer_legal:'Legal',footer_contacte:'Contacto',
+    footer_avis:'Aviso Legal',footer_privacitat:'Política de Privacidad',
+    footer_copy:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',
+    r_label:'Restaurantes',
+    r_title:'El recorrido Gourmet',
+    r_desc:'Cada temporada visitamos ocho restaurantes del Camp de Tarragona. Los evaluamos con criterio, compartimos las crónicas y al final del año entregamos nuestros premios.',
+    r_2026_label:'Temporada actual',
+    r_2026_title:'Recorrido 2026',
+    r_visitada:'Visitado',
+    r_proxima:'Próxima visita',
+    r_pendent:'Pendiente',
+    r_link_previa:'Leer la previa →',
+    r_link_cronica:'Crónica completa →',
+    r_kema_cuina:'Brasa contemporánea',
+    r_kema_desc:'Primera visita de la temporada. Cocina de brasa con producto de calidad y una oferta de coctelería diferencial.',
+    r_goleta_cuina:'Pescados & Mariscos',
+    r_goleta_desc:'40 años frente a la Platja dels Capellans. Cocina mediterránea de producto con protagonismo del mar.',
+    r_pendent_desc:'Visita pendiente de confirmar.',
+    r_historic_label:'Historial',
+    r_historic_title:'Temporadas anteriores',
+    r_historic_desc:'Registro de todas las visitas realizadas desde la fundación de la asociación. Documentación en proceso de recuperación.',
+    r_wip:'En proceso de recuperación',
+    r_num:'Nº',r_restaurant:'Restaurante',r_localitat:'Localidad',
+  },
+  ca:{
+    nav_inicio:'Inici',nav_asoc:"L'Associació",nav_rest:'Restaurants',
+    nav_premios:'Premis',nav_blog:'Blog Gourmet',nav_contacto:'Contacte',
+    nav_quienes:'Qui som',nav_como:'Com funcionem',
+    nav_visites:'Visites 2025–26',nav_gastronia:'Trofeu Gastronía',
+    nav_bacus:'Premi Bacus',nav_rest_short:'Restaurants',nav_premios_short:'Premis',
+    footer_desc:"Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.",
+    footer_nav:'Navegació',footer_legal:'Legal',footer_contacte:'Contacte',
+    footer_avis:'Avís Legal',footer_privacitat:'Política de Privacitat',
+    footer_copy:'© 2026 Gourmets de Tarragona · Tots els drets reservats',
+    r_label:'Restaurants',
+    r_title:'El recorregut Gourmet',
+    r_desc:"Cada temporada visitem vuit restaurants del Camp de Tarragona. Els avaluem amb criteri, compartim les cròniques i al final de l'any lliurem els nostres premis.",
+    r_2026_label:'Temporada actual',
+    r_2026_title:'Recorregut 2026',
+    r_visitada:'Visitat',
+    r_proxima:'Propera visita',
+    r_pendent:'Pendent',
+    r_link_previa:'Llegir la prèvia →',
+    r_link_cronica:'Crònica completa →',
+    r_kema_cuina:'Brasa contemporània',
+    r_kema_desc:'Primera visita de la temporada. Cuina de brasa amb producte de qualitat i una oferta de cocteleria diferencial.',
+    r_goleta_cuina:'Peixos & Mariscs',
+    r_goleta_desc:"40 anys davant la Platja dels Capellans. Cuina mediterrània de producte amb protagonisme del mar.",
+    r_pendent_desc:'Visita pendent de confirmar.',
+    r_historic_label:'Historial',
+    r_historic_title:'Temporades anteriors',
+    r_historic_desc:"Registre de totes les visites realitzades des de la fundació de l'associació. Documentació en procés de recuperació.",
+    r_wip:'En procés de recuperació',
+    r_num:'Nº',r_restaurant:'Restaurant',r_localitat:'Localitat',
+  }
+};
+let currentLang = localStorage.getItem('gdt-lang') || 'es';
+function applyTranslations(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[lang] && t[lang][key] !== undefined) el.innerHTML = t[lang][key];
+  });
+  document.getElementById('html-root')?.setAttribute('lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(btn =>
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang));
+}
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('gdt-lang', lang);
+  applyTranslations(lang);
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" class="solid">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona"></a>
+    <div class="nav-menu">
+      <div class="nav-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
+      <div class="nav-item"><span data-i18n="nav_asoc"></span><div class="dropdown"><a href="associacio.html" data-i18n="nav_quienes"></a><a href="associacio.html#funcionament" data-i18n="nav_como"></a></div></div>
+      <div class="nav-item"><span data-i18n="nav_rest"></span><div class="dropdown"><a href="restaurants.html" data-i18n="nav_visites"></a></div></div>
+      <div class="nav-item"><span data-i18n="nav_premios"></span><div class="dropdown"><a href="premis.html" data-i18n="nav_gastronia"></a><a href="premis.html#bacus" data-i18n="nav_bacus"></a></div></div>
+      <div class="nav-item"><a href="blog.html" data-i18n="nav_blog"></a></div>
+      <div class="nav-item"><a href="contacte.html" data-i18n="nav_contacto"></a></div>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
+    <div class="mobile-item"><a href="restaurants.html" data-i18n="nav_rest_short"></a></div>
+    <div class="mobile-item"><a href="blog.html" data-i18n="nav_blog"></a></div>
+    <div class="mobile-item"><a href="contacte.html" data-i18n="nav_contacto"></a></div>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="slabel" data-i18n="r_label"></p>
+    <h1 class="stitle" data-i18n="r_title"></h1>
+    <p class="page-hero-desc" data-i18n="r_desc"></p>
+  </div>
+</div>
+
+<!-- TEMPORADA 2026 -->
+<section class="sec">
+  <div class="sec-inner">
+    <div style="margin-bottom:40px;">
+      <p class="slabel" data-i18n="r_2026_label"></p>
+      <h2 class="stitle" data-i18n="r_2026_title"></h2>
+      <div class="sdiv"></div>
+    </div>
+    <div class="rest-grid">
+
+      <!-- 1. Kema — visitada -->
+      <div class="rest-card">
+        <div class="rest-card-img">
+          <img src="../assets/img/kema/brasa-carn.jpg" alt="Kema · Cambrils">
+          <div class="rest-card-badges">
+            <span class="rest-badge badge-visitada" data-i18n="r_visitada"></span>
+            <span class="rest-num">1</span>
+          </div>
+        </div>
+        <div class="rest-card-body">
+          <div class="rest-card-meta">
+            <span class="rest-card-lloc">Cambrils</span>
+            <span class="rest-card-data">Març 2026</span>
+          </div>
+          <h3 class="rest-card-nom">Kema</h3>
+          <p class="rest-card-cuina" data-i18n="r_kema_cuina"></p>
+          <p class="rest-card-desc" data-i18n="r_kema_desc"></p>
+          <div class="rest-card-links">
+            <a href="../entrades/kema-previa-2026.html" class="rest-link" data-i18n="r_link_previa"></a>
+            <a href="../entrades/kema-cronica-2026.html" class="rest-link rest-link-primary" data-i18n="r_link_cronica"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. La Goleta — propera -->
+      <div class="rest-card">
+        <div class="rest-card-img">
+          <img src="../assets/img/goleta/capellans-beach.jpg" alt="La Goleta · Salou">
+          <div class="rest-card-badges">
+            <span class="rest-badge badge-proxima" data-i18n="r_proxima"></span>
+            <span class="rest-num">2</span>
+          </div>
+        </div>
+        <div class="rest-card-body">
+          <div class="rest-card-meta">
+            <span class="rest-card-lloc">Salou</span>
+            <span class="rest-card-data">9 Abril 2026</span>
+          </div>
+          <h3 class="rest-card-nom">La Goleta</h3>
+          <p class="rest-card-cuina" data-i18n="r_goleta_cuina"></p>
+          <p class="rest-card-desc" data-i18n="r_goleta_desc"></p>
+          <div class="rest-card-links">
+            <a href="../entrades/la-goleta-previa-2026.html" class="rest-link" data-i18n="r_link_previa"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3–8. Pendents -->
+      <div class="rest-card">
+        <div class="rest-card-pending-inner">
+          <i class="fa fa-utensils"></i>
+          <span class="rest-card-pending-label" data-i18n="r_pendent"></span>
+        </div>
+        <div class="rest-card-body">
+          <div class="rest-card-meta">
+            <span class="rest-card-lloc">Camp de Tarragona</span>
+            <span class="rest-num" style="background:var(--cream);color:var(--muted);font-size:.62rem;padding:3px 8px;">3</span>
+          </div>
+          <h3 class="rest-card-nom" style="color:var(--muted);opacity:.4;" data-i18n="r_pendent"></h3>
+          <p class="rest-card-desc" data-i18n="r_pendent_desc"></p>
+        </div>
+      </div>
+
+      <div class="rest-card">
+        <div class="rest-card-pending-inner">
+          <i class="fa fa-utensils"></i>
+          <span class="rest-card-pending-label" data-i18n="r_pendent"></span>
+        </div>
+        <div class="rest-card-body">
+          <div class="rest-card-meta">
+            <span class="rest-card-lloc">Camp de Tarragona</span>
+            <span class="rest-num" style="background:var(--cream);color:var(--muted);font-size:.62rem;padding:3px 8px;">4</span>
+          </div>
+          <h3 class="rest-card-nom" style="color:var(--muted);opacity:.4;" data-i18n="r_pendent"></h3>
+          <p class="rest-card-desc" data-i18n="r_pendent_desc"></p>
+        </div>
+      </div>
+
+      <div class="rest-card">
+        <div class="rest-card-pending-inner">
+          <i class="fa fa-utensils"></i>
+          <span class="rest-card-pending-label" data-i18n="r_pendent"></span>
+        </div>
+        <div class="rest-card-body">
+          <div class="rest-card-meta">
+            <span class="rest-card-lloc">Camp de Tarragona</span>
+            <span class="rest-num" style="background:var(--cream);color:var(--muted);font-size:.62rem;padding:3px 8px;">5</span>
+          </div>
+          <h3 class="rest-card-nom" style="color:var(--muted);opacity:.4;" data-i18n="r_pendent"></h3>
+          <p class="rest-card-desc" data-i18n="r_pendent_desc"></p>
+        </div>
+      </div>
+
+      <div class="rest-card">
+        <div class="rest-card-pending-inner">
+          <i class="fa fa-utensils"></i>
+          <span class="rest-card-pending-label" data-i18n="r_pendent"></span>
+        </div>
+        <div class="rest-card-body">
+          <div class="rest-card-meta">
+            <span class="rest-card-lloc">Camp de Tarragona</span>
+            <span class="rest-num" style="background:var(--cream);color:var(--muted);font-size:.62rem;padding:3px 8px;">6</span>
+          </div>
+          <h3 class="rest-card-nom" style="color:var(--muted);opacity:.4;" data-i18n="r_pendent"></h3>
+          <p class="rest-card-desc" data-i18n="r_pendent_desc"></p>
+        </div>
+      </div>
+
+      <div class="rest-card">
+        <div class="rest-card-pending-inner">
+          <i class="fa fa-utensils"></i>
+          <span class="rest-card-pending-label" data-i18n="r_pendent"></span>
+        </div>
+        <div class="rest-card-body">
+          <div class="rest-card-meta">
+            <span class="rest-card-lloc">Camp de Tarragona</span>
+            <span class="rest-num" style="background:var(--cream);color:var(--muted);font-size:.62rem;padding:3px 8px;">7</span>
+          </div>
+          <h3 class="rest-card-nom" style="color:var(--muted);opacity:.4;" data-i18n="r_pendent"></h3>
+          <p class="rest-card-desc" data-i18n="r_pendent_desc"></p>
+        </div>
+      </div>
+
+      <div class="rest-card">
+        <div class="rest-card-pending-inner">
+          <i class="fa fa-utensils"></i>
+          <span class="rest-card-pending-label" data-i18n="r_pendent"></span>
+        </div>
+        <div class="rest-card-body">
+          <div class="rest-card-meta">
+            <span class="rest-card-lloc">Camp de Tarragona</span>
+            <span class="rest-num" style="background:var(--cream);color:var(--muted);font-size:.62rem;padding:3px 8px;">8</span>
+          </div>
+          <h3 class="rest-card-nom" style="color:var(--muted);opacity:.4;" data-i18n="r_pendent"></h3>
+          <p class="rest-card-desc" data-i18n="r_pendent_desc"></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HISTORIAL -->
+<section class="sec sec-gray" id="historic">
+  <div class="sec-inner">
+    <div style="margin-bottom:48px;">
+      <p class="slabel" data-i18n="r_historic_label"></p>
+      <h2 class="stitle" data-i18n="r_historic_title"></h2>
+      <div class="sdiv"></div>
+      <p style="font-size:.9rem;color:var(--muted);font-weight:300;line-height:1.8;max-width:580px;" data-i18n="r_historic_desc"></p>
+    </div>
+
+    <!-- 2025 -->
+    <div class="historic-bloc">
+      <div class="historic-any">
+        <span class="historic-any-num">2025</span>
+        <div class="historic-any-line"></div>
+        <span class="historic-wip"><i class="fa fa-clock"></i> <span data-i18n="r_wip"></span></span>
+      </div>
+      <table class="historic-taula">
+        <tr>
+          <td>1</td>
+          <td>Kema</td>
+          <td>Cambrils</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 2024 -->
+    <div class="historic-bloc">
+      <div class="historic-any">
+        <span class="historic-any-num">2024</span>
+        <div class="historic-any-line"></div>
+        <span class="historic-wip"><i class="fa fa-clock"></i> <span data-i18n="r_wip"></span></span>
+      </div>
+      <table class="historic-taula">
+        <tr><td>—</td><td style="color:var(--muted);font-style:italic;" colspan="2" data-i18n="r_wip"></td></tr>
+      </table>
+    </div>
+
+    <!-- 2023 -->
+    <div class="historic-bloc">
+      <div class="historic-any">
+        <span class="historic-any-num">2023</span>
+        <div class="historic-any-line"></div>
+        <span class="historic-wip"><i class="fa fa-clock"></i> <span data-i18n="r_wip"></span></span>
+      </div>
+      <table class="historic-taula">
+        <tr><td>—</td><td style="color:var(--muted);font-style:italic;" colspan="2" data-i18n="r_wip"></td></tr>
+      </table>
+    </div>
+
+    <!-- 2022 -->
+    <div class="historic-bloc">
+      <div class="historic-any">
+        <span class="historic-any-num">2022</span>
+        <div class="historic-any-line"></div>
+        <span class="historic-wip"><i class="fa fa-clock"></i> <span data-i18n="r_wip"></span></span>
+      </div>
+      <table class="historic-taula">
+        <tr><td>—</td><td style="color:var(--muted);font-style:italic;" colspan="2" data-i18n="r_wip"></td></tr>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona">
+      <p data-i18n="footer_desc"></p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4 data-i18n="footer_nav"></h4><ul><li><a href="associacio.html" data-i18n="nav_quienes"></a></li><li><a href="restaurants.html" data-i18n="nav_rest_short"></a></li><li><a href="premis.html" data-i18n="nav_premios_short"></a></li><li><a href="blog.html" data-i18n="nav_blog"></a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_legal"></h4><ul><li><a href="avis-legal.html" data-i18n="footer_avis"></a></li><li><a href="privacitat.html" data-i18n="footer_privacitat"></a></li><li><a href="cookies.html">Cookies</a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_contacte"></h4><p>gourmetsdetarragona@gmail.com</p><p>Tarragona, Catalunya</p></div>
+  </div>
+  <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script>applyTranslations(currentLang);</script>
+</body>
+</html>
