@@ -43,15 +43,16 @@
 .tl-detail-title{font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:8px;}
 .tl-detail-text{font-size:.9rem;color:var(--muted);line-height:1.8;font-weight:300;}
 
-.criteria-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px;}
-.crit-card{background:#fff;border:1px solid var(--border);padding:28px 18px;text-align:center;transition:transform .3s,box-shadow .3s;}
-.crit-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
-.crit-num{font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--navy);opacity:.12;line-height:1;margin-bottom:8px;}
-.crit-ico{font-size:1.3rem;color:var(--gold);margin-bottom:10px;display:block;}
-.crit-nom{font-family:var(--font-serif);font-size:.98rem;color:var(--navy-dark);margin-bottom:6px;font-weight:600;}
-.crit-desc{font-size:.78rem;color:var(--muted);line-height:1.6;font-weight:300;}
-.crit-score{margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:.62rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);}
-.stars{color:var(--gold);font-size:.7rem;letter-spacing:2px;margin-top:3px;}
+.criteria-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-bottom:16px;}
+.crit-card{background:#fff;padding:24px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;transition:background .2s;}
+.crit-card:hover{background:var(--cream);}
+.crit-num{font-size:.65rem;font-weight:700;letter-spacing:3px;color:var(--gold);opacity:.6;}
+.crit-ico{font-size:1.3rem;color:var(--gold);}
+.crit-nom{font-size:.88rem;font-weight:700;color:var(--navy-dark);line-height:1.3;}
+.crit-desc{font-size:.75rem;color:var(--muted);line-height:1.5;font-weight:300;}
+.crit-dots{display:flex;gap:5px;margin-top:4px;}
+.crit-dot{width:7px;height:7px;border-radius:50%;border:1.5px solid var(--gold);background:transparent;}
+.criteria-nota{font-size:.72rem;color:var(--muted);text-align:center;margin-bottom:40px;letter-spacing:.5px;}
 
 .bacus-bloc{background:var(--navy-dark);padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;}
 .bacus-text .stitle{color:#fff;}
@@ -154,6 +155,7 @@ const t = {
   val_title:{es:'Qué evaluamos en cada visita',ca:'Què avaluem en cada visita'},
   val_desc:{es:'Cada socio vota de forma completamente independiente. La puntuación final es la media de todas las valoraciones individuales de los socios asistentes.',ca:"Cada soci vota de forma completament independent. La puntuació final és la mitjana de totes les valoracions individuals dels socis assistents."},
   puntuacio:{es:'Puntuación 1 — 5',ca:'Puntuació 1 — 5'},
+  criteris_nota:{es:'Cada criterio se puntúa del 1 al 5 · Cada socio vota de forma independiente',ca:"Cada criteri es puntua de l'1 al 5 · Cada soci vota de forma independent"},
   gastronia_val_label:{es:'Trofeo Gastronía · 8 criterios de valoración',ca:'Trofeu Gastronía · 8 criteris de valoració'},
   c1_nom:{es:'Presentación de la mesa',ca:'Presentació de la taula'},c1_desc:{es:'Montaje, vajilla, cristalería, cubertería y disposición general.',ca:'Muntatge, vaixella, cristalleria, coberteria i disposició general.'},
   c2_nom:{es:'Ambiente y decoración',ca:'Ambient i decoració'},c2_desc:{es:'Interiorismo, iluminación, música y confort del espacio.',ca:"Interiorisme, il·luminació, música i confort de l'espai."},
@@ -361,15 +363,16 @@ function setLang(lang) {
 
     <p class="slabel" style="margin-bottom:20px;" data-i18n="gastronia_val_label"></p>
     <div class="criteria-grid">
-      <div class="crit-card"><div class="crit-num">01</div><i class="fa fa-table-cells crit-ico"></i><p class="crit-nom" data-i18n="c1_nom"></p><p class="crit-desc" data-i18n="c1_desc"></p><div class="crit-score" data-i18n="puntuacio"></div><div class="stars">★★★★★</div></div>
-      <div class="crit-card"><div class="crit-num">02</div><i class="fa fa-palette crit-ico"></i><p class="crit-nom" data-i18n="c2_nom"></p><p class="crit-desc" data-i18n="c2_desc"></p><div class="crit-score" data-i18n="puntuacio"></div><div class="stars">★★★★★</div></div>
-      <div class="crit-card"><div class="crit-num">03</div><i class="fa fa-concierge-bell crit-ico"></i><p class="crit-nom" data-i18n="c3_nom"></p><p class="crit-desc" data-i18n="c3_desc"></p><div class="crit-score" data-i18n="puntuacio"></div><div class="stars">★★★★★</div></div>
-      <div class="crit-card"><div class="crit-num">04</div><i class="fa fa-leaf crit-ico"></i><p class="crit-nom" data-i18n="c4_nom"></p><p class="crit-desc" data-i18n="c4_desc"></p><div class="crit-score" data-i18n="puntuacio"></div><div class="stars">★★★★★</div></div>
-      <div class="crit-card"><div class="crit-num">05</div><i class="fa fa-wine-glass-alt crit-ico"></i><p class="crit-nom" data-i18n="c5_nom"></p><p class="crit-desc" data-i18n="c5_desc"></p><div class="crit-score" data-i18n="puntuacio"></div><div class="stars">★★★★★</div></div>
-      <div class="crit-card"><div class="crit-num">06</div><i class="fa fa-fire crit-ico"></i><p class="crit-nom" data-i18n="c6_nom"></p><p class="crit-desc" data-i18n="c6_desc"></p><div class="crit-score" data-i18n="puntuacio"></div><div class="stars">★★★★★</div></div>
-      <div class="crit-card"><div class="crit-num">07</div><i class="fa fa-cake-candles crit-ico"></i><p class="crit-nom" data-i18n="c7_nom"></p><p class="crit-desc" data-i18n="c7_desc"></p><div class="crit-score" data-i18n="puntuacio"></div><div class="stars">★★★★★</div></div>
-      <div class="crit-card"><div class="crit-num">08</div><i class="fa fa-comment crit-ico"></i><p class="crit-nom" data-i18n="c8_nom"></p><p class="crit-desc" data-i18n="c8_desc"></p><div class="crit-score" data-i18n="puntuacio"></div><div class="stars">★★★★★</div></div>
+      <div class="crit-card"><span class="crit-num">01</span><i class="fa fa-utensils crit-ico"></i><p class="crit-nom" data-i18n="c1_nom"></p><p class="crit-desc" data-i18n="c1_desc"></p><div class="crit-dots"><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span></div></div>
+      <div class="crit-card"><span class="crit-num">02</span><i class="fa fa-palette crit-ico"></i><p class="crit-nom" data-i18n="c2_nom"></p><p class="crit-desc" data-i18n="c2_desc"></p><div class="crit-dots"><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span></div></div>
+      <div class="crit-card"><span class="crit-num">03</span><i class="fa fa-concierge-bell crit-ico"></i><p class="crit-nom" data-i18n="c3_nom"></p><p class="crit-desc" data-i18n="c3_desc"></p><div class="crit-dots"><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span></div></div>
+      <div class="crit-card"><span class="crit-num">04</span><i class="fa fa-leaf crit-ico"></i><p class="crit-nom" data-i18n="c4_nom"></p><p class="crit-desc" data-i18n="c4_desc"></p><div class="crit-dots"><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span></div></div>
+      <div class="crit-card"><span class="crit-num">05</span><i class="fa fa-wine-glass-alt crit-ico"></i><p class="crit-nom" data-i18n="c5_nom"></p><p class="crit-desc" data-i18n="c5_desc"></p><div class="crit-dots"><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span></div></div>
+      <div class="crit-card"><span class="crit-num">06</span><i class="fa fa-fire crit-ico"></i><p class="crit-nom" data-i18n="c6_nom"></p><p class="crit-desc" data-i18n="c6_desc"></p><div class="crit-dots"><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span></div></div>
+      <div class="crit-card"><span class="crit-num">07</span><i class="fa fa-cake-candles crit-ico"></i><p class="crit-nom" data-i18n="c7_nom"></p><p class="crit-desc" data-i18n="c7_desc"></p><div class="crit-dots"><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span></div></div>
+      <div class="crit-card"><span class="crit-num">08</span><i class="fa fa-comment crit-ico"></i><p class="crit-nom" data-i18n="c8_nom"></p><p class="crit-desc" data-i18n="c8_desc"></p><div class="crit-dots"><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span><span class="crit-dot"></span></div></div>
     </div>
+    <p class="criteria-nota" data-i18n="criteris_nota"></p>
 
     <div class="bacus-bloc">
       <div class="bacus-text">
