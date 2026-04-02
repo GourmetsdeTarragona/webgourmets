@@ -121,7 +121,7 @@ const t = {
     goleta_l1:'Por qué volvemos al mar',
     goleta_t1:'Cuatro décadas de cocina marinera en Salou',
     goleta_p1:'La Goleta abrió sus puertas en 1986, en plena expansión turística de la Costa Daurada. En un momento en que la restauración de la zona optaba mayoritariamente por formatos rápidos y propuestas estacionales, el restaurante eligió un camino distinto: apostar por la cocina de producto, el servicio de sala estructurado y una propuesta centrada en el pescado y el marisco de proximidad.',
-    goleta_p2:'Cuarenta años después, La Goleta mantiene su posición como uno de los restaurantes de referencia del litoral tarragonés. Actualmente dirigido por Ignacio Ureña, vinculado al restaurante como maître y sumiller durante años, la sala es uno de sus puntos fuertes: un servicio clásico, atento y con criterio propio.',
+    goleta_p2:'Cuarenta años después, La Goleta mantiene su posición como uno de los restaurantes de referencia del litoral tarragonés. Fundado en 1986 por los hermanos <u><strong>Ángel</strong></u> y <u><strong>Emilio Vicente</strong></u>, el restaurante fue el proyecto de vida de <u><strong>Emilio Vicente</strong></u>, su propietario y alma durante más de tres décadas. Desde su jubilación en 2021, <u><strong>Ignacio Ureña</strong></u> —maître y sumiller con más de once años en la casa— asumió la dirección, garantizando la continuidad de una sala de referencia en la Costa Daurada.',
     goleta_val1:'Platja dels Capellans, Salou',
     goleta_val2:'9 de abril 2026',
     goleta_val3:'Pesca y marisco mediterráneo',
@@ -161,6 +161,12 @@ const t = {
     goleta_fitxa_aniv:'40 años de historia — fundado en 1986',
     goleta_fitxa_data:'Visita: 9 de abril 2026',
     goleta_cta_desc:'Durante la cena compartiremos algunos momentos en stories. La crónica completa llegará días después.',
+    goleta_equip_label:'El equipo',
+    goleta_equip_title:'Las personas detrás de La Goleta',
+    goleta_eq1_rol:'Fundador · 1986–2021',
+    goleta_eq1_desc:'Propietario fundador y alma del restaurante durante más de tres décadas. Artífice de su identidad y prestigio en la Costa Daurada.',
+    goleta_eq2_rol:'Director · Maître & Sumiller',
+    goleta_eq2_desc:'Más de once años vinculado al restaurante. Asumió la dirección en 2021 manteniendo la esencia y el nivel de la sala.',
     goleta_cta_btn:'Leer la crónica completa →',
     goleta_foto_terrassa_peu:'La terraza de La Goleta — vistas a la Platja dels Capellans, Salou',
   },
@@ -182,7 +188,7 @@ const t = {
     goleta_l1:'Per què tornem al mar',
     goleta_t1:'Quatre dècades de cuina marinera a Salou',
     goleta_p1:"La Goleta va obrir les portes el 1986, en plena expansió turística de la Costa Daurada. En un moment en què la restauració de la zona optava majoritàriament per formats ràpids i propostes estacionals, el restaurant va triar un camí diferent: apostar per la cuina de producte, el servei de sala estructurat i una proposta centrada en el peix i el marisc de proximitat.",
-    goleta_p2:"Quaranta anys després, La Goleta manté la seva posició com un dels restaurants de referència del litoral tarragoní. Actualment dirigit per Ignacio Ureña, vinculat al restaurant com a maître i sommelier durant anys, la sala és un dels seus punts forts: un servei clàssic, atent i amb criteri propi.",
+    goleta_p2:"Quaranta anys després, La Goleta manté la seva posició com un dels restaurants de referència del litoral tarragoní. Fundat el 1986 pels germans <u><strong>Ángel</strong></u> i <u><strong>Emilio Vicente</strong></u>, el restaurant va ser el projecte de vida d'<u><strong>Emilio Vicente</strong></u>, propietari i ànima del local durant més de tres dècades. Des de la seva jubilació el 2021, <u><strong>Ignacio Ureña</strong></u> —maître i sommelier amb més d'onze anys a la casa— n'assumeix la direcció, garantint la continuïtat d'una sala de referència a la Costa Daurada.",
     goleta_val1:'Platja dels Capellans, Salou',
     goleta_val2:"9 d'abril 2026",
     goleta_val3:'Pesca i marisc mediterrani',
@@ -222,6 +228,12 @@ const t = {
     goleta_fitxa_aniv:"40 anys d'història — fundat el 1986",
     goleta_fitxa_data:"Visita: 9 d'abril 2026",
     goleta_cta_desc:"Durant el sopar compartirem alguns moments a les stories. La crònica completa arribarà dies després.",
+    goleta_equip_label:"L'equip",
+    goleta_equip_title:'Les persones darrere de La Goleta',
+    goleta_eq1_rol:'Fundador · 1986–2021',
+    goleta_eq1_desc:"Propietari fundador i ànima del restaurant durant més de tres dècades. Artífex de la seva identitat i prestigi a la Costa Daurada.",
+    goleta_eq2_rol:'Director · Maître & Sommelier',
+    goleta_eq2_desc:"Més d'onze anys vinculat al restaurant. Va assumir la direcció el 2021 mantenint l'essència i el nivell de la sala.",
     goleta_cta_btn:'Llegir la crònica completa →',
     goleta_foto_terrassa_peu:"La terrassa de La Goleta — vistes a la Platja dels Capellans, Salou",
   }
@@ -395,6 +407,25 @@ function setLang(lang) {
         <span class="e-menu-vi-label" data-i18n="goleta_bodega_label"></span>
         <span class="e-menu-vi-text" data-i18n="goleta_bodega_text"></span>
       </div>
+    </div>
+  </div>
+
+  <!-- EQUIP -->
+  <div class="e-divider"></div>
+  <span class="e-label" data-i18n="goleta_equip_label"></span>
+  <h2 class="e-title" data-i18n="goleta_equip_title"></h2>
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:8px;margin-bottom:52px;">
+    <div style="background:#fff;border:1px solid var(--border);padding:26px 18px;text-align:center;">
+      <div style="width:56px;height:56px;border-radius:50%;background:var(--navy);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;color:#fff;">EV</div>
+      <p style="font-family:var(--font-serif);font-size:.95rem;color:var(--navy-dark);margin-bottom:4px;line-height:1.3;"><u><strong>Emilio Vicente</strong></u></p>
+      <p style="font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);" data-i18n="goleta_eq1_rol"></p>
+      <p style="font-size:.8rem;color:var(--muted);line-height:1.5;margin-top:8px;font-weight:300;" data-i18n="goleta_eq1_desc"></p>
+    </div>
+    <div style="background:#fff;border:1px solid var(--border);padding:26px 18px;text-align:center;">
+      <div style="width:56px;height:56px;border-radius:50%;background:var(--navy);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;color:#fff;">IU</div>
+      <p style="font-family:var(--font-serif);font-size:.95rem;color:var(--navy-dark);margin-bottom:4px;line-height:1.3;"><u><strong>Ignacio Ureña</strong></u></p>
+      <p style="font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);" data-i18n="goleta_eq2_rol"></p>
+      <p style="font-size:.8rem;color:var(--muted);line-height:1.5;margin-top:8px;font-weight:300;" data-i18n="goleta_eq2_desc"></p>
     </div>
   </div>
 
