@@ -236,12 +236,12 @@ function setLang(lang) {
 <!-- PRESENTACIÓ PREMIS -->
 <div class="premis-presentacio" id="gastronia">
   <!-- Gastronía -->
-  <div class="premi-bloc">
+  <div class="premi-bloc premi-bloc-dark">
     <div class="premi-ico" style="width:160px;height:160px;">
       <video autoplay loop muted playsinline
-             style="width:100%;height:100%;object-fit:contain;"
-             onerror="this.style.display='none'">
+             style="width:100%;height:100%;object-fit:contain;">
         <source src="../assets/video/gastronia-animacio.mp4" type="video/mp4">
+        <img src="../assets/img/gastronia.png" style="width:100%;height:100%;object-fit:contain;" alt="Trofeu Gastronía">
       </video>
     </div>
     <h2 class="premi-nom" data-i18n="p_gastronia_nom"></h2>
@@ -259,7 +259,7 @@ function setLang(lang) {
   </div>
   <!-- Bacus -->
   <div class="premi-bloc premi-bloc-dark" id="bacus">
-    <div class="premi-ico">
+    <div class="premi-ico" style="width:160px;height:160px;">
       <img src="../assets/img/bacus.png" alt="Premi Bacus"
            onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
       <div class="premi-ico-placeholder" style="display:none">🍷</div>
