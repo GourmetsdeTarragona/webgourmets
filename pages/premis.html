@@ -22,12 +22,12 @@
 
 /* ── PRESENTACIÓ PREMIS ── */
 .premis-presentacio{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-bottom:0;}
-.premi-bloc{background:#fff;padding:56px 48px;text-align:center;}
+.premi-bloc{background:#fff;padding:80px 56px;text-align:center;}
 .premi-bloc-dark{background:var(--navy-dark);}
 .premi-ico{margin:0 auto 28px;width:120px;height:120px;display:flex;align-items:center;justify-content:center;}
 .premi-ico img{width:100%;height:100%;object-fit:contain;}
 .premi-ico-placeholder{font-size:3rem;opacity:.2;}
-.premi-nom{font-family:var(--font-serif);font-size:1.6rem;color:var(--navy-dark);margin-bottom:12px;font-weight:700;}
+.premi-nom{font-family:var(--font-serif);font-size:2rem;color:var(--navy-dark);margin-bottom:14px;font-weight:700;}
 .premi-bloc-dark .premi-nom{color:#fff;}
 .premi-desc{font-size:.9rem;color:var(--muted);line-height:1.85;font-weight:300;max-width:380px;margin:0 auto;}
 .premi-bloc-dark .premi-desc{color:rgba(255,255,255,.55);}
@@ -237,7 +237,7 @@ function setLang(lang) {
 <div class="premis-presentacio" id="gastronia">
   <!-- Gastronía -->
   <div class="premi-bloc premi-bloc-dark">
-    <div class="premi-ico" style="width:160px;height:160px;">
+    <div class="premi-ico" style="width:220px;height:220px;">
       <video autoplay loop muted playsinline
              style="width:100%;height:100%;object-fit:contain;">
         <source src="../assets/video/gastronia-animacio.mp4" type="video/mp4">
@@ -259,7 +259,7 @@ function setLang(lang) {
   </div>
   <!-- Bacus -->
   <div class="premi-bloc premi-bloc-dark" id="bacus">
-    <div class="premi-ico" style="width:160px;height:160px;">
+    <div class="premi-ico" style="width:220px;height:220px;">
       <img src="../assets/img/bacus.png" alt="Premi Bacus"
            onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
       <div class="premi-ico-placeholder" style="display:none">🍷</div>
