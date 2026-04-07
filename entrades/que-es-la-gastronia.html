@@ -39,7 +39,7 @@
 
 .e-trofeu-bloc{background:var(--navy-dark);padding:48px;margin:52px 0;display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:center;}
 .e-trofeu-ico{text-align:center;}
-.e-trofeu-ico img{width:140px;height:140px;object-fit:contain;margin:0 auto;}
+.e-trofeu-ico img{width:200px;height:200px;object-fit:contain;margin:0 auto;}
 .e-trofeu-text .e-label{color:rgba(184,146,74,.8);}
 .e-trofeu-text h3{font-family:var(--font-serif);font-size:1.4rem;color:#fff;margin-bottom:12px;}
 .e-trofeu-text p{font-size:.92rem;color:rgba(255,255,255,.6);font-weight:300;line-height:1.85;}
@@ -82,6 +82,8 @@ const t = {
     footer_copy:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',
     back_blog:'Volver al Blog',
     g_badge:'Editorial',
+    g_hero_titol:"Què és la <em>Gastronia?</em>",
+    g_hero_titol:'¿Qué es la <em>Gastronia?</em>',
     g_subtitol:'El máximo reconocimiento de los Gourmets de Tarragona a la excelencia culinaria del Camp de Tarragona. Un trofeo, un proceso, una historia.',
     g_l1:'El nombre',
     g_t1:'Gastronia: entre el mito y la mesa',
@@ -113,6 +115,8 @@ const t = {
     footer_copy:'© 2026 Gourmets de Tarragona · Tots els drets reservats',
     back_blog:'Tornar al Blog',
     g_badge:'Editorial',
+    g_hero_titol:"Què és la <em>Gastronia?</em>",
+    g_hero_titol:'¿Qué es la <em>Gastronia?</em>',
     g_subtitol:"El màxim reconeixement dels Gourmets de Tarragona a l'excel·lència culinària del Camp de Tarragona. Un trofeu, un procés, una història.",
     g_l1:'El nom',
     g_t1:'Gastronia: entre deessa i gastronomia',
@@ -199,7 +203,7 @@ function setLang(lang) {
         <span class="entrada-meta-item"><i class="fa fa-map-marker-alt"></i> Camp de Tarragona</span>
       </div>
     </div>
-    <h1 class="entrada-titol">Què és la <em>Gastronia?</em></h1>
+    <h1 class="entrada-titol" data-i18n="g_hero_titol"></h1>
     <p class="entrada-subtitol" data-i18n="g_subtitol"></p>
   </div>
 </header>
