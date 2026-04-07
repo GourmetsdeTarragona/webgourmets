@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gourmets de Tarragona · Links</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:'Lato',sans-serif;
+  background:#1c2e3e;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+}
+.logo-wrap{text-align:center;margin-bottom:12px;}
+.logo-wrap img{width:80px;height:80px;object-fit:contain;border-radius:50%;border:2px solid rgba(184,146,74,.4);}
+.nom{font-family:'Playfair Display',serif;font-size:1.3rem;color:#fff;margin-top:10px;font-weight:600;}
+.handle{font-size:.8rem;color:rgba(255,255,255,.4);letter-spacing:1px;margin-top:4px;}
+.links{width:100%;max-width:420px;margin-top:32px;display:flex;flex-direction:column;gap:12px;}
+.link-btn{
+  display:flex;align-items:center;gap:14px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  padding:16px 20px;
+  color:#fff;
+  text-decoration:none;
+  transition:background .2s,border .2s,transform .15s;
+}
+.link-btn:hover{background:rgba(184,146,74,.2);border-color:rgba(184,146,74,.5);transform:translateY(-2px);}
+.link-ico{font-size:1.3rem;flex-shrink:0;width:28px;text-align:center;}
+.link-text{}
+.link-label{font-size:.62rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(184,146,74,.8);display:block;margin-bottom:2px;}
+.link-title{font-size:.95rem;font-weight:400;color:#fff;}
+.divider{width:100%;max-width:420px;height:1px;background:rgba(255,255,255,.08);margin:8px 0;}
+.footer-links{font-size:.7rem;color:rgba(255,255,255,.25);text-align:center;margin-top:24px;letter-spacing:.5px;}
+</style>
+</head>
+<body>
+
+<div class="logo-wrap">
+  <img src="../assets/img/logo.png" alt="Gourmets de Tarragona"
+       onerror="this.style.display='none'">
+  <p class="nom">Gourmets de Tarragona</p>
+  <p class="handle">@gourmetsdetarragona</p>
+</div>
+
+<div class="links">
+
+  <a href="https://gourmetsdetarragona.com" class="link-btn">
+    <span class="link-ico">🌐</span>
+    <div class="link-text">
+      <span class="link-label">Web oficial</span>
+      <span class="link-title">gourmetsdetarragona.com</span>
+    </div>
+  </a>
+
+  <div class="divider"></div>
+
+  <a href="../entrades/la-goleta-previa-2026.html" class="link-btn">
+    <span class="link-ico">🌊</span>
+    <div class="link-text">
+      <span class="link-label">Prèvia · Abril 2026</span>
+      <span class="link-title">La Goleta · Salou</span>
+    </div>
+  </a>
+
+  <a href="../entrades/kema-cronica-2026.html" class="link-btn">
+    <span class="link-ico">🔥</span>
+    <div class="link-text">
+      <span class="link-label">Crònica · Març 2026</span>
+      <span class="link-title">Kema · Cambrils</span>
+    </div>
+  </a>
+
+  <div class="divider"></div>
+
+  <a href="premis.html" class="link-btn">
+    <span class="link-ico">🏆</span>
+    <div class="link-text">
+      <span class="link-label">Premis 2025</span>
+      <span class="link-title">Gastronía & Bacus · Guanyadors</span>
+    </div>
+  </a>
+
+  <a href="blog.html" class="link-btn">
+    <span class="link-ico">📖</span>
+    <div class="link-text">
+      <span class="link-label">Blog Gourmet</span>
+      <span class="link-title">Totes les entrades</span>
+    </div>
+  </a>
+
+</div>
+
+<p class="footer-links">Associació Gourmets de Tarragona · Camp de Tarragona</p>
+
+</body>
+</html>
