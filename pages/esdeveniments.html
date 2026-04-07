@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esdeveniments · Gourmets de Tarragona</title>
+<meta name="description" content="Agenda d'esdeveniments dels Gourmets de Tarragona. Cata de vins, sopar d'estiu i sopar de Nadal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/seccions.css">
+<style>
+.page-hero{background:var(--navy-dark);padding:140px 4% 80px;text-align:center;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:url('../assets/img/gala2025/sala-gala.jpg');background-size:cover;background-position:center;opacity:.12;}
+.page-hero-inner{position:relative;z-index:1;max-width:640px;margin:0 auto;}
+.page-hero .slabel{color:rgba(255,255,255,.4);justify-content:center;display:flex;}
+.page-hero .stitle{color:#fff;font-size:clamp(2rem,4vw,3rem);margin-top:10px;}
+.page-hero-desc{font-size:.95rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.8;margin-top:10px;}
+
+.ev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.ev-card{background:#fff;border:1px solid var(--border);overflow:hidden;transition:transform .3s,box-shadow .3s;}
+.ev-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.ev-card-img{height:220px;overflow:hidden;position:relative;background:var(--cream);}
+.ev-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.ev-card:hover .ev-card-img img{transform:scale(1.05);}
+.ev-badge{position:absolute;top:14px;left:14px;font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:var(--navy);color:#fff;padding:5px 12px;}
+.ev-body{padding:28px 24px;}
+.ev-date{font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.ev-title{font-family:var(--font-serif);font-size:1.25rem;color:var(--navy-dark);margin-bottom:10px;line-height:1.3;}
+.ev-desc{font-size:.88rem;color:var(--muted);line-height:1.75;font-weight:300;margin-bottom:16px;}
+.ev-foot{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--muted);padding-top:16px;border-top:1px solid var(--border);}
+.ev-foot i{color:var(--gold);font-size:.8rem;}
+.ev-nota{text-align:center;margin-top:48px;font-size:.88rem;color:var(--muted);font-style:italic;line-height:1.8;}
+
+@media(max-width:1024px){.ev-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:640px){.ev-grid{grid-template-columns:1fr;}.page-hero{padding:120px 5% 52px;}}
+</style>
+
+<script>
+const t = {
+  es:{
+    nav_inicio:'Inicio',nav_asoc:'La Asociación',nav_rest:'Restaurantes',
+    nav_premios:'Premios',nav_events:'Eventos',nav_blog:'Blog Gourmet',nav_contacto:'Contacto',
+    nav_quienes:'Quiénes somos',nav_como:'Cómo funcionamos',
+    nav_visites:'Visitas 2025–26',nav_gastronia:'Trofeo Gastronía',
+    nav_bacus:'Premio Baccus',nav_rest_short:'Restaurantes',nav_premios_short:'Premios',
+    footer_desc:'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',
+    footer_nav:'Navegación',footer_legal:'Legal',footer_contacte:'Contacto',
+    footer_avis:'Aviso Legal',footer_privacitat:'Política de Privacidad',
+    footer_copy:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',
+    ev_label:'Agenda 2026',
+    ev_title:'Próximos Eventos',
+    ev_desc:'Los encuentros anuales de la asociación. Gastronomía, vino y buena compañía.',
+    ev1_badge:'Cata',
+    ev1_date:'Data per determinar',
+    ev1_title:'Cata de Vinos DO Tarragona',
+    ev1_desc:'Una noche de descubrimiento a través de los mejores caldos de la DO Tarragona. Fecha y lugar por confirmar.',
+    ev1_loc:'Camp de Tarragona',
+    ev2_badge:'Cena',
+    ev2_date:'Julio 2026',
+    ev2_title:'Cena de Verano 2026',
+    ev2_desc:'Encuentro estival de los Gourmets de Tarragona. Una de las citas más especiales de la temporada. Fecha y lugar por confirmar.',
+    ev2_loc:'Por confirmar',
+    ev3_badge:'Gala',
+    ev3_date:'Diciembre 2026',
+    ev3_title:'Cena de Navidad 2026',
+    ev3_desc:'Cena de cierre de la temporada 2026. La entrega del Trofeo Gastronía y el Premio Baccus se celebrará en febrero de 2027.',
+    ev3_loc:'Por determinar',
+    ev_nota:'La información de fechas y lugares se actualizará a medida que se confirme. Síguenos en Instagram para estar al día.',
+  },
+  ca:{
+    nav_inicio:'Inici',nav_asoc:"L'Associació",nav_rest:'Restaurants',
+    nav_premios:'Premis',nav_events:'Esdeveniments',nav_blog:'Blog Gourmet',nav_contacto:'Contacte',
+    nav_quienes:'Qui som',nav_como:'Com funcionem',
+    nav_visites:'Visites 2025–26',nav_gastronia:'Trofeu Gastronía',
+    nav_bacus:'Premi Bacus',nav_rest_short:'Restaurants',nav_premios_short:'Premis',
+    footer_desc:"Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.",
+    footer_nav:'Navegació',footer_legal:'Legal',footer_contacte:'Contacte',
+    footer_avis:'Avís Legal',footer_privacitat:'Política de Privacitat',
+    footer_copy:'© 2026 Gourmets de Tarragona · Tots els drets reservats',
+    ev_label:'Agenda 2026',
+    ev_title:'Propers Esdeveniments',
+    ev_desc:"Les trobades anuals de l'associació. Gastronomia, vi i bona companyia.",
+    ev1_badge:'Tast',
+    ev1_date:'Data per determinar',
+    ev1_title:'Tast de Vins DO Tarragona',
+    ev1_desc:"Una nit de descoberta a través dels millors vins de la DO Tarragona. Data i lloc per confirmar.",
+    ev1_loc:'Camp de Tarragona',
+    ev2_badge:'Sopar',
+    ev2_date:'Juliol 2026',
+    ev2_title:"Sopar d'Estiu 2026",
+    ev2_desc:"Trobada estival dels Gourmets de Tarragona. Una de les cites més especials de la temporada. Data i lloc per confirmar.",
+    ev2_loc:'Per confirmar',
+    ev3_badge:'Gala',
+    ev3_date:'Desembre 2026',
+    ev3_title:'Sopar de Nadal 2026',
+    ev3_desc:"Sopar de tancament de la temporada 2026. El lliurament del Trofeu Gastronía i el Premi Bacus se celebrarà el febrer de 2027.",
+    ev3_loc:'Per determinar',
+    ev_nota:"La informació de dates i llocs s'actualitzarà a mesura que es confirmi. Segueix-nos a Instagram per estar al dia.",
+  }
+};
+let currentLang = localStorage.getItem('gdt-lang') || 'es';
+function applyTranslations(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[lang] && t[lang][key] !== undefined) el.innerHTML = t[lang][key];
+  });
+  document.getElementById('html-root')?.setAttribute('lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(btn =>
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang));
+}
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('gdt-lang', lang);
+  applyTranslations(lang);
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" class="solid">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona"></a>
+    <div class="nav-menu">
+      <div class="nav-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
+      <div class="nav-item"><span data-i18n="nav_asoc"></span><div class="dropdown"><a href="associacio.html" data-i18n="nav_quienes"></a><a href="associacio.html#funcionament" data-i18n="nav_como"></a></div></div>
+      <div class="nav-item"><span data-i18n="nav_rest"></span><div class="dropdown"><a href="restaurants.html" data-i18n="nav_visites"></a></div></div>
+      <div class="nav-item"><span data-i18n="nav_premios"></span><div class="dropdown"><a href="premis.html" data-i18n="nav_gastronia"></a><a href="premis.html#bacus" data-i18n="nav_bacus"></a></div></div>
+      <div class="nav-item"><a href="esdeveniments.html" data-i18n="nav_events"></a></div>
+      <div class="nav-item"><a href="blog.html" data-i18n="nav_blog"></a></div>
+      <div class="nav-item"><a href="contacte.html" data-i18n="nav_contacto"></a></div>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
+    <div class="mobile-item"><a href="restaurants.html" data-i18n="nav_rest_short"></a></div>
+    <div class="mobile-item"><a href="blog.html" data-i18n="nav_blog"></a></div>
+    <div class="mobile-item"><a href="contacte.html" data-i18n="nav_contacto"></a></div>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="slabel" data-i18n="ev_label"></p>
+    <h1 class="stitle" data-i18n="ev_title"></h1>
+    <p class="page-hero-desc" data-i18n="ev_desc"></p>
+  </div>
+</div>
+
+<!-- EVENTS -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="ev-grid">
+
+      <!-- Cata de Vins -->
+      <div class="ev-card">
+        <div class="ev-card-img">
+          <img src="../assets/img/event-cata.jpg" alt="Cata de Vins"
+               onerror="this.parentElement.style.background='var(--cream)'">
+          <span class="ev-badge" data-i18n="ev1_badge"></span>
+        </div>
+        <div class="ev-body">
+          <p class="ev-date" data-i18n="ev1_date"></p>
+          <h2 class="ev-title" data-i18n="ev1_title"></h2>
+          <p class="ev-desc" data-i18n="ev1_desc"></p>
+          <div class="ev-foot">
+            <i class="fa fa-map-marker-alt"></i>
+            <span data-i18n="ev1_loc"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sopar d'Estiu -->
+      <div class="ev-card">
+        <div class="ev-card-img">
+          <img src="../assets/img/event-sopar.jpg" alt="Sopar d'Estiu"
+               onerror="this.parentElement.style.background='var(--cream)'">
+          <span class="ev-badge" data-i18n="ev2_badge"></span>
+        </div>
+        <div class="ev-body">
+          <p class="ev-date" data-i18n="ev2_date"></p>
+          <h2 class="ev-title" data-i18n="ev2_title"></h2>
+          <p class="ev-desc" data-i18n="ev2_desc"></p>
+          <div class="ev-foot">
+            <i class="fa fa-map-marker-alt"></i>
+            <span data-i18n="ev2_loc"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sopar de Nadal -->
+      <div class="ev-card">
+        <div class="ev-card-img">
+          <img src="../assets/img/gala2025/sala-gala.jpg" alt="Sopar de Nadal"
+               onerror="this.parentElement.style.background='var(--cream)'">
+          <span class="ev-badge" data-i18n="ev3_badge"></span>
+        </div>
+        <div class="ev-body">
+          <p class="ev-date" data-i18n="ev3_date"></p>
+          <h2 class="ev-title" data-i18n="ev3_title"></h2>
+          <p class="ev-desc" data-i18n="ev3_desc"></p>
+          <div class="ev-foot">
+            <i class="fa fa-map-marker-alt"></i>
+            <span data-i18n="ev3_loc"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="ev-nota" data-i18n="ev_nota"></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona">
+      <p data-i18n="footer_desc"></p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4 data-i18n="footer_nav"></h4><ul><li><a href="associacio.html" data-i18n="nav_quienes"></a></li><li><a href="restaurants.html" data-i18n="nav_rest_short"></a></li><li><a href="premis.html" data-i18n="nav_premios_short"></a></li><li><a href="blog.html" data-i18n="nav_blog"></a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_legal"></h4><ul><li><a href="avis-legal.html" data-i18n="footer_avis"></a></li><li><a href="privacitat.html" data-i18n="footer_privacitat"></a></li><li><a href="cookies.html">Cookies</a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_contacte"></h4><p>gourmetsdetarragona@gourmetsdetarragona.com</p><p>Tarragona, Catalunya</p></div>
+  </div>
+  <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script>applyTranslations(currentLang);</script>
+</body>
+</html>
