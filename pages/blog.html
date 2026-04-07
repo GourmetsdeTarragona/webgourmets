@@ -193,6 +193,7 @@
 .cat-noticia{background:#555;}
 .cat-vi{background:#6b2737;}
 .cat-event{background:#2a7a4b;}
+.cat-curiositats{background:#8b5e3c;color:#fff;}
 
 /* ── EMPTY STATE ── */
 .blog-empty{
@@ -351,7 +352,7 @@ function filterEntrades(cat) {
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span data-i18n="cat_tots"></span>
-      <span class="filtre-n">5</span>
+      <span class="filtre-n">6</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot cat-previa" style="background:var(--navy);"></span>
@@ -457,11 +458,11 @@ function filterEntrades(cat) {
       </div>
     </article>
 
-    <!-- Notícia: Què és la Gastronía -->
-    <article class="blog-card" data-cat="noticies">
+    <!-- Curiositat: Què és la Gastronia -->
+    <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img src="../assets/img/gala2025/trofeus.jpg" alt="Trofeu Gastronía">
-        <span class="blog-card-cat cat-noticies" data-i18n="badge_noticies"></span>
+        <img src="../assets/img/gala2025/trofeus.jpg" alt="Trofeu Gastronia">
+        <span class="blog-card-cat cat-curiositats" data-i18n="badge_curiositats"></span>
       </div>
       <div class="blog-card-body">
         <div class="blog-card-meta">
