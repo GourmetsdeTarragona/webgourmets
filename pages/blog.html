@@ -245,6 +245,7 @@ const t = {
   cat_curiositats:'Curiosidades',badge_curiositats:'Curiosidades',
   card_kema_cronica:'Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica de la 1ª visita</small>',
   card_kema_previa:'Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa de la 1ª visita</small>',
+  card_goleta_cronica:'La Goleta · Salou<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica del 40 aniversario</small>',
   card_goleta_noticia:'La Goleta celebra 40 años',
   card_gastronia:'¿Quién es... Gastronia?',
   card_romesco:'El Romesco de Tarragona',
@@ -276,6 +277,7 @@ const t = {
   cat_curiositats:'Curiositats',badge_curiositats:'Curiositats',
   card_kema_cronica:"Kema · Cambrils<br><small style='font-family:inherit;font-size:.78rem;color:#888;font-weight:300;'>Crònica de la 1a visita</small>",
   card_kema_previa:"Kema · Cambrils<br><small style='font-family:inherit;font-size:.78rem;color:#888;font-weight:300;'>Prèvia de la 1a visita</small>",
+  card_goleta_cronica:"La Goleta · Salou<br><small style='font-family:inherit;font-size:.78rem;color:#888;font-weight:300;'>Crònica del 40 aniversari</small>",
   card_goleta_noticia:'La Goleta celebra 40 anys',
   card_gastronia:'Qui és... Gastronia?',
   card_romesco:'El Romesco de Tarragona',
@@ -366,7 +368,7 @@ function filterEntrades(cat) {
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span data-i18n="cat_tots"></span>
-      <span class="filtre-n">7</span>
+      <span class="filtre-n">8</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot cat-previa" style="background:var(--navy);"></span>
@@ -376,7 +378,7 @@ function filterEntrades(cat) {
     <button class="filtre-btn" data-cat="cronica" onclick="filterEntrades('cronica')">
       <span class="filtre-dot" style="background:var(--gold);"></span>
       <span data-i18n="cat_cronica"></span>
-      <span class="filtre-n">1</span>
+      <span class="filtre-n">2</span>
     </button>
     <button class="filtre-btn" data-cat="noticia" onclick="filterEntrades('noticia')">
       <span class="filtre-dot" style="background:#555;"></span>
@@ -453,6 +455,23 @@ function filterEntrades(cat) {
         <h3 class="blog-card-title" data-i18n="card_kema_previa"></h3>
         <p class="blog-card-exc">Una proposta 360° on el foc mana. Tot el que calia saber abans de la primera visita de la temporada.</p>
         <a href="../entrades/kema-previa-2026.html" class="blog-card-link" data-i18n="card_link"></a>
+      </div>
+    </article>
+
+    <!-- Notícia — 40 anys La Goleta -->
+    <!-- La Goleta Crònica -->
+    <article class="blog-card" data-cat="cronica">
+      <div class="blog-card-img">
+        <img src="../assets/img/goleta/taula-mar.jpg" alt="La Goleta · Salou">
+        <span class="blog-card-cat cat-cronica" data-i18n="badge_cronica"></span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-data">Abril 2026</span>
+        </div>
+        <h3 class="blog-card-title" data-i18n="card_goleta_cronica"></h3>
+        <p class="blog-card-exc">Quaranta anys davant la Platja dels Capellans. Cuina mediterrània de producte, servei clàssic i la constatació que no sempre cal canviar el que funciona.</p>
+        <a href="../entrades/la-goleta-cronica-2026.html" class="blog-card-link" data-i18n="card_link"></a>
       </div>
     </article>
 
