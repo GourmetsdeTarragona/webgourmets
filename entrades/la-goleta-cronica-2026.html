@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Goleta · Crónica · Gourmets de Tarragona</title>
+<meta name="description" content="Crónica de la visita de los Gourmets de Tarragona al restaurante La Goleta de Salou. 40 años de tradición mediterránea, producto impecable y servicio clásico.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── VARIABLES ── */
+:root {
+  --marino: #1c2e3e;
+  --marino2: #243547;
+  --dorado: #b8924a;
+  --dorado-claro: #d4a96a;
+  --crema: #f5f0e8;
+  --crema2: #ede7da;
+  --blanco: #ffffff;
+  --gris: #6b6b6b;
+  --gris-claro: #e8e2d8;
+  --font-titulo: 'Playfair Display', Georgia, serif;
+  --font-ui: 'Jost', system-ui, sans-serif;
+  --sombra: 0 4px 24px rgba(28,46,62,0.10);
+  --sombra2: 0 12px 48px rgba(28,46,62,0.18);
+}
+
+/* ── RESET ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-ui);color:var(--marino);background:var(--crema);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ── HERO ── */
+.cronica-hero{
+  position:relative;min-height:70vh;display:flex;align-items:flex-end;overflow:hidden;
+  background:linear-gradient(150deg,#0e1e2c 0%,#1c3348 45%,#243040 100%);
+}
+.cronica-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.2;}
+.cronica-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.97) 0%,rgba(11,22,38,.55) 55%,rgba(11,22,38,.1) 100%);}
+.cronica-hero-content{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:0 5% 64px 5.5%;}
+.cronica-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
+.cronica-back:hover{color:var(--dorado);}
+.cronica-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--dorado);color:#fff;padding:6px 14px;display:inline-block;margin-bottom:18px;}
+.cronica-meta{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
+.cronica-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);}
+.cronica-titol{font-family:var(--font-titulo);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
+.cronica-titol em{font-style:italic;color:rgba(212,169,106,.9);}
+.cronica-subtitol{font-size:.98rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.85;max-width:540px;}
+
+/* ── COS ── */
+.cronica-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
+.c-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dorado);margin-bottom:10px;display:block;}
+.c-title{font-family:var(--font-titulo);font-size:1.75rem;color:var(--marino);line-height:1.2;margin-bottom:22px;}
+.c-p{font-size:1rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:20px;}
+.c-p strong{font-weight:700;color:var(--marino);}
+.c-divider{width:48px;height:3px;background:var(--dorado);opacity:.35;margin:48px 0;}
+
+/* ── GRID PLATS ── */
+.c-plats{background:var(--crema2);border:1px solid var(--gris-claro);padding:48px;margin:52px 0;}
+.c-plats-title{font-family:var(--font-titulo);font-size:1.4rem;color:var(--marino);margin-bottom:32px;text-align:center;}
+.c-plat-item{margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--gris-claro);}
+.c-plat-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.c-plat-nom{font-family:var(--font-titulo);font-size:1.1rem;font-weight:600;color:var(--marino);margin-bottom:6px;}
+.c-plat-desc{font-size:.9rem;color:var(--gris);line-height:1.6;}
+
+/* ── FOTOS ── */
+.c-foto{margin:52px 0;position:relative;overflow:hidden;}
+.c-foto img{width:100%;height:auto;object-fit:cover;}
+.c-foto-peu{position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top,rgba(11,22,38,.75),transparent);font-size:.7rem;color:rgba(255,255,255,.55);font-style:italic;}
+
+/* ── STATS/MOMENTOS ── */
+.c-momento{background:#fff;padding:36px;border-left:4px solid var(--dorado);margin:32px 0;box-shadow:var(--sombra);}
+.c-momento-titulo{font-family:var(--font-titulo);font-size:1.1rem;font-weight:600;color:var(--marino);margin-bottom:12px;}
+.c-momento-texto{font-size:.95rem;color:var(--gris);line-height:1.7;}
+
+/* ── NAV RETORN ── */
+.c-nav-retorn{border-top:1px solid var(--gris-claro);padding:40px;text-align:center;margin-top:52px;}
+.btn-retorn{display:inline-block;font-family:var(--font-ui);font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:14px 30px;border:2px solid var(--marino);color:var(--marino);transition:all .25s;}
+.btn-retorn:hover{background:var(--marino);color:#fff;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .cronica-hero-content{padding:0 5% 52px;}
+  .cronica-cos{padding:52px 5%;}
+  .c-plats{padding:32px 20px;}
+  .c-momento{padding:24px;}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="cronica-hero">
+  <div class="cronica-hero-bg" style="background-image:url('https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg');"></div>
+  <div class="cronica-hero-grad"></div>
+  <div class="cronica-hero-content">
+    <a href="index.html" class="cronica-back">← Volver al inicio</a>
+    <span class="cronica-badge">Crónica · 10 Abril 2026</span>
+    <div class="cronica-meta">
+      <span class="cronica-meta-item">🌊 Salou · 40 años</span>
+      <span class="cronica-meta-item">👥 36 comensales</span>
+      <span class="cronica-meta-item">⏰ 20:30 — 00:00</span>
+    </div>
+    <h1 class="cronica-titol">La Goleta<br><em>Cuarenta años sin decepcionar</em></h1>
+    <p class="cronica-subtitol">Una noche junto a José Vilaseca Rius, fundador de los Casacas Rojas. Producto impecable, servicio clásico y la constatación de que no siempre es necesario cambiar cuando funciona.</p>
+  </div>
+</header>
+
+<!-- COS -->
+<main class="cronica-cos">
+
+  <!-- INTRO ──────────────────────── -->
+  <section>
+    <span class="c-label">Cuarenta años en el tiempo</span>
+    <h2 class="c-title">La Goleta no decepciona</h2>
+    <div class="c-divider"></div>
+    
+    <p class="c-p">
+      La Platja dels Capellans de Salou ha sido testigo de <strong>cuarenta años de historia gastronómica</strong>. Desde 1986, La Goleta ha permanecido en el mismo lugar, con la misma filosofía y el mismo respeto por el producto del mar. No son grandes alardes, ni técnicas raras, ni deconstrucciones. Es simplemente <strong>producto impecable, ejecución técnica reconocible y la convicción de que si algo funciona, no es necesario cambiarlo</strong>.
+    </p>
+
+    <p class="c-p">
+      La noche del 10 de abril llegamos treinta y seis comensales. Entre nosotros, una presencia singular: <strong>José Vilaseca Rius</strong>, cofundador de los Casacas Rojas de Barcelona, una institución gastronómica que a su manera —con sus locuras, sus anécdotas, su irreverencia— se ha convertido en referente del sector. Vilaseca no solo comió con nosotros. <strong>Vilaseca nos enseñó, nos hizo reír y, al final, todos fuimos un poco Casaca Roja</strong>.
+    </p>
+  </section>
+
+  <!-- LA SALA ──────────────────────── -->
+  <section style="margin-top:48px;">
+    <span class="c-label">El espacio</span>
+    <h2 class="c-title">Elegancia clásica, sin modernismos</h2>
+    <div class="c-divider"></div>
+    
+    <p class="c-p">
+      Cuarenta años. La sala es conocida por la mayoría de nosotros. <strong>Poco ha cambiado</strong>. Ni siquiera es un defecto. Es una afirmación. Elegante, acogedora, clásica — todo lo que los restaurantes modernistas abanderan con sus vidrios y sus hierros descarados, La Goleta lo resuelve con sobriedad. Las vistas sobre la playa, los detalles de madera, la iluminación cálida. Todo permanece. Y todo funciona.
+    </p>
+
+    <p class="c-p">
+      <strong>Ignacio Ureña, maître y sumiller durante años, ahora dirige el proyecto</strong>. Su presencia desde el primer momento fue la de un maestro de ceremonia: explicaciones de los platos, contexto del vino, atención a cada detalle. Continuidad con visión. Como él mismo diría: <strong>"Todo es evolución"</strong>.
+    </p>
+  </section>
+
+  <!-- EL VINO ──────────────────────── -->
+  <section style="margin-top:48px;">
+    <span class="c-label">Una decisión singular</span>
+    <h2 class="c-title">Un único vino para toda la noche</h2>
+    <div class="c-divider"></div>
+    
+    <p class="c-p">
+      Acostumbrados como estamos a recorrer diferentes vinos a lo largo de la cena, la decisión de Ignacio fue singular: <strong>1270 de Celler Hidalgo Albert, Macabeo-Parellada blanco, DO Priorat</strong>. Un único vino para todos los platos, para toda la noche.
+    </p>
+
+    <p class="c-p">
+      Podría haber generado crítica. No la hubo. <strong>Bien servido, a su temperatura, era simplemente bueno</strong>. Acompañó un recorrido por el mar sin concesiones a la carne, sin alardes. Los comensales lo aceptaron sin comentarios adversos. A veces, la coherencia es más poderosa que la variedad.
+    </p>
+  </section>
+
+  <!-- LA COMIDA ──────────────────────── -->
+  <section style="margin-top:48px;">
+    <span class="c-label">El recorrido</span>
+    <h2 class="c-title">Producto mandando, técnica sirviendo</h2>
+    <div class="c-divider"></div>
+    
+    <p class="c-p">
+      <strong>La propuesta gastronómica de La Goleta se articula alrededor de una verdad simple: el producto es el protagonista</strong>. Peix i marisco de calidad máxima, superfresco, tratado con cuidado. No hay florituras. No hay técnicas raras. No hay esferificaciones. Lo que hay es respeto por la materia prima y la capacidad de dejarla hablar.
+    </p>
+
+    <p class="c-p">
+      El comentario más extendido entre los comensales fue directo: <strong>"Si esto es así y funciona, ¿por qué cambiarlo?"</strong> Cuarenta años de calidad alta, de cuidado máximo, de ejecución limpia. Ese es el argumento que La Goleta defiende. Y es sólido.
+    </p>
+  </section>
+
+  <!-- MENÚ DETALLADO ──────────────────────── -->
+  <div class="c-plats">
+    <h3 class="c-plats-title">El menú de la visita</h3>
+    
+    <div class="c-plat-item">
+      <p class="c-plat-nom">Entrants freds</p>
+      <p class="c-plat-desc">Salmón marinado con salsa de caviar · Montadito de rape y langostinos · Ensalada de langostinos con vinagreta de aguacate y caviar</p>
+    </div>
+
+    <div class="c-plat-item">
+      <p class="c-plat-nom">Entrants calents</p>
+      <p class="c-plat-desc">Calamares de la ría salteados con habitas y almejas · Pulpo con ajos tiernos y patata panadera · Gamba "pantxuda" de Tarragona salteada</p>
+    </div>
+
+    <div class="c-plat-item">
+      <p class="c-plat-nom">Degustació de rapes</p>
+      <p class="c-plat-desc">Rape con salsa de puerros y azafrán · <strong>Tempura de rape con crema de roquefort</strong> ← El momento</p>
+    </div>
+
+    <div class="c-plat-item">
+      <p class="c-plat-nom">Postre</p>
+      <p class="c-plat-desc">Copa de coco con chocolate</p>
+    </div>
+
+    <div class="c-plat-item">
+      <p class="c-plat-nom">Bodega</p>
+      <p class="c-plat-desc">Vino blanco 1270 de Celler Hidalgo Albert (DO Priorat) · Aguas minerales · Cafés e infusiones</p>
+    </div>
+  </div>
+
+  <!-- EL SERVICIO ──────────────────────── -->
+  <section style="margin-top:48px;">
+    <span class="c-label">La ejecución</span>
+    <h2 class="c-title">Servicio a la antigua usanza</h2>
+    <div class="c-divider"></div>
+    
+    <p class="c-p">
+      <strong>Correcto, estructurado, sin innovaciones forzadas</strong>. La mayoría de platos fueron servidos por camareros desde sus bandejas, con precisión, sin una sola mancha sobre la mesa. Cosa inusual en restaurantes ya modernos que montan los platos en cocina y los sacan ya prestos. Aquí, el ceremonial tiene lugar en la sala.
+    </p>
+
+    <p class="c-p">
+      Ignacio estaba presente en todo momento, explicando cada plato, sugiriendo cómo abordarlo, contextualizando. <strong>No es exceso. Es respeto</strong>. Porque el comensal merece saber qué come y por qué.
+    </p>
+  </section>
+
+  <!-- MOMENTOS ──────────────────────── -->
+  <section style="margin-top:48px;">
+    <span class="c-label">La noche</span>
+    <h2 class="c-title">Momentos que permanecen</h2>
+    <div class="c-divider"></div>
+  </section>
+
+  <div class="c-momento">
+    <p class="c-momento-titulo">🎯 La anécdota de la carta inexistente</p>
+    <p class="c-momento-texto">Vilaseca contó una historia que circula sobre Emilio Vicente, fundador: durante años, no mostró la carta a los clientes. Simplemente vendía los platos, sin necesidad de que vieran escrito qué comían. Después de cuarenta años, los clientes por fin han empezado a ver las cartas de La Goleta. Es una anécdota real, y resume la filosofía del lugar: <strong>la confianza en el que cocina, no en la descripción impresa</strong>.</p>
+  </div>
+
+  <div class="c-momento">
+    <p class="c-momento-titulo">🍤 La tempura de rape con crema de roquefort</p>
+    <p class="c-momento-texto"><strong>Llegó último, cuando los ánimos ya estaban desgastados después de horas de cena</strong>. Pero fue el toque exacto. Rape frito en tempura, crema de roquefort, equilibrio perfecto entre texturas y sabores. Sin esfuerzo, sin dramatismo. Solo técnica y producto. Fue lo más destacable de la noche.</p>
+  </div>
+
+  <div class="c-momento">
+    <p class="c-momento-titulo">🏆 El diploma y el grito</p>
+    <p class="c-momento-texto">José Vilaseca entregó el diploma de la visita de los Gourmets a Ignacio Ureña. Y entonces, de manera completamente improvisada, surgió de la sala un grito colectivo: <strong>"¡FESTIVAL!"</strong>. El grito de guerra de los Casacas Rojas. Vilaseca lo había mencionado durante su charla, y la sala entera, contagiada, lo coreó. <strong>En ese momento, todos fuimos un poco Casaca Roja</strong>. Fue honesto, fue real, fue de esas cosas que no se olvidan.</p>
+  </div>
+
+  <!-- CONCLUSIÓN ──────────────────────── -->
+  <section style="margin-top:48px;">
+    <span class="c-label">Reflexión final</span>
+    <h2 class="c-title">Cuarenta años de coherencia</h2>
+    <div class="c-divider"></div>
+    
+    <p class="c-p">
+      Llegar a los cuarenta años en la restauración es una fita rellevant. La mayoría de establecimientos han desaparecido, mutado, perdido su esencia. La Goleta ha mantenido su propuesta: <strong>cuina mediterránea, producto del mar impecable, servicio clásico, sin concesiones a las modas</strong>.
+    </p>
+
+    <p class="c-p">
+      Ignacio Ureña continúa la labor de Emilio Vicente, pero con su propia visión. <strong>Todo es evolución</strong>. La sala no ha cambiado radicalmente, pero funciona. El menú mantiene su estructura, pero respira. El vino es uno solo, pero acompaña sin pretensiones.
+    </p>
+
+    <p class="c-p">
+      <strong>La Goleta no nos sorprendió con alardes</strong>. Nos confortó con coherencia. Y eso, en un contexto donde la tendencia es constantemente innovar, reinventarse y buscar notoriedad, es un lujo. Un lujo que la Costa Daurada merece tener en Salou, frente a la Platja dels Capellans, donde La Goleta permanece. Cuarenta años. Y sin intención de cambiar lo que funciona.
+    </p>
+
+    <p class="c-p" style="margin-top:32px;font-style:italic;color:var(--dorado);">
+      La visita de los Gourmets de Tarragona. 10 de abril de 2026. Salou. La Goleta. Cuarenta años.
+    </p>
+  </section>
+
+</main>
+
+<!-- NAV RETORN -->
+<div class="c-nav-retorn">
+  <a href="index.html" class="btn-retorn">← Volver al inicio</a>
+</div>
+
+</body>
+</html>
