@@ -329,10 +329,9 @@ ul{list-style:none}
     <span class="e-maridatge-text" data-i18n="maridatge_1270"></span>
   </div>
 
-  <div class="e-fotos-3">
+  <div class="e-fotos-2">
     <img src="../assets/img/goleta/goleta-salmo.jpg" alt="Salmó marinat amb salsa de caviar">
     <img src="../assets/img/goleta/goleta-langostins.jpg" alt="Ensalada de langostins amb vinagreta d'alvocat i caviar">
-    <img src="../assets/img/goleta/goleta-vi.jpg" alt="1270 Celler Hidalgo Albert — DO Priorat" style="object-fit:contain;background:#f5f0e8;padding:8px;">
   </div>
 
   <div class="e-sep">· · ·</div>
@@ -352,9 +351,9 @@ ul{list-style:none}
     <span class="e-maridatge-text" data-i18n="maridatge_1270"></span>
   </div>
 
-  <div class="e-fotos-2">
+  <div class="e-foto-gran">
     <img src="../assets/img/goleta/goleta-calamars.jpg" alt="Calamars de la ria saltejats amb favetes i cloïsses">
-    <img src="../assets/img/goleta/goleta-sala.jpg" alt="La Goleta — sala durant la visita" style="object-position:center;">
+    <div class="e-foto-gran-peu" data-i18n="foto_calamars_peu"></div>
   </div>
 
   <div class="e-sep">· · ·</div>
@@ -528,14 +527,14 @@ ul{list-style:none}
     </div>
     <div class="footer-col">
       <h4 data-i18n="footer_contacte"></h4>
-      <p>gourmetsdetarragona@gourmetsdetarragona.com</p>
+      <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eb8c849e99868e9f988f8e9f8a99998a8c84858aab8c849e99868e9f988f8e9f8a99998a8c84858ac5888486">[email&#160;protected]</a></p>
       <p>Tarragona, Catalunya</p>
     </div>
   </div>
   <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 var T={
   /* NAV global */
   nav_inicio:      {es:'Inicio',          ca:'Inici'},
@@ -555,7 +554,7 @@ var T={
   /* HERO */
   back_blog:      {es:'Volver al Blog',  ca:'Tornar al Blog'},
   cronica_badge:  {es:'Visita Gourmets · Temporada 2026', ca:'Visita Gourmets · Temporada 2026'},
-  cronica_cuina:  {es:'Cuina mediterrània',ca:'Cuina mediterrània'},
+  cronica_cuina:  {es:'Cocina mediterránea',ca:'Cuina mediterrània'},
   cronica_data:   {es:'Abril 2026',      ca:'Abril 2026'},
   cronica_subtitol:{
     es:'Segunda visita de la asociación en 2026. La Goleta defiende cuarenta años de cocina mediterránea de producto frente a la Platja dels Capellans de Salou.',
@@ -638,6 +637,10 @@ var T={
   },
 
   /* FOTOS */
+  foto_calamars_peu:{
+    es:'Calamares de la ría salteados con habitas y almejas',
+    ca:'Calamars de la ria saltejats amb favetes i cloïsses'
+  },
   foto_rap_peu:{
     es:'Rape con salsa de puerros y azafrán — primera preparación de la degustación',
     ca:'Rap amb salsa de porros i safrà — primera preparació de la degustació'
@@ -747,15 +750,4 @@ function setLang(lang){
 }
 
 document.getElementById('hamburger').addEventListener('click',function(){
-  document.getElementById('mobileMenu').classList.toggle('open');
-});
-document.querySelectorAll('.mobile-item a').forEach(function(a){
-  a.addEventListener('click',function(){
-    document.getElementById('mobileMenu').classList.remove('open');
-  });
-});
-
-applyTranslations(currentLang);
-</script>
-</body>
-</html>
+  document.getElementById('mobileMenu').classList.toggle('o
