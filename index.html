@@ -513,38 +513,49 @@ const translations = {
 let currentLang = localStorage.getItem('gdt-lang') || 'es';
 
 function applyTranslations(lang) {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
     if (translations[key] && translations[key][lang] !== undefined) {
       el.innerHTML = translations[key][lang];
     }
   });
-  document.getElementById('html-root')?.setAttribute('lang', lang);
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    e('data-lang') === lang);
+  document.getElementById('html-root').setAttribute('lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
   });
 }
 
 function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('gdt-lang', lang);
+  // Apply data-i18n elements
   applyTranslations(lang);
-  document.getElementById('mobileMenu')?.classList.remove('open');
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  if (currentLang === 'ca') setLang('ca');
-});
-
-// Also handle .t elements (inline bilingual)
-var _origSetLang = setLang;
-setLang = function(lang) {
-  _origSetLang(lang);
+  // Apply inline .t elements
   document.querySelectorAll('.t').forEach(function(el) {
     var val = el.getAttribute('data-' + lang);
     if (val) el.innerHTML = val;
   });
-};
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Nav scroll colour change
+  var nav = document.getElementById('nav');
+  if (nav) {
+    window.addEventListener('scroll', function() {
+      nav.classList.toggle('solid', window.scrollY > 50);
+    });
+  }
+  // Hamburger
+  var burger = document.getElementById('hamburger');
+  if (burger) {
+    burger.addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  }
+  // Apply saved language on load
+  if (currentLang === 'ca') setLang('ca');
+});
 </script>
 </body>
 </html>
