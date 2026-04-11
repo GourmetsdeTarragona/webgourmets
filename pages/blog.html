@@ -217,113 +217,45 @@
 </style>
 
 <script>
-/* ── I18N BLOG — inline ── */
-const t = {
-  es:{
-    nav_inicio:'Inicio',nav_asoc:'La Asociación',nav_rest:'Restaurantes',
-    nav_premios:'Premios',nav_blog:'Blog Gourmet',nav_contacto:'Contacto',
-    nav_quienes:'Quiénes somos',nav_como:'Cómo funcionamos',
-    nav_visites:'Visitas 2025–26',nav_gastronia:'Trofeo Gastronia',
-    nav_bacus:'Premio Bacus',nav_rest_short:'Restaurantes',nav_premios_short:'Premios',
-    footer_desc:'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',
-    footer_nav:'Navegación',footer_legal:'Legal',footer_contacte:'Contacto',
-    footer_avis:'Aviso Legal',footer_privacitat:'Política de Privacidad',
-    footer_copy:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',
-    blog_label:'Blog Gourmet',
-    blog_title:'Gastronomía con criterio',
-    blog_desc:'Previas, crónicas, noticias y vinos del Camp de Tarragona. Todo lo que rodea a la mesa de los Gourmets.',
-    cat_tots:'Todos',cat_previa:'Previas',cat_cronica:'Crónicas',
-    cat_noticia:'Noticias',cat_vi:'Vinos',cat_event:'Eventos',
-    dest_label:'Última entrada',
-    dest_link:'Leer la entrada completa →',
-    card_link:'Leer →',
-    proxima_label:'Próxima visita',
-    proxima_data:'9 de abril 2026',
-    proxima_link:'Ver la previa →',
-    badge_previa:'Previa',badge_cronica:'Crónica',
-    badge_noticia:'Noticia',badge_vi:'Vinos',badge_event:'Evento',
-  cat_curiositats:'Curiosidades',badge_curiositats:'Curiosidades',
-  card_kema_cronica:'Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica de la 1ª visita</small>',
-  card_kema_previa:'Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa de la 1ª visita</small>',
-  card_goleta_cronica:'La Goleta · Salou<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica del 40 aniversario</small>',
-  card_goleta_previa:'La Goleta · Salou<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa · 2ª visita 2026</small>',
-  card_goleta_noticia:'La Goleta celebra 40 años',
-  proxima_rest_pendent:'3ª Visita · Por confirmar',
-  proxima_data_pendent:'Temporada 2026',
-  card_gastronia:'¿Quién es... Gastronia?',
-  card_romesco:'El Romesco de Tarragona',
-  card_gala2025:'Gala de Premios 2025<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Vermuts Rofes · Reus</small>',
-  },
-  ca:{
-    nav_inicio:'Inici',nav_asoc:"L'Associació",nav_rest:'Restaurants',
-    nav_premios:'Premis',nav_blog:'Blog Gourmet',nav_contacto:'Contacte',
-    nav_quienes:'Qui som',nav_como:'Com funcionem',
-    nav_visites:'Visites 2025–26',nav_gastronia:'Trofeu Gastronia',
-    nav_bacus:'Premi Bacus',nav_rest_short:'Restaurants',nav_premios_short:'Premis',
-    footer_desc:"Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.",
-    footer_nav:'Navegació',footer_legal:'Legal',footer_contacte:'Contacte',
-    footer_avis:'Avís Legal',footer_privacitat:'Política de Privacitat',
-    footer_copy:'© 2026 Gourmets de Tarragona · Tots els drets reservats',
-    blog_label:'Blog Gourmet',
-    blog_title:'Gastronomia amb criteri',
-    blog_desc:'Prèvies, cròniques, notícies i vins del Camp de Tarragona. Tot el que envolta la taula dels Gourmets.',
-    cat_tots:'Tots',cat_previa:'Prèvies',cat_cronica:'Cròniques',
-    cat_noticia:'Notícies',cat_vi:'Vins',cat_event:'Esdeveniments',
-    dest_label:'Última entrada',
-    dest_link:'Llegir l\'entrada completa →',
-    card_link:'Llegir →',
-    proxima_label:'Propera visita',
-    proxima_data:'9 d\'abril 2026',
-    proxima_link:'Veure la prèvia →',
-    badge_previa:'Prèvia',badge_cronica:'Crònica',
-    badge_noticia:'Notícia',badge_vi:'Vins',badge_event:'Esdeveniment',
-  cat_curiositats:'Curiositats',badge_curiositats:'Curiositats',
-  card_kema_cronica:"Kema · Cambrils<br><small style='font-family:inherit;font-size:.78rem;color:#888;font-weight:300;'>Crònica de la 1a visita</small>",
-  card_kema_previa:"Kema · Cambrils<br><small style='font-family:inherit;font-size:.78rem;color:#888;font-weight:300;'>Prèvia de la 1a visita</small>",
-  card_goleta_cronica:"La Goleta · Salou<br><small style='font-family:inherit;font-size:.78rem;color:#888;font-weight:300;'>Crònica del 40 aniversari</small>",
-  card_goleta_previa:"La Goleta · Salou<br><small style='font-family:inherit;font-size:.78rem;color:#888;font-weight:300;'>Prèvia · 2a visita 2026</small>",
-  proxima_rest_pendent:'3a Visita · Per confirmar',
-  proxima_data_pendent:'Temporada 2026',
-  card_goleta_noticia:'La Goleta celebra 40 anys',
-  card_gastronia:'Qui és... Gastronia?',
-  card_romesco:'El Romesco de Tarragona',
-  card_gala2025:"Gala de Premis 2025<br><small style='font-family:inherit;font-size:.78rem;color:#888;font-weight:300;'>Vermuts Rofes · Reus</small>",
-  }
-};
-let currentLang = localStorage.getItem('gdt-lang') || 'es';
-function applyTranslations(lang) {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (t[lang] && t[lang][key] !== undefined) el.innerHTML = t[lang][key];
-  });
-  document.getElementById('html-root')?.setAttribute('lang', lang);
-  document.querySelectorAll('.lang-btn').forEach(btn =>
-    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang));
-}
+var currentLang = localStorage.getItem('gdt-lang') || 'es';
+
 function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('gdt-lang', lang);
-  applyTranslations(lang);
-  filterEntrades(currentCat);
+  document.querySelectorAll('.t').forEach(function(el) {
+    var val = el.getAttribute('data-' + lang);
+    if (val) el.innerHTML = val;
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+  document.getElementById('html-root').setAttribute('lang', lang);
+  document.getElementById('mobileMenu').classList.remove('open');
 }
 
-/* ── FILTRE JS ── */
-let currentCat = 'tots';
+/* FILTRE */
+var currentCat = 'tots';
 function filterEntrades(cat) {
   currentCat = cat;
-  document.querySelectorAll('.filtre-btn').forEach(btn =>
-    btn.classList.toggle('actiu', btn.dataset.cat === cat));
-  document.querySelectorAll('.blog-card[data-cat]').forEach(card => {
-    const show = cat === 'tots' || card.dataset.cat === cat;
-    card.style.display = show ? 'flex' : 'none';
+  document.querySelectorAll('.filtre-btn').forEach(function(btn) {
+    btn.classList.toggle('actiu', btn.dataset.cat === cat);
   });
-  // Destacat
-  const dest = document.querySelector('.destacat-card');
+  document.querySelectorAll('.blog-card[data-cat]').forEach(function(card) {
+    card.style.display = (cat === 'tots' || card.dataset.cat === cat) ? 'flex' : 'none';
+  });
+  var dest = document.querySelector('.destacat-card');
   if (dest) {
-    const show = cat === 'tots' || dest.dataset.cat === cat;
+    var show = cat === 'tots' || dest.dataset.cat === cat;
     dest.closest('.blog-destacat').style.display = show ? 'block' : 'none';
   }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (currentLang === 'ca') setLang('ca');
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+});
 </script>
 </head>
 <body>
@@ -333,12 +265,12 @@ function filterEntrades(cat) {
   <div class="nav-inner">
     <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona"></a>
     <div class="nav-menu">
-      <div class="nav-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
-      <div class="nav-item"><span data-i18n="nav_asoc"></span><div class="dropdown"><a href="associacio.html" data-i18n="nav_quienes"></a><a href="associacio.html#funcionament" data-i18n="nav_como"></a></div></div>
-      <div class="nav-item"><span data-i18n="nav_rest"></span><div class="dropdown"><a href="restaurants.html" data-i18n="nav_visites"></a></div></div>
-      <div class="nav-item"><span data-i18n="nav_premios"></span><div class="dropdown"><a href="premis.html" data-i18n="nav_gastronia"></a><a href="premis.html#bacus" data-i18n="nav_bacus"></a></div></div>
-      <div class="nav-item"><a href="blog.html" data-i18n="nav_blog"></a></div>
-      <div class="nav-item"><a href="contacte.html" data-i18n="nav_contacto"></a></div>
+      <div class="nav-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
+      <div class="nav-item"><span class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</span><div class="dropdown"><a href="associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a><a href="associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span><div class="dropdown"><a href="restaurants.html" class="t" data-es="Visitas 2026" data-ca="Visites 2026">Visitas 2026</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Premios" data-ca="Premis">Premios</span><div class="dropdown"><a href="premis.html" class="t" data-es="Trofeo Gastronía" data-ca="Trofeu Gastronía">Trofeo Gastronía</a><a href="premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a></div></div>
+      <div class="nav-item"><a href="blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+      <div class="nav-item"><a href="contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
     </div>
     <div class="nav-right">
       <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
@@ -348,10 +280,10 @@ function filterEntrades(cat) {
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
-    <div class="mobile-item"><a href="restaurants.html" data-i18n="nav_rest_short"></a></div>
-    <div class="mobile-item"><a href="blog.html" data-i18n="nav_blog"></a></div>
-    <div class="mobile-item"><a href="contacte.html" data-i18n="nav_contacto"></a></div>
+    <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
+    <div class="mobile-item"><a href="restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
+    <div class="mobile-item"><a href="blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+    <div class="mobile-item"><a href="contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
     <div class="mobile-lang">
       <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
       <span class="lang-sep">|</span>
@@ -363,9 +295,9 @@ function filterEntrades(cat) {
 <!-- HERO -->
 <div class="blog-hero">
   <div class="blog-hero-inner">
-    <p class="slabel" data-i18n="blog_label"></p>
-    <h1 class="blog-hero-title" data-i18n="blog_title"></h1>
-    <p class="blog-hero-desc" data-i18n="blog_desc"></p>
+    <p class="slabel t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</p>
+    <h1 class="blog-hero-title t" data-es="Gastronomía con criterio" data-ca="Gastronomia amb criteri">Gastronomía con criterio</h1>
+    <p class="blog-hero-desc t" data-es="Previas, crónicas, noticias y vinos del Camp de Tarragona. Todo lo que rodea a la mesa de los Gourmets." data-ca="Prèvies, cròniques, notícies i vins del Camp de Tarragona. Tot el que envolta la taula dels Gourmets.">Previas, crónicas, noticias y vinos del Camp de Tarragona. Todo lo que rodea a la mesa de los Gourmets.</p>
   </div>
 </div>
 
@@ -373,37 +305,37 @@ function filterEntrades(cat) {
 <div class="blog-filtres">
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
-      <span data-i18n="cat_tots"></span>
+      <span class="t" data-es="Todos" data-ca="Tots">Todos</span>
       <span class="filtre-n">9</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
-      <span class="filtre-dot cat-previa" style="background:var(--navy);"></span>
-      <span data-i18n="cat_previa"></span>
+      <span class="filtre-dot" style="background:var(--navy);"></span>
+      <span class="t" data-es="Previas" data-ca="Prèvies">Previas</span>
       <span class="filtre-n">3</span>
     </button>
     <button class="filtre-btn" data-cat="cronica" onclick="filterEntrades('cronica')">
       <span class="filtre-dot" style="background:var(--gold);"></span>
-      <span data-i18n="cat_cronica"></span>
+      <span class="t" data-es="Crónicas" data-ca="Cròniques">Crónicas</span>
       <span class="filtre-n">2</span>
     </button>
     <button class="filtre-btn" data-cat="noticia" onclick="filterEntrades('noticia')">
       <span class="filtre-dot" style="background:#555;"></span>
-      <span data-i18n="cat_noticia"></span>
+      <span class="t" data-es="Noticias" data-ca="Notícies">Noticias</span>
       <span class="filtre-n">1</span>
     </button>
     <button class="filtre-btn" data-cat="vi" onclick="filterEntrades('vi')">
       <span class="filtre-dot" style="background:#6b2737;"></span>
-      <span data-i18n="cat_vi"></span>
+      <span class="t" data-es="Vinos" data-ca="Vins">Vinos</span>
       <span class="filtre-n">0</span>
     </button>
     <button class="filtre-btn" data-cat="event" onclick="filterEntrades('event')">
       <span class="filtre-dot" style="background:#2a7a4b;"></span>
-      <span data-i18n="cat_event"></span>
+      <span class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</span>
       <span class="filtre-n">1</span>
     </button>
     <button class="filtre-btn" data-cat="curiositats" onclick="filterEntrades('curiositats')">
       <span class="filtre-dot" style="background:#8b5e3c;"></span>
-      <span data-i18n="cat_curiositats"></span>
+      <span class="t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       <span class="filtre-n">2</span>
     </button>
   </div>
@@ -414,16 +346,16 @@ function filterEntrades(cat) {
   <div class="destacat-card" data-cat="cronica">
     <div class="destacat-img">
       <img src="../assets/img/goleta/goleta-hero.jpg" alt="La Goleta · Salou">
-      <span class="destacat-cat cat-cronica" data-i18n="badge_cronica"></span>
+      <span class="destacat-cat cat-cronica t" data-es="Crónica" data-ca="Crònica">Crónica</span>
     </div>
     <div class="destacat-body">
       <div class="destacat-meta">
-        <span class="destacat-badge cat-cronica destacat-cat" style="position:static;font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;color:#fff;" data-i18n="badge_cronica"></span>
+        <span class="destacat-badge cat-cronica destacat-cat t" style="position:static;font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;color:#fff;" data-es="Crónica" data-ca="Crònica">Crónica</span>
         <span class="destacat-data">9 Abril 2026</span>
       </div>
-      <h2 class="destacat-title">La Goleta · Salou<br><em style="font-style:italic;color:var(--gold);font-size:.8em;">Quaranta anys sense decebre</em></h2>
-      <p class="destacat-exc">Cuina mediterrània de producte, servei clàssic i la constatació que no sempre cal canviar el que funciona. Crònica completa de la 2a visita del Recorregut Gourmet 2026, amb la presència especial de José Vilaseca i els Casacas Rojas.</p>
-      <a href="../entrades/la-goleta-cronica-2026.html" class="destacat-link" data-i18n="dest_link"></a>
+      <h2 class="destacat-title">La Goleta · Salou<br><em style="font-style:italic;color:var(--gold);font-size:.8em;" class="t" data-es="Cuarenta años sin decepcionar" data-ca="Quaranta anys sense decebre">Cuarenta años sin decepcionar</em></h2>
+      <p class="destacat-exc t" data-es="Cocina mediterránea de producto, servicio clásico y la constatación de que no siempre es necesario cambiar lo que funciona. Crónica completa de la 2ª visita del Recorrido Gourmet 2026, con la presencia especial de José Vilaseca y los Casacas Rojas." data-ca="Cuina mediterrània de producte, servei clàssic i la constatació que no sempre cal canviar el que funciona. Crònica completa de la 2a visita del Recorregut Gourmet 2026, amb la presència especial de José Vilaseca i els Casacas Rojas.">Cocina mediterránea de producto, servicio clásico y la constatación de que no siempre es necesario cambiar lo que funciona. Crónica completa de la 2ª visita del Recorrido Gourmet 2026, con la presencia especial de José Vilaseca y los Casacas Rojas.</p>
+      <a href="../entrades/la-goleta-cronica-2026.html" class="destacat-link t" data-es="Leer la entrada completa →" data-ca="Llegir l'entrada completa →">Leer la entrada completa →</a>
     </div>
   </div>
 </div>
@@ -436,15 +368,13 @@ function filterEntrades(cat) {
     <article class="blog-card" data-cat="cronica">
       <div class="blog-card-img">
         <img src="../assets/img/kema/hero.jpg" alt="Kema · Cambrils">
-        <span class="blog-card-cat cat-cronica" data-i18n="badge_cronica"></span>
+        <span class="blog-card-cat cat-cronica t" data-es="Crónica" data-ca="Crònica">Crónica</span>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-meta">
-          <span class="blog-card-data">Març 2026</span>
-        </div>
-        <h3 class="blog-card-title" data-i18n="card_kema_cronica"></h3>
-        <p class="blog-card-exc">Brasa, producte de qualitat i cocteleria diferencial. Crònica completa de la primera visita de la temporada 2026.</p>
-        <a href="../entrades/kema-cronica-2026.html" class="blog-card-link" data-i18n="card_link"></a>
+        <div class="blog-card-meta"><span class="blog-card-data">Marzo 2026</span></div>
+        <h3 class="blog-card-title t" data-es='Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica de la 1ª visita</small>' data-ca='Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crònica de la 1a visita</small>'>Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica de la 1ª visita</small></h3>
+        <p class="blog-card-exc t" data-es="Brasa, producto de calidad y coctelería diferencial. Crónica completa de la primera visita de la temporada 2026." data-ca="Brasa, producte de qualitat i cocteleria diferencial. Crònica completa de la primera visita de la temporada 2026.">Brasa, producto de calidad y coctelería diferencial. Crónica completa de la primera visita de la temporada 2026.</p>
+        <a href="../entrades/kema-cronica-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
@@ -452,32 +382,27 @@ function filterEntrades(cat) {
     <article class="blog-card" data-cat="previa">
       <div class="blog-card-img">
         <img src="../assets/img/kema/brasa-carn.jpg" alt="Kema · Prèvia">
-        <span class="blog-card-cat cat-previa" data-i18n="badge_previa"></span>
+        <span class="blog-card-cat cat-previa t" data-es="Previa" data-ca="Prèvia">Previa</span>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-meta">
-          <span class="blog-card-data">Febrer 2026</span>
-        </div>
-        <h3 class="blog-card-title" data-i18n="card_kema_previa"></h3>
-        <p class="blog-card-exc">Una proposta 360° on el foc mana. Tot el que calia saber abans de la primera visita de la temporada.</p>
-        <a href="../entrades/kema-previa-2026.html" class="blog-card-link" data-i18n="card_link"></a>
+        <div class="blog-card-meta"><span class="blog-card-data">Febrero 2026</span></div>
+        <h3 class="blog-card-title t" data-es='Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa de la 1ª visita</small>' data-ca='Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Prèvia de la 1a visita</small>'>Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa de la 1ª visita</small></h3>
+        <p class="blog-card-exc t" data-es="Una propuesta 360° donde el fuego manda. Todo lo que había que saber antes de la primera visita de la temporada." data-ca="Una proposta 360° on el foc mana. Tot el que calia saber abans de la primera visita de la temporada.">Una propuesta 360° donde el fuego manda. Todo lo que había que saber antes de la primera visita de la temporada.</p>
+        <a href="../entrades/kema-previa-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
-    <!-- Notícia — 40 anys La Goleta -->
     <!-- La Goleta Crònica -->
     <article class="blog-card" data-cat="cronica">
       <div class="blog-card-img">
-        <img src="../assets/img/goleta/taula-mar.jpg" alt="La Goleta · Salou">
-        <span class="blog-card-cat cat-cronica" data-i18n="badge_cronica"></span>
+        <img src="../assets/img/goleta/goleta-hero.jpg" alt="La Goleta · Salou">
+        <span class="blog-card-cat cat-cronica t" data-es="Crónica" data-ca="Crònica">Crónica</span>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-meta">
-          <span class="blog-card-data">Abril 2026</span>
-        </div>
-        <h3 class="blog-card-title" data-i18n="card_goleta_cronica"></h3>
-        <p class="blog-card-exc">Quaranta anys davant la Platja dels Capellans. Cuina mediterrània de producte, servei clàssic i la constatació que no sempre cal canviar el que funciona.</p>
-        <a href="../entrades/la-goleta-cronica-2026.html" class="blog-card-link" data-i18n="card_link"></a>
+        <div class="blog-card-meta"><span class="blog-card-data">Abril 2026</span></div>
+        <h3 class="blog-card-title t" data-es='La Goleta · Salou<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica del 40 aniversario</small>' data-ca='La Goleta · Salou<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crònica del 40 aniversari</small>'>La Goleta · Salou<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica del 40 aniversario</small></h3>
+        <p class="blog-card-exc t" data-es="Cuarenta años frente a la Platja dels Capellans. Cocina mediterránea de producto, servicio clásico y la constatación de que no siempre es necesario cambiar lo que funciona." data-ca="Quaranta anys davant la Platja dels Capellans. Cuina mediterrània de producte, servei clàssic i la constatació que no sempre cal canviar el que funciona.">Cuarenta años frente a la Platja dels Capellans. Cocina mediterránea de producto, servicio clásico y la constatación de que no siempre es necesario cambiar lo que funciona.</p>
+        <a href="../entrades/la-goleta-cronica-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
@@ -485,15 +410,13 @@ function filterEntrades(cat) {
     <article class="blog-card" data-cat="previa">
       <div class="blog-card-img">
         <img src="../assets/img/goleta/goleta-hero.jpg" alt="La Goleta · Prèvia">
-        <span class="blog-card-cat cat-previa" data-i18n="badge_previa"></span>
+        <span class="blog-card-cat cat-previa t" data-es="Previa" data-ca="Prèvia">Previa</span>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-meta">
-          <span class="blog-card-data">2 Abril 2026</span>
-        </div>
-        <h3 class="blog-card-title" data-i18n="card_goleta_previa"></h3>
-        <p class="blog-card-exc">Quaranta anys davant la Platja dels Capellans. Tot el que calia saber abans de la 2a visita del Recorregut Gourmet 2026.</p>
-        <a href="../entrades/la-goleta-previa-2026.html" class="blog-card-link" data-i18n="card_link"></a>
+        <div class="blog-card-meta"><span class="blog-card-data">2 Abril 2026</span></div>
+        <h3 class="blog-card-title t" data-es='La Goleta · Salou<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa · 2ª visita 2026</small>' data-ca='La Goleta · Salou<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Prèvia · 2a visita 2026</small>'>La Goleta · Salou<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa · 2ª visita 2026</small></h3>
+        <p class="blog-card-exc t" data-es="Cuarenta años frente a la Platja dels Capellans. Todo lo que había que saber antes de la 2ª visita del Recorrido Gourmet 2026." data-ca="Quaranta anys davant la Platja dels Capellans. Tot el que calia saber abans de la 2a visita del Recorregut Gourmet 2026.">Cuarenta años frente a la Platja dels Capellans. Todo lo que había que saber antes de la 2ª visita del Recorrido Gourmet 2026.</p>
+        <a href="../entrades/la-goleta-previa-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
@@ -501,15 +424,13 @@ function filterEntrades(cat) {
     <article class="blog-card" data-cat="noticia">
       <div class="blog-card-img">
         <img src="../assets/img/goleta/aniversari-40.jpg" alt="La Goleta 40 anys">
-        <span class="blog-card-cat cat-noticia" data-i18n="badge_noticia"></span>
+        <span class="blog-card-cat cat-noticia t" data-es="Noticia" data-ca="Notícia">Noticia</span>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-meta">
-          <span class="blog-card-data">Març 2026</span>
-        </div>
-        <h3 class="blog-card-title" data-i18n="card_goleta_noticia"></h3>
-        <p class="blog-card-exc">El restaurant de la Platja dels Capellans compleix quatre dècades. Un referent de la Costa Daurada que ha sabut mantenir-se fidel als seus principis.</p>
-        <a href="../entrades/la-goleta-previa-2026.html" class="blog-card-link" data-i18n="card_link"></a>
+        <div class="blog-card-meta"><span class="blog-card-data">Marzo 2026</span></div>
+        <h3 class="blog-card-title t" data-es="La Goleta celebra 40 años" data-ca="La Goleta celebra 40 anys">La Goleta celebra 40 años</h3>
+        <p class="blog-card-exc t" data-es="El restaurante de la Platja dels Capellans cumple cuatro décadas. Un referente de la Costa Daurada que ha sabido mantenerse fiel a sus principios." data-ca="El restaurant de la Platja dels Capellans compleix quatre dècades. Un referent de la Costa Daurada que ha sabut mantenir-se fidel als seus principis.">El restaurante de la Platja dels Capellans cumple cuatro décadas. Un referente de la Costa Daurada que ha sabido mantenerse fiel a sus principios.</p>
+        <a href="../entrades/la-goleta-previa-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
@@ -517,29 +438,27 @@ function filterEntrades(cat) {
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
         <img src="../assets/img/romesco/romesco-guisat.jpg" alt="El Romesco de Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
-        <span class="blog-card-cat cat-curiositats" data-i18n="badge_curiositats"></span>
+        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
         <div class="blog-card-meta"><span class="blog-card-data">2026</span></div>
-        <h3 class="blog-card-title" data-i18n="card_romesco"></h3>
-        <p class="blog-card-exc">Història, origen i recepta de la salsa que defineix la cuina del Camp de Tarragona. Del Serrallo a les taules del món.</p>
-        <a href="../entrades/el-romesco.html" class="blog-card-link" data-i18n="card_link"></a>
+        <h3 class="blog-card-title t" data-es="El Romesco de Tarragona" data-ca="El Romesco de Tarragona">El Romesco de Tarragona</h3>
+        <p class="blog-card-exc t" data-es="Historia, origen y receta de la salsa que define la cocina del Camp de Tarragona. Del Serrallo a las mesas del mundo." data-ca="Història, origen i recepta de la salsa que defineix la cuina del Camp de Tarragona. Del Serrallo a les taules del món.">Historia, origen y receta de la salsa que define la cocina del Camp de Tarragona. Del Serrallo a las mesas del mundo.</p>
+        <a href="../entrades/el-romesco.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
-    <!-- Curiositat: Què és la Gastronia -->
+    <!-- Curiositat: Gastronia -->
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
         <img src="../assets/img/gala2025/trofeus.jpg" alt="Trofeu Gastronia">
-        <span class="blog-card-cat cat-curiositats" data-i18n="badge_curiositats"></span>
+        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-meta">
-          <span class="blog-card-data">2026</span>
-        </div>
-        <h3 class="blog-card-title" data-i18n="card_gastronia"></h3>
-        <p class="blog-card-exc">El nom, el trofeu, el procés de votació i el palmarès dels guardonats. Tot el que cal saber sobre el màxim reconeixement dels Gourmets de Tarragona.</p>
-        <a href="../entrades/que-es-la-gastronia.html" class="blog-card-link" data-i18n="card_link"></a>
+        <div class="blog-card-meta"><span class="blog-card-data">2026</span></div>
+        <h3 class="blog-card-title t" data-es="¿Quién es... Gastronía?" data-ca="Qui és... Gastronía?">¿Quién es... Gastronía?</h3>
+        <p class="blog-card-exc t" data-es="El nombre, el trofeo, el proceso de votación y el palmarés de los galardonados. Todo lo que hay que saber sobre el máximo reconocimiento de los Gourmets de Tarragona." data-ca="El nom, el trofeu, el procés de votació i el palmarès dels guardonats. Tot el que cal saber sobre el màxim reconeixement dels Gourmets de Tarragona.">El nombre, el trofeo, el proceso de votación y el palmarés de los galardonados. Todo lo que hay que saber sobre el máximo reconocimiento de los Gourmets de Tarragona.</p>
+        <a href="../entrades/que-es-la-gastronia.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
@@ -547,24 +466,22 @@ function filterEntrades(cat) {
     <article class="blog-card" data-cat="event">
       <div class="blog-card-img">
         <img src="../assets/img/gala2025/trofeus.jpg" alt="Gala de Premis 2025">
-        <span class="blog-card-cat cat-event" data-i18n="badge_event"></span>
+        <span class="blog-card-cat cat-event t" data-es="Evento" data-ca="Esdeveniment">Evento</span>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-meta">
-          <span class="blog-card-data">2025</span>
-        </div>
-        <h3 class="blog-card-title" data-i18n="card_gala2025"></h3>
-        <p class="blog-card-exc">Buidasacs i Cambium, Trofeus Gastronia. Cirerets de Mas Alta, Premi Bacus. Una nit de reconeixement i emoció al Camp de Tarragona.</p>
-        <a href="../entrades/gala-premis-2025.html" class="blog-card-link" data-i18n="card_link"></a>
+        <div class="blog-card-meta"><span class="blog-card-data">2025</span></div>
+        <h3 class="blog-card-title t" data-es='Gala de Premios 2025<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Vermuts Rofes · Reus</small>' data-ca='Gala de Premis 2025<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Vermuts Rofes · Reus</small>'>Gala de Premios 2025<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Vermuts Rofes · Reus</small></h3>
+        <p class="blog-card-exc t" data-es="Buidasacs y Cambium, Trofeos Gastronía. Cirerets de Mas Alta, Premio Bacus. Una noche de reconocimiento y emoción en el Camp de Tarragona." data-ca="Buidasacs i Cambium, Trofeus Gastronia. Cirerets de Mas Alta, Premi Bacus. Una nit de reconeixement i emoció al Camp de Tarragona.">Buidasacs y Cambium, Trofeos Gastronía. Cirerets de Mas Alta, Premio Bacus. Una noche de reconocimiento y emoción en el Camp de Tarragona.</p>
+        <a href="../entrades/gala-premis-2025.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
     <!-- Card Propera Visita -->
     <div class="blog-card blog-card-proxima" data-cat="tots">
       <div class="proxima-ico">🗓</div>
-      <div class="proxima-label" data-i18n="proxima_label"></div>
-      <div class="proxima-rest" data-i18n="proxima_rest_pendent"></div>
-      <div class="proxima-data" data-i18n="proxima_data_pendent"></div>
+      <div class="proxima-label t" data-es="Próxima visita" data-ca="Propera visita">Próxima visita</div>
+      <div class="proxima-rest t" data-es="3ª Visita · Por confirmar" data-ca="3a Visita · Per confirmar">3ª Visita · Por confirmar</div>
+      <div class="proxima-data t" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</div>
     </div>
 
   </div>
@@ -575,14 +492,38 @@ function filterEntrades(cat) {
   <div class="footer-main">
     <div class="footer-brand">
       <img src="../assets/img/logo.png" alt="Gourmets de Tarragona">
-      <p data-i18n="footer_desc"></p>
+      <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
       <div class="footer-social">
         <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       </div>
     </div>
-    <div class="footer-col"><h4 data-i18n="footer_nav"></h4><ul><li><a href="associacio.html" data-i18n="nav_quienes"></a></li><li><a href="restaurants.html" data-i18n="nav_rest_short"></a></li><li><a href="premis.html" data-i18n="nav_premios_short"></a></li><li><a href="blog.html" data-i18n="nav_blog"></a></li></ul></div>
-    <div class="footer-col"><h4 data-i18n="footer_legal"></h4><ul><li><a href="#" data-i18n="footer_avis"></a></li><li><a href="#" data-i18n="footer_privacitat"></a></li></ul></div>
-    <div class="footer-col"><h4 data-i18n="footer_contacte"></h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4a2d253f38272f3e392e2f3e2b38382b2d25242b0a2d253f38272f3e392e2f3e2b38382b2d25242b64292527">[email&#160;protected]</a></p><p>Tarragona, Catalunya</p></div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Navegación" data-ca="Navegació">Navegación</h4>
+      <ul>
+        <li><a href="associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a></li>
+        <li><a href="restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li>
+        <li><a href="premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li>
+        <li><a href="blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Legal" data-ca="Legal">Legal</h4>
+      <ul>
+        <li><a href="#" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li>
+        <li><a href="#" class="t" data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Contacto" data-ca="Contacte">Contacto</h4>
+      <p>gourmetsdetarragona@gourmetsdetarragona.com</p>
+      <p>Tarragona, Catalunya</p>
+    </div>
   </div>
-  <div class="footer-bottom"><p data-i18n=
+  <div class="footer-bottom">
+    <p class="t" data-es="© 2026 Gourmets de Tarragona · Todos los derechos reservados" data-ca="© 2026 Gourmets de Tarragona · Tots els drets reservats">© 2026 Gourmets de Tarragona · Todos los derechos reservados</p>
+  </div>
+</footer>
+
+</body>
+</html>
