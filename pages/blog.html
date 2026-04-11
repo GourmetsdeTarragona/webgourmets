@@ -246,7 +246,10 @@ const t = {
   card_kema_cronica:'Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica de la 1ª visita</small>',
   card_kema_previa:'Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa de la 1ª visita</small>',
   card_goleta_cronica:'La Goleta · Salou<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica del 40 aniversario</small>',
+  card_goleta_previa:'La Goleta · Salou<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa · 2ª visita 2026</small>',
   card_goleta_noticia:'La Goleta celebra 40 años',
+  proxima_rest_pendent:'3ª Visita · Por confirmar',
+  proxima_data_pendent:'Temporada 2026',
   card_gastronia:'¿Quién es... Gastronia?',
   card_romesco:'El Romesco de Tarragona',
   card_gala2025:'Gala de Premios 2025<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Vermuts Rofes · Reus</small>',
@@ -278,6 +281,9 @@ const t = {
   card_kema_cronica:"Kema · Cambrils<br><small style='font-family:inherit;font-size:.78rem;color:#888;font-weight:300;'>Crònica de la 1a visita</small>",
   card_kema_previa:"Kema · Cambrils<br><small style='font-family:inherit;font-size:.78rem;color:#888;font-weight:300;'>Prèvia de la 1a visita</small>",
   card_goleta_cronica:"La Goleta · Salou<br><small style='font-family:inherit;font-size:.78rem;color:#888;font-weight:300;'>Crònica del 40 aniversari</small>",
+  card_goleta_previa:"La Goleta · Salou<br><small style='font-family:inherit;font-size:.78rem;color:#888;font-weight:300;'>Prèvia · 2a visita 2026</small>",
+  proxima_rest_pendent:'3a Visita · Per confirmar',
+  proxima_data_pendent:'Temporada 2026',
   card_goleta_noticia:'La Goleta celebra 40 anys',
   card_gastronia:'Qui és... Gastronia?',
   card_romesco:'El Romesco de Tarragona',
@@ -368,12 +374,12 @@ function filterEntrades(cat) {
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span data-i18n="cat_tots"></span>
-      <span class="filtre-n">8</span>
+      <span class="filtre-n">9</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot cat-previa" style="background:var(--navy);"></span>
       <span data-i18n="cat_previa"></span>
-      <span class="filtre-n">2</span>
+      <span class="filtre-n">3</span>
     </button>
     <button class="filtre-btn" data-cat="cronica" onclick="filterEntrades('cronica')">
       <span class="filtre-dot" style="background:var(--gold);"></span>
@@ -403,21 +409,21 @@ function filterEntrades(cat) {
   </div>
 </div>
 
-<!-- DESTACAT — La Goleta Prèvia (la més recent) -->
+<!-- DESTACAT — La Goleta Crònica (la més recent) -->
 <div class="blog-destacat">
-  <div class="destacat-card" data-cat="previa">
+  <div class="destacat-card" data-cat="cronica">
     <div class="destacat-img">
-      <img src="../assets/img/goleta/capellans-beach.jpg" alt="La Goleta · Salou">
-      <span class="destacat-cat cat-previa" data-i18n="badge_previa"></span>
+      <img src="../assets/img/goleta/goleta-hero.jpg" alt="La Goleta · Salou">
+      <span class="destacat-cat cat-cronica" data-i18n="badge_cronica"></span>
     </div>
     <div class="destacat-body">
       <div class="destacat-meta">
-        <span class="destacat-badge cat-previa destacat-cat" style="position:static;font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;color:#fff;" data-i18n="badge_previa"></span>
-        <span class="destacat-data">2 Abril 2026</span>
+        <span class="destacat-badge cat-cronica destacat-cat" style="position:static;font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;color:#fff;" data-i18n="badge_cronica"></span>
+        <span class="destacat-data">9 Abril 2026</span>
       </div>
-      <h2 class="destacat-title">La Goleta · Salou<br><em style="font-style:italic;color:var(--gold);font-size:.8em;">40 anys davant la Platja dels Capellans</em></h2>
-      <p class="destacat-exc">Quaranta anys d'un restaurant que ha fet del producte del litoral la seva raó de ser. El 9 d'abril, els Gourmets de Tarragona visiten un dels referents de la Costa Daurada en el marc del seu 40è aniversari.</p>
-      <a href="../entrades/la-goleta-previa-2026.html" class="destacat-link" data-i18n="dest_link"></a>
+      <h2 class="destacat-title">La Goleta · Salou<br><em style="font-style:italic;color:var(--gold);font-size:.8em;">Quaranta anys sense decebre</em></h2>
+      <p class="destacat-exc">Cuina mediterrània de producte, servei clàssic i la constatació que no sempre cal canviar el que funciona. Crònica completa de la 2a visita del Recorregut Gourmet 2026, amb la presència especial de José Vilaseca i els Casacas Rojas.</p>
+      <a href="../entrades/la-goleta-cronica-2026.html" class="destacat-link" data-i18n="dest_link"></a>
     </div>
   </div>
 </div>
@@ -472,6 +478,22 @@ function filterEntrades(cat) {
         <h3 class="blog-card-title" data-i18n="card_goleta_cronica"></h3>
         <p class="blog-card-exc">Quaranta anys davant la Platja dels Capellans. Cuina mediterrània de producte, servei clàssic i la constatació que no sempre cal canviar el que funciona.</p>
         <a href="../entrades/la-goleta-cronica-2026.html" class="blog-card-link" data-i18n="card_link"></a>
+      </div>
+    </article>
+
+    <!-- La Goleta Prèvia -->
+    <article class="blog-card" data-cat="previa">
+      <div class="blog-card-img">
+        <img src="../assets/img/goleta/goleta-hero.jpg" alt="La Goleta · Prèvia">
+        <span class="blog-card-cat cat-previa" data-i18n="badge_previa"></span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-data">2 Abril 2026</span>
+        </div>
+        <h3 class="blog-card-title" data-i18n="card_goleta_previa"></h3>
+        <p class="blog-card-exc">Quaranta anys davant la Platja dels Capellans. Tot el que calia saber abans de la 2a visita del Recorregut Gourmet 2026.</p>
+        <a href="../entrades/la-goleta-previa-2026.html" class="blog-card-link" data-i18n="card_link"></a>
       </div>
     </article>
 
@@ -541,9 +563,8 @@ function filterEntrades(cat) {
     <div class="blog-card blog-card-proxima" data-cat="tots">
       <div class="proxima-ico">🗓</div>
       <div class="proxima-label" data-i18n="proxima_label"></div>
-      <div class="proxima-rest">La Goleta · Salou</div>
-      <div class="proxima-data" data-i18n="proxima_data"></div>
-      <a href="../entrades/la-goleta-previa-2026.html" class="proxima-link" data-i18n="proxima_link"></a>
+      <div class="proxima-rest" data-i18n="proxima_rest_pendent"></div>
+      <div class="proxima-data" data-i18n="proxima_data_pendent"></div>
     </div>
 
   </div>
@@ -562,12 +583,6 @@ function filterEntrades(cat) {
     </div>
     <div class="footer-col"><h4 data-i18n="footer_nav"></h4><ul><li><a href="associacio.html" data-i18n="nav_quienes"></a></li><li><a href="restaurants.html" data-i18n="nav_rest_short"></a></li><li><a href="premis.html" data-i18n="nav_premios_short"></a></li><li><a href="blog.html" data-i18n="nav_blog"></a></li></ul></div>
     <div class="footer-col"><h4 data-i18n="footer_legal"></h4><ul><li><a href="#" data-i18n="footer_avis"></a></li><li><a href="#" data-i18n="footer_privacitat"></a></li></ul></div>
-    <div class="footer-col"><h4 data-i18n="footer_contacte"></h4><p>gourmetsdetarragona@gourmetsdetarragona.com</p><p>Tarragona, Catalunya</p></div>
+    <div class="footer-col"><h4 data-i18n="footer_contacte"></h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4a2d253f38272f3e392e2f3e2b38382b2d25242b0a2d253f38272f3e392e2f3e2b38382b2d25242b64292527">[email&#160;protected]</a></p><p>Tarragona, Catalunya</p></div>
   </div>
-  <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
-</footer>
-
-<script src="../assets/js/main.js"></script>
-<script>applyTranslations(currentLang);</script>
-</body>
-</html>
+  <div class="footer-bottom"><p data-i18n=
