@@ -1,286 +1,636 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" id="html-root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Goleta · Crónica · Gourmets de Tarragona</title>
-<meta name="description" content="Crónica de la visita de los Gourmets de Tarragona al restaurante La Goleta de Salou. 40 años de tradición mediterránea, producto impecable y servicio clásico.">
+<title>La Goleta · Crònica · Gourmets de Tarragona</title>
+<meta name="description" content="Crónica de la visita de los Gourmets de Tarragona al restaurante La Goleta de Salou. Cuarenta años de cocina mediterránea frente a la Platja dels Capellans.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-/* ── VARIABLES ── */
 :root {
-  --marino: #1c2e3e;
-  --marino2: #243547;
-  --dorado: #b8924a;
-  --dorado-claro: #d4a96a;
-  --crema: #f5f0e8;
-  --crema2: #ede7da;
-  --blanco: #ffffff;
-  --gris: #6b6b6b;
-  --gris-claro: #e8e2d8;
-  --font-titulo: 'Playfair Display', Georgia, serif;
-  --font-ui: 'Jost', system-ui, sans-serif;
-  --sombra: 0 4px 24px rgba(28,46,62,0.10);
-  --sombra2: 0 12px 48px rgba(28,46,62,0.18);
+  --navy:#1c2e3e; --navy-dark:#0e1e2c;
+  --gold:#b8924a; --gold-light:#d4a96a;
+  --cream:#f5f0e8; --cream2:#ede7da;
+  --white:#fff; --muted:#6b6b6b; --border:#e8e2d8;
+  --font-serif:'Playfair Display',Georgia,serif;
+  --font-ui:'Lato',system-ui,sans-serif;
+  --shadow:0 4px 24px rgba(28,46,62,.10);
+  --shadow2:0 12px 48px rgba(28,46,62,.18);
 }
-
-/* ── RESET ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;font-size:16px}
-body{font-family:var(--font-ui);color:var(--marino);background:var(--crema);line-height:1.6;overflow-x:hidden}
+body{font-family:var(--font-ui);color:var(--navy);background:var(--cream);line-height:1.6;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
+ul{list-style:none}
 
-/* ── HERO ── */
-.cronica-hero{
-  position:relative;min-height:70vh;display:flex;align-items:flex-end;overflow:hidden;
-  background:linear-gradient(150deg,#0e1e2c 0%,#1c3348 45%,#243040 100%);
-}
-.cronica-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.2;}
-.cronica-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.97) 0%,rgba(11,22,38,.55) 55%,rgba(11,22,38,.1) 100%);}
-.cronica-hero-content{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:64px 5% 64px 5.5%;}
-.cronica-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
-.cronica-back:hover{color:var(--dorado);}
-.cronica-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--dorado);color:#fff;padding:6px 14px;display:inline-block;margin-bottom:18px;}
-.cronica-meta{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
-.cronica-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);}
-.cronica-titol{font-family:var(--font-titulo);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
-.cronica-titol em{font-style:italic;color:rgba(212,169,106,.9);}
-.cronica-subtitol{font-size:.98rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.85;max-width:540px;}
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;background:rgba(245,240,232,.97);backdrop-filter:blur(12px);box-shadow:0 1px 20px rgba(28,46,62,.10);}
+.nav-inner{max-width:1140px;margin:0 auto;padding:0 40px;height:100%;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:10px;}
+.nav-logo img{height:40px;width:auto;}
+.nav-logo-name{font-family:var(--font-serif);font-size:1rem;font-weight:600;color:var(--navy);line-height:1.2;}
+.nav-menu{display:flex;gap:28px;align-items:center;}
+.nav-menu a{font-family:var(--font-ui);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);transition:color .2s;}
+.nav-menu a:hover{color:var(--navy);}
+.nav-right{display:flex;align-items:center;gap:12px;}
+.lang-btn{background:none;border:none;cursor:pointer;font-family:var(--font-ui);font-size:.68rem;font-weight:700;letter-spacing:.12em;color:var(--muted);padding:4px 2px;transition:color .2s;}
+.lang-btn.active{color:var(--navy);}
+.lang-btn:hover{color:var(--navy);}
+.lang-sep{color:var(--border);font-size:.8rem;}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--navy);transition:.3s;}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--cream);z-index:199;padding:16px 0 24px;box-shadow:0 8px 24px rgba(28,46,62,.12);}
+.mobile-menu.open{display:block;}
+.mobile-item a{display:block;padding:11px 40px;font-family:var(--font-ui);font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .2s;}
+.mobile-item a:hover{color:var(--navy);}
+.mobile-lang{display:flex;align-items:center;gap:10px;padding:12px 40px;}
 
-/* ── COS ── */
-.cronica-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
-.c-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dorado);margin-bottom:10px;display:block;}
-.c-title{font-family:var(--font-titulo);font-size:1.75rem;color:var(--marino);line-height:1.2;margin-bottom:22px;}
-.c-p{font-size:1rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:20px;}
-.c-p strong{font-weight:700;color:var(--marino);}
-.c-divider{width:48px;height:3px;background:var(--dorado);opacity:.35;margin:48px 0;}
+/* HERO */
+.entrada-hero{position:relative;min-height:72vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--navy-dark);}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.38;}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.97) 0%,rgba(11,22,38,.55) 55%,rgba(11,22,38,.1) 100%);}
+.entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
+.entrada-hero-content{position:relative;z-index:2;padding:68px 5% 64px 5.5%;max-width:820px;}
+.entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
+.entrada-back:hover{color:var(--gold);}
+.entrada-meta-top{display:flex;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap;}
+.entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;}
+.entrada-badge-cronica{background:var(--navy);}
+.entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;}
+.entrada-meta-item{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
+.entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
+.entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.85;max-width:560px;}
 
-/* ── GRID PLATS ── */
-.c-plats{background:var(--crema2);border:1px solid var(--gris-claro);padding:48px;margin:52px 0;}
-.c-plats-title{font-family:var(--font-titulo);font-size:1.4rem;color:var(--marino);margin-bottom:32px;text-align:center;}
-.c-plat-item{margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--gris-claro);}
-.c-plat-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-.c-plat-nom{font-family:var(--font-titulo);font-size:1.1rem;font-weight:600;color:var(--marino);margin-bottom:6px;}
-.c-plat-desc{font-size:.9rem;color:var(--gris);line-height:1.6;}
+/* COS */
+.entrada-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
+.e-label{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-title{font-family:var(--font-serif);font-size:1.75rem;color:var(--navy-dark);line-height:1.2;margin-bottom:22px;}
+.e-p{font-size:1rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:20px;}
+.e-p strong{font-weight:700;color:var(--navy-dark);}
+.e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin:44px 0;}
 
-/* ── FOTOS ── */
-.c-foto{margin:52px 0;position:relative;overflow:hidden;}
-.c-foto img{width:100%;height:auto;object-fit:cover;}
-.c-foto-peu{position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top,rgba(11,22,38,.75),transparent);font-size:.7rem;color:rgba(255,255,255,.55);font-style:italic;}
+/* GRID 2 COL */
+.e-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:60px;}
+.e-img{position:relative;}
+.e-img img{width:100%;height:380px;object-fit:cover;position:relative;z-index:1;}
+.e-img::after{content:'';position:absolute;bottom:-14px;right:-14px;width:50%;height:50%;border:2px solid var(--gold);opacity:.2;z-index:0;}
 
-/* ── STATS/MOMENTOS ── */
-.c-momento{background:#fff;padding:36px;border-left:4px solid var(--dorado);margin:32px 0;box-shadow:var(--sombra);}
-.c-momento-titulo{font-family:var(--font-titulo);font-size:1.1rem;font-weight:600;color:var(--marino);margin-bottom:12px;}
-.c-momento-texto{font-size:.95rem;color:var(--gris);line-height:1.7;}
+/* FOTO PLENA */
+.e-foto{margin:52px 0;position:relative;overflow:hidden;}
+.e-foto img{width:100%;height:420px;object-fit:cover;}
+.e-foto-peu{position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top,rgba(11,22,38,.75),transparent);font-size:.7rem;color:rgba(255,255,255,.55);font-style:italic;}
+.e-foto-placeholder{width:100%;height:320px;background:var(--cream2);border:2px dashed var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;}
+.e-foto-placeholder i{font-size:2rem;color:var(--border);}
+.e-foto-placeholder span{font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--border);}
 
-/* ── NAV RETORN ── */
-.c-nav-retorn{border-top:1px solid var(--gris-claro);padding:40px;text-align:center;margin-top:52px;}
-.btn-retorn{display:inline-block;font-family:var(--font-ui);font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:14px 30px;border:2px solid var(--marino);color:var(--marino);transition:all .25s;}
-.btn-retorn:hover{background:var(--marino);color:#fff;}
+/* MENÚ */
+.e-menu{background:var(--cream2);border:1px solid var(--border);padding:48px;margin:52px 0;}
+.e-menu-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);margin-bottom:32px;text-align:center;}
+.e-menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;}
+.e-menu-bloc-title{font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+.e-menu-bloc-title.mt{margin-top:24px;}
+.e-menu-plat{display:flex;align-items:flex-start;gap:10px;margin-bottom:11px;}
+.e-menu-plat-ico{font-size:1rem;flex-shrink:0;margin-top:2px;}
+.e-menu-plat-nom{font-size:.9rem;font-weight:300;color:var(--navy);line-height:1.5;}
+.e-menu-plat-nom strong{font-weight:700;}
+.e-menu-vi{grid-column:1/-1;margin-top:24px;padding-top:24px;border-top:1px solid var(--border);display:flex;align-items:center;gap:16px;}
+.e-menu-vi-label{font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+.e-menu-vi-text{font-size:.9rem;font-weight:300;color:var(--muted);line-height:1.5;}
 
-/* ── RESPONSIVE ── */
+/* MOMENTS */
+.e-moment{background:#fff;padding:36px;border-left:4px solid var(--gold);margin:28px 0;box-shadow:var(--shadow);}
+.e-moment-titol{font-family:var(--font-serif);font-size:1.1rem;font-weight:600;color:var(--navy-dark);margin-bottom:12px;}
+.e-moment-text{font-size:.95rem;color:var(--muted);line-height:1.75;}
+.e-moment-text strong{color:var(--navy-dark);font-weight:700;}
+
+/* FITXA */
+.e-fitxa{background:var(--cream2);border:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:0;margin:52px 0;}
+.e-fitxa-info{padding:36px 40px;}
+.e-fitxa-info h3{font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:20px;}
+.e-fitxa-row{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;}
+.e-fitxa-ico{width:32px;height:32px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.e-fitxa-ico i{color:var(--navy);opacity:.6;font-size:.8rem;}
+.e-fitxa-text{font-size:.87rem;color:var(--muted);line-height:1.5;}
+.e-fitxa-cta{background:var(--navy-dark);padding:36px 40px;display:flex;flex-direction:column;justify-content:center;text-align:center;}
+.e-fitxa-cta p{font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:20px;font-weight:300;}
+
+/* BUTTONS */
+.btn-primary{display:inline-block;font-family:var(--font-ui);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:14px 28px;background:var(--gold);color:#fff;border:2px solid var(--gold);transition:all .25s;}
+.btn-primary:hover{background:#9a7a3c;border-color:#9a7a3c;}
+.btn-outline{display:inline-block;font-family:var(--font-ui);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:14px 28px;background:transparent;color:var(--navy);border:2px solid var(--navy);transition:all .25s;}
+.btn-outline:hover{background:var(--navy);color:#fff;}
+
+/* RETORN */
+.e-nav-retorn{border-top:1px solid var(--border);padding:48px;text-align:center;}
+
+/* FOOTER */
+.footer{background:var(--navy);color:rgba(255,255,255,.5);}
+.footer-main{max-width:1140px;margin:0 auto;padding:60px 40px 48px;display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:40px;}
+.footer-brand img{height:40px;margin-bottom:16px;filter:brightness(0) invert(1);opacity:.8;}
+.footer-brand p{font-size:.85rem;font-weight:300;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:18px;}
+.footer-social{display:flex;gap:14px;}
+.footer-social a{color:rgba(255,255,255,.35);transition:color .2s;}
+.footer-social a:hover{color:var(--gold);}
+.footer-col h4{font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.footer-col ul{display:flex;flex-direction:column;gap:9px;}
+.footer-col a{font-size:.85rem;font-weight:300;color:rgba(255,255,255,.4);transition:color .2s;}
+.footer-col a:hover{color:#fff;}
+.footer-col p{font-size:.85rem;font-weight:300;color:rgba(255,255,255,.4);margin-bottom:5px;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.07);max-width:1140px;margin:0 auto;padding:18px 40px;}
+.footer-bottom p{font-size:.62rem;letter-spacing:.05em;color:rgba(255,255,255,.2);}
+
+/* RESPONSIVE */
 @media(max-width:768px){
-  .cronica-hero-content{padding:0 5% 52px;}
-  .cronica-cos{padding:52px 5%;}
-  .c-plats{padding:32px 20px;}
-  .c-momento{padding:24px;}
+  .nav-menu{display:none;}
+  .hamburger{display:flex;}
+  .nav-inner{padding:0 20px;}
+  .entrada-hero-content{padding:68px 5% 48px;}
+  .entrada-cos{padding:48px 5%;}
+  .e-grid-2{grid-template-columns:1fr;gap:36px;}
+  .e-menu{padding:32px 20px;}
+  .e-menu-grid{grid-template-columns:1fr;gap:0;}
+  .e-foto img{height:240px;}
+  .e-fitxa{grid-template-columns:1fr;}
+  .footer-main{grid-template-columns:1fr;gap:28px;padding-top:40px;}
+  .e-nav-retorn{padding:32px 20px;}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV SIMPLE -->
-<nav style="position:fixed;top:0;left:0;right:0;z-index:200;height:64px;background:rgba(245,240,232,0.96);backdrop-filter:blur(12px);box-shadow:0 1px 20px rgba(28,46,62,.10);display:flex;align-items:center;padding:0 5%;">
-  <a href="index.html" style="display:flex;align-items:center;gap:10px;font-family:'Playfair Display',serif;font-size:.95rem;font-weight:600;color:var(--marino);">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-    Gourmets de Tarragona
-  </a>
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/logo_gourmets_blau_sin_fondo-e1747221798939.png"
+           alt="Gourmets de Tarragona" onerror="this.style.display='none'">
+      <span class="nav-logo-name">Gourmets<br><em style="font-style:italic;font-weight:300">de Tarragona</em></span>
+    </a>
+    <div class="nav-menu">
+      <a href="index.html#recorrido" data-i18n="nav_recorregut"></a>
+      <a href="index.html#asociacion" data-i18n="nav_assoc"></a>
+      <a href="index.html#premios" data-i18n="nav_premis"></a>
+      <a href="index.html#actualidad" data-i18n="nav_blog"></a>
+      <a href="index.html#contacto" data-i18n="nav_contacte"></a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-item"><a href="index.html" data-i18n="nav_inici"></a></div>
+    <div class="mobile-item"><a href="index.html#recorrido" data-i18n="nav_recorregut"></a></div>
+    <div class="mobile-item"><a href="index.html#premios" data-i18n="nav_premis"></a></div>
+    <div class="mobile-item"><a href="index.html#actualidad" data-i18n="nav_blog"></a></div>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+    </div>
+  </div>
 </nav>
 
 <!-- HERO -->
-<header class="cronica-hero">
-  <div class="cronica-hero-bg" style="background-image:url('herocronica.jpg');"></div>
-  <div class="cronica-hero-grad"></div>
-  <div class="cronica-hero-content">
-    <a href="index.html" class="cronica-back">← Volver al inicio</a>
-    <span class="cronica-badge">Crónica · 10 Abril 2026</span>
-    <div class="cronica-meta">
-      <span class="cronica-meta-item">🌊 Salou · 40 años</span>
-      <span class="cronica-meta-item">👥 36 comensales</span>
-      <span class="cronica-meta-item">⏰ 20:30 — 00:00</span>
+<header class="entrada-hero">
+  <div class="entrada-hero-bg" style="background-image:url('herocronica.jpg');"></div>
+  <div class="entrada-hero-grad"></div>
+  <div class="entrada-hero-line"></div>
+  <div class="entrada-hero-content">
+    <a href="index.html" class="entrada-back">
+      <i class="fa fa-arrow-left"></i>
+      <span data-i18n="back_inici"></span>
+    </a>
+    <div class="entrada-meta-top">
+      <span class="entrada-badge entrada-badge-cronica" data-i18n="cronica_badge"></span>
+      <div class="entrada-meta-info">
+        <span class="entrada-meta-item"><i class="fa fa-map-marker-alt"></i> Salou</span>
+        <span class="entrada-meta-item"><i class="fa fa-users"></i> <span data-i18n="cronica_comensals"></span></span>
+        <span class="entrada-meta-item"><i class="fa fa-calendar"></i> 10 <span data-i18n="cronica_data_mes"></span> 2026</span>
+      </div>
     </div>
-    <h1 class="cronica-titol">La Goleta<br><em>Cuarenta años sin decepcionar</em></h1>
-    <p class="cronica-subtitol">Una noche junto a José Vilaseca Rius, fundador de los Casacas Rojas. Producto impecable, servicio clásico y la constatación de que no siempre es necesario cambiar cuando funciona.</p>
+    <h1 class="entrada-titol">La Goleta<br><em data-i18n="cronica_titol_em"></em></h1>
+    <p class="entrada-subtitol" data-i18n="cronica_intro_hero"></p>
   </div>
 </header>
 
 <!-- COS -->
-<main class="cronica-cos">
+<main class="entrada-cos">
 
-  <!-- INTRO ──────────────────────── -->
+  <!-- S1 — SALA -->
+  <div class="e-grid-2">
+    <div>
+      <span class="e-label" data-i18n="s1_label"></span>
+      <h2 class="e-title" data-i18n="s1_title"></h2>
+      <div class="e-divider"></div>
+      <p class="e-p" data-i18n="s1_p1"></p>
+      <p class="e-p" data-i18n="s1_p2"></p>
+    </div>
+    <div class="e-img">
+      <!-- FOTO 1: sala o exterior → goleta-sala.jpg -->
+      <img src="goleta-sala.jpg" alt="La Goleta — sala"
+           onerror="this.outerHTML='<div class=\'e-foto-placeholder\'><i class=\'fa fa-camera\'></i><span>goleta-sala.jpg</span></div>'">
+    </div>
+  </div>
+
+  <!-- S2 — INVITAT -->
   <section>
-    <span class="c-label">Cuarenta años en el tiempo</span>
-    <h2 class="c-title">La Goleta no decepciona</h2>
-    <div class="c-divider"></div>
-    
-    <p class="c-p">
-      La Platja dels Capellans de Salou ha sido testigo de <strong>cuarenta años de historia gastronómica</strong>. Desde 1986, La Goleta ha permanecido en el mismo lugar, con la misma filosofía y el mismo respeto por el producto del mar. No son grandes alardes, ni técnicas raras, ni deconstrucciones. Es simplemente <strong>producto impecable, ejecución técnica reconocible y la convicción de que si algo funciona, no es necesario cambiarlo</strong>.
-    </p>
-
-    <p class="c-p">
-      La noche del 10 de abril llegamos treinta y seis comensales. Entre nosotros, una presencia singular: <strong>José Vilaseca Rius</strong>, cofundador de los Casacas Rojas de Barcelona, una institución gastronómica que a su manera —con sus locuras, sus anécdotas, su irreverencia— se ha convertido en referente del sector. Vilaseca no solo comió con nosotros. <strong>Vilaseca nos enseñó, nos hizo reír y, al final, todos fuimos un poco Casaca Roja</strong>.
-    </p>
+    <span class="e-label" data-i18n="s2_label"></span>
+    <h2 class="e-title" data-i18n="s2_title"></h2>
+    <div class="e-divider"></div>
+    <p class="e-p" data-i18n="s2_p1"></p>
+    <p class="e-p" data-i18n="s2_p2"></p>
   </section>
 
-  <!-- LA SALA ──────────────────────── -->
+  <!-- S3 — VI -->
   <section style="margin-top:48px;">
-    <span class="c-label">El espacio</span>
-    <h2 class="c-title">Elegancia clásica, sin modernismos</h2>
-    <div class="c-divider"></div>
-    
-    <p class="c-p">
-      Cuarenta años. La sala es conocida por la mayoría de nosotros. <strong>Poco ha cambiado</strong>. Ni siquiera es un defecto. Es una afirmación. Elegante, acogedora, clásica — todo lo que los restaurantes modernistas abanderan con sus vidrios y sus hierros descarados, La Goleta lo resuelve con sobriedad. Las vistas sobre la playa, los detalles de madera, la iluminación cálida. Todo permanece. Y todo funciona.
-    </p>
-
-    <p class="c-p">
-      <strong>Ignacio Ureña, maître y sumiller durante años, ahora dirige el proyecto</strong>. Su presencia desde el primer momento fue la de un maestro de ceremonia: explicaciones de los platos, contexto del vino, atención a cada detalle. Continuidad con visión. Como él mismo diría: <strong>"Todo es evolución"</strong>.
-    </p>
+    <span class="e-label" data-i18n="s3_label"></span>
+    <h2 class="e-title" data-i18n="s3_title"></h2>
+    <div class="e-divider"></div>
+    <p class="e-p" data-i18n="s3_p1"></p>
+    <p class="e-p" data-i18n="s3_p2"></p>
   </section>
 
-  <!-- EL VINO ──────────────────────── -->
-  <section style="margin-top:48px;">
-    <span class="c-label">Una decisión singular</span>
-    <h2 class="c-title">Un único vino para toda la noche</h2>
-    <div class="c-divider"></div>
-    
-    <p class="c-p">
-      Acostumbrados como estamos a recorrer diferentes vinos a lo largo de la cena, la decisión de Ignacio fue singular: <strong>1270 de Celler Hidalgo Albert, Macabeo-Parellada blanco, DO Priorat</strong>. Un único vino para todos los platos, para toda la noche.
-    </p>
-
-    <p class="c-p">
-      Podría haber generado crítica. No la hubo. <strong>Bien servido, a su temperatura, era simplemente bueno</strong>. Acompañó un recorrido por el mar sin concesiones a la carne, sin alardes. Los comensales lo aceptaron sin comentarios adversos. A veces, la coherencia es más poderosa que la variedad.
-    </p>
-  </section>
-
-  <!-- LA COMIDA ──────────────────────── -->
-  <section style="margin-top:48px;">
-    <span class="c-label">El recorrido</span>
-    <h2 class="c-title">Producto mandando, técnica sirviendo</h2>
-    <div class="c-divider"></div>
-    
-    <p class="c-p">
-      <strong>La propuesta gastronómica de La Goleta se articula alrededor de una verdad simple: el producto es el protagonista</strong>. Peix i marisco de calidad máxima, superfresco, tratado con cuidado. No hay florituras. No hay técnicas raras. No hay esferificaciones. Lo que hay es respeto por la materia prima y la capacidad de dejarla hablar.
-    </p>
-
-    <p class="c-p">
-      El comentario más extendido entre los comensales fue directo: <strong>"Si esto es así y funciona, ¿por qué cambiarlo?"</strong> Cuarenta años de calidad alta, de cuidado máximo, de ejecución limpia. Ese es el argumento que La Goleta defiende. Y es sólido.
-    </p>
-  </section>
-
-  <!-- MENÚ DETALLADO ──────────────────────── -->
-  <div class="c-plats">
-    <h3 class="c-plats-title">El menú de la visita</h3>
-    
-    <div class="c-plat-item">
-      <p class="c-plat-nom">Entrants freds</p>
-      <p class="c-plat-desc">Salmón marinado con salsa de caviar · Montadito de rape y langostinos · Ensalada de langostinos con vinagreta de aguacate y caviar</p>
-    </div>
-
-    <div class="c-plat-item">
-      <p class="c-plat-nom">Entrants calents</p>
-      <p class="c-plat-desc">Calamares de la ría salteados con habitas y almejas · Pulpo con ajos tiernos y patata panadera · Gamba "pantxuda" de Tarragona salteada</p>
-    </div>
-
-    <div class="c-plat-item">
-      <p class="c-plat-nom">Degustació de rapes</p>
-      <p class="c-plat-desc">Rape con salsa de puerros y azafrán · <strong>Tempura de rape con crema de roquefort</strong> ← El momento</p>
-    </div>
-
-    <div class="c-plat-item">
-      <p class="c-plat-nom">Postre</p>
-      <p class="c-plat-desc">Copa de coco con chocolate</p>
-    </div>
-
-    <div class="c-plat-item">
-      <p class="c-plat-nom">Bodega</p>
-      <p class="c-plat-desc">Vino blanco 1270 de Celler Hidalgo Albert (DO Priorat) · Aguas minerales · Cafés e infusiones</p>
+  <!-- MENÚ -->
+  <div class="e-menu">
+    <h3 class="e-menu-title" data-i18n="menu_title"></h3>
+    <div class="e-menu-grid">
+      <div>
+        <p class="e-menu-bloc-title" data-i18n="menu_bloc1"></p>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🐟</span><span class="e-menu-plat-nom" data-i18n="menu_p1"></span></div>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🦐</span><span class="e-menu-plat-nom" data-i18n="menu_p2"></span></div>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🥗</span><span class="e-menu-plat-nom" data-i18n="menu_p3"></span></div>
+        <p class="e-menu-bloc-title mt" data-i18n="menu_bloc2"></p>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🦑</span><span class="e-menu-plat-nom" data-i18n="menu_p4"></span></div>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🐙</span><span class="e-menu-plat-nom" data-i18n="menu_p5"></span></div>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🦐</span><span class="e-menu-plat-nom" data-i18n="menu_p6"></span></div>
+      </div>
+      <div>
+        <p class="e-menu-bloc-title" data-i18n="menu_bloc3"></p>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🐡</span><span class="e-menu-plat-nom" data-i18n="menu_p7"></span></div>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">⭐</span><span class="e-menu-plat-nom" data-i18n="menu_p8"></span></div>
+        <p class="e-menu-bloc-title mt" data-i18n="menu_bloc4"></p>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🍮</span><span class="e-menu-plat-nom" data-i18n="menu_p9"></span></div>
+      </div>
+      <div class="e-menu-vi">
+        <span class="e-menu-vi-label" data-i18n="menu_vi_label"></span>
+        <span class="e-menu-vi-text" data-i18n="menu_vi_text"></span>
+      </div>
     </div>
   </div>
 
-  <!-- EL SERVICIO ──────────────────────── -->
-  <section style="margin-top:48px;">
-    <span class="c-label">La ejecución</span>
-    <h2 class="c-title">Servicio a la antigua usanza</h2>
-    <div class="c-divider"></div>
-    
-    <p class="c-p">
-      <strong>Correcto, estructurado, sin innovaciones forzadas</strong>. La mayoría de platos fueron servidos por camareros desde sus bandejas, con precisión, sin una sola mancha sobre la mesa. Cosa inusual en restaurantes ya modernos que montan los platos en cocina y los sacan ya prestos. Aquí, el ceremonial tiene lugar en la sala.
-    </p>
+  <!-- FOTO 2: entrants freds -->
+  <div class="e-foto">
+    <img src="goleta-entrants.jpg" alt="Entrants freds — La Goleta"
+         onerror="this.outerHTML='<div class=\'e-foto-placeholder\'><i class=\'fa fa-camera\'></i><span>goleta-entrants.jpg</span></div>'">
+    <div class="e-foto-peu" data-i18n="foto2_peu"></div>
+  </div>
 
-    <p class="c-p">
-      Ignacio estaba presente en todo momento, explicando cada plato, sugiriendo cómo abordarlo, contextualizando. <strong>No es exceso. Es respeto</strong>. Porque el comensal merece saber qué come y por qué.
-    </p>
+  <!-- S4 — SERVEI -->
+  <section>
+    <span class="e-label" data-i18n="s4_label"></span>
+    <h2 class="e-title" data-i18n="s4_title"></h2>
+    <div class="e-divider"></div>
+    <p class="e-p" data-i18n="s4_p1"></p>
+    <p class="e-p" data-i18n="s4_p2"></p>
   </section>
 
-  <!-- MOMENTOS ──────────────────────── -->
-  <section style="margin-top:48px;">
-    <span class="c-label">La noche</span>
-    <h2 class="c-title">Momentos que permanecen</h2>
-    <div class="c-divider"></div>
+  <!-- S5 — PRODUCTE + FOTO GAMBA -->
+  <div class="e-grid-2" style="margin-top:48px;">
+    <div class="e-img">
+      <!-- FOTO 3: gamba pantxuda → goleta-gamba.jpg -->
+      <img src="goleta-gamba.jpg" alt="Gamba pantxuda de Tarragona — La Goleta"
+           onerror="this.outerHTML='<div class=\'e-foto-placeholder\'><i class=\'fa fa-camera\'></i><span>goleta-gamba.jpg</span></div>'">
+    </div>
+    <div>
+      <span class="e-label" data-i18n="s5_label"></span>
+      <h2 class="e-title" data-i18n="s5_title"></h2>
+      <div class="e-divider"></div>
+      <p class="e-p" data-i18n="s5_p1"></p>
+      <p class="e-p" data-i18n="s5_p2"></p>
+    </div>
+  </div>
+
+  <!-- MOMENTS -->
+  <section style="margin-top:52px;">
+    <span class="e-label" data-i18n="moments_label"></span>
+    <h2 class="e-title" data-i18n="moments_title"></h2>
+    <div class="e-divider"></div>
   </section>
 
-  <div class="c-momento">
-    <p class="c-momento-titulo">🎯 La anécdota de la carta inexistente</p>
-    <p class="c-momento-texto">Vilaseca contó una historia que circula sobre Emilio Vicente, fundador: durante años, no mostró la carta a los clientes. Simplemente vendía los platos, sin necesidad de que vieran escrito qué comían. Después de cuarenta años, los clientes por fin han empezado a ver las cartas de La Goleta. Es una anécdota real, y resume la filosofía del lugar: <strong>la confianza en el que cocina, no en la descripción impresa</strong>.</p>
+  <div class="e-moment">
+    <p class="e-moment-titol" data-i18n="m1_titol"></p>
+    <p class="e-moment-text" data-i18n="m1_text"></p>
   </div>
 
-  <div class="c-momento">
-    <p class="c-momento-titulo">🍤 La tempura de rape con crema de roquefort</p>
-    <p class="c-momento-texto"><strong>Llegó último, cuando los ánimos ya estaban desgastados después de horas de cena</strong>. Pero fue el toque exacto. Rape frito en tempura, crema de roquefort, equilibrio perfecto entre texturas y sabores. Sin esfuerzo, sin dramatismo. Solo técnica y producto. Fue lo más destacable de la noche.</p>
+  <!-- FOTO 4: tempura de rap -->
+  <div class="e-foto">
+    <img src="goleta-tempura.jpg" alt="Tempura de rap amb crema de roquefort — La Goleta"
+         onerror="this.outerHTML='<div class=\'e-foto-placeholder\'><i class=\'fa fa-camera\'></i><span>goleta-tempura.jpg</span></div>'">
+    <div class="e-foto-peu" data-i18n="foto4_peu"></div>
   </div>
 
-  <div class="c-momento">
-    <p class="c-momento-titulo">🏆 El diploma y el grito</p>
-    <p class="c-momento-texto">José Vilaseca entregó el diploma de la visita de los Gourmets a Ignacio Ureña. Y entonces, de manera completamente improvisada, surgió de la sala un grito colectivo: <strong>"¡FESTIVAL!"</strong>. El grito de guerra de los Casacas Rojas. Vilaseca lo había mencionado durante su charla, y la sala entera, contagiada, lo coreó. <strong>En ese momento, todos fuimos un poco Casaca Roja</strong>. Fue honesto, fue real, fue de esas cosas que no se olvidan.</p>
+  <div class="e-moment">
+    <p class="e-moment-titol" data-i18n="m2_titol"></p>
+    <p class="e-moment-text" data-i18n="m2_text"></p>
   </div>
 
-  <!-- FOTO GRUP ──────────────────────── -->
-  <div class="c-foto" style="margin-top:48px;">
+  <!-- S6 — DIPLOMA + FOTO -->
+  <div class="e-grid-2" style="margin-top:48px;">
+    <div>
+      <span class="e-label" data-i18n="s6_label"></span>
+      <h2 class="e-title" data-i18n="s6_title"></h2>
+      <div class="e-divider"></div>
+      <p class="e-p" data-i18n="s6_p1"></p>
+      <p class="e-p" data-i18n="s6_p2"></p>
+    </div>
+    <div class="e-img">
+      <!-- FOTO 5: entrega diploma → goleta-diploma.jpg -->
+      <img src="goleta-diploma.jpg" alt="Entrega del diploma — La Goleta"
+           onerror="this.outerHTML='<div class=\'e-foto-placeholder\'><i class=\'fa fa-camera\'></i><span>goleta-diploma.jpg</span></div>'">
+    </div>
+  </div>
+
+  <div class="e-moment">
+    <p class="e-moment-titol" data-i18n="m3_titol"></p>
+    <p class="e-moment-text" data-i18n="m3_text"></p>
+  </div>
+
+  <!-- FOTO GRUP -->
+  <div class="e-foto" style="margin-top:48px;">
     <img src="grup.jpg" alt="Els Gourmets de Tarragona a La Goleta · 10 d'abril de 2026">
-    <div class="c-foto-peu">Els 36 comensals dels Gourmets de Tarragona a La Goleta, amb José Vilaseca Rius al centre · Salou, 10 d'abril de 2026</div>
+    <div class="e-foto-peu" data-i18n="foto_grup_peu"></div>
   </div>
 
-  <!-- CONCLUSIÓN ──────────────────────── -->
-  <section style="margin-top:48px;">
-    <span class="c-label">Reflexión final</span>
-    <h2 class="c-title">Cuarenta años de coherencia</h2>
-    <div class="c-divider"></div>
-    
-    <p class="c-p">
-      Llegar a los cuarenta años en la restauración es una fita rellevant. La mayoría de establecimientos han desaparecido, mutado, perdido su esencia. La Goleta ha mantenido su propuesta: <strong>cuina mediterránea, producto del mar impecable, servicio clásico, sin concesiones a las modas</strong>.
-    </p>
-
-    <p class="c-p">
-      Ignacio Ureña continúa la labor de Emilio Vicente, pero con su propia visión. <strong>Todo es evolución</strong>. La sala no ha cambiado radicalmente, pero funciona. El menú mantiene su estructura, pero respira. El vino es uno solo, pero acompaña sin pretensiones.
-    </p>
-
-    <p class="c-p">
-      <strong>La Goleta no nos sorprendió con alardes</strong>. Nos confortó con coherencia. Y eso, en un contexto donde la tendencia es constantemente innovar, reinventarse y buscar notoriedad, es un lujo. Un lujo que la Costa Daurada merece tener en Salou, frente a la Platja dels Capellans, donde La Goleta permanece. Cuarenta años. Y sin intención de cambiar lo que funciona.
-    </p>
-
-    <p class="c-p" style="margin-top:32px;font-style:italic;color:var(--dorado);">
-      La visita de los Gourmets de Tarragona. 10 de abril de 2026. Salou. La Goleta. Cuarenta años.
-    </p>
+  <!-- CONCLUSIÓ -->
+  <section style="margin-top:52px;">
+    <span class="e-label" data-i18n="s7_label"></span>
+    <h2 class="e-title" data-i18n="s7_title"></h2>
+    <div class="e-divider"></div>
+    <p class="e-p" data-i18n="s7_p1"></p>
+    <p class="e-p" data-i18n="s7_p2"></p>
+    <p class="e-p" style="font-style:italic;color:var(--gold);" data-i18n="s7_cloenda"></p>
   </section>
+
+  <!-- FITXA -->
+  <div class="e-fitxa">
+    <div class="e-fitxa-info">
+      <h3 data-i18n="fitxa_title"></h3>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-map-marker-alt"></i></div><span class="e-fitxa-text">Platja dels Capellans, Salou</span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-utensils"></i></div><span class="e-fitxa-text" data-i18n="fitxa_cuina"></span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-user-tie"></i></div><span class="e-fitxa-text" data-i18n="fitxa_dir"></span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-calendar"></i></div><span class="e-fitxa-text" data-i18n="fitxa_visita"></span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-users"></i></div><span class="e-fitxa-text" data-i18n="fitxa_comensals"></span></div>
+    </div>
+    <div class="e-fitxa-cta">
+      <p data-i18n="fitxa_cta_desc"></p>
+      <a href="index.html#recorrido" class="btn-primary" data-i18n="fitxa_cta_btn"></a>
+    </div>
+  </div>
 
 </main>
 
 <!-- NAV RETORN -->
-<div class="c-nav-retorn">
-  <a href="index.html" class="btn-retorn">← Volver al inicio</a>
+<div class="e-nav-retorn">
+  <a href="index.html" class="btn-outline" data-i18n="btn_retorn"></a>
 </div>
 
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/logo_gourmets_blau_sin_fondo-e1747221798939.png"
+           alt="Gourmets de Tarragona" onerror="this.style.display='none'">
+      <p data-i18n="footer_desc"></p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_nav"></h4>
+      <ul>
+        <li><a href="index.html#recorrido" data-i18n="nav_recorregut"></a></li>
+        <li><a href="index.html#asociacion" data-i18n="nav_assoc"></a></li>
+        <li><a href="index.html#premios" data-i18n="nav_premis"></a></li>
+        <li><a href="index.html#actualidad" data-i18n="nav_blog"></a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_legal"></h4>
+      <ul>
+        <li><a href="#" data-i18n="footer_avis"></a></li>
+        <li><a href="#" data-i18n="footer_privacitat"></a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_contacte"></h4>
+      <p>gourmetsdetarragona@gourmetsdetarragona.com</p>
+      <p>Tarragona, Catalunya</p>
+    </div>
+  </div>
+  <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
+</footer>
+
+<script>
+const T = {
+  nav_inici:        {es:'Inicio',            ca:'Inici'},
+  nav_recorregut:   {es:'Recorrido',         ca:'Recorregut'},
+  nav_assoc:        {es:'La Asociación',     ca:"L'Associació"},
+  nav_premis:       {es:'Premios',           ca:'Premis'},
+  nav_blog:         {es:'Actualidad',        ca:'Actualitat'},
+  nav_contacte:     {es:'Contacto',          ca:'Contacte'},
+
+  back_inici:       {es:'Volver al inicio',  ca:"Tornar a l'inici"},
+  cronica_badge:    {es:'Crónica · 10 Abril 2026', ca:'Crònica · 10 Abril 2026'},
+  cronica_comensals:{es:'36 comensales',     ca:'36 comensals'},
+  cronica_data_mes: {es:'de abril',          ca:"d'abril"},
+  cronica_titol_em: {es:'Cuarenta años sin decepcionar', ca:'Quaranta anys sense decebre'},
+  cronica_intro_hero:{
+    es:'La segunda visita del Recorrido Gourmet 2026 nos llevó a Salou, frente a la Platja dels Capellans, donde La Goleta cumple cuarenta años con la misma convicción: producto del mar, cocina mediterránea y un servicio clásico que no negocia con las modas.',
+    ca:"La segona visita del Recorregut Gourmet 2026 ens va portar a Salou, davant la Platja dels Capellans, on La Goleta compleix quaranta anys amb la mateixa convicció: producte del mar, cuina mediterrània i un servei clàssic que no negocia amb les modes."
+  },
+
+  s1_label:{es:'El espacio', ca:"L'espai"},
+  s1_title:{es:'La sala que no necesita cambiar', ca:'La sala que no necessita canviar'},
+  s1_p1:{
+    es:'Cuarenta años. La sala es conocida por la mayoría de nosotros. Poco ha cambiado — y tampoco hace falta. Elegante, acogedora, clásica: lo que los restaurantes modernistas resuelven con vidrios y hierros, La Goleta lo consigue con sobriedad y madera cálida. Las vistas sobre la playa, la iluminación medida, la disposición de las mesas. Todo permanece. Todo funciona.',
+    ca:"Quaranta anys. La sala la coneixem la majoria. Poc ha canviat — i tampoc cal. Elegant, acollidora, clàssica: el que els restaurants modernistes resolen amb vidres i ferros, La Goleta ho aconsegueix amb sobrietat i fusta càlida. Les vistes sobre la platja, la il·luminació mesurada, la disposició de les taules. Tot continua. Tot funciona."
+  },
+  s1_p2:{
+    es:'<strong>Ignacio Ureña, maître y sumiller durante años, dirige ahora el proyecto</strong>. La suya fue la presencia de quien conoce cada plato, cada vino y cada comensal. Continuidad con visión. Como él mismo nos explicó a lo largo de la noche: <strong>"Todo es evolución"</strong>.',
+    ca:"<strong>Ignacio Ureña, maître i sommelier durant anys, dirigeix ara el projecte</strong>. La seva va ser la presència de qui coneix cada plat, cada vi i cada comensal. Continuïtat amb visió. Com ell mateix ens va explicar al llarg de la nit: <strong>\"Tot és evolució\"</strong>."
+  },
+
+  s2_label:{es:'El invitado de la noche', ca:"L'invitat de la nit"},
+  s2_title:{es:'José Vilaseca, Casacas Rojas de Barcelona', ca:'José Vilaseca, Casacas Rojas de Barcelona'},
+  s2_p1:{
+    es:'La velada tuvo un ingrediente especial: <strong>José Vilaseca Rius</strong>, cofundador de los Casacas Rojas de Barcelona, se sentó con nosotros. Los Casacas Rojas son una institución gastronómica barcelonesa que lleva décadas recorriendo los mejores restaurantes con una mezcla única de rigor, humor e irreverencia.',
+    ca:"La vetllada va tenir un ingredient especial: <strong>José Vilaseca Rius</strong>, cofundador dels Casacas Rojas de Barcelona, va seure amb nosaltres. Els Casacas Rojas són una institució gastronòmica barcelonina que porta dècades recorrent els millors restaurants amb una barreja única de rigor, humor i irreverència."
+  },
+  s2_p2:{
+    es:'Vilaseca no solo comió con nosotros. Compartió anécdotas, su visión de la gastronomía, su manera de entender el oficio. Y sin pretenderlo, añadió una capa de significado a una noche que ya de por sí tenía mucho que decir.',
+    ca:"Vilaseca no només va sopar amb nosaltres. Va compartir anècdotes, la seva visió de la gastronomia, la seva manera d'entendre l'ofici. I sense voler-ho, va afegir una capa de significat a una nit que ja de per si tenia molt a dir."
+  },
+
+  s3_label:{es:'Una decisión singular', ca:'Una decisió singular'},
+  s3_title:{es:'Un único vino para toda la noche', ca:'Un únic vi per a tota la nit'},
+  s3_p1:{
+    es:'Acostumbrados a recorrer diferentes vinos a lo largo de la cena, la decisión de Ignacio fue inusual: <strong>1270 de Celler Hidalgo Albert, Macabeo-Parellada blanc, DO Priorat</strong>. Un único vino para acompañar todos los platos, de principio a fin.',
+    ca:"Acostumats a recórrer diferents vins al llarg del sopar, la decisió d'Ignacio va ser inusual: <strong>1270 de Celler Hidalgo Albert, Macabeo-Parellada blanc, DO Priorat</strong>. Un únic vi per acompanyar tots els plats, de principi a fi."
+  },
+  s3_p2:{
+    es:'Podría haber generado debate. No lo hubo. Bien servido, a su temperatura, acompañó con coherencia un recorrido centrado en el mar. A veces la coherencia es más poderosa que la variedad.',
+    ca:"Podia haver generat debat. No n'hi va haver. Ben servit, a la seva temperatura, va acompanyar amb coherència un recorregut centrat en el mar. De vegades la coherència és més poderosa que la varietat."
+  },
+
+  menu_title:{es:'El menú de la visita', ca:'El menú de la visita'},
+  menu_bloc1:{es:'Entrants freds', ca:'Entrants freds'},
+  menu_p1:{es:'Salmón marinado con salsa de caviar', ca:'Salmó marinat amb salsa de caviar'},
+  menu_p2:{es:'Montadito de rape y langostinos', ca:'Montadito de rap i llagostins'},
+  menu_p3:{es:'Ensalada de langostinos con vinagreta de aguacate y caviar', ca:"Amanida de llagostins amb vinagreta d'alvocat i caviar"},
+  menu_bloc2:{es:'Entrants calents', ca:'Entrants calents'},
+  menu_p4:{es:'Calamares de la ría salteados con habitas y almejas', ca:'Calamars de la ria saltejats amb favetes i cloïsses'},
+  menu_p5:{es:'Pulpo con ajos tiernos y patata panadera', ca:'Pop amb alls tendres i patata panadera'},
+  menu_p6:{es:'Gamba "pantxuda" de Tarragona salteada', ca:'Gamba "pantxuda" de Tarragona saltejada'},
+  menu_bloc3:{es:'Degustació de rapes', ca:'Degustació de raps'},
+  menu_p7:{es:'Rape con salsa de puerros y azafrán', ca:'Rap amb salsa de porros i safrà'},
+  menu_p8:{es:'<strong>Tempura de rape con crema de roquefort ← El momento</strong>', ca:'<strong>Tempura de rap amb crema de roquefort ← El moment</strong>'},
+  menu_bloc4:{es:'Postre', ca:'Postre'},
+  menu_p9:{es:'Copa de coco con chocolate', ca:'Copa de coco amb xocolata'},
+  menu_vi_label:{es:'Bodega', ca:'Celler'},
+  menu_vi_text:{es:'1270 · Celler Hidalgo Albert · Macabeo-Parellada · DO Priorat · Blanc', ca:'1270 · Celler Hidalgo Albert · Macabeo-Parellada · DO Priorat · Blanc'},
+
+  foto2_peu:{es:'Entrants freds — salmón marinado, montadito de rape y ensalada de langostinos con caviar', ca:'Entrants freds — salmó marinat, montadito de rap i amanida de llagostins amb caviar'},
+  foto4_peu:{es:'Tempura de rape con crema de roquefort — el plato más aplaudido de la noche', ca:'Tempura de rap amb crema de roquefort — el plat més aplaudit de la nit'},
+  foto_grup_peu:{es:"Els 36 comensals dels Gourmets de Tarragona a La Goleta, amb José Vilaseca Rius · Salou, 10 d'abril de 2026", ca:"Els 36 comensals dels Gourmets de Tarragona a La Goleta, amb José Vilaseca Rius · Salou, 10 d'abril de 2026"},
+
+  s4_label:{es:'La ejecución', ca:"L'execució"},
+  s4_title:{es:'Servicio a la antigua usanza', ca:"Servei a l'antiga usança"},
+  s4_p1:{
+    es:'<strong>Correcto, estructurado, sin modernismos forzados</strong>. La mayoría de platos fueron servidos desde las bandejas, en sala, con precisión y sin un solo accidente. En un sector donde cada vez más cocinas montan los platos y los sacan ya terminados, La Goleta mantiene el ceremonial en la sala.',
+    ca:"<strong>Correcte, estructurat, sense modernismes forçats</strong>. La majoria de plats van ser servits des de les safates, a la sala, amb precisió i sense cap incident. En un sector on cada vegada més cuines munten els plats i els treuen ja acabats, La Goleta manté el cerimonial a la sala."
+  },
+  s4_p2:{
+    es:'Ignacio estuvo presente en todo momento: explicando cada plato, sugiriendo cómo abordarlo, contextualizando el vino. <strong>No es exceso. Es respeto por el comensal</strong>.',
+    ca:"Ignacio va estar present en tot moment: explicant cada plat, suggerint com abordar-lo, contextualitzant el vi. <strong>No és excés. És respecte pel comensal</strong>."
+  },
+
+  s5_label:{es:'El producto', ca:'El producte'},
+  s5_title:{es:'El mar como protagonista', ca:'El mar com a protagonista'},
+  s5_p1:{
+    es:'La propuesta de La Goleta se articula alrededor de una verdad simple: <strong>el producto es el protagonista</strong>. Pescado y marisco de primera calidad, superfrescо, tratado con cuidado y sin florituras. La gamba "pantxuda" de Tarragona, salteada, fue uno de los momentos más directos y honestos de la noche.',
+    ca:"La proposta de La Goleta s'articula al voltant d'una veritat simple: <strong>el producte és el protagonista</strong>. Peix i marisc de primera qualitat, superfres, tractat amb cura i sense artificis. La gamba \"pantxuda\" de Tarragona, saltejada, va ser un dels moments més directes i honestos de la nit."
+  },
+  s5_p2:{
+    es:'El comentario más repetido entre los comensales fue exacto: <strong>"Si funciona así, ¿para qué cambiarlo?"</strong>. Cuarenta años de cuina bien hecha tienen ese efecto.',
+    ca:"El comentari més repetit entre els comensals va ser exacte: <strong>\"Si funciona així, per a què canviar-ho?\"</strong>. Quaranta anys de cuina ben feta fan aquest efecte."
+  },
+
+  moments_label:{es:'La noche', ca:'La nit'},
+  moments_title:{es:'Tres momentos que quedan', ca:'Tres moments que queden'},
+
+  m1_titol:{es:'🎯 La anécdota de la carta', ca:"🎯 L'anècdota de la carta"},
+  m1_text:{
+    es:'Ignacio nos contó una historia que resume la filosofía del lugar: durante años, Emilio Vicente, fundador, no mostraba la carta a los clientes. Los platos se vendían directamente, sin necesidad de que los comensales vieran escrito qué comerían. <strong>La confianza en quien cocina, por encima de la descripción impresa</strong>. "Ahora ya la enseñamos", bromeó Ignacio. Cuarenta años después.',
+    ca:"Ignacio ens va explicar una història que resumeix la filosofia del lloc: durant anys, Emilio Vicente, fundador, no mostrava la carta als clients. Els plats es venien directament, sense necessitat que els comensals veiessin escrit què menjarien. <strong>La confiança en qui cuina, per sobre de la descripció impresa</strong>. \"Ara ja l'ensenyem\", va bromejar Ignacio. Quaranta anys després."
+  },
+
+  m2_titol:{es:'🍤 La tempura de rape con crema de roquefort', ca:'🍤 La tempura de rap amb crema de roquefort'},
+  m2_text:{
+    es:'Llegó casi al final, cuando los ánimos ya estaban altos tras horas de cena. Y fue <strong>el toque exacto</strong>: rape en tempura crujiente, crema de roquefort, equilibrio perfecto entre texturas y sabores. Sin dramatismo ni presentación teatral. Solo técnica limpia y producto de calidad. El plato que más se comentó al acabar.',
+    ca:"Va arribar gairebé al final, quan els ànims ja eren alts després d'hores de sopar. I va ser <strong>el toc exacte</strong>: rap en tempura cruixent, crema de roquefort, equilibri perfecte entre textures i sabors. Sense dramatisme ni presentació teatral. Només tècnica neta i producte de qualitat. El plat que més es va comentar en acabar."
+  },
+
+  s6_label:{es:'El cierre', ca:'El tancament'},
+  s6_title:{es:'El diploma y el grito de guerra', ca:'El diploma i el crit de guerra'},
+  s6_p1:{
+    es:'El presidente Juan Manuel Rodríguez entregó el diploma de visita a Ignacio Ureña. Un momento de reconocimiento mutuo entre dos maneras de entender la gastronomía: la del restaurador que mantiene el rumbo durante cuarenta años, y la de la asociación que lo reconoce y lo valora.',
+    ca:"El president Juan Manuel Rodríguez va lliurar el diploma de visita a Ignacio Ureña. Un moment de reconeixement mutu entre dues maneres d'entendre la gastronomia: la del restaurador que manté el rumb durant quaranta anys, i la de l'associació que ho reconeix i ho valora."
+  },
+  s6_p2:{
+    es:'Y entonces, de manera completamente espontánea, surgió de la sala un grito colectivo: <strong>"¡FESTIVAL!"</strong>. Vilaseca lo había mencionado durante la velada, y sin premeditación, toda la sala lo coreó. <strong>En ese instante, los Gourmets fuimos también un poco Casacas Rojas</strong>.',
+    ca:"I llavors, de manera completament espontània, va sorgir de la sala un crit col·lectiu: <strong>\"¡FESTIVAL!\"</strong>. Vilaseca l'havia mencionat durant la vetllada, i sense premeditació, tota la sala el va corejar. <strong>En aquell instant, els Gourmets vam ser també una mica Casacas Rojas</strong>."
+  },
+
+  m3_titol:{es:'🏆 Un grito que no se planea', ca:'🏆 Un crit que no es planeja'},
+  m3_text:{
+    es:'Fue honesto, fue real, fue de esas cosas que no se olvidan. Treinta y seis personas, al unísono, cerrando una noche de cuarenta años de La Goleta con el grito de guerra de una institución gastronómica barcelonesa. <strong>Eso solo pasa cuando una noche ha funcionado de verdad</strong>.',
+    ca:"Va ser honest, va ser real, va ser d'aquelles coses que no s'obliden. Trenta-sis persones, a l'uníson, tancant una nit de quaranta anys de La Goleta amb el crit de guerra d'una institució gastronòmica barcelonina. <strong>Això només passa quan una nit ha funcionat de debò</strong>."
+  },
+
+  s7_label:{es:'Reflexión final', ca:'Reflexió final'},
+  s7_title:{es:'Cuarenta años de coherencia', ca:'Quaranta anys de coherència'},
+  s7_p1:{
+    es:'Llegar a los cuarenta años en la restauración es una fita notable. La mayoría de establecimientos han desaparecido, mutado o perdido su esencia. La Goleta ha mantenido su propuesta: <strong>cuina mediterrànea, producte del mar impecable, servei clàssic, sense concessions a les modes</strong>.',
+    ca:"Arribar als quaranta anys en la restauració és una fita notable. La majoria d'establiments han desaparegut, mutat o perdut la seva essència. La Goleta ha mantingut la seva proposta: <strong>cuina mediterrànea, producte del mar impecable, servei clàssic, sense concessions a les modes</strong>."
+  },
+  s7_p2:{
+    es:'Ignacio Ureña continúa la labor de Emilio Vicente, pero con su propia mirada. La sala no ha cambiado radicalmente, pero respira. El menú mantiene su estructura, pero no envejece. <strong>La Goleta no nos sorprendió con alardes. Nos confortó con coherencia</strong>. Y eso, en el contexto actual, es un lujo que Salou merece tener.',
+    ca:"Ignacio Ureña continua la tasca d'Emilio Vicente, però amb la seva pròpia mirada. La sala no ha canviat radicalment, però respira. El menú manté la seva estructura, però no envelleix. <strong>La Goleta no ens va sorprendre amb alardes. Ens va confortar amb coherència</strong>. I això, en el context actual, és un luxe que Salou mereix tenir."
+  },
+  s7_cloenda:{
+    es:"Visita dels Gourmets de Tarragona · 10 d'abril de 2026 · La Goleta · Salou · 40 anys.",
+    ca:"Visita dels Gourmets de Tarragona · 10 d'abril de 2026 · La Goleta · Salou · 40 anys."
+  },
+
+  fitxa_title:    {es:'Ficha del restaurante', ca:'Fitxa del restaurant'},
+  fitxa_cuina:    {es:'Cocina mediterránea · Pescado y marisco', ca:'Cuina mediterrània · Peix i marisc'},
+  fitxa_dir:      {es:'Ignacio Ureña — Direcció (maître i sumiller)', ca:'Ignacio Ureña — Direcció (maître i sommelier)'},
+  fitxa_visita:   {es:'Visita: 10 de abril de 2026', ca:"Visita: 10 d'abril de 2026"},
+  fitxa_comensals:{es:'36 comensales · 2ª visita Recorrido Gourmet 2026', ca:'36 comensals · 2a visita Recorregut Gourmet 2026'},
+  fitxa_cta_desc: {es:'¿Curioso por saber qué viene después? Descubre el Recorrido Gourmet 2026 completo.', ca:'Tens curiositat per saber què ve després? Descobreix el Recorregut Gourmet 2026 complet.'},
+  fitxa_cta_btn:  {es:'Ver el recorrido 2026 →', ca:'Veure el recorregut 2026 →'},
+
+  footer_desc:       {es:'Asociación gastronómica sin ánimo de lucro. Camp de Tarragona.', ca:'Associació gastronòmica sense ànim de lucre. Camp de Tarragona.'},
+  footer_nav:        {es:'Navegación', ca:'Navegació'},
+  footer_legal:      {es:'Legal', ca:'Legal'},
+  footer_avis:       {es:'Aviso Legal', ca:'Avís Legal'},
+  footer_privacitat: {es:'Política de Privacidad', ca:'Política de Privacitat'},
+  footer_contacte:   {es:'Contacto', ca:'Contacte'},
+  footer_copy:       {es:'© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados', ca:'© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats'},
+  btn_retorn:        {es:'← Volver al inicio', ca:"← Tornar a l'inici"},
+};
+
+let currentLang = localStorage.getItem('lang') || 'es';
+
+function applyLang() {
+  document.getElementById('html-root').lang = currentLang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.dataset.i18n;
+    if (T[k] && T[k][currentLang] !== undefined) el.innerHTML = T[k][currentLang];
+  });
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === currentLang));
+}
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  applyLang();
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+document.querySelectorAll('.mobile-item a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+});
+
+applyLang();
+</script>
 </body>
 </html>
