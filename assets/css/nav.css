@@ -122,6 +122,34 @@
 }
 @media (max-width: 480px) {
   .nav-inner { padding: 10px 5%; }
+  .nav-logo img { height: 40px; }
+  /* Assegurar que el menú mòbil comença just sota la nav */
+  .mobile-menu { top: 64px; }
+}
+
+/* ── MILLORES TÀCTILS MÒBIL ── */
+@media (max-width: 900px) {
+  /* Àrea mínima de tap per accessibilitat */
+  .mobile-item > a,
+  .mobile-item > span {
+    padding: 17px 24px;
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+  }
+  .mobile-sub a {
+    padding: 15px 36px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .lang-btn {
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 #nav:not(.solid) .nav-logo img {
