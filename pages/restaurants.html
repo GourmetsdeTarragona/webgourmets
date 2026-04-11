@@ -146,21 +146,41 @@ const t = {
     r_num:'Nº',r_restaurant:'Restaurant',r_localitat:'Localitat',
   }
 };
-let currentLang = localStorage.getItem('gdt-lang') || 'es';
-function applyTranslations(lang) {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (t[lang] && t[lang][key] !== undefined) el.innerHTML = t[lang][key];
-  });
-  document.getElementById('html-root')?.setAttribute('lang', lang);
-  document.querySelectorAll('.lang-btn').forEach(btn =>
-    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang));
-}
+var currentLang = localStorage.getItem('gdt-lang') || 'es';
+
 function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('gdt-lang', lang);
-  applyTranslations(lang);
+  // Inline .t elements
+  document.querySelectorAll('.t').forEach(function(el) {
+    var val = el.getAttribute('data-' + lang);
+    if (val) el.innerHTML = val;
+  });
+  document.getElementById('html-root').setAttribute('lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+  });
+  document.getElementById('mobileMenu').classList.remove('open');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Nav scroll
+  var nav = document.getElementById('nav');
+  if (nav) {
+    window.addEventListener('scroll', function() {
+      nav.classList.toggle('solid', window.scrollY > 50);
+    });
+  }
+  // Hamburger
+  var burger = document.getElementById('hamburger');
+  if (burger) {
+    burger.addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  }
+  // Apply saved language
+  if (currentLang === 'ca') setLang('ca');
+});
 </script>
 </head>
 <body>
@@ -170,12 +190,12 @@ function setLang(lang) {
   <div class="nav-inner">
     <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona"></a>
     <div class="nav-menu">
-      <div class="nav-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
-      <div class="nav-item"><span data-i18n="nav_asoc"></span><div class="dropdown"><a href="associacio.html" data-i18n="nav_quienes"></a><a href="associacio.html#funcionament" data-i18n="nav_como"></a></div></div>
-      <div class="nav-item"><span data-i18n="nav_rest"></span><div class="dropdown"><a href="restaurants.html" data-i18n="nav_visites"></a></div></div>
-      <div class="nav-item"><span data-i18n="nav_premios"></span><div class="dropdown"><a href="premis.html" data-i18n="nav_gastronia"></a><a href="premis.html#bacus" data-i18n="nav_bacus"></a></div></div>
-      <div class="nav-item"><a href="blog.html" data-i18n="nav_blog"></a></div>
-      <div class="nav-item"><a href="contacte.html" data-i18n="nav_contacto"></a></div>
+      <div class="nav-item"><a class="t" href="../index.html"  data-es="Inicio" data-ca="Inici">Inicio</a></div>
+      <div class="nav-item"><span class="t"  data-es="La Asociación" data-ca="L'Associació">La Asociación</span><div class="dropdown"><a class="t" href="associacio.html"  data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a><a class="t" href="associacio.html#funcionament"  data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a></div></div>
+      <div class="nav-item"><span class="t"  data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span><div class="dropdown"><a class="t" href="restaurants.html"  data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visitas 2025–26</a></div></div>
+      <div class="nav-item"><span class="t"  data-es="Premios" data-ca="Premis">Premios</span><div class="dropdown"><a class="t" href="premis.html"  data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</a><a class="t" href="premis.html#bacus"  data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a></div></div>
+      <div class="nav-item"><a class="t" href="blog.html"  data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+      <div class="nav-item"><a class="t" href="contacte.html"  data-es="Contacto" data-ca="Contacte">Contacto</a></div>
     </div>
     <div class="nav-right">
       <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
@@ -185,10 +205,10 @@ function setLang(lang) {
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
-    <div class="mobile-item"><a href="restaurants.html" data-i18n="nav_rest_short"></a></div>
-    <div class="mobile-item"><a href="blog.html" data-i18n="nav_blog"></a></div>
-    <div class="mobile-item"><a href="contacte.html" data-i18n="nav_contacto"></a></div>
+    <div class="mobile-item"><a class="t" href="../index.html"  data-es="Inicio" data-ca="Inici">Inicio</a></div>
+    <div class="mobile-item"><a class="t" href="restaurants.html"  data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
+    <div class="mobile-item"><a class="t" href="blog.html"  data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+    <div class="mobile-item"><a class="t" href="contacte.html"  data-es="Contacto" data-ca="Contacte">Contacto</a></div>
     <div class="mobile-lang">
       <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
       <span class="lang-sep">|</span>
@@ -200,9 +220,9 @@ function setLang(lang) {
 <!-- HERO -->
 <div class="page-hero">
   <div class="page-hero-inner">
-    <p class="slabel" data-i18n="r_label"></p>
-    <h1 class="stitle" data-i18n="r_title"></h1>
-    <p class="page-hero-desc" data-i18n="r_desc"></p>
+    <p class="t slabel"  data-es="Restaurantes" data-ca="Restaurants">Restaurantes</p>
+    <h1 class="t stitle"  data-es="El recorrido Gourmet" data-ca="El recorregut Gourmet">El recorrido Gourmet</h1>
+    <p class="t page-hero-desc"  data-es="Cada temporada visitamos ocho restaurantes del Camp de Tarragona. Los evaluamos con criterio, compartimos las crónicas y al final del año entregamos nuestros premios." data-ca="Cada temporada visitem vuit restaurants del Camp de Tarragona. Els avaluem amb criteri, compartim les cròniques i al final de l'any lliurem els nostres premis.">Cada temporada visitamos ocho restaurantes del Camp de Tarragona. Los evaluamos con criterio, compartimos las crónicas y al final del año entregamos nuestros premios.</p>
   </div>
 </div>
 
@@ -210,8 +230,8 @@ function setLang(lang) {
 <section class="sec">
   <div class="sec-inner">
     <div style="margin-bottom:40px;">
-      <p class="slabel" data-i18n="r_2026_label"></p>
-      <h2 class="stitle" data-i18n="r_2026_title"></h2>
+      <p class="t slabel"  data-es="Temporada actual" data-ca="Temporada actual">Temporada actual</p>
+      <h2 class="t stitle"  data-es="Recorrido 2026" data-ca="Recorregut 2026">Recorrido 2026</h2>
       <div class="sdiv"></div>
     </div>
     <div class="rest-grid">
@@ -221,7 +241,7 @@ function setLang(lang) {
         <div class="rest-card-img">
           <img src="../assets/img/kema/brasa-carn.jpg" alt="Kema · Cambrils">
           <div class="rest-card-badges">
-            <span class="rest-badge badge-visitada" data-i18n="r_visitada"></span>
+            <span class="t rest-badge badge-visitada"  data-es="Visitado" data-ca="Visitat">Visitado</span>
             <span class="rest-num">1</span>
           </div>
         </div>
@@ -231,21 +251,21 @@ function setLang(lang) {
             <span class="rest-card-data">Març 2026</span>
           </div>
           <h3 class="rest-card-nom">Kema</h3>
-          <p class="rest-card-cuina" data-i18n="r_kema_cuina"></p>
-          <p class="rest-card-desc" data-i18n="r_kema_desc"></p>
+          <p class="t rest-card-cuina"  data-es="Brasa contemporánea" data-ca="Brasa contemporània">Brasa contemporánea</p>
+          <p class="t rest-card-desc"  data-es="Primera visita de la temporada. Cocina de brasa con producto de calidad y una oferta de coctelería diferencial." data-ca="Primera visita de la temporada. Cuina de brasa amb producte de qualitat i una oferta de cocteleria diferencial.">Primera visita de la temporada. Cocina de brasa con producto de calidad y una oferta de coctelería diferencial.</p>
           <div class="rest-card-links">
-            <a href="../entrades/kema-previa-2026.html" class="rest-link" data-i18n="r_link_previa"></a>
-            <a href="../entrades/kema-cronica-2026.html" class="rest-link rest-link-primary" data-i18n="r_link_cronica"></a>
+            <a href="../entrades/kema-previa-2026.html" class="t rest-link"  data-es="Leer la previa →" data-ca="Llegir la prèvia →">Leer la previa →</a>
+            <a href="../entrades/kema-cronica-2026.html" class="t rest-link rest-link-primary"  data-es="Crónica completa →" data-ca="Crònica completa →">Crónica completa →</a>
           </div>
         </div>
       </div>
 
-      <!-- 2. La Goleta — propera -->
+      <!-- 2. La Goleta — visitada -->
       <div class="rest-card">
         <div class="rest-card-img">
-          <img src="../assets/img/goleta/capellans-beach.jpg" alt="La Goleta · Salou">
+          <img src="../assets/img/goleta/goleta-hero.jpg" alt="La Goleta · Salou">
           <div class="rest-card-badges">
-            <span class="rest-badge badge-proxima" data-i18n="r_proxima"></span>
+            <span class="rest-badge badge-visitada t" data-es="Visitado" data-ca="Visitat">Visitado</span>
             <span class="rest-num">2</span>
           </div>
         </div>
@@ -255,10 +275,11 @@ function setLang(lang) {
             <span class="rest-card-data">9 Abril 2026</span>
           </div>
           <h3 class="rest-card-nom">La Goleta</h3>
-          <p class="rest-card-cuina" data-i18n="r_goleta_cuina"></p>
-          <p class="rest-card-desc" data-i18n="r_goleta_desc"></p>
+          <p class="t rest-card-cuina"  data-es="Pescados & Mariscos" data-ca="Peixos & Mariscs">Pescados & Mariscos</p>
+          <p class="t rest-card-desc"  data-es="40 años frente a la Platja dels Capellans. Cocina mediterránea de producto con protagonismo del mar." data-ca="40 anys davant la Platja dels Capellans. Cuina mediterrània de producte amb protagonisme del mar.">40 años frente a la Platja dels Capellans. Cocina mediterránea de producto con protagonismo del mar.</p>
           <div class="rest-card-links">
-            <a href="../entrades/la-goleta-previa-2026.html" class="rest-link" data-i18n="r_link_previa"></a>
+            <a href="../entrades/la-goleta-previa-2026.html" class="rest-link t" data-es="Leer la previa →" data-ca="Llegir la prèvia →">Leer la previa →</a>
+            <a href="../entrades/la-goleta-cronica-2026.html" class="rest-link rest-link-primary t" data-es="Crónica completa →" data-ca="Crònica completa →">Crónica completa →</a>
           </div>
         </div>
       </div>
@@ -267,90 +288,90 @@ function setLang(lang) {
       <div class="rest-card">
         <div class="rest-card-pending-inner">
           <i class="fa fa-utensils"></i>
-          <span class="rest-card-pending-label" data-i18n="r_pendent"></span>
+          <span class="t rest-card-pending-label"  data-es="Pendiente" data-ca="Pendent">Pendiente</span>
         </div>
         <div class="rest-card-body">
           <div class="rest-card-meta">
             <span class="rest-card-lloc">Camp de Tarragona</span>
             <span class="rest-num" style="background:var(--cream);color:var(--muted);font-size:.62rem;padding:3px 8px;">3</span>
           </div>
-          <h3 class="rest-card-nom" style="color:var(--muted);opacity:.4;" data-i18n="r_pendent"></h3>
-          <p class="rest-card-desc" data-i18n="r_pendent_desc"></p>
+          <h3 class="t rest-card-nom" style="color:var(--muted);opacity:.4;"  data-es="Pendiente" data-ca="Pendent">Pendiente</h3>
+          <p class="t rest-card-desc"  data-es="Visita pendiente de confirmar." data-ca="Visita pendent de confirmar.">Visita pendiente de confirmar.</p>
         </div>
       </div>
 
       <div class="rest-card">
         <div class="rest-card-pending-inner">
           <i class="fa fa-utensils"></i>
-          <span class="rest-card-pending-label" data-i18n="r_pendent"></span>
+          <span class="t rest-card-pending-label"  data-es="Pendiente" data-ca="Pendent">Pendiente</span>
         </div>
         <div class="rest-card-body">
           <div class="rest-card-meta">
             <span class="rest-card-lloc">Camp de Tarragona</span>
             <span class="rest-num" style="background:var(--cream);color:var(--muted);font-size:.62rem;padding:3px 8px;">4</span>
           </div>
-          <h3 class="rest-card-nom" style="color:var(--muted);opacity:.4;" data-i18n="r_pendent"></h3>
-          <p class="rest-card-desc" data-i18n="r_pendent_desc"></p>
+          <h3 class="t rest-card-nom" style="color:var(--muted);opacity:.4;"  data-es="Pendiente" data-ca="Pendent">Pendiente</h3>
+          <p class="t rest-card-desc"  data-es="Visita pendiente de confirmar." data-ca="Visita pendent de confirmar.">Visita pendiente de confirmar.</p>
         </div>
       </div>
 
       <div class="rest-card">
         <div class="rest-card-pending-inner">
           <i class="fa fa-utensils"></i>
-          <span class="rest-card-pending-label" data-i18n="r_pendent"></span>
+          <span class="t rest-card-pending-label"  data-es="Pendiente" data-ca="Pendent">Pendiente</span>
         </div>
         <div class="rest-card-body">
           <div class="rest-card-meta">
             <span class="rest-card-lloc">Camp de Tarragona</span>
             <span class="rest-num" style="background:var(--cream);color:var(--muted);font-size:.62rem;padding:3px 8px;">5</span>
           </div>
-          <h3 class="rest-card-nom" style="color:var(--muted);opacity:.4;" data-i18n="r_pendent"></h3>
-          <p class="rest-card-desc" data-i18n="r_pendent_desc"></p>
+          <h3 class="t rest-card-nom" style="color:var(--muted);opacity:.4;"  data-es="Pendiente" data-ca="Pendent">Pendiente</h3>
+          <p class="t rest-card-desc"  data-es="Visita pendiente de confirmar." data-ca="Visita pendent de confirmar.">Visita pendiente de confirmar.</p>
         </div>
       </div>
 
       <div class="rest-card">
         <div class="rest-card-pending-inner">
           <i class="fa fa-utensils"></i>
-          <span class="rest-card-pending-label" data-i18n="r_pendent"></span>
+          <span class="t rest-card-pending-label"  data-es="Pendiente" data-ca="Pendent">Pendiente</span>
         </div>
         <div class="rest-card-body">
           <div class="rest-card-meta">
             <span class="rest-card-lloc">Camp de Tarragona</span>
             <span class="rest-num" style="background:var(--cream);color:var(--muted);font-size:.62rem;padding:3px 8px;">6</span>
           </div>
-          <h3 class="rest-card-nom" style="color:var(--muted);opacity:.4;" data-i18n="r_pendent"></h3>
-          <p class="rest-card-desc" data-i18n="r_pendent_desc"></p>
+          <h3 class="t rest-card-nom" style="color:var(--muted);opacity:.4;"  data-es="Pendiente" data-ca="Pendent">Pendiente</h3>
+          <p class="t rest-card-desc"  data-es="Visita pendiente de confirmar." data-ca="Visita pendent de confirmar.">Visita pendiente de confirmar.</p>
         </div>
       </div>
 
       <div class="rest-card">
         <div class="rest-card-pending-inner">
           <i class="fa fa-utensils"></i>
-          <span class="rest-card-pending-label" data-i18n="r_pendent"></span>
+          <span class="t rest-card-pending-label"  data-es="Pendiente" data-ca="Pendent">Pendiente</span>
         </div>
         <div class="rest-card-body">
           <div class="rest-card-meta">
             <span class="rest-card-lloc">Camp de Tarragona</span>
             <span class="rest-num" style="background:var(--cream);color:var(--muted);font-size:.62rem;padding:3px 8px;">7</span>
           </div>
-          <h3 class="rest-card-nom" style="color:var(--muted);opacity:.4;" data-i18n="r_pendent"></h3>
-          <p class="rest-card-desc" data-i18n="r_pendent_desc"></p>
+          <h3 class="t rest-card-nom" style="color:var(--muted);opacity:.4;"  data-es="Pendiente" data-ca="Pendent">Pendiente</h3>
+          <p class="t rest-card-desc"  data-es="Visita pendiente de confirmar." data-ca="Visita pendent de confirmar.">Visita pendiente de confirmar.</p>
         </div>
       </div>
 
       <div class="rest-card">
         <div class="rest-card-pending-inner">
           <i class="fa fa-utensils"></i>
-          <span class="rest-card-pending-label" data-i18n="r_pendent"></span>
+          <span class="t rest-card-pending-label"  data-es="Pendiente" data-ca="Pendent">Pendiente</span>
         </div>
         <div class="rest-card-body">
           <div class="rest-card-meta">
             <span class="rest-card-lloc">Camp de Tarragona</span>
             <span class="rest-num" style="background:var(--cream);color:var(--muted);font-size:.62rem;padding:3px 8px;">8</span>
           </div>
-          <h3 class="rest-card-nom" style="color:var(--muted);opacity:.4;" data-i18n="r_pendent"></h3>
-          <p class="rest-card-desc" data-i18n="r_pendent_desc"></p>
+          <h3 class="t rest-card-nom" style="color:var(--muted);opacity:.4;"  data-es="Pendiente" data-ca="Pendent">Pendiente</h3>
+          <p class="t rest-card-desc"  data-es="Visita pendiente de confirmar." data-ca="Visita pendent de confirmar.">Visita pendiente de confirmar.</p>
         </div>
       </div>
 
@@ -362,10 +383,10 @@ function setLang(lang) {
 <section class="sec sec-gray" id="historic">
   <div class="sec-inner">
     <div style="margin-bottom:48px;">
-      <p class="slabel" data-i18n="r_historic_label"></p>
-      <h2 class="stitle" data-i18n="r_historic_title"></h2>
+      <p class="t slabel"  data-es="Historial" data-ca="Historial">Historial</p>
+      <h2 class="t stitle"  data-es="Temporadas anteriores" data-ca="Temporades anteriors">Temporadas anteriores</h2>
       <div class="sdiv"></div>
-      <p style="font-size:.9rem;color:var(--muted);font-weight:300;line-height:1.8;max-width:580px;" data-i18n="r_historic_desc"></p>
+      <p class="t" style="font-size:.9rem;color:var(--muted);font-weight:300;line-height:1.8;max-width:580px;"  data-es="Registro de todas las visitas realizadas desde la fundación de la asociación. Documentación en proceso de recuperación." data-ca="Registre de totes les visites realitzades des de la fundació de l'associació. Documentació en procés de recuperació.">Registro de todas las visitas realizadas desde la fundación de la asociación. Documentación en proceso de recuperación.</p>
     </div>
 
     <!-- 2024 -->
@@ -373,10 +394,10 @@ function setLang(lang) {
       <div class="historic-any">
         <span class="historic-any-num">2024</span>
         <div class="historic-any-line"></div>
-        <span class="historic-wip"><i class="fa fa-clock"></i> <span data-i18n="r_wip"></span></span>
+        <span class="historic-wip"><i class="fa fa-clock"></i> <span class="t"  data-es="En proceso de recuperación" data-ca="En procés de recuperació">En proceso de recuperación</span></span>
       </div>
       <table class="historic-taula">
-        <tr><td>—</td><td style="color:var(--muted);font-style:italic;" colspan="2" data-i18n="r_wip"></td></tr>
+        <tr><td>—</td><td class="t" style="color:var(--muted);font-style:italic;" colspan="2"  data-es="En proceso de recuperación" data-ca="En procés de recuperació">En proceso de recuperación</td></tr>
       </table>
     </div>
 
@@ -385,10 +406,10 @@ function setLang(lang) {
       <div class="historic-any">
         <span class="historic-any-num">2023</span>
         <div class="historic-any-line"></div>
-        <span class="historic-wip"><i class="fa fa-clock"></i> <span data-i18n="r_wip"></span></span>
+        <span class="historic-wip"><i class="fa fa-clock"></i> <span class="t"  data-es="En proceso de recuperación" data-ca="En procés de recuperació">En proceso de recuperación</span></span>
       </div>
       <table class="historic-taula">
-        <tr><td>—</td><td style="color:var(--muted);font-style:italic;" colspan="2" data-i18n="r_wip"></td></tr>
+        <tr><td>—</td><td class="t" style="color:var(--muted);font-style:italic;" colspan="2"  data-es="En proceso de recuperación" data-ca="En procés de recuperació">En proceso de recuperación</td></tr>
       </table>
     </div>
 
@@ -397,10 +418,10 @@ function setLang(lang) {
       <div class="historic-any">
         <span class="historic-any-num">2022</span>
         <div class="historic-any-line"></div>
-        <span class="historic-wip"><i class="fa fa-clock"></i> <span data-i18n="r_wip"></span></span>
+        <span class="historic-wip"><i class="fa fa-clock"></i> <span class="t"  data-es="En proceso de recuperación" data-ca="En procés de recuperació">En proceso de recuperación</span></span>
       </div>
       <table class="historic-taula">
-        <tr><td>—</td><td style="color:var(--muted);font-style:italic;" colspan="2" data-i18n="r_wip"></td></tr>
+        <tr><td>—</td><td class="t" style="color:var(--muted);font-style:italic;" colspan="2"  data-es="En proceso de recuperación" data-ca="En procés de recuperació">En proceso de recuperación</td></tr>
       </table>
     </div>
 
@@ -412,20 +433,14 @@ function setLang(lang) {
   <div class="footer-main">
     <div class="footer-brand">
       <img src="../assets/img/logo.png" alt="Gourmets de Tarragona">
-      <p data-i18n="footer_desc"></p>
+      <p class="t"  data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
       <div class="footer-social">
         <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       </div>
     </div>
-    <div class="footer-col"><h4 data-i18n="footer_nav"></h4><ul><li><a href="associacio.html" data-i18n="nav_quienes"></a></li><li><a href="restaurants.html" data-i18n="nav_rest_short"></a></li><li><a href="premis.html" data-i18n="nav_premios_short"></a></li><li><a href="blog.html" data-i18n="nav_blog"></a></li></ul></div>
-    <div class="footer-col"><h4 data-i18n="footer_legal"></h4><ul><li><a href="avis-legal.html" data-i18n="footer_avis"></a></li><li><a href="privacitat.html" data-i18n="footer_privacitat"></a></li><li><a href="cookies.html">Cookies</a></li></ul></div>
-    <div class="footer-col"><h4 data-i18n="footer_contacte"></h4><p>gourmetsdetarragona@gourmetsdetarragona.com</p><p>Tarragona, Catalunya</p></div>
+    <div class="footer-col"><h4 class="t"  data-es="Navegación" data-ca="Navegació">Navegación</h4><ul><li><a class="t" href="associacio.html"  data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a></li><li><a class="t" href="restaurants.html"  data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li><li><a class="t" href="premis.html"  data-es="Premios" data-ca="Premis">Premios</a></li><li><a class="t" href="blog.html"  data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li></ul></div>
+    <div class="footer-col"><h4 class="t"  data-es="Legal" data-ca="Legal">Legal</h4><ul><li><a class="t" href="avis-legal.html"  data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li><li><a class="t" href="privacitat.html"  data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a></li><li><a href="cookies.html">Cookies</a></li></ul></div>
+    <div class="footer-col"><h4 class="t"  data-es="Contacto" data-ca="Contacte">Contacto</h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8cebe3f9fee1e9f8ffe8e9f8edfefeedebe3e2edccebe3f9fee1e9f8ffe8e9f8edfefeedebe3e2eda2efe3e1">[email&#160;protected]</a></p><p>Tarragona, Catalunya</p></div>
   </div>
-  <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
-</footer>
-
-<script src="../assets/js/main.js"></script>
-<script>applyTranslations(currentLang);</script>
-</body>
-</html>
+  <div class="footer-bottom"><p data-i18n=
