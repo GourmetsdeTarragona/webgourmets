@@ -134,10 +134,21 @@
 
 /* Botó de fletxa */
 .mobile-item-toggle {
-  width: 54px; flex-shrink: 0;
+  width: 44px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
   background: none; border: none; border-left: 1px solid var(--border);
   cursor: pointer; padding: 0;
+  -webkit-appearance: none; appearance: none;
+  outline: none; border-radius: 0;
+}
+.mobile-item-toggle::after {
+  content: '+';
+  font-size: 1.2rem; font-weight: 300;
+  color: var(--navy); opacity: .4;
+  line-height: 1;
+}
+.mobile-item.expanded .mobile-item-toggle::after {
+  content: '−';
 }
 .mobile-item-toggle:active { background: var(--cream); }
 
