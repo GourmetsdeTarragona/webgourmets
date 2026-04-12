@@ -153,9 +153,6 @@
   font-size: .82rem; color: var(--text);
   border-bottom: 1px solid var(--border);
 }
-.mobile-sub a::before {
-  content: '–'; margin-right: 10px; color: var(--gold); font-weight: 700; flex-shrink: 0;
-}
 .mobile-sub a:last-child { border-bottom: none; }
 .mobile-sub a:active { background: var(--border); }
 
