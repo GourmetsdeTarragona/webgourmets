@@ -98,25 +98,49 @@
 
 .mobile-item { border-bottom: 1px solid var(--border); }
 
-.mobile-item > a,
-.mobile-item > span {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 16px 24px; min-height: 54px;
+/* Ítems simples (sense submenú) */
+.mobile-item > a {
+  display: flex; align-items: center;
+  padding: 0 24px; height: 54px;
   font-size: .82rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
-  color: var(--navy); cursor: pointer; width: 100%;
+  color: var(--navy);
 }
-/* Fletxa als items amb submenú */
-.mobile-item > span::after {
-  content: '';
-  display: block; width: 8px; height: 8px; flex-shrink: 0;
-  border-right: 2px solid var(--navy); border-bottom: 2px solid var(--navy);
-  transform: rotate(45deg); opacity: .5;
-  transition: transform .25s;
-}
-.mobile-item.expanded > span::after {
-  transform: rotate(-135deg);
-}
+.mobile-item > a:active { background: var(--cream); }
 
+/* Ítems amb submenú: fila link + botó fletxa */
+.mobile-item-row {
+  display: flex; align-items: stretch; height: 54px;
+}
+.mobile-item-link {
+  flex: 1; display: flex; align-items: center;
+  padding: 0 0 0 24px;
+  font-size: .82rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--navy);
+}
+.mobile-item-link:active { background: var(--cream); }
+
+/* Botó de fletxa */
+.mobile-item-toggle {
+  width: 54px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: none; border: none; border-left: 1px solid var(--border);
+  cursor: pointer; padding: 0;
+}
+.mobile-item-toggle::after {
+  content: '';
+  display: block; width: 8px; height: 8px;
+  border-right: 2px solid var(--navy); border-bottom: 2px solid var(--navy);
+  transform: rotate(45deg); opacity: .45;
+  transition: transform .25s;
+  margin-top: -3px;
+}
+.mobile-item.expanded .mobile-item-toggle::after {
+  transform: rotate(-135deg);
+  margin-top: 3px;
+}
+.mobile-item-toggle:active { background: var(--cream); }
+
+/* Submenú */
 .mobile-sub {
   background: var(--cream); display: none;
   border-top: 1px solid var(--border);
@@ -124,13 +148,12 @@
 .mobile-sub.open { display: block; }
 .mobile-sub a {
   display: flex; align-items: center;
-  padding: 14px 24px 14px 36px; min-height: 50px;
+  padding: 0 24px 0 36px; height: 50px;
   font-size: .82rem; color: var(--text);
   border-bottom: 1px solid var(--border);
-  transition: background .15s;
 }
 .mobile-sub a::before {
-  content: '–'; margin-right: 10px; color: var(--gold); font-weight: 700;
+  content: '–'; margin-right: 10px; color: var(--gold); font-weight: 700; flex-shrink: 0;
 }
 .mobile-sub a:last-child { border-bottom: none; }
 .mobile-sub a:active { background: var(--border); }
