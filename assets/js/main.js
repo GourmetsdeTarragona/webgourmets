@@ -66,9 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ---- Submenús mòbil ---- */
-function toggleMobileSub(el) {
-  const sub  = el.nextElementSibling;
-  const item = el.closest('.mobile-item');
+function toggleMobileSub(btn) {
+  /* btn és el .mobile-item-toggle, el submenú és el germà del .mobile-item-row */
+  const row  = btn.closest('.mobile-item-row');
+  const sub  = row ? row.nextElementSibling : null;
+  const item = btn.closest('.mobile-item');
   if (!sub) return;
 
   const isOpen = sub.classList.contains('open');
@@ -81,7 +83,6 @@ function toggleMobileSub(el) {
     if (i !== item) i.classList.remove('expanded');
   });
 
-  /* Toggle el que hem clicat */
   sub.classList.toggle('open', !isOpen);
   if (item) item.classList.toggle('expanded', !isOpen);
 }
