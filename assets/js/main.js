@@ -12,9 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
     onScroll();
   }
 
-  /* ---- Hamburger ---- */
-  const hamburger  = document.getElementById('hamburger');
+  /* ---- Moure mobile-menu al body per evitar overflow/z-index del nav ---- */
   const mobileMenu = document.getElementById('mobileMenu');
+  if (mobileMenu && mobileMenu.parentElement !== document.body) {
+    document.body.appendChild(mobileMenu);
+  }
+
+  /* ---- Hamburger ---- */
+  const hamburger = document.getElementById('hamburger');
 
   function closeMobileMenu() {
     if (mobileMenu) mobileMenu.classList.remove('open');
