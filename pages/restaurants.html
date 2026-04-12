@@ -160,7 +160,6 @@ function setLang(lang) {
   document.querySelectorAll('.lang-btn').forEach(function(btn) {
     btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
   });
-  document.getElementById('mobileMenu').classList.remove('open');
 }
 
 document.addEventListener('DOMContentLoaded', function() {

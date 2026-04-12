@@ -563,16 +563,13 @@ function setLang(lang) {
     b.classList.toggle('active', b.getAttribute('data-lang') === lang);
   });
   document.getElementById('html-root').setAttribute('lang', lang);
-  document.getElementById('mobileMenu').classList.remove('open');
 }
 
 // Apply saved language on load (only if CA, ES is already the default)
 if (currentLang === 'ca') setLang('ca');
 
 // Hamburger
-document.getElementById('hamburger').addEventListener('click', function() {
-  document.getElementById('mobileMenu').classList.toggle('open');
-});
 </script>
+<script src="../assets/js/main.js"></script>
 </body>
 </html>

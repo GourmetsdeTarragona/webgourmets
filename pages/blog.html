@@ -230,7 +230,6 @@ function setLang(lang) {
     b.classList.toggle('active', b.getAttribute('data-lang') === lang);
   });
   document.getElementById('html-root').setAttribute('lang', lang);
-  document.getElementById('mobileMenu').classList.remove('open');
 }
 
 /* FILTRE */
@@ -252,9 +251,6 @@ function filterEntrades(cat) {
 
 document.addEventListener('DOMContentLoaded', function() {
   if (currentLang === 'ca') setLang('ca');
-  document.getElementById('hamburger').addEventListener('click', function() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  });
 });
 </script>
 </head>
@@ -567,5 +563,6 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </footer>
 
+<script src="../assets/js/main.js"></script>
 </body>
 </html>
