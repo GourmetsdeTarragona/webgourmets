@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function closeMobileMenu() {
     if (mobileMenu) mobileMenu.classList.remove('open');
     if (hamburger)  hamburger.classList.remove('open');
+    if (nav)        nav.classList.remove('menu-open');
     /* Tanca tots els submenús oberts */
     document.querySelectorAll('.mobile-sub.open').forEach(s => s.classList.remove('open'));
     document.querySelectorAll('.mobile-item.expanded').forEach(s => s.classList.remove('expanded'));
@@ -31,6 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isOpen) {
         closeMobileMenu();
       } else {
+        /* Forçar nav visible (solid) quan s'obre el menú */
+        nav.classList.add('solid');
+        nav.classList.add('menu-open');
+        /* Calcular top dinàmicament per si la nav té altura diferent */
+        const navH = nav.getBoundingClientRect().height;
+        mobileMenu.style.top = navH + 'px';
         mobileMenu.classList.add('open');
         hamburger.classList.add('open');
       }

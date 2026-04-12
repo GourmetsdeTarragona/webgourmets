@@ -88,6 +88,19 @@
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* Quan el menú mòbil és obert, la nav sempre visible */
+#nav.menu-open {
+  background: rgba(255,255,255,.97) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 16px rgba(0,0,0,.06);
+}
+#nav.menu-open .nav-logo img { filter: none !important; }
+#nav.menu-open .hamburger span { background: var(--navy); }
+#nav.menu-open .lang-btn { color: var(--muted); }
+#nav.menu-open .lang-btn.active { color: var(--navy); border-color: var(--navy); }
+#nav.menu-open .lang-sep { color: var(--border); }
+
 /* Menú mòbil */
 .mobile-menu {
   display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
