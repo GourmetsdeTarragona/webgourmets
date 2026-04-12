@@ -139,18 +139,6 @@
   background: none; border: none; border-left: 1px solid var(--border);
   cursor: pointer; padding: 0;
 }
-.mobile-item-toggle::after {
-  content: '';
-  display: block; width: 8px; height: 8px;
-  border-right: 2px solid var(--navy); border-bottom: 2px solid var(--navy);
-  transform: rotate(45deg); opacity: .45;
-  transition: transform .25s;
-  margin-top: -3px;
-}
-.mobile-item.expanded .mobile-item-toggle::after {
-  transform: rotate(-135deg);
-  margin-top: 3px;
-}
 .mobile-item-toggle:active { background: var(--cream); }
 
 /* Submenú */
