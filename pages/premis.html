@@ -83,16 +83,37 @@
 .td-bacus{color:#6b2737;}
 .historic-wip{font-style:italic;color:var(--muted);font-size:.85rem;}
 
+/* ── RECORREGUT 2025 ── */
+.recorregut-2025{padding:80px 4%;background:var(--cream);}
+.recorregut-inner{max-width:1100px;margin:0 auto;}
+.recorregut-header{margin-bottom:48px;}
+.recorregut-header .slabel{color:var(--gold);}
+.recorregut-header .stitle{color:var(--navy-dark);}
+.recorregut-header p{font-size:.95rem;color:var(--muted);font-weight:300;line-height:1.8;margin-top:8px;max-width:560px;}
+.recorregut-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.recorregut-card{background:#fff;padding:32px 28px;border:1px solid var(--border);position:relative;display:flex;flex-direction:column;gap:8px;transition:box-shadow .25s;}
+.recorregut-card:hover{box-shadow:0 8px 32px rgba(28,46,62,.10);}
+.recorregut-card-num{font-family:var(--font-serif);font-size:3rem;font-weight:700;color:rgba(28,46,62,.06);line-height:1;position:absolute;top:16px;right:20px;}
+.recorregut-card-nom{font-family:var(--font-serif);font-size:1.35rem;font-weight:700;color:var(--navy-dark);line-height:1.15;}
+.recorregut-card-lloc{font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);}
+.recorregut-card-link{margin-top:auto;padding-top:16px;}
+.recorregut-card-link a{font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;}
+.recorregut-card-link a:hover{color:var(--gold);}
+.recorregut-card-pendent{font-size:.65rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:rgba(28,46,62,.25);margin-top:auto;padding-top:16px;font-style:italic;}
+
 @media(max-width:1024px){
   .premis-presentacio{grid-template-columns:1fr;}
   .palmares-grid{grid-template-columns:1fr;}
   .palmares-2025::before{display:none;}
+  .recorregut-grid{grid-template-columns:repeat(2,1fr);}
 }
 @media(max-width:680px){
   .page-hero{padding:120px 5% 52px;}
   .premi-bloc{padding:40px 24px;}
   .palmares-2025{padding:52px 5%;}
   .palmares-card{padding:32px 24px;}
+  .recorregut-grid{grid-template-columns:1fr;}
+  .recorregut-2025{padding:52px 5%;}
 }
 </style>
 
@@ -134,6 +155,11 @@ const t = {
     p_historic_title:'Palmarès histórico',
     p_wip:'En proceso de recuperación',
     p_gala_peu:'Gala de entrega de premios 2025 · Vermuts Rofes · Reus',
+    p_recorregut_label:'Temporada 2025',
+    p_recorregut_title:'El recorrido completo',
+    p_recorregut_desc:'Seis restaurantes que formaron parte de la temporada 2025. A todos ellos, nuestro reconocimiento.',
+    p_cronica_pendent:'Crónica próximamente',
+    p_cronica_llegir:'Leer crónica →',
   },
   ca:{
     nav_inicio:'Inici',nav_asoc:"L'Associació",nav_rest:'Restaurants',
@@ -171,6 +197,11 @@ const t = {
     p_historic_title:'Palmarès històric',
     p_wip:'En procés de recuperació',
     p_gala_peu:'Gala de lliurament de premis 2025 · Vermuts Rofes · Reus',
+    p_recorregut_label:'Temporada 2025',
+    p_recorregut_title:'El recorregut complet',
+    p_recorregut_desc:'Sis restaurants que van formar part de la temporada 2025. A tots ells, el nostre reconeixement.',
+    p_cronica_pendent:'Crònica pròximament',
+    p_cronica_llegir:'Llegir crònica →',
   }
 };
 let currentLang = localStorage.getItem('gdt-lang') || 'es';
@@ -356,6 +387,87 @@ function setLang(lang) {
     <p style="font-size:.72rem;color:rgba(255,255,255,.3);text-align:center;margin-top:10px;font-style:italic;" data-i18n="p_gala_peu"></p>
   </div>
 </div>
+
+<!-- RECORREGUT 2025 -->
+<section class="recorregut-2025">
+  <div class="recorregut-inner">
+    <div class="recorregut-header">
+      <p class="slabel" data-i18n="p_recorregut_label"></p>
+      <h2 class="stitle" data-i18n="p_recorregut_title"></h2>
+      <div class="sdiv"></div>
+      <p data-i18n="p_recorregut_desc"></p>
+    </div>
+    <div class="recorregut-grid">
+
+      <!-- 1. Ànima -->
+      <div class="recorregut-card">
+        <span class="recorregut-card-num">1</span>
+        <p class="recorregut-card-lloc">Tarragona</p>
+        <h3 class="recorregut-card-nom">Ànima</h3>
+        <div class="recorregut-card-pendent" data-i18n="p_cronica_pendent"></div>
+        <!-- Quan tinguis la crònica, substitueix l'element anterior per:
+        <div class="recorregut-card-link"><a href="anima-cronica-2025.html" data-i18n="p_cronica_llegir"></a></div>
+        -->
+      </div>
+
+      <!-- 2. Baramar -->
+      <div class="recorregut-card">
+        <span class="recorregut-card-num">2</span>
+        <p class="recorregut-card-lloc">Roda de Barà</p>
+        <h3 class="recorregut-card-nom">Baramar</h3>
+        <div class="recorregut-card-pendent" data-i18n="p_cronica_pendent"></div>
+        <!-- Quan tinguis la crònica, substitueix l'element anterior per:
+        <div class="recorregut-card-link"><a href="baramar-cronica-2025.html" data-i18n="p_cronica_llegir"></a></div>
+        -->
+      </div>
+
+      <!-- 3. Casapepe -->
+      <div class="recorregut-card">
+        <span class="recorregut-card-num">3</span>
+        <p class="recorregut-card-lloc">Tarragona</p>
+        <h3 class="recorregut-card-nom">Casapepe</h3>
+        <div class="recorregut-card-pendent" data-i18n="p_cronica_pendent"></div>
+        <!-- Quan tinguis la crònica, substitueix l'element anterior per:
+        <div class="recorregut-card-link"><a href="casapepe-cronica-2025.html" data-i18n="p_cronica_llegir"></a></div>
+        -->
+      </div>
+
+      <!-- 4. Ca l'Amadeu -->
+      <div class="recorregut-card">
+        <span class="recorregut-card-num">4</span>
+        <p class="recorregut-card-lloc">Vilanova d'Escornalbou</p>
+        <h3 class="recorregut-card-nom">Ca l'Amadeu</h3>
+        <div class="recorregut-card-pendent" data-i18n="p_cronica_pendent"></div>
+        <!-- Quan tinguis la crònica, substitueix l'element anterior per:
+        <div class="recorregut-card-link"><a href="ca-lamadeu-cronica-2025.html" data-i18n="p_cronica_llegir"></a></div>
+        -->
+      </div>
+
+      <!-- 5. El Racó de Nico -->
+      <div class="recorregut-card">
+        <span class="recorregut-card-num">5</span>
+        <p class="recorregut-card-lloc">Salou</p>
+        <h3 class="recorregut-card-nom">El Racó de Nico</h3>
+        <div class="recorregut-card-pendent" data-i18n="p_cronica_pendent"></div>
+        <!-- Quan tinguis la crònica, substitueix l'element anterior per:
+        <div class="recorregut-card-link"><a href="raco-nico-cronica-2025.html" data-i18n="p_cronica_llegir"></a></div>
+        -->
+      </div>
+
+      <!-- 6. Limboo -->
+      <div class="recorregut-card">
+        <span class="recorregut-card-num">6</span>
+        <p class="recorregut-card-lloc">Tarragona</p>
+        <h3 class="recorregut-card-nom">Limboo</h3>
+        <div class="recorregut-card-pendent" data-i18n="p_cronica_pendent"></div>
+        <!-- Quan tinguis la crònica, substitueix l'element anterior per:
+        <div class="recorregut-card-link"><a href="limboo-cronica-2025.html" data-i18n="p_cronica_llegir"></a></div>
+        -->
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- HISTORIAL -->
 <section class="sec sec-gray" id="palmares">
