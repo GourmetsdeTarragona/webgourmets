@@ -75,6 +75,18 @@
 /* Nav retorn */
 .e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
 
+/* Reconeixement restaurants */
+.e-rec{background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:64px 0;margin:52px 0;}
+.e-rec-inner{max-width:900px;margin:0 auto;padding:0 4%;}
+.e-rec-intro{margin-bottom:48px;}
+.e-rec-desc{font-size:.98rem;font-weight:300;color:#555;line-height:1.9;margin-top:16px;max-width:620px;}
+.e-rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.e-rec-card{background:#fff;padding:28px 24px;border:1px solid var(--border);position:relative;}
+.e-rec-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--gold);opacity:.4;}
+.e-rec-nom{font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:var(--navy-dark);margin-bottom:4px;}
+.e-rec-lloc{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.e-rec-frase{font-size:.88rem;font-weight:300;color:#555;line-height:1.75;font-style:italic;}
+
 @media(max-width:768px){
   .entrada-hero-content{padding:0 5% 52px;}
   .e-premi-card{grid-template-columns:1fr;}
@@ -85,6 +97,7 @@
   .e-foto-gran{height:260px;}
   .entrada-cos{padding:52px 5%;}
   .e-alcaldessa{flex-direction:column;gap:12px;}
+  .e-rec-grid{grid-template-columns:1fr;}
 }
 </style>
 
@@ -124,6 +137,15 @@ const t = {
     g_tancament_p:'Una noche para celebrar, brindar y reafirmar que la gastronomía es cultura, identidad y futuro. Los Gourmets de Tarragona agradecen a todos los restaurantes visitados, a las bodegas y a los socios que hacen posible este proyecto año tras año.',
     g_galeria_peu:'Gala de Premios 2025 · Vermuts Rofes · Reus',
     btn_premis:'Ver todos los premios →',
+    g_rec_label:'El recorrido 2025',
+    g_rec_title:'A todos los que formaron parte',
+    g_rec_desc:'La temporada no la hacen solo los ganadores. La hacen todos los restaurantes que abren sus puertas, que preparan su mejor menú y que reciben a los Gourmets con generosidad y profesionalidad. A todos ellos, nuestro reconocimiento sincero.',
+    g_rec_anima_frase:'Por su cocina honesta y su forma de hacer sentir al comensal en casa.',
+    g_rec_baramar_frase:'Por una propuesta mediterránea de producto y arroces que tiene el mar como protagonista absoluto.',
+    g_rec_casapepe_frase:'Por mantener la tradición en el corazón de Tarragona, dentro de un espacio que ya es patrimonio de la ciudad.',
+    g_rec_amadeu_frase:"Por esa cocina de interior, de toda la vida, hecha con gusto y con alma, que recuerda que el territorio es mucho más que el litoral.",
+    g_rec_nico_frase:'Por la honestidad de una cocina de pescado, mariscos y arroces que no necesita artificios para convencer.',
+    g_rec_limboo_frase:'Por ser uno de los mejores beach clubs del territorio, donde la restauración está a la altura del entorno.',
   },
   ca:{
     nav_inicio:'Inici',nav_asoc:"L'Associació",nav_rest:'Restaurants',
@@ -159,6 +181,15 @@ const t = {
     g_tancament_p:"Una nit per celebrar, brindar i reafirmar que la gastronomia és cultura, identitat i futur. Els Gourmets de Tarragona agraïm a tots els restaurants visitats, als cellers i als socis que fan possible aquest projecte any rere any.",
     g_galeria_peu:'Gala de Premis 2025 · Vermuts Rofes · Reus',
     btn_premis:'Veure tots els premis →',
+    g_rec_label:'El recorregut 2025',
+    g_rec_title:'A tots els que en van formar part',
+    g_rec_desc:"La temporada no la fan només els guanyadors. La fan tots els restaurants que obren les portes, que preparen el millor menú i que reben els Gourmets amb generositat i professionalitat. A tots ells, el nostre reconeixement sincer.",
+    g_rec_anima_frase:'Per la seva cuina honesta i per la seva manera de fer sentir el comensal com a casa.',
+    g_rec_baramar_frase:'Per una proposta mediterrània de producte i arrossos que té el mar com a protagonista absolut.',
+    g_rec_casapepe_frase:"Per mantenir la tradició al cor de Tarragona, dins d'un espai que ja és patrimoni de la ciutat.",
+    g_rec_amadeu_frase:"Per aquella cuina d'interior, de tota la vida, feta amb gust i amb ànima, que recorda que el territori és molt més que el litoral.",
+    g_rec_nico_frase:"Per l'honestedat d'una cuina de peix, marisc i arrossos que no necessita artificis per convèncer.",
+    g_rec_limboo_frase:"Per ser un dels millors beach clubs del territori, on la restauració està a l'altura de l'entorn.",
   }
 };
 let currentLang = localStorage.getItem('gdt-lang') || 'es';
@@ -313,6 +344,57 @@ function setLang(lang) {
   <div class="e-alcaldessa">
     <i class="fa fa-quote-left e-alcaldessa-ico"></i>
     <p class="e-alcaldessa-text" data-i18n="g_alcaldessa_text"></p>
+  </div>
+
+  <!-- RECONEIXEMENT RESTAURANTS -->
+  <div class="e-rec">
+    <div class="e-rec-inner">
+      <div class="e-rec-intro">
+        <span class="e-label" data-i18n="g_rec_label"></span>
+        <h2 class="e-title" data-i18n="g_rec_title"></h2>
+        <div class="e-divider"></div>
+        <p class="e-rec-desc" data-i18n="g_rec_desc"></p>
+      </div>
+      <div class="e-rec-grid">
+
+        <div class="e-rec-card">
+          <p class="e-rec-nom">Ànima</p>
+          <p class="e-rec-lloc">Tarragona</p>
+          <p class="e-rec-frase" data-i18n="g_rec_anima_frase"></p>
+        </div>
+
+        <div class="e-rec-card">
+          <p class="e-rec-nom">Baramar</p>
+          <p class="e-rec-lloc">Roda de Barà</p>
+          <p class="e-rec-frase" data-i18n="g_rec_baramar_frase"></p>
+        </div>
+
+        <div class="e-rec-card">
+          <p class="e-rec-nom">Casapepe</p>
+          <p class="e-rec-lloc">Tarragona</p>
+          <p class="e-rec-frase" data-i18n="g_rec_casapepe_frase"></p>
+        </div>
+
+        <div class="e-rec-card">
+          <p class="e-rec-nom">Ca l'Amadeu</p>
+          <p class="e-rec-lloc">Vilanova d'Escornalbou</p>
+          <p class="e-rec-frase" data-i18n="g_rec_amadeu_frase"></p>
+        </div>
+
+        <div class="e-rec-card">
+          <p class="e-rec-nom">El Racó de Nico</p>
+          <p class="e-rec-lloc">Salou</p>
+          <p class="e-rec-frase" data-i18n="g_rec_nico_frase"></p>
+        </div>
+
+        <div class="e-rec-card">
+          <p class="e-rec-nom">Limboo</p>
+          <p class="e-rec-lloc">Tarragona</p>
+          <p class="e-rec-frase" data-i18n="g_rec_limboo_frase"></p>
+        </div>
+
+      </div>
+    </div>
   </div>
 
   <!-- TANCAMENT -->
