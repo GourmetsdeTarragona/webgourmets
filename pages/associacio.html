@@ -11,12 +11,22 @@
 <link rel="stylesheet" href="../assets/css/nav.css">
 <link rel="stylesheet" href="../assets/css/seccions.css">
 <style>
-.page-hero{background:var(--navy-dark);padding:140px 4% 80px;text-align:center;position:relative;overflow:hidden;}
-.page-hero::before{content:'';position:absolute;inset:0;background-image:url('../assets/img/hero.jpg');background-size:cover;background-position:center;opacity:.12;}
-.page-hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto;}
-.page-hero .slabel{color:rgba(255,255,255,.45);}
-.page-hero .stitle{color:#fff;font-size:clamp(2rem,4vw,3.2rem);}
-.page-hero-desc{font-size:1rem;color:rgba(255,255,255,.6);font-weight:300;line-height:1.85;margin-top:8px;}
+.page-hero{position:relative;min-height:72vh;display:flex;align-items:flex-end;overflow:hidden;padding:0;background:#0b1626;}
+.page-hero-bg{position:absolute;inset:0;background-image:url('../assets/img/kema/grup.jpg');background-size:cover;background-position:center 35%;opacity:.55;transform:scale(1.02);transition:transform 8s ease;}
+.page-hero:hover .page-hero-bg{transform:scale(1);}
+.page-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.95) 0%,rgba(11,22,38,.55) 50%,rgba(11,22,38,.25) 100%);}
+.page-hero-line{position:absolute;left:4%;top:15%;bottom:15%;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.4),transparent);}
+.page-hero-inner{position:relative;z-index:2;max-width:860px;margin:0 auto;padding:0 5% 72px;width:100%;}
+.page-hero .slabel{color:var(--gold);letter-spacing:.24em;}
+.page-hero .stitle{color:#fff;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.08;margin-top:16px;}
+.page-hero .stitle em{font-style:italic;color:rgba(212,169,106,.9);font-weight:400;}
+.page-hero-desc{font-size:1rem;color:rgba(255,255,255,.7);font-weight:300;line-height:1.85;margin-top:20px;max-width:540px;}
+.page-hero-caption{position:absolute;bottom:18px;right:5%;font-size:.62rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);z-index:2;}
+@media(max-width:680px){
+  .page-hero{min-height:80vh;}
+  .page-hero-inner{padding-bottom:52px;}
+  .page-hero-bg{background-position:center 30%;}
+}
 
 .salut-grid{display:grid;grid-template-columns:260px 1fr;gap:64px;align-items:center;}
 .salut-avatar{width:100%;aspect-ratio:3/4;background:var(--navy);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;}
@@ -96,7 +106,6 @@
   .junta-grid{grid-template-columns:1fr 1fr;}
   .proceso-grid{grid-template-columns:1fr;}
   .paso{border-right:none!important;border-bottom:1px solid var(--border);}
-  .page-hero{padding:120px 5% 60px;}
 }
 </style>
 <script>
@@ -135,6 +144,7 @@ const t = {
   asoc_hero_label:{es:'La Asociación',ca:"L'Associació"},
   asoc_hero_title:{es:'Quiénes somos y cómo funcionamos',ca:'Qui som i com funcionem'},
   asoc_hero_desc:{es:'Una comunidad de apasionados de la gastronomía que se reúnen para descubrir, valorar y celebrar lo mejor de la cocina tarraconense.',ca:"Una comunitat d'apassionats de la gastronomia que es reuneixen per descobrir, valorar i celebrar el millor de la cuina tarragonina."},
+  asoc_hero_caption:{es:'Socios de Gourmets de Tarragona · Sopar anual',ca:'Socis de Gourmets de Tarragona · Sopar anual'},
   salut_text:{es:'Bienvenidos a Gourmets de Tarragona. Nuestra asociación nació de una pasión compartida: la gastronomía como forma de conocer el territorio, sus gentes y su cultura. A lo largo de los años hemos construido una comunidad comprometida con la honestidad, el rigor y el placer de la buena mesa. Espero que este espacio os inspire tanto como nos inspira a nosotros.',ca:"Benvinguts a Gourmets de Tarragona. La nostra associació va néixer d'una passió compartida: la gastronomia com a forma de conèixer el territori, les seves gents i la seva cultura. Al llarg dels anys hem construït una comunitat compromesa amb l'honestedat, el rigor i el plaer de la bona taula. Espero que aquest espai us inspiri tant com ens inspira a nosaltres."},
   salut_carrec:{es:'Presidente · Gourmets de Tarragona',ca:'President · Gourmets de Tarragona'},
   missio_label:{es:'Nuestra misión',ca:'La nostra missió'},
@@ -254,11 +264,15 @@ function setLang(lang) {
 </nav>
 
 <div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grad"></div>
+  <div class="page-hero-line"></div>
   <div class="page-hero-inner">
     <p class="slabel" data-i18n="asoc_hero_label"></p>
     <h1 class="stitle" data-i18n="asoc_hero_title"></h1>
     <p class="page-hero-desc" data-i18n="asoc_hero_desc"></p>
   </div>
+  <span class="page-hero-caption" data-i18n="asoc_hero_caption"></span>
 </div>
 
 <!-- SALUTACIÓ PRESIDENT -->
