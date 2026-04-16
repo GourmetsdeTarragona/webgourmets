@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="../assets/css/seccions.css">
 <style>
 .page-hero{position:relative;min-height:72vh;display:flex;align-items:flex-end;overflow:hidden;padding:0;background:#0b1626;}
-.page-hero-bg{position:absolute;inset:0;background-image:url('../assets/img/kema/grup.jpg');background-size:cover;background-position:center 35%;opacity:.55;transform:scale(1.02);transition:transform 8s ease;}
+.page-hero-bg{position:absolute;inset:0;background-image:url('../assets/img/kema/grup.jpg');background-size:cover;background-position:center 55%;opacity:.55;transform:scale(1.02);transition:transform 8s ease;}
 .page-hero:hover .page-hero-bg{transform:scale(1);}
 .page-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.95) 0%,rgba(11,22,38,.55) 50%,rgba(11,22,38,.25) 100%);}
 .page-hero-line{position:absolute;left:4%;top:15%;bottom:15%;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.4),transparent);}
@@ -25,7 +25,7 @@
 @media(max-width:680px){
   .page-hero{min-height:80vh;}
   .page-hero-inner{padding-bottom:52px;}
-  .page-hero-bg{background-position:center 30%;}
+  .page-hero-bg{background-position:center 60%;}
 }
 
 .salut-grid{display:grid;grid-template-columns:260px 1fr;gap:64px;align-items:center;}
@@ -92,12 +92,29 @@
 .btn-download:hover{background:var(--navy-dark);}
 .estatuts-data{font-size:.68rem;color:var(--muted);margin-top:14px;letter-spacing:1px;}
 
+/* ── SOM / NO SOM ── */
+.identity-intro{max-width:560px;margin:0 auto 48px;text-align:center;}
+.identity-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;position:relative;}
+.identity-grid::before{content:'';position:absolute;left:50%;top:10%;bottom:10%;width:1px;background:linear-gradient(to bottom,transparent,var(--border),transparent);}
+.identity-col{padding:16px 8px;}
+.identity-col-header{display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:18px;border-bottom:2px solid var(--gold);}
+.identity-col-header-no{border-bottom-color:rgba(107,107,107,.35);}
+.identity-col-icon{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:1px solid var(--gold);color:var(--gold);font-size:.95rem;flex-shrink:0;}
+.identity-col-icon-no{border-color:rgba(107,107,107,.45);color:rgba(107,107,107,.65);}
+.identity-col-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);line-height:1;}
+.identity-col-sub{font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);display:block;margin-top:5px;}
+.identity-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;}
+.identity-item{display:flex;align-items:flex-start;gap:14px;font-size:.92rem;line-height:1.55;color:#444;}
+.identity-item-mark{flex-shrink:0;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:700;margin-top:2px;}
+.identity-item-mark-si{background:rgba(184,146,74,.15);color:var(--gold);}
+.identity-item-mark-no{background:rgba(107,107,107,.1);color:rgba(107,107,107,.6);}
+.identity-item-no{color:var(--muted);}
+.identity-item strong{color:var(--navy-dark);font-weight:700;}
+
 /* ── MOMENTS GALLERY ── */
 .moments-intro{max-width:560px;margin:0 auto 48px;text-align:center;}
-.moments-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:260px;gap:12px;}
+.moments-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:320px;gap:12px;}
 .moment-card{position:relative;overflow:hidden;cursor:pointer;background:var(--navy-dark);}
-.moment-card:nth-child(1){grid-column:span 2;grid-row:span 2;}
-.moment-card:nth-child(4){grid-row:span 2;}
 .moment-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s ease;}
 .moment-card:hover img{transform:scale(1.06);}
 .moment-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.88) 0%,rgba(11,22,38,.1) 60%,transparent 100%);opacity:.75;transition:opacity .35s;}
@@ -106,7 +123,6 @@
 .moment-card:hover .moment-card-content{transform:translateY(0);}
 .moment-card-cat{font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;display:block;}
 .moment-card-title{font-family:var(--font-serif);font-size:1.02rem;color:#fff;line-height:1.3;font-weight:600;}
-.moment-card:nth-child(1) .moment-card-title{font-size:1.25rem;}
 .moment-card-hint{position:absolute;top:14px;right:14px;width:32px;height:32px;border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:.7rem;opacity:0;transition:opacity .3s;z-index:2;}
 .moment-card:hover .moment-card-hint{opacity:1;}
 
@@ -137,9 +153,7 @@
   .bacus-bloc{grid-template-columns:1fr;padding:36px;}
   .estatuts-grid{grid-template-columns:1fr;}
   .estatuts-doc{position:static;}
-  .moments-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:220px;}
-  .moment-card:nth-child(1){grid-column:span 2;grid-row:span 1;}
-  .moment-card:nth-child(4){grid-row:span 1;}
+  .moments-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:280px;}
 }
 @media(max-width:680px){
   .salut-grid,.missio-grid{grid-template-columns:1fr;gap:36px;}
@@ -147,8 +161,9 @@
   .junta-grid{grid-template-columns:1fr 1fr;}
   .proceso-grid{grid-template-columns:1fr;}
   .paso{border-right:none!important;border-bottom:1px solid var(--border);}
-  .moments-grid{grid-template-columns:1fr;grid-auto-rows:240px;}
-  .moment-card:nth-child(1){grid-column:span 1;}
+  .moments-grid{grid-template-columns:1fr;grid-auto-rows:280px;}
+  .identity-grid{grid-template-columns:1fr;gap:40px;}
+  .identity-grid::before{display:none;}
 }
 </style>
 <script>
@@ -189,6 +204,28 @@ const t = {
   asoc_hero_desc:{es:'Una comunidad de apasionados de la gastronomía que se reúnen para descubrir, valorar y celebrar lo mejor de la cocina tarraconense.',ca:"Una comunitat d'apassionats de la gastronomia que es reuneixen per descobrir, valorar i celebrar el millor de la cuina tarragonina."},
   asoc_hero_caption:{es:'Socios de Gourmets en Kema',ca:'Socis de Gourmets al Kema'},
 
+  // SOM / NO SOM
+  identity_label:{es:'Carácter',ca:'Caràcter'},
+  identity_title:{es:'Quiénes somos, quiénes no',ca:'Qui som, qui no som'},
+  identity_desc:{es:'Para entender mejor nuestro trabajo, es importante dejar claro qué representamos y qué no representamos.',ca:'Per entendre millor la nostra feina, és important deixar clar què representem i què no representem.'},
+
+  identity_si_title:{es:'Somos',ca:'Som'},
+  identity_si_sub:{es:'Nuestra esencia',ca:"La nostra essència"},
+  identity_no_title:{es:'No somos',ca:'No som'},
+  identity_no_sub:{es:'Lo que nos diferencia',ca:'Allò que ens diferencia'},
+
+  identity_si_1:{es:'<strong>Independientes.</strong> Nadie nos paga ni nos patrocina. Pagamos nuestras visitas.',ca:'<strong>Independents.</strong> Ningú ens paga ni ens patrocina. Paguem les nostres visites.'},
+  identity_si_2:{es:'<strong>Una asociación sin ánimo de lucro.</strong> Estatutariamente y en la práctica.',ca:'<strong>Una associació sense ànim de lucre.</strong> Estatutàriament i a la pràctica.'},
+  identity_si_3:{es:'<strong>Críticos y honestos.</strong> Valoramos con criterio, sin complacencias.',ca:'<strong>Crítics i honestos.</strong> Valorem amb criteri, sense complaences.'},
+  identity_si_4:{es:'<strong>Amantes del producto local.</strong> Defendemos el territorio del Camp de Tarragona.',ca:'<strong>Amants del producte local.</strong> Defensem el territori del Camp de Tarragona.'},
+  identity_si_5:{es:'<strong>Una comunidad.</strong> Socios que comparten mesa, criterio y pasión por la gastronomía.',ca:'<strong>Una comunitat.</strong> Socis que comparteixen taula, criteri i passió per la gastronomia.'},
+
+  identity_no_1:{es:'<strong>Influencers.</strong> No publicamos contenido a cambio de invitaciones ni beneficios.',ca:'<strong>Influencers.</strong> No publiquem contingut a canvi d\'invitacions ni beneficis.'},
+  identity_no_2:{es:'<strong>Una guía gastronómica comercial.</strong> Ningún restaurante nos paga para aparecer aquí.',ca:'<strong>Una guia gastronòmica comercial.</strong> Cap restaurant ens paga per aparèixer aquí.'},
+  identity_no_3:{es:'<strong>Críticos profesionales.</strong> Somos aficionados rigurosos, no periodistas gastronómicos.',ca:'<strong>Crítics professionals.</strong> Som aficionats rigorosos, no periodistes gastronòmics.'},
+  identity_no_4:{es:'<strong>Un club cerrado.</strong> La asociación crece con nuevos socios que compartan valores.',ca:"<strong>Un club tancat.</strong> L'associació creix amb nous socis que comparteixin valors."},
+  identity_no_5:{es:'<strong>Un tribunal.</strong> Reconocemos, no juzgamos. Premiamos la excelencia, no la señalamos.',ca:'<strong>Un tribunal.</strong> Reconeixem, no jutgem. Premiem l\'excel·lència, no la senyalem.'},
+
   // MOMENTS GALLERY
   moments_label:{es:'Galería',ca:'Galeria'},
   moments_title:{es:'Momentos',ca:'Moments'},
@@ -198,8 +235,8 @@ const t = {
   m1_title:{es:'Gala de entrega · Vermuts Rofes, Reus',ca:"Gala de lliurament · Vermuts Rofes, Reus"},
   m2_cat:{es:'Visita',ca:'Visita'},
   m2_title:{es:'Equipo del Kema · Cambrils',ca:"Equip del Kema · Cambrils"},
-  m3_cat:{es:'Gala 2025',ca:'Gala 2025'},
-  m3_title:{es:'Entrega del Premio Gastronia',ca:'Lliurament del Premi Gastronia'},
+  m3_cat:{es:'Tradición',ca:'Tradició'},
+  m3_title:{es:'Entrega de trofeo a invitados en cenas',ca:'Lliurament de trofeu a convidats en sopars'},
   m4_cat:{es:'Casaca Roja',ca:'Casaca Roja'},
   m4_title:{es:'José Vilaseca Rius · La Goleta',ca:'José Vilaseca Rius · La Goleta'},
   m5_cat:{es:'Bodega',ca:'Bodega'},
@@ -373,6 +410,52 @@ function setLang(lang) {
                onerror="this.style.display='none'">
           <source src="../assets/video/plat-tau.mp4" type="video/mp4">
         </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOM / NO SOM -->
+<section class="sec" id="identity">
+  <div class="sec-inner">
+    <div class="identity-intro">
+      <p class="slabel" style="justify-content:center;display:flex;" data-i18n="identity_label"></p>
+      <h2 class="stitle" data-i18n="identity_title"></h2>
+      <div class="sdiv" style="margin:0 auto;"></div>
+      <p class="about-p" style="margin-top:16px;" data-i18n="identity_desc"></p>
+    </div>
+    <div class="identity-grid">
+      <div class="identity-col">
+        <div class="identity-col-header">
+          <div class="identity-col-icon"><i class="fa fa-check"></i></div>
+          <div>
+            <h3 class="identity-col-title" data-i18n="identity_si_title"></h3>
+            <span class="identity-col-sub" data-i18n="identity_si_sub"></span>
+          </div>
+        </div>
+        <ul class="identity-list">
+          <li class="identity-item"><span class="identity-item-mark identity-item-mark-si"><i class="fa fa-check"></i></span><span data-i18n="identity_si_1"></span></li>
+          <li class="identity-item"><span class="identity-item-mark identity-item-mark-si"><i class="fa fa-check"></i></span><span data-i18n="identity_si_2"></span></li>
+          <li class="identity-item"><span class="identity-item-mark identity-item-mark-si"><i class="fa fa-check"></i></span><span data-i18n="identity_si_3"></span></li>
+          <li class="identity-item"><span class="identity-item-mark identity-item-mark-si"><i class="fa fa-check"></i></span><span data-i18n="identity_si_4"></span></li>
+          <li class="identity-item"><span class="identity-item-mark identity-item-mark-si"><i class="fa fa-check"></i></span><span data-i18n="identity_si_5"></span></li>
+        </ul>
+      </div>
+      <div class="identity-col">
+        <div class="identity-col-header identity-col-header-no">
+          <div class="identity-col-icon identity-col-icon-no"><i class="fa fa-times"></i></div>
+          <div>
+            <h3 class="identity-col-title" data-i18n="identity_no_title"></h3>
+            <span class="identity-col-sub" data-i18n="identity_no_sub"></span>
+          </div>
+        </div>
+        <ul class="identity-list">
+          <li class="identity-item identity-item-no"><span class="identity-item-mark identity-item-mark-no"><i class="fa fa-times"></i></span><span data-i18n="identity_no_1"></span></li>
+          <li class="identity-item identity-item-no"><span class="identity-item-mark identity-item-mark-no"><i class="fa fa-times"></i></span><span data-i18n="identity_no_2"></span></li>
+          <li class="identity-item identity-item-no"><span class="identity-item-mark identity-item-mark-no"><i class="fa fa-times"></i></span><span data-i18n="identity_no_3"></span></li>
+          <li class="identity-item identity-item-no"><span class="identity-item-mark identity-item-mark-no"><i class="fa fa-times"></i></span><span data-i18n="identity_no_4"></span></li>
+          <li class="identity-item identity-item-no"><span class="identity-item-mark identity-item-mark-no"><i class="fa fa-times"></i></span><span data-i18n="identity_no_5"></span></li>
+        </ul>
       </div>
     </div>
   </div>
