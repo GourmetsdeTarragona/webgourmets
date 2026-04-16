@@ -41,17 +41,38 @@
 
 .missio-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
 
-.timeline-connector{position:relative;display:flex;align-items:flex-start;justify-content:space-between;gap:0;margin-bottom:32px;}
-.timeline-connector::before{content:'';position:absolute;top:28px;left:calc(100%/12);right:calc(100%/12);height:2px;background:linear-gradient(90deg,var(--gold),var(--dorado-clar,#d4a96a),var(--gold));z-index:0;}
-.tl-step{display:flex;flex-direction:column;align-items:center;text-align:center;flex:1;position:relative;z-index:1;cursor:pointer;}
-.tl-circle{width:56px;height:56px;border-radius:50%;background:var(--navy-dark);border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.1rem;font-weight:600;color:var(--gold);transition:all .25s;box-shadow:0 0 0 0 rgba(184,146,74,0);}
-.tl-step:hover .tl-circle,.tl-step.actiu .tl-circle{background:var(--gold);color:#fff;box-shadow:0 0 0 6px rgba(184,146,74,.15);}
-.tl-icon{font-size:1.1rem;margin-top:12px;margin-bottom:4px;opacity:.6;}
-.tl-title{font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy-dark);}
-.tl-detail{background:var(--cream);border:1px solid var(--border);border-radius:0;padding:28px 36px;display:flex;gap:24px;align-items:flex-start;min-height:80px;}
-.tl-detail-num{font-family:var(--font-serif);font-size:3.5rem;font-weight:700;color:var(--gold);opacity:.2;line-height:1;flex-shrink:0;margin-top:-6px;}
-.tl-detail-title{font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:8px;}
-.tl-detail-text{font-size:.9rem;color:var(--muted);line-height:1.8;font-weight:300;}
+/* ── TIMELINE VERTICAL ── */
+.vtimeline{position:relative;max-width:780px;margin:0 auto;padding:0;}
+.vtimeline::before{content:'';position:absolute;left:28px;top:12px;bottom:12px;width:2px;background:linear-gradient(to bottom,transparent,var(--gold) 8%,var(--gold) 92%,transparent);}
+.vtl-step{position:relative;display:grid;grid-template-columns:58px 1fr;gap:24px;padding-bottom:52px;}
+.vtl-step:last-child{padding-bottom:0;}
+.vtl-circle{position:relative;width:58px;height:58px;border-radius:50%;background:#fff;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;z-index:2;transition:all .35s;}
+.vtl-circle i{font-size:1.1rem;color:var(--gold);transition:color .3s;}
+.vtl-step:hover .vtl-circle{background:var(--gold);box-shadow:0 6px 18px rgba(184,146,74,.28);}
+.vtl-step:hover .vtl-circle i{color:#fff;}
+.vtl-num{position:absolute;top:-6px;right:-10px;background:var(--navy-dark);color:#fff;font-family:var(--font-serif);font-size:.68rem;font-weight:700;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:3;letter-spacing:0;}
+.vtl-content{padding-top:4px;padding-bottom:6px;}
+.vtl-head{display:flex;align-items:baseline;gap:12px;margin-bottom:10px;flex-wrap:wrap;}
+.vtl-title{font-family:var(--font-serif);font-size:1.4rem;font-weight:700;color:var(--navy-dark);line-height:1.2;}
+.vtl-meta{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);padding:4px 10px;border:1px solid rgba(184,146,74,.3);background:rgba(184,146,74,.05);}
+.vtl-text{font-size:.95rem;font-weight:300;color:#444;line-height:1.85;margin-bottom:10px;}
+.vtl-text strong{color:var(--navy-dark);font-weight:600;}
+.vtl-quote{font-family:var(--font-serif);font-style:italic;color:var(--muted);font-size:.9rem;line-height:1.7;padding-left:16px;border-left:2px solid rgba(184,146,74,.4);margin-top:14px;}
+.vtl-closing{text-align:center;margin-top:60px;padding-top:40px;border-top:1px solid var(--border);}
+.vtl-closing-quote{font-family:var(--font-serif);font-style:italic;font-size:1.35rem;color:var(--navy-dark);line-height:1.5;max-width:560px;margin:0 auto 12px;}
+.vtl-closing-quote::before,.vtl-closing-quote::after{content:'"';color:var(--gold);font-size:1.8rem;opacity:.5;font-weight:400;}
+.vtl-closing-quote::before{margin-right:6px;}
+.vtl-closing-quote::after{margin-left:6px;}
+.vtl-closing-attr{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);}
+@media(max-width:680px){
+  .vtimeline::before{left:22px;}
+  .vtl-step{grid-template-columns:46px 1fr;gap:18px;padding-bottom:42px;}
+  .vtl-circle{width:46px;height:46px;}
+  .vtl-circle i{font-size:.9rem;}
+  .vtl-num{width:18px;height:18px;font-size:.58rem;top:-4px;right:-6px;}
+  .vtl-title{font-size:1.15rem;}
+  .vtl-closing-quote{font-size:1.1rem;}
+}
 
 .criteria-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-bottom:16px;}
 .crit-card{background:#fff;padding:24px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;transition:background .2s;}
@@ -253,12 +274,43 @@ const t = {
   missio_cta:{es:'Contactar con nosotros',ca:'Contactar amb nosaltres'},
   proceso_label:{es:'El proceso',ca:'El procés'},
   proceso_title:{es:'Cómo funciona cada visita',ca:'Com funciona cada visita'},
-  paso1_title:{es:'Selección',ca:'Selecció'},paso1_desc:{es:'El comité selecciona los restaurantes a visitar cada temporada.',ca:'El comitè selecciona els restaurants a visitar cada temporada.'},
-  paso2_title:{es:'Previa',ca:'Prèvia'},paso2_desc:{es:'Se publica una crónica previa con historia, chef, carta y curiosidades.',ca:'Es publica una crònica prèvia amb història, cuiner, carta i curiositats.'},
-  paso3_title:{es:'Visita',ca:'Visita'},paso3_desc:{es:'Los socios viven la experiencia completa: aperitivos, menú y maridaje.',ca:"Els socis viuen l'experiència completa: aperitius, menú i maridatge."},
-  paso4_title:{es:'Valoración',ca:'Valoració'},paso4_desc:{es:'Cada socio puntúa de 1 a 5 en cada uno de los 8 criterios, de forma independiente.',ca:"Cada soci puntua de l'1 al 5 en cadascun dels 8 criteris, de forma independent."},
-  paso5_title:{es:'Crónica',ca:'Crònica'},paso5_desc:{es:'Se publica la crónica con fotografías y la puntuación media obtenida.',ca:'Es publica la crònica amb fotografies i la puntuació mitjana obtinguda.'},
-  paso6_title:{es:'Premios',ca:'Premis'},paso6_desc:{es:'Al final del año se otorgan el Trofeo Gastronia y el Premio Bacus.',ca:"Al final de l'any s'atorguen el Trofeu Gastronia i el Premi Bacus."},
+  proceso_desc:{es:'Cada visita de los Gourmets sigue un proceso pensado para unir rigor, transparencia y cultura gastronómica. Desde la selección hasta la entrega de premios, todo se hace con criterio compartido.',ca:"Cada visita dels Gourmets segueix un procés pensat per unir rigor, transparència i cultura gastronòmica. Des de la selecció fins al lliurament de premis, tot es fa amb criteri compartit."},
+
+  // Pas 1 - Selecció
+  paso1_title:{es:'Selección',ca:'Selecció'},
+  paso1_meta:{es:'~8 restaurantes/año',ca:'~8 restaurants/any'},
+  paso1_desc:{es:'El comité de la asociación selecciona cada temporada una <strong>decena de restaurantes del Camp de Tarragona</strong>, buscando variedad de cocinas, estilos y niveles. No se busca llenar un mapa, sino ofrecer un recorrido coherente: desde la cocina de producto más clásica hasta las propuestas más creativas del territorio.',ca:"El comitè de l'associació selecciona cada temporada una <strong>desena de restaurants del Camp de Tarragona</strong>, buscant varietat de cuines, estils i nivells. No es busca omplir un mapa, sinó oferir un recorregut coherent: des de la cuina de producte més clàssica fins a les propostes més creatives del territori."},
+  paso1_quote:{es:'El criterio es siempre el mismo: mesa, producto y territorio.',ca:'El criteri és sempre el mateix: taula, producte i territori.'},
+
+  // Pas 2 - Prèvia
+  paso2_title:{es:'Previa',ca:'Prèvia'},
+  paso2_meta:{es:'1 semana antes',ca:'1 setmana abans'},
+  paso2_desc:{es:'Antes de cada visita se publica una <strong>crónica previa</strong> en el blog: historia del restaurante, equipo de cocina y sala, la carta habitual y el menú acordado para la ocasión. Es una forma de llegar a la mesa con contexto y de que los lectores puedan acompañar virtualmente el recorrido.',ca:"Abans de cada visita es publica una <strong>crònica prèvia</strong> al blog: història del restaurant, equip de cuina i sala, la carta habitual i el menú acordat per a l'ocasió. És una manera d'arribar a taula amb context i que els lectors puguin acompanyar virtualment el recorregut."},
+
+  // Pas 3 - Visita
+  paso3_title:{es:'La visita',ca:'La visita'},
+  paso3_meta:{es:'~30 socios · una noche',ca:'~30 socis · una nit'},
+  paso3_desc:{es:'Los socios compartimos mesa y <strong>vivimos la experiencia completa</strong>: aperitivos, menú de degustación y maridaje. No hay incógnito, ni prisa, ni cámaras asomando. Es una cena, no una inspección. Hablamos con el equipo, preguntamos, escuchamos — y disfrutamos.',ca:"Els socis compartim taula i <strong>vivim l'experiència completa</strong>: aperitius, menú de degustació i maridatge. No hi ha incògnit, ni pressa, ni càmeres espiant. És un sopar, no una inspecció. Parlem amb l'equip, preguntem, escoltem — i gaudim."},
+
+  // Pas 4 - Valoració
+  paso4_title:{es:'Valoración',ca:'Valoració'},
+  paso4_meta:{es:'8 criterios · escala 1-5',ca:'8 criteris · escala 1-5'},
+  paso4_desc:{es:'Al acabar la cena, cada socio puntúa <strong>de forma independiente y anónima</strong> sobre 8 criterios que abarcan desde el producto y la técnica hasta el servicio y el maridaje. La media se calcula sobre todas las fichas recibidas, sin descartes.',ca:"En acabar el sopar, cada soci puntua <strong>de forma independent i anònima</strong> sobre 8 criteris que abasten des del producte i la tècnica fins al servei i el maridatge. La mitjana es calcula sobre totes les fitxes rebudes, sense descarts."},
+  paso4_quote:{es:'Cada socio, una voz. Ningún criterio pesa más que otro.',ca:'Cada soci, una veu. Cap criteri pesa més que un altre.'},
+
+  // Pas 5 - Crònica
+  paso5_title:{es:'Crónica',ca:'Crònica'},
+  paso5_meta:{es:'~2 semanas después',ca:'~2 setmanes després'},
+  paso5_desc:{es:'Publicamos la <strong>crónica completa</strong> con fotografías, notas gastronómicas, anécdotas de la mesa y la puntuación media obtenida. Es una crónica honesta, no una reseña promocional. Lo bueno se celebra y lo mejorable se comenta — siempre con respeto al oficio.',ca:'Publiquem la <strong>crònica completa</strong> amb fotografies, notes gastronòmiques, anècdotes de la taula i la puntuació mitjana obtinguda. És una crònica honesta, no una ressenya promocional. El bo es celebra i el millorable es comenta — sempre amb respecte a l\'ofici.'},
+
+  // Pas 6 - Premis
+  paso6_title:{es:'Premios',ca:'Premis'},
+  paso6_meta:{es:'Gala anual · febrero',ca:'Gala anual · febrer'},
+  paso6_desc:{es:'Al cierre del recorrido se suman las puntuaciones acumuladas y se otorgan el <strong>Trofeo Gastronia</strong> al mejor restaurante del año y el <strong>Premio Bacus</strong> a la mejor carta de vinos. Se entregan en una gala pública a la que invitamos a los restaurantes premiados y a nuestros colaboradores.',ca:"Al tancament del recorregut se sumen les puntuacions acumulades i s'atorguen el <strong>Trofeu Gastronia</strong> al millor restaurant de l'any i el <strong>Premi Bacus</strong> a la millor carta de vins. Es lliuren en una gala pública on convidem als restaurants premiats i als nostres col·laboradors."},
+
+  // Cita final
+  proceso_closing:{es:'Una temporada, un recorrido, un territorio.',ca:'Una temporada, un recorregut, un territori.'},
+  proceso_closing_attr:{es:'La filosofía Gourmets',ca:'La filosofia Gourmets'},
   val_label:{es:'Sistema de valoración',ca:'Sistema de valoració'},
   val_title:{es:'Qué evaluamos en cada visita',ca:'Què avaluem en cada visita'},
   val_desc:{es:'Cada socio vota de forma completamente independiente. La puntuación final es la media de todas las valoraciones individuales de los socios asistentes.',ca:"Cada soci vota de forma completament independent. La puntuació final és la mitjana de totes les valoracions individuals dels socis assistents."},
@@ -464,49 +516,113 @@ function setLang(lang) {
 <!-- PROCÉS -->
 <section class="sec sec-gray" id="funcionament">
   <div class="sec-inner">
-    <div style="text-align:center;margin-bottom:48px;">
+    <div style="text-align:center;margin-bottom:56px;max-width:640px;margin-left:auto;margin-right:auto;">
       <p class="slabel" style="justify-content:center;display:flex;" data-i18n="proceso_label"></p>
       <h2 class="stitle" data-i18n="proceso_title"></h2>
       <div class="sdiv" style="margin:0 auto;"></div>
+      <p class="about-p" style="margin-top:16px;" data-i18n="proceso_desc"></p>
     </div>
-    <div class="timeline-connector">
-      <div class="tl-step actiu" onclick="activaPas(0)">
-        <div class="tl-circle">1</div>
-        <div class="tl-icon">🔍</div>
-        <div class="tl-title" data-i18n="paso1_title"></div>
+
+    <div class="vtimeline">
+
+      <!-- Pas 1 -->
+      <div class="vtl-step">
+        <div class="vtl-circle">
+          <i class="fa fa-search"></i>
+          <span class="vtl-num">01</span>
+        </div>
+        <div class="vtl-content">
+          <div class="vtl-head">
+            <h3 class="vtl-title" data-i18n="paso1_title"></h3>
+            <span class="vtl-meta" data-i18n="paso1_meta"></span>
+          </div>
+          <p class="vtl-text" data-i18n="paso1_desc"></p>
+          <p class="vtl-quote" data-i18n="paso1_quote"></p>
+        </div>
       </div>
-      <div class="tl-step" onclick="activaPas(1)">
-        <div class="tl-circle">2</div>
-        <div class="tl-icon">📝</div>
-        <div class="tl-title" data-i18n="paso2_title"></div>
+
+      <!-- Pas 2 -->
+      <div class="vtl-step">
+        <div class="vtl-circle">
+          <i class="fa fa-pen-nib"></i>
+          <span class="vtl-num">02</span>
+        </div>
+        <div class="vtl-content">
+          <div class="vtl-head">
+            <h3 class="vtl-title" data-i18n="paso2_title"></h3>
+            <span class="vtl-meta" data-i18n="paso2_meta"></span>
+          </div>
+          <p class="vtl-text" data-i18n="paso2_desc"></p>
+        </div>
       </div>
-      <div class="tl-step" onclick="activaPas(2)">
-        <div class="tl-circle">3</div>
-        <div class="tl-icon">🍽</div>
-        <div class="tl-title" data-i18n="paso3_title"></div>
+
+      <!-- Pas 3 -->
+      <div class="vtl-step">
+        <div class="vtl-circle">
+          <i class="fa fa-utensils"></i>
+          <span class="vtl-num">03</span>
+        </div>
+        <div class="vtl-content">
+          <div class="vtl-head">
+            <h3 class="vtl-title" data-i18n="paso3_title"></h3>
+            <span class="vtl-meta" data-i18n="paso3_meta"></span>
+          </div>
+          <p class="vtl-text" data-i18n="paso3_desc"></p>
+        </div>
       </div>
-      <div class="tl-step" onclick="activaPas(3)">
-        <div class="tl-circle">4</div>
-        <div class="tl-icon">⭐</div>
-        <div class="tl-title" data-i18n="paso4_title"></div>
+
+      <!-- Pas 4 -->
+      <div class="vtl-step">
+        <div class="vtl-circle">
+          <i class="fa fa-star"></i>
+          <span class="vtl-num">04</span>
+        </div>
+        <div class="vtl-content">
+          <div class="vtl-head">
+            <h3 class="vtl-title" data-i18n="paso4_title"></h3>
+            <span class="vtl-meta" data-i18n="paso4_meta"></span>
+          </div>
+          <p class="vtl-text" data-i18n="paso4_desc"></p>
+          <p class="vtl-quote" data-i18n="paso4_quote"></p>
+        </div>
       </div>
-      <div class="tl-step" onclick="activaPas(4)">
-        <div class="tl-circle">5</div>
-        <div class="tl-icon">📰</div>
-        <div class="tl-title" data-i18n="paso5_title"></div>
+
+      <!-- Pas 5 -->
+      <div class="vtl-step">
+        <div class="vtl-circle">
+          <i class="fa fa-newspaper"></i>
+          <span class="vtl-num">05</span>
+        </div>
+        <div class="vtl-content">
+          <div class="vtl-head">
+            <h3 class="vtl-title" data-i18n="paso5_title"></h3>
+            <span class="vtl-meta" data-i18n="paso5_meta"></span>
+          </div>
+          <p class="vtl-text" data-i18n="paso5_desc"></p>
+        </div>
       </div>
-      <div class="tl-step" onclick="activaPas(5)">
-        <div class="tl-circle">6</div>
-        <div class="tl-icon">🏆</div>
-        <div class="tl-title" data-i18n="paso6_title"></div>
+
+      <!-- Pas 6 -->
+      <div class="vtl-step">
+        <div class="vtl-circle">
+          <i class="fa fa-trophy"></i>
+          <span class="vtl-num">06</span>
+        </div>
+        <div class="vtl-content">
+          <div class="vtl-head">
+            <h3 class="vtl-title" data-i18n="paso6_title"></h3>
+            <span class="vtl-meta" data-i18n="paso6_meta"></span>
+          </div>
+          <p class="vtl-text" data-i18n="paso6_desc"></p>
+        </div>
       </div>
-    </div>
-    <div class="tl-detail">
-      <div class="tl-detail-num" id="tl-num">01</div>
-      <div>
-        <div class="tl-detail-title" id="tl-title"></div>
-        <div class="tl-detail-text" id="tl-text"></div>
+
+      <!-- Cita de tancament -->
+      <div class="vtl-closing">
+        <p class="vtl-closing-quote" data-i18n="proceso_closing"></p>
+        <p class="vtl-closing-attr" data-i18n="proceso_closing_attr"></p>
       </div>
+
     </div>
   </div>
 </section>
@@ -723,34 +839,6 @@ function setLang(lang) {
 
 <script src="../assets/js/main.js"></script>
 <script>
-const tlNums = ['01','02','03','04','05','06'];
-const tlData = {
-  es: [
-    {title:'Selección',    desc:'El comité selecciona los restaurantes a visitar cada temporada, buscando variedad de cocinas, estilos y niveles.'},
-    {title:'Previa',       desc:'Se publica una crónica previa con historia del restaurante, el chef, la carta y curiosidades para preparar la visita.'},
-    {title:'Visita',       desc:'Los socios viven la experiencia completa: aperitivos, menú de degustación y maridaje.'},
-    {title:'Valoración',   desc:'Cada socio puntúa de 1 a 5 en cada uno de los 8 criterios establecidos, de forma completamente independiente.'},
-    {title:'Crónica',      desc:'Se publica la crónica completa de la visita con fotografías y notas gastronómicas. Las puntuaciones se acumulan a lo largo del recorrido anual.'},
-    {title:'Premios',      desc:'Al final del recorrido anual se suman todas las valoraciones acumuladas y se otorgan el Trofeo Gastronia y el Premio Bacus en la gala de entrega de premios.'},
-  ],
-  ca: [
-    {title:'Selecció',     desc:'El comitè selecciona els restaurants a visitar cada temporada, buscant varietat de cuines, estils i nivells.'},
-    {title:'Prèvia',       desc:"Es publica una crònica prèvia amb història del restaurant, el cuiner, la carta i curiositats per preparar la visita."},
-    {title:'Visita',       desc:"Els socis viuen l'experiència completa: aperitius, menú de degustació i maridatge."},
-    {title:'Valoració',    desc:"Cada soci puntua de l'1 al 5 en cadascun dels 8 criteris establerts, de forma completament independent."},
-    {title:'Crònica',      desc:'Es publica la crònica completa de la visita amb fotografies i notes gastronòmiques. Les puntuacions s\'acumulen al llarg del recorregut anual.'},
-    {title:'Premis',       desc:"Al final del recorregut anual se sumen totes les valoracions acumulades i s'atorguen el Trofeu Gastronia i el Premi Bacus en la gala de lliurament de premis."},
-  ]
-};
-
-function activaPas(i) {
-  document.querySelectorAll('.tl-step').forEach((s,j) => s.classList.toggle('actiu', i===j));
-  const d = tlData[currentLang][i];
-  document.getElementById('tl-num').textContent   = tlNums[i];
-  document.getElementById('tl-title').textContent = d.title;
-  document.getElementById('tl-text').textContent  = d.desc;
-}
-
 /* ── MOMENTS LIGHTBOX ── */
 const momentsData = [
   {img:'../assets/img/moments/moments-01-gala-rofes.jpg',     catKey:'m1_cat', titleKey:'m1_title'},
@@ -789,6 +877,6 @@ document.addEventListener('keydown', e => {
   if(e.key === 'ArrowRight') navegaMoment(1);
 });
 </script>
-<script>applyTranslations(currentLang); activaPas(0);</script>
+<script>applyTranslations(currentLang);</script>
 </body>
 </html>
