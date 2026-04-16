@@ -85,14 +85,32 @@
 .crit-dot{width:7px;height:7px;border-radius:50%;border:1.5px solid var(--gold);background:transparent;}
 .criteria-nota{font-size:.72rem;color:var(--muted);text-align:center;margin-bottom:40px;letter-spacing:.5px;}
 
-.bacus-bloc{background:var(--navy-dark);padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;}
-.bacus-text .stitle{color:#fff;}
+.bacus-bloc{position:relative;background:var(--navy-dark);padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;overflow:hidden;min-height:440px;}
+.bacus-img{position:relative;overflow:hidden;background:#0b1626;}
+.bacus-img-bg{position:absolute;inset:0;background-image:url('../assets/img/bacus/bacus-raim.jpg');background-size:cover;background-position:center;transform:scale(1.02);transition:transform 8s ease;}
+.bacus-bloc:hover .bacus-img-bg{transform:scale(1);}
+.bacus-img-grad{position:absolute;inset:0;background:linear-gradient(to right,transparent 0%,transparent 60%,rgba(11,22,38,.4) 100%);}
+.bacus-img-marco{position:absolute;inset:20px;border:1px solid rgba(184,146,74,.25);pointer-events:none;}
+.bacus-img-badge{position:absolute;bottom:22px;left:22px;z-index:2;background:rgba(11,22,38,.75);backdrop-filter:blur(6px);padding:10px 16px;border-left:2px solid var(--gold);}
+.bacus-img-badge-label{font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:2px;}
+.bacus-img-badge-text{font-size:.75rem;color:rgba(255,255,255,.85);font-weight:300;}
+.bacus-text{padding:52px;display:flex;flex-direction:column;justify-content:center;}
+.bacus-text .stitle{color:#fff;margin-top:4px;}
 .bacus-text .slabel{color:rgba(184,146,74,.8);}
-.bacus-text p{font-size:.93rem;color:rgba(255,255,255,.58);font-weight:300;line-height:1.85;margin-bottom:12px;}
-.bacus-criteris{display:flex;flex-direction:column;gap:12px;}
-.bacus-crit{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.05);padding:14px 18px;border-left:3px solid rgba(184,146,74,.4);}
-.bacus-crit-nom{font-size:.88rem;color:rgba(255,255,255,.78);font-weight:400;flex:1;}
-.bacus-crit-score{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(184,146,74,.65);white-space:nowrap;}
+.bacus-text p{font-size:.93rem;color:rgba(255,255,255,.58);font-weight:300;line-height:1.85;margin-bottom:14px;}
+.bacus-text p strong{color:rgba(255,255,255,.9);font-weight:500;}
+
+/* Panel del guanyador */
+.bacus-winner{margin-top:22px;padding:22px 24px;background:rgba(184,146,74,.08);border-left:3px solid var(--gold);position:relative;}
+.bacus-winner-top{display:flex;align-items:baseline;gap:14px;margin-bottom:10px;flex-wrap:wrap;}
+.bacus-winner-year{font-family:var(--font-serif);font-size:2.2rem;color:var(--gold);line-height:1;font-weight:700;}
+.bacus-winner-label{font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(184,146,74,.7);}
+.bacus-winner-name{font-family:var(--font-serif);font-size:1.5rem;color:#fff;line-height:1.2;margin-bottom:6px;font-weight:600;}
+.bacus-winner-name em{font-style:italic;color:var(--gold);}
+.bacus-winner-meta{font-size:.78rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.65;}
+.bacus-winner-meta span{display:inline-block;margin-right:10px;}
+.bacus-winner-meta span::after{content:'·';margin-left:10px;color:rgba(184,146,74,.4);}
+.bacus-winner-meta span:last-child::after{display:none;}
 
 .junta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
 .junta-card{background:#fff;border:1px solid var(--border);padding:28px 18px;text-align:center;transition:transform .3s,box-shadow .3s;}
@@ -171,7 +189,9 @@
   .salut-grid{grid-template-columns:200px 1fr;gap:40px;}
   .criteria-grid{grid-template-columns:repeat(2,1fr);}
   .junta-grid{grid-template-columns:repeat(2,1fr);}
-  .bacus-bloc{grid-template-columns:1fr;padding:36px;}
+  .bacus-bloc{grid-template-columns:1fr;min-height:auto;}
+  .bacus-img{min-height:280px;}
+  .bacus-text{padding:40px 32px;}
   .estatuts-grid{grid-template-columns:1fr;}
   .estatuts-doc{position:static;}
   .moments-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:280px;}
@@ -325,11 +345,21 @@ const t = {
   c6_nom:{es:'Elaboración y complejidad',ca:'Elaboració i complexitat'},c6_desc:{es:'Técnica culinaria, creatividad y ejecución de los platos.',ca:'Tècnica culinària, creativitat i execució dels plats.'},
   c7_nom:{es:'Postres',ca:'Postres'},c7_desc:{es:'Calidad, creatividad y acabado del apartado dulce.',ca:"Qualitat, creativitat i acabat de l'apartat dolç."},
   c8_nom:{es:'Explicaciones del chef',ca:'Explicacions del cuiner'},c8_desc:{es:'Claridad, pasión y capacidad de comunicar la propuesta gastronómica.',ca:'Claredat, passió i capacitat de comunicar la proposta gastronòmica.'},
-  bacus_val_label:{es:'Premio Bacus · Valoración de vinos',ca:'Premi Bacus · Valoració de vins'},
-  bacus_val_title:{es:'El mejor vino de la temporada',ca:'El millor vi de la temporada'},
-  bacus_val_desc:{es:'En cada visita, los socios valoran los vinos servidos durante el maridaje con una única puntuación global del 1 al 5. La puntuación acumulada a lo largo de todas las visitas determina el ganador del Premio Bacus.',ca:"En cada visita, els socis valoren els vins servits durant el maridatge amb una única puntuació global de l'1 al 5. La puntuació acumulada al llarg de totes les visites determina el guanyador del Premi Bacus."},
-  bacus_val_desc2:{es:'La bodega o vino ganador es invitado de honor a la Cena de Entrega de Premios.',ca:"El celler o vi guanyador és convidat d'honor al Sopar de Lliurament de Premis."},
-  bacus_val_exemple:{es:'Ejemplo: un vino puntuado con 4 sobre 5',ca:"Exemple: un vi puntuat amb 4 sobre 5"},
+  bacus_val_label:{es:'Premio Bacus · Mejor vino de la temporada',ca:'Premi Bacus · Millor vi de la temporada'},
+  bacus_val_title:{es:'Un reconocimiento al arte del vino',ca:'Un reconeixement a l\'art del vi'},
+  bacus_val_desc:{es:'En cada visita valoramos los vinos del maridaje con una puntuación global. El vino que acumula la mejor puntuación a lo largo del recorrido anual recibe el <strong>Premio Bacus</strong> a la gala de entrega.',ca:"En cada visita valorem els vins del maridatge amb una puntuació global. El vi que acumula la millor puntuació al llarg del recorregut anual rep el <strong>Premi Bacus</strong> a la gala de lliurament."},
+  bacus_val_desc2:{es:'La bodega ganadora es <strong>invitada de honor</strong> en la Cena de Entrega de Premios, donde comparte mesa con socios, restauradores y prensa gastronómica.',ca:"El celler guanyador és <strong>convidat d'honor</strong> al Sopar de Lliurament de Premis, on comparteix taula amb socis, restauradors i premsa gastronòmica."},
+
+  // GUANYADOR ACTUAL
+  bacus_winner_label:{es:'Ganador de la temporada',ca:'Guanyador de la temporada'},
+  bacus_winner_name:{es:'Cirerets <em>de Mas Alta</em>',ca:'Cirerets <em>de Mas Alta</em>'},
+  bacus_winner_meta_1:{es:'DOQ Priorat',ca:'DOQ Priorat'},
+  bacus_winner_meta_2:{es:'Garnacha & Cariñena',ca:'Garnatxa i Carinyena'},
+  bacus_winner_meta_3:{es:'La Vilella Alta',ca:'La Vilella Alta'},
+
+  // FOTO BADGE
+  bacus_photo_label:{es:'El alma del vino',ca:"L'ànima del vi"},
+  bacus_photo_text:{es:'Uva garnacha del Priorat',ca:'Raïm garnatxa del Priorat'},
   junta_label:{es:'La Junta',ca:'La Junta'},
   junta_title:{es:'Quienes llevan el timón',ca:'Qui porta el timó'},
   cargo_president:{es:'Presidente',ca:'President'},
@@ -651,26 +681,34 @@ function setLang(lang) {
     <p class="criteria-nota" data-i18n="criteris_nota"></p>
 
     <div class="bacus-bloc">
+      <div class="bacus-img">
+        <div class="bacus-img-bg"></div>
+        <div class="bacus-img-grad"></div>
+        <div class="bacus-img-marco"></div>
+        <div class="bacus-img-badge">
+          <span class="bacus-img-badge-label" data-i18n="bacus_photo_label"></span>
+          <span class="bacus-img-badge-text" data-i18n="bacus_photo_text"></span>
+        </div>
+      </div>
       <div class="bacus-text">
         <p class="slabel" data-i18n="bacus_val_label"></p>
         <h3 class="stitle" data-i18n="bacus_val_title"></h3>
         <div class="sdiv"></div>
         <p data-i18n="bacus_val_desc"></p>
         <p data-i18n="bacus_val_desc2"></p>
-      </div>
-      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;text-align:center;">
-        <i class="fa fa-wine-glass-alt" style="font-size:3.5rem;color:rgba(184,146,74,.5);"></i>
-        <div>
-          <p style="font-size:.65rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(184,146,74,.7);margin-bottom:8px;" data-i18n="puntuacio"></p>
-          <div style="display:flex;gap:10px;justify-content:center;">
-            <span style="width:44px;height:44px;border:1.5px solid rgba(184,146,74,.3);color:rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;">1</span>
-            <span style="width:44px;height:44px;border:1.5px solid rgba(184,146,74,.3);color:rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;">2</span>
-            <span style="width:44px;height:44px;border:1.5px solid rgba(184,146,74,.3);color:rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;">3</span>
-            <span style="width:44px;height:44px;border:1.5px solid rgba(184,146,74,.5);background:rgba(184,146,74,.15);color:rgba(184,146,74,.9);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;">4</span>
-            <span style="width:44px;height:44px;border:1.5px solid rgba(184,146,74,.3);color:rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;">5</span>
+
+        <div class="bacus-winner">
+          <div class="bacus-winner-top">
+            <span class="bacus-winner-year">2025</span>
+            <span class="bacus-winner-label" data-i18n="bacus_winner_label"></span>
           </div>
+          <p class="bacus-winner-name" data-i18n="bacus_winner_name"></p>
+          <p class="bacus-winner-meta">
+            <span data-i18n="bacus_winner_meta_1"></span>
+            <span data-i18n="bacus_winner_meta_2"></span>
+            <span data-i18n="bacus_winner_meta_3"></span>
+          </p>
         </div>
-        <p style="font-size:.82rem;color:rgba(255,255,255,.4);font-style:italic;" data-i18n="bacus_val_exemple"></p>
       </div>
     </div>
   </div>
