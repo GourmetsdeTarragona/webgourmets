@@ -16,7 +16,7 @@
   position: absolute; inset: 0;
   background-image: url('../img/hero.jpg');
   background-size: cover; background-position: center 60%;
-  opacity: .45;
+  opacity: .62;
   transform: scale(1.03);
   transition: transform 10s ease;
 }
@@ -27,8 +27,9 @@
   position: absolute; inset: 0;
   background: linear-gradient(
     to top,
-    rgba(11,22,38,.97) 0%,
-    rgba(11,22,38,.60) 45%,
+    rgba(11,22,38,.98) 0%,
+    rgba(11,22,38,.75) 40%,
+    rgba(11,22,38,.35) 70%,
     rgba(11,22,38,.15) 100%
   );
 }
