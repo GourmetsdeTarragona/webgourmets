@@ -362,14 +362,32 @@
 </footer>
 
 <script>
-window.translations = window.translations || {};
-const pageTranslations = {
-  back_blog:     { es: 'Volver al Blog',     ca: 'Tornar al Blog' },
-  back_blog_btn: { es: '← Volver al Blog',   ca: '← Tornar al Blog' },
-};
-Object.assign(window.translations, pageTranslations);
+/* ── SISTEMA I18N INLINE ── */
+var currentLang = localStorage.getItem('gdt-lang') || 'es';
+
+function applyTranslations(lang) {
+  /* 1. Elements amb data-es / data-ca (contingut de la pàgina) */
+  document.querySelectorAll('[data-es]').forEach(function(el) {
+    var txt = el.getAttribute('data-' + lang);
+    if (txt !== null) el.innerHTML = txt;
+  });
+  /* 2. Llengua del document */
+  var root = document.getElementById('html-root');
+  if (root) root.setAttribute('lang', lang);
+  /* 3. Botons de llengua */
+  document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+  });
+}
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('gdt-lang', lang);
+  applyTranslations(lang);
+}
+
+applyTranslations(currentLang);
 </script>
-<script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>
