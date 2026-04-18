@@ -194,6 +194,7 @@
 .cat-vi{background:#6b2737;}
 .cat-event{background:#2a7a4b;}
 .cat-curiositats{background:#8b5e3c;color:#fff;}
+.cat-cultura{background:#5c6e3f;color:#fff;}
 
 /* ── EMPTY STATE ── */
 .blog-empty{
@@ -305,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span class="t" data-es="Todos" data-ca="Tots">Todos</span>
-      <span class="filtre-n">9</span>
+      <span class="filtre-n">10</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot" style="background:var(--navy);"></span>
@@ -320,6 +321,11 @@ document.addEventListener('DOMContentLoaded', function() {
     <button class="filtre-btn" data-cat="noticia" onclick="filterEntrades('noticia')">
       <span class="filtre-dot" style="background:#555;"></span>
       <span class="t" data-es="Noticias" data-ca="Notícies">Noticias</span>
+      <span class="filtre-n">1</span>
+    </button>
+    <button class="filtre-btn" data-cat="cultura" onclick="filterEntrades('cultura')">
+      <span class="filtre-dot" style="background:#5c6e3f;"></span>
+      <span class="t" data-es="Cultura" data-ca="Cultura">Cultura</span>
       <span class="filtre-n">1</span>
     </button>
     <button class="filtre-btn" data-cat="vi" onclick="filterEntrades('vi')">
@@ -472,6 +478,28 @@ document.addEventListener('DOMContentLoaded', function() {
         <h3 class="blog-card-title t" data-es='Gala de Premios 2025<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Vermuts Rofes · Reus</small>' data-ca='Gala de Premis 2025<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Vermuts Rofes · Reus</small>'>Gala de Premios 2025<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Vermuts Rofes · Reus</small></h3>
         <p class="blog-card-exc t" data-es="Buidasacs y Cambium, Trofeos Gastronía. Cirerets de Mas Alta, Premio Bacus. Una noche de reconocimiento y emoción en el Camp de Tarragona." data-ca="Buidasacs i Cambium, Trofeus Gastronia. Cirerets de Mas Alta, Premi Bacus. Una nit de reconeixement i emoció al Camp de Tarragona.">Buidasacs y Cambium, Trofeos Gastronía. Cirerets de Mas Alta, Premio Bacus. Una noche de reconocimiento y emoción en el Camp de Tarragona.</p>
         <a href="../entrades/gala-premis-2025.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
+    <!-- Sant Jordi 2026 · Cultura -->
+    <article class="blog-card" data-cat="cultura">
+      <div class="blog-card-img">
+        <img src="../assets/img/santjordi/santjordi-calcotada.jpg" alt="8 llibres per a un Sant Jordi Gourmet 2026">
+        <span class="blog-card-cat cat-cultura t" data-es="Cultura" data-ca="Cultura">Cultura</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data">23 Abril 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es='8 libros para Sant Jordi<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Selección Gourmet 2026</small>'
+            data-ca='8 llibres per Sant Jordi<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Selecció Gourmet 2026</small>'>
+          8 libros para Sant Jordi<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Selección Gourmet 2026</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Nuestra selección de lecturas gastronómicas para este 23 de abril. Tres títulos de Cossetània Edicions (Valls) y un autor de Reus hacen de esta lista un recorrido literario con raíces en el Camp de Tarragona."
+           data-ca="La nostra selecció de lectures gastronòmiques per a aquest 23 d'abril. Tres títols de Cossetània Edicions (Valls) i un autor de Reus fan d'aquesta llista un recorregut literari amb arrels al Camp de Tarragona.">
+          Nuestra selección de lecturas gastronómicas para este 23 de abril. Tres títulos de Cossetània Edicions (Valls) y un autor de Reus hacen de esta lista un recorrido literario con raíces en el Camp de Tarragona.
+        </p>
+        <a href="../entrades/santjordi-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
