@@ -15,11 +15,12 @@
 .hero-bg {
   position: absolute; inset: 0;
   background-image: url('../img/hero.jpg');
-  background-size: cover; background-position: center;
-  opacity: .32;
-  /* Fallback mentre no hi ha foto local:
-  background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80'); */
+  background-size: cover; background-position: center 60%;
+  opacity: .45;
+  transform: scale(1.03);
+  transition: transform 10s ease;
 }
+#hero:hover .hero-bg { transform: scale(1.0); }
 
 /* Gradient fosc cap a baix */
 .hero-gradient {
