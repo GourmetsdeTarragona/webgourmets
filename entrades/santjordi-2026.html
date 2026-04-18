@@ -90,26 +90,23 @@
 
 /* ── LLIBRE BLOC ── */
 .llibre-bloc{display:grid;grid-template-columns:160px 1fr;gap:36px;align-items:start;margin:0;padding:44px 36px;background:var(--cream);border-left:4px solid var(--gold);}
-.llibre-bloc:nth-child(even){background:var(--navy-dark);border-left-color:rgba(184,146,74,.5);}
+.llibre-bloc:nth-child(even){background:#fff;border-left-color:var(--navy);}
 .llibre-portada{position:relative;}
-.llibre-portada img{width:100%;height:auto;box-shadow:0 8px 28px rgba(28,46,62,.25);display:block;}
+.llibre-portada img{width:100%;height:auto;box-shadow:0 8px 28px rgba(28,46,62,.18);display:block;}
 .llibre-num{position:absolute;top:-10px;left:-10px;width:28px;height:28px;background:var(--gold);color:#fff;font-family:var(--font-serif);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;}
-.llibre-bloc:nth-child(even) .llibre-num{background:rgba(184,146,74,.9);}
+.llibre-bloc:nth-child(even) .llibre-num{background:var(--navy);}
 .llibre-info{}
 .llibre-editorial{font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block;}
-.llibre-editorial a{color:inherit;border-bottom:1px solid rgba(184,146,74,.4);padding-bottom:1px;transition:border-color .2s,opacity .2s;}
-.llibre-editorial a:hover{border-bottom-color:var(--gold);opacity:.8;}
-.llibre-bloc:nth-child(even) .llibre-editorial{color:rgba(184,146,74,.85);}
+.llibre-editorial a{color:inherit;border-bottom:1px solid rgba(184,146,74,.4);padding-bottom:1px;transition:border-color .2s;}
+.llibre-editorial a:hover{border-bottom-color:var(--gold);}
+.llibre-bloc:nth-child(even) .llibre-editorial{color:var(--navy);}
+.llibre-bloc:nth-child(even) .llibre-editorial a{border-bottom-color:rgba(28,46,62,.3);}
+.llibre-bloc:nth-child(even) .llibre-editorial a:hover{border-bottom-color:var(--navy);}
 .llibre-titol{font-family:var(--font-serif);font-size:1.35rem;font-weight:700;color:var(--navy-dark);line-height:1.2;margin-bottom:4px;}
-.llibre-bloc:nth-child(even) .llibre-titol{color:#fff;}
 .llibre-autor{font-size:.82rem;color:var(--muted);font-weight:300;margin-bottom:14px;}
-.llibre-bloc:nth-child(even) .llibre-autor{color:rgba(255,255,255,.5);}
 .llibre-desc{font-size:.92rem;font-weight:300;color:#444;line-height:1.85;}
-.llibre-bloc:nth-child(even) .llibre-desc{color:rgba(255,255,255,.7);}
 .llibre-desc strong{font-weight:600;color:var(--navy-dark);}
-.llibre-bloc:nth-child(even) .llibre-desc strong{color:#fff;}
 .llibre-tag{display:inline-block;margin-top:12px;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:rgba(184,146,74,.12);color:var(--gold);padding:4px 10px;border:1px solid rgba(184,146,74,.3);}
-.llibre-bloc:nth-child(even) .llibre-tag{background:rgba(184,146,74,.1);border-color:rgba(184,146,74,.3);}
 
 /* ── TANCAMENT ── */
 .e-tancament{background:var(--navy-dark);padding:56px 44px;margin:0;text-align:center;position:relative;overflow:hidden;}
@@ -241,7 +238,7 @@
       <img src="../assets/img/santjordi/santjordi-calcotada.jpg" alt="El Gran Llibre de la Calçotada">
     </div>
     <div class="llibre-info">
-      <span class="llibre-editorial t" data-es="<a href="https://www.cossetania.cat" target="_blank" rel="noopener">Cossetània Edicions</a> · Valls" data-ca="<a href="https://www.cossetania.cat" target="_blank" rel="noopener">Cossetània Edicions</a> · Valls"><a href="https://www.cossetania.cat" target="_blank" rel="noopener">Cossetània Edicions</a> · Valls</span>
+      <span class="llibre-editorial"><a href="https://www.cossetania.com/el-gran-llibre-de-la-calcotada" target="_blank" rel="noopener">Cossetània Edicions · Valls</a></span>
       <h3 class="llibre-titol t" data-es="El Gran Llibre de la Calçotada" data-ca="El Gran Llibre de la Calçotada">El Gran Llibre de la Calçotada</h3>
       <p class="llibre-autor t" data-es="Coord. Guillermo Soler García de Oteyza · Dir. Albert París Fortuny · Amb Jaume Fàbrega, Carme Ruscalleda, Ferran Adrià i Ada Parellada" data-ca="Coord. Guillermo Soler García de Oteyza · Dir. Albert París Fortuny · Amb Jaume Fàbrega, Carme Ruscalleda, Ferran Adrià i Ada Parellada">Coord. Guillermo Soler García de Oteyza · Dir. Albert París Fortuny · Amb Jaume Fàbrega, Carme Ruscalleda, Ferran Adrià i Ada Parellada</p>
       <p class="llibre-desc t"
@@ -259,7 +256,7 @@
       <img src="../assets/img/santjordi/santjordi-paisatge.webp" alt="Paisatge a la cassola">
     </div>
     <div class="llibre-info">
-      <span class="llibre-editorial t" data-es="<a href="https://www.cossetania.cat" target="_blank" rel="noopener">Cossetània Edicions</a> · Valls" data-ca="<a href="https://www.cossetania.cat" target="_blank" rel="noopener">Cossetània Edicions</a> · Valls"><a href="https://www.cossetania.cat" target="_blank" rel="noopener">Cossetània Edicions</a> · Valls</span>
+      <span class="llibre-editorial"><a href="https://www.cossetania.com/paisatge-a-la-cassola" target="_blank" rel="noopener">Cossetània Edicions · Valls</a></span>
       <h3 class="llibre-titol t" data-es="Paisatge a la cassola" data-ca="Paisatge a la cassola">Paisatge a la cassola</h3>
       <p class="llibre-autor t" data-es="Enric Herce" data-ca="Enric Herce">Enric Herce</p>
       <p class="llibre-desc t"
@@ -275,7 +272,7 @@
       <img src="../assets/img/santjordi/santjordi-catalunyacopa.webp" alt="Catalunya a la copa i al plat">
     </div>
     <div class="llibre-info">
-      <span class="llibre-editorial t" data-es="<a href="https://www.cossetania.cat" target="_blank" rel="noopener">Cossetània Edicions</a> · Valls" data-ca="<a href="https://www.cossetania.cat" target="_blank" rel="noopener">Cossetània Edicions</a> · Valls"><a href="https://www.cossetania.cat" target="_blank" rel="noopener">Cossetània Edicions</a> · Valls</span>
+      <span class="llibre-editorial"><a href="https://www.cossetania.com/catalunya-a-la-copa-i-al-plat" target="_blank" rel="noopener">Cossetània Edicions · Valls</a></span>
       <h3 class="llibre-titol t" data-es="Catalunya a la copa i al plat" data-ca="Catalunya a la copa i al plat">Catalunya a la copa i al plat</h3>
       <p class="llibre-autor t" data-es="Gessamí Caramés i Javier Campo" data-ca="Gessamí Caramés i Javier Campo">Gessamí Caramés i Javier Campo</p>
       <p class="llibre-desc t"
@@ -292,7 +289,7 @@
       <img src="../assets/img/santjordi/santjordi-fricando.jpg" alt="Fricandó Nation">
     </div>
     <div class="llibre-info">
-      <span class="llibre-editorial t" data-es="<a href="https://www.destinolibros.com" target="_blank" rel="noopener">Destino</a> · <a href="https://www.instagram.com/segellfosc/" target="_blank" rel="noopener">Segell Fosc</a>" data-ca="<a href="https://www.destinolibros.com" target="_blank" rel="noopener">Destino</a> · <a href="https://www.instagram.com/segellfosc/" target="_blank" rel="noopener">Segell Fosc</a>"><a href="https://www.destinolibros.com" target="_blank" rel="noopener">Destino</a> · <a href="https://www.instagram.com/segellfosc/" target="_blank" rel="noopener">Segell Fosc</a></span>
+      <span class="llibre-editorial"><a href="https://www.grup62.cat/llibre-fricandonation/442210" target="_blank" rel="noopener">Segell Fosc · Grup 62</a></span>
       <h3 class="llibre-titol t" data-es="Fricandó Nation" data-ca="Fricandó Nation">Fricandó Nation</h3>
       <p class="llibre-autor t" data-es="Miquel Bonet Pinyol (Reus, 1977)" data-ca="Miquel Bonet Pinyol (Reus, 1977)">Miquel Bonet Pinyol (Reus, 1977)</p>
       <p class="llibre-desc t"
@@ -310,7 +307,7 @@
       <img src="../assets/img/santjordi/santjordi-naturaviva.webp" alt="Natura Viva. Les Cols restaurant">
     </div>
     <div class="llibre-info">
-      <span class="llibre-editorial t" data-es="<a href="https://www.arallibres.cat" target="_blank" rel="noopener">Ara Llibres</a>" data-ca="<a href="https://www.arallibres.cat" target="_blank" rel="noopener">Ara Llibres</a>"><a href="https://www.arallibres.cat" target="_blank" rel="noopener">Ara Llibres</a></span>
+      <span class="llibre-editorial"><a href="https://arallibres.cat/cataleg/natura-viva-les-cols-restaurant/" target="_blank" rel="noopener">Ara Llibres</a></span>
       <h3 class="llibre-titol t" data-es="Natura Viva. Les Cols restaurant" data-ca="Natura Viva. Les Cols restaurant">Natura Viva. Les Cols restaurant</h3>
       <p class="llibre-autor t" data-es="Martina Puigvert Puigdevall (Olot, 1994) · Fotografies: Alba Yruela" data-ca="Martina Puigvert Puigdevall (Olot, 1994) · Fotografies: Alba Yruela">Martina Puigvert Puigdevall (Olot, 1994) · Fotografies: Alba Yruela</p>
       <p class="llibre-desc t"
@@ -326,7 +323,7 @@
       <img src="../assets/img/santjordi/santjordi-corpus.webp" alt="Corpus de la Cuina Catalana">
     </div>
     <div class="llibre-info">
-      <span class="llibre-editorial t" data-es="<a href="https://www.arpaeditores.com" target="_blank" rel="noopener">Arpa</a> / <a href="https://www.arallibres.cat" target="_blank" rel="noopener">Ara Llibres</a>" data-ca="<a href="https://www.arpaeditores.com" target="_blank" rel="noopener">Arpa</a> / <a href="https://www.arallibres.cat" target="_blank" rel="noopener">Ara Llibres</a>"><a href="https://www.arpaeditores.com" target="_blank" rel="noopener">Arpa</a> / <a href="https://www.arallibres.cat" target="_blank" rel="noopener">Ara Llibres</a></span>
+      <span class="llibre-editorial"><a href="https://arallibres.cat/cataleg/corpus-de-la-cuina-catalana/" target="_blank" rel="noopener">Ara Llibres / Arpa</a></span>
       <h3 class="llibre-titol t" data-es="Corpus de la Cuina Catalana (4a edició)" data-ca="Corpus de la Cuina Catalana (4a edició)">Corpus de la Cuina Catalana (4a edició)</h3>
       <p class="llibre-autor t" data-es="Fundació Institut del Patrimoni Culinari Català" data-ca="Fundació Institut del Patrimoni Culinari Català">Fundació Institut del Patrimoni Culinari Català</p>
       <p class="llibre-desc t"
@@ -342,7 +339,7 @@
       <img src="../assets/img/santjordi/santjordi-cosesdecasa.jpg" alt="Coses de Casa · Jordi Roca">
     </div>
     <div class="llibre-info">
-      <span class="llibre-editorial t" data-es="<a href="https://www.planetadelibros.com/coleccion/planeta-gastro/00040" target="_blank" rel="noopener">Planeta Gastro</a>" data-ca="<a href="https://www.planetadelibros.com/coleccion/planeta-gastro/00040" target="_blank" rel="noopener">Planeta Gastro</a>"><a href="https://www.planetadelibros.com/coleccion/planeta-gastro/00040" target="_blank" rel="noopener">Planeta Gastro</a></span>
+      <span class="llibre-editorial"><a href="https://www.planetadelibros.com/libro-coses-de-casa-receptes-imbatibles/411882" target="_blank" rel="noopener">Planeta Gastro</a></span>
       <h3 class="llibre-titol t" data-es="Coses de Casa. Receptes imbatibles" data-ca="Coses de Casa. Receptes imbatibles">Coses de Casa. Receptes imbatibles</h3>
       <p class="llibre-autor t" data-es="Jordi Roca · El Celler de Can Roca (3 estrelles Michelin)" data-ca="Jordi Roca · El Celler de Can Roca (3 estrelles Michelin)">Jordi Roca · El Celler de Can Roca (3 estrelles Michelin)</p>
       <p class="llibre-desc t"
@@ -358,7 +355,7 @@
       <img src="../assets/img/santjordi/santjordi-cuinem.jpg" alt="Cuinem! · Pep Salsetes">
     </div>
     <div class="llibre-info">
-      <span class="llibre-editorial t" data-es="<a href="https://www.penguinlibros.com/ca/segells/rosa-dels-vents" target="_blank" rel="noopener">Rosa dels Vents</a> · Penguin Random House" data-ca="<a href="https://www.penguinlibros.com/ca/segells/rosa-dels-vents" target="_blank" rel="noopener">Rosa dels Vents</a> · Penguin Random House"><a href="https://www.penguinlibros.com/ca/segells/rosa-dels-vents" target="_blank" rel="noopener">Rosa dels Vents</a> · Penguin Random House</span>
+      <span class="llibre-editorial"><a href="https://www.penguinlibros.com/ca/infantil-i-juvenil/1004540-llibre-cuinem-9788417833749" target="_blank" rel="noopener">Rosa dels Vents · Penguin</a></span>
       <h3 class="llibre-titol t" data-es="Cuinem! Cuina catalana per a tota la família" data-ca="Cuinem! Cuina catalana per a tota la família">Cuinem! Cuina catalana per a tota la família</h3>
       <p class="llibre-autor t" data-es="Pep Salsetes · Il·lustracions: Daniel Soms" data-ca="Pep Salsetes · Il·lustracions: Daniel Soms">Pep Salsetes · Il·lustracions: Daniel Soms</p>
       <p class="llibre-desc t"
@@ -377,11 +374,10 @@
        data-es="Gracias a <strong>Cossetània Edicions, Ara Llibres, Arpa, Destino, Planeta Gastro y Rosa dels Vents</strong> por mantener vivo el ecosistema editorial gastronómico en catalán. Y gracias a las libreras y libreros de proximidad que cada Sant Jordi convierten los carrers en el mejor escaparate del mundo."
        data-ca="Gràcies a <strong>Cossetània Edicions, Ara Llibres, Arpa, Destino, Planeta Gastro i Rosa dels Vents</strong> per mantenir viu l'ecosistema editorial gastronòmic en català. I gràcies a les llibreteres i llibreters de proximitat que cada Sant Jordi converteixen els carrers en el millor aparador del món.">Gracias a <strong>Cossetània Edicions, Ara Llibres, Arpa, Destino, Planeta Gastro y Rosa dels Vents</strong> por mantener vivo el ecosistema editorial gastronómico en catalán. Y gracias a las libreras y libreros de proximidad que cada Sant Jordi convierten los carrers en el mejor escaparate del mundo.</p>
     <div class="e-tancament-editorials">
-      <a href="https://www.cossetania.cat" target="_blank" rel="noopener">Cossetània Edicions</a>
-      <a href="https://www.arallibres.cat" target="_blank" rel="noopener">Ara Llibres</a>
-      <a href="https://www.arpaeditores.com" target="_blank" rel="noopener">Arpa Editores</a>
-      <a href="https://www.destinolibros.com" target="_blank" rel="noopener">Destino</a>
-      <a href="https://www.planetadelibros.com/coleccion/planeta-gastro/00040" target="_blank" rel="noopener">Planeta Gastro</a>
+      <a href="https://www.cossetania.com" target="_blank" rel="noopener">Cossetània Edicions</a>
+      <a href="https://arallibres.cat" target="_blank" rel="noopener">Ara Llibres</a>
+      <a href="https://www.grup62.cat" target="_blank" rel="noopener">Segell Fosc</a>
+      <a href="https://www.planetadelibros.com" target="_blank" rel="noopener">Planeta Gastro</a>
       <a href="https://www.penguinlibros.com/ca/segells/rosa-dels-vents" target="_blank" rel="noopener">Rosa dels Vents</a>
     </div>
   </div>
