@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8 llibres per a un Sant Jordi Gourmet 2026 · Gourmets de Tarragona</title>
+<meta name="description" content="La nostra selecció de 8 llibres gastronòmics per a Sant Jordi 2026. Tres títols de Cossetània Edicions i un autor de Reus fan d'aquesta llista un recorregut literari amb arrels al Camp de Tarragona.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/seccions.css">
+<style>
+/* ── HERO ENTRADA ── */
+.entrada-hero{position:relative;min-height:62vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.38;}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.97) 0%,rgba(11,22,38,.55) 55%,rgba(11,22,38,.1) 100%);}
+.entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
+.entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:860px;}
+.entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
+.entrada-back:hover{color:var(--gold);}
+.entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;display:inline-block;margin-bottom:18px;}
+.entrada-badge-cultura{background:#4a7a6e;}
+.entrada-meta{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);}
+.entrada-titol{font-family:var(--font-serif);font-size:clamp(2rem,5vw,3.6rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
+.entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.85;max-width:560px;}
+
+/* ── COS ── */
+.entrada-cos{max-width:860px;margin:0 auto;padding:72px 4%;}
+.e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-title{font-family:var(--font-serif);font-size:1.65rem;color:var(--navy-dark);line-height:1.2;margin-bottom:18px;}
+.e-p{font-size:1rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:18px;}
+.e-p strong{font-weight:700;color:var(--navy-dark);}
+.e-p em{font-style:italic;}
+.e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin:44px 0;}
+
+/* ── LLIBRE BLOC ── */
+.llibre-bloc{display:grid;grid-template-columns:160px 1fr;gap:36px;align-items:start;margin:48px 0;padding:36px;background:var(--cream);border-left:3px solid var(--gold);}
+.llibre-bloc:nth-child(even){background:#fff;border-left-color:var(--navy);}
+.llibre-portada{position:relative;}
+.llibre-portada img{width:100%;height:auto;box-shadow:0 8px 28px rgba(28,46,62,.18);display:block;}
+.llibre-num{position:absolute;top:-10px;left:-10px;width:28px;height:28px;background:var(--gold);color:#fff;font-family:var(--font-serif);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.llibre-bloc:nth-child(even) .llibre-num{background:var(--navy);}
+.llibre-info{}
+.llibre-editorial{font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block;}
+.llibre-bloc:nth-child(even) .llibre-editorial{color:var(--navy);}
+.llibre-titol{font-family:var(--font-serif);font-size:1.35rem;font-weight:700;color:var(--navy-dark);line-height:1.2;margin-bottom:4px;}
+.llibre-autor{font-size:.82rem;color:var(--muted);font-weight:300;margin-bottom:14px;}
+.llibre-desc{font-size:.92rem;font-weight:300;color:#444;line-height:1.85;}
+.llibre-desc strong{font-weight:600;color:var(--navy-dark);}
+.llibre-tag{display:inline-block;margin-top:12px;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:rgba(184,146,74,.12);color:var(--gold);padding:4px 10px;border:1px solid rgba(184,146,74,.3);}
+
+/* ── TANCAMENT ── */
+.e-tancament{background:var(--navy-dark);padding:44px;margin:48px 0;text-align:center;}
+.e-tancament p{font-size:.95rem;font-weight:300;color:rgba(255,255,255,.65);line-height:1.85;max-width:560px;margin:0 auto;}
+.e-tancament strong{color:var(--gold);font-weight:500;}
+
+/* ── NAV RETORN ── */
+.e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:680px){
+  .entrada-cos{padding:52px 5%;}
+  .llibre-bloc{grid-template-columns:100px 1fr;gap:20px;padding:24px;}
+  .entrada-hero-content{padding:0 5% 52px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" class="solid">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona">
+    </a>
+    <div class="nav-menu">
+      <div class="nav-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
+      <div class="nav-item">
+        <span class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</span>
+        <div class="dropdown">
+          <a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a>
+          <a href="../pages/associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span>
+        <div class="dropdown">
+          <a href="../pages/restaurants.html" class="t" data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visitas 2025–26</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="Premios" data-ca="Premis">Premios</span>
+        <div class="dropdown">
+          <a href="../pages/premis.html" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</a>
+          <a href="../pages/premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+      <div class="nav-item"><a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
+    <div class="mobile-item"><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
+    <div class="mobile-item"><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
+    <div class="mobile-item"><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></div>
+    <div class="mobile-item"><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+    <div class="mobile-item"><a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="entrada-hero">
+  <div class="entrada-hero-bg" style="background-image:url('../assets/img/hero.jpg');background-position:center 60%;opacity:.32;"></div>
+  <div class="entrada-hero-grad"></div>
+  <div class="entrada-hero-line"></div>
+  <div class="entrada-hero-content">
+    <a href="../pages/blog.html" class="entrada-back"><i class="fa fa-arrow-left"></i> <span class="t" data-es="Volver al Blog" data-ca="Tornar al Blog">Volver al Blog</span></a>
+    <span class="entrada-badge entrada-badge-cultura t" data-es="Cultura · Sant Jordi 2026" data-ca="Cultura · Sant Jordi 2026">Cultura · Sant Jordi 2026</span>
+    <div class="entrada-meta">
+      <span class="entrada-meta-item t" data-es="📚 8 llibres recomanats" data-ca="📚 8 llibres recomanats">📚 8 llibres recomanats</span>
+      <span class="entrada-meta-item t" data-es="23 abril 2026" data-ca="23 abril 2026">23 abril 2026</span>
+    </div>
+    <h1 class="entrada-titol t" data-es="8 libros para un Sant Jordi <em>Gourmet</em> 2026" data-ca="8 llibres per a un Sant Jordi <em>Gourmet</em> 2026">8 libros para un Sant Jordi <em>Gourmet</em> 2026</h1>
+    <p class="entrada-subtitol t"
+       data-es="Nuestra selección de lecturas gastronómicas para este 23 de abril. Tres títulos de Cossetània Edicions (Valls) y un autor de Reus hacen de esta lista un recorrido literario con raíces en el Camp de Tarragona."
+       data-ca="La nostra selecció de lectures gastronòmiques per a aquest 23 d'abril. Tres títols de Cossetània Edicions (Valls) i un autor de Reus fan d'aquesta llista un recorregut literari amb arrels al Camp de Tarragona.">
+      Nuestra selección de lecturas gastronómicas para este 23 de abril. Tres títulos de Cossetània Edicions (Valls) y un autor de Reus hacen de esta lista un recorrido literario con raíces en el Camp de Tarragona.
+    </p>
+  </div>
+</header>
+
+<!-- COS -->
+<main class="entrada-cos">
+
+  <!-- INTRO -->
+  <section>
+    <span class="e-label t" data-es="Por qué estos ocho" data-ca="Per què aquests vuit">Per qué estos ocho</span>
+    <h2 class="e-title t"
+        data-es="No todo son cenas, visitas y puntuaciones"
+        data-ca="No tot són sopars, visites i puntuacions">
+      No tot són sopars, visites i puntuacions
+    </h2>
+    <div class="e-divider"></div>
+    <p class="e-p t"
+       data-es="Los Gourmets de Tarragona somos, antes que nada, personas que amamos la cultura gastronómica en su sentido más amplio: el producto, el territorio, el oficio y también los libros que nos ayudan a entender mejor todo eso. Cada Sant Jordi nos tomamos un momento para compartir lecturas que nos han llamado la atención, no como reseñas sino como recomendaciones de mesa: libros que nos parecen dignos de acompañar una buena rosa."
+       data-ca="Els Gourmets de Tarragona som, abans que res, persones que estimem la cultura gastronòmica en el seu sentit més ampli: el producte, el territori, l'ofici i també els llibres que ens ajuden a entendre millor tot això. Cada Sant Jordi ens prenem un moment per compartir lectures que ens han cridat l'atenció, no com a ressenyes sinó com a recomanacions de taula: llibres que ens semblen dignes d'acompanyar una bona rosa.">
+    </p>
+    <p class="e-p t"
+       data-es="Este año la lista tiene un dato que nos alegra especialmente: <strong>tres de los ocho títulos son de Cossetània Edicions, la editorial de Valls</strong>, y uno es obra de un escritor de Reus. En ninguna otra lista de Sant Jordi 2026 que hayamos visto se da este peso territorial. Nos parece justo señalarlo."
+       data-ca="Enguany la llista té un detall que ens alegra especialment: <strong>tres dels vuit títols són de Cossetània Edicions, l'editorial de Valls</strong>, i un és obra d'un escriptor de Reus. En cap altra llista de Sant Jordi 2026 que hàgim vist es dóna aquest pes territorial. Ens sembla just assenyalar-ho.">
+    </p>
+  </section>
+
+  <div class="e-divider"></div>
+
+  <!-- LLIBRE 1 — El Gran Llibre de la Calçotada -->
+  <div class="llibre-bloc">
+    <div class="llibre-portada">
+      <span class="llibre-num">01</span>
+      <img src="../assets/img/santjordi/santjordi-calcotada.jpg" alt="El Gran Llibre de la Calçotada">
+    </div>
+    <div class="llibre-info">
+      <span class="llibre-editorial t" data-es="Cossetània Edicions · Valls" data-ca="Cossetània Edicions · Valls">Cossetània Edicions · Valls</span>
+      <h3 class="llibre-titol t" data-es="El Gran Llibre de la Calçotada" data-ca="El Gran Llibre de la Calçotada">El Gran Llibre de la Calçotada</h3>
+      <p class="llibre-autor t" data-es="Coord. Guillermo Soler García de Oteyza · Dir. Albert París Fortuny · Amb Jaume Fàbrega, Carme Ruscalleda, Ferran Adrià i Ada Parellada" data-ca="Coord. Guillermo Soler García de Oteyza · Dir. Albert París Fortuny · Amb Jaume Fàbrega, Carme Ruscalleda, Ferran Adrià i Ada Parellada">Coord. Guillermo Soler García de Oteyza · Dir. Albert París Fortuny · Amb Jaume Fàbrega, Carme Ruscalleda, Ferran Adrià i Ada Parellada</p>
+      <p class="llibre-desc t"
+         data-es="Comenzamos por casa. De Valls, del Alt Camp, de la tierra que inventó este rito invernal que cada año convoca a miles de personas alrededor del fuego. <strong>Cossetània Edicions publica el primer libro que aborda la calçotada en toda su dimensión</strong>: histórica, cultural, económica y gastronómica, con receptas de Ruscalleda, Adrià y Parellada. Una vintena d'autors, 272 páginas en cartoné y una pregunta que cualquier tarraconense se ha hecho alguna vez: ¿de dónde vienen exactamente los calçots? Aquí la respuesta cabe al completo."
+         data-ca="Comencem per casa. De Valls, de l'Alt Camp, de la terra que va inventar aquest ritual hivernal que cada any convoca milers de persones al voltant del foc. <strong>Cossetània Edicions publica el primer llibre que aborda la calçotada en tota la seva dimensió</strong>: històrica, cultural, econòmica i gastronòmica, amb receptes de Ruscalleda, Adrià i Parellada. Una vintena d'autors, 272 pàgines en cartoné i una pregunta que qualsevol tarragoní s'ha fet alguna vegada: d'on vénen exactament els calçots? Aquí la resposta hi cap sencera.">
+      </p>
+      <span class="llibre-tag t" data-es="🌱 Valls · Alt Camp · Tarragona" data-ca="🌱 Valls · Alt Camp · Tarragona">🌱 Valls · Alt Camp · Tarragona</span>
+    </div>
+  </div>
+
+  <!-- LLIBRE 2 — Paisatge a la cassola -->
+  <div class="llibre-bloc">
+    <div class="llibre-portada">
+      <span class="llibre-num">02</span>
+      <img src="../assets/img/santjordi/santjordi-paisatge.webp" alt="Paisatge a la cassola">
+    </div>
+    <div class="llibre-info">
+      <span class="llibre-editorial t" data-es="Cossetània Edicions · Valls" data-ca="Cossetània Edicions · Valls">Cossetània Edicions · Valls</span>
+      <h3 class="llibre-titol t" data-es="Paisatge a la cassola" data-ca="Paisatge a la cassola">Paisatge a la cassola</h3>
+      <p class="llibre-autor t" data-es="Enric Herce" data-ca="Enric Herce">Enric Herce</p>
+      <p class="llibre-desc t"
+         data-es="Josep Pla va escriure que <em>la cuina d'un país és el seu paisatge posat a l'olla</em>. Enric Herce agafa aquesta frase i en construeix un viatge sentimental: <strong>50 receptes que no parlen tant de tècnica com de memòria, de lloc i d'arrelament</strong>. Segon títol de Cossetània Edicions en la nostra selecció, i el que potser té la portada més bella de totes: una cassola verda sobre roca, amb el mar al fons. Hi ha pitjors maneres de pensar en la cuina."
+         data-ca="Josep Pla va escriure que <em>la cuina d'un país és el seu paisatge posat a l'olla</em>. Enric Herce agafa aquesta frase i en construeix un viatge sentimental: <strong>50 receptes que no parlen tant de tècnica com de memòria, de lloc i d'arrelament</strong>. Segon títol de Cossetània Edicions en la nostra selecció, i el que potser té la portada més bella de totes: una cassola verda sobre roca, amb el mar al fons. Hi ha pitjors maneres de pensar en la cuina.">
+      </p>
+    </div>
+  </div>
+
+  <!-- LLIBRE 3 — Catalunya a la copa i al plat -->
+  <div class="llibre-bloc">
+    <div class="llibre-portada">
+      <span class="llibre-num">03</span>
+      <img src="../assets/img/santjordi/santjordi-catalunyacopa.webp" alt="Catalunya a la copa i al plat">
+    </div>
+    <div class="llibre-info">
+      <span class="llibre-editorial t" data-es="Cossetània Edicions · Valls" data-ca="Cossetània Edicions · Valls">Cossetània Edicions · Valls</span>
+      <h3 class="llibre-titol t" data-es="Catalunya a la copa i al plat" data-ca="Catalunya a la copa i al plat">Catalunya a la copa i al plat</h3>
+      <p class="llibre-autor t" data-es="Gessamí Caramés i Javier Campo" data-ca="Gessamí Caramés i Javier Campo">Gessamí Caramés i Javier Campo</p>
+      <p class="llibre-desc t"
+         data-es="El tercer título de Cossetània Edicions en esta selección toca uno de los temas que más nos interesan como asociación: <strong>el maridaje entre platos catalans y vinos del territorio</strong>. La Gessa —Gessamí Caramés— i Javier Campo proposen 50 receptes amb el seu vi perfecte. Un llibre pràctic que tracta el vi no com un adorn sino com un ingredient més de la taula. La portada, amb rajoles de cuina i tota la naturalitat del món, ja diu molt del to que es trobarà dins."
+         data-ca="El tercer títol de Cossetània Edicions en aquesta selecció toca un dels temes que més ens interessen com a associació: <strong>el maridatge entre plats catalans i vins del territori</strong>. La Gessa —Gessamí Caramés— i Javier Campo proposen 50 receptes amb el seu vi perfecte. Un llibre pràctic que tracta el vi no com un adorn sinó com un ingredient més de la taula. La portada, amb rajoles de cuina i tota la naturalitat del món, ja diu molt del to que es trobarà dins.">
+      </p>
+      <span class="llibre-tag t" data-es="🍷 Maridatge · Vins del territori" data-ca="🍷 Maridatge · Vins del territori">🍷 Maridatge · Vins del territori</span>
+    </div>
+  </div>
+
+  <!-- LLIBRE 4 — Fricandó Nation -->
+  <div class="llibre-bloc">
+    <div class="llibre-portada">
+      <span class="llibre-num">04</span>
+      <img src="../assets/img/santjordi/santjordi-fricando.jpg" alt="Fricandó Nation">
+    </div>
+    <div class="llibre-info">
+      <span class="llibre-editorial t" data-es="Destino · Segell Fosc" data-ca="Destino · Segell Fosc">Destino · Segell Fosc</span>
+      <h3 class="llibre-titol t" data-es="Fricandó Nation" data-ca="Fricandó Nation">Fricandó Nation</h3>
+      <p class="llibre-autor t" data-es="Miquel Bonet Pinyol (Reus, 1977)" data-ca="Miquel Bonet Pinyol (Reus, 1977)">Miquel Bonet Pinyol (Reus, 1977)</p>
+      <p class="llibre-desc t"
+         data-es="El único título de ficción de la selección, y no por eso el menos gastronómico. <strong>Miquel Bonet Pinyol, nacido en Reus en 1977</strong> —hijo de los chefs de El Trencadís de Salou— escribe una sátira feroz sobre ambición, fama y traición en el mundo de la alta cocina. Todo comienza con un fricandó perfecto servido en un hostal del Pirineo que atrae la atención de Dominique Sepulchre, sumo sacerdote de la guía Cormoran, que quiere convertirlo en 'el nuevo ramen global'. Premio de ensayo Finestres 2022. La portada con el cuchillo ensangrentado lo dice todo."
+         data-ca="L'únic títol de ficció de la selecció, i no per això el menys gastronòmic. <strong>Miquel Bonet Pinyol, nascut a Reus el 1977</strong> —fill dels xefs d'El Trencadís de Salou— escriu una sàtira ferotge sobre ambició, fama i traïció al món de l'alta cuina. Tot comença amb un fricandó perfecte servit a un hostal del Pirineu que crida l'atenció de Dominique Sepulchre, summe sacerdot de la guia Cormoran, que el vol convertir en 'el nou ramen global'. Premi d'assaig Finestres 2022. La portada amb el ganivet ensangonat ja ho diu tot.">
+      </p>
+      <span class="llibre-tag t" data-es="📍 Reus · Baix Camp · Tarragona" data-ca="📍 Reus · Baix Camp · Tarragona">📍 Reus · Baix Camp · Tarragona</span>
+    </div>
+  </div>
+
+  <!-- LLIBRE 5 — Natura Viva -->
+  <div class="llibre-bloc">
+    <div class="llibre-portada">
+      <span class="llibre-num">05</span>
+      <img src="../assets/img/santjordi/santjordi-naturaviva.webp" alt="Natura Viva. Les Cols restaurant">
+    </div>
+    <div class="llibre-info">
+      <span class="llibre-editorial t" data-es="Ara Llibres" data-ca="Ara Llibres">Ara Llibres</span>
+      <h3 class="llibre-titol t" data-es="Natura Viva. Les Cols restaurant" data-ca="Natura Viva. Les Cols restaurant">Natura Viva. Les Cols restaurant</h3>
+      <p class="llibre-autor t" data-es="Martina Puigvert Puigdevall (Olot, 1994) · Fotografies: Alba Yruela" data-ca="Martina Puigvert Puigdevall (Olot, 1994) · Fotografies: Alba Yruela">Martina Puigvert Puigdevall (Olot, 1994) · Fotografies: Alba Yruela</p>
+      <p class="llibre-desc t"
+         data-es="Premi Millor Xef Jove 2024, Martina Puigvert Puigdevall és la xefa executiva de Les Cols (2 estrelles Michelin, Olot) i aquí <strong>tradueix la filosofia del restaurant a la cuina de casa</strong>: un menú per cada mes de l'any amb producte de temporada. 368 pàgines il·lustrades per Alba Yruela. La portada —un retrat de perfil de gran serenitat— anticipa un llibre que no vol impressionar, sino acompanyar. Dels que s'obren per una recepta i es tanquen amb un pensament."
+         data-ca="Premi Millor Xef Jove 2024, Martina Puigvert Puigdevall és la xefa executiva de Les Cols (2 estrelles Michelin, Olot) i aquí <strong>tradueix la filosofia del restaurant a la cuina de casa</strong>: un menú per cada mes de l'any amb producte de temporada. 368 pàgines il·lustrades per Alba Yruela. La portada —un retrat de perfil de gran serenitat— anticipa un llibre que no vol impressionar, sinó acompanyar. Dels que s'obren per una recepta i es tanquen amb un pensament.">
+      </p>
+    </div>
+  </div>
+
+  <!-- LLIBRE 6 — Corpus de la Cuina Catalana -->
+  <div class="llibre-bloc">
+    <div class="llibre-portada">
+      <span class="llibre-num">06</span>
+      <img src="../assets/img/santjordi/santjordi-corpus.webp" alt="Corpus de la Cuina Catalana">
+    </div>
+    <div class="llibre-info">
+      <span class="llibre-editorial t" data-es="Arpa / Ara Llibres" data-ca="Arpa / Ara Llibres">Arpa / Ara Llibres</span>
+      <h3 class="llibre-titol t" data-es="Corpus de la Cuina Catalana (4a edició)" data-ca="Corpus de la Cuina Catalana (4a edició)">Corpus de la Cuina Catalana (4a edició)</h3>
+      <p class="llibre-autor t" data-es="Fundació Institut del Patrimoni Culinari Català" data-ca="Fundació Institut del Patrimoni Culinari Català">Fundació Institut del Patrimoni Culinari Català</p>
+      <p class="llibre-desc t"
+         data-es="Hi ha llibres per llegir i llibres per tenir. Aquest és dels dos. <strong>La quarta edició revisada i ampliada del receptari més complet del patrimoni culinari català</strong>: prop de 1.200 receptes, 28 de noves, més de 100 de millorades i unes 300 fitxes de productes amb valoració nutricional. No és un llibre per a una tarda —és una obra de referència que creix amb qui la té. Fa part d'aquelles estanteries que, amb el temps, expliquen molt de la persona que hi viu."
+         data-ca="Hi ha llibres per llegir i llibres per tenir. Aquest és dels dos. <strong>La quarta edició revisada i ampliada del receptari més complet del patrimoni culinari català</strong>: prop de 1.200 receptes, 28 de noves, més de 100 de millorades i unes 300 fitxes de productes amb valoració nutricional. No és un llibre per a una tarda —és una obra de referència que creix amb qui la té. Fa part d'aquelles prestatgeries que, amb el temps, expliquen molt de la persona que hi viu.">
+      </p>
+    </div>
+  </div>
+
+  <!-- LLIBRE 7 — Coses de Casa -->
+  <div class="llibre-bloc">
+    <div class="llibre-portada">
+      <span class="llibre-num">07</span>
+      <img src="../assets/img/santjordi/santjordi-cosesdecasa.jpg" alt="Coses de Casa · Jordi Roca">
+    </div>
+    <div class="llibre-info">
+      <span class="llibre-editorial t" data-es="Planeta Gastro" data-ca="Planeta Gastro">Planeta Gastro</span>
+      <h3 class="llibre-titol t" data-es="Coses de Casa. Receptes imbatibles" data-ca="Coses de Casa. Receptes imbatibles">Coses de Casa. Receptes imbatibles</h3>
+      <p class="llibre-autor t" data-es="Jordi Roca · El Celler de Can Roca (3 estrelles Michelin)" data-ca="Jordi Roca · El Celler de Can Roca (3 estrelles Michelin)">Jordi Roca · El Celler de Can Roca (3 estrelles Michelin)</p>
+      <p class="llibre-desc t"
+         data-es="El geni dolç del Celler de Can Roca baixa de l'Olimp i s'asseu a la cuina de casa. <strong>Jordi Roca recull aquí les receptes que ha anat compartint a les xarxes socials</strong> i que ara vol deixar documentades en paper: senzilles, resolutives, sense parafernàlia. El títol és honest i la portada amb la pinya a l'aire ho confirma: no hi ha distàncies ni artificis. És un llibre que un cuiner de tres estrelles ha escrit per a la gent normal que vol cuinar bé sense convertir-ho en un acte heroic."
+         data-ca="El geni dolç del Celler de Can Roca baixa de l'Olimp i s'asseu a la cuina de casa. <strong>Jordi Roca recull aquí les receptes que ha anat compartint a les xarxes socials</strong> i que ara vol deixar documentades en paper: senzilles, resolutives, sense parafernàlia. El títol és honest i la portada amb la pinya a l'aire ho confirma: no hi ha distàncies ni artificis. És un llibre que un cuiner de tres estrelles ha escrit per a la gent normal que vol cuinar bé sense convertir-ho en un acte heroic.">
+      </p>
+    </div>
+  </div>
+
+  <!-- LLIBRE 8 — Cuinem! -->
+  <div class="llibre-bloc">
+    <div class="llibre-portada">
+      <span class="llibre-num">08</span>
+      <img src="../assets/img/santjordi/santjordi-cuinem.jpg" alt="Cuinem! · Pep Salsetes">
+    </div>
+    <div class="llibre-info">
+      <span class="llibre-editorial t" data-es="Rosa dels Vents · Penguin Random House" data-ca="Rosa dels Vents · Penguin Random House">Rosa dels Vents · Penguin Random House</span>
+      <h3 class="llibre-titol t" data-es="Cuinem! Cuina catalana per a tota la família" data-ca="Cuinem! Cuina catalana per a tota la família">Cuinem! Cuina catalana per a tota la família</h3>
+      <p class="llibre-autor t" data-es="Pep Salsetes · Il·lustracions: Daniel Soms" data-ca="Pep Salsetes · Il·lustracions: Daniel Soms">Pep Salsetes · Il·lustracions: Daniel Soms</p>
+      <p class="llibre-desc t"
+         data-es="Acabamos con el más hermoso de todos en términos visuales. Pep Salsetes —referente de la cocina tradicional catalana— propone un convite: <strong>cuinar en família, especialment amb els petits, com a forma de transmetre la cuina catalana d'una generació a la següent</strong>. Les il·lustracions de Daniel Soms fan d'aquest llibre un objecte que va més enllà de la recepta. És el tipus de regal que es queda a la cuina però acaba a les mans de tothom."
+         data-ca="Acabem amb el més bonic de tots en termes visuals. Pep Salsetes —referent de la cuina tradicional catalana— proposa un convit: <strong>cuinar en família, especialment amb els petits, com a forma de transmetre la cuina catalana d'una generació a la següent</strong>. Les il·lustracions de Daniel Soms fan d'aquest llibre un objecte que va més enllà de la recepta. És el tipus de regal que es queda a la cuina però acaba a les mans de tothom.">
+      </p>
+    </div>
+  </div>
+
+  <!-- TANCAMENT -->
+  <div class="e-tancament">
+    <p class="t"
+       data-es="Gràcies a <strong>@cossetaniaedicions, @arallibres, @segellfosc, @eddestino, @planetagastro i @penguinllibres</strong> per mantenir viu l'ecosistema editorial gastronòmic en català. I gràcies a les <strong>llibreries de proximitat</strong> que cada Sant Jordi converteixen els carrers en llocs on passar-hi l'estona. Feliç Sant Jordi — amb bona companyia, una rosa i algun d'aquests vuit llibres a la mà."
+       data-ca="Gràcies a <strong>@cossetaniaedicions, @arallibres, @segellfosc, @eddestino, @planetagastro i @penguinllibres</strong> per mantenir viu l'ecosistema editorial gastronòmic en català. I gràcies a les <strong>llibreries de proximitat</strong> que cada Sant Jordi converteixen els carrers en llocs on passar-hi l'estona. Feliç Sant Jordi — amb bona companyia, una rosa i algun d'aquests vuit llibres a la mà.">
+    </p>
+  </div>
+
+</main>
+
+<!-- NAV RETORN -->
+<div class="e-nav-retorn">
+  <a href="../pages/blog.html" class="btn-outline t" data-es="← Volver al Blog" data-ca="← Tornar al Blog">← Volver al Blog</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona">
+      <p class="t" data-es="Asociación gastronómica sin ánimo de lucro. Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre. Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro. Camp de Tarragona.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Navegación" data-ca="Navegació">Navegación</h4>
+      <ul>
+        <li><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></li>
+        <li><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li>
+        <li><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li>
+        <li><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Legal" data-ca="Legal">Legal</h4>
+      <ul>
+        <li><a href="../pages/avis-legal.html" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li>
+        <li><a href="../pages/privacitat.html" class="t" data-es="Privacidad" data-ca="Privacitat">Privacidad</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Contacto" data-ca="Contacte">Contacto</h4>
+      <p>gourmetsdetarragona@gourmetsdetarragona.com</p>
+      <p>Tarragona, Catalunya</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="t" data-es="© 2026 Gourmets de Tarragona · Asociación Gastronómica · Tots els drets reservats" data-ca="© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats">© 2026 Gourmets de Tarragona · Asociación Gastronómica · Tots els drets reservats</p>
+  </div>
+</footer>
+
+<script>
+window.translations = window.translations || {};
+const pageTranslations = {
+  back_blog:     { es: 'Volver al Blog',     ca: 'Tornar al Blog' },
+  back_blog_btn: { es: '← Volver al Blog',   ca: '← Tornar al Blog' },
+};
+Object.assign(window.translations, pageTranslations);
+</script>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
