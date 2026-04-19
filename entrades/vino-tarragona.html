@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>El vi a la província de Tarragona · Gourmets de Tarragona</title>
-<meta name="description" content="Estudi complet del vi a la província de Tarragona: Priorat, Montsant, Conca de Barberà i DO Tarragona. Varietats, sòls, elaboració i gastronomia.">
+<meta name="description" content="Estudi profund del vi a la província de Tarragona: DOQ Priorat, DO Montsant, DO Tarragona i DO Conca de Barberà. Varietats, sòls, elaboració, maridatges i guia pràctica per als socis.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -27,15 +27,16 @@
 .entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
 .entrada-titol{font-family:var(--font-serif);font-size:clamp(2.2rem,5vw,4rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
 .entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
-.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.85;max-width:580px;}
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.85;max-width:620px;}
 .entrada-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
 .e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
 .e-title{font-family:var(--font-serif);font-size:1.75rem;color:var(--navy-dark);line-height:1.2;margin-bottom:22px;}
+.e-subtitle{font-family:var(--font-serif);font-size:1.25rem;color:var(--navy-dark);line-height:1.3;margin:28px 0 14px;font-weight:700;}
 .e-p{font-size:1rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:20px;}
 .e-p strong{font-weight:700;color:var(--navy-dark);}
 .e-p em{font-style:italic;color:var(--muted);}
 .e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin-bottom:24px;}
-.e-sep{text-align:center;margin:52px 0;color:var(--gold);font-size:1rem;letter-spacing:10px;opacity:.35;}
+.e-sep{text-align:center;margin:56px 0;color:var(--gold);font-size:1rem;letter-spacing:10px;opacity:.35;}
 .e-pull{border-left:4px solid var(--gold);background:var(--cream2);padding:22px 28px;margin:32px 0;}
 .e-pull p{font-family:var(--font-serif);font-size:1.08rem;font-style:italic;color:var(--navy-dark);line-height:1.65;margin:0;}
 .e-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-bottom:52px;}
@@ -45,15 +46,33 @@
 .e-foto-gran{margin:48px 0;position:relative;overflow:hidden;}
 .e-foto-gran img{width:100%;height:420px;object-fit:cover;}
 .e-foto-gran-peu{position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top,rgba(11,22,38,.8),transparent);font-size:.7rem;color:rgba(255,255,255,.6);font-style:italic;}
-.e-do-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:28px 0 40px;}
-.e-do-card{border:1px solid var(--border);padding:20px 18px;background:var(--white);}
-.e-do-nom{font-family:var(--font-serif);font-size:1rem;font-weight:700;color:var(--navy-dark);margin-bottom:4px;}
-.e-do-tag{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;background:var(--cream2);color:var(--muted);padding:2px 8px;margin-bottom:10px;}
-.e-do-card p{font-size:.83rem;color:var(--muted);line-height:1.6;margin:0;}
-.e-table{width:100%;border-collapse:collapse;margin:24px 0 40px;font-size:.88rem;}
-.e-table th{background:var(--navy-dark);color:#fff;padding:10px 14px;text-align:left;font-weight:700;font-size:.75rem;letter-spacing:.5px;}
-.e-table td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.55;color:#444;}
-.e-table tr:nth-child(even) td{background:var(--cream2);}
+
+/* DO ANALÍTIC */
+.e-do-bloc{background:var(--cream2);border:1px solid var(--border);border-left:4px solid var(--gold);padding:28px 32px;margin:28px 0;}
+.e-do-bloc-head{display:flex;align-items:baseline;gap:14px;margin-bottom:14px;flex-wrap:wrap;}
+.e-do-bloc-nom{font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:var(--navy-dark);}
+.e-do-bloc-tag{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:var(--gold);color:#fff;padding:3px 9px;}
+.e-do-bloc-subtitol{font-size:.95rem;color:var(--muted);font-style:italic;margin-bottom:18px;}
+.e-do-bloc p{font-size:.92rem;line-height:1.8;color:#444;margin-bottom:14px;font-weight:300;}
+.e-do-bloc p:last-child{margin-bottom:0;}
+.e-do-bloc strong{color:var(--navy-dark);}
+.e-do-datos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0;padding:14px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.e-do-dato{font-size:.78rem;}
+.e-do-dato-label{font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:3px;}
+.e-do-dato-valor{color:var(--navy-dark);font-weight:700;}
+
+/* TAULA VARIETATS PROFUNDA */
+.e-varietat{background:var(--white);border:1px solid var(--border);padding:22px 24px;margin:18px 0;border-top:3px solid var(--gold);}
+.e-varietat-head{display:flex;align-items:baseline;gap:12px;margin-bottom:10px;flex-wrap:wrap;}
+.e-varietat-nom{font-family:var(--font-serif);font-size:1.15rem;font-weight:700;color:var(--navy-dark);}
+.e-varietat-nom em{font-style:italic;color:var(--gold);}
+.e-varietat-tipus{font-size:.6rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;background:var(--cream2);color:var(--muted);padding:2px 8px;}
+.e-varietat-perfil{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:12px;}
+.e-varietat-bloc{font-size:.85rem;line-height:1.65;}
+.e-varietat-bloc-label{font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:4px;}
+.e-varietat-bloc p{font-size:.83rem;color:#444;font-weight:300;margin:0;}
+
+/* BLOC VINS */
 .e-vins{background:var(--navy-dark);padding:48px;margin:52px 0;}
 .e-vins-title{font-family:var(--font-serif);font-size:1.5rem;color:#fff;margin-bottom:10px;}
 .e-vins-desc{font-size:.9rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.8;margin-bottom:24px;}
@@ -62,33 +81,59 @@
 .e-vi-zona{font-size:.6rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(184,146,74,.65);margin-bottom:6px;}
 .e-vi-nom{font-size:.9rem;color:#fff;line-height:1.45;}
 .e-vi-desc{font-size:.78rem;color:rgba(255,255,255,.4);margin-top:3px;line-height:1.4;}
-.e-tendencies{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0 40px;}
-.e-tend-card{border-top:3px solid var(--gold);padding:20px 16px;background:var(--cream2);}
-.e-tend-num{font-family:var(--font-serif);font-size:2rem;color:var(--gold);opacity:.4;line-height:1;margin-bottom:8px;}
-.e-tend-title{font-family:var(--font-serif);font-size:.95rem;font-weight:700;color:var(--navy-dark);margin-bottom:8px;}
-.e-tend-text{font-size:.82rem;color:var(--muted);line-height:1.6;}
+
+/* MARIDATGES */
+.e-maridatge-list{margin:20px 0 32px;}
+.e-maridatge-item{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);align-items:flex-start;}
+.e-maridatge-item:last-child{border-bottom:none;}
+.e-maridatge-plat{flex:0 0 38%;font-family:var(--font-serif);font-size:.98rem;color:var(--navy-dark);font-weight:700;line-height:1.3;}
+.e-maridatge-plat small{display:block;font-family:var(--font-ui);font-size:.72rem;color:var(--muted);font-weight:300;font-style:italic;margin-top:3px;}
+.e-maridatge-vi{flex:1;font-size:.85rem;color:#444;line-height:1.65;}
+.e-maridatge-vi strong{color:var(--navy-dark);}
+
+/* GUIA SOCI */
+.e-guia{background:linear-gradient(180deg,var(--navy-dark) 0%,#1c2e3e 100%);padding:52px 48px;margin:60px 0 40px;color:#fff;}
+.e-guia-label{font-size:.65rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-guia-title{font-family:var(--font-serif);font-size:1.8rem;color:#fff;line-height:1.2;margin-bottom:14px;font-weight:700;}
+.e-guia-sub{font-size:.95rem;color:rgba(255,255,255,.6);font-weight:300;line-height:1.8;margin-bottom:32px;max-width:640px;}
+.e-guia-item{display:flex;gap:20px;padding:20px 0;border-top:1px solid rgba(255,255,255,.1);align-items:flex-start;}
+.e-guia-item:last-child{border-bottom:1px solid rgba(255,255,255,.1);}
+.e-guia-num{font-family:var(--font-serif);font-size:1.8rem;color:var(--gold);font-weight:700;line-height:1;flex-shrink:0;min-width:44px;}
+.e-guia-text{flex:1;}
+.e-guia-text h4{font-family:var(--font-serif);font-size:1.08rem;color:#fff;margin-bottom:6px;font-weight:700;}
+.e-guia-text p{font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.75;font-weight:300;margin:0;}
+.e-guia-text p strong{color:rgba(212,169,106,.95);font-weight:700;}
+
+/* FITXA */
 .e-fitxa{background:var(--cream2);border:1px solid var(--border);display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:52px 0;text-align:center;}
 .e-fitxa-item{padding:28px 20px;border-right:1px solid var(--border);}
 .e-fitxa-item:last-child{border-right:none;}
 .e-fitxa-label{font-size:.6rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block;}
-.e-fitxa-valor{font-family:var(--font-serif);font-size:.95rem;color:var(--navy-dark);}
+.e-fitxa-valor{font-family:var(--font-serif);font-size:.95rem;color:var(--navy-dark);line-height:1.4;}
+
+/* NAV RETORN */
 .e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;}
 .e-nav-retorn-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
 .btn-primary{display:inline-block;font-family:var(--font-ui);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:13px 28px;background:var(--gold);color:#fff;border:2px solid var(--gold);transition:all .25s;}
 .btn-primary:hover{background:#9a7a3c;border-color:#9a7a3c;}
 .btn-outline{display:inline-block;font-family:var(--font-ui);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:13px 28px;background:transparent;color:var(--navy);border:2px solid var(--navy);transition:all .25s;}
 .btn-outline:hover{background:var(--navy);color:#fff;}
+
 @media(max-width:768px){
   .entrada-hero-content{padding:0 5% 52px;}
   .entrada-cos{padding:52px 5%;}
   .e-grid-2{grid-template-columns:1fr;gap:32px;}
   .e-img::after{display:none;}
-  .e-do-grid{grid-template-columns:1fr;}
-  .e-table{font-size:.78rem;}
-  .e-table th,.e-table td{padding:8px 10px;}
+  .e-do-bloc{padding:22px 20px;}
+  .e-do-datos{grid-template-columns:1fr;gap:10px;}
+  .e-varietat-perfil{grid-template-columns:1fr;}
   .e-vins{padding:32px 20px;}
   .e-vins-grid{grid-template-columns:1fr;}
-  .e-tendencies{grid-template-columns:1fr;}
+  .e-maridatge-item{flex-direction:column;gap:6px;}
+  .e-maridatge-plat{flex:none;}
+  .e-guia{padding:36px 24px;}
+  .e-guia-item{gap:14px;padding:18px 0;}
+  .e-guia-num{font-size:1.5rem;min-width:36px;}
   .e-fitxa{grid-template-columns:1fr 1fr;}
   .e-fitxa-item{border-right:none;border-bottom:1px solid var(--border);}
   .e-fitxa-item:last-child{border-bottom:none;}
@@ -182,8 +227,8 @@ if (currentLang === 'ca') setLang('ca');
       <span class="entrada-badge entrada-badge-vi t" data-es="Vinos · Territorio" data-ca="Vins · Territori">Vinos · Territorio</span>
       <div class="entrada-meta-info">
         <span class="entrada-meta-item"><i class="fa fa-map-marker-alt"></i> <span class="t" data-es="Provincia de Tarragona" data-ca="Província de Tarragona">Provincia de Tarragona</span></span>
-        <span class="entrada-meta-item"><i class="fa fa-wine-glass-alt"></i> <span class="t" data-es="4 Denominaciones de Origen" data-ca="4 Denominacions d'Origen">4 Denominaciones de Origen</span></span>
-        <span class="entrada-meta-item"><i class="fa fa-book-open"></i> <span class="t" data-es="Lectura: 12 min" data-ca="Lectura: 12 min">Lectura: 12 min</span></span>
+        <span class="entrada-meta-item"><i class="fa fa-wine-glass-alt"></i> <span class="t" data-es="4 Denominaciones" data-ca="4 Denominacions">4 Denominaciones</span></span>
+        <span class="entrada-meta-item"><i class="fa fa-book-open"></i> <span class="t" data-es="Lectura: 18 min" data-ca="Lectura: 18 min">Lectura: 18 min</span></span>
       </div>
     </div>
     <h1 class="entrada-titol t"
@@ -192,9 +237,9 @@ if (currentLang === 'ca') setLang('ca');
       El vino en la provincia<br>de <em>Tarragona</em>
     </h1>
     <p class="entrada-subtitol t"
-       data-es="Cuatro denominaciones, cuatro territorios que no se parecen entre sí. Un recorrido por la historia, las variedades, los suelos y la elaboración del vino provincial."
-       data-ca="Quatre denominacions, quatre territoris que no s'assemblen entre ells. Un recorregut per la història, les varietats, els sòls i l'elaboració del vi provincial.">
-      Cuatro denominaciones, cuatro territorios que no se parecen entre sí. Un recorrido por la historia, las variedades, los suelos y la elaboración del vino provincial.
+       data-es="Cuatro denominaciones, cuatro territorios irreconciliables. Un recorrido profundo por la historia, los suelos, las variedades y la copa, con una guía práctica para pedir vino con criterio."
+       data-ca="Quatre denominacions, quatre territoris irreconciliables. Un recorregut profund per la història, els sòls, les varietats i la copa, amb una guia pràctica per demanar vi amb criteri.">
+      Cuatro denominaciones, cuatro territorios irreconciliables. Un recorrido profundo por la historia, los suelos, las variedades y la copa, con una guía práctica para pedir vino con criterio.
     </p>
   </div>
 </header>
@@ -206,7 +251,7 @@ if (currentLang === 'ca') setLang('ca');
   <div class="e-grid-2">
     <div>
       <span class="e-label t" data-es="Para empezar" data-ca="Per començar">Para empezar</span>
-      <h2 class="e-title t" data-es="No hay un solo vino de Tarragona" data-ca="No hi ha un sol vi de Tarragona">No hay un solo vino de Tarragona</h2>
+      <h2 class="e-title t" data-es="No existe «un» vino de Tarragona" data-ca="No existeix «un» vi de Tarragona">No existe «un» vino de Tarragona</h2>
       <div class="e-divider"></div>
       <p class="e-p t"
          data-es="Hay territorios donde el vino no es una industria, sino una consecuencia. La provincia de Tarragona es uno de ellos. La vid lleva aquí tanto tiempo que distinguir dónde termina el paisaje y dónde empieza la viticultura se vuelve, en algunos rincones, una pregunta sin respuesta clara."
@@ -214,9 +259,9 @@ if (currentLang === 'ca') setLang('ca');
         Hay territorios donde el vino no es una industria, sino una consecuencia. La provincia de Tarragona es uno de ellos. La vid lleva aquí tanto tiempo que distinguir dónde termina el paisaje y dónde empieza la viticultura se vuelve, en algunos rincones, una pregunta sin respuesta clara.
       </p>
       <p class="e-p t"
-         data-es="Entender el vino de Tarragona implica aceptar que no hay <strong>un</strong> vino de Tarragona. Hay vinos de la Conca, del Priorat, de Montsant, del Camp. Y dentro de cada uno, diferencias que pueden ser más grandes que las que existen entre regiones de distintos países."
-         data-ca="Entendre el vi de Tarragona implica acceptar que no hi ha <strong>un</strong> vi de Tarragona. Hi ha vins de la Conca, del Priorat, del Montsant, del Camp. I dins de cadascun, diferències que poden ser més grans que les que existeixen entre regions de països distints.">
-        Entender el vino de Tarragona implica aceptar que no hay <strong>un</strong> vino de Tarragona. Hay vinos de la Conca, del Priorat, de Montsant, del Camp. Y dentro de cada uno, diferencias que pueden ser más grandes que las que existen entre regiones de distintos países.
+         data-es="La provincia produce vinos tan distintos entre sí que un priorato de llicorella y un trepat de altitud difícilmente pasarían por vinos del mismo país en una cata ciega. Esta diversidad no es una curiosidad: es la <strong>condición geográfica</strong> de un territorio donde el mediterráneo se desdibuja en cuanto ganas altitud hacia el interior, y donde los suelos cambian con una brusquedad que pocas regiones europeas pueden igualar."
+         data-ca="La província produeix vins tan diferents entre ells que un priorat de llicorella i un trepat d'altitud difícilment passarien per vins del mateix país en una cata cega. Aquesta diversitat no és una curiositat: és la <strong>condició geogràfica</strong> d'un territori on el mediterrani es desdibuixa tan bon punt guanyes altitud cap a l'interior, i on els sòls canvien amb una bruscor que poques regions europees poden igualar.">
+        La provincia produce vinos tan distintos entre sí que un priorato de llicorella y un trepat de altitud difícilmente pasarían por vinos del mismo país en una cata ciega. Esta diversidad no es una curiosidad: es la <strong>condición geográfica</strong> de un territorio donde el mediterráneo se desdibuja en cuanto ganas altitud hacia el interior, y donde los suelos cambian con una brusquedad que pocas regiones europeas pueden igualar.
       </p>
     </div>
     <div class="e-img">
@@ -226,169 +271,407 @@ if (currentLang === 'ca') setLang('ca');
 
   <div class="e-sep">· · ·</div>
 
-  <!-- HISTORIA -->
-  <span class="e-label t" data-es="Antes de las denominaciones" data-ca="Abans de les denominacions">Antes de las denominaciones</span>
-  <h2 class="e-title t" data-es="Una historia que empieza mucho antes" data-ca="Una història que comença molt abans">Una historia que empieza mucho antes</h2>
+  <!-- ════════════ HISTORIA ════════════ -->
+  <span class="e-label t" data-es="Primera parada · Historia" data-ca="Primera parada · Història">Primera parada · Historia</span>
+  <h2 class="e-title t" data-es="Dos mil años de vino, tres momentos críticos" data-ca="Dos mil anys de vi, tres moments crítics">Dos mil años de vino, tres momentos críticos</h2>
   <div class="e-divider"></div>
+
+  <h3 class="e-subtitle t" data-es="Roma: el primer gran puerto vinícola del Mediterráneo occidental" data-ca="Roma: el primer gran port vinícola del Mediterrani occidental">Roma: el primer gran puerto vinícola del Mediterráneo occidental</h3>
   <p class="e-p t"
-     data-es="La historia vitivinícola de la provincia empieza, como mínimo, con los romanos, que no encontraron un territorio virgen sino una tradición ibérica ya consolidada. <strong>Tarraco</strong> fue puerto de exportación de vino mucho antes de que nadie pensara en regular nada. El <em>vinum tarraconense</em> circulaba por el Mediterráneo con una reputación que los textos clásicos recogen con naturalidad."
-     data-ca="La història vitivinícola de la província comença, com a mínim, amb els romans, que no van trobar un territori verge sinó una tradició ibèrica ja consolidada. <strong>Tarraco</strong> va ser port d'exportació de vi molt abans que ningú pensés a regular res. El <em>vinum tarraconense</em> circulava per la Mediterrània amb una reputació que els textos clàssics recullen amb naturalitat.">
-    La historia vitivinícola de la provincia empieza, como mínimo, con los romanos, que no encontraron un territorio virgen sino una tradición ibérica ya consolidada. <strong>Tarraco</strong> fue puerto de exportación de vino mucho antes de que nadie pensara en regular nada. El <em>vinum tarraconense</em> circulaba por el Mediterráneo con una reputación que los textos clásicos recogen con naturalidad.
+     data-es="Cuando los romanos desembarcaron en la Tarraco del siglo II a.C., no encontraron un territorio virgen. Encontraron una viticultura ibérica con siglos de rodaje. Lo que sí aportaron fue la <strong>infraestructura comercial</strong>: ánforas estandarizadas, rutas marítimas, contabilidad. El <em>vinum tarraconense</em> viajaba en barcos hasta Ostia y hasta la Galia con tal regularidad que los poetas latinos —Marcial, Plinio el Viejo— lo mencionan con naturalidad, a veces con elogio moderado, a veces con displicencia de consumidor experto."
+     data-ca="Quan els romans van desembarcar a la Tarraco del segle II aC, no van trobar un territori verge. Van trobar una viticultura ibèrica amb segles de rodatge. El que sí van aportar va ser la <strong>infraestructura comercial</strong>: àmfores estandarditzades, rutes marítimes, comptabilitat. El <em>vinum tarraconense</em> viatjava en vaixells fins a Òstia i fins a la Gàl·lia amb tal regularitat que els poetes llatins —Marcial, Plini el Vell— l'esmenten amb naturalitat, a vegades amb elogi moderat, a vegades amb displicència de consumidor expert.">
+    Cuando los romanos desembarcaron en la Tarraco del siglo II a.C., no encontraron un territorio virgen. Encontraron una viticultura ibérica con siglos de rodaje. Lo que sí aportaron fue la <strong>infraestructura comercial</strong>: ánforas estandarizadas, rutas marítimas, contabilidad. El <em>vinum tarraconense</em> viajaba en barcos hasta Ostia y hasta la Galia con tal regularidad que los poetas latinos —Marcial, Plinio el Viejo— lo mencionan con naturalidad, a veces con elogio moderado, a veces con displicencia de consumidor experto.
   </p>
   <p class="e-p t"
-     data-es="El momento que más marcó la viticultura provincial fue la crisis de la <strong>filoxera</strong> en Francia durante el último tercio del siglo XIX. Con el viñedo galo arrasado, los compradores miraron al sur. Tarragona respondió plantando mucho y produciendo mucho, y la calidad pasó a un segundo plano que tardaría décadas en recuperarse. Esa herencia explica el peso de la cooperativa en muchas zonas y la presencia de variedades pensadas para rendir antes que para expresar."
-     data-ca="El moment que més va marcar la viticultura provincial va ser la crisi de la <strong>fil·loxera</strong> a França durant l'últim terç del segle XIX. Amb el vinya gal·la arrasada, els compradors van mirar cap al sud. Tarragona va respondre plantant molt i produint molt, i la qualitat va passar a un segon pla que trigaria dècades a recuperar-se. Aquesta herència explica el pes de la cooperativa en moltes zones i la presència de varietats pensades per rendir abans que per expressar.">
-    El momento que más marcó la viticultura provincial fue la crisis de la <strong>filoxera</strong> en Francia durante el último tercio del siglo XIX. Con el viñedo galo arrasado, los compradores miraron al sur. Tarragona respondió plantando mucho y produciendo mucho, y la calidad pasó a un segundo plano que tardaría décadas en recuperarse. Esa herencia explica el peso de la cooperativa en muchas zonas y la presencia de variedades pensadas para rendir antes que para expresar.
+     data-es="Esta exportación masiva dejó dos huellas que todavía se sienten: la <strong>vocación comercial</strong> del territorio —producir para vender fuera, no solo para consumir dentro— y la plantación sistemática de viñedo en zonas donde de otro modo no se hubiera plantado. El Camp de Tarragona debe buena parte de su identidad vitícola a esa lógica romana."
+     data-ca="Aquesta exportació massiva va deixar dues empremtes que encara es noten: la <strong>vocació comercial</strong> del territori —produir per vendre fora, no només per consumir dins— i la plantació sistemàtica de vinya en zones on altrament no s'hauria plantat. El Camp de Tarragona deu bona part de la seva identitat vitícola a aquella lògica romana.">
+    Esta exportación masiva dejó dos huellas que todavía se sienten: la <strong>vocación comercial</strong> del territorio —producir para vender fuera, no solo para consumir dentro— y la plantación sistemática de viñedo en zonas donde de otro modo no se hubiera plantado. El Camp de Tarragona debe buena parte de su identidad vitícola a esa lógica romana.
   </p>
+
+  <h3 class="e-subtitle t" data-es="La filoxera francesa: la gran oportunidad envenenada" data-ca="La fil·loxera francesa: la gran oportunitat enverinada">La filoxera francesa: la gran oportunidad envenenada</h3>
+  <p class="e-p t"
+     data-es="En 1863, un insecto americano —<em>Daktulosphaira vitifoliae</em>— aparece en el Ródano. En treinta años arrasa el viñedo europeo. Francia, el mayor productor mundial, pierde dos tercios de su superficie vitícola. Los negociantes de Burdeos, desesperados por mantener el suministro, miran hacia el sur: Rioja, Navarra, Cataluña. Tarragona se convierte, casi de un día para otro, en <strong>proveedor masivo</strong>."
+     data-ca="El 1863, un insecte americà —<em>Daktulosphaira vitifoliae</em>— apareix al Roine. En trenta anys arrasa la vinya europea. França, el major productor mundial, perd dos terços de la seva superfície vitícola. Els negociants de Bordeus, desesperats per mantenir el subministrament, miren cap al sud: Rioja, Navarra, Catalunya. Tarragona es converteix, gairebé d'un dia per l'altre, en <strong>proveïdor massiu</strong>.">
+    En 1863, un insecto americano —<em>Daktulosphaira vitifoliae</em>— aparece en el Ródano. En treinta años arrasa el viñedo europeo. Francia, el mayor productor mundial, pierde dos tercios de su superficie vitícola. Los negociantes de Burdeos, desesperados por mantener el suministro, miran hacia el sur: Rioja, Navarra, Cataluña. Tarragona se convierte, casi de un día para otro, en <strong>proveedor masivo</strong>.
+  </p>
+  <p class="e-p t"
+     data-es="Las consecuencias son mixtas. Por un lado, capital: Reus vive unas décadas de prosperidad que dejan edificios modernistas y una burguesía vinícola identificable todavía hoy en el parcelario. Por otro, <strong>adaptación al mercado</strong>: se plantan variedades productivas, se vendimia en verde para ganar grado, se envía en pipas a granel. La calidad no es el objetivo; el volumen sí. Cuando la filoxera cruza los Pirineos a finales del siglo XIX y arrasa también el viñedo tarraconense, la replantación se hace ya con ese chip. Cariñena, garnacha, macabeo: variedades robustas, productivas, pensadas para rendir."
+     data-ca="Les conseqüències són mixtes. Per una banda, capital: Reus viu unes dècades de prosperitat que deixen edificis modernistes i una burgesia vinícola identificable encara avui al parcel·lari. Per l'altra, <strong>adaptació al mercat</strong>: es planten varietats productives, es verema en verd per guanyar grau, s'envia en pipes a granel. La qualitat no és l'objectiu; el volum sí. Quan la fil·loxera creua els Pirineus a finals del segle XIX i arrasa també la vinya tarraconense, la replantació es fa ja amb aquell xip. Carinyena, garnatxa, macabeu: varietats robustes, productives, pensades per rendir.">
+    Las consecuencias son mixtas. Por un lado, capital: Reus vive unas décadas de prosperidad que dejan edificios modernistas y una burguesía vinícola identificable todavía hoy en el parcelario. Por otro, <strong>adaptación al mercado</strong>: se plantan variedades productivas, se vendimia en verde para ganar grado, se envía en pipas a granel. La calidad no es el objetivo; el volumen sí. Cuando la filoxera cruza los Pirineos a finales del siglo XIX y arrasa también el viñedo tarraconense, la replantación se hace ya con ese chip. Cariñena, garnacha, macabeo: variedades robustas, productivas, pensadas para rendir.
+  </p>
+
+  <h3 class="e-subtitle t" data-es="El siglo cooperativista y su herencia" data-ca="El segle cooperativista i la seva herència">El siglo cooperativista y su herencia</h3>
+  <p class="e-p t"
+     data-es="La crisis del siglo XX —guerras, pérdida del mercado francés, aranceles— obliga a reorganizar la producción. Nacen las <strong>cooperativas agrícolas</strong>, muchas alojadas en las famosas <em>catedrales del vino</em> modernistas —Falset, Pinell de Brai, L'Espluga— proyectadas por discípulos de Gaudí. La lógica cooperativa resuelve un problema: permite sobrevivir al pequeño viticultor. Pero cristaliza otro: durante décadas, la inmensa mayoría del vino tarraconense sale <strong>anónimo, a granel, sin embotellar</strong>, para alimentar mezclas de vinos de mesa vendidos en otras geografías."
+     data-ca="La crisi del segle XX —guerres, pèrdua del mercat francès, aranzels— obliga a reorganitzar la producció. Neixen les <strong>cooperatives agrícoles</strong>, moltes allotjades en les famoses <em>catedrals del vi</em> modernistes —Falset, Pinell de Brai, L'Espluga— projectades per deixebles de Gaudí. La lògica cooperativa resol un problema: permet sobreviure al petit viticultor. Però cristal·litza un altre: durant dècades, la immensa majoria del vi tarraconense surt <strong>anònim, a granel, sense embotellar</strong>, per alimentar barreges de vins de taula venuts en altres geografies.">
+    La crisis del siglo XX —guerras, pérdida del mercado francés, aranceles— obliga a reorganizar la producción. Nacen las <strong>cooperativas agrícolas</strong>, muchas alojadas en las famosas <em>catedrales del vino</em> modernistas —Falset, Pinell de Brai, L'Espluga— proyectadas por discípulos de Gaudí. La lógica cooperativa resuelve un problema: permite sobrevivir al pequeño viticultor. Pero cristaliza otro: durante décadas, la inmensa mayoría del vino tarraconense sale <strong>anónimo, a granel, sin embotellar</strong>, para alimentar mezclas de vinos de mesa vendidos en otras geografías.
+  </p>
+
   <div class="e-pull">
     <p class="t"
-       data-es="El movimiento de recuperación que arranca en los años ochenta y noventa no fue una moda: fue una corrección de rumbo necesaria, y sus efectos siguen definiéndose hoy."
-       data-ca="El moviment de recuperació que arrenca als anys vuitanta i noranta no va ser una moda: va ser una correcció de rumb necessària, i els seus efectes encara s'estan definint avui.">
-      El movimiento de recuperación que arranca en los años ochenta y noventa no fue una moda: fue una corrección de rumbo necesaria, y sus efectos siguen definiéndose hoy.
+       data-es="Todo lo que ha pasado en los últimos cuarenta años en el vino de Tarragona se explica como una reacción a ese siglo anónimo. La recuperación del Priorat en los ochenta no fue una moda: fue una corrección de rumbo que puso al territorio, a la viña vieja y al nombre propio en el centro. Su eco sigue llegando hoy a Montsant, a la Conca y, con más retraso, al Camp."
+       data-ca="Tot el que ha passat els últims quaranta anys en el vi de Tarragona s'explica com una reacció a aquell segle anònim. La recuperació del Priorat als vuitanta no va ser una moda: va ser una correcció de rumb que va posar el territori, la vinya vella i el nom propi al centre. El seu eco encara arriba avui al Montsant, a la Conca i, amb més retard, al Camp.">
+      Todo lo que ha pasado en los últimos cuarenta años en el vino de Tarragona se explica como una reacción a ese siglo anónimo.
     </p>
   </div>
 
+  <p class="e-p t"
+     data-es="La historia que importa para entender qué hay en la copa hoy es la de un grupo de enólogos —Álvaro Palacios, René Barbier, Josep Lluís Pérez, Daphne Glorian, Carles Pastrana— que en los años ochenta se instalaron en el Priorat con una idea simple: recuperar las viñas viejas de garnacha y cariñena plantadas sobre llicorella, vinificarlas con mimo, embotellarlas con nombre propio. El resultado —<em>Clos Mogador</em>, <em>L'Ermita</em>, <em>Finca Dofí</em>, <em>Clos Erasmus</em>, <em>Clos Martinet</em>— puso al Priorat en el mapa mundial en menos de una década. Y, por efecto contagio, obligó a la provincia entera a replantearse qué quería hacer."
+     data-ca="La història que importa per entendre què hi ha a la copa avui és la d'un grup d'enòlegs —Álvaro Palacios, René Barbier, Josep Lluís Pérez, Daphne Glorian, Carles Pastrana— que als anys vuitanta es van instal·lar al Priorat amb una idea simple: recuperar les vinyes velles de garnatxa i carinyena plantades sobre llicorella, vinificar-les amb cura, embotellar-les amb nom propi. El resultat —<em>Clos Mogador</em>, <em>L'Ermita</em>, <em>Finca Dofí</em>, <em>Clos Erasmus</em>, <em>Clos Martinet</em>— va posar el Priorat al mapa mundial en menys d'una dècada. I, per efecte contagi, va obligar la província sencera a replantejar-se què volia fer.">
+    La historia que importa para entender qué hay en la copa hoy es la de un grupo de enólogos —Álvaro Palacios, René Barbier, Josep Lluís Pérez, Daphne Glorian, Carles Pastrana— que en los años ochenta se instalaron en el Priorat con una idea simple: recuperar las viñas viejas de garnacha y cariñena plantadas sobre llicorella, vinificarlas con mimo, embotellarlas con nombre propio. El resultado —<em>Clos Mogador</em>, <em>L'Ermita</em>, <em>Finca Dofí</em>, <em>Clos Erasmus</em>, <em>Clos Martinet</em>— puso al Priorat en el mapa mundial en menos de una década. Y, por efecto contagio, obligó a la provincia entera a replantearse qué quería hacer.
+  </p>
+
   <div class="e-sep">· · ·</div>
 
-  <!-- DENOMINACIONS -->
-  <span class="e-label t" data-es="Cuatro territorios" data-ca="Quatre territoris">Cuatro territorios</span>
-  <h2 class="e-title t" data-es="Denominaciones que no se parecen entre sí" data-ca="Denominacions que no s'assemblen entre elles">Denominaciones que no se parecen entre sí</h2>
+  <!-- ════════════ DOs ANALÍTICAS ════════════ -->
+  <span class="e-label t" data-es="Segunda parada · Las cuatro denominaciones" data-ca="Segona parada · Les quatre denominacions">Segunda parada · Las cuatro denominaciones</span>
+  <h2 class="e-title t" data-es="Cuatro mundos en una sola provincia" data-ca="Quatre mons en una sola província">Cuatro mundos en una sola provincia</h2>
   <div class="e-divider"></div>
-  <p class="e-p t"
-     data-es="Cuando alguien dice «vino de Tarragona» puede estar hablando de cosas muy distintas. La provincia contiene al menos cuatro universos vitivinícolas con lógicas propias."
-     data-ca="Quan algú diu «vi de Tarragona» pot estar parlant de coses molt diferents. La província conté almenys quatre universos vitivinícoles amb lògiques pròpies.">
-    Cuando alguien dice «vino de Tarragona» puede estar hablando de cosas muy distintas. La provincia contiene al menos cuatro universos vitivinícolas con lògiques pròpies.
-  </p>
-  <div class="e-do-grid">
-    <div class="e-do-card">
-      <div class="e-do-nom">Priorat</div>
-      <div class="e-do-tag">DOQ</div>
-      <p class="t" data-es="Intensidad y mineralidad. Suelos de llicorella, rendimientos bajos, viñas viejas. El territorio más reconocido internacionalmente, con todo lo que eso conlleva." data-ca="Intensitat i mineralitat. Sòls de llicorella, rendiments baixos, vinyes velles. El territori més reconegut internacionalment, amb tot el que això comporta.">Intensidad y mineralidad. Suelos de llicorella, rendimientos bajos, viñas viejas. El territorio más reconocido internacionalmente, con todo lo que eso conlleva.</p>
+
+  <!-- PRIORAT -->
+  <div class="e-do-bloc">
+    <div class="e-do-bloc-head">
+      <span class="e-do-bloc-nom">Priorat</span>
+      <span class="e-do-bloc-tag">DOQ · 2006</span>
     </div>
-    <div class="e-do-card">
-      <div class="e-do-nom">Montsant</div>
-      <div class="e-do-tag">DO</div>
-      <p class="t" data-es="Equilibrio y accesibilidad. Rodea al Priorat y ha ganado identidad propia trabajando sin su presión mediática ni sus precios." data-ca="Equilibri i accessibilitat. Envolta el Priorat i ha guanyat identitat pròpia treballant sense la seva pressió mediàtica ni els seus preus.">Equilibrio y accesibilidad. Rodea al Priorat y ha ganado identidad propia trabajando sin su presión mediática ni sus precios.</p>
+    <p class="e-do-bloc-subtitol t" data-es="La única DOQ catalana junto con Rioja en España. Y se nota." data-ca="L'única DOQ catalana al costat de Rioja a Espanya. I es nota.">La única DOQ catalana junto con Rioja en España. Y se nota.</p>
+    <div class="e-do-datos">
+      <div class="e-do-dato"><span class="e-do-dato-label t" data-es="Suelo dominante" data-ca="Sòl dominant">Suelo dominante</span><span class="e-do-dato-valor">Llicorella</span></div>
+      <div class="e-do-dato"><span class="e-do-dato-label t" data-es="Altitud" data-ca="Altitud">Altitud</span><span class="e-do-dato-valor">100 — 700 m</span></div>
+      <div class="e-do-dato"><span class="e-do-dato-label t" data-es="Rendimiento" data-ca="Rendiment">Rendimiento</span><span class="e-do-dato-valor t" data-es="5-20 hl/ha (muy bajo)" data-ca="5-20 hl/ha (molt baix)">5-20 hl/ha (muy bajo)</span></div>
     </div>
-    <div class="e-do-card">
-      <div class="e-do-nom">Tarragona</div>
-      <div class="e-do-tag">DO</div>
-      <p class="t" data-es="Tradición y evolución. La DO más heterogénea. Camp de Tarragona con influencia mediterránea directa, suelos calcáreos y blancos con frescura creciente." data-ca="Tradició i evolució. La DO més heterogènia. Camp de Tarragona amb influència mediterrània directa, sòls calcaris i blancs amb frescor creixent.">Tradición y evolución. La DO más heterogénea. Camp de Tarragona con influencia mediterránea directa, suelos calcáreos y blancos con frescura creciente.</p>
-    </div>
-    <div class="e-do-card">
-      <div class="e-do-nom">Conca de Barberà</div>
-      <div class="e-do-tag">DO</div>
-      <p class="t" data-es="Frescura y elegancia. 500-600 m de altitud, influencia continental. El hábitat natural del trepat. La DO menos conocida y, posiblemente, la más injustamente olvidada." data-ca="Frescor i elegància. 500-600 m d'altitud, influència continental. L'hàbitat natural del trepat. La DO menys coneguda i, possiblement, la més injustament oblidada.">Frescura y elegancia. 500-600 m de altitud, influencia continental. El hábitat natural del trepat. La DO menos conocida y, posiblemente, la más injustamente olvidada.</p>
-    </div>
+    <p class="t"
+       data-es="El Priorat son once municipios apretados en un anfiteatro de pizarra metamórfica. Gratallops, Torroja, Porrera, Bellmunt, Poboleda… nombres que aparecen en etiquetas con creciente protagonismo desde que la DOQ permitió mencionarlos. El relieve es extremo: pendientes de hasta 60 grados, vendimia exclusivamente manual, viñas que rinden entre <strong>5 y 20 hectolitros por hectárea</strong> —frente a los 50-80 de una DO normal— lo que explica, entre otras cosas, los precios."
+       data-ca="El Priorat són onze municipis apretats en un amfiteatre de pissarra metamòrfica. Gratallops, Torroja, Porrera, Bellmunt, Poboleda… noms que apareixen en etiquetes amb creixent protagonisme des que la DOQ va permetre esmentar-los. El relleu és extrem: pendents de fins a 60 graus, verema exclusivament manual, vinyes que rendeixen entre <strong>5 i 20 hectolitres per hectàrea</strong> —davant dels 50-80 d'una DO normal— cosa que explica, entre d'altres coses, els preus.">
+      El Priorat son once municipios apretados en un anfiteatro de pizarra metamórfica. Gratallops, Torroja, Porrera, Bellmunt, Poboleda… nombres que aparecen en etiquetas con creciente protagonismo desde que la DOQ permitió mencionarlos. El relieve es extremo: pendientes de hasta 60 grados, vendimia exclusivamente manual, viñas que rinden entre <strong>5 y 20 hectolitros por hectárea</strong> —frente a los 50-80 de una DO normal— lo que explica, entre otras cosas, los precios.
+    </p>
+    <p class="t"
+       data-es="El vino clásico del Priorat es <strong>tinto, garnacha-cariñena con algo de cabernet o syrah</strong>, con graduación natural alta (14,5-15,5º), crianza en madera —aunque cada vez menos nueva—, color profundo, nariz de fruta negra madura (mora, casis), notas de regaliz, tinta china, hierbas secas, y una boca con taninos presentes pero pulidos y un final mineral reconocible, a veces descrito como «salino» o «a grafito». Los blancos —garnacha blanca sobre llicorella— son una revelación más reciente pero quizás la apuesta más interesante del territorio ahora mismo: densos, estructurados, con tensión mineral y capacidad de guarda rara en blanco mediterráneo."
+       data-ca="El vi clàssic del Priorat és <strong>negre, garnatxa-carinyena amb una mica de cabernet o syrah</strong>, amb graduació natural alta (14,5-15,5º), criança en fusta —encara que cada vegada menys nova—, color profund, nas de fruita negra madura (móra, cassís), notes de regalèssia, tinta xinesa, herbes seques, i una boca amb tanins presents però polits i un final mineral recognoscible, a vegades descrit com «salí» o «a grafit». Els blancs —garnatxa blanca sobre llicorella— són una revelació més recent però potser l'aposta més interessant del territori ara mateix: densos, estructurats, amb tensió mineral i capacitat de guarda rara en blanc mediterrani.">
+      El vino clásico del Priorat es <strong>tinto, garnacha-cariñena con algo de cabernet o syrah</strong>, con graduación natural alta (14,5-15,5º), crianza en madera —aunque cada vez menos nueva—, color profundo, nariz de fruta negra madura (mora, casis), notas de regaliz, tinta china, hierbas secas, y una boca con taninos presentes pero pulidos y un final mineral reconocible, a veces descrito como «salino» o «a grafito». Los blancos —garnacha blanca sobre llicorella— son una revelación más reciente pero quizás la apuesta más interesante del territorio ahora mismo: densos, estructurados, con tensión mineral y capacidad de guarda rara en blanco mediterráneo.
+    </p>
+    <p class="t"
+       data-es="<strong>Qué buscar en la carta</strong>: Bodegas históricas como Scala Dei (monasterio fundador del viñedo en el siglo XII), Clos Mogador, Álvaro Palacios, Clos Erasmus. En rango medio, proyectos como Mas Doix, Terroir al Límit, Costers del Siurana. Evitar etiquetas sin pedigrí por debajo de 15€: en Priorat, la relación precio-calidad empieza a ser sensata a partir de los 20-25€."
+       data-ca="<strong>Què buscar a la carta</strong>: Cellers històrics com Scala Dei (monestir fundador de la vinya al segle XII), Clos Mogador, Álvaro Palacios, Clos Erasmus. En rang mitjà, projectes com Mas Doix, Terroir al Límit, Costers del Siurana. Evitar etiquetes sense pedigrí per sota de 15€: al Priorat, la relació preu-qualitat comença a ser sensata a partir dels 20-25€.">
+      <strong>Qué buscar en la carta</strong>: Bodegas históricas como Scala Dei (monasterio fundador del viñedo en el siglo XII), Clos Mogador, Álvaro Palacios, Clos Erasmus. En rango medio, proyectos como Mas Doix, Terroir al Límit, Costers del Siurana. Evitar etiquetas sin pedigrí por debajo de 15€: en Priorat, la relación precio-calidad empieza a ser sensata a partir de los 20-25€.
+    </p>
   </div>
-  <p class="e-p t"
-     data-es="El <strong>Priorat</strong> tiene una fama con doble cara: ha puesto el foco en un territorio que lo merecía, pero también ha generado expectativas y precios que a veces se desconectan de lo que hay en la copa. Los suelos de <strong>llicorella</strong> —esa pizarra metamórfica que absorbe el calor y obliga a las raíces a descender metros en busca de agua— son la clave de su perfil. El resultado, cuando se trabaja bien, son vinos de una densidad mineral que no se encuentra fácilmente en otro sitio."
-     data-ca="El <strong>Priorat</strong> té una fama amb doble cara: ha posat el focus en un territori que s'ho mereixia, però també ha generat expectatives i preus que de vegades es desconnecten del que hi ha a la copa. Els sòls de <strong>llicorella</strong> —aquella pissarra metamòrfica que absorbeix la calor i obliga les arrels a descendir metres a la recerca d'aigua— són la clau del seu perfil. El resultat, quan es treballa bé, són vins d'una densitat mineral que no es troba fàcilment en cap altre lloc.">
-    El <strong>Priorat</strong> tiene una fama con doble cara: ha puesto el foco en un territorio que lo merecía, pero también ha generado expectativas y precios que a veces se desconectan de lo que hay en la copa. Los suelos de <strong>llicorella</strong> —esa pizarra metamórfica que absorbe el calor y obliga a las raíces a descender metros en busca de agua— son la clave de su perfil. El resultado, cuando se trabaja bien, son vinos de una densidad mineral que no se encuentra fácilmente en otro sitio.
-  </p>
-  <p class="e-p t"
-     data-es="La <strong>Conca de Barberà</strong> es probablemente la más injustamente olvidada. A 500-600 metros, con una frescura que en el contexto mediterráneo resulta llamativa, es el hábitat natural del <strong>trepat</strong>: variedad autóctona rehabilitada como vino tranquilo que muestra un potencial que ninguna foránea puede replicar."
-     data-ca="La <strong>Conca de Barberà</strong> és probablement la més injustament oblidada. A 500-600 metres, amb una frescor que en el context mediterrani resulta cridanera, és l'hàbitat natural del <strong>trepat</strong>: varietat autòctona rehabilitada com a vi tranquil que mostra un potencial que cap forana pot replicar.">
-    La <strong>Conca de Barberà</strong> es probablemente la más injustamente olvidada. A 500-600 metros, con una frescura que en el contexto mediterráneo resulta llamativa, es el hábitat natural del <strong>trepat</strong>: variedad autóctona rehabilitada como vino tranquilo que muestra un potencial que ninguna foránea puede replicar.
-  </p>
+
+  <!-- MONTSANT -->
+  <div class="e-do-bloc">
+    <div class="e-do-bloc-head">
+      <span class="e-do-bloc-nom">Montsant</span>
+      <span class="e-do-bloc-tag">DO · 2001</span>
+    </div>
+    <p class="e-do-bloc-subtitol t" data-es="El Priorat asequible, según el tópico. La verdad es más compleja." data-ca="El Priorat assequible, segons el tòpic. La veritat és més complexa.">El Priorat asequible, según el tópico. La verdad es más compleja.</p>
+    <div class="e-do-datos">
+      <div class="e-do-dato"><span class="e-do-dato-label t" data-es="Suelos" data-ca="Sòls">Suelos</span><span class="e-do-dato-valor t" data-es="Llicorella, granito, arcilla" data-ca="Llicorella, granit, argila">Llicorella, granito, arcilla</span></div>
+      <div class="e-do-dato"><span class="e-do-dato-label t" data-es="Altitud" data-ca="Altitud">Altitud</span><span class="e-do-dato-valor">200 — 700 m</span></div>
+      <div class="e-do-dato"><span class="e-do-dato-label t" data-es="Rendimiento" data-ca="Rendiment">Rendimiento</span><span class="e-do-dato-valor">20-35 hl/ha</span></div>
+    </div>
+    <p class="t"
+       data-es="Montsant rodea geográficamente al Priorat, pero su identidad no es periférica. Es una DO de <strong>mosaico de suelos</strong>: hay zonas con la misma llicorella del vecino (Marçà, El Masroig), zonas graníticas al norte que dan vinos muy distintos, y arcillas en las cotas bajas. Esta diversidad de terruños, combinada con precios más accesibles, ha permitido una experimentación que en Priorat —donde el peso del «estilo Priorat» es grande— ha sido más difícil."
+       data-ca="El Montsant envolta geogràficament el Priorat, però la seva identitat no és perifèrica. És una DO de <strong>mosaic de sòls</strong>: hi ha zones amb la mateixa llicorella del veí (Marçà, El Masroig), zones granítiques al nord que donen vins molt diferents, i argiles a les cotes baixes. Aquesta diversitat de terroirs, combinada amb preus més accessibles, ha permès una experimentació que al Priorat —on el pes de l'«estil Priorat» és gran— ha estat més difícil.">
+      Montsant rodea geográficamente al Priorat, pero su identidad no es periférica. Es una DO de <strong>mosaico de suelos</strong>: hay zonas con la misma llicorella del vecino (Marçà, El Masroig), zonas graníticas al norte que dan vinos muy distintos, y arcillas en las cotas bajas. Esta diversidad de terruños, combinada con precios más accesibles, ha permitido una experimentación que en Priorat —donde el peso del «estilo Priorat» es grande— ha sido más difícil.
+    </p>
+    <p class="t"
+       data-es="En la copa, un Montsant joven ofrece <strong>fruta roja más fresca que el Priorat</strong> (cereza, frambuesa en lugar de mora concentrada), taninos más amables, graduación ligeramente inferior (13,5-14,5º), y una mineralidad presente pero menos dominante. Los Montsant de viña vieja y crianza larga —Acústic, Venus La Universal, Joan d'Anguera— juegan en una liga cercana al Priorat con etiquetas que rondan la mitad de precio. Los blancos —macabeo, garnacha blanca— han crecido mucho los últimos años: frescos, salinos, gastronómicos."
+       data-ca="A la copa, un Montsant jove ofereix <strong>fruita vermella més fresca que el Priorat</strong> (cirera, gerd en lloc de móra concentrada), tanins més amables, graduació lleugerament inferior (13,5-14,5º), i una mineralitat present però menys dominant. Els Montsant de vinya vella i criança llarga —Acústic, Venus La Universal, Joan d'Anguera— juguen en una lliga propera al Priorat amb etiquetes que ronden la meitat de preu. Els blancs —macabeu, garnatxa blanca— han crescut molt els últims anys: frescos, salins, gastronòmics.">
+      En la copa, un Montsant joven ofrece <strong>fruta roja más fresca que el Priorat</strong> (cereza, frambuesa en lugar de mora concentrada), taninos más amables, graduación ligeramente inferior (13,5-14,5º), y una mineralidad presente pero menos dominante. Los Montsant de viña vieja y crianza larga —Acústic, Venus La Universal, Joan d'Anguera— juegan en una liga cercana al Priorat con etiquetas que rondan la mitad de precio. Los blancos —macabeo, garnacha blanca— han crecido mucho los últimos años: frescos, salinos, gastronómicos.
+    </p>
+    <p class="t"
+       data-es="<strong>Qué buscar en la carta</strong>: Para una primera cena en territorio, Montsant es probablemente la DO más rentable de la provincia. Acústic, Orto, Laurona, Joan d'Anguera, Celler de Capçanes, Mas de les Pereres: proyectos con carácter, entre 12 y 30€, que ofrecen una lectura honesta del terruño."
+       data-ca="<strong>Què buscar a la carta</strong>: Per a un primer sopar en territori, el Montsant és probablement la DO més rendible de la província. Acústic, Orto, Laurona, Joan d'Anguera, Celler de Capçanes, Mas de les Pereres: projectes amb caràcter, entre 12 i 30€, que ofereixen una lectura honesta del terroir.">
+      <strong>Qué buscar en la carta</strong>: Para una primera cena en territorio, Montsant es probablemente la DO más rentable de la provincia. Acústic, Orto, Laurona, Joan d'Anguera, Celler de Capçanes, Mas de les Pereres: proyectos con carácter, entre 12 y 30€, que ofrecen una lectura honesta del terruño.
+    </p>
+  </div>
+
+  <!-- TARRAGONA -->
+  <div class="e-do-bloc">
+    <div class="e-do-bloc-head">
+      <span class="e-do-bloc-nom">Tarragona</span>
+      <span class="e-do-bloc-tag">DO · 1945</span>
+    </div>
+    <p class="e-do-bloc-subtitol t" data-es="La DO más vieja de la provincia y la más heterogénea. Un territorio en plena redefinición." data-ca="La DO més antiga de la província i la més heterogènia. Un territori en plena redefinició.">La DO más vieja de la provincia y la más heterogénea. Un territorio en plena redefinición.</p>
+    <div class="e-do-datos">
+      <div class="e-do-dato"><span class="e-do-dato-label t" data-es="Suelos" data-ca="Sòls">Suelos</span><span class="e-do-dato-valor t" data-es="Calcáreos, arcillas, gravas" data-ca="Calcaris, argiles, graves">Calcáreos, arcillas, gravas</span></div>
+      <div class="e-do-dato"><span class="e-do-dato-label t" data-es="Clima" data-ca="Clima">Clima</span><span class="e-do-dato-valor t" data-es="Mediterráneo costero" data-ca="Mediterrani costaner">Mediterráneo costero</span></div>
+      <div class="e-do-dato"><span class="e-do-dato-label t" data-es="Subzonas" data-ca="Subzones">Subzonas</span><span class="e-do-dato-valor t" data-es="Camp i Ribera d'Ebre" data-ca="Camp i Ribera d'Ebre">Camp i Ribera d'Ebre</span></div>
+    </div>
+    <p class="t"
+       data-es="La DO Tarragona es la más extensa de la provincia y la más difícil de resumir. Abarca desde el litoral del Camp —con Valls, Alió, Bràfim, Nulles— hasta la zona de Falset (que comparte territorio con Montsant) y la Ribera d'Ebre. Durante décadas fue conocida sobre todo por dos cosas: el <strong>Tarragona Clásico</strong>, un vino licoroso de tradición litúrgica —histórico proveedor de vino de misa al Vaticano— y el viñedo que alimentaba las cooperativas. El perfil de mercado masivo siempre ha pesado."
+       data-ca="La DO Tarragona és la més extensa de la província i la més difícil de resumir. Abasta des del litoral del Camp —amb Valls, Alió, Bràfim, Nulles— fins a la zona de Falset (que comparteix territori amb Montsant) i la Ribera d'Ebre. Durant dècades va ser coneguda sobretot per dues coses: el <strong>Tarragona Clàssic</strong>, un vi licorós de tradició litúrgica —històric proveïdor de vi de missa al Vaticà— i la vinya que alimentava les cooperatives. El perfil de mercat massiu sempre ha pesat.">
+      La DO Tarragona es la más extensa de la provincia y la más difícil de resumir. Abarca desde el litoral del Camp —con Valls, Alió, Bràfim, Nulles— hasta la zona de Falset (que comparte territorio con Montsant) y la Ribera d'Ebre. Durante décadas fue conocida sobre todo por dos cosas: el <strong>Tarragona Clásico</strong>, un vino licoroso de tradición litúrgica —histórico proveedor de vino de misa al Vaticano— y el viñedo que alimentaba las cooperativas. El perfil de mercado masivo siempre ha pesado.
+    </p>
+    <p class="t"
+       data-es="Está cambiando. Hay un movimiento de bodegas pequeñas —Adernats, Josep Foraster (en la franja con la Conca), Celler de l'Encastell, Vinyes Domènech— que trabajan la <strong>garnacha mediterránea del Camp</strong> como variedad principal. El perfil es distinto al interior: fruta roja más amable, estructura más ligera, notas herbáceas mediterráneas (tomillo, romero), graduación contenida. Los blancos basados en xarel·lo, macabeo y garnacha blanca empiezan a mostrar frescura notable cuando se vendimia pronto."
+       data-ca="Està canviant. Hi ha un moviment de cellers petits —Adernats, Josep Foraster (a la franja amb la Conca), Celler de l'Encastell, Vinyes Domènech— que treballen la <strong>garnatxa mediterrània del Camp</strong> com a varietat principal. El perfil és distint a l'interior: fruita vermella més amable, estructura més lleugera, notes herbàcies mediterrànies (farigola, romaní), graduació continguda. Els blancs basats en xarel·lo, macabeu i garnatxa blanca comencen a mostrar frescor notable quan es verema aviat.">
+      Está cambiando. Hay un movimiento de bodegas pequeñas —Adernats, Josep Foraster (en la franja con la Conca), Celler de l'Encastell, Vinyes Domènech— que trabajan la <strong>garnacha mediterránea del Camp</strong> como variedad principal. El perfil es distinto al interior: fruta roja más amable, estructura más ligera, notas herbáceas mediterráneas (tomillo, romero), graduación contenida. Los blancos basados en xarel·lo, macabeo y garnacha blanca empiezan a mostrar frescura notable cuando se vendimia pronto.
+    </p>
+    <p class="t"
+       data-es="<strong>Qué buscar en la carta</strong>: La DO Tarragona está en su mejor momento histórico en relación calidad-precio. Para una cena de cocina marinera del Camp, un blanco joven de la zona (Nulles, Alió) entre 10-15€ puede funcionar extraordinariamente. Mención especial al <strong>vermut de Reus</strong>: la ciudad es, junto con Turín, una de las dos capitales mundiales del vermut, y sus propuestas locales —Miró, Rofes, Yzaguirre— son parte indispensable del territorio gastronómico."
+       data-ca="<strong>Què buscar a la carta</strong>: La DO Tarragona està en el seu millor moment històric en relació qualitat-preu. Per a un sopar de cuina marinera del Camp, un blanc jove de la zona (Nulles, Alió) entre 10-15€ pot funcionar extraordinàriament. Menció especial al <strong>vermut de Reus</strong>: la ciutat és, al costat de Torí, una de les dues capitals mundials del vermut, i les seves propostes locals —Miró, Rofes, Yzaguirre— són part indispensable del territori gastronòmic.">
+      <strong>Qué buscar en la carta</strong>: La DO Tarragona está en su mejor momento histórico en relación calidad-precio. Para una cena de cocina marinera del Camp, un blanco joven de la zona (Nulles, Alió) entre 10-15€ puede funcionar extraordinariamente. Mención especial al <strong>vermut de Reus</strong>: la ciudad es, junto con Turín, una de las dos capitales mundiales del vermut, y sus propuestas locales —Miró, Rofes, Yzaguirre— son parte indispensable del territorio gastronómico.
+    </p>
+  </div>
+
+  <!-- CONCA DE BARBERÀ -->
+  <div class="e-do-bloc">
+    <div class="e-do-bloc-head">
+      <span class="e-do-bloc-nom">Conca de Barberà</span>
+      <span class="e-do-bloc-tag">DO · 1985</span>
+    </div>
+    <p class="e-do-bloc-subtitol t" data-es="La DO más injustamente olvidada. Y probablemente la que más te sorprenderá en una cata ciega." data-ca="La DO més injustament oblidada. I probablement la que més et sorprendrà en una cata cega.">La DO más injustamente olvidada. Y probablemente la que más te sorprenderá en una cata ciega.</p>
+    <div class="e-do-datos">
+      <div class="e-do-dato"><span class="e-do-dato-label t" data-es="Suelos" data-ca="Sòls">Suelos</span><span class="e-do-dato-valor t" data-es="Calcáreos y franco-arcillosos" data-ca="Calcaris i franco-argilosos">Calcáreos y franco-arcillosos</span></div>
+      <div class="e-do-dato"><span class="e-do-dato-label t" data-es="Altitud" data-ca="Altitud">Altitud</span><span class="e-do-dato-valor">400 — 800 m</span></div>
+      <div class="e-do-dato"><span class="e-do-dato-label t" data-es="Clima" data-ca="Clima">Clima</span><span class="e-do-dato-valor t" data-es="Continental con matiz mediterráneo" data-ca="Continental amb matís mediterrani">Continental con matiz mediterráneo</span></div>
+    </div>
+    <p class="t"
+       data-es="La Conca es otro mundo. La altitud —media de 500 metros, con viñedo por encima de los 700— y la influencia continental cambian radicalmente el juego. Los inviernos son fríos, las amplitudes térmicas día-noche en verano son grandes, y todo eso produce uvas con <strong>acidez viva</strong>, maduración lenta y perfiles aromáticos muy distintos a los mediterráneos típicos. No por casualidad es la cuna histórica del cava: los grandes productores (Codorníu, Freixenet) se proveían tradicionalmente aquí de macabeo y parellada."
+       data-ca="La Conca és un altre món. L'altitud —mitjana de 500 metres, amb vinya per damunt dels 700— i la influència continental canvien radicalment el joc. Els hiverns són freds, les amplituds tèrmiques dia-nit a l'estiu són grans, i tot això produeix raïms amb <strong>acidesa viva</strong>, maduració lenta i perfils aromàtics molt distints als mediterranis típics. No per casualitat és el bressol històric del cava: els grans productors (Codorníu, Freixenet) es proveïen tradicionalment aquí de macabeu i parellada.">
+      La Conca es otro mundo. La altitud —media de 500 metros, con viñedo por encima de los 700— y la influencia continental cambian radicalmente el juego. Los inviernos son fríos, las amplitudes térmicas día-noche en verano son grandes, y todo eso produce uvas con <strong>acidez viva</strong>, maduración lenta y perfiles aromáticos muy distintos a los mediterráneos típicos. No por casualidad es la cuna histórica del cava: los grandes productores (Codorníu, Freixenet) se proveían tradicionalmente aquí de macabeo y parellada.
+    </p>
+    <p class="t"
+       data-es="Lo interesante es el <strong>renacimiento del trepat</strong>. Variedad tinta autóctona de la zona, durante décadas se usó casi exclusivamente para dar color al cava rosado o se mezclaba en tintos sin identidad. En los últimos veinte años, un puñado de bodegas —Josep Foraster, Mas Foraster, Carles Andreu, Sanstravé— han empezado a vinificarla como variedad principal en tintos jóvenes y rosados. El resultado es una <strong>sorpresa</strong>: vinos ligeros, color cereza traslúcido, aromática floral (violeta, rosa marchita) y frutal roja (fresa, grosella), acidez cortante, alcohol contenido (12-13º). Se bebe frío, se maneja como un Pinot Noir mediterráneo."
+       data-ca="L'interessant és el <strong>renaixement del trepat</strong>. Varietat negra autòctona de la zona, durant dècades es va usar gairebé exclusivament per donar color al cava rosat o es barrejava en negres sense identitat. Els últims vint anys, un grapat de cellers —Josep Foraster, Mas Foraster, Carles Andreu, Sanstravé— han començat a vinificar-la com a varietat principal en negres joves i rosats. El resultat és una <strong>sorpresa</strong>: vins lleugers, color cirera translúcid, aromàtica floral (violeta, rosa pansida) i fruitera vermella (maduixa, grosella), acidesa tallant, alcohol contingut (12-13º). Es beu fred, es maneja com un Pinot Noir mediterrani.">
+      Lo interesante es el <strong>renacimiento del trepat</strong>. Variedad tinta autóctona de la zona, durante décadas se usó casi exclusivamente para dar color al cava rosado o se mezclaba en tintos sin identidad. En los últimos veinte años, un puñado de bodegas —Josep Foraster, Mas Foraster, Carles Andreu, Sanstravé— han empezado a vinificarla como variedad principal en tintos jóvenes y rosados. El resultado es una <strong>sorpresa</strong>: vinos ligeros, color cereza traslúcido, aromática floral (violeta, rosa marchita) y frutal roja (fresa, grosella), acidez cortante, alcohol contenido (12-13º). Se bebe frío, se maneja como un Pinot Noir mediterráneo.
+    </p>
+    <p class="t"
+       data-es="<strong>Qué buscar en la carta</strong>: Si la carta incluye un trepat de la Conca, pedirlo casi sin dudar —especialmente en verano, ligeramente frío (14-15º), con arroces no grasos, pescados, embutidos ligeros. Los macabeos y chardonnays de la zona (sí, también chardonnay: funciona sorprendentemente bien en altitud) están entre los mejores blancos secos de precio contenido de la provincia."
+       data-ca="<strong>Què buscar a la carta</strong>: Si la carta inclou un trepat de la Conca, demanar-lo gairebé sense dubtar —especialment a l'estiu, lleugerament fred (14-15º), amb arrossos no grassos, peixos, embotits lleugers. Els macabeus i chardonnays de la zona (sí, també chardonnay: funciona sorprenentment bé en altitud) estan entre els millors blancs secs de preu contingut de la província.">
+      <strong>Qué buscar en la carta</strong>: Si la carta incluye un trepat de la Conca, pedirlo casi sin dudar —especialmente en verano, ligeramente frío (14-15º), con arroces no grasos, pescados, embutidos ligeros. Los macabeos y chardonnays de la zona (sí, también chardonnay: funciona sorprendentemente bien en altitud) están entre los mejores blancos secos de precio contenido de la provincia.
+    </p>
+  </div>
 
   <!-- FOTO llicorella -->
   <div class="e-foto-gran">
     <img src="../assets/img/vins/vins-llicorella.jpg" alt="Llicorella — sòl característic del Priorat" onerror="this.parentElement.style.display='none'">
     <div class="e-foto-gran-peu t"
-         data-es="Llicorella — la pizarra metamórfica que define los vinos del Priorat y parte de Montsant"
-         data-ca="Llicorella — la pissarra metamòrfica que defineix els vins del Priorat i part del Montsant">
-      Llicorella — la pizarra metamórfica que define los vinos del Priorat y parte de Montsant
+         data-es="Llicorella del Priorat: pizarra metamórfica oscura, quebradiza, con capacidad de retención térmica excepcional. Es el suelo más identitario de la provincia."
+         data-ca="Llicorella del Priorat: pissarra metamòrfica fosca, trencadissa, amb capacitat de retenció tèrmica excepcional. És el sòl més identitari de la província.">
+      Llicorella del Priorat: pizarra metamórfica oscura, quebradiza, con capacidad de retención térmica excepcional. Es el suelo más identitario de la provincia.
     </div>
   </div>
 
   <div class="e-sep">· · ·</div>
 
-  <!-- VARIETATS -->
-  <span class="e-label t" data-es="Las variedades" data-ca="Les varietats">Las variedades</span>
-  <h2 class="e-title t" data-es="Lo que crece aquí y por qué importa" data-ca="El que creix aquí i per què importa">Lo que crece aquí y por qué importa</h2>
+  <!-- ════════════ SUELOS ════════════ -->
+  <span class="e-label t" data-es="Tercera parada · Los suelos" data-ca="Tercera parada · Els sòls">Tercera parada · Los suelos</span>
+  <h2 class="e-title t" data-es="Lo que la vid saca de la tierra" data-ca="El que la vinya treu de la terra">Lo que la vid saca de la tierra</h2>
   <div class="e-divider"></div>
+
   <p class="e-p t"
-     data-es="El viñedo de la provincia está dominado por variedades que llevan siglos adaptándose a estas condiciones. No es nostalgia: en este contexto específico, producen resultados que las foráneas raramente igualan."
-     data-ca="La vinya de la província està dominada per varietats que porten segles adaptant-se a aquestes condicions. No és nostàlgia: en aquest context específic, produeixen resultats que les foranes rarament igualen.">
-    El viñedo de la provincia está dominado por variedades que llevan siglos adaptándose a estas condiciones. No es nostalgia: en este contexto específico, producen resultados que las foráneas raramente igualan.
+     data-es="En pocas provincias europeas se encuentra la variedad edafológica que concentra Tarragona en apenas 80 kilómetros de norte a sur. Cuatro tipos de suelo principales, cada uno con su expresión propia en la copa."
+     data-ca="En poques províncies europees es troba la varietat edafològica que concentra Tarragona en tot just 80 quilòmetres de nord a sud. Quatre tipus de sòl principals, cadascun amb la seva expressió pròpia a la copa.">
+    En pocas provincias europeas se encuentra la variedad edafológica que concentra Tarragona en apenas 80 kilómetros de norte a sur. Cuatro tipos de suelo principales, cada uno con su expresión propia en la copa.
   </p>
-  <table class="e-table">
-    <thead>
-      <tr>
-        <th class="t" data-es="Variedad" data-ca="Varietat">Variedad</th>
-        <th class="t" data-es="Tipo" data-ca="Tipus">Tipo</th>
-        <th class="t" data-es="Zona" data-ca="Zona">Zona</th>
-        <th class="t" data-es="Carácter" data-ca="Caràcter">Carácter</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Garnacha</strong> / <em>Garnatxa</em></td>
-        <td class="t" data-es="Tinta" data-ca="Negra">Tinta</td>
-        <td>Priorat, Montsant, Camp</td>
-        <td class="t" data-es="Fruta roja, especias. En viñas viejas: complejidad excepcional." data-ca="Fruita vermella, espècies. En vinyes velles: complexitat excepcional.">Fruta roja, especias. En viñas viejas: complejidad excepcional.</td>
-      </tr>
-      <tr>
-        <td><strong>Cariñena</strong> / <em>Samsó</em></td>
-        <td class="t" data-es="Tinta" data-ca="Negra">Tinta</td>
-        <td>Priorat, Montsant</td>
-        <td class="t" data-es="Estructura, color profundo, acidez que alarga la vida en botella. Difícil pero imprescindible en viñas viejas." data-ca="Estructura, color profund, acidesa que allarga la vida en ampolla. Difícil però imprescindible en vinyes velles.">Estructura, color profundo, acidez que alarga la vida en botella.</td>
-      </tr>
-      <tr>
-        <td><strong>Trepat</strong></td>
-        <td class="t" data-es="Tinta" data-ca="Negra">Tinta</td>
-        <td>Conca de Barberà</td>
-        <td class="t" data-es="Rosados y tintos ligeros, acidez viva, perfil floral. Única en el contexto mediterráneo." data-ca="Rosats i negres lleugers, acidesa viva, perfil floral. Única en el context mediterrani.">Rosados y tintos ligeros, acidez viva, perfil floral. Única en el contexto mediterráneo.</td>
-      </tr>
-      <tr>
-        <td><strong>Garnacha blanca</strong> / <em>Garnatxa blanca</em></td>
-        <td class="t" data-es="Blanca" data-ca="Blanca">Blanca</td>
-        <td>Priorat, Montsant</td>
-        <td class="t" data-es="En llicorella: densidad mineral excepcional. Referencia internacional para la variedad." data-ca="En llicorella: densitat mineral excepcional. Referència internacional per a la varietat.">En llicorella: densidad mineral excepcional. Referencia internacional para la variedad.</td>
-      </tr>
-      <tr>
-        <td><strong>Macabeo</strong> / <em>Macabeu</em></td>
-        <td class="t" data-es="Blanca" data-ca="Blanca">Blanca</td>
-        <td>Conca de Barberà, Camp</td>
-        <td class="t" data-es="En la Conca: más tensión y acidez. El carácter cambia radicalmente con la altitud." data-ca="A la Conca: més tensió i acidesa. El caràcter canvia radicalment amb l'altitud.">En la Conca: más tensión y acidez. El carácter cambia radicalmente con la altitud.</td>
-      </tr>
-    </tbody>
-  </table>
+
+  <h3 class="e-subtitle t" data-es="Llicorella — Priorat y parte de Montsant" data-ca="Llicorella — Priorat i part del Montsant">Llicorella — Priorat y parte de Montsant</h3>
+  <p class="e-p t"
+     data-es="Pizarra metamórfica del periodo carbonífero, formada hace unos 300 millones de años. Oscura, quebradiza, muy pobre en materia orgánica. Su comportamiento técnico tiene dos particularidades que explican los vinos: absorbe y devuelve calor —actuando como acumulador térmico que prolonga la maduración—, y obliga a la raíz a descender varios metros en busca de agua, lo que estresa a la planta y concentra el fruto. <strong>Nota de cata asociada</strong>: mineralidad seca, sensación «salina» o «a piedra mojada» en boca, final largo y austero."
+     data-ca="Pissarra metamòrfica del període carbonífer, formada fa uns 300 milions d'anys. Fosca, trencadissa, molt pobra en matèria orgànica. El seu comportament tècnic té dues particularitats que expliquen els vins: absorbeix i retorna calor —actuant com a acumulador tèrmic que prolonga la maduració—, i obliga l'arrel a baixar diversos metres a la cerca d'aigua, cosa que estressa la planta i concentra el fruit. <strong>Nota de cata associada</strong>: mineralitat seca, sensació «salina» o «a pedra mullada» en boca, final llarg i auster.">
+    Pizarra metamórfica del periodo carbonífero, formada hace unos 300 millones de años. Oscura, quebradiza, muy pobre en materia orgánica. Su comportamiento técnico tiene dos particularidades que explican los vinos: absorbe y devuelve calor —actuando como acumulador térmico que prolonga la maduración—, y obliga a la raíz a descender varios metros en busca de agua, lo que estresa a la planta y concentra el fruto. <strong>Nota de cata asociada</strong>: mineralidad seca, sensación «salina» o «a piedra mojada» en boca, final largo y austero.
+  </p>
+
+  <h3 class="e-subtitle t" data-es="Calcáreo — Camp de Tarragona, Conca, parte del Montsant" data-ca="Calcari — Camp de Tarragona, Conca, part del Montsant">Calcáreo — Camp de Tarragona, Conca, parte del Montsant</h3>
+  <p class="e-p t"
+     data-es="Suelos formados sobre substratos calizos del mesozoico. Blanquecinos, permeables, con pH alcalino. Permiten mayor reserva hídrica que la llicorella, lo que se traduce en vinos más <strong>amplios en boca</strong>, con menos tensión pero más volumen. La caliza se asocia tradicionalmente a la elegancia en blancos (es el suelo clásico de Chablis, Champagne o Jerez). Aquí da blancos con amplitud y tintos con fruta mediterránea madura y final ligeramente amargo."
+     data-ca="Sòls formats sobre substrats calcaris del mesozoic. Blanquinosos, permeables, amb pH alcalí. Permeten major reserva hídrica que la llicorella, cosa que es tradueix en vins més <strong>amplis en boca</strong>, amb menys tensió però més volum. La calcària s'associa tradicionalment a l'elegància en blancs (és el sòl clàssic de Chablis, Champagne o Xerès). Aquí dona blancs amb amplitud i negres amb fruita mediterrània madura i final lleugerament amarg.">
+    Suelos formados sobre substratos calizos del mesozoico. Blanquecinos, permeables, con pH alcalino. Permiten mayor reserva hídrica que la llicorella, lo que se traduce en vinos más <strong>amplios en boca</strong>, con menos tensión pero más volumen. La caliza se asocia tradicionalmente a la elegancia en blancos (es el suelo clásico de Chablis, Champagne o Jerez). Aquí da blancos con amplitud y tintos con fruta mediterránea madura y final ligeramente amargo.
+  </p>
+
+  <h3 class="e-subtitle t" data-es="Granito — norte del Montsant" data-ca="Granit — nord del Montsant">Granito — norte del Montsant</h3>
+  <p class="e-p t"
+     data-es="Presente sobre todo en Montsant norte (zona de La Serra d'Almos, Marçà). Aporta una mineralidad <strong>distinta</strong> a la de la llicorella —menos austera, más floral, con notas que algunos enólogos describen como «a pedernal» o «a lana mojada» en blancos—. Los tintos sobre granito tienden a ser más esbeltos, con taninos más finos, sin la densidad opresiva que puede dar la llicorella joven."
+     data-ca="Present sobretot al Montsant nord (zona de La Serra d'Almos, Marçà). Aporta una mineralitat <strong>diferent</strong> a la de la llicorella —menys austera, més floral, amb notes que alguns enòlegs descriuen com «a pedernal» o «a llana mullada» en blancs—. Els negres sobre granit tendeixen a ser més esvelts, amb tanins més fins, sense la densitat opressiva que pot donar la llicorella jove.">
+    Presente sobre todo en Montsant norte (zona de La Serra d'Almos, Marçà). Aporta una mineralidad <strong>distinta</strong> a la de la llicorella —menos austera, más floral, con notas que algunos enólogos describen como «a pedernal» o «a lana mojada» en blancos—. Los tintos sobre granito tienden a ser más esbeltos, con taninos más finos, sin la densidad opresiva que puede dar la llicorella joven.
+  </p>
+
+  <h3 class="e-subtitle t" data-es="Franco-arcilloso — Conca, partes bajas" data-ca="Franco-argilós — Conca, parts baixes">Franco-arcilloso — Conca, partes bajas</h3>
+  <p class="e-p t"
+     data-es="Mezcla equilibrada de arena, limo y arcilla. Es el suelo más «fácil» para la viticultura: reserva hídrica suficiente, drenaje correcto, fertilidad moderada. Produce vinos con <strong>más redondez y menos angulosidad</strong>. Es el suelo habitual de los tintos jóvenes de la Conca y de gran parte del viñedo del Camp. No es espectacular pero es honesto: da vinos que se beben bien sin pretensiones."
+     data-ca="Barreja equilibrada de sorra, llim i argila. És el sòl més «fàcil» per a la viticultura: reserva hídrica suficient, drenatge correcte, fertilitat moderada. Produeix vins amb <strong>més rodonesa i menys angulositat</strong>. És el sòl habitual dels negres joves de la Conca i de gran part de la vinya del Camp. No és espectacular però és honest: dona vins que es beuen bé sense pretensions.">
+    Mezcla equilibrada de arena, limo y arcilla. Es el suelo más «fácil» para la viticultura: reserva hídrica suficiente, drenaje correcto, fertilidad moderada. Produce vinos con <strong>más redondez y menos angulosidad</strong>. Es el suelo habitual de los tintos jóvenes de la Conca y de gran parte del viñedo del Camp. No es espectacular pero es honesto: da vinos que se beben bien sin pretensiones.
+  </p>
+
+  <div class="e-sep">· · ·</div>
+
+  <!-- ════════════ VARIETATS ════════════ -->
+  <span class="e-label t" data-es="Cuarta parada · Las variedades" data-ca="Quarta parada · Les varietats">Cuarta parada · Las variedades</span>
+  <h2 class="e-title t" data-es="Qué esperar en nariz y en boca" data-ca="Què esperar en nas i en boca">Qué esperar en nariz y en boca</h2>
+  <div class="e-divider"></div>
+
+  <p class="e-p t"
+     data-es="Dejamos la teoría y entramos en la copa. Las seis variedades que definen la provincia, con las descripciones organolépticas que un socio debería poder reconocer tras unas cuantas botellas."
+     data-ca="Deixem la teoria i entrem a la copa. Les sis varietats que defineixen la província, amb les descripcions organolèptiques que un soci hauria de poder reconèixer després d'unes quantes ampolles.">
+    Dejamos la teoría y entramos en la copa. Las seis variedades que definen la provincia, con las descripciones organolépticas que un socio debería poder reconocer tras unas cuantas botellas.
+  </p>
+
+  <div class="e-varietat">
+    <div class="e-varietat-head">
+      <span class="e-varietat-nom">Garnacha / <em>Garnatxa</em></span>
+      <span class="e-varietat-tipus t" data-es="Tinta · La variedad reina" data-ca="Negra · La varietat reina">Tinta · La variedad reina</span>
+    </div>
+    <p class="e-p" style="margin-bottom:12px;" class="t"
+       data-es="La variedad más plantada de la provincia y, probablemente, la que mejor expresa sus distintos terruños. Una garnacha del Priorat, del Camp y de Montsant son tres vinos reconociblemente distintos."
+       data-ca="La varietat més plantada de la província i, probablement, la que millor expressa els seus diferents terroirs. Una garnatxa del Priorat, del Camp i del Montsant són tres vins recognoscibles diferents.">
+      La variedad más plantada de la provincia y, probablemente, la que mejor expresa sus distintos terruños. Una garnacha del Priorat, del Camp y de Montsant son tres vinos reconociblemente distintos.
+    </p>
+    <div class="e-varietat-perfil">
+      <div class="e-varietat-bloc">
+        <span class="e-varietat-bloc-label t" data-es="En nariz" data-ca="En nas">En nariz</span>
+        <p class="t" data-es="Fruta roja madura —fresa macerada, frambuesa, cereza—. En versiones de viña vieja: higos, ciruela pasa, especias dulces (canela, clavo). En Priorat: notas minerales y de hierbas mediterráneas secas (tomillo). Evoluciona hacia cuero y tabaco con los años." data-ca="Fruita vermella madura —maduixa macerada, gerd, cirera—. En versions de vinya vella: figues, pruna seca, espècies dolces (canyella, clau). Al Priorat: notes minerals i d'herbes mediterrànies seques (farigola). Evoluciona cap a cuir i tabac amb els anys.">Fruta roja madura —fresa macerada, frambuesa, cereza—. En versiones de viña vieja: higos, ciruela pasa, especias dulces (canela, clavo). En Priorat: notas minerales y de hierbas mediterráneas secas (tomillo). Evoluciona hacia cuero y tabaco con los años.</p>
+      </div>
+      <div class="e-varietat-bloc">
+        <span class="e-varietat-bloc-label t" data-es="En boca" data-ca="En boca">En boca</span>
+        <p class="t" data-es="Taninos blandos por naturaleza —no agresivos— con acidez media. Alcohol alto (suele superar 14º) que puede dar sensación cálida. Final goloso, ligeramente dulzón por la fruta madura. En viña vieja y llicorella: estructura inesperada y un punto de austeridad mineral en el final." data-ca="Tanins suaus per naturalesa —no agressius— amb acidesa mitjana. Alcohol alt (sol superar 14º) que pot donar sensació càlida. Final golós, lleugerament dolcenc per la fruita madura. En vinya vella i llicorella: estructura inesperada i un punt d'austeritat mineral al final.">Taninos blandos por naturaleza —no agresivos— con acidez media. Alcohol alto (suele superar 14º) que puede dar sensación cálida. Final goloso, ligeramente dulzón por la fruta madura. En viña vieja y llicorella: estructura inesperada y un punto de austeridad mineral en el final.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="e-varietat">
+    <div class="e-varietat-head">
+      <span class="e-varietat-nom">Cariñena / <em>Samsó / Carinyena</em></span>
+      <span class="e-varietat-tipus t" data-es="Tinta · La columna vertebral" data-ca="Negra · La columna vertebral">Tinta · La columna vertebral</span>
+    </div>
+    <p class="e-p" style="margin-bottom:12px;" class="t"
+       data-es="Variedad difícil: si se trabaja mal, produce vinos ásperos y verdes. Si se respeta —viña vieja, rendimientos bajos, maduración justa—, es capaz de una complejidad que pocas variedades mediterráneas alcanzan. Aporta lo que la garnacha no tiene: color, acidez y estructura para envejecer."
+       data-ca="Varietat difícil: si es treballa malament, produeix vins aspres i verds. Si es respecta —vinya vella, rendiments baixos, maduració justa—, és capaç d'una complexitat que poques varietats mediterrànies assoleixen. Aporta el que la garnatxa no té: color, acidesa i estructura per envellir.">
+      Variedad difícil: si se trabaja mal, produce vinos ásperos y verdes. Si se respeta —viña vieja, rendimientos bajos, maduración justa—, es capaz de una complejidad que pocas variedades mediterráneas alcanzan. Aporta lo que la garnacha no tiene: color, acidez y estructura para envejecer.
+    </p>
+    <div class="e-varietat-perfil">
+      <div class="e-varietat-bloc">
+        <span class="e-varietat-bloc-label t" data-es="En nariz" data-ca="En nas">En nariz</span>
+        <p class="t" data-es="Fruta negra oscura (mora, arándano), notas terrosas, pimienta negra, hierbas silvestres. En crianzas largas: notas balsámicas, regaliz, cuero viejo. Menos expresiva que la garnacha en juventud, gana con el tiempo." data-ca="Fruita negra fosca (móra, nabiu), notes terroses, pebre negre, herbes silvestres. En crianses llargues: notes balsàmiques, regalèssia, cuir vell. Menys expressiva que la garnatxa en joventut, guanya amb el temps.">Fruta negra oscura (mora, arándano), notas terrosas, pimienta negra, hierbas silvestres. En crianzas largas: notas balsámicas, regaliz, cuero viejo. Menos expresiva que la garnacha en juventud, gana con el tiempo.</p>
+      </div>
+      <div class="e-varietat-bloc">
+        <span class="e-varietat-bloc-label t" data-es="En boca" data-ca="En boca">En boca</span>
+        <p class="t" data-es="Color profundo, taninos firmes y presentes (los de cariñena son más marcados que los de garnacha), <strong>acidez alta</strong> —la más alta entre las tintas provinciales—, final largo con un punto astringente que pide crianza o guarda. Los grandes Priorats deben a la cariñena su capacidad de envejecer veinte años y más." data-ca="Color profund, tanins ferms i presents (els de carinyena són més marcats que els de garnatxa), <strong>acidesa alta</strong> —la més alta entre les negres provincials—, final llarg amb un punt astringent que demana criança o guarda. Els grans Priorats deuen a la carinyena la seva capacitat d'envellir vint anys i més.">Color profundo, taninos firmes y presentes (los de cariñena son más marcados que los de garnacha), <strong>acidez alta</strong> —la más alta entre las tintas provinciales—, final largo con un punto astringente que pide crianza o guarda. Los grandes Priorats deben a la cariñena su capacidad de envejecer veinte años y más.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="e-varietat">
+    <div class="e-varietat-head">
+      <span class="e-varietat-nom">Trepat</span>
+      <span class="e-varietat-tipus t" data-es="Tinta · La joya escondida" data-ca="Negra · La joia amagada">Tinta · La joya escondida</span>
+    </div>
+    <p class="e-p" style="margin-bottom:12px;" class="t"
+       data-es="Única variedad estrictamente autóctona de la provincia que juega en su propia liga. Hábitat casi exclusivo: la Conca de Barberà. Perfil inesperado para un mediterráneo: ligero, floral, de acidez viva."
+       data-ca="Única varietat estrictament autòctona de la província que juga a la seva pròpia lliga. Hàbitat gairebé exclusiu: la Conca de Barberà. Perfil inesperat per a un mediterrani: lleuger, floral, d'acidesa viva.">
+      Única variedad estrictamente autóctona de la provincia que juega en su propia liga. Hábitat casi exclusivo: la Conca de Barberà. Perfil inesperado para un mediterráneo: ligero, floral, de acidez viva.
+    </p>
+    <div class="e-varietat-perfil">
+      <div class="e-varietat-bloc">
+        <span class="e-varietat-bloc-label t" data-es="En nariz" data-ca="En nas">En nariz</span>
+        <p class="t" data-es="Fresa fresca, grosella roja, granada. Florales muy marcadas —violeta, rosa, peonía—. En rosados: notas cítricas de pomelo rosa. Aromática delicada, nunca intensa. Cercana al Pinot Noir o al Gamay en perfil general." data-ca="Maduixa fresca, grosella vermella, magrana. Florals molt marcades —violeta, rosa, peònia—. En rosats: notes cítriques de pomelo rosa. Aromàtica delicada, mai intensa. Propera al Pinot Noir o al Gamay en perfil general.">Fresa fresca, grosella roja, granada. Florales muy marcadas —violeta, rosa, peonía—. En rosados: notas cítricas de pomelo rosa. Aromática delicada, nunca intensa. Cercana al Pinot Noir o al Gamay en perfil general.</p>
+      </div>
+      <div class="e-varietat-bloc">
+        <span class="e-varietat-bloc-label t" data-es="En boca" data-ca="En boca">En boca</span>
+        <p class="t" data-es="Color cereza traslúcido, cuerpo ligero, taninos apenas perceptibles, <strong>acidez alta y cortante</strong>, alcohol contenido (12-13º). Final fresco, casi salino. Se bebe frío (14-15º) en tinto, nunca a temperatura ambiente mediterránea. Uno de los tintos más gastronómicos y versátiles del país." data-ca="Color cirera translúcid, cos lleuger, tanins amb prou feines perceptibles, <strong>acidesa alta i tallant</strong>, alcohol contingut (12-13º). Final fresc, gairebé salí. Es beu fred (14-15º) en negre, mai a temperatura ambient mediterrània. Un dels negres més gastronòmics i versàtils del país.">Color cereza traslúcido, cuerpo ligero, taninos apenas perceptibles, <strong>acidez alta y cortante</strong>, alcohol contenido (12-13º). Final fresco, casi salino. Se bebe frío (14-15º) en tinto, nunca a temperatura ambiente mediterránea. Uno de los tintos más gastronómicos y versátiles del país.</p>
+      </div>
+    </div>
+  </div>
 
   <!-- FOTO raïm -->
   <div class="e-foto-gran">
     <img src="../assets/img/vins/vins-raim.jpg" alt="Raïm a la vinya" onerror="this.parentElement.style.display='none'">
     <div class="e-foto-gran-peu t"
-         data-es="El punto de madurez en el viñedo determina el resultado final en la copa — una decisión cada vez más compleja"
-         data-ca="El punt de maduresa a la vinya determina el resultat final a la copa — una decisió cada vegada més complexa">
-      El punto de madurez en el viñedo determina el resultado final en la copa — una decisión cada vez más compleja
+         data-es="El punto de vendimia —cada vez más temprano por el cambio climático— es hoy la decisión técnica más importante del año en cualquier bodega de la provincia"
+         data-ca="El punt de verema —cada vegada més aviat pel canvi climàtic— és avui la decisió tècnica més important de l'any a qualsevol celler de la província">
+      El punto de vendimia —cada vez más temprano por el cambio climático— es hoy la decisión técnica más importante del año en cualquier bodega de la provincia
     </div>
   </div>
 
-  <p class="e-p t"
-     data-es="La <strong>cariñena</strong> —llamada aquí <em>samsó</em>— es una variedad difícil que necesita del calor y la llicorella para dar lo mejor de sí. Cuando lo hace, aporta estructura y una acidez que alarga la vida del vino en botella. Las garnacha-cariñena viejas del Priorat son, posiblemente, el argumento más sólido para defender que hay cosas en viticultura que el dinero puede comprar pero que el tiempo no."
-     data-ca="La <strong>carinyena</strong> —anomenada aquí <em>samsó</em>— és una varietat difícil que necessita la calor i la llicorella per donar el millor de si mateixa. Quan ho fa, aporta estructura i una acidesa que allarga la vida del vi en ampolla. Les garnatxa-carinyena velles del Priorat són, possiblement, l'argument més sòlid per defensar que hi ha coses en viticultura que els diners poden comprar però que el temps no.">
-    La <strong>cariñena</strong> —llamada aquí <em>samsó</em>— es una variedad difícil que necesita del calor y la llicorella para dar lo mejor de sí. Cuando lo hace, aporta estructura y una acidez que alarga la vida del vino en botella. Las garnacha-cariñena viejas del Priorat son, posiblemente, el argumento más sólido para defender que hay cosas en viticultura que el dinero puede comprar pero que el tiempo no.
-  </p>
+  <div class="e-varietat">
+    <div class="e-varietat-head">
+      <span class="e-varietat-nom">Garnacha blanca / <em>Garnatxa blanca</em></span>
+      <span class="e-varietat-tipus t" data-es="Blanca · La revelación" data-ca="Blanca · La revelació">Blanca · La revelación</span>
+    </div>
+    <p class="e-p" style="margin-bottom:12px;" class="t"
+       data-es="Durante décadas considerada una variedad pesada, buena solo para mezclas. La viticultura moderna —vendimia temprana, llicorella, fermentación en depósitos inertes o lías finas— ha revelado un potencial que la ha convertido en una de las grandes blancas del Mediterráneo occidental."
+       data-ca="Durant dècades considerada una varietat pesada, bona només per barreges. La viticultura moderna —verema primerenca, llicorella, fermentació en dipòsits inerts o lies fines— ha revelat un potencial que l'ha convertit en una de les grans blanques del Mediterrani occidental.">
+      Durante décadas considerada una variedad pesada, buena solo para mezclas. La viticultura moderna —vendimia temprana, llicorella, fermentación en depósitos inertes o lías finas— ha revelado un potencial que la ha convertido en una de las grandes blancas del Mediterráneo occidental.
+    </p>
+    <div class="e-varietat-perfil">
+      <div class="e-varietat-bloc">
+        <span class="e-varietat-bloc-label t" data-es="En nariz" data-ca="En nas">En nariz</span>
+        <p class="t" data-es="Fruta blanca madura (pera, manzana reineta), notas cítricas (limón maduro, pomelo), hinojo, anís. En crianza larga con lías: notas de frutos secos (avellana), miel, brioche. En Priorat sobre llicorella: mineralidad seca y notas yodadas casi marinas." data-ca="Fruita blanca madura (pera, poma reineta), notes cítriques (llimona madura, pomelo), fonoll, anís. En criança llarga amb lies: notes de fruits secs (avellana), mel, brioix. Al Priorat sobre llicorella: mineralitat seca i notes iodades gairebé marines.">Fruta blanca madura (pera, manzana reineta), notas cítricas (limón maduro, pomelo), hinojo, anís. En crianza larga con lías: notas de frutos secos (avellana), miel, brioche. En Priorat sobre llicorella: mineralidad seca y notas yodadas casi marinas.</p>
+      </div>
+      <div class="e-varietat-bloc">
+        <span class="e-varietat-bloc-label t" data-es="En boca" data-ca="En boca">En boca</span>
+        <p class="t" data-es="Cuerpo medio a denso, textura casi aceitosa, acidez moderada —es su punto débil comparada con un riesling—, alcohol alto (13,5-14º), final largo con un punto amargo noble (almendra, piel de cítrico). En llicorella, tensión mineral que compensa la falta de acidez fulgurante." data-ca="Cos mitjà a dens, textura gairebé oliosa, acidesa moderada —és el seu punt feble comparada amb un riesling—, alcohol alt (13,5-14º), final llarg amb un punt amarg noble (ametlla, pell de cítric). En llicorella, tensió mineral que compensa la manca d'acidesa fulgurant.">Cuerpo medio a denso, textura casi aceitosa, acidez moderada —es su punto débil comparada con un riesling—, alcohol alto (13,5-14º), final largo con un punto amargo noble (almendra, piel de cítrico). En llicorella, tensión mineral que compensa la falta de acidez fulgurante.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="e-varietat">
+    <div class="e-varietat-head">
+      <span class="e-varietat-nom">Macabeo / <em>Macabeu / Viura</em></span>
+      <span class="e-varietat-tipus t" data-es="Blanca · El todoterreno" data-ca="Blanca · El tot terreny">Blanca · El todoterreno</span>
+    </div>
+    <p class="e-p" style="margin-bottom:12px;" class="t"
+       data-es="La variedad más neutra de la provincia. En el Camp da blancos amables y sin pretensiones. En la Conca, con altitud y vendimia temprana, muestra una cara distinta: más tensa, más cítrica, más interesante. Base habitual de los cavas."
+       data-ca="La varietat més neutra de la província. Al Camp dona blancs amables i sense pretensions. A la Conca, amb altitud i verema primerenca, mostra una cara distinta: més tensa, més cítrica, més interessant. Base habitual dels caves.">
+      La variedad más neutra de la provincia. En el Camp da blancos amables y sin pretensiones. En la Conca, con altitud y vendimia temprana, muestra una cara distinta: más tensa, más cítrica, más interesante. Base habitual de los cavas.
+    </p>
+    <div class="e-varietat-perfil">
+      <div class="e-varietat-bloc">
+        <span class="e-varietat-bloc-label t" data-es="En nariz" data-ca="En nas">En nariz</span>
+        <p class="t" data-es="Manzana verde, limón, flores blancas (azahar, acacia), notas herbáceas frescas. Perfil discreto, raramente intenso. En la Conca de altitud: notas minerales y un punto de «piel de almendra» característico." data-ca="Poma verda, llimona, flors blanques (tarongina, acàcia), notes herbàcies fresques. Perfil discret, rarament intens. A la Conca d'altitud: notes minerals i un punt de «pell d'ametlla» característic.">Manzana verde, limón, flores blancas (azahar, acacia), notas herbáceas frescas. Perfil discreto, raramente intenso. En la Conca de altitud: notas minerales y un punto de «piel de almendra» característico.</p>
+      </div>
+      <div class="e-varietat-bloc">
+        <span class="e-varietat-bloc-label t" data-es="En boca" data-ca="En boca">En boca</span>
+        <p class="t" data-es="Cuerpo ligero, acidez media-alta (más alta en la Conca), alcohol moderado (11,5-12,5º), final corto en versiones jóvenes, más largo y salino en las de altitud o con lías. Ideal para aperitivos, mariscos y platos ligeros." data-ca="Cos lleuger, acidesa mitjana-alta (més alta a la Conca), alcohol moderat (11,5-12,5º), final curt en versions joves, més llarg i salí en les d'altitud o amb lies. Ideal per a aperitius, mariscos i plats lleugers.">Cuerpo ligero, acidez media-alta (más alta en la Conca), alcohol moderado (11,5-12,5º), final corto en versiones jóvenes, más largo y salino en las de altitud o con lías. Ideal para aperitivos, mariscos y platos ligeros.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="e-varietat">
+    <div class="e-varietat-head">
+      <span class="e-varietat-nom">Parellada</span>
+      <span class="e-varietat-tipus t" data-es="Blanca · La de altitud" data-ca="Blanca · La d'altitud">Blanca · La de altitud</span>
+    </div>
+    <p class="e-p" style="margin-bottom:12px;" class="t"
+       data-es="Variedad que exige altitud para expresarse: por debajo de 400 metros pierde carácter. Aporta al cava su frescura cítrica típica. Como vino tranquilo, sola o en coupage, muestra un perfil aromático distintivo."
+       data-ca="Varietat que exigeix altitud per expressar-se: per sota de 400 metres perd caràcter. Aporta al cava la seva frescor cítrica típica. Com a vi tranquil, sola o en coupage, mostra un perfil aromàtic distintiu.">
+      Variedad que exige altitud para expresarse: por debajo de 400 metros pierde carácter. Aporta al cava su frescura cítrica típica. Como vino tranquilo, sola o en coupage, muestra un perfil aromático distintivo.
+    </p>
+    <div class="e-varietat-perfil">
+      <div class="e-varietat-bloc">
+        <span class="e-varietat-bloc-label t" data-es="En nariz" data-ca="En nas">En nariz</span>
+        <p class="t" data-es="Fruta blanca delicada, hinojo, manzanilla, notas florales suaves. Mucho más delicada que el macabeo, menos estructurada que la xarel·lo. Su virtud es la frescura y la elegancia aromática." data-ca="Fruita blanca delicada, fonoll, camamilla, notes florals suaus. Molt més delicada que el macabeu, menys estructurada que el xarel·lo. La seva virtut és la frescor i l'elegància aromàtica.">Fruta blanca delicada, hinojo, manzanilla, notas florales suaves. Mucho más delicada que el macabeo, menos estructurada que la xarel·lo. Su virtud es la frescura y la elegancia aromática.</p>
+      </div>
+      <div class="e-varietat-bloc">
+        <span class="e-varietat-bloc-label t" data-es="En boca" data-ca="En boca">En boca</span>
+        <p class="t" data-es="Acidez alta, cuerpo ligero, alcohol bajo (11-12º). Final fresco y limpio, sin complicaciones. Es la variedad de la ligereza: funciona sola en aperitivos y es imprescindible en coupages que busquen frescura." data-ca="Acidesa alta, cos lleuger, alcohol baix (11-12º). Final fresc i net, sense complicacions. És la varietat de la lleugeresa: funciona sola en aperitius i és imprescindible en coupages que busquin frescor.">Acidez alta, cuerpo ligero, alcohol bajo (11-12º). Final fresco y limpio, sin complicaciones. Es la variedad de la ligereza: funciona sola en aperitivos y es imprescindible en coupages que busquen frescura.</p>
+      </div>
+    </div>
+  </div>
 
   <div class="e-sep">· · ·</div>
 
-  <!-- ELABORACIÓ -->
+  <!-- ════════════ ELABORACIÓ ════════════ -->
   <div class="e-grid-2">
     <div>
-      <span class="e-label t" data-es="Cómo se elabora" data-ca="Com s'elabora">Cómo se elabora</span>
+      <span class="e-label t" data-es="Quinta parada · La bodega" data-ca="Cinquena parada · El celler">Quinta parada · La bodega</span>
       <h2 class="e-title t" data-es="Menos intervención, más territorio" data-ca="Menys intervenció, més territori">Menos intervención, más territorio</h2>
       <div class="e-divider"></div>
       <p class="e-p t"
-         data-es="Durante muchos años, la viticultura provincial trabajó con un criterio simple: extraer el máximo. Maceración larga, <strong>madera nueva</strong>, concentración. El resultado eran vinos potentes que impresionaban en primera instancia y cansaban en la mesa."
-         data-ca="Durant molts anys, la viticultura provincial va treballar amb un criteri simple: extreure el màxim. Maceració llarga, <strong>fusta nova</strong>, concentració. El resultat eren vins potents que impressionaven en primera instància i cansaven a taula.">
-        Durante muchos años, la viticultura provincial trabajó con un criterio simple: extraer el máximo. Maceración larga, <strong>madera nueva</strong>, concentración. El resultado eran vinos potentes que impresionaban en primera instancia y cansaban en la mesa.
+         data-es="Durante los noventa y los primeros dos mil, el estilo dominante en la provincia fue el de la <strong>concentración máxima</strong>: maceraciones largas, mucha madera nueva de roble francés, extracción agresiva. Eran los años de los «super-Priorats» que competían en potencia. Impresionaban en cata pero cansaban en la mesa."
+         data-ca="Durant els noranta i els primers dos mil, l'estil dominant a la província va ser el de la <strong>concentració màxima</strong>: maceracions llargues, molta fusta nova de roure francès, extracció agressiva. Eren els anys dels «super-Priorats» que competien en potència. Impressionaven en cata però cansaven a taula.">
+        Durante los noventa y los primeros dos mil, el estilo dominante en la provincia fue el de la <strong>concentración máxima</strong>: maceraciones largas, mucha madera nueva de roble francés, extracción agresiva. Eran los años de los «super-Priorats» que competían en potencia. Impresionaban en cata pero cansaban en la mesa.
       </p>
       <p class="e-p t"
-         data-es="La dirección actual es hacia menos interferencia: maceración controlada, menos madera nueva —o madera usada, ánforas, hormigón—, y más atención al <strong>momento de la vendimia</strong>, adelantada en muchas bodegas para preservar acidez y frescura."
-         data-ca="La direcció actual és cap a menys interferència: maceració controlada, menys fusta nova —o fusta usada, àmfores, formigó—, i més atenció al <strong>moment de la verema</strong>, avançada en molts cellers per preservar acidesa i frescor.">
-        La dirección actual es hacia menos interferencia: maceración controlada, menos madera nueva —o madera usada, ánforas, hormigón—, y más atención al <strong>momento de la vendimia</strong>, adelantada en muchas bodegas para preservar acidez y frescura.
+         data-es="La dirección actual es opuesta. Menos maceración, menos madera nueva —o madera grande y usada, hormigón, ánforas de barro—, vendimias adelantadas para preservar acidez, y más atención a la <strong>viña</strong> que a la bodega. Los vinos resultan más bebibles, con menos peso alcohólico (algunos elaboradores bajan deliberadamente de 14º en zonas donde antes era impensable), más vivos en el vaso, con mejor capacidad de evolución."
+         data-ca="La direcció actual és oposada. Menys maceració, menys fusta nova —o fusta gran i usada, formigó, àmfores de fang—, veremes avançades per preservar acidesa, i més atenció a la <strong>vinya</strong> que al celler. Els vins resulten més bevibles, amb menys pes alcohòlic (alguns elaboradors baixen deliberadament de 14º en zones on abans era impensable), més vius al got, amb millor capacitat d'evolució.">
+        La dirección actual es opuesta. Menos maceración, menos madera nueva —o madera grande y usada, hormigón, ánforas de barro—, vendimias adelantadas para preservar acidez, y más atención a la <strong>viña</strong> que a la bodega. Los vinos resultan más bebibles, con menos peso alcohólico (algunos elaboradores bajan deliberadamente de 14º en zonas donde antes era impensable), más vivos en el vaso, con mejor capacidad de evolución.
+      </p>
+      <p class="e-p t"
+         data-es="El movimiento <strong>ecológico y biodinámico</strong> ha ganado peso real: no es ya una etiqueta minoritaria. En el Priorat y Montsant, una proporción importante del viñedo de referencia trabaja sin químicos de síntesis desde hace diez o quince años. No por moda: por convicción de que el suelo que hace especiales a estos vinos no resiste indefinidamente la viticultura convencional."
+         data-ca="El moviment <strong>ecològic i biodinàmic</strong> ha guanyat pes real: no és ja una etiqueta minoritària. Al Priorat i Montsant, una proporció important de la vinya de referència treballa sense químics de síntesi des de fa deu o quinze anys. No per moda: per convicció que el sòl que fa especials aquests vins no resisteix indefinidament la viticultura convencional.">
+        El movimiento <strong>ecológico y biodinámico</strong> ha ganado peso real: no es ya una etiqueta minoritaria. En el Priorat y Montsant, una proporción importante del viñedo de referencia trabaja sin químicos de síntesis desde hace diez o quince años. No por moda: por convicción de que el suelo que hace especiales a estos vinos no resiste indefinidamente la viticultura convencional.
       </p>
     </div>
     <div class="e-img">
@@ -398,58 +681,94 @@ if (currentLang === 'ca') setLang('ca');
 
   <div class="e-sep">· · ·</div>
 
-  <!-- BLOC VINS -->
-  <div class="e-vins">
-    <span class="e-label t" style="color:rgba(184,146,74,.8);" data-es="Vinos del territorio" data-ca="Vins del territori">Vinos del territorio</span>
-    <h3 class="e-vins-title t" data-es="Cuatro estilos, cuatro expresiones" data-ca="Quatre estils, quatre expressions">Cuatro estilos, cuatro expresiones</h3>
-    <p class="e-vins-desc t"
-       data-es="Cada denominación produce un perfil diferente. No hay jerarquía: hay territorios con lógicas distintas que se expresan en la copa de forma reconocible."
-       data-ca="Cada denominació produeix un perfil diferent. No hi ha jerarquia: hi ha territoris amb lògiques distintes que s'expressen a la copa de forma recognoscible.">
-      Cada denominación produce un perfil diferente. No hay jerarquía: hay territorios con lógicas distintas que se expresan en la copa de forma reconocible.
-    </p>
-    <div class="e-vins-grid">
-      <div class="e-vi">
-        <div class="e-vi-zona">DOQ Priorat</div>
-        <div class="e-vi-nom t" data-es="Garnacha + Cariñena · Viñas viejas" data-ca="Garnatxa + Carinyena · Vinyes velles">Garnacha + Cariñena · Viñas viejas</div>
-        <div class="e-vi-desc t" data-es="Densidad mineral, estructura, capacidad de guarda" data-ca="Densitat mineral, estructura, capacitat de guarda">Densidad mineral, estructura, capacidad de guarda</div>
-      </div>
-      <div class="e-vi">
-        <div class="e-vi-zona">DO Montsant</div>
-        <div class="e-vi-nom t" data-es="Garnacha blanca · Blanc" data-ca="Garnatxa blanca · Blanc">Garnacha blanca · Blanc</div>
-        <div class="e-vi-desc t" data-es="Equilibrio, textura diferente, accesibilidad" data-ca="Equilibri, textura diferent, accessibilitat">Equilibrio, textura diferente, accesibilidad</div>
-      </div>
-      <div class="e-vi">
-        <div class="e-vi-zona">DO Conca de Barberà</div>
-        <div class="e-vi-nom t" data-es="Trepat · Rosat o Negre" data-ca="Trepat · Rosat o Negre">Trepat · Rosat o Negre</div>
-        <div class="e-vi-desc t" data-es="Frescura, acidez viva, perfil floral único" data-ca="Frescor, acidesa viva, perfil floral únic">Frescura, acidez viva, perfil floral único</div>
-      </div>
-      <div class="e-vi">
-        <div class="e-vi-zona">DO Tarragona</div>
-        <div class="e-vi-nom t" data-es="Garnacha · Camp de Tarragona" data-ca="Garnatxa · Camp de Tarragona">Garnacha · Camp de Tarragona</div>
-        <div class="e-vi-desc t" data-es="Fruta mediterránea, cuerpo amable, evolución creciente" data-ca="Fruita mediterrània, cos amable, evolució creixent">Fruta mediterránea, cuerpo amable, evolución creciente</div>
-      </div>
-    </div>
-  </div>
+  <!-- ════════════ MARIDATGES ════════════ -->
+  <span class="e-label t" data-es="Sexta parada · La mesa" data-ca="Sisena parada · La taula">Sexta parada · La mesa</span>
+  <h2 class="e-title t" data-es="Vinos de aquí para cocina de aquí" data-ca="Vins d'aquí per a cuina d'aquí">Vinos de aquí para cocina de aquí</h2>
+  <div class="e-divider"></div>
 
-  <!-- GASTRONOMIA -->
-  <div class="e-grid-2">
-    <div class="e-img">
-      <img src="../assets/img/vins/vins-taula.jpg" alt="Vi i gastronomia al Camp de Tarragona" onerror="this.parentElement.style.background='var(--cream2)'">
+  <p class="e-p t"
+     data-es="La gastronomía provincial y su vino son partes de un mismo relato histórico. No son maridajes de ingeniería: son convivencias de siglos. Los que funcionan mejor son casi siempre los más obvios."
+     data-ca="La gastronomia provincial i el seu vi són parts d'un mateix relat històric. No són maridatges d'enginyeria: són convivències de segles. Els que funcionen millor són gairebé sempre els més obvis.">
+    La gastronomía provincial y su vino son partes de un mismo relato histórico. No son maridajes de ingeniería: son convivencias de siglos. Los que funcionan mejor son casi siempre los más obvios.
+  </p>
+
+  <div class="e-maridatge-list">
+    <div class="e-maridatge-item">
+      <div class="e-maridatge-plat t"
+           data-es="Xató, escalivada, calçots amb romesco<small>Entrantes y asados del territorio</small>"
+           data-ca="Xató, escalivada, calçots amb romesco<small>Entrants i rostits del territori</small>">
+        Xató, escalivada, calçots amb romesco<small>Entrantes y asados del territorio</small>
+      </div>
+      <div class="e-maridatge-vi t"
+           data-es="<strong>Garnacha del Camp</strong> o <strong>Montsant joven</strong>. La fruta mediterránea y los taninos suaves abrazan las almendras y avellanas del romesco; la ligera acidez equilibra el dulzor del calçot asado."
+           data-ca="<strong>Garnatxa del Camp</strong> o <strong>Montsant jove</strong>. La fruita mediterrània i els tanins suaus abracen les ametlles i avellanes del romesco; la lleugera acidesa equilibra la dolçor del calçot rostit.">
+        <strong>Garnacha del Camp</strong> o <strong>Montsant joven</strong>. La fruta mediterránea y los taninos suaves abrazan las almendras y avellanas del romesco; la ligera acidez equilibra el dulzor del calçot asado.
+      </div>
     </div>
-    <div>
-      <span class="e-label t" data-es="Vino y mesa" data-ca="Vi i taula">Vino y mesa</span>
-      <h2 class="e-title t" data-es="No como maridaje, sino como parte del relato" data-ca="No com a maridatge, sinó com a part del relat">No como maridaje, sino como parte del relato</h2>
-      <div class="e-divider"></div>
-      <p class="e-p t"
-         data-es="La gastronomía de la provincia tiene en el vino un elemento que va más allá del maridaje técnico. El <strong>romesco</strong> no necesita explicación enológica para encontrar su vino: cualquier garnacha del Camp, con su fruta mediterránea y su cuerpo amable, resuelve el encuentro de forma natural."
-         data-ca="La gastronomia de la província té en el vi un element que va més enllà del maridatge tècnic. El <strong>romesco</strong> no necessita explicació enològica per trobar el seu vi: qualsevol garnatxa del Camp, amb la seva fruita mediterrània i el seu cos amable, resol la trobada de forma natural.">
-        La gastronomía de la provincia tiene en el vino un elemento que va más allá del maridaje técnico. El <strong>romesco</strong> no necesita explicación enológica para encontrar su vino: cualquier garnacha del Camp, con su fruta mediterránea y su cuerpo amable, resuelve el encuentro de forma natural.
-      </p>
-      <p class="e-p t"
-         data-es="Un blanco de <strong>garnacha blanca vieja</strong> del Priorat, con su densidad mineral, funciona con platos que un blanco mediterráneo convencional no podría sostener. Un trepat de la Conca abre posibilidades con embutidos de montaña que pocos vinos de la zona pueden ofrecer con esa ligereza."
-         data-ca="Un blanc de <strong>garnatxa blanca vella</strong> del Priorat, amb la seva densitat mineral, funciona amb plats que un blanc mediterrani convencional no podria sostenir. Un trepat de la Conca obre possibilitats amb embotits de muntanya que pocs vins de la zona poden oferir amb aquesta lleugeresa.">
-        Un blanco de <strong>garnacha blanca vieja</strong> del Priorat, con su densidad mineral, funciona con platos que un blanco mediterráneo convencional no podría sostener. Un trepat de la Conca abre posibilidades con embutidos de montaña que pocos vinos de la zona pueden ofrecer con esa ligereza.
-      </p>
+
+    <div class="e-maridatge-item">
+      <div class="e-maridatge-plat t"
+           data-es="Arroz marinero, fideuà, rossejat<small>Cocina marinera del Camp</small>"
+           data-ca="Arròs mariner, fideuà, rossejat<small>Cuina marinera del Camp</small>">
+        Arroz marinero, fideuà, rossejat<small>Cocina marinera del Camp</small>
+      </div>
+      <div class="e-maridatge-vi t"
+           data-es="<strong>Macabeo o xarel·lo del Camp</strong> (Nulles, Alió) o <strong>trepat rosado de la Conca</strong>. Acidez cítrica para el arroz graso, cuerpo suficiente para soportar el sofrito. El trepat rosado es una opción inesperada pero espectacular con fideuà."
+           data-ca="<strong>Macabeu o xarel·lo del Camp</strong> (Nulles, Alió) o <strong>trepat rosat de la Conca</strong>. Acidesa cítrica per a l'arròs gras, cos suficient per suportar el sofregit. El trepat rosat és una opció inesperada però espectacular amb fideuà.">
+        <strong>Macabeo o xarel·lo del Camp</strong> (Nulles, Alió) o <strong>trepat rosado de la Conca</strong>. Acidez cítrica para el arroz graso, cuerpo suficiente para soportar el sofrito. El trepat rosado es una opción inesperada pero espectacular con fideuà.
+      </div>
+    </div>
+
+    <div class="e-maridatge-item">
+      <div class="e-maridatge-plat t"
+           data-es="Suquet, pescados de roca, mariscos<small>Cocina marinera refinada</small>"
+           data-ca="Suquet, peixos de roca, mariscos<small>Cuina marinera refinada</small>">
+        Suquet, pescados de roca, mariscos<small>Cocina marinera refinada</small>
+      </div>
+      <div class="e-maridatge-vi t"
+           data-es="<strong>Garnacha blanca del Priorat o Montsant</strong>. La densidad y la mineralidad sostienen la intensidad del pescado; el cuerpo del vino resiste donde un blanco ligero se desinflaría. Un blanco de llicorella con un rape en salsa de azafrán es de los maridajes más rotundos de la provincia."
+           data-ca="<strong>Garnatxa blanca del Priorat o Montsant</strong>. La densitat i la mineralitat sostenen la intensitat del peix; el cos del vi resisteix on un blanc lleuger es desinflaria. Un blanc de llicorella amb un rap en salsa de safrà és dels maridatges més rotunds de la província.">
+        <strong>Garnacha blanca del Priorat o Montsant</strong>. La densidad y la mineralidad sostienen la intensidad del pescado; el cuerpo del vino resiste donde un blanco ligero se desinflaría. Un blanco de llicorella con un rape en salsa de azafrán es de los maridajes más rotundos de la provincia.
+      </div>
+    </div>
+
+    <div class="e-maridatge-item">
+      <div class="e-maridatge-plat t"
+           data-es="Embutidos, formatges, tapa de montaña<small>Producto de interior</small>"
+           data-ca="Embotits, formatges, tapa de muntanya<small>Producte d'interior</small>">
+        Embutidos, formatges, tapa de montaña<small>Producto de interior</small>
+      </div>
+      <div class="e-maridatge-vi t"
+           data-es="<strong>Trepat tinto ligeramente frío</strong>. La acidez corta la grasa, la ligereza no tapa los sabores delicados de un embutido curado. Con formatges de la zona —Mas Pascual, formatges de Cadí— funciona donde un tinto potente mata el matiz."
+           data-ca="<strong>Trepat negre lleugerament fred</strong>. L'acidesa talla el greix, la lleugeresa no tapa els sabors delicats d'un embotit curat. Amb formatges de la zona —Mas Pascual, formatges de Cadí— funciona on un negre potent mata el matís.">
+        <strong>Trepat tinto ligeramente frío</strong>. La acidez corta la grasa, la ligereza no tapa los sabores delicados de un embutido curado. Con formatges de la zona —Mas Pascual, formatges de Cadí— funciona donde un tinto potente mata el matiz.
+      </div>
+    </div>
+
+    <div class="e-maridatge-item">
+      <div class="e-maridatge-plat t"
+           data-es="Caza menor, cordero a la brasa, guisos<small>Cocina de interior y montaña</small>"
+           data-ca="Caça menor, xai a la brasa, guisats<small>Cuina d'interior i muntanya</small>">
+        Caza menor, cordero a la brasa, guisos<small>Cocina de interior y montaña</small>
+      </div>
+      <div class="e-maridatge-vi t"
+           data-es="<strong>Priorat joven o Montsant de crianza</strong>. La estructura tánica para la proteína, los aromas de hierbas y especias que dialogan con la brasa, el final mineral que limpia la grasa. Es el maridaje libro de texto, y funciona."
+           data-ca="<strong>Priorat jove o Montsant de criança</strong>. L'estructura tànica per a la proteïna, els aromes d'herbes i espècies que dialoguen amb la brasa, el final mineral que neteja el greix. És el maridatge llibre de text, i funciona.">
+        <strong>Priorat joven o Montsant de crianza</strong>. La estructura tánica para la proteína, los aromas de hierbas y especias que dialogan con la brasa, el final mineral que limpia la grasa. Es el maridaje libro de texto, y funciona.
+      </div>
+    </div>
+
+    <div class="e-maridatge-item">
+      <div class="e-maridatge-plat t"
+           data-es="Postres, pastas, frutos secos<small>Cierre de mesa</small>"
+           data-ca="Postres, pastes, fruits secs<small>Tancament de taula</small>">
+        Postres, pastas, frutos secos<small>Cierre de mesa</small>
+      </div>
+      <div class="e-maridatge-vi t"
+           data-es="<strong>Tarragona Clásico</strong> o un dulce de garnacha del Priorat. Vinos licorosos históricos, injustamente olvidados fuera del territorio, que pueden recuperar su lugar con cierres de avellanas, almendras garrapiñadas o mel i mató."
+           data-ca="<strong>Tarragona Clàssic</strong> o un dolç de garnatxa del Priorat. Vins licorosos històrics, injustament oblidats fora del territori, que poden recuperar el seu lloc amb tancaments d'avellanes, ametlles garrapinyades o mel i mató.">
+        <strong>Tarragona Clásico</strong> o un dulce de garnacha del Priorat. Vinos licorosos históricos, injustamente olvidados fuera del territorio, que pueden recuperar su lugar con cierres de avellanas, almendras garrapiñadas o mel i mató.
+      </div>
     </div>
   </div>
 
@@ -457,53 +776,125 @@ if (currentLang === 'ca') setLang('ca');
   <div class="e-foto-gran">
     <img src="../assets/img/vins/vins-copa-blanc.jpg" alt="Copa de vi blanc" onerror="this.parentElement.style.display='none'">
     <div class="e-foto-gran-peu t"
-         data-es="La garnacha blanca vieja del Priorat produce blancos de una densidad mineral que pocas variedades mediterráneas pueden igualar"
-         data-ca="La garnatxa blanca vella del Priorat produeix blancs d'una densitat mineral que poques varietats mediterrànies poden igualar">
-      La garnacha blanca vieja del Priorat produce blancos de una densidad mineral que pocas variedades mediterráneas pueden igualar
+         data-es="La garnacha blanca vieja del Priorat: el argumento más sólido a favor de los blancos mediterráneos frente a los clásicos atlánticos"
+         data-ca="La garnatxa blanca vella del Priorat: l'argument més sòlid a favor dels blancs mediterranis davant dels clàssics atlàntics">
+      La garnacha blanca vieja del Priorat: el argumento más sólido a favor de los blancos mediterráneos frente a los clásicos atlánticos
     </div>
   </div>
 
-  <div class="e-sep">· · ·</div>
+  <!-- ════════════ GUIA SOCI ════════════ -->
+  <div class="e-guia">
+    <span class="e-guia-label t" data-es="Última parada · Para el socio" data-ca="Última parada · Per al soci">Última parada · Para el socio</span>
+    <h2 class="e-guia-title t" data-es="Ocho claves para pedir vino con criterio" data-ca="Vuit claus per demanar vi amb criteri">Ocho claves para pedir vino con criterio</h2>
+    <p class="e-guia-sub t"
+       data-es="En un restaurante del territorio, la carta de vinos es tan informativa como la de platos. Estas son las reglas que un miembro de la asociación debería tener interiorizadas para navegar cualquier carta provincial con soltura."
+       data-ca="En un restaurant del territori, la carta de vins és tan informativa com la de plats. Aquestes són les regles que un membre de l'associació hauria de tenir interioritzades per navegar qualsevol carta provincial amb soltesa.">
+      En un restaurante del territorio, la carta de vinos es tan informativa como la de platos. Estas son las reglas que un miembro de la asociación debería tener interiorizadas para navegar cualquier carta provincial con soltura.
+    </p>
 
-  <!-- TENDÈNCIES -->
-  <span class="e-label t" data-es="Lo que está pasando ahora" data-ca="El que està passant ara">Lo que está pasando ahora</span>
-  <h2 class="e-title t" data-es="Tres tendencias que definen el presente" data-ca="Tres tendències que defineixen el present">Tres tendencias que definen el presente</h2>
-  <div class="e-divider"></div>
-  <div class="e-tendencies">
-    <div class="e-tend-card">
-      <div class="e-tend-num">01</div>
-      <div class="e-tend-title t" data-es="Menos intervención" data-ca="Menys intervenció">Menos intervención</div>
-      <p class="e-tend-text t"
-         data-es="Vinos ecológicos y biodinámicos han pasado de rareza a parte significativa de la producción. No como etiqueta de marketing, sino como convicción."
-         data-ca="Vins ecològics i biodinàmics han passat de raresa a part significativa de la producció. No com a etiqueta de màrqueting, sinó com a convicció.">
-        Vinos ecológicos y biodinámicos han pasado de rareza a parte significativa de la producción. No como etiqueta de marketing, sino como convicción.
-      </p>
+    <div class="e-guia-item">
+      <span class="e-guia-num">01</span>
+      <div class="e-guia-text">
+        <h4 class="t" data-es="Mira la carta antes de pedir plato" data-ca="Mira la carta abans de demanar plat">Mira la carta antes de pedir plato</h4>
+        <p class="t"
+           data-es="La carta de vinos condiciona el menú tanto como al revés. Si hay un trepat de la Conca o un blanco de llicorella que te interesa, adapta el plato a eso. Es la lógica de los grandes restaurantes y no requiere ser experto: basta con <strong>dejar de tratar el vino como accesorio</strong>."
+           data-ca="La carta de vins condiciona el menú tant com al revés. Si hi ha un trepat de la Conca o un blanc de llicorella que t'interessa, adapta el plat a això. És la lògica dels grans restaurants i no requereix ser expert: n'hi ha prou amb <strong>deixar de tractar el vi com a accessori</strong>.">
+          La carta de vinos condiciona el menú tanto como al revés. Si hay un trepat de la Conca o un blanco de llicorella que te interesa, adapta el plato a eso. Es la lógica de los grandes restaurantes y no requiere ser experto: basta con <strong>dejar de tratar el vino como accesorio</strong>.
+        </p>
+      </div>
     </div>
-    <div class="e-tend-card">
-      <div class="e-tend-num">02</div>
-      <div class="e-tend-title t" data-es="Recuperación varietal" data-ca="Recuperació varietal">Recuperación varietal</div>
-      <p class="e-tend-text t"
-         data-es="Proyectos ampelográficos identifican biotipos locales con mayor diversidad genética y resistencia al cambio climático."
-         data-ca="Projectes ampelogràfics identifiquen biòtips locals amb major diversitat genètica i resistència al canvi climàtic.">
-        Proyectos ampelográficos identifican biotipos locales con mayor diversidad genética y resistencia al cambio climático.
-      </p>
+
+    <div class="e-guia-item">
+      <span class="e-guia-num">02</span>
+      <div class="e-guia-text">
+        <h4 class="t" data-es="Pregunta siempre por el municipio, no solo por la DO" data-ca="Pregunta sempre pel municipi, no només per la DO">Pregunta siempre por el municipio, no solo por la DO</h4>
+        <p class="t"
+           data-es="«Un Priorat» no es una respuesta. Un Priorat de Gratallops, de Porrera, de Bellmunt o de Torroja son cuatro vinos distintos. Desde 2009 la DOQ permite (y fomenta) etiquetar <strong>Vi de Vila</strong> —vino de pueblo— y <strong>Vi de Finca</strong>. Un sumiller que merezca la pena te explicará las diferencias. Si no sabe, es una señal."
+           data-ca="«Un Priorat» no és una resposta. Un Priorat de Gratallops, de Porrera, de Bellmunt o de Torroja són quatre vins diferents. Des de 2009 la DOQ permet (i fomenta) etiquetar <strong>Vi de Vila</strong> —vi de poble— i <strong>Vi de Finca</strong>. Un sommelier que valgui la pena t'explicarà les diferències. Si no sap, és un senyal.">
+          «Un Priorat» no es una respuesta. Un Priorat de Gratallops, de Porrera, de Bellmunt o de Torroja son cuatro vinos distintos. Desde 2009 la DOQ permite (y fomenta) etiquetar <strong>Vi de Vila</strong> —vino de pueblo— y <strong>Vi de Finca</strong>. Un sumiller que merezca la pena te explicará las diferencias. Si no sabe, es una señal.
+        </p>
+      </div>
     </div>
-    <div class="e-tend-card">
-      <div class="e-tend-num">03</div>
-      <div class="e-tend-title t" data-es="Respuesta al clima" data-ca="Resposta al clima">Respuesta al clima</div>
-      <p class="e-tend-text t"
-         data-es="Vendimias adelantadas, trabajo a mayor altitud, variedades más resistentes. El cambio climático es ya una variable activa, no futura."
-         data-ca="Veremes avançades, treball a major altitud, varietats més resistents. El canvi climàtic ja és una variable activa, no futura.">
-        Vendimias adelantadas, trabajo a mayor altitud, variedades más resistentes. El cambio climático es ya una variable activa, no futura.
-      </p>
+
+    <div class="e-guia-item">
+      <span class="e-guia-num">03</span>
+      <div class="e-guia-text">
+        <h4 class="t" data-es="En Priorat, desconfía del precio bajo" data-ca="Al Priorat, desconfia del preu baix">En Priorat, desconfía del precio bajo</h4>
+        <p class="t"
+           data-es="Un Priorat por debajo de 15€ de carta (unos 10€ en tienda) es casi seguro un producto industrial que aprovecha la DO. Los rendimientos bajos de la zona hacen matemáticamente imposible un buen Priorat a ese precio. Vale más un <strong>buen Montsant a 15€ que un Priorat mediocre al mismo precio</strong>."
+           data-ca="Un Priorat per sota de 15€ de carta (uns 10€ a botiga) és gairebé segur un producte industrial que aprofita la DO. Els rendiments baixos de la zona fan matemàticament impossible un bon Priorat a aquest preu. Val més un <strong>bon Montsant a 15€ que un Priorat mediocre al mateix preu</strong>.">
+          Un Priorat por debajo de 15€ de carta (unos 10€ en tienda) es casi seguro un producto industrial que aprovecha la DO. Los rendimientos bajos de la zona hacen matemáticamente imposible un buen Priorat a ese precio. Vale más un <strong>buen Montsant a 15€ que un Priorat mediocre al mismo precio</strong>.
+        </p>
+      </div>
+    </div>
+
+    <div class="e-guia-item">
+      <span class="e-guia-num">04</span>
+      <div class="e-guia-text">
+        <h4 class="t" data-es="Pide el trepat cuando puedas" data-ca="Demana el trepat quan puguis">Pide el trepat cuando puedas</h4>
+        <p class="t"
+           data-es="Es la variedad más singular de la provincia y probablemente la más infravalorada. Cualquier restaurante de la Conca lo tendrá; fuera de la Conca, si aparece en carta es una buena señal del restaurante. Pídelo <strong>ligeramente frío</strong> (pregunta si lo pueden enfriar diez minutos): cambia radicalmente."
+           data-ca="És la varietat més singular de la província i probablement la més infravalorada. Qualsevol restaurant de la Conca en tindrà; fora de la Conca, si apareix en carta és un bon senyal del restaurant. Demana'l <strong>lleugerament fred</strong> (pregunta si el poden refredar deu minuts): canvia radicalment.">
+          Es la variedad más singular de la provincia y probablemente la más infravalorada. Cualquier restaurante de la Conca lo tendrá; fuera de la Conca, si aparece en carta es una buena señal del restaurante. Pídelo <strong>ligeramente frío</strong> (pregunta si lo pueden enfriar diez minutos): cambia radicalmente.
+        </p>
+      </div>
+    </div>
+
+    <div class="e-guia-item">
+      <span class="e-guia-num">05</span>
+      <div class="e-guia-text">
+        <h4 class="t" data-es="Los blancos son la gran apuesta actual" data-ca="Els blancs són la gran aposta actual">Los blancos son la gran apuesta actual</h4>
+        <p class="t"
+           data-es="El estereotipo «el Priorat es para tintos» está obsoleto. Una garnacha blanca vieja del Priorat o Montsant está entre los <strong>grandes blancos mediterráneos actuales</strong>, a precios aún razonables (25-40€ en carta). Si la carta tiene uno, considerarlo seriamente en lugar del tinto automático."
+           data-ca="L'estereotip «el Priorat és per a negres» està obsolet. Una garnatxa blanca vella del Priorat o Montsant està entre els <strong>grans blancs mediterranis actuals</strong>, a preus encara raonables (25-40€ en carta). Si la carta en té un, considerar-lo seriosament en lloc del negre automàtic.">
+          El estereotipo «el Priorat es para tintos» está obsoleto. Una garnacha blanca vieja del Priorat o Montsant está entre los <strong>grandes blancos mediterráneos actuales</strong>, a precios aún razonables (25-40€ en carta). Si la carta tiene uno, considerarlo seriamente en lugar del tinto automático.
+        </p>
+      </div>
+    </div>
+
+    <div class="e-guia-item">
+      <span class="e-guia-num">06</span>
+      <div class="e-guia-text">
+        <h4 class="t" data-es="Temperatura: casi todo se sirve más frío" data-ca="Temperatura: gairebé tot se serveix més fred">Temperatura: casi todo se sirve más frío</h4>
+        <p class="t"
+           data-es="Un Priorat a 22º (temperatura ambiente de un verano catalán) es un vino alcohólico y plano. Los tintos de la provincia deben servirse entre <strong>14 y 17º</strong> según intensidad: un Priorat joven a 16-17º, un Montsant a 15-16º, un trepat a 14-15º. Pide al sumiller que lo enfríe si llega caliente. No es una impertinencia; es lo correcto."
+           data-ca="Un Priorat a 22º (temperatura ambient d'un estiu català) és un vi alcohòlic i pla. Els negres de la província s'han de servir entre <strong>14 i 17º</strong> segons intensitat: un Priorat jove a 16-17º, un Montsant a 15-16º, un trepat a 14-15º. Demana al sommelier que el refredi si arriba calent. No és una impertinència; és el correcte.">
+          Un Priorat a 22º (temperatura ambiente de un verano catalán) es un vino alcohólico y plano. Los tintos de la provincia deben servirse entre <strong>14 y 17º</strong> según intensidad: un Priorat joven a 16-17º, un Montsant a 15-16º, un trepat a 14-15º. Pide al sumiller que lo enfríe si llega caliente. No es una impertinencia; es lo correcto.
+        </p>
+      </div>
+    </div>
+
+    <div class="e-guia-item">
+      <span class="e-guia-num">07</span>
+      <div class="e-guia-text">
+        <h4 class="t" data-es="La añada importa más de lo que parece" data-ca="L'anyada importa més del que sembla">La añada importa más de lo que parece</h4>
+        <p class="t"
+           data-es="En el Priorat y Montsant, las añadas cálidas (2015, 2017, 2022) dan vinos potentes que necesitan botella para equilibrarse. Las añadas frescas (2013, 2014, 2018, 2020) están listas antes y son más bebibles. Para una cena <strong>hoy</strong>, mejor una añada fresca con cinco o seis años en botella que una cálida muy reciente."
+           data-ca="Al Priorat i Montsant, les anyades càlides (2015, 2017, 2022) donen vins potents que necessiten ampolla per equilibrar-se. Les anyades fresques (2013, 2014, 2018, 2020) estan llestes abans i són més bevibles. Per a un sopar <strong>avui</strong>, millor una anyada fresca amb cinc o sis anys en ampolla que una càlida molt recent.">
+          En el Priorat y Montsant, las añadas cálidas (2015, 2017, 2022) dan vinos potentes que necesitan botella para equilibrarse. Las añadas frescas (2013, 2014, 2018, 2020) están listas antes y son más bebibles. Para una cena <strong>hoy</strong>, mejor una añada fresca con cinco o seis años en botella que una cálida muy reciente.
+        </p>
+      </div>
+    </div>
+
+    <div class="e-guia-item">
+      <span class="e-guia-num">08</span>
+      <div class="e-guia-text">
+        <h4 class="t" data-es="Deja al sumiller hacer su trabajo" data-ca="Deixa al sommelier fer la seva feina">Deja al sumiller hacer su trabajo</h4>
+        <p class="t"
+           data-es="Si el restaurante tiene sumiller, la mejor estrategia —paradójicamente— es dejar que sugiera. Dale tres datos: presupuesto por botella, qué va a comer la mesa y una preferencia general («algo no muy potente», «un blanco gastronómico»). Un buen sumiller te llevará a vinos que no conocías. Los malos —hay muchos— se quedan en cuatro etiquetas comerciales. <strong>Se distingue enseguida</strong>."
+           data-ca="Si el restaurant té sommelier, la millor estratègia —paradoxalment— és deixar que suggereixi. Dona-li tres dades: pressupost per ampolla, què menjarà la taula i una preferència general («alguna cosa no molt potent», «un blanc gastronòmic»). Un bon sommelier et portarà a vins que no coneixies. Els dolents —n'hi ha molts— es queden en quatre etiquetes comercials. <strong>Es distingeix de seguida</strong>.">
+          Si el restaurante tiene sumiller, la mejor estrategia —paradójicamente— es dejar que sugiera. Dale tres datos: presupuesto por botella, qué va a comer la mesa y una preferencia general («algo no muy potente», «un blanco gastronómico»). Un buen sumiller te llevará a vinos que no conocías. Los malos —hay muchos— se quedan en cuatro etiquetas comerciales. <strong>Se distingue enseguida</strong>.
+        </p>
+      </div>
     </div>
   </div>
 
+  <!-- CLAUSURA -->
   <div class="e-pull">
     <p class="t"
-       data-es="Cuatro denominaciones, una provincia. Cada una con su lógica, su suelo, su variedad. Ninguna se explica sin las otras. Las respuestas siempre llegan tarde en este oficio. Pero llegan en la copa, que es donde importa."
-       data-ca="Quatre denominacions, una província. Cadascuna amb la seva lògica, el seu sòl, la seva varietat. Cap no s'explica sense les altres. Les respostes sempre arriben tard en aquest ofici. Però arriben a la copa, que és on importa.">
-      Cuatro denominaciones, una provincia. Cada una con su lógica, su suelo, su variedad. Ninguna se explica sin las otras. Las respuestas siempre llegan tarde en este oficio. Pero llegan en la copa, que es donde importa.
+       data-es="Cuatro denominaciones, seis variedades principales, cuatro tipos de suelo, dos mil años de historia. La provincia de Tarragona no se aprende en una cena: se va descubriendo copa a copa. El privilegio del socio es disponer del territorio al lado, y del tiempo para hacerlo."
+       data-ca="Quatre denominacions, sis varietats principals, quatre tipus de sòl, dos mil anys d'història. La província de Tarragona no s'aprèn en un sopar: es va descobrint copa a copa. El privilegi del soci és disposar del territori al costat, i del temps per fer-ho.">
+      Cuatro denominaciones, seis variedades principales, cuatro tipos de suelo, dos mil años de historia. La provincia de Tarragona no se aprende en una cena: se va descubriendo copa a copa. El privilegio del socio es disponer del territorio al lado, y del tiempo para hacerlo.
     </p>
   </div>
 
@@ -514,16 +905,16 @@ if (currentLang === 'ca') setLang('ca');
       <span class="e-fitxa-valor">DOQ Priorat · DO Montsant · DO Tarragona · DO Conca de Barberà</span>
     </div>
     <div class="e-fitxa-item">
-      <span class="e-fitxa-label t" data-es="Varietales" data-ca="Varietals">Varietales</span>
-      <span class="e-fitxa-valor t" data-es="Garnacha · Cariñena · Trepat · Garnacha blanca" data-ca="Garnatxa · Carinyena · Trepat · Garnatxa blanca">Garnacha · Cariñena · Trepat · Garnacha blanca</span>
+      <span class="e-fitxa-label t" data-es="Variedades" data-ca="Varietats">Variedades</span>
+      <span class="e-fitxa-valor t" data-es="Garnacha · Cariñena · Trepat · Garnacha blanca · Macabeo · Parellada" data-ca="Garnatxa · Carinyena · Trepat · Garnatxa blanca · Macabeu · Parellada">Garnacha · Cariñena · Trepat · Garnacha blanca · Macabeo · Parellada</span>
     </div>
     <div class="e-fitxa-item">
       <span class="e-fitxa-label t" data-es="Suelos clave" data-ca="Sòls clau">Suelos clave</span>
-      <span class="e-fitxa-valor t" data-es="Llicorella · Calcáreo · Granito · Arcilla" data-ca="Llicorella · Calcari · Granit · Argila">Llicorella · Calcáreo · Granito · Arcilla</span>
+      <span class="e-fitxa-valor t" data-es="Llicorella · Calcáreo · Granito · Franco-arcilloso" data-ca="Llicorella · Calcari · Granit · Franco-argilós">Llicorella · Calcáreo · Granito · Franco-arcilloso</span>
     </div>
     <div class="e-fitxa-item">
       <span class="e-fitxa-label t" data-es="Altitud" data-ca="Altitud">Altitud</span>
-      <span class="e-fitxa-valor t" data-es="0 — 700 m sobre el mar" data-ca="0 — 700 m sobre el mar">0 — 700 m sobre el mar</span>
+      <span class="e-fitxa-valor t" data-es="0 — 800 m sobre el mar" data-ca="0 — 800 m sobre el mar">0 — 800 m sobre el mar</span>
     </div>
   </div>
 
