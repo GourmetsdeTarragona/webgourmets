@@ -67,10 +67,16 @@
 .e-varietat-nom{font-family:var(--font-serif);font-size:1.15rem;font-weight:700;color:var(--navy-dark);}
 .e-varietat-nom em{font-style:italic;color:var(--gold);}
 .e-varietat-tipus{font-size:.6rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;background:var(--cream2);color:var(--muted);padding:2px 8px;}
+.e-varietat-body{display:grid;grid-template-columns:140px 1fr;gap:20px;align-items:start;}
+.e-varietat-foto{width:140px;height:140px;object-fit:cover;display:block;border:1px solid var(--border);}
 .e-varietat-perfil{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:12px;}
 .e-varietat-bloc{font-size:.85rem;line-height:1.65;}
 .e-varietat-bloc-label{font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:4px;}
 .e-varietat-bloc p{font-size:.83rem;color:#444;font-weight:300;margin:0;}
+@media(max-width:640px){
+  .e-varietat-body{grid-template-columns:1fr;gap:14px;}
+  .e-varietat-foto{width:100%;height:180px;}
+}
 
 /* BLOC VINS */
 .e-vins{background:var(--navy-dark);padding:48px;margin:52px 0;}
@@ -611,6 +617,9 @@ function setLang(lang) {
       <span class="e-varietat-nom t" data-es="Garnacha / <em>Garnatxa</em>" data-ca="Garnatxa">Garnacha / <em>Garnatxa</em></span>
       <span class="e-varietat-tipus t" data-es="Tinta · La variedad reina" data-ca="Negra · La varietat reina">Tinta · La variedad reina</span>
     </div>
+    <div class="e-varietat-body">
+      <img class="e-varietat-foto" src="../assets/img/vins/vins-var-garnacha.jpg" alt="Racimo de garnacha" data-alt-es="Racimo de garnacha" data-alt-ca="Raïm de garnatxa" onerror="this.style.display='none'">
+      <div>
     <p class="e-p t" style="margin-bottom:12px;"
        data-es="La variedad más plantada de la provincia y la que mejor expresa sus diferentes terruños: una garnacha del Priorat, del Camp y del Montsant son tres vinos claramente distintos."
        data-ca="La varietat més plantada de la província i la que millor expressa els seus diferents terroirs: una garnatxa del Priorat, del Camp i del Montsant són tres vins clarament diferents.">
@@ -626,6 +635,7 @@ function setLang(lang) {
         <p class="t" data-es="Taninos blandos, acidez media, alcohol alto —suele superar 14º— y sensación cálida. Final goloso por la fruta madura. En viña vieja sobre llicorella, estructura firme y un punto de austeridad mineral." data-ca="Tanins suaus, acidesa mitjana, alcohol alt —sol superar 14º— i sensació càlida. Final golós per la fruita madura. En vinya vella sobre llicorella, estructura ferma i un punt d'austeritat mineral.">Taninos blandos, acidez media, alcohol alto —suele superar 14º— y sensación cálida. Final goloso por la fruta madura. En viña vieja sobre llicorella, estructura firme y un punto de austeridad mineral.</p>
       </div>
     </div>
+    </div>
   </div>
 
   <div class="e-varietat">
@@ -633,6 +643,9 @@ function setLang(lang) {
       <span class="e-varietat-nom t" data-es="Cariñena / <em>Samsó / Carinyena</em>" data-ca="Carinyena / <em>Samsó</em>">Cariñena / <em>Samsó / Carinyena</em></span>
       <span class="e-varietat-tipus t" data-es="Tinta · La columna vertebral" data-ca="Negra · La columna vertebral">Tinta · La columna vertebral</span>
     </div>
+    <div class="e-varietat-body">
+      <img class="e-varietat-foto" src="../assets/img/vins/vins-var-carinyena.jpg" alt="Racimo de cariñena" onerror="this.style.display='none'">
+      <div>
     <p class="e-p t" style="margin-bottom:12px;"
        data-es="Variedad exigente: mal trabajada produce vinos ásperos; bien trabajada —viña vieja, rendimientos bajos, maduración justa— alcanza una complejidad rara. Aporta lo que la garnacha no tiene: color, acidez y estructura para envejecer."
        data-ca="Varietat exigent: mal treballada produeix vins aspres; ben treballada —vinya vella, rendiments baixos, maduració justa— assoleix una complexitat rara. Aporta el que la garnatxa no té: color, acidesa i estructura per envellir.">
@@ -648,6 +661,7 @@ function setLang(lang) {
         <p class="t" data-es="Color profundo, taninos firmes —más marcados que en garnacha—, <strong>acidez alta</strong> —la mayor entre las tintas provinciales—, final largo con un punto astringente que pide crianza. A ella deben los grandes Priorats su capacidad de envejecer veinte años y más." data-ca="Color profund, tanins ferms —més marcats que en garnatxa—, <strong>acidesa alta</strong> —la més alta entre les negres provincials—, final llarg amb un punt astringent que demana criança. A ella deuen els grans Priorats la seva capacitat d'envellir vint anys i més.">Color profundo, taninos firmes —más marcados que en garnacha—, <strong>acidez alta</strong> —la mayor entre las tintas provinciales—, final largo con un punto astringente que pide crianza. A ella deben los grandes Priorats su capacidad de envejecer veinte años y más.</p>
       </div>
     </div>
+      </div>
   </div>
 
   <div class="e-varietat">
@@ -655,6 +669,9 @@ function setLang(lang) {
       <span class="e-varietat-nom t" data-es="Trepat" data-ca="Trepat">Trepat</span>
       <span class="e-varietat-tipus t" data-es="Tinta · La joya escondida" data-ca="Negra · La joia amagada">Tinta · La joya escondida</span>
     </div>
+    <div class="e-varietat-body">
+      <img class="e-varietat-foto" src="../assets/img/vins/vins-var-trepat.jpg" alt="Racimo de trepat" data-alt-es="Racimo de trepat" data-alt-ca="Raïm de trepat" onerror="this.style.display='none'">
+      <div>
     <p class="e-p t" style="margin-bottom:12px;"
        data-es="Única variedad estrictamente autóctona de la provincia, con hábitat casi exclusivo en la Conca de Barberà. Perfil inesperado para un mediterráneo: ligero, floral, de acidez viva."
        data-ca="Única varietat estrictament autòctona de la província, amb hàbitat gairebé exclusiu a la Conca de Barberà. Perfil inesperat per a un mediterrani: lleuger, floral, d'acidesa viva.">
@@ -670,33 +687,6 @@ function setLang(lang) {
         <p class="t" data-es="Color cereza traslúcido, cuerpo ligero, taninos casi imperceptibles, <strong>acidez alta y cortante</strong>, alcohol contenido. Final fresco, casi salino. Se sirve frío —nunca a temperatura ambiente—. Uno de los tintos más gastronómicos del país." data-ca="Color cirera translúcid, cos lleuger, tanins gairebé imperceptibles, <strong>acidesa alta i tallant</strong>, alcohol contingut. Final fresc, gairebé salí. Se serveix fred —mai a temperatura ambient—. Un dels negres més gastronòmics del país.">Color cereza traslúcido, cuerpo ligero, taninos casi imperceptibles, <strong>acidez alta y cortante</strong>, alcohol contenido. Final fresco, casi salino. Se sirve frío —nunca a temperatura ambiente—. Uno de los tintos más gastronómicos del país.</p>
       </div>
     </div>
-  </div>
-
-  <!-- FOTO raïm -->
-  <div class="e-foto-gran">
-    <img src="../assets/img/vins/vins-raim.jpg" alt="Raïm a la vinya" onerror="this.parentElement.style.display='none'">
-    <div class="e-foto-gran-peu t"
-         data-es="El punto de vendimia —cada vez más temprano por el cambio climático— es hoy la decisión técnica más importante del año en cualquier bodega de la provincia"
-         data-ca="El punt de verema —cada vegada més aviat pel canvi climàtic— és avui la decisió tècnica més important de l'any a qualsevol celler de la província">
-      El punto de vendimia —cada vez más temprano por el cambio climático— es hoy la decisión técnica más importante del año en cualquier bodega de la provincia
-    </div>
-  </div>
-
-  <div class="e-foto-gran" style="margin:32px 0;">
-    <img src="../assets/img/vins/vins-trepat.jpg" alt="Uva trepat — Conca de Barberà" style="height:320px;" onerror="this.parentElement.style.display='none'">
-    <div class="e-foto-gran-peu t"
-         data-es="Trepat: la variedad autóctona de la Conca de Barberà, antaño relegada a dar color al cava y hoy protagonista de algunos de los tintos más personales de Cataluña."
-         data-ca="Trepat: la varietat autòctona de la Conca de Barberà, antany relegada a donar color al cava i avui protagonista d'alguns dels negres més personals de Catalunya.">
-      Trepat: la variedad autóctona de la Conca de Barberà, antaño relegada a dar color al cava y hoy protagonista de algunos de los tintos más personales de Cataluña.
-    </div>
-  </div>
-
-  <div class="e-foto-gran" style="margin:32px 0;">
-    <img src="../assets/img/vins/vins-trepat.jpg" alt="Uva trepat — Conca de Barberà" onerror="this.parentElement.style.display='none'">
-    <div class="e-foto-gran-peu t"
-         data-es="Trepat: la variedad autóctona de la Conca de Barberà, antaño relegada a dar color al cava, hoy protagonista de algunos de los tintos más personales de Cataluña."
-         data-ca="Trepat: la varietat autòctona de la Conca de Barberà, antany relegada a donar color al cava, avui protagonista d'alguns dels negres més personals de Catalunya.">
-      Trepat: la variedad autóctona de la Conca de Barberà, antaño relegada a dar color al cava, hoy protagonista de algunos de los tintos más personales de Cataluña.
     </div>
   </div>
 
@@ -705,6 +695,9 @@ function setLang(lang) {
       <span class="e-varietat-nom t" data-es="Garnacha blanca / <em>Garnatxa blanca</em>" data-ca="Garnatxa blanca">Garnacha blanca / <em>Garnatxa blanca</em></span>
       <span class="e-varietat-tipus t" data-es="Blanca · La revelación" data-ca="Blanca · La revelació">Blanca · La revelación</span>
     </div>
+    <div class="e-varietat-body">
+      <img class="e-varietat-foto" src="../assets/img/vins/vins-var-garnatxa-blanca.jpg" alt="Racimo de garnacha blanca" data-alt-es="Racimo de garnacha blanca" data-alt-ca="Raïm de garnatxa blanca" onerror="this.style.display='none'">
+      <div>
     <p class="e-p t" style="margin-bottom:12px;"
        data-es="Durante décadas se consideró una variedad pesada, apta solo para mezclas. La viticultura moderna —vendimia temprana, llicorella, fermentación inerte o lías finas— ha revelado su potencial real: hoy es una de las grandes blancas del Mediterráneo occidental."
        data-ca="Durant dècades es va considerar una varietat pesada, apta només per a barreges. La viticultura moderna —verema primerenca, llicorella, fermentació inerta o lies fines— n'ha revelat el potencial real: avui és una de les grans blanques del Mediterrani occidental.">
@@ -720,6 +713,7 @@ function setLang(lang) {
         <p class="t" data-es="Cuerpo medio-denso, textura casi aceitosa, acidez moderada —punto débil frente a un riesling—, alcohol alto, final largo con amargor noble (almendra, piel de cítrico). Sobre llicorella, la tensión mineral compensa la acidez menos vibrante." data-ca="Cos mitjà-dens, textura gairebé oliosa, acidesa moderada —punt feble davant un riesling—, alcohol alt, final llarg amb amargor noble (ametlla, pell de cítric). Sobre llicorella, la tensió mineral compensa l'acidesa menys vibrant.">Cuerpo medio-denso, textura casi aceitosa, acidez moderada —punto débil frente a un riesling—, alcohol alto, final largo con amargor noble (almendra, piel de cítrico). Sobre llicorella, la tensión mineral compensa la acidez menos vibrante.</p>
       </div>
     </div>
+    </div>
   </div>
 
   <div class="e-varietat">
@@ -727,6 +721,9 @@ function setLang(lang) {
       <span class="e-varietat-nom t" data-es="Macabeo / <em>Macabeu / Viura</em>" data-ca="Macabeu / <em>Viura</em>">Macabeo / <em>Macabeu / Viura</em></span>
       <span class="e-varietat-tipus t" data-es="Blanca · El todoterreno" data-ca="Blanca · El tot terreny">Blanca · El todoterreno</span>
     </div>
+    <div class="e-varietat-body">
+      <img class="e-varietat-foto" src="../assets/img/vins/vins-var-macabeu.jpg" alt="Racimo de macabeo" onerror="this.style.display='none'">
+      <div>
     <p class="e-p t" style="margin-bottom:12px;"
        data-es="La variedad más neutra de la provincia. En el Camp da blancos amables; en la Conca, con altitud y vendimia temprana, cambia: más tensa, cítrica, interesante. Base habitual de los cavas."
        data-ca="La varietat més neutra de la província. Al Camp dona blancs amables; a la Conca, amb altitud i verema primerenca, canvia: més tensa, cítrica, interessant. Base habitual dels caves.">
@@ -742,6 +739,7 @@ function setLang(lang) {
         <p class="t" data-es="Cuerpo ligero, acidez media-alta —más alta en la Conca—, alcohol moderado. Final corto en versiones jóvenes, más largo y salino en las de altitud o con lías. Ideal para aperitivos, mariscos y platos ligeros." data-ca="Cos lleuger, acidesa mitjana-alta —més alta a la Conca—, alcohol moderat. Final curt en versions joves, més llarg i salí en les d'altitud o amb lies. Ideal per a aperitius, mariscos i plats lleugers.">Cuerpo ligero, acidez media-alta —más alta en la Conca—, alcohol moderado. Final corto en versiones jóvenes, más largo y salino en las de altitud o con lías. Ideal para aperitivos, mariscos y platos ligeros.</p>
       </div>
     </div>
+      </div>
   </div>
 
   <div class="e-varietat">
@@ -749,12 +747,11 @@ function setLang(lang) {
       <span class="e-varietat-nom t" data-es="Parellada" data-ca="Parellada">Parellada</span>
       <span class="e-varietat-tipus t" data-es="Blanca · La de altitud" data-ca="Blanca · La d'altitud">Blanca · La de altitud</span>
     </div>
-    <div style="margin:14px 0 18px;overflow:hidden;">
-      <img src="../assets/img/vins/vins-parellada.jpg" alt="Uva parellada — Conca de Barberà" style="width:100%;height:240px;object-fit:cover;display:block;" onerror="this.parentElement.style.display='none'">
-    </div>
-    <div style="margin:14px 0;overflow:hidden;">
-      <img src="../assets/img/vins/vins-parellada.jpg" alt="Uva parellada en viña" style="width:100%;height:220px;object-fit:cover;display:block;" onerror="this.parentElement.style.display='none'">
-    </div>
+    <div class="e-varietat-body">
+      <img class="e-varietat-foto" src="../assets/img/vins/vins-var-parellada.jpg" alt="Racimo de parellada" onerror="this.style.display='none'">
+      <div>
+
+    
     <p class="e-p t" style="margin-bottom:12px;"
        data-es="Variedad que exige altitud: por debajo de 400 metros pierde carácter. Al cava le aporta su frescura cítrica típica. Como vino tranquilo, sola o en coupage, tiene un perfil aromático distintivo."
        data-ca="Varietat que exigeix altitud: per sota de 400 metres perd caràcter. Al cava li aporta la seva frescor cítrica típica. Com a vi tranquil, sola o en coupage, té un perfil aromàtic distintiu.">
@@ -770,6 +767,7 @@ function setLang(lang) {
         <p class="t" data-es="Acidez alta, cuerpo ligero, alcohol bajo. Final fresco y limpio. La variedad de la ligereza: funciona sola en aperitivos e imprescindible en coupages que busquen frescura." data-ca="Acidesa alta, cos lleuger, alcohol baix. Final fresc i net. La varietat de la lleugeresa: funciona sola en aperitius i imprescindible en coupages que busquin frescor.">Acidez alta, cuerpo ligero, alcohol bajo. Final fresco y limpio. La variedad de la ligereza: funciona sola en aperitivos e imprescindible en coupages que busquen frescura.</p>
       </div>
     </div>
+      </div>
   </div>
 
   <div class="e-sep">· · ·</div>
@@ -909,16 +907,6 @@ function setLang(lang) {
            data-ca="<strong>Tarragona Clàssic</strong> o un dolç de garnatxa del Priorat. Vins licorosos històrics, injustament oblidats fora del territori, que poden recuperar el seu lloc amb tancaments d'avellanes, ametlles garrapinyades o mel i mató.">
         <strong>Tarragona Clásico</strong> o un dulce de garnacha del Priorat. Vinos licorosos históricos, injustamente olvidados fuera del territorio, que pueden recuperar su lugar con cierres de avellanas, almendras garrapiñadas o mel i mató.
       </div>
-    </div>
-  </div>
-
-  <!-- FOTO copa blanca -->
-  <div class="e-foto-gran">
-    <img src="../assets/img/vins/vins-copa-blanc.jpg" alt="Copa de vi blanc" onerror="this.parentElement.style.display='none'">
-    <div class="e-foto-gran-peu t"
-         data-es="La garnacha blanca vieja del Priorat: el argumento más sólido a favor de los blancos mediterráneos frente a los clásicos atlánticos"
-         data-ca="La garnatxa blanca vella del Priorat: l'argument més sòlid a favor dels blancs mediterranis davant dels clàssics atlàntics">
-      La garnacha blanca vieja del Priorat: el argumento más sólido a favor de los blancos mediterráneos frente a los clásicos atlánticos
     </div>
   </div>
 
