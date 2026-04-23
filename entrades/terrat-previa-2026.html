@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Terrat · Prèvia · Gourmets de Tarragona</title>
+<meta name="description" content="Prèvia de la visita dels Gourmets de Tarragona al restaurant El Terrat. Moha Quach, la cuina que Tarragona necessitava i les quinieles per a la primera estrella Michelin de la ciutat.">
+<meta property="og:title" content="El Terrat · Prèvia · Gourmets de Tarragona">
+<meta property="og:description" content="Moha Quach, El Terrat i les quinieles per a la primera estrella Michelin de Tarragona.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://gourmetsdetarragona.com/entrades/terrat-previa-2026.html">
+<link rel="canonical" href="https://gourmetsdetarragona.com/entrades/terrat-previa-2026.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/seccions.css">
+<style>
+/* ── HERO ── */
+.entrada-hero{position:relative;min-height:70vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.38;}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.97) 0%,rgba(11,22,38,.55) 55%,rgba(11,22,38,.1) 100%);}
+.entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
+.entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
+.entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
+.entrada-back:hover{color:var(--gold);}
+.entrada-meta-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
+.entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;}
+.entrada-badge-previa{background:var(--navy);}
+.entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
+.entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
+.entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.85;max-width:560px;}
+
+/* ── COS ── */
+.entrada-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
+.e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-title{font-family:var(--font-serif);font-size:1.75rem;color:var(--navy-dark);line-height:1.2;margin-bottom:22px;}
+.e-p{font-size:1rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:20px;}
+.e-p strong{font-weight:700;color:var(--navy-dark);}
+.e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin:48px 0;}
+
+/* ── GRID 2 COL ── */
+.e-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:60px;}
+.e-img{position:relative;}
+.e-img img{width:100%;height:420px;object-fit:cover;position:relative;z-index:1;}
+.e-img::after{content:'';position:absolute;bottom:-14px;right:-14px;width:50%;height:50%;border:2px solid var(--gold);opacity:.2;z-index:0;}
+
+/* ── FOTO GRAN ── */
+.e-foto-gran{margin:52px 0;position:relative;overflow:hidden;}
+.e-foto-gran img{width:100%;height:480px;object-fit:cover;}
+.e-foto-gran-peu{position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top,rgba(11,22,38,.75),transparent);font-size:.7rem;color:rgba(255,255,255,.55);font-style:italic;}
+
+/* ── FOTO MITJA ── */
+.e-foto-mitja{margin:40px 0;position:relative;overflow:hidden;}
+.e-foto-mitja img{width:100%;height:340px;object-fit:cover;object-position:center 30%;}
+
+/* ── RECONEIXEMENTS ── */
+.e-reconeix{display:flex;gap:16px;margin:36px 0;flex-wrap:wrap;}
+.e-reconeix-item{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--border);padding:12px 18px;}
+.e-reconeix-item i{color:var(--gold);font-size:.9rem;}
+.e-reconeix-item span{font-size:.8rem;font-weight:500;color:var(--navy-dark);line-height:1.3;}
+
+/* ── XEF CARD ── */
+.e-xef{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:start;margin:52px 0;background:var(--cream);border:1px solid var(--border);padding:40px;}
+.e-xef-foto img{width:100%;height:340px;object-fit:cover;object-position:center top;}
+.e-xef-nom{font-family:var(--font-serif);font-size:1.6rem;color:var(--navy-dark);margin-bottom:4px;}
+.e-xef-rol{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:block;}
+.e-xef-facts{margin-top:24px;display:flex;flex-direction:column;gap:10px;}
+.e-xef-fact{display:flex;gap:10px;align-items:flex-start;}
+.e-xef-fact i{color:var(--navy);opacity:.5;font-size:.8rem;margin-top:3px;width:14px;}
+.e-xef-fact span{font-size:.87rem;color:var(--muted);line-height:1.4;}
+
+/* ── PLATS 2 FOTOS ── */
+.e-plats-fotos{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:40px 0;}
+.e-plat-foto{position:relative;overflow:hidden;}
+.e-plat-foto img{width:100%;height:300px;object-fit:cover;transition:transform .5s;}
+.e-plat-foto:hover img{transform:scale(1.04);}
+.e-plat-foto-peu{position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(to top,rgba(11,22,38,.8),transparent);font-size:.7rem;color:rgba(255,255,255,.7);font-style:italic;}
+
+/* ── FITXA ── */
+.e-fitxa{background:var(--cream);border:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:0;margin:52px 0;}
+.e-fitxa-info{padding:36px 40px;}
+.e-fitxa-info h3{font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:20px;}
+.e-fitxa-row{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;}
+.e-fitxa-ico{width:32px;height:32px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.e-fitxa-ico i{color:var(--navy);opacity:.6;font-size:.8rem;}
+.e-fitxa-text{font-size:.87rem;color:var(--muted);line-height:1.5;}
+.e-fitxa-cta{background:var(--navy-dark);padding:36px 40px;display:flex;flex-direction:column;justify-content:center;text-align:center;}
+.e-fitxa-cta p{font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:20px;font-weight:300;}
+
+/* ── NAV RETORN ── */
+.e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .e-xef{grid-template-columns:1fr;gap:28px;}
+  .e-xef-foto img{height:260px;object-position:center 20%;}
+}
+@media(max-width:768px){
+  .entrada-hero-content{padding:0 5% 52px;}
+  .entrada-cos{padding:52px 5%;}
+  .e-grid-2{grid-template-columns:1fr;gap:36px;}
+  .e-img img{height:280px;}
+  .e-foto-gran img{height:300px;}
+  .e-foto-mitja img{height:240px;}
+  .e-plats-fotos{grid-template-columns:1fr;}
+  .e-fitxa{grid-template-columns:1fr;}
+  .e-reconeix{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" class="solid">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona"></a>
+    <div class="nav-menu">
+      <div class="nav-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
+      <div class="nav-item"><span data-i18n="nav_asoc"></span><div class="dropdown"><a href="../pages/associacio.html" data-i18n="nav_quienes"></a><a href="../pages/associacio.html#funcionament" data-i18n="nav_como"></a></div></div>
+      <div class="nav-item"><span data-i18n="nav_rest"></span><div class="dropdown"><a href="../pages/restaurants.html" data-i18n="nav_visites"></a></div></div>
+      <div class="nav-item"><span data-i18n="nav_premios"></span><div class="dropdown"><a href="../pages/premis.html" data-i18n="nav_gastronia"></a><a href="../pages/premis.html#bacus" data-i18n="nav_bacus"></a></div></div>
+      <div class="nav-item"><a href="../pages/blog.html" data-i18n="nav_blog"></a></div>
+      <div class="nav-item"><a href="../pages/contacte.html" data-i18n="nav_contacto"></a></div>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
+    <div class="mobile-item"><a href="../pages/restaurants.html" data-i18n="nav_rest_short"></a></div>
+    <div class="mobile-item"><a href="../pages/blog.html" data-i18n="nav_blog"></a></div>
+    <div class="mobile-item"><a href="../pages/contacte.html" data-i18n="nav_contacto"></a></div>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="entrada-hero">
+  <div class="entrada-hero-bg" style="background-image:url('../assets/img/terrat/exterior.jpg');"></div>
+  <div class="entrada-hero-grad"></div>
+  <div class="entrada-hero-line"></div>
+  <div class="entrada-hero-content">
+    <a href="../pages/blog.html" class="entrada-back"><i class="fa fa-arrow-left"></i> <span data-i18n="back_blog"></span></a>
+    <div class="entrada-meta-top">
+      <span class="entrada-badge entrada-badge-previa" data-i18n="previa_badge"></span>
+      <div class="entrada-meta-info">
+        <span class="entrada-meta-item"><i class="fa fa-map-marker-alt"></i> Tarragona</span>
+        <span class="entrada-meta-item"><i class="fa fa-leaf"></i> <span data-i18n="previa_meta_cuina"></span></span>
+        <span class="entrada-meta-item"><i class="fa fa-calendar"></i> <span data-i18n="previa_meta_data"></span></span>
+      </div>
+    </div>
+    <h1 class="entrada-titol">El Terrat <em>(Tarragona)</em><br><span data-i18n="previa_titol_sub"></span></h1>
+    <p class="entrada-subtitol" data-i18n="previa_subtitol"></p>
+  </div>
+</header>
+
+<!-- COS -->
+<main class="entrada-cos">
+
+  <!-- BLOC 1: L'ORIGEN -->
+  <div class="e-grid-2">
+    <div>
+      <span class="e-label" data-i18n="b1_label"></span>
+      <h2 class="e-title" data-i18n="b1_title"></h2>
+      <div class="e-divider"></div>
+      <p class="e-p" data-i18n="b1_p1"></p>
+      <p class="e-p" data-i18n="b1_p2"></p>
+    </div>
+    <div class="e-img">
+      <img src="../assets/img/terrat/moha-cuina.jpg" alt="Moha Quach treballant a la cuina d'El Terrat">
+    </div>
+  </div>
+
+  <!-- BLOC 2: EL RESTAURANT -->
+  <div class="e-divider"></div>
+  <span class="e-label" data-i18n="b2_label"></span>
+  <h2 class="e-title" data-i18n="b2_title"></h2>
+  <p class="e-p" data-i18n="b2_p1"></p>
+  <p class="e-p" data-i18n="b2_p2"></p>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/terrat/sala.jpg" alt="Sala interior d'El Terrat, Tarragona">
+    <div class="e-foto-gran-peu" data-i18n="sala_peu"></div>
+  </div>
+
+  <p class="e-p" data-i18n="b2_p3"></p>
+
+  <div class="e-reconeix">
+    <div class="e-reconeix-item"><i class="fa fa-sun"></i><span>Sol Repsol 2026</span></div>
+    <div class="e-reconeix-item"><i class="fa fa-book-open"></i><span>Guia Michelin 2026</span></div>
+    <div class="e-reconeix-item"><i class="fa fa-trophy"></i><span data-i18n="reconeix_premi"></span></div>
+  </div>
+
+  <!-- BLOC 3: LA CUINA -->
+  <div class="e-divider"></div>
+  <span class="e-label" data-i18n="b3_label"></span>
+  <h2 class="e-title" data-i18n="b3_title"></h2>
+  <p class="e-p" data-i18n="b3_p1"></p>
+  <p class="e-p" data-i18n="b3_p2"></p>
+
+  <div class="e-plats-fotos">
+    <div class="e-plat-foto">
+      <img src="../assets/img/terrat/plat-peix.jpg" alt="Elaboració de peix a El Terrat">
+      <div class="e-plat-foto-peu" data-i18n="plat_peix_peu"></div>
+    </div>
+    <div class="e-plat-foto">
+      <img src="../assets/img/terrat/plat-croqueta.jpg" alt="Aperitiu d'El Terrat sobre bolet">
+      <div class="e-plat-foto-peu" data-i18n="plat_croqueta_peu"></div>
+    </div>
+  </div>
+
+  <!-- BLOC 4: EL XEF -->
+  <div class="e-divider"></div>
+  <span class="e-label" data-i18n="b4_label"></span>
+  <h2 class="e-title" data-i18n="b4_title"></h2>
+
+  <div class="e-xef">
+    <div class="e-xef-foto">
+      <img src="../assets/img/terrat/moha-retrat.jpg" alt="Moha Quach, xef d'El Terrat Tarragona">
+    </div>
+    <div class="e-xef-bio">
+      <p class="e-xef-nom">Moha Quach</p>
+      <span class="e-xef-rol" data-i18n="xef_rol"></span>
+      <p class="e-p" data-i18n="b4_p1"></p>
+      <p class="e-p" data-i18n="b4_p2"></p>
+      <div class="e-xef-facts">
+        <div class="e-xef-fact"><i class="fa fa-map-marker-alt"></i><span data-i18n="xef_f1"></span></div>
+        <div class="e-xef-fact"><i class="fa fa-calendar"></i><span data-i18n="xef_f2"></span></div>
+        <div class="e-xef-fact"><i class="fa fa-store"></i><span data-i18n="xef_f3"></span></div>
+        <div class="e-xef-fact"><i class="fa fa-users"></i><span data-i18n="xef_f4"></span></div>
+        <div class="e-xef-fact"><i class="fa fa-trophy"></i><span data-i18n="xef_f5"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOC 5: MICHELIN -->
+  <div class="e-divider"></div>
+  <span class="e-label" data-i18n="b5_label"></span>
+  <h2 class="e-title" data-i18n="b5_title"></h2>
+  <p class="e-p" data-i18n="b5_p1"></p>
+  <p class="e-p" data-i18n="b5_p2"></p>
+  <p class="e-p" data-i18n="b5_p3"></p>
+
+  <div class="e-foto-mitja">
+    <img src="../assets/img/terrat/exterior.jpg" alt="Façana d'El Terrat, carrer Pons d'Icart, Tarragona">
+  </div>
+
+  <!-- FITXA -->
+  <div class="e-fitxa">
+    <div class="e-fitxa-info">
+      <h3 data-i18n="fitxa_title"></h3>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-map-marker-alt"></i></div><span class="e-fitxa-text">Carrer Pons d'Icart, 19 · 43004 Tarragona</span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-leaf"></i></div><span class="e-fitxa-text" data-i18n="fitxa_cuina"></span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-phone"></i></div><span class="e-fitxa-text">977 248 485</span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-globe"></i></div><span class="e-fitxa-text">elterratrestaurant.com</span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-instagram"></i></div><span class="e-fitxa-text">@elterrat_restaurant</span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-calendar"></i></div><span class="e-fitxa-text" data-i18n="fitxa_visita"></span></div>
+    </div>
+    <div class="e-fitxa-cta">
+      <p data-i18n="cta_desc"></p>
+      <a href="terrat-cronica-2026.html" class="btn-primary" style="display:inline-block;" data-i18n="cta_btn"></a>
+    </div>
+  </div>
+
+</main>
+
+<!-- NAV RETORN -->
+<div class="e-nav-retorn">
+  <a href="../pages/blog.html" class="btn-outline" data-i18n="back_blog_btn"></a>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona">
+      <p data-i18n="footer_desc"></p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4 data-i18n="footer_nav"></h4><ul><li><a href="../pages/associacio.html" data-i18n="nav_quienes"></a></li><li><a href="../pages/restaurants.html" data-i18n="nav_rest_short"></a></li><li><a href="../pages/premis.html" data-i18n="nav_premios_short"></a></li><li><a href="../pages/blog.html" data-i18n="nav_blog"></a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_legal"></h4><ul><li><a href="#" data-i18n="footer_avis"></a></li><li><a href="#" data-i18n="footer_privacitat"></a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_contacte"></h4><p>gourmetsdetarragona@gourmetsdetarragona.com</p><p>Tarragona, Catalunya</p></div>
+  </div>
+  <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
+</footer>
+
+<script>
+window.translations = window.translations || {};
+const pageTranslations = {
+  back_blog:        { es: 'Volver al Blog',                         ca: 'Tornar al Blog' },
+  back_blog_btn:    { es: '← Volver al Blog',                       ca: '← Tornar al Blog' },
+  previa_badge:     { es: 'Previa · Mayo 2026',                     ca: 'Prèvia · Maig 2026' },
+  previa_meta_cuina:{ es: 'Cocina mediterránea creativa',            ca: 'Cuina mediterrània creativa' },
+  previa_meta_data: { es: 'Mayo 2026',                              ca: 'Maig 2026' },
+  previa_titol_sub: { es: '3r Recorrido Gourmet 2026',              ca: '3r Recorregut Gourmet 2026' },
+  previa_subtitol:  { es: 'El chef que creció en Tarragona, aprendió a cocinar su territorio y ahora el sector especula con si será él quien traiga la primera estrella Michelin a la ciudad.',
+                      ca: 'El xef que va créixer a Tarragona, va aprendre a cuinar el seu territori i ara el sector especula amb si serà ell qui portarà la primera estrella Michelin a la ciutat.' },
+
+  b1_label:   { es: 'El principio',
+                ca: 'El principi' },
+  b1_title:   { es: 'Un cocinero que llegó sin nada y lo encontró todo',
+                ca: 'Un cuiner que va arribar sense res i ho va trobar tot' },
+  b1_p1:      { es: 'Moha Quach nació en 1990 en Laasara, en el Rif marroquí. Su padre pescaba. Sus abuelos guardaban rebaños. Con doce años llegó a Cataluña con la familia y Tarragona lo adoptó. O quizás fue al revés: fue él quien adoptó Tarragona, porque desde el principio entendió que aquella ciudad, aquel litoral y aquel campo tenían una riqueza gastronómica que poca gente estaba aprovechando con honestidad.',
+                ca: 'Moha Quach va néixer el 1990 a Laasara, al Rif marroquí. El seu pare pescava. Els seus avis guardaven ramats. Amb dotze anys va arribar a Catalunya amb la família i Tarragona el va adoptar. O potser va ser al revés: va ser ell qui va adoptar Tarragona, perquè des del primer moment va entendre que aquella ciutat, aquell litoral i aquell camp tenien una riquesa gastronòmica que poca gent estava aprofitant amb honestedat.' },
+  b1_p2:      { es: 'Aprendió el oficio desde abajo. Sin atajos. Cocinas de formación, viajes con el delantal en la maleta, temporadas en Madrid y Barcelona. Y cuando volvió, no abrió un restaurante de fusión ni intentó reproducir lo que había visto fuera. Abrió El Terrat.',
+                ca: 'Va aprendre l\'ofici des de baix. Sense dreceres. Cuines de formació, viatges amb el davantal a la maleta, temporades a Madrid i Barcelona. I quan va tornar, no va obrir un restaurant de fusió ni va intentar reproduir el que havia vist fora. Va obrir El Terrat.' },
+
+  b2_label:   { es: '2018 — Hoy',
+                ca: '2018 — Avui' },
+  b2_title:   { es: 'El Terrat: siete años construyendo un referente',
+                ca: 'El Terrat: set anys construint un referent' },
+  b2_p1:      { es: 'En julio de 2018, Quach abrió El Terrat en la calle Pons d\'Icart, en el centro de Tarragona. La propuesta era clara desde el primer día: cocina de autor, producto de proximidad, kilómetro cero. Los pescadores del Serrallo como proveedores. Los agricultores del Camp como aliados. Las especias del norte de África como memoria personal.',
+                ca: 'El juliol de 2018, Quach va obrir El Terrat al carrer Pons d\'Icart, al centre de Tarragona. La proposta era clara des del primer dia: cuina d\'autor, producte de proximitat, quilòmetre zero. Els pescadors del Serrallo com a proveïdors. Els agricultors del Camp com a aliats. Les espècies del nord d\'Àfrica com a memòria personal.' },
+  b2_p2:      { es: 'No fue un éxito inmediato de crítica. Fue algo mejor: un éxito de convicción. El restaurante fue creciendo con coherencia, sin cambiar el discurso para adaptarse a las modas. La cocina abierta a la entrada, el ambiente contemporáneo pero sin estridencias, los menús Olivus y Mare Nostrum como dos relatos del mismo territorio.',
+                ca: 'No va ser un èxit immediat de crítica. Va ser una cosa millor: un èxit de convicció. El restaurant va anar creixent amb coherència, sense canviar el discurs per adaptar-se a les modes. La cuina oberta a l\'entrada, l\'ambient contemporani però sense estridències, els menús Olivus i Mare Nostrum com a dos relats del mateix territori.' },
+  sala_peu:   { es: 'La sala de El Terrat — piedra, luz cálida y voluntad de permanencia',
+                ca: 'La sala d\'El Terrat — pedra, llum càlida i voluntat de permanència' },
+  b2_p3:      { es: 'Los reconocimientos han ido llegando. Sol Repsol. Guía Michelin. Y en 2025, el Premio Revelación Nacional de Gastronomía de la Academia Catalana — el reconocimiento más importante que un cocinero catalán puede recibir en un año. Tarragona, que con demasiada frecuencia mira hacia Barcelona para validarse, vio cómo uno de los suyos recibía el premio más grande del país.',
+                ca: 'Els reconeixements han anat arribant. Sol Repsol. Guia Michelin. I el 2025, el Premi Revelació Nacional de Gastronomia de l\'Acadèmia Catalana — el reconeixement més important que un cuiner català pot rebre en un any. Tarragona, que massa sovint mira cap a Barcelona per validar-se, va veure com un dels seus propis rebia el premi més gran del país.' },
+  reconeix_premi: { es: 'Premio Revelación Nacional Gastronomía 2025',
+                    ca: 'Premi Revelació Nacional Gastronomia 2025' },
+
+  b3_label:   { es: 'La propuesta',
+                ca: 'La proposta' },
+  b3_title:   { es: 'Tàrraco, el Rif y la lonja del Serrallo',
+                ca: 'Tàrraco, el Rif i la llotja del Serrallo' },
+  b3_p1:      { es: 'Hay tres coordenadas que definen la cocina de Quach. La primera es el territorio: el Camp de Tarragona, el Delta del Ebro, las denominaciones de origen de la provincia. La segunda es la historia: Tarragona fue Tàrraco, capital de la Hispania Citerior, cruce de culturas mediterráneas durante siglos. La tercera es su propia biografía: los aromas del Rif, las especias que usaba su madre, el recuerdo del mar que pescaba su padre.',
+                ca: 'Hi ha tres coordenades que defineixen la cuina de Quach. La primera és el territori: el Camp de Tarragona, el Delta de l\'Ebre, les denominacions d\'origen de la província. La segona és la història: Tarragona va ser Tàrraco, capital de la Hispania Citerior, cruïlla de cultures mediterrànies durant segles. La tercera és la seva pròpia biografia: les aromes del Rif, les espècies que usava la seva mare, el record del mar que pescava el seu pare.' },
+  b3_p2:      { es: 'Ninguna de estas tres coordenadas domina a las otras dos. Conviven. Y de esa convivencia salen platos como el romesco de gamba de Tarragona — que la Guía Michelin destaca explícitamente —, el cremoso de guisante lágrima con huevo a baja temperatura y trufa, o el arroz cremoso de gamba roja. Platos que no intentan sorprender por la forma. Sorprenden por el fondo.',
+                ca: 'Cap d\'aquestes tres coordenades domina les altres dues. Conviuen. I d\'aquesta convivència en surten plats com el romesco de gamba de Tarragona — que la Guia Michelin destaca explícitament —, el cremós de pèsol llàgrima amb ou a baixa temperatura i tòfona, o l\'arròs cremós de gamba vermella. Plats que no intenten sorprendre per la forma. Sorprenen pel fons.' },
+  plat_peix_peu:     { es: 'Elaboración de pescado — técnica al servicio del producto',
+                       ca: 'Elaboració de peix — tècnica al servei del producte' },
+  plat_croqueta_peu: { es: 'Detalle de aperitivo — presentación y territorio en un solo bocado',
+                       ca: 'Detall d\'aperitiu — presentació i territori en un sol mos' },
+
+  b4_label:   { es: 'El chef',
+                ca: 'El xef' },
+  b4_title:   { es: 'Moha Quach',
+                ca: 'Moha Quach' },
+  xef_rol:    { es: 'Chef y propietario · El Terrat Tarragona',
+                ca: 'Xef i propietari · El Terrat Tarragona' },
+  b4_p1:      { es: 'Tímido e introvertido fuera de los fogones, Quach cambia cuando se pone el delantal. Su personalidad culinaria es directa, sin concesiones y sin artificios. Rechaza los aditivos. Rechaza las técnicas agresivas. Exige el mejor producto y luego se aparta para dejarlo hablar.',
+                ca: 'Tímid i introvertit fora dels fogons, Quach canvia quan es posa el davantal. La seva personalitat culinària és directa, sense concessions i sense artificis. Rebutja els additius. Rebutja les tècniques agressives. Exigeix el millor producte i després s\'aparta per deixar-lo parlar.' },
+  b4_p2:      { es: 'Viaja con el delantal en la maleta, descubre ciudades a golpe de sartén y convierte las cocinas ajenas en su hotel favorito. Pero siempre vuelve a Tarragona. Porque Tarragona, dice, lo tiene todo. Solo hace falta saber mirarlo.',
+                ca: 'Viatja amb el davantal a la maleta, descobreix ciutats a cop de paella i converteix les cuines alienes en el seu hotel favorit. Però sempre torna a Tarragona. Perquè Tarragona, diu, ho té tot. Només cal saber mirar-ho.' },
+  xef_f1:     { es: 'Nacido en Laasara, Marruecos, 1990',           ca: 'Nascut a Laasara, Marroc, 1990' },
+  xef_f2:     { es: 'Llega a Cataluña en 2002',                     ca: 'Arriba a Catalunya el 2002' },
+  xef_f3:     { es: 'Abre El Terrat en julio de 2018',              ca: 'Obre El Terrat el juliol de 2018' },
+  xef_f4:     { es: 'Presidente del colectivo Tarraco a Taula',     ca: 'President del col·lectiu Tarraco a Taula' },
+  xef_f5:     { es: 'Premio Revelación Nacional de Gastronomía 2025',ca: 'Premi Revelació Nacional de Gastronomia 2025' },
+
+  b5_label:   { es: 'El debate del sector',
+                ca: 'El debat del sector' },
+  b5_title:   { es: 'Tarragona y la estrella que todavía no ha llegado',
+                ca: 'Tarragona i l\'estrella que encara no ha arribat' },
+  b5_p1:      { es: 'Tarragona no tiene ninguna estrella Michelin. Es un hecho que el sector gastronómico local lleva años digiriendo con una mezcla de resignación e incredulidad. Una ciudad con dos mil años de historia, con un litoral rico, con producto excepcional y con una tradición culinaria que nadie discute — y ninguna estrella.',
+                ca: 'Tarragona no té cap estrella Michelin. És un fet que el sector gastronòmic local porta anys digerint amb una barreja de resignació i d\'incredulitat. Una ciutat amb dos mil anys d\'història, amb un litoral ric, amb producte excepcional i amb una tradició culinària que ningú no discuteix — i cap estrella.' },
+  b5_p2:      { es: 'Los motivos que se alegan son variados. Que Tarragona sufre el síndrome de la ciudad mediana, demasiado cerca de Barcelona para tener visibilidad propia. Que los inspectores de la Guía pasan, pero no se detienen. Que hasta hace poco no había ninguna propuesta con la consistencia necesaria para forzar la decisión. Ahora el sector especula. Y el nombre que aparece en la mayoría de conversaciones es el de Moha Quach.',
+                ca: 'Els motius que s\'al·leguen són variats. Que Tarragona pateix el síndrome de la ciutat mitjana, massa propera a Barcelona per tenir visibilitat pròpia. Que els inspectors de la Guia passen, però no s\'aturen. Que fins fa poc no hi havia cap proposta amb la consistència necessària per forçar la decisió. Ara el sector especula. I el nom que apareix en la majoria de converses és el de Moha Quach.' },
+  b5_p3:      { es: 'No es una proclamación — nadie proclama nada cuando se habla de la Guía Michelin, que es opaca por diseño —, pero la lógica es evidente: un restaurante con presencia consolidada en la Guía, con un premio nacional reciente, con una propuesta diferenciada y con un chef que claramente ha encontrado su registro. Si Tarragona ha de conseguir su primera estrella, la pregunta que circula es: <em>si no es El Terrat, ¿quién?</em> Nosotros no tenemos respuesta. Pero tenemos curiosidad. Y tenemos una visita en mayo.',
+                ca: 'No és una proclamació — ningú no proclama res quan es parla de la Guia Michelin, que és opaca per disseny —, però la lògica és evident: un restaurant amb presència consolidada a la Guia, amb un premi nacional recent, amb una proposta diferenciada i amb un xef que clarament ha trobat el seu registre. Si Tarragona ha d\'aconseguir la seva primera estrella, la pregunta que circula és: <em>si no és El Terrat, qui?</em> Nosaltres no tenim resposta. Però tenim curiositat. I tenim una visita al maig.' },
+
+  fitxa_title:  { es: 'Ficha del restaurante',                      ca: 'Fitxa del restaurant' },
+  fitxa_cuina:  { es: 'Cocina mediterránea creativa · Km 0',        ca: 'Cuina mediterrània creativa · Km 0' },
+  fitxa_visita: { es: 'Visita: Mayo 2026',                          ca: 'Visita: Maig 2026' },
+  cta_desc:     { es: 'Compartiremos algunos momentos durante la velada. La crónica completa llegará días después de la visita.',
+                  ca: 'Compartirem alguns moments durant la vetllada. La crònica completa arribarà dies després de la visita.' },
+  cta_btn:      { es: 'Leer la crónica completa →',                 ca: 'Llegir la crònica completa →' },
+};
+Object.assign(window.translations, pageTranslations);
+</script>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
