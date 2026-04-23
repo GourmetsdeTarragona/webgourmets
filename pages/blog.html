@@ -12,184 +12,56 @@
 <link rel="stylesheet" href="../assets/css/nav.css">
 <link rel="stylesheet" href="../assets/css/seccions.css">
 <style>
-/* ── HERO BLOG ── */
-.blog-hero{
-  background:var(--navy-dark);
-  padding:140px 4% 64px;
-  text-align:center;
-  position:relative;overflow:hidden;
-}
-.blog-hero::before{
-  content:'';position:absolute;inset:0;
-  background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80');
-  background-size:cover;background-position:center;
-  opacity:.1;
-}
+.blog-hero{background:var(--navy-dark);padding:140px 4% 64px;text-align:center;position:relative;overflow:hidden;}
+.blog-hero::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80');background-size:cover;background-position:center;opacity:.1;}
 .blog-hero-inner{position:relative;z-index:1;max-width:640px;margin:0 auto;}
 .blog-hero .slabel{color:rgba(255,255,255,.4);justify-content:center;display:flex;margin-bottom:12px;}
 .blog-hero-title{font-family:var(--font-serif);font-size:clamp(2.2rem,4vw,3.2rem);color:#fff;margin-bottom:14px;font-weight:700;}
 .blog-hero-desc{font-size:.95rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.8;}
-
-/* ── FILTRE CATEGORIES ── */
-.blog-filtres{
-  position:sticky;top:72px;z-index:100;
-  background:rgba(245,242,237,.97);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--border);
-  padding:0 4%;
-}
-.blog-filtres-inner{
-  max-width:1200px;margin:0 auto;
-  display:flex;flex-wrap:wrap;gap:0 6px;
-  justify-content:center;
-  scrollbar-width:none;
-}
+.blog-filtres{position:sticky;top:72px;z-index:100;background:rgba(245,242,237,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 4%;}
+.blog-filtres-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:0 6px;justify-content:center;scrollbar-width:none;}
 .blog-filtres-inner::-webkit-scrollbar{display:none;}
-.filtre-btn{
-  display:flex;align-items:center;gap:7px;
-  padding:16px 14px;
-  font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
-  color:var(--muted);border:none;background:none;cursor:pointer;
-  border-bottom:2px solid transparent;
-  white-space:nowrap;transition:.2s;
-}
+.filtre-btn{display:flex;align-items:center;gap:7px;padding:16px 14px;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);border:none;background:none;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:.2s;}
 .filtre-btn:hover{color:var(--navy-dark);}
 .filtre-btn.actiu{color:var(--navy-dark);border-bottom-color:var(--gold);}
-.filtre-btn .filtre-dot{
-  width:7px;height:7px;border-radius:50%;flex-shrink:0;
-}
-.filtre-btn .filtre-n{
-  font-size:.6rem;background:rgba(28,46,62,.08);
-  padding:2px 7px;border-radius:20px;color:var(--navy-dark);
-  font-weight:700;letter-spacing:0;
-  flex-shrink:0;
-}
-
-/* ── DESTACAT ── */
-.blog-destacat{
-  max-width:1100px;margin:52px auto 0;padding:0 4%;
-}
-.destacat-card{
-  display:grid;grid-template-columns:1.1fr 1fr;
-  background:#fff;border:1px solid var(--border);
-  overflow:hidden;
-  transition:box-shadow .3s;
-}
+.filtre-btn .filtre-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.filtre-btn .filtre-n{font-size:.6rem;background:rgba(28,46,62,.08);padding:2px 7px;border-radius:20px;color:var(--navy-dark);font-weight:700;letter-spacing:0;flex-shrink:0;}
+.blog-destacat{max-width:1100px;margin:52px auto 0;padding:0 4%;}
+.destacat-card{display:grid;grid-template-columns:1.1fr 1fr;background:#fff;border:1px solid var(--border);overflow:hidden;transition:box-shadow .3s;}
 .destacat-card:hover{box-shadow:var(--shadow-md);}
-.destacat-img{
-  position:relative;overflow:hidden;
-  min-height:420px;
-}
-.destacat-img img{
-  width:100%;height:100%;object-fit:cover;
-  transition:transform .5s;
-}
+.destacat-img{position:relative;overflow:hidden;min-height:420px;}
+.destacat-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
 .destacat-card:hover .destacat-img img{transform:scale(1.03);}
-.destacat-cat{
-  position:absolute;top:20px;left:20px;
-  font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
-  padding:6px 12px;color:#fff;
-}
-.destacat-body{
-  padding:52px 48px;
-  display:flex;flex-direction:column;justify-content:center;
-}
-.destacat-meta{
-  display:flex;align-items:center;gap:14px;
-  margin-bottom:18px;
-}
+.destacat-cat{position:absolute;top:20px;left:20px;font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 12px;color:#fff;}
+.destacat-body{padding:52px 48px;display:flex;flex-direction:column;justify-content:center;}
+.destacat-meta{display:flex;align-items:center;gap:14px;margin-bottom:18px;}
 .destacat-data{font-size:.72rem;color:var(--muted);letter-spacing:1px;}
-.destacat-title{
-  font-family:var(--font-serif);
-  font-size:clamp(1.6rem,2.5vw,2.1rem);
-  color:var(--navy-dark);line-height:1.2;
-  margin-bottom:16px;font-weight:700;
-}
-.destacat-exc{
-  font-size:.95rem;font-weight:300;color:var(--muted);
-  line-height:1.85;margin-bottom:28px;
-}
-.destacat-link{
-  display:inline-flex;align-items:center;gap:10px;
-  font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
-  color:var(--navy-dark);border-bottom:2px solid var(--gold);
-  padding-bottom:3px;transition:color .2s;width:fit-content;
-}
+.destacat-title{font-family:var(--font-serif);font-size:clamp(1.6rem,2.5vw,2.1rem);color:var(--navy-dark);line-height:1.2;margin-bottom:16px;font-weight:700;}
+.destacat-exc{font-size:.95rem;font-weight:300;color:var(--muted);line-height:1.85;margin-bottom:28px;}
+.destacat-link{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--navy-dark);border-bottom:2px solid var(--gold);padding-bottom:3px;transition:color .2s;width:fit-content;}
 .destacat-link:hover{color:var(--gold);}
-.destacat-badge{
-  font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
-  padding:4px 10px;margin-right:4px;
-}
-
-/* ── GRID ENTRADES ── */
-.blog-grid-wrap{
-  max-width:1100px;margin:48px auto 80px;padding:0 4%;
-}
-.blog-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
-}
-.blog-card{
-  background:#fff;border:1px solid var(--border);
-  overflow:hidden;transition:transform .3s,box-shadow .3s;
-  display:flex;flex-direction:column;
-}
+.destacat-badge{font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;margin-right:4px;}
+.blog-grid-wrap{max-width:1100px;margin:48px auto 80px;padding:0 4%;}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.blog-card{background:#fff;border:1px solid var(--border);overflow:hidden;transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;}
 .blog-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
-.blog-card-img{
-  height:200px;overflow:hidden;position:relative;
-}
-.blog-card-img img{
-  width:100%;height:100%;object-fit:cover;
-  transition:transform .5s;
-}
+.blog-card-img{height:200px;overflow:hidden;position:relative;}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
 .blog-card:hover .blog-card-img img{transform:scale(1.05);}
-.blog-card-cat{
-  position:absolute;top:12px;left:12px;
-  font-size:.58rem;font-weight:700;letter-spacing:1.5px;
-  text-transform:uppercase;padding:5px 10px;color:#fff;
-}
+.blog-card-cat{position:absolute;top:12px;left:12px;font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 10px;color:#fff;}
 .blog-card-body{padding:22px;flex:1;display:flex;flex-direction:column;}
-.blog-card-meta{
-  display:flex;align-items:center;gap:10px;
-  margin-bottom:10px;
-}
+.blog-card-meta{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
 .blog-card-data{font-size:.68rem;color:var(--muted);letter-spacing:.5px;}
-.blog-card-title{
-  font-family:var(--font-serif);font-size:1.15rem;
-  color:var(--navy-dark);line-height:1.3;
-  margin-bottom:10px;font-weight:600;
-}
-.blog-card-exc{
-  font-size:.85rem;font-weight:300;color:var(--muted);
-  line-height:1.7;margin-bottom:16px;flex:1;
-}
-.blog-card-link{
-  font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
-  color:var(--navy-dark);border-bottom:1px solid var(--gold);
-  padding-bottom:2px;transition:color .2s;width:fit-content;
-  margin-top:auto;
-}
+.blog-card-title{font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);line-height:1.3;margin-bottom:10px;font-weight:600;}
+.blog-card-exc{font-size:.85rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:16px;flex:1;}
+.blog-card-link{font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy-dark);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;width:fit-content;margin-top:auto;}
 .blog-card-link:hover{color:var(--gold);}
-
-/* ── CARD PROXIMA VISITA ── */
-.blog-card-proxima{
-  background:var(--navy-dark);border:none;
-  justify-content:center;align-items:center;text-align:center;
-  padding:36px 28px;min-height:320px;
-}
+.blog-card-proxima{background:var(--navy-dark);border:none;justify-content:center;align-items:center;text-align:center;padding:36px 28px;min-height:320px;}
 .blog-card-proxima:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
 .proxima-ico{font-size:2rem;margin-bottom:16px;opacity:.3;}
 .proxima-label{font-size:.62rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(184,146,74,.8);margin-bottom:10px;}
 .proxima-rest{font-family:var(--font-serif);font-size:1.4rem;color:#fff;margin-bottom:6px;}
 .proxima-data{font-size:.82rem;color:rgba(255,255,255,.45);margin-bottom:20px;}
-.proxima-link{
-  font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
-  background:rgba(184,146,74,.15);color:rgba(184,146,74,.9);
-  border:1px solid rgba(184,146,74,.3);padding:8px 18px;
-  transition:.2s;display:inline-block;
-}
-.proxima-link:hover{background:var(--gold);color:#fff;border-color:var(--gold);}
-
-/* ── COLORS CATEGORIES ── */
 .cat-previa{background:var(--navy);}
 .cat-cronica{background:var(--gold);}
 .cat-noticia{background:#555;}
@@ -197,31 +69,12 @@
 .cat-event{background:#2a7a4b;}
 .cat-curiositats{background:#8b5e3c;color:#fff;}
 .cat-cultura{background:#5c6e3f;color:#fff;}
-
-/* ── EMPTY STATE ── */
-.blog-empty{
-  grid-column:1/-1;text-align:center;
-  padding:60px 20px;color:var(--muted);
-}
-.blog-empty i{font-size:2.5rem;opacity:.2;margin-bottom:16px;display:block;}
-
-/* ── RESPONSIVE ── */
-@media(max-width:1024px){
-  .destacat-card{grid-template-columns:1fr;}
-  .destacat-img{min-height:280px;}
-  .blog-grid{grid-template-columns:1fr 1fr;}
-}
-@media(max-width:680px){
-  .blog-hero{padding:120px 5% 52px;}
-  .destacat-body{padding:32px 24px;}
-  .blog-grid{grid-template-columns:1fr;}
-  .blog-filtres{top:60px;}
-}
+@media(max-width:1024px){.destacat-card{grid-template-columns:1fr;}.destacat-img{min-height:280px;}.blog-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:680px){.blog-hero{padding:120px 5% 52px;}.destacat-body{padding:32px 24px;}.blog-grid{grid-template-columns:1fr;}.blog-filtres{top:60px;}}
 </style>
 
 <script>
 var currentLang = localStorage.getItem('gdt-lang') || 'es';
-
 function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('gdt-lang', lang);
@@ -234,8 +87,6 @@ function setLang(lang) {
   });
   document.getElementById('html-root').setAttribute('lang', lang);
 }
-
-/* FILTRE */
 var currentCat = 'tots';
 function filterEntrades(cat) {
   currentCat = cat;
@@ -251,7 +102,6 @@ function filterEntrades(cat) {
     dest.closest('.blog-destacat').style.display = show ? 'block' : 'none';
   }
 }
-
 document.addEventListener('DOMContentLoaded', function() {
   if (currentLang === 'ca') setLang('ca');
 });
@@ -259,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="nav" class="solid">
   <div class="nav-inner">
     <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona"></a>
@@ -278,12 +127,11 @@ document.addEventListener('DOMContentLoaded', function() {
       <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
   </div>
-      <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
     <div class="mobile-item"><a href="associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
     <div class="mobile-item"><a href="restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
     <div class="mobile-item"><a href="premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></div>
-    <div class="mobile-item"><a href="esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></div>
     <div class="mobile-item"><a href="blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
     <div class="mobile-item"><a href="contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
     <div class="mobile-lang">
@@ -294,7 +142,6 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="blog-hero">
   <div class="blog-hero-inner">
     <p class="slabel t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</p>
@@ -303,17 +150,16 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- FILTRES -->
 <div class="blog-filtres">
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span class="t" data-es="Todos" data-ca="Tots">Todos</span>
-      <span class="filtre-n">11</span>
+      <span class="filtre-n">12</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot" style="background:var(--navy);"></span>
       <span class="t" data-es="Previas" data-ca="Prèvies">Previas</span>
-      <span class="filtre-n">2</span>
+      <span class="filtre-n">3</span>
     </button>
     <button class="filtre-btn" data-cat="cronica" onclick="filterEntrades('cronica')">
       <span class="filtre-dot" style="background:var(--gold);"></span>
@@ -348,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- DESTACAT — La Goleta Crònica (la més recent) -->
+<!-- DESTACAT -->
 <div class="blog-destacat">
   <div class="destacat-card" data-cat="cronica">
     <div class="destacat-img">
@@ -367,9 +213,31 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- GRID ENTRADES -->
+<!-- GRID -->
 <div class="blog-grid-wrap">
   <div class="blog-grid">
+
+    <!-- El Terrat Prèvia — NOU -->
+    <article class="blog-card" data-cat="previa">
+      <div class="blog-card-img">
+        <img src="../assets/img/terrat/exterior.jpg" alt="El Terrat · Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
+        <span class="blog-card-cat cat-previa t" data-es="Previa" data-ca="Prèvia">Previa</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Mayo 2026" data-ca="Maig 2026">Mayo 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es='El Terrat · Tarragona<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa · 3ª visita 2026</small>'
+            data-ca='El Terrat · Tarragona<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Prèvia · 3a visita 2026</small>'>
+          El Terrat · Tarragona<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa · 3ª visita 2026</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Moha Quach, Sol Repsol, Guía Michelin y Premio Revelación Nacional 2025. El chef del momento en Tarragona y las quinielas para la primera estrella Michelin de la ciudad."
+           data-ca="Moha Quach, Sol Repsol, Guia Michelin i Premi Revelació Nacional 2025. El xef del moment a Tarragona i les quinieles per a la primera estrella Michelin de la ciutat.">
+          Moha Quach, Sol Repsol, Guía Michelin y Premio Revelación Nacional 2025. El chef del momento en Tarragona y las quinielas para la primera estrella Michelin de la ciudad.
+        </p>
+        <a href="../entrades/terrat-previa-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
 
     <!-- Kema Crònica -->
     <article class="blog-card" data-cat="cronica">
@@ -483,7 +351,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </article>
 
-    <!-- Sant Jordi 2026 · Cultura -->
+    <!-- Sant Jordi 2026 -->
     <article class="blog-card" data-cat="cultura">
       <div class="blog-card-img">
         <img src="../assets/img/santjordi/santjordi-calcotada.jpg" alt="8 llibres per a un Sant Jordi Gourmet 2026">
@@ -499,13 +367,13 @@ document.addEventListener('DOMContentLoaded', function() {
         <p class="blog-card-exc t"
            data-es="Nuestra selección de lecturas gastronómicas para este 23 de abril. Tres títulos de Cossetània Edicions (Valls) y un autor de Reus hacen de esta lista un recorrido literario con raíces en el Camp de Tarragona."
            data-ca="La nostra selecció de lectures gastronòmiques per a aquest 23 d'abril. Tres títols de Cossetània Edicions (Valls) i un autor de Reus fan d'aquesta llista un recorregut literari amb arrels al Camp de Tarragona.">
-          Nuestra selección de lecturas gastronómicas para este 23 de abril. Tres títulos de Cossetània Edicions (Valls) y un autor de Reus hacen de esta lista un recorrido literario con raíces en el Camp de Tarragona.
+          Nuestra selección de lecturas gastronómicas para este 23 de abril.
         </p>
         <a href="../entrades/santjordi-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
-    <!-- Vi · El vino en la provincia de Tarragona -->
+    <!-- Vi -->
     <article class="blog-card" data-cat="vi">
       <div class="blog-card-img">
         <img src="../assets/img/vins/vins-copa-blanc.jpg" alt="El vi a la província de Tarragona" onerror="this.parentElement.style.background='#6b2737'">
@@ -519,26 +387,25 @@ document.addEventListener('DOMContentLoaded', function() {
           El vino en la provincia de Tarragona<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Territorio, historia y expresión</small>
         </h3>
         <p class="blog-card-exc t"
-           data-es="Cuatro denominaciones, cuatro territorios que no se parecen entre sí. Un estudio completo del vino provincial: variedades, suelos, elaboración y su relación con la gastronomía del Camp."
-           data-ca="Quatre denominacions, quatre territoris que no s'assemblen entre ells. Un estudi complet del vi provincial: varietats, sòls, elaboració i la seva relació amb la gastronomia del Camp.">
-          Cuatro denominaciones, cuatro territorios que no se parecen entre sí. Un estudio completo del vino provincial: variedades, suelos, elaboración y su relación con la gastronomía del Camp.
+           data-es="Cuatro denominaciones, cuatro territorios que no se parecen entre sí. Un estudio completo del vino provincial."
+           data-ca="Quatre denominacions, quatre territoris que no s'assemblen entre ells. Un estudi complet del vi provincial.">
+          Cuatro denominaciones, cuatro territorios que no se parecen entre sí. Un estudio completo del vino provincial.
         </p>
         <a href="../entrades/vino-tarragona.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
-    <!-- Card Propera Visita -->
+    <!-- Propera Visita — 4ª -->
     <div class="blog-card blog-card-proxima" data-cat="tots">
       <div class="proxima-ico">🗓</div>
       <div class="proxima-label t" data-es="Próxima visita" data-ca="Propera visita">Próxima visita</div>
-      <div class="proxima-rest t" data-es="3ª Visita · Por confirmar" data-ca="3a Visita · Per confirmar">3ª Visita · Por confirmar</div>
+      <div class="proxima-rest t" data-es="4ª Visita · Por confirmar" data-ca="4a Visita · Per confirmar">4ª Visita · Por confirmar</div>
       <div class="proxima-data t" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</div>
     </div>
 
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
