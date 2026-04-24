@@ -184,7 +184,3 @@
   .nav-logo img { height: 40px; }
   .mobile-menu { top: 64px; }
 }
-
-#nav:not(.solid) .nav-logo img {
-  filter: none;
-}
