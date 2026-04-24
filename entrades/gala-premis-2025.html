@@ -13,8 +13,8 @@
 <link rel="stylesheet" href="../assets/css/seccions.css">
 <style>
 .entrada-hero{position:relative;min-height:70vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
-.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.45;}
-.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.97) 0%,rgba(11,22,38,.5) 55%,rgba(11,22,38,.1) 100%);}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.65;filter:brightness(1.08) contrast(1.05);}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.92) 0%,rgba(11,22,38,.38) 50%,rgba(11,22,38,.05) 100%);}
 .entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
 .entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
 .entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
@@ -22,11 +22,11 @@
 .entrada-meta-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
 .entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;}
 .entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;}
-.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;}
 .entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
 .entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
 .entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
-.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.85;max-width:560px;}
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.82);font-weight:300;line-height:1.85;max-width:560px;}
 
 .entrada-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
 .e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
@@ -36,16 +36,13 @@
 .e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin:48px 0;}
 .e-sep{text-align:center;margin:48px 0;color:var(--gold);font-size:1rem;letter-spacing:10px;opacity:.35;}
 
-/* Foto gran */
 .e-foto-gran{margin:52px 0;position:relative;height:440px;overflow:hidden;}
 .e-foto-gran img{width:100%;height:100%;object-fit:cover;}
 .e-foto-gran-peu{position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top,rgba(11,22,38,.75),transparent);font-size:.7rem;color:rgba(255,255,255,.55);font-style:italic;}
 
-/* Grid 2 fotos */
 .e-fotos-2{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:48px 0;}
 .e-fotos-2 img{width:100%;height:320px;object-fit:cover;object-position:center 20%;}
 
-/* Card premi */
 .e-premi-card{margin:48px 0;display:grid;grid-template-columns:260px 1fr;gap:0;background:var(--cream);border:1px solid var(--border);overflow:hidden;}
 .e-premi-card-dark{background:var(--navy-dark);border:none;}
 .e-premi-foto{overflow:hidden;}
@@ -61,21 +58,17 @@
 .e-premi-desc{font-size:.92rem;font-weight:300;color:#444;line-height:1.85;}
 .e-premi-card-dark .e-premi-desc{color:rgba(255,255,255,.6);}
 
-/* Alcaldessa */
 .e-alcaldessa{background:var(--navy-dark);padding:36px 40px;margin:48px 0;display:flex;gap:24px;align-items:flex-start;border-left:4px solid var(--gold);}
 .e-alcaldessa-ico{color:var(--gold);font-size:1.2rem;margin-top:4px;flex-shrink:0;}
 .e-alcaldessa-text{font-size:.95rem;color:rgba(255,255,255,.7);font-weight:300;line-height:1.85;}
 .e-alcaldessa-text strong{color:#fff;font-weight:700;}
 
-/* Galeria final */
 .e-galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:48px 0;}
 .e-galeria img{width:100%;height:220px;object-fit:cover;}
 .e-galeria img:first-child{grid-column:1/3;height:300px;}
 
-/* Nav retorn */
 .e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
 
-/* Reconeixement restaurants */
 .e-rec{background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:64px 0;margin:52px 0;}
 .e-rec-inner{max-width:900px;margin:0 auto;padding:0 4%;}
 .e-rec-intro{margin-bottom:48px;}
@@ -116,29 +109,24 @@ const t = {
     back_blog:'Volver al Blog',back_blog_btn:'← Volver al Blog',
     g_badge:'Gala de Premios · 2025',
     g_subtitol:'Una noche de reconocimiento y emoción en los Vermuts Rofes de Reus. Gastronomía, territorio e identidad en la entrega de premios de la temporada 2025.',
-    g_l1:'La velada',
-    g_t1:'Una noche para celebrar la gastronomía del territorio',
+    g_l1:'La velada',g_t1:'Una noche para celebrar la gastronomía del territorio',
     g_p1:'La gastronomía del territorio vivió una noche de reconocimiento y emoción en la Gala de Premios 2025 de Gourmets de Tarragona, celebrada en los <strong>Vermuts Rofes</strong>, un espacio emblemático de Reus que se convirtió en el escenario ideal para una velada tan especial.',
     g_p2:'Entre bótas centenarias, estanterías llenas de vermuts y el ambiente único de un espacio con historia, los socios de la asociación se reunieron para reconocer el talento, la constancia y la identidad de los proyectos que marcan el camino de la gastronomía del Camp de Tarragona.',
     g_foto1_peu:'La sala dels Vermuts Rofes — escenari de la Gala de Premis 2025',
-    g_l2:'Trofeo Gastronia',
-    g_t2:'El mejor restaurante de la temporada',
+    g_l2:'Trofeo Gastronia',g_t2:'El mejor restaurante de la temporada',
     g_1gastronia:'1er Trofeo Gastronia · Temporada 2025',
     g_buidasacs_desc:'Desde la Asociación Gourmets de Tarragona reconocemos Buidasacs como una cocina con alma y personalidad propia, donde el producto se trata con respeto y sensibilidad. Una propuesta sólida y madura, con platos pensados con cuidado, que combinan creatividad, técnica y proximidad, y que hacen sentir al comensal como en casa, pero con ambición gastronómica.',
     g_2gastronia:'2º Trofeo Gastronia · Temporada 2025',
     g_cambium_desc:'Para nuestra asociación, Cambium representa una mirada joven y valiente a la cocina del territorio: creativa, arraigada y muy atenta a la temporada. En un entorno tranquilo que invita a disfrutar sin prisa, ofrece una experiencia que conecta cocina, entorno y producto, y que consolida Cambium como uno de los nombres a seguir en Cambrils.',
-    g_l3:'Premio Bacus',
-    g_t3:'El mejor vino de la temporada',
+    g_l3:'Premio Bacus',g_t3:'El mejor vino de la temporada',
     g_bacus_label:'Premio Bacus · Temporada 2025',
     g_cirerets_desc:'Un vino que expresa territorio, elegancia y profundidad. Paisaje embotellado, equilibrio y carácter como fiel reflejo del Priorat. Cirerets de Mas Alta fue el vino que más emocionó a los socios a lo largo del recorrido gastronómico de la temporada.',
     g_alcaldessa_text:'La gala contó con la presencia de la alcaldesa de Reus, la <strong>Sra. Sandra Guaita</strong>, a quien agradecemos su apoyo a la gastronomía y al tejido cultural y económico del territorio.',
-    g_tancament_label:'Para cerrar',
-    g_tancament_title:'Una noche para brindar y reafirmar',
+    g_tancament_label:'Para cerrar',g_tancament_title:'Una noche para brindar y reafirmar',
     g_tancament_p:'Una noche para celebrar, brindar y reafirmar que la gastronomía es cultura, identidad y futuro. Los Gourmets de Tarragona agradecen a todos los restaurantes visitados, a las bodegas y a los socios que hacen posible este proyecto año tras año.',
     g_galeria_peu:'Gala de Premios 2025 · Vermuts Rofes · Reus',
     btn_premis:'Ver todos los premios →',
-    g_rec_label:'El recorrido 2025',
-    g_rec_title:'A todos los que formaron parte',
+    g_rec_label:'El recorrido 2025',g_rec_title:'A todos los que formaron parte',
     g_rec_desc:'La temporada no la hacen solo los ganadores. La hacen todos los restaurantes que abren sus puertas, que preparan su mejor menú y que reciben a los Gourmets con generosidad y profesionalidad. A todos ellos, nuestro reconocimiento sincero.',
     g_rec_anima_frase:'Por su cocina honesta y su forma de hacer sentir al comensal en casa.',
     g_rec_baramar_frase:'Por una propuesta mediterránea de producto y arroces que tiene el mar como protagonista absoluto.',
@@ -160,29 +148,24 @@ const t = {
     back_blog:'Tornar al Blog',back_blog_btn:'← Tornar al Blog',
     g_badge:'Gala de Premis · 2025',
     g_subtitol:"Una nit de reconeixement i emoció als Vermuts Rofes de Reus. Gastronomia, territori i identitat en el lliurament de premis de la temporada 2025.",
-    g_l1:'La vetllada',
-    g_t1:'Una nit per celebrar la gastronomia del territori',
+    g_l1:'La vetllada',g_t1:'Una nit per celebrar la gastronomia del territori',
     g_p1:'La gastronomia del territori va viure una nit de reconeixement i emoció en la Gala de Premis 2025 de Gourmets de Tarragona, celebrada als <strong>Vermuts Rofes</strong>, un espai emblemàtic de Reus que es va convertir en l\'escenari ideal per a una vetllada tan especial.',
     g_p2:"Entre bótes centenàries, prestatgeries plenes de vermuts i l'ambient únic d'un espai amb història, els socis de l'associació es van reunir per reconèixer el talent, la constància i la identitat dels projectes que marquen el camí de la gastronomia del Camp de Tarragona.",
     g_foto1_peu:'La sala dels Vermuts Rofes — escenari de la Gala de Premis 2025',
-    g_l2:'Trofeu Gastronia',
-    g_t2:'El millor restaurant de la temporada',
+    g_l2:'Trofeu Gastronia',g_t2:'El millor restaurant de la temporada',
     g_1gastronia:'1r Trofeu Gastronia · Temporada 2025',
     g_buidasacs_desc:"Des de l'Associació Gourmets de Tarragona reconeixem Buidasacs com una cuina amb ànima i personalitat pròpia, on el producte es tracta amb respecte i sensibilitat. Una proposta sòlida i madura, amb plats pensats amb cura, que combinen creativitat, tècnica i proximitat, i que fan sentir el comensal com a casa, però amb ambició gastronòmica.",
     g_2gastronia:'2n Trofeu Gastronia · Temporada 2025',
     g_cambium_desc:"Per a la nostra associació, Cambium representa una mirada jove i valenta a la cuina del territori: creativa, arrelada i molt atenta a la temporada. En un entorn tranquil que convida a gaudir sense presses, ofereix una experiència que connecta cuina, entorn i producte, i que consolida Cambium com un dels noms a seguir a Cambrils.",
-    g_l3:'Premi Bacus',
-    g_t3:'El millor vi de la temporada',
+    g_l3:'Premi Bacus',g_t3:'El millor vi de la temporada',
     g_bacus_label:'Premi Bacus · Temporada 2025',
     g_cirerets_desc:"Un vi que expressa territori, elegància i profunditat. Paisatge embotelat, equilibri i caràcter com a fidel reflex del Priorat. Cirerets de Mas Alta va ser el vi que més va emocionar els socis al llarg del recorregut gastronòmic de la temporada.",
     g_alcaldessa_text:"La gala va comptar amb la presència de l'alcaldessa de Reus, la <strong>Sra. Sandra Guaita</strong>, a qui agraïm el seu suport a la gastronomia i al teixit cultural i econòmic del territori.",
-    g_tancament_label:'Per tancar',
-    g_tancament_title:'Una nit per brindar i reafirmar',
+    g_tancament_label:'Per tancar',g_tancament_title:'Una nit per brindar i reafirmar',
     g_tancament_p:"Una nit per celebrar, brindar i reafirmar que la gastronomia és cultura, identitat i futur. Els Gourmets de Tarragona agraïm a tots els restaurants visitats, als cellers i als socis que fan possible aquest projecte any rere any.",
     g_galeria_peu:'Gala de Premis 2025 · Vermuts Rofes · Reus',
     btn_premis:'Veure tots els premis →',
-    g_rec_label:'El recorregut 2025',
-    g_rec_title:'A tots els que en van formar part',
+    g_rec_label:'El recorregut 2025',g_rec_title:'A tots els que en van formar part',
     g_rec_desc:"La temporada no la fan només els guanyadors. La fan tots els restaurants que obren les portes, que preparen el millor menú i que reben els Gourmets amb generositat i professionalitat. A tots ells, el nostre reconeixement sincer.",
     g_rec_anima_frase:'Per la seva cuina honesta i per la seva manera de fer sentir el comensal com a casa.',
     g_rec_baramar_frase:'Per una proposta mediterrània de producte i arrossos que té el mar com a protagonista absolut.',
@@ -230,7 +213,7 @@ function setLang(lang) {
       <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
   </div>
-      <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
     <div class="mobile-item"><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
     <div class="mobile-item"><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
@@ -269,14 +252,12 @@ function setLang(lang) {
 <!-- COS -->
 <main class="entrada-cos">
 
-  <!-- INTRO -->
   <span class="e-label" data-i18n="g_l1"></span>
   <h2 class="e-title" data-i18n="g_t1"></h2>
   <div class="e-divider"></div>
   <p class="e-p" data-i18n="g_p1"></p>
   <p class="e-p" data-i18n="g_p2"></p>
 
-  <!-- FOTO GRAN SALA -->
   <div class="e-foto-gran">
     <img src="../assets/img/gala2025/sala-gala.jpg" alt="Sala Vermuts Rofes — Gala 2025">
     <div class="e-foto-gran-peu" data-i18n="g_foto1_peu"></div>
@@ -284,16 +265,12 @@ function setLang(lang) {
 
   <div class="e-sep">· · ·</div>
 
-  <!-- GASTRONÍA -->
   <span class="e-label" data-i18n="g_l2"></span>
   <h2 class="e-title" data-i18n="g_t2"></h2>
   <div class="e-divider"></div>
 
-  <!-- Buidasacs -->
   <div class="e-premi-card">
-    <div class="e-premi-foto">
-      <img src="../assets/img/gala2025/gastronia1-buidasacs.jpg" alt="Lliurament 1r Gastronia — Buidasacs">
-    </div>
+    <div class="e-premi-foto"><img src="../assets/img/gala2025/gastronia1-buidasacs.jpg" alt="Lliurament 1r Gastronia — Buidasacs"></div>
     <div class="e-premi-body">
       <div class="e-premi-label" data-i18n="g_1gastronia"></div>
       <div class="e-premi-nom">Buidasacs</div>
@@ -302,11 +279,8 @@ function setLang(lang) {
     </div>
   </div>
 
-  <!-- Cambium -->
   <div class="e-premi-card">
-    <div class="e-premi-foto">
-      <img src="../assets/img/gala2025/gastronia2-cambium.jpg" alt="Lliurament 2n Gastronia — Cambium">
-    </div>
+    <div class="e-premi-foto"><img src="../assets/img/gala2025/gastronia2-cambium.jpg" alt="Lliurament 2n Gastronia — Cambium"></div>
     <div class="e-premi-body">
       <div class="e-premi-label" data-i18n="g_2gastronia"></div>
       <div class="e-premi-nom">Cambium</div>
@@ -317,15 +291,12 @@ function setLang(lang) {
 
   <div class="e-sep">· · ·</div>
 
-  <!-- BACUS -->
   <span class="e-label" data-i18n="g_l3"></span>
   <h2 class="e-title" data-i18n="g_t3"></h2>
   <div class="e-divider"></div>
 
   <div class="e-premi-card e-premi-card-dark">
-    <div class="e-premi-foto">
-      <img src="../assets/img/gala2025/bacus-cirerets.jpg" alt="Premi Bacus — Cirerets de Mas Alta" style="object-position:center 20%;">
-    </div>
+    <div class="e-premi-foto"><img src="../assets/img/gala2025/bacus-cirerets.jpg" alt="Premi Bacus — Cirerets de Mas Alta" style="object-position:center 20%;"></div>
     <div class="e-premi-body">
       <div class="e-premi-label" data-i18n="g_bacus_label"></div>
       <div class="e-premi-nom">Cirerets de Mas Alta</div>
@@ -334,19 +305,16 @@ function setLang(lang) {
     </div>
   </div>
 
-  <!-- Trofeus foto -->
   <div class="e-fotos-2">
     <img src="../assets/img/gala2025/trofeus.jpg" alt="Els trofeus de la Gala 2025">
     <img src="../assets/img/gala2025/vermuts-rofes.jpg" alt="Vermuts Rofes — espai de la gala">
   </div>
 
-  <!-- ALCALDESSA -->
   <div class="e-alcaldessa">
     <i class="fa fa-quote-left e-alcaldessa-ico"></i>
     <p class="e-alcaldessa-text" data-i18n="g_alcaldessa_text"></p>
   </div>
 
-  <!-- RECONEIXEMENT RESTAURANTS -->
   <div class="e-rec">
     <div class="e-rec-inner">
       <div class="e-rec-intro">
@@ -356,55 +324,22 @@ function setLang(lang) {
         <p class="e-rec-desc" data-i18n="g_rec_desc"></p>
       </div>
       <div class="e-rec-grid">
-
-        <div class="e-rec-card">
-          <p class="e-rec-nom">Ànima</p>
-          <p class="e-rec-lloc">Tarragona</p>
-          <p class="e-rec-frase" data-i18n="g_rec_anima_frase"></p>
-        </div>
-
-        <div class="e-rec-card">
-          <p class="e-rec-nom">Baramar</p>
-          <p class="e-rec-lloc">Roda de Barà</p>
-          <p class="e-rec-frase" data-i18n="g_rec_baramar_frase"></p>
-        </div>
-
-        <div class="e-rec-card">
-          <p class="e-rec-nom">Casapepe</p>
-          <p class="e-rec-lloc">Tarragona</p>
-          <p class="e-rec-frase" data-i18n="g_rec_casapepe_frase"></p>
-        </div>
-
-        <div class="e-rec-card">
-          <p class="e-rec-nom">Ca l'Amadeu</p>
-          <p class="e-rec-lloc">Vilanova d'Escornalbou</p>
-          <p class="e-rec-frase" data-i18n="g_rec_amadeu_frase"></p>
-        </div>
-
-        <div class="e-rec-card">
-          <p class="e-rec-nom">El Racó de Nico</p>
-          <p class="e-rec-lloc">Salou</p>
-          <p class="e-rec-frase" data-i18n="g_rec_nico_frase"></p>
-        </div>
-
-        <div class="e-rec-card">
-          <p class="e-rec-nom">Limboo</p>
-          <p class="e-rec-lloc">Tarragona</p>
-          <p class="e-rec-frase" data-i18n="g_rec_limboo_frase"></p>
-        </div>
-
+        <div class="e-rec-card"><p class="e-rec-nom">Ànima</p><p class="e-rec-lloc">Tarragona</p><p class="e-rec-frase" data-i18n="g_rec_anima_frase"></p></div>
+        <div class="e-rec-card"><p class="e-rec-nom">Baramar</p><p class="e-rec-lloc">Roda de Barà</p><p class="e-rec-frase" data-i18n="g_rec_baramar_frase"></p></div>
+        <div class="e-rec-card"><p class="e-rec-nom">Casapepe</p><p class="e-rec-lloc">Tarragona</p><p class="e-rec-frase" data-i18n="g_rec_casapepe_frase"></p></div>
+        <div class="e-rec-card"><p class="e-rec-nom">Ca l'Amadeu</p><p class="e-rec-lloc">Vilanova d'Escornalbou</p><p class="e-rec-frase" data-i18n="g_rec_amadeu_frase"></p></div>
+        <div class="e-rec-card"><p class="e-rec-nom">El Racó de Nico</p><p class="e-rec-lloc">Salou</p><p class="e-rec-frase" data-i18n="g_rec_nico_frase"></p></div>
+        <div class="e-rec-card"><p class="e-rec-nom">Limboo</p><p class="e-rec-lloc">Tarragona</p><p class="e-rec-frase" data-i18n="g_rec_limboo_frase"></p></div>
       </div>
     </div>
   </div>
 
-  <!-- TANCAMENT -->
   <div class="e-sep">· · ·</div>
   <span class="e-label" data-i18n="g_tancament_label"></span>
   <h2 class="e-title" data-i18n="g_tancament_title"></h2>
   <div class="e-divider"></div>
   <p class="e-p" data-i18n="g_tancament_p"></p>
 
-  <!-- GALERIA -->
   <div class="e-galeria">
     <img src="../assets/img/gala2025/sala-gala.jpg" alt="Sala de la gala">
     <img src="../assets/img/gala2025/gastronia1-buidasacs.jpg" alt="Lliurament Gastronia" style="object-position:center 20%;">
@@ -417,13 +352,11 @@ function setLang(lang) {
 
 </main>
 
-<!-- NAV RETORN -->
 <div class="e-nav-retorn">
   <a href="../pages/blog.html" class="btn-outline" data-i18n="back_blog_btn"></a>
   <a href="../pages/premis.html" class="btn-primary" data-i18n="btn_premis"></a>
 </div>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">

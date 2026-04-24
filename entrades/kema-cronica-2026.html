@@ -12,10 +12,9 @@
 <link rel="stylesheet" href="../assets/css/nav.css">
 <link rel="stylesheet" href="../assets/css/seccions.css">
 <style>
-/* ── HERO ── */
 .entrada-hero{position:relative;min-height:75vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
-.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.38;}
-.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.97) 0%,rgba(11,22,38,.55) 55%,rgba(11,22,38,.1) 100%);}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.65;filter:brightness(1.08) contrast(1.05);}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.92) 0%,rgba(11,22,38,.38) 50%,rgba(11,22,38,.05) 100%);}
 .entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
 .entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
 .entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
@@ -23,13 +22,11 @@
 .entrada-meta-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
 .entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;}
 .entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;}
-.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;}
 .entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
 .entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
 .entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
-.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.85;max-width:540px;}
-
-/* ── COS ── */
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.82);font-weight:300;line-height:1.85;max-width:540px;}
 .entrada-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
 .e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
 .e-title{font-family:var(--font-serif);font-size:1.75rem;color:var(--navy-dark);line-height:1.2;margin-bottom:22px;}
@@ -37,38 +34,26 @@
 .e-p strong{font-weight:700;color:var(--navy-dark);}
 .e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin:52px 0;}
 .e-sep{text-align:center;margin:48px 0;color:var(--gold);font-size:1rem;letter-spacing:10px;opacity:.35;}
-
-/* ── ACTE HEADER ── */
 .e-acte{border-left:4px solid var(--navy);padding-left:22px;margin-bottom:8px;}
 .e-acte .e-label{margin-bottom:4px;}
 .e-acte .e-title{margin-bottom:0;}
-
-/* ── GRID 2 COL ── */
 .e-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:52px;}
 .e-img{position:relative;}
 .e-img img{width:100%;height:420px;object-fit:cover;position:relative;z-index:1;}
 .e-img::after{content:'';position:absolute;bottom:-14px;right:-14px;width:50%;height:50%;border:2px solid var(--gold);opacity:.2;z-index:0;}
-
-/* ── FOTOS GRID ── */
 .e-fotos-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:32px 0;}
 .e-fotos-3 img{width:100%;aspect-ratio:3/4;object-fit:cover;}
 .e-fotos-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:32px 0;}
 .e-fotos-2 img{width:100%;height:280px;object-fit:cover;}
 .e-fotos-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:32px 0;}
 .e-fotos-4 img{width:100%;aspect-ratio:1;object-fit:cover;}
-
-/* ── FOTO GRAN ── */
 .e-foto-gran{margin:48px 0;position:relative;height:440px;overflow:hidden;}
 .e-foto-gran img{width:100%;height:100%;object-fit:cover;}
 .e-foto-gran-peu{position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top,rgba(11,22,38,.75),transparent);font-size:.7rem;color:rgba(255,255,255,.55);font-style:italic;}
-
-/* ── MARIDATGE ── */
 .e-maridatge{background:var(--cream);border:1px solid var(--border);padding:14px 20px;margin:20px 0;display:flex;align-items:center;gap:14px;}
 .e-maridatge i{color:var(--gold);font-size:.9rem;flex-shrink:0;}
 .e-maridatge-text{font-size:.85rem;color:var(--muted);line-height:1.5;}
 .e-maridatge-text strong{color:var(--navy-dark);font-weight:700;}
-
-/* ── BLOC VINS ── */
 .e-vins{background:var(--navy-dark);padding:48px;margin:52px 0;}
 .e-vins-title{font-family:var(--font-serif);font-size:1.6rem;color:#fff;margin-bottom:10px;}
 .e-vins-desc{font-size:.9rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.8;margin-bottom:28px;}
@@ -78,30 +63,18 @@
 .e-vi-nom{font-size:.88rem;color:#fff;line-height:1.45;}
 .e-vi-do{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:3px;}
 .e-vins-nota{font-size:.82rem;color:rgba(255,255,255,.35);font-style:italic;margin-top:20px;}
-
-/* ── SALA ── */
 .e-sala-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin:52px 0;}
-
-/* ── FOTO GRUP ── */
 .e-grup{margin:52px 0;}
 .e-grup img{width:100%;height:440px;object-fit:cover;object-position:center 60%;}
 .e-grup-peu{text-align:center;font-size:.85rem;color:var(--muted);margin-top:12px;font-style:italic;}
-
-/* ── FITXA ── */
 .e-fitxa{background:var(--cream);border:1px solid var(--border);display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:52px 0;text-align:center;}
 .e-fitxa-item{padding:32px 24px;border-right:1px solid var(--border);}
 .e-fitxa-item:last-child{border-right:none;}
 .e-fitxa-label{font-size:.62rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block;}
 .e-fitxa-valor{font-family:var(--font-serif);font-size:1.05rem;color:var(--navy-dark);}
-
-/* ── NOTA FINAL ── */
 .e-nota-final{font-size:.85rem;color:var(--muted);text-align:center;font-style:italic;margin-top:24px;}
-
-/* ── NAV RETORN ── */
 .e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;}
 .e-nav-retorn-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
-
-/* ── RESPONSIVE ── */
 @media(max-width:768px){
   .entrada-hero-content{padding:0 5% 52px;}
   .e-grid-2,.e-sala-grid{grid-template-columns:1fr;gap:32px;}
@@ -119,7 +92,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="nav" class="solid">
   <div class="nav-inner">
     <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona"></a>
@@ -138,7 +110,7 @@
       <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
   </div>
-      <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
     <div class="mobile-item"><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
     <div class="mobile-item"><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
@@ -154,7 +126,6 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <header class="entrada-hero">
   <div class="entrada-hero-bg" style="background-image:url('../assets/img/kema/hero-cronica.jpg');"></div>
   <div class="entrada-hero-grad"></div>
@@ -174,10 +145,8 @@
   </div>
 </header>
 
-<!-- COS -->
 <main class="entrada-cos">
 
-  <!-- INTRO -->
   <div class="e-grid-2">
     <div>
       <span class="e-label" data-i18n="cronica_l1"></span>
@@ -192,21 +161,17 @@
     </div>
   </div>
 
-  <!-- ACTE 1: OBERTURA -->
   <div class="e-acte">
     <span class="e-label" data-i18n="cronica_acte1_label"></span>
     <h2 class="e-title" data-i18n="cronica_acte1_title"></h2>
   </div>
   <div style="width:48px;height:3px;background:var(--gold);opacity:.35;margin-bottom:24px;"></div>
-
   <p class="e-p" data-i18n="cronica_acte1_p1"></p>
   <p class="e-p" data-i18n="cronica_acte1_p2"></p>
-
   <div class="e-maridatge">
     <i class="fa fa-wine-glass-alt"></i>
     <span class="e-maridatge-text"><strong>Maridatge:</strong> Cava Oriol Rosell Brut Nature Reserva 20 mesos D.O. Cava</span>
   </div>
-
   <div class="e-fotos-3">
     <img src="../assets/img/kema/obertura-1.jpg" alt="Gilda del Kema">
     <img src="../assets/img/kema/obertura-2.jpg" alt="Papa arrugà amb costella">
@@ -215,28 +180,22 @@
 
   <div class="e-sep">· · ·</div>
 
-  <!-- ACTE 2: INTERMEZZO -->
   <div class="e-acte">
     <span class="e-label" data-i18n="cronica_acte2_label"></span>
     <h2 class="e-title" data-i18n="cronica_acte2_title"></h2>
   </div>
   <div style="width:48px;height:3px;background:var(--gold);opacity:.35;margin-bottom:24px;"></div>
-
   <p class="e-p" data-i18n="cronica_acte2_p1"></p>
   <p class="e-p" data-i18n="cronica_acte2_p2"></p>
-
   <div class="e-maridatge">
     <i class="fa fa-wine-glass-alt"></i>
     <span class="e-maridatge-text"><strong>Maridatge:</strong> Picasoques Blanc 2024 — Montsant</span>
   </div>
-
   <div class="e-fotos-2">
     <img src="../assets/img/kema/intermezzo-1.jpg" alt="Micuit de foie">
     <img src="../assets/img/kema/intermezzo-2.jpg" alt="Sam de cevitxe">
   </div>
-
   <p class="e-p" data-i18n="cronica_acte2_p3"></p>
-
   <div class="e-maridatge">
     <i class="fa fa-wine-glass-alt"></i>
     <span class="e-maridatge-text"><strong>Maridatge:</strong> Picasoques Negre 2025 — Montsant</span>
@@ -244,35 +203,28 @@
 
   <div class="e-sep">· · ·</div>
 
-  <!-- ACTE 3: ÀRIES -->
   <div class="e-acte">
     <span class="e-label" data-i18n="cronica_acte3_label"></span>
     <h2 class="e-title" data-i18n="cronica_acte3_title"></h2>
   </div>
   <div style="width:48px;height:3px;background:var(--gold);opacity:.35;margin-bottom:24px;"></div>
-
   <p class="e-p" data-i18n="cronica_acte3_p1"></p>
   <p class="e-p" data-i18n="cronica_acte3_p2"></p>
-
   <div class="e-maridatge">
     <i class="fa fa-wine-glass-alt"></i>
     <span class="e-maridatge-text"><strong>Maridatge:</strong> Aucalà Blanc 2019 Magnum — Terra Alta</span>
   </div>
-
   <div class="e-fotos-4">
     <img src="../assets/img/kema/aries-1.jpg" alt="Bacallà skrei">
     <img src="../assets/img/kema/aries-2.jpg" alt="Aries plat 2">
     <img src="../assets/img/kema/aries-3.jpg" alt="Aries plat 3">
     <img src="../assets/img/kema/aries-4.jpg" alt="Aries plat 4">
   </div>
-
   <p class="e-p" data-i18n="cronica_acte3_p3"></p>
-
   <div class="e-maridatge">
     <i class="fa fa-wine-glass-alt"></i>
     <span class="e-maridatge-text"><strong>Maridatge:</strong> Aucalà Negre 2023 Magnum — Terra Alta</span>
   </div>
-
   <div class="e-foto-gran">
     <img src="../assets/img/kema/ribeye.jpg" alt="Rib-eye de vaca gallega">
     <div class="e-foto-gran-peu" data-i18n="cronica_ribeye_peu"></div>
@@ -280,7 +232,6 @@
 
   <div class="e-sep">· · ·</div>
 
-  <!-- ACTE 4 + 5: PRE-FINALE I FINALE -->
   <div class="e-grid-2" style="margin-top:0;">
     <div style="display:grid;gap:14px;">
       <img src="../assets/img/kema/prefinale-1.jpg" alt="Frozen Moscow Mule" style="width:100%;height:210px;object-fit:cover;">
@@ -292,7 +243,6 @@
         <h2 class="e-title" style="font-size:1.4rem;" data-i18n="cronica_acte4_title"></h2>
       </div>
       <p class="e-p" data-i18n="cronica_acte4_p1"></p>
-
       <div class="e-acte" style="margin:28px 0 16px;">
         <span class="e-label" data-i18n="cronica_acte5_label"></span>
         <h2 class="e-title" style="font-size:1.4rem;" data-i18n="cronica_acte5_title"></h2>
@@ -305,7 +255,6 @@
     </div>
   </div>
 
-  <!-- BLOC VINS -->
   <div class="e-vins">
     <span class="e-label" style="color:rgba(184,146,74,.8);" data-i18n="cronica_vins_label"></span>
     <h3 class="e-vins-title" data-i18n="cronica_vins_title"></h3>
@@ -321,7 +270,6 @@
     <p class="e-vins-nota" data-i18n="cronica_vins_nota"></p>
   </div>
 
-  <!-- SALA -->
   <div class="e-sala-grid">
     <div>
       <span class="e-label" data-i18n="cronica_sala_label"></span>
@@ -335,13 +283,11 @@
     </div>
   </div>
 
-  <!-- FOTO GRUP -->
   <div class="e-grup">
     <img src="../assets/img/kema/grup.jpg" alt="Gourmets de Tarragona al Kema">
     <p class="e-grup-peu" data-i18n="cronica_grup_peu"></p>
   </div>
 
-  <!-- FITXA -->
   <div class="e-fitxa">
     <div class="e-fitxa-item">
       <span class="e-fitxa-label" data-i18n="cronica_fitxa1_label"></span>
@@ -356,12 +302,10 @@
       <span class="e-fitxa-valor" data-i18n="cronica_fitxa3_valor"></span>
     </div>
   </div>
-
   <p class="e-nota-final" data-i18n="cronica_nota_final"></p>
 
 </main>
 
-<!-- NAV RETORN -->
 <div class="e-nav-retorn">
   <div class="e-nav-retorn-links">
     <a href="kema-previa-2026.html" class="btn-outline" data-i18n="cronica_btn_previa"></a>
@@ -370,7 +314,6 @@
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
@@ -388,92 +331,7 @@
   <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
 </footer>
 
-<!-- scripts -->
-
-
-</body>
-</html>
-
-<script>
-var T={
-  nav_quienes:{es:'Qui\u00e9nes somos',ca:'Qui som'},
-  nav_como:{es:'C\u00f3mo funcionamos',ca:'Com funcionem'},
-  nav_gastronia:{es:'Trofeo Gastron\u00eda',ca:'Trofeu Gastron\u00eda'},
-  nav_bacus:{es:'Premio Baccus',ca:'Premi Bacus'},
-  nav_rest_short:{es:'Restaurantes',ca:'Restaurants'},
-  nav_premios_short:{es:'Premios',ca:'Premis'},
-  nav_blog:{es:'Blog Gourmet',ca:'Blog Gourmet'},
-  nav_contacto:{es:'Contacto',ca:'Contacte'},
-  footer_desc:{es:'Asociaci\u00f3n gastron\u00f3mica sin \u00e1nimo de lucro.',ca:'Associaci\u00f3 gastron\u00f2mica sense \u00e0nim de lucre.'},
-  footer_nav:{es:'Navegaci\u00f3n',ca:'Navegaci\u00f3'},
-  footer_legal:{es:'Legal',ca:'Legal'},
-  footer_contacte:{es:'Contacto',ca:'Contacte'},
-  footer_avis:{es:'Aviso Legal',ca:'Av\u00eds Legal'},
-  footer_privacitat:{es:'Pol\u00edtica de Privacidad',ca:'Pol\u00edtica de Privacitat'},
-  footer_copy:{es:'\u00a9 2026 Gourmets de Tarragona \u00b7 Todos los derechos reservados',ca:'\u00a9 2026 Gourmets de Tarragona \u00b7 Tots els drets reservats'},
-  back_blog:{es:'Volver al Blog',ca:'Tornar al Blog'},
-  cronica_badge:{es:'Visita Gourmets \u00b7 Temporada 2026',ca:'Visita Gourmets \u00b7 Temporada 2026'},
-  cronica_subtitol:{es:'Primera visita de la asociaci\u00f3n en 2026. Kema propone la brasa y el fuego como eje gastron\u00f3mico.',ca:"Primera visita de l'associaci\u00f3 en 2026. Kema proposa la brasa i el foc com a eix gastron\u00f2mic."},
-  cronica_l1:{es:'La propuesta',ca:'La proposta'},
-  cronica_t1:{es:'Brasa y fuego como eje gastron\u00f3mico',ca:'Brasa i foc com a eix gastron\u00f2mic'},
-  cronica_p1:{es:'En el marco del recorrido gastron\u00f3mico de la temporada, la asociaci\u00f3n Gourmets de Tarragona realiz\u00f3 su primera visita al restaurante Kema, en Cambrils.',ca:"En el marc del recorregut gastron\u00f2mic de la temporada, l'associaci\u00f3 Gourmets de Tarragona va realitzar la seva primera visita al restaurant Kema, a Cambrils."},
-  cronica_p2:{es:'Kema plantea una propuesta centrada en la cocina de brasa, incorporando producto tanto de mar como de tierra y ofreciendo una mirada distinta dentro de una tradici\u00f3n muy definida.',ca:"Kema planteja una proposta centrada en la cuina de brasa, incorporant producte tant de mar com de terra i oferint una mirada distinta dins d'una tradici\u00f3 molt definida."},
-  cronica_p3:{es:'La minuta se estructur\u00f3 en forma de actos, ordenando el recorrido de manera clara y progresiva.',ca:"La minuta es va estructurar en forma d'actes, ordenant el recorregut de manera clara i progressiva."},
-  cronica_acte1_label:{es:'Primer acto',ca:'Primer acte'},
-  cronica_acte1_title:{es:'Obertura',ca:'Obertura'},
-  cronica_acte1_p1:{es:'La obertura fij\u00f3 el tono con una primera serie de bocados pensados para abrir registros y anticipar el car\u00e1cter del men\u00fa.',ca:"L'obertura va fixar el to amb una primera s\u00e8rie de bocats pensats per obrir registres i anticipar el car\u00e0cter del men\u00fa."},
-  cronica_acte1_p2:{es:'La Gilda del Kema a la brasa con caballa marinada, el Panipuri de t\u00e1rtar de camar\u00f3n rojo, y la Papa Arrug\u00e0 con costilla de Black Angus introdujeron distintos matices desde el primer momento.',ca:"La Gilda del Kema a la brasa amb caballa marinada, el Panipuri de t\u00e0rtar de camar\u00f3n vermell, i la Papa Arrug\u00e0 amb costella de Black Angus van introduir distints matisos des del primer moment."},
-  cronica_acte2_label:{es:'Segundo acto',ca:'Segon acte'},
-  cronica_acte2_title:{es:'Intermezzo',ca:'Intermezzo'},
-  cronica_acte2_p1:{es:'El intermezzo funcion\u00f3 como transici\u00f3n y cambio de profundidad, con platos que elevaron la complejidad del recorrido.',ca:"L'intermezzo va funcionar com a transici\u00f3 i canvi de profunditat, amb plats que van elevar la complexitat del recorregut."},
-  cronica_acte2_p2:{es:'El Micuit de Foie con ahumado y calvados, el Sam de Cevitxe de lubina salvaje, y la Gamba en Gabardina con salsa satay configuraron un tramo donde el men\u00fa gan\u00f3 en contraste y ambici\u00f3n.',ca:"El Micuit de Foie amb fumat i calvados, el Sam de Cevitxe de llobarro salvatge, i la Gamba en Gabardina amb salsa satay van configurar un tram on el men\u00fa va guanyar en contrast i ambici\u00f3."},
-  cronica_acte2_p3:{es:'El intermezzo se cerr\u00f3 con el Mar y Monta\u00f1a de carpaccio de presa ib\u00e9rica y el Steak Tartar de vaca gallega.',ca:"L'intermezzo es va tancar amb el Mar i Muntanya de carpaccio de presa ib\u00e8rica i el Steak Tartar de vaca vermella gallega."},
-  cronica_acte3_label:{es:'Tercer acto',ca:'Tercer acte'},
-  cronica_acte3_title:{es:'Arias',ca:'\u00c0ries'},
-  cronica_acte3_p1:{es:'Las arias representaron el momento de mayor exposici\u00f3n de la propuesta, donde la cocina busc\u00f3 definir con m\u00e1s claridad su voz e intenci\u00f3n.',ca:"Les \u00e0ries van representar el moment de major exposici\u00f3 de la proposta, on la cuina va buscar definir amb m\u00e9s claredat la seva veu i intenci\u00f3."},
-  cronica_acte3_p2:{es:'El Bacall\u00e0 Skrei a la robata con vizcaina de almendra se present\u00f3 como uno de los platos m\u00e1s singulares del recorrido.',ca:"El Bacall\u00e0 Skrei a la robata amb vizcaina d'ametlla es va presentar com un dels plats m\u00e9s singulars del recorregut."},
-  cronica_acte3_p3:{es:'El Rib-Eye de vaca gallega con mantequilla ahumada, risotto de setas y trufa cerr\u00f3 la parte estructural del men\u00fa con solvencia.',ca:"El Rib-Eye de vaca gallega amb mantequilla fumada, risotto de bolets i t\u00f2fona va tancar la part estructural del men\u00fa amb solv\u00e8ncia."},
-  cronica_ribeye_peu:{es:'Rib-eye de vaca gallega con mantequilla ahumada, risotto de setas y trufa',ca:'Rib-eye de vaca gallega amb mantequilla fumada, risotto de bolets i t\u00f2fona'},
-  cronica_acte4_label:{es:'Cuarto acto',ca:'Quart acte'},
-  cronica_acte4_title:{es:'Pre-Finale',ca:'Pre-Finale'},
-  cronica_acte4_p1:{es:'Un Frozen Moscow Mule Cocktail actu\u00f3 como interludio refrescante, marcando el l\u00edmite entre la parte salada y el cierre dulce del men\u00fa.',ca:"Un Frozen Moscow Mule Cocktail va actuar com a interludi refrescant, marcant el l\u00edmit entre la part salada i el tancament dol\u00e7 del men\u00fa."},
-  cronica_acte5_label:{es:'Quinto acto',ca:'Cinqu\u00e8 acte'},
-  cronica_acte5_title:{es:'Finale',ca:'Finale'},
-  cronica_acte5_p1:{es:'La Deconstrucci\u00f3n cerr\u00f3 el recorrido con una reinterpretaci\u00f3n del cheesecake con texturas de frutos rojos del bosque.',ca:"La Deconstrucci\u00f3 va tancar el recorregut amb una reinterpretaci\u00f3 del cheesecake amb textures de fruits vermells del bosc."},
-  cronica_vins_label:{es:'Los vinos de la velada',ca:'Els vins de la vetllada'},
-  cronica_vins_title:{es:'Un maridaje con criterio y territorio',ca:'Un maridatge amb criteri i territori'},
-  cronica_vins_desc:{es:'El recorrido de maridajes fue uno de los elementos m\u00e1s elaborados de la propuesta, con una selecci\u00f3n de referencias del territorio que acompa\u00f1\u00f3 cada acto con coherencia y criterio.',ca:"El recorregut de maridatges va ser un dels elements m\u00e9s elaborats de la proposta, amb una selecci\u00f3 de refer\u00e8ncies del territori que va acompanyar cada acte amb coher\u00e8ncia i criteri."},
-  cronica_vins_nota:{es:'La valoraci\u00f3n final de los socios se reflejar\u00e1 posteriormente en las votaciones del recorrido gastron\u00f3mico anual.',ca:"La valoraci\u00f3 final dels socis es reflectir\u00e0 posteriorment en les votacions del recorregut gastron\u00f2mic anual."},
-  cronica_sala_label:{es:'Sala y servicio',ca:'Sala i servei'},
-  cronica_sala_title:{es:'Uno de los puntos fuertes de la velada',ca:'Un dels punts forts de la vetllada'},
-  cronica_sala_p1:{es:'El servicio fue uno de los puntos fuertes de la velada. Buen ritmo, coordinaci\u00f3n fluida entre cocina y sala.',ca:"El servei va ser un dels punts forts de la vetllada. Bon ritme, coordinaci\u00f3 fluida entre cuina i sala."},
-  cronica_sala_p2:{es:'Un equipo que demostr\u00f3 experiencia en la gesti\u00f3n de mesas numerosas y que supo mantener el nivel durante toda la cena.',ca:"Un equip que va demostrar experi\u00e8ncia en la gesti\u00f3 de taules nombroses i que va saber mantenir el nivell durant tota la cena."},
-  cronica_grup_peu:{es:'Miembros de Gourmets de Tarragona durante la visita al Kema \u00b7 Cambrils \u2014 Marzo 2026',ca:"Membres de Gourmets de Tarragona durant la visita al Kema \u00b7 Cambrils \u2014 Mar\u00e7 2026"},
-  cronica_fitxa1_label:{es:'Restaurante',ca:'Restaurant'},
-  cronica_fitxa2_label:{es:'Tipo de cocina',ca:'Tipus de cuina'},
-  cronica_fitxa2_valor:{es:'Brasa contempor\u00e1nea',ca:'Brasa contempor\u00e0nia'},
-  cronica_fitxa3_label:{es:'Recorrido',ca:'Recorregut'},
-  cronica_fitxa3_valor:{es:'1\u00aa Visita \u00b7 Temporada 2026',ca:'1a Visita \u00b7 Temporada 2026'},
-  cronica_nota_final:{es:'La valoraci\u00f3n final de los socios se reflejar\u00e1 en las votaciones del recorrido gastron\u00f3mico anual.',ca:"La valoraci\u00f3 final dels socis es reflectir\u00e0 en les votacions del recorregut gastron\u00f2mic anual."},
-  cronica_btn_previa:{es:'\u2190 Leer la previa',ca:'\u2190 Llegir la pr\u00e8via'},
-  cronica_btn_blog:{es:'Volver al Blog',ca:'Tornar al Blog'},
-  cronica_btn_recorregut:{es:'Ver el recorrido 2026',ca:'Veure el recorregut 2026'}
-};
-var currentLang=localStorage.getItem('gdt-lang')||'es';
-function applyTranslations(lang){
-  document.querySelectorAll('[data-i18n]').forEach(function(el){
-    var k=el.getAttribute('data-i18n');
-    if(T[k]&&T[k][lang]!==undefined)el.innerHTML=T[k][lang];
-  });
-  var r=document.getElementById('html-root');
-  if(r)r.setAttribute('lang',lang);
-  document.querySelectorAll('.lang-btn').forEach(function(b){
-    b.classList.toggle('active',b.getAttribute('data-lang')===lang);
-  });
-}
-function setLang(lang){currentLang=lang;localStorage.setItem('gdt-lang',lang);applyTranslations(lang);}
-applyTranslations(currentLang);
-</script>
+<script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>
