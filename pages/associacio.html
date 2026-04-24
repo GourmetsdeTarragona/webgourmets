@@ -410,6 +410,8 @@ const t = {
   bacus_photo_text:{es:'Uva garnacha del Priorat',ca:'Raïm garnatxa del Priorat'},
   junta_label:{es:'La Junta',ca:'La Junta'},
   junta_title:{es:'Quienes llevan el timón',ca:'Qui porta el timó'},
+  grup_label:{es:'Els nostres socis',ca:'Els nostres socis'},
+  grup_peu:{es:'Gourmets de Tarragona · Visita La Goleta, Salou · Abril 2026',ca:'Gourmets de Tarragona · Visita La Goleta, Salou · Abril 2026'},
   cargo_president:{es:'Presidente',ca:'President'},
   cargo_vicepresident:{es:'Vicepresidente',ca:'Vicepresident'},
   cargo_secretari:{es:'Secretario y Tesorero',ca:'Secretari i Tresorer'},
@@ -807,6 +809,19 @@ function setLang(lang) {
       <div class="junta-card"><div class="junta-avatar">VB</div><p class="junta-nombre">Vicente Baquero Rosario</p><p class="junta-cargo" data-i18n="cargo_gastronomic"></p></div>
       <div class="junta-card"><div class="junta-avatar">DM</div><p class="junta-nombre">Dámaso Molina Sereno</p><p class="junta-cargo" data-i18n="cargo_cultural"></p></div>
       <div class="junta-card"><div class="junta-avatar">AM</div><p class="junta-nombre">Ángeles Muñoz</p><p class="junta-cargo" data-i18n="cargo_secretaria"></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOTO GRUP SOCIS -->
+<section class="sec" style="padding-top:0;padding-bottom:0;">
+  <div style="position:relative;overflow:hidden;max-height:520px;">
+    <img src="../assets/img/kema/grup.jpg"
+         alt="Els socis de Gourmets de Tarragona · Visita La Goleta 2026"
+         style="width:100%;max-height:520px;object-fit:cover;object-position:center 35%;display:block;">
+    <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 32px;background:linear-gradient(to top,rgba(11,22,38,.80),transparent);">
+      <p class="slabel" style="color:var(--gold);margin-bottom:4px;" data-i18n="grup_label"></p>
+      <p style="font-size:.8rem;color:rgba(255,255,255,.6);font-style:italic;font-family:var(--font-serif);" data-i18n="grup_peu"></p>
     </div>
   </div>
 </section>
