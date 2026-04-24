@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span class="t" data-es="Todos" data-ca="Tots">Todos</span>
-      <span class="filtre-n">12</span>
+      <span class="filtre-n">13</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot" style="background:var(--navy);"></span>
@@ -189,12 +189,12 @@ document.addEventListener('DOMContentLoaded', function() {
     <button class="filtre-btn" data-cat="curiositats" onclick="filterEntrades('curiositats')">
       <span class="filtre-dot" style="background:#8b5e3c;"></span>
       <span class="t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
-      <span class="filtre-n">2</span>
+      <span class="filtre-n">3</span>
     </button>
   </div>
 </div>
 
-<!-- DESTACAT — El Terrat Prèvia (entrada més recent) -->
+<!-- DESTACAT -->
 <div class="blog-destacat">
   <div class="destacat-card" data-cat="previa">
     <div class="destacat-img">
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="blog-grid-wrap">
   <div class="blog-grid">
 
-    <!-- El Terrat Prèvia — NOU -->
+    <!-- El Terrat Prèvia -->
     <article class="blog-card" data-cat="previa">
       <div class="blog-card-img">
         <img src="../assets/img/terrat/exterior.jpg" alt="El Terrat · Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
@@ -320,6 +320,28 @@ document.addEventListener('DOMContentLoaded', function() {
         <h3 class="blog-card-title t" data-es="El Romesco de Tarragona" data-ca="El Romesco de Tarragona">El Romesco de Tarragona</h3>
         <p class="blog-card-exc t" data-es="Historia, origen y receta de la salsa que define la cocina del Camp de Tarragona. Del Serrallo a las mesas del mundo." data-ca="Història, origen i recepta de la salsa que defineix la cuina del Camp de Tarragona. Del Serrallo a les taules del món.">Historia, origen y receta de la salsa que define la cocina del Camp de Tarragona. Del Serrallo a las mesas del mundo.</p>
         <a href="../entrades/el-romesco.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
+    <!-- Curiositat: El Moretum — NOU -->
+    <article class="blog-card" data-cat="curiositats">
+      <div class="blog-card-img">
+        <img src="../assets/img/moretum/moretum-hero.jpg" alt="El Moretum — la salsa romana de Tàrraco" onerror="this.parentElement.style.background='var(--cream)'">
+        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data">2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es="El moretum: la salsa romana de Tàrraco"
+            data-ca="El moretum: la salsa romana de Tàrraco">
+          El moretum: la salsa romana de Tàrraco
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Queso, ajo, hierbas y aceite. Una preparación humilde de hace dos mil años que Virgilio puso en verso y que en nuestra ciudad ya se comía antes de que existiera el pesto."
+           data-ca="Formatge, all, herbes i oli. Una preparació humil de fa dos mil anys que Virgili va posar en vers i que a la nostra ciutat ja es menjava abans que existís el pesto.">
+          Queso, ajo, hierbas y aceite. Una preparación humilde de hace dos mil años que Virgilio puso en verso y que en nuestra ciudad ya se comía antes de que existiera el pesto.
+        </p>
+        <a href="../entrades/el-moretum.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
