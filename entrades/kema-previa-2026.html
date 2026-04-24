@@ -256,7 +256,73 @@
   <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
 </footer>
 
-<script src="../assets/js/i18n.js"></script>
+<!-- scripts -->
+
+</body>
+</html>
+
+<script>
+var T={
+  nav_quienes:{es:'Quiénes somos',ca:'Qui som'},
+  nav_como:{es:'Cómo funcionamos',ca:'Com funcionem'},
+  nav_gastronia:{es:'Trofeo Gastronía',ca:'Trofeu Gastronía'},
+  nav_bacus:{es:'Premio Bacus',ca:'Premi Bacus'},
+  nav_rest_short:{es:'Restaurantes',ca:'Restaurants'},
+  nav_premios_short:{es:'Premios',ca:'Premis'},
+  nav_blog:{es:'Blog Gourmet',ca:'Blog Gourmet'},
+  nav_contacto:{es:'Contacto',ca:'Contacte'},
+  footer_desc:{es:'Asociación gastronómica sin ánimo de lucro.',ca:'Associació gastronòmica sense ànim de lucre.'},
+  footer_nav:{es:'Navegación',ca:'Navegació'},
+  footer_legal:{es:'Legal',ca:'Legal'},
+  footer_contacte:{es:'Contacto',ca:'Contacte'},
+  footer_avis:{es:'Aviso Legal',ca:'Avís Legal'},
+  footer_privacitat:{es:'Política de Privacidad',ca:'Política de Privacitat'},
+  footer_copy:{es:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',ca:'© 2026 Gourmets de Tarragona · Tots els drets reservats'},
+  back_blog:{es:'Volver al Blog',ca:'Tornar al Blog'},
+  back_blog_btn:{es:'← Volver al Blog',ca:'← Tornar al Blog'},
+  previa_badge:{es:'Previa · 28 Febrero 2026',ca:'Prèvia · 28 Febrer 2026'},
+  previa_titol_sub:{es:'1r Recorrido Gourmet 2026',ca:'1r Recorregut Gourmet 2026'},
+  previa_subtitol:{es:'Brasa, producto bien tratado y coctelería con personalidad. El próximo 5 de marzo iniciamos el Recorrido Gourmet 2026.',ca:'Brasa, producte ben tractat i cocteleria amb personalitat. El proper 5 de març iniciem el Recorregut Gourmet 2026.'},
+  previa_l1:{es:'Por qué empezamos aquí',ca:'Per què comencem aquí'},
+  previa_t1:{es:'Una propuesta 360° donde el fuego manda',ca:'Una proposta 360° on el foc mana'},
+  previa_p1:{es:'Kema representa una cocina directa, centrada en el fuego y en la calidad del producto, con una puesta en escena moderna y una propuesta líquida diferencial.',ca:'Kema representa una cuina directa, centrada en el foc i en la qualitat del producte, amb una posada en escena moderna i una proposta líquida diferencial.'},
+  previa_p2:{es:'Esperamos encontrar una cocina que respete el producto y potencie el sabor a través de la brasa, con carnes, pescados y propuestas equilibradas.',ca:'Esperem trobar una cuina que respecti el producte i potenciï el sabor a través de la brasa, amb carns, peixos i propostes equilibrades.'},
+  previa_val1:{es:'Cambrils',ca:'Cambrils'},
+  previa_val2:{es:'5 de marzo 2026',ca:'5 de març 2026'},
+  previa_val3:{es:'Brasas & Coctelería',ca:'Brases & Cocteleria'},
+  previa_val4:{es:'Aucalà & Picasoques',ca:'Aucalà & Picasoques'},
+  previa_menu_title:{es:'Qué encontraremos en la mesa',ca:'Què trobarem a la taula'},
+  previa_equip_label:{es:'El equipo',ca:"L'equip"},
+  previa_equip_title:{es:'Las personas detrás de Kema',ca:'Les persones darrere de Kema'},
+  previa_eq1_desc:{es:'Sagas con experiencia sobrada en restauración.',ca:'Sagas amb experiència sobrada en restauració.'},
+  previa_eq2_desc:{es:'Trayectoria internacional, formado en Praga. Experiencia en Madrid, Barcelona y Tarragona.',ca:'Trajectòria internacional, format a Praga. Experiència a Madrid, Barcelona i Tarragona.'},
+  previa_eq3_desc:{es:'Amplia trayectoria en sala y cocina. Responsable del Grita Fuego Group.',ca:'Àmplia trajectòria en sala i cuina. Responsable del Grita Fuego Group.'},
+  previa_fitxa_title:{es:'Ficha del restaurante',ca:'Fitxa del restaurant'},
+  previa_fitxa_data:{es:'Visita: 5 de marzo 2026',ca:'Visita: 5 de març 2026'},
+  previa_cta_desc:{es:'Durante la cena compartiremos algunos momentos en stories. La crónica completa llegará días después.',ca:'Durant el sopar compartirem alguns moments a les stories. La crònica completa arribarà dies després.'},
+  previa_cta_btn:{es:'Leer la crónica completa →',ca:'Llegir la crònica completa →'},
+  previa_foto_peu:{es:'La brasa como eje gastronómico — producto directo, fuego y sabor',ca:'La brasa com a eix gastronòmic — producte directe, foc i sabor'},
+  nav_inicio:{es:'Inicio',ca:'Inici'},
+  nav_asoc:{es:'La Asociación',ca:"L'Associació"},
+  nav_rest:{es:'Restaurantes',ca:'Restaurants'},
+  nav_visites:{es:'Visitas 2025–26',ca:'Visites 2025–26'},
+  nav_premios:{es:'Premios',ca:'Premis'}
+};
+var currentLang=localStorage.getItem('gdt-lang')||'es';
+function applyTranslations(lang){
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var k=el.getAttribute('data-i18n');
+    if(T[k]&&T[k][lang]!==undefined)el.innerHTML=T[k][lang];
+  });
+  var r=document.getElementById('html-root');
+  if(r)r.setAttribute('lang',lang);
+  document.querySelectorAll('.lang-btn').forEach(function(b){
+    b.classList.toggle('active',b.getAttribute('data-lang')===lang);
+  });
+}
+function setLang(lang){currentLang=lang;localStorage.setItem('gdt-lang',lang);applyTranslations(lang);}
+applyTranslations(currentLang);
+</script>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>
