@@ -12,10 +12,9 @@
 <link rel="stylesheet" href="../assets/css/nav.css">
 <link rel="stylesheet" href="../assets/css/seccions.css">
 <style>
-/* ── HERO ENTRADA ── */
 .entrada-hero{position:relative;min-height:70vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
-.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.38;}
-.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.97) 0%,rgba(11,22,38,.55) 55%,rgba(11,22,38,.1) 100%);}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.65;filter:brightness(1.08) contrast(1.05);}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.92) 0%,rgba(11,22,38,.38) 50%,rgba(11,22,38,.05) 100%);}
 .entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
 .entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
 .entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
@@ -24,28 +23,21 @@
 .entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;}
 .entrada-badge-previa{background:var(--navy);}
 .entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;}
-.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;}
 .entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
 .entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
 .entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
-.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.85;max-width:540px;}
-
-/* ── COS ── */
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.82);font-weight:300;line-height:1.85;max-width:540px;}
 .entrada-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
 .e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
 .e-title{font-family:var(--font-serif);font-size:1.75rem;color:var(--navy-dark);line-height:1.2;margin-bottom:22px;}
 .e-p{font-size:1rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:20px;}
 .e-p strong{font-weight:700;color:var(--navy-dark);}
 .e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin:48px 0;}
-
-/* ── GRID INTRO ── */
 .e-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:60px;}
 .e-img{position:relative;}
-.e-img img{width:100%;height:420px;object-fit:cover;}
+.e-img img{width:100%;height:420px;object-fit:cover;position:relative;z-index:1;}
 .e-img::after{content:'';position:absolute;bottom:-14px;right:-14px;width:50%;height:50%;border:2px solid var(--gold);opacity:.2;z-index:0;}
-.e-img img{position:relative;z-index:1;}
-
-/* ── MENÚ GRID ── */
 .e-menu{background:var(--cream);border:1px solid var(--border);padding:48px;margin:52px 0;}
 .e-menu-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);margin-bottom:32px;text-align:center;}
 .e-menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;}
@@ -56,22 +48,16 @@
 .e-menu-vi{grid-column:1/-1;margin-top:24px;padding-top:24px;border-top:1px solid var(--border);display:flex;align-items:center;gap:16px;}
 .e-menu-vi-label{font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
 .e-menu-vi-text{font-size:.9rem;font-weight:300;color:var(--muted);line-height:1.5;}
-
-/* ── VALS RÀPIDS ── */
 .e-vals{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px;}
 .e-val{display:flex;gap:10px;padding:12px 14px;background:#fff;border-left:3px solid var(--navy);align-items:center;}
 .e-val i{color:var(--navy);opacity:.6;font-size:.9rem;width:16px;text-align:center;}
 .e-val span{font-size:.87rem;line-height:1.4;}
-
-/* ── EQUIP ── */
 .e-equip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px;}
 .e-equip-card{background:#fff;border:1px solid var(--border);padding:26px 18px;text-align:center;}
 .e-equip-avatar{width:56px;height:56px;border-radius:50%;background:var(--navy);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;color:#fff;}
 .e-equip-nom{font-family:var(--font-serif);font-size:.95rem;color:var(--navy-dark);margin-bottom:4px;line-height:1.3;}
 .e-equip-rol{font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);}
 .e-equip-desc{font-size:.8rem;color:var(--muted);line-height:1.5;margin-top:8px;font-weight:300;}
-
-/* ── FITXA ── */
 .e-fitxa{background:var(--cream);border:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:0;margin:52px 0;}
 .e-fitxa-info{padding:36px 40px;}
 .e-fitxa-info h3{font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:20px;}
@@ -81,16 +67,10 @@
 .e-fitxa-text{font-size:.87rem;color:var(--muted);line-height:1.5;}
 .e-fitxa-cta{background:var(--navy-dark);padding:36px 40px;display:flex;flex-direction:column;justify-content:center;text-align:center;}
 .e-fitxa-cta p{font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:20px;font-weight:300;}
-
-/* ── FOTO GRAN ── */
 .e-foto-gran{margin:52px 0;position:relative;height:420px;overflow:hidden;}
 .e-foto-gran img{width:100%;height:100%;object-fit:cover;}
 .e-foto-gran-peu{position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top,rgba(11,22,38,.75),transparent);font-size:.7rem;color:rgba(255,255,255,.55);font-style:italic;}
-
-/* ── NAV RETORN ── */
 .e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;}
-
-/* ── RESPONSIVE ── */
 @media(max-width:768px){
   .entrada-hero-content{padding:0 5% 52px;}
   .e-grid-2{grid-template-columns:1fr;gap:36px;}
@@ -106,7 +86,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="nav" class="solid">
   <div class="nav-inner">
     <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona"></a>
@@ -125,7 +104,7 @@
       <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
   </div>
-      <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
     <div class="mobile-item"><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
     <div class="mobile-item"><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
@@ -141,7 +120,6 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <header class="entrada-hero">
   <div class="entrada-hero-bg" style="background-image:url('../assets/img/kema/hero-brasa.jpg');"></div>
   <div class="entrada-hero-grad"></div>
@@ -161,10 +139,8 @@
   </div>
 </header>
 
-<!-- COS -->
 <main class="entrada-cos">
 
-  <!-- INTRO -->
   <div class="e-grid-2">
     <div>
       <span class="e-label" data-i18n="previa_l1"></span>
@@ -184,49 +160,40 @@
     </div>
   </div>
 
-  <!-- MENÚ -->
   <div class="e-menu">
     <p class="e-menu-title" data-i18n="previa_menu_title"></p>
     <div class="e-menu-grid">
-
       <div>
         <p class="e-menu-bloc-title">Apertura</p>
         <div class="e-menu-plat"><span class="e-menu-plat-ico">🔥</span><span class="e-menu-plat-nom">"La Gilda del Kema" a la brasa amb caballa de Cambrils</span></div>
         <div class="e-menu-plat"><span class="e-menu-plat-ico">🍤</span><span class="e-menu-plat-nom">Panipuri de tàrtar de camarón rojo</span></div>
         <div class="e-menu-plat"><span class="e-menu-plat-ico">🥩</span><span class="e-menu-plat-nom">Papa arrugà al forn de llenya amb costella Black Angus BBQ</span></div>
-
         <p class="e-menu-bloc-title" style="margin-top:24px;">Cos del menú</p>
         <div class="e-menu-plat"><span class="e-menu-plat-ico">🦆</span><span class="e-menu-plat-nom">Micuit de foie fumat al Calvados</span></div>
         <div class="e-menu-plat"><span class="e-menu-plat-ico">🐟</span><span class="e-menu-plat-nom">Ceviche de llobarro salvatge amb llet de tigre de carabinero</span></div>
         <div class="e-menu-plat"><span class="e-menu-plat-ico">🦐</span><span class="e-menu-plat-nom">Gamba roja de Tarragona amb salsa satay</span></div>
       </div>
-
       <div>
         <p class="e-menu-bloc-title">Plats principals</p>
         <div class="e-menu-plat"><span class="e-menu-plat-ico">🌊</span><span class="e-menu-plat-nom">Mar i muntanya · Steak tartar de vaca gallega</span></div>
         <div class="e-menu-plat"><span class="e-menu-plat-ico">🐟</span><span class="e-menu-plat-nom">Bacallà Skrei a la Robata</span></div>
         <div class="e-menu-plat"><span class="e-menu-plat-ico">🥩</span><span class="e-menu-plat-nom">Rib-eye de vaca gallega amb tòfona negra de Prades</span></div>
-
         <p class="e-menu-bloc-title" style="margin-top:24px;">Final</p>
         <div class="e-menu-plat"><span class="e-menu-plat-ico">🍹</span><span class="e-menu-plat-nom">Pre-finale líquid: Frozen Moscow Mule</span></div>
         <div class="e-menu-plat"><span class="e-menu-plat-ico">🍰</span><span class="e-menu-plat-nom">Postre: Cheesecake en deconstrucció</span></div>
       </div>
-
       <div class="e-menu-vi">
         <span class="e-menu-vi-label">Maridatge</span>
         <span class="e-menu-vi-text">Selecció enològica <strong>Aucalà &amp; Picasoques</strong> — Filosofia vitivinícola de Josep Serra</span>
       </div>
-
     </div>
   </div>
 
-  <!-- FOTO GRAN -->
   <div class="e-foto-gran">
     <img src="../assets/img/kema/gambes-brasa.jpg" alt="Kema — producte a la brasa">
     <div class="e-foto-gran-peu" data-i18n="previa_foto_peu"></div>
   </div>
 
-  <!-- EQUIP -->
   <div class="e-divider"></div>
   <span class="e-label" data-i18n="previa_equip_label"></span>
   <h2 class="e-title" data-i18n="previa_equip_title"></h2>
@@ -251,7 +218,6 @@
     </div>
   </div>
 
-  <!-- FITXA -->
   <div class="e-fitxa">
     <div class="e-fitxa-info">
       <h3 data-i18n="previa_fitxa_title"></h3>
@@ -269,12 +235,10 @@
 
 </main>
 
-<!-- NAV RETORN -->
 <div class="e-nav-retorn">
   <a href="../pages/blog.html" class="btn-outline" data-i18n="back_blog_btn"></a>
 </div>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
@@ -292,69 +256,7 @@
   <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
 </footer>
 
-<!-- scripts -->
-
-
-</body>
-</html>
-
-<script>
-var T={
-  nav_quienes:{es:'Qui\u00e9nes somos',ca:'Qui som'},
-  nav_como:{es:'C\u00f3mo funcionamos',ca:'Com funcionem'},
-  nav_gastronia:{es:'Trofeo Gastron\u00eda',ca:'Trofeu Gastron\u00eda'},
-  nav_bacus:{es:'Premio Baccus',ca:'Premi Bacus'},
-  nav_rest_short:{es:'Restaurantes',ca:'Restaurants'},
-  nav_premios_short:{es:'Premios',ca:'Premis'},
-  nav_blog:{es:'Blog Gourmet',ca:'Blog Gourmet'},
-  nav_contacto:{es:'Contacto',ca:'Contacte'},
-  footer_desc:{es:'Asociaci\u00f3n gastron\u00f3mica sin \u00e1nimo de lucro.',ca:'Associaci\u00f3 gastron\u00f2mica sense \u00e0nim de lucre.'},
-  footer_nav:{es:'Navegaci\u00f3n',ca:'Navegaci\u00f3'},
-  footer_legal:{es:'Legal',ca:'Legal'},
-  footer_contacte:{es:'Contacto',ca:'Contacte'},
-  footer_avis:{es:'Aviso Legal',ca:'Av\u00eds Legal'},
-  footer_privacitat:{es:'Pol\u00edtica de Privacidad',ca:'Pol\u00edtica de Privacitat'},
-  footer_copy:{es:'\u00a9 2026 Gourmets de Tarragona \u00b7 Tots els drets reservats',ca:'\u00a9 2026 Gourmets de Tarragona \u00b7 Tots els drets reservats'},
-  back_blog:{es:'Volver al Blog',ca:'Tornar al Blog'},
-  back_blog_btn:{es:'\u2190 Volver al Blog',ca:'\u2190 Tornar al Blog'},
-  previa_badge:{es:'Previa \u00b7 28 Febrero 2026',ca:'Pr\u00e8via \u00b7 28 Febrer 2026'},
-  previa_titol_sub:{es:'1r Recorrido Gourmet 2026',ca:'1r Recorregut Gourmet 2026'},
-  previa_subtitol:{es:'Brasa, producto bien tratado y cocteler\u00eda con personalidad. El pr\u00f3ximo 5 de marzo iniciamos el Recorrido Gourmet 2026.',ca:'Brasa, producte ben tractat i cocteleria amb personalitat. El proper 5 de mar\u00e7 iniciem el Recorregut Gourmet 2026.'},
-  previa_l1:{es:'Por qu\u00e9 empezamos aqu\u00ed',ca:'Per qu\u00e8 comencem aqu\u00ed'},
-  previa_t1:{es:'Una propuesta 360\u00b0 donde el fuego manda',ca:'Una proposta 360\u00b0 on el foc mana'},
-  previa_p1:{es:'Kema representa una cocina directa, centrada en el fuego y en la calidad del producto, con una puesta en escena moderna y una propuesta l\u00edquida diferencial.',ca:'Kema representa una cuina directa, centrada en el foc i en la qualitat del producte, amb una posada en escena moderna i una proposta l\u00edquida diferencial.'},
-  previa_p2:{es:'Esperamos encontrar una cocina que respete el producto y potencie el sabor a trav\u00e9s de la brasa, con carnes, pescados y propuestas equilibradas.',ca:'Esperem trobar una cuina que respecti el producte i potenci\u00ef el sabor a trav\u00e9s de la brasa, amb carns, peixos i propostes equilibrades.'},
-  previa_val1:{es:'Cambrils',ca:'Cambrils'},
-  previa_val2:{es:'5 de marzo 2026',ca:'5 de mar\u00e7 2026'},
-  previa_val3:{es:'Brasas & Cocteler\u00eda',ca:'Brases & Cocteleria'},
-  previa_val4:{es:'Aucal\u00e0 & Picasoques',ca:'Aucal\u00e0 & Picasoques'},
-  previa_menu_title:{es:'Qu\u00e9 encontraremos en la mesa',ca:'Qu\u00e8 trobarem a la taula'},
-  previa_equip_label:{es:'El equipo',ca:"L'equip"},
-  previa_equip_title:{es:'Las personas detr\u00e1s de Kema',ca:'Les persones darrere de Kema'},
-  previa_eq1_desc:{es:'Sagas con experiencia sobrada en restauraci\u00f3n.',ca:'Sagas amb experi\u00e8ncia sobrada en restauraci\u00f3.'},
-  previa_eq2_desc:{es:'Trayectoria internacional, formado en Praga. Experiencia en Madrid, Barcelona y Tarragona.',ca:'Traject\u00f2ria internacional, format a Praga. Experi\u00e8ncia a Madrid, Barcelona i Tarragona.'},
-  previa_eq3_desc:{es:'Amplia trayectoria en sala y cocina. Responsable del Grita Fuego Group.',ca:'Àmplia traject\u00f2ria en sala i cuina. Responsable del Grita Fuego Group.'},
-  previa_fitxa_title:{es:'Ficha del restaurante',ca:'Fitxa del restaurant'},
-  previa_fitxa_data:{es:'Visita: 5 de marzo 2026',ca:'Visita: 5 de mar\u00e7 2026'},
-  previa_cta_desc:{es:'Durante la cena compartiremos algunos momentos en stories. La cr\u00f3nica completa llegar\u00e1 d\u00edas despu\u00e9s.',ca:'Durant el sopar compartirem alguns moments a les stories. La cr\u00f2nica completa arribar\u00e0 dies despr\u00e9s.'},
-  previa_cta_btn:{es:'Leer la cr\u00f3nica completa \u2192',ca:'Llegir la cr\u00f2nica completa \u2192'},
-  previa_foto_peu:{es:'La brasa como eje gastron\u00f3mico \u2014 producto directo, fuego y sabor',ca:'La brasa com a eix gastron\u00f2mic \u2014 producte directe, foc i sabor'}
-};
-var currentLang=localStorage.getItem('gdt-lang')||'es';
-function applyTranslations(lang){
-  document.querySelectorAll('[data-i18n]').forEach(function(el){
-    var k=el.getAttribute('data-i18n');
-    if(T[k]&&T[k][lang]!==undefined)el.innerHTML=T[k][lang];
-  });
-  var r=document.getElementById('html-root');
-  if(r)r.setAttribute('lang',lang);
-  document.querySelectorAll('.lang-btn').forEach(function(b){
-    b.classList.toggle('active',b.getAttribute('data-lang')===lang);
-  });
-}
-function setLang(lang){currentLang=lang;localStorage.setItem('gdt-lang',lang);applyTranslations(lang);}
-applyTranslations(currentLang);
-</script>
+<script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>

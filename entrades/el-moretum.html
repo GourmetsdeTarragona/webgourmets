@@ -18,8 +18,8 @@
 <style>
 /* ── HERO ── */
 .entrada-hero{position:relative;min-height:70vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
-.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.38;}
-.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.97) 0%,rgba(11,22,38,.55) 55%,rgba(11,22,38,.1) 100%);}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.65;filter:brightness(1.08) contrast(1.05);}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.92) 0%,rgba(11,22,38,.38) 50%,rgba(11,22,38,.05) 100%);}
 .entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
 .entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
 .entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
@@ -27,11 +27,11 @@
 .entrada-meta-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
 .entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;}
 .entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;}
-.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;}
 .entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
 .entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
 .entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
-.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.85;max-width:540px;}
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.82);font-weight:300;line-height:1.85;max-width:540px;}
 
 /* ── COS ── */
 .entrada-cos{max-width:820px;margin:0 auto;padding:72px 4%;}
@@ -118,10 +118,13 @@
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
-    <div class="mobile-item"><a href="../pages/restaurants.html" data-i18n="nav_rest_short"></a></div>
-    <div class="mobile-item"><a href="../pages/blog.html" data-i18n="nav_blog"></a></div>
-    <div class="mobile-item"><a href="../pages/contacte.html" data-i18n="nav_contacto"></a></div>
+    <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
+    <div class="mobile-item"><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
+    <div class="mobile-item"><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
+    <div class="mobile-item"><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></div>
+    <div class="mobile-item"><a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></div>
+    <div class="mobile-item"><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+    <div class="mobile-item"><a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
     <div class="mobile-lang">
       <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
       <span class="lang-sep">|</span>
@@ -160,7 +163,6 @@
 <!-- COS -->
 <main class="entrada-cos">
 
-  <!-- INTRO -->
   <section>
     <span class="e-label t" data-es="Una salsa de dos mil años" data-ca="Una salsa de dos mil anys">Una salsa de dos mil años</span>
     <h2 class="e-title t" data-es="El ingrediente más antiguo de nuestra mesa" data-ca="L'ingredient més antic de la nostra taula">El ingrediente más antiguo de nuestra mesa</h2>
@@ -177,7 +179,6 @@
     </p>
   </section>
 
-  <!-- FOTO 1 -->
   <div class="e-foto-gran">
     <img src="../assets/img/moretum/mortero-portada.webp"
          alt="Morter de pedra per preparar el moretum — eina romana"
@@ -189,7 +190,6 @@
     </div>
   </div>
 
-  <!-- ORIGEN -->
   <section>
     <span class="e-label t" data-es="De Grecia a Roma" data-ca="De Grècia a Roma">De Grecia a Roma</span>
     <h2 class="e-title t" data-es="El nombre viene del mortero" data-ca="El nom ve del morter">El nombre viene del mortero</h2>
@@ -206,7 +206,6 @@
     </p>
   </section>
 
-  <!-- CITA VIRGILI -->
   <div class="e-cita">
     <p class="t"
       data-es="«Machaca en el mortero el ajo con sal gruesa, añade las hierbas, el queso viejo, trabájalo en círculos mientras viertes el aceite, acidifica con vinagre. Que quede denso.»"
@@ -216,7 +215,6 @@
     <span class="t" data-es="Appendix Vergiliana, siglo I a.C." data-ca="Appendix Vergiliana, segle I a.C.">Appendix Vergiliana, siglo I a.C.</span>
   </div>
 
-  <!-- CUINA DE PAGÈS -->
   <section>
     <span class="e-label t" data-es="Cuina popular" data-ca="Cuina popular">Cuina popular</span>
     <h2 class="e-title t" data-es="No era comida de patricios" data-ca="No era menjar de patricis">No era comida de patricios</h2>
@@ -226,7 +224,7 @@
         <p class="e-p t"
           data-es="El <em>moretum</em> era <strong>la comida de pastores y campesinos</strong>, probablemente como <strong>receta de aprovechamiento</strong>: trozos de queso viejo que se habían ido poniendo duros, ajo que sobraba, las hierbas que crecían alrededor. Con ingredientes de sabor fuerte como el ajo y el queso añejo, no era un plato propio de las refinadas mesas de los patricios. <strong>Apicio</strong>, el gran libro de cocina refinada de la Roma Imperial, lo recoge, pero casi de pasada."
           data-ca="El <em>moretum</em> era <strong>el menjar de pastors i pagesos</strong>, probablement com a <strong>recepta d'aprofitament</strong>: trossos de formatge vell que s'havien anat posant durs, all que sobrava, les herbes que creixien al voltant. Amb ingredients de sabor fort com l'all i el formatge vell, no era un plat propi de les taules refinades dels patricis. <strong>Apici</strong>, el gran llibre de cuina refinada de la Roma Imperial, el recull, però gairebé de passada.">
-          El <em>moretum</em> era <strong>la comida de pastores y campesinos</strong>, probablemente como <strong>receta de aprovechamiento</strong>: trozos de queso viejo que se habían ido poniendo duros, ajo que sobraba, las hierbas que crecían alrededor. Con ingredientes de sabor fuerte como el ajo y el queso añejo, no era un plato propio de las refinadas mesas de los patricios. <strong>Apicio</strong>, el gran libro de cocina refinada de la Roma Imperial, lo recoge, pero casi de pasada.
+          El <em>moretum</em> era <strong>la comida de pastores y campesinos</strong>, probablemente como <strong>receta de aprovechamiento</strong>: trozos de queso viejo que se habían ido poniendo duros, ajo que sobraba, las hierbas que crecían alrededor. Con ingredientes de sabor fuerte como el ajo y el queso añejo, no era un plato propio de las refinadas mesas de los patricios.
         </p>
         <p class="e-p t"
           data-es="Y eso lo hace más interesante, no menos. <strong>No es la cocina del poder. Es la cocina real.</strong> La que se repite cada mañana, la que viaja con quien trabaja, la que no necesita ceremonial para justificarse."
@@ -242,7 +240,6 @@
     </div>
   </section>
 
-  <!-- TARRACO -->
   <section>
     <span class="e-label t" data-es="La conexión con Tarraco" data-ca="La connexió amb Tàrraco">La conexión con Tarraco</span>
     <h2 class="e-title t" data-es="Dos mil años en nuestra ciudad" data-ca="Dos mil anys a la nostra ciutat">Dos mil años en nuestra ciudad</h2>
@@ -250,7 +247,7 @@
     <p class="e-p t"
       data-es="Aquí la salsa deja de ser una curiosidad abstracta. El <em>moretum</em> estaba presente en los banquetes gastronómicos que reproducían la cocina de la Tarraco romana, donde se incluía como uno de los aperitivos de un menú que recreaba los sabores de la capital de la Hispania Citerior. Los restaurantes de Tarraco a Taula lo han servido como <strong>moretum virgiliano</strong>: una crema de queso de oveja con especias, fiel a la receta clásica."
       data-ca="Aquí la salsa deixa de ser una curiositat abstracta. El <em>moretum</em> era present als banquets gastronòmics que reproduïen la cuina de la Tàrraco romana, on s'incloïa com un dels aperitius d'un menú que recreava els sabors de la capital de la Hispania Citerior. Els restaurants de Tàrraco a Taula l'han servit com a <strong>moretum virgiliàn</strong>: una crema de formatge d'ovella amb espècies, fidel a la recepta clàssica.">
-      Aquí la salsa deja de ser una curiosidad abstracta. El <em>moretum</em> estaba presente en los banquetes gastronómicos que reproducían la cocina de la Tarraco romana, donde se incluía como uno de los aperitivos de un menú que recreaba los sabores de la capital de la Hispania Citerior. Los restaurantes de Tarraco a Taula lo han servido como <strong>moretum virgiliano</strong>: una crema de queso de oveja con especias, fiel a la receta clásica.
+      Aquí la salsa deja de ser una curiosidad abstracta. El <em>moretum</em> estaba presente en los banquetes gastronómicos que reproducían la cocina de la Tarraco romana, donde se incluía como uno de los aperitivos de un menú que recreaba los sabores de la capital de la Hispania Citerior.
     </p>
     <p class="e-p t"
       data-es="Cuando comemos una salsa de queso con hierbas y ajo en el Camp de Tarragona, estamos repitiendo <strong>un gesto de hace dos mil años</strong>. No es metáfora. Es literalmente el mismo plato, los mismos ingredientes, el mismo instrumento."
@@ -259,7 +256,6 @@
     </p>
   </section>
 
-  <!-- FOTO 2 -->
   <div class="e-foto-gran">
     <img src="../assets/img/moretum/tarraco-amfiteatre.jpeg"
          alt="Recreació virtual de l'amfiteatre de Tarraco — capital de la Hispania Citerior"
@@ -271,7 +267,6 @@
     </div>
   </div>
 
-  <!-- VIDA LLARGA -->
   <section>
     <span class="e-label t" data-es="Una vida de dos mil años" data-ca="Una vida de dos mil anys">Una vida de dos mil años</span>
     <h2 class="e-title t" data-es="Del moretum al almogrote" data-ca="Del moretum a l'almogrote">Del moretum al almogrote</h2>
@@ -279,7 +274,7 @@
     <p class="e-p t"
       data-es="En la Península Ibérica, durante la Edad Media, la salsa siguió viva bajo los nombres de <strong><em>almadroc</em></strong> o <strong><em>almodrote</em></strong>: palabras de <strong>origen mozárabe</strong>, probablemente evolucionadas del latín <em>moretum</em> cruzado con el árabe <em>madrus</em> (masticado, pulverizado). La lengua cambió, el ingrediente principal —<strong>el ajo</strong>— no."
       data-ca="A la Península Ibèrica, durant l'edat mitjana, la salsa va continuar viva sota els noms d'<strong><em>almadroc</em></strong> o <strong><em>almodrote</em></strong>: paraules d'<strong>origen mossàrab</strong>, probablement evolucionades del llatí <em>moretum</em> creuat amb l'àrab <em>madrus</em> (mastegat, polvoritzat). La llengua va canviar, l'ingredient principal —<strong>l'all</strong>— no.">
-      En la Península Ibérica, durante la Edad Media, la salsa siguió viva bajo los nombres de <strong><em>almadroc</em></strong> o <strong><em>almodrote</em></strong>: palabras de <strong>origen mozárabe</strong>, probablemente evolucionadas del latín <em>moretum</em> cruzado con el árabe <em>madrus</em> (masticado, pulverizado). La lengua cambió, el ingrediente principal —<strong>el ajo</strong>— no.
+      En la Península Ibérica, durante la Edad Media, la salsa siguió viva bajo los nombres de <strong><em>almadroc</em></strong> o <strong><em>almodrote</em></strong>: palabras de <strong>origen mozárabe</strong>, probablemente evolucionadas del latín <em>moretum</em> cruzado con el árabe <em>madrus</em>.
     </p>
     <p class="e-p t"
       data-es="Hoy sobrevive especialmente en <strong>Extremadura</strong> y en las <strong>Islas Canarias</strong>, donde el <strong>almogrote</strong> es una pasta de queso curado, ajo, aceite y pimentón que se unta sobre pan. Si lo pruebas y te parece conocido, es porque lo es: <strong>llevas dos mil años comiéndolo</strong>."
@@ -288,7 +283,6 @@
     </p>
   </section>
 
-  <!-- RECEPTA -->
   <div class="e-recepta">
     <h3 class="e-recepta-title t" data-es="Moretum virgiliano" data-ca="Moretum virgiliàn">Moretum virgiliano</h3>
     <span class="e-recepta-sub t" data-es="Receta adaptada · Para 4 personas" data-ca="Recepta adaptada · Per a 4 persones">Receta adaptada · Para 4 persones</span>
@@ -297,99 +291,58 @@
         <h4 class="t" data-es="Ingredientes" data-ca="Ingredients">Ingredientes</h4>
         <div class="e-recepta-item">
           <i class="fa fa-circle e-recepta-item-ico"></i>
-          <span class="e-recepta-item-text t"
-            data-es="<strong>200 g</strong> de queso fresco de oveja (o cabra, ligeramente seco)"
-            data-ca="<strong>200 g</strong> de formatge fresc d'ovella (o cabra, lleugerament sec)">
-            <strong>200 g</strong> de queso fresco de oveja (o cabra, ligeramente seco)
-          </span>
+          <span class="e-recepta-item-text t" data-es="<strong>200 g</strong> de queso fresco de oveja (o cabra, ligeramente seco)" data-ca="<strong>200 g</strong> de formatge fresc d'ovella (o cabra, lleugerament sec)"><strong>200 g</strong> de queso fresco de oveja (o cabra, ligeramente seco)</span>
         </div>
         <div class="e-recepta-item">
           <i class="fa fa-circle e-recepta-item-ico"></i>
-          <span class="e-recepta-item-text t"
-            data-es="<strong>2-3 dientes</strong> de ajo"
-            data-ca="<strong>2-3 grans</strong> d'all">
-            <strong>2-3 dientes</strong> de ajo
-          </span>
+          <span class="e-recepta-item-text t" data-es="<strong>2-3 dientes</strong> de ajo" data-ca="<strong>2-3 grans</strong> d'all"><strong>2-3 dientes</strong> de ajo</span>
         </div>
         <div class="e-recepta-item">
           <i class="fa fa-circle e-recepta-item-ico"></i>
-          <span class="e-recepta-item-text t"
-            data-es="Hierbas frescas: <strong>cilantro, apio, ruda</strong> (o menta, tomillo)"
-            data-ca="Herbes fresques: <strong>coriandre, api, ruda</strong> (o menta, farigola)">
-            Hierbas frescas: <strong>cilantro, apio, ruda</strong> (o menta, tomillo)
-          </span>
+          <span class="e-recepta-item-text t" data-es="Hierbas frescas: <strong>cilantro, apio, ruda</strong> (o menta, tomillo)" data-ca="Herbes fresques: <strong>coriandre, api, ruda</strong> (o menta, farigola)">Hierbas frescas: <strong>cilantro, apio, ruda</strong> (o menta, tomillo)</span>
         </div>
         <div class="e-recepta-item">
           <i class="fa fa-circle e-recepta-item-ico"></i>
-          <span class="e-recepta-item-text t"
-            data-es="<strong>Sal gruesa</strong>, aceite de oliva virgen extra"
-            data-ca="<strong>Sal grossa</strong>, oli d'oliva verge extra">
-            <strong>Sal gruesa</strong>, aceite de oliva virgen extra
-          </span>
+          <span class="e-recepta-item-text t" data-es="<strong>Sal gruesa</strong>, aceite de oliva virgen extra" data-ca="<strong>Sal grossa</strong>, oli d'oliva verge extra"><strong>Sal gruesa</strong>, aceite de oliva virgen extra</span>
         </div>
         <div class="e-recepta-item">
           <i class="fa fa-circle e-recepta-item-ico"></i>
-          <span class="e-recepta-item-text t"
-            data-es="Un chorrito de <strong>vinagre</strong>"
-            data-ca="Un raig de <strong>vinagre</strong>">
-            Un chorrito de <strong>vinagre</strong>
-          </span>
+          <span class="e-recepta-item-text t" data-es="Un chorrito de <strong>vinagre</strong>" data-ca="Un raig de <strong>vinagre</strong>">Un chorrito de <strong>vinagre</strong></span>
         </div>
       </div>
       <div class="e-recepta-bloc">
         <h4 class="t" data-es="Preparación" data-ca="Preparació">Preparación</h4>
         <div class="e-recepta-item">
           <i class="fa fa-circle e-recepta-item-ico" style="color:var(--gold);opacity:1;font-size:.5rem;margin-top:6px;"></i>
-          <span class="e-recepta-item-text t"
-            data-es="Maja el ajo con sal gruesa en el mortero hasta obtener una pasta."
-            data-ca="Maça l'all amb sal grossa al morter fins obtenir una pasta.">
-            Maja el ajo con sal gruesa en el mortero hasta obtener una pasta.
-          </span>
+          <span class="e-recepta-item-text t" data-es="Maja el ajo con sal gruesa en el mortero hasta obtener una pasta." data-ca="Maça l'all amb sal grossa al morter fins obtenir una pasta.">Maja el ajo con sal gruesa en el mortero hasta obtener una pasta.</span>
         </div>
         <div class="e-recepta-item">
           <i class="fa fa-circle e-recepta-item-ico" style="color:var(--gold);opacity:1;font-size:.5rem;margin-top:6px;"></i>
-          <span class="e-recepta-item-text t"
-            data-es="Añade las hierbas picadas y sigue machacando."
-            data-ca="Afegeix les herbes picades i continua maçant.">
-            Añade las hierbas picadas y sigue machacando.
-          </span>
+          <span class="e-recepta-item-text t" data-es="Añade las hierbas picadas y sigue machacando." data-ca="Afegeix les herbes picades i continua maçant.">Añade las hierbas picadas y sigue machacando.</span>
         </div>
         <div class="e-recepta-item">
           <i class="fa fa-circle e-recepta-item-ico" style="color:var(--gold);opacity:1;font-size:.5rem;margin-top:6px;"></i>
-          <span class="e-recepta-item-text t"
-            data-es="Incorpora el queso desmenuzado. Trabájalo en movimientos circulares."
-            data-ca="Incorpora el formatge esmicolat. Treballa'l en moviments circulars.">
-            Incorpora el queso desmenuzado. Trabájalo en movimientos circulares.
-          </span>
+          <span class="e-recepta-item-text t" data-es="Incorpora el queso desmenuzado. Trabájalo en movimientos circulares." data-ca="Incorpora el formatge esmicolat. Treballa'l en moviments circulars.">Incorpora el queso desmenuzado. Trabájalo en movimientos circulares.</span>
         </div>
         <div class="e-recepta-item">
           <i class="fa fa-circle e-recepta-item-ico" style="color:var(--gold);opacity:1;font-size:.5rem;margin-top:6px;"></i>
-          <span class="e-recepta-item-text t"
-            data-es="Ve añadiendo el aceite poco a poco, como una mayonesa, hasta ligar."
-            data-ca="Afegeix l'oli poc a poc, com una maionesa, fins lligar.">
-            Ve añadiendo el aceite poco a poco, como una mayonesa, hasta ligar.
-          </span>
+          <span class="e-recepta-item-text t" data-es="Ve añadiendo el aceite poco a poco, como una mayonesa, hasta ligar." data-ca="Afegeix l'oli poc a poc, com una maionesa, fins lligar.">Ve añadiendo el aceite poco a poco, como una mayonesa, hasta ligar.</span>
         </div>
         <div class="e-recepta-item">
           <i class="fa fa-circle e-recepta-item-ico" style="color:var(--gold);opacity:1;font-size:.5rem;margin-top:6px;"></i>
-          <span class="e-recepta-item-text t"
-            data-es="Acidifica con vinagre. Debe quedar denso. Sirve sobre pan tostado."
-            data-ca="Acidifica amb vinagre. Ha de quedar dens. Serveix sobre pa torrat.">
-            Acidifica con vinagre. Debe quedar denso. Sirve sobre pan tostado.
-          </span>
+          <span class="e-recepta-item-text t" data-es="Acidifica con vinagre. Debe quedar denso. Sirve sobre pan tostado." data-ca="Acidifica amb vinagre. Ha de quedar dens. Serveix sobre pa torrat.">Acidifica con vinagre. Debe quedar denso. Sirve sobre pan tostado.</span>
         </div>
       </div>
       <p class="e-recepta-nota t"
         data-es="La ruda es amarga y puede ser difícil de encontrar. Se puede sustituir por rúcula, menta o tomillo. Si el queso es muy fresco y húmedo, escúrrelo antes. El resultado debe tener la consistencia de un <strong>paté ligero</strong>. En Tarraco se añadía a veces <strong>garum</strong> —la salsa de pescado fermentado romana— en lugar de sal."
         data-ca="La ruda és amarga i pot ser difícil de trobar. Es pot substituir per ruca, menta o farigola. Si el formatge és molt fresc i humit, escorre'l abans. El resultat ha de tenir la consistència d'un <strong>paté lleuger</strong>. A Tàrraco s'hi afegia de vegades <strong>garum</strong> —la salsa de peix fermentat romana— en lloc de sal.">
-        La ruda es amarga y puede ser difícil de encontrar. Se puede sustituir por rúcula, menta o tomillo. Si el queso es muy fresco y húmedo, escúrrelo antes. El resultado debe tener la consistencia de un <strong>paté ligero</strong>. En Tarraco se añadía a veces <strong>garum</strong> —la salsa de pescado fermentado romana— en lugar de sal.
+        La ruda es amarga y puede ser difícil de encontrar. Se puede sustituir por rúcula, menta o tomillo. Si el queso es muy fresco y húmedo, escúrrelo antes. El resultado debe tener la consistencia de un <strong>paté ligero</strong>.
       </p>
     </div>
   </div>
 
-  <!-- TANCAMENT -->
   <section>
-    <p class="e-p" style="font-style:italic;color:var(--gold);margin-top:8px;" 
+    <p class="e-p" style="font-style:italic;color:var(--gold);margin-top:8px;"
       class="t"
       data-es="Una receta que Virgilio puso en verso, que los legionarios llevaron hasta los confines del Imperio, y que en Tarraco —nuestra Tarraco— ya se preparaba mucho antes de que nadie pensara en inventar el pesto."
       data-ca="Una recepta que Virgili va posar en vers, que els legionaris van dur fins als confins de l'Imperi, i que a Tàrraco —la nostra Tàrraco— ja es preparava molt abans que ningú pensés a inventar el pesto.">
@@ -397,16 +350,15 @@
     </p>
   </section>
 
-  <!-- RELACIONAT — garum -->
   <div class="e-relacionat">
     <div class="e-relacionat-ico">🐟</div>
     <div class="e-relacionat-text">
       <span class="e-label t" data-es="También te puede interesar" data-ca="També et pot interessar">También te puede interesar</span>
       <h3 class="e-relacionat-title t" data-es="El garum: la salsa que conquistó Roma y se fabricaba en Tarraco" data-ca="El garum: la salsa que va conquerir Roma i es fabricava a Tàrraco">El garum: la salsa que conquistó Roma y se fabricaba en Tarraco</h3>
       <p class="e-relacionat-desc t"
-        data-es="El condimento universal de la antigua Roma. Pescado fermentado, umami puro y una industria exportadora que operaba a orillas de nuestro mar. El compañero natural del moretum en la mesa romana."
-        data-ca="El condiment universal de l'antiga Roma. Peix fermentat, umami pur i una indústria exportadora que operava a la vora del nostre mar. El company natural del moretum a la taula romana.">
-        El condimento universal de la antigua Roma. Pescado fermentado, umami puro y una industria exportadora que operaba a orillas de nuestro mar. El compañero natural del moretum en la mesa romana.
+        data-es="El condimento universal de la antigua Roma. Pescado fermentado, umami puro y una industria exportadora que operaba a orillas de nuestro mar."
+        data-ca="El condiment universal de l'antiga Roma. Peix fermentat, umami pur i una indústria exportadora que operava a la vora del nostre mar.">
+        El condimento universal de la antigua Roma. Pescado fermentado, umami puro y una industria exportadora que operaba a orillas de nuestro mar.
       </p>
       <a href="el-garum.html" class="e-relacionat-link t" data-es="Leer el artículo →" data-ca="Llegir l'article →">Leer el artículo →</a>
     </div>
@@ -418,12 +370,10 @@
 
 </main>
 
-<!-- NAV RETORN -->
 <div class="e-nav-retorn">
   <a href="../pages/blog.html" class="btn-outline t" data-es="← Volver al Blog" data-ca="← Tornar al Blog">← Volver al Blog</a>
 </div>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
@@ -442,9 +392,7 @@
 </footer>
 
 <script>
-/* Motor d'idioma inline — gestiona class="t" data-es/data-ca */
 var currentLang = localStorage.getItem('gdt-lang') || 'es';
-
 function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('gdt-lang', lang);
@@ -457,7 +405,6 @@ function setLang(lang) {
   });
   document.getElementById('html-root').setAttribute('lang', lang);
 }
-
 document.addEventListener('DOMContentLoaded', function() {
   if (currentLang === 'ca') setLang('ca');
 });

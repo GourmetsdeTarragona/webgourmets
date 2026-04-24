@@ -13,8 +13,8 @@
 <link rel="stylesheet" href="../assets/css/seccions.css">
 <style>
 .entrada-hero{position:relative;min-height:65vh;display:flex;align-items:flex-end;overflow:hidden;background:#1a0a05;}
-.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.5;}
-.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,10,5,.98) 0%,rgba(26,10,5,.5) 55%,rgba(26,10,5,.1) 100%);}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.65;filter:brightness(1.08) contrast(1.05);}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.92) 0%,rgba(11,22,38,.38) 50%,rgba(11,22,38,.05) 100%);}
 .entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
 .entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
 .entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
@@ -22,11 +22,11 @@
 .entrada-meta-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
 .entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:#8b5e3c;color:#fff;padding:6px 14px;}
 .entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;}
-.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;}
 .entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
 .entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
 .entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
-.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.85;max-width:560px;}
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.82);font-weight:300;line-height:1.85;max-width:560px;}
 
 .entrada-cos{max-width:820px;margin:0 auto;padding:72px 4%;}
 .e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
@@ -111,20 +111,12 @@ const t = {
     r_l4:'Los ingredientes',
     r_t4:'La base de la receta tradicional',
     r_p8:'No existe una única receta de romesco. Como ocurre con todos los platos populares, hay tantas versiones como cocineros. Sin embargo, todos comparten un alma común: la nyora, el ajo, el aceite de oliva y la picada de frutos secos.',
-    r_ing1:'Nyoras (pimiento seco)',
-    r_ing2:'Ajo',
-    r_ing3:'Tomate maduro asado',
-    r_ing4:'Almendras tostadas',
-    r_ing5:'Avellanas tostadas',
-    r_ing6:'Pan frito o carquiñoles',
-    r_ing7:'Aceite de oliva virgen extra',
-    r_ing8:'Vinagre',
-    r_ing9:'Sal',
-    r_ing10:'Guindilla (opcional)',
+    r_ing1:'Nyoras (pimiento seco)',r_ing2:'Ajo',r_ing3:'Tomate maduro asado',
+    r_ing4:'Almendras tostadas',r_ing5:'Avellanas tostadas',r_ing6:'Pan frito o carquiñoles',
+    r_ing7:'Aceite de oliva virgen extra',r_ing8:'Vinagre',r_ing9:'Sal',r_ing10:'Guindilla (opcional)',
     r_l5:'La receta',
     r_t5:'Romesco tradicional de Tarragona',
-    r_recepta_ing:'Ingredientes',
-    r_recepta_prep:'Preparación',
+    r_recepta_ing:'Ingredientes',r_recepta_prep:'Preparación',
     r_ing_list:'<li>1 cabeza de ajos</li><li>2-3 nyoras (pimiento romesco)</li><li>3 rebanadas de pan seco</li><li>2 tomates maduros</li><li>100g almendras y avellanas tostadas</li><li>Aceite de oliva virgen extra</li><li>Vinagre de vino</li><li>Sal (y una pizca de azúcar)</li><li>Guindilla al gusto</li>',
     r_prep_list:'<li>Asar la cabeza de ajos entera al horno. Reservar un diente en crudo.</li><li>Asar los tomates, pelar y retirar las semillas.</li><li>Freír el pan en aceite hasta dorar. Escurrir sobre papel de cocina.</li><li>Poner las nyoras en remojo en agua caliente 15 min. Extraer la pulpa raspando con una cuchara.</li><li>En el mortero, machacar los ajos asados con el diente crudo y la sal hasta obtener una pasta.</li><li>Añadir los frutos secos y trabajar hasta integrar.</li><li>Incorporar la pulpa de nyora, el tomate y el pan frito. Seguir machacando.</li><li>Añadir el aceite en hilo fino, removiendo sin parar — como una mayonesa.</li><li>Terminar con un chorrito de vinagre. Rectificar de sal.</li>',
     r_recepta_nota:'El secreto: la paciencia con el mortero. La batidora es válida, pero la textura rústica del mortero es inigualable.',
@@ -153,38 +145,25 @@ const t = {
     r_p1:"El romesco és, sens dubte, la salsa més emblemàtica de Tarragona. El seu origen se situa a les barques de pesca del barri del <strong>Serrallo</strong>, el barri mariner de Tarragona, on els pescadors preparaven amb el que tenien a mà una picada intensa per acompanyar el peix del dia: pa sec, all, nyores —el pebrot sec característic de la zona—, oli d'oliva, vinagre i vi.",
     r_p2:"Encara que se li han atribuït orígens romans o medievals, el romesco és en realitat una salsa <strong>moderna</strong>: el pebrot, un dels seus ingredients fonamentals, no va arribar a Europa fins després del descobriment d'Amèrica. La primera referència escrita a una salsa elaborada amb pebrot apareix al receptari <em>La cuynera catalana</em> (1835), i la cita directa del romesco data del <strong>1885</strong>.",
     r_p3:"El nom probablement prové del terme mossàrab <strong>remescolar</strong>, que significa barrejar o remenar — una descripció perfecta del gest fonamental de la seva preparació: treballar la picada al morter fins obtenir una pasta densa, aromàtica i irresistible.",
-    r_l2:'Plat i salsa',
-    r_t2:'Una mateixa paraula, dos conceptes',
+    r_l2:'Plat i salsa',r_t2:'Una mateixa paraula, dos conceptes',
     r_p4:"El romesco és, originàriament, <strong>un guisat</strong>: una caldereta de peix pròpia de Tarragona, preparada pels pescadors del Serrallo als seus fogonet de carbó d'alzina. Amb el temps, la salsa que acompanyava aquest guisat va anar adquirint vida pròpia, fins a convertir-se en el que avui coneixem com a <em>salsa romesco</em>.",
     r_p5:"A mitjan segle XX, la salsa freda d'amanida derivada de la caldereta es va popularitzar a la restauració de Tarragona i va anar absorbint el significat de la paraula. Avui conviuen els dos: el romesco com a plat — sempre amb cognom: \"romesco de rap\", \"romesco de pop\", \"romesco de conill\" — i la salsa romesco com a acompanyament universal.",
     r_cita:"No crec que existeixin moltes ciutats al món com Tarragona, que, a més d'un incomparable passar, una història estupenda i una situació d'estranya bellesa, tinguin una salsa pròpia, particular i única.",
     r_cita_autor:'Josep Pla, escriptor',
-    r_l3:'La consagració',
-    r_t3:'El Concurs de Mestres Romescaires',
+    r_l3:'La consagració',r_t3:'El Concurs de Mestres Romescaires',
     r_p6:"L'any <strong>1951</strong> va ser decisiu per al romesco. El 3 de juny, al barri del Serrallo, es va celebrar el <strong>I Concurs de Mestres Romescaires</strong>, organitzat pel Sindicat d'Iniciativa i Turisme de Tarragona. Els participants preparaven el seu romesco en fogonets tradicionals de carbó d'alzina, com els que equipaven les antigues barques de pesca.",
     r_p7:"La guanyadora d'aquella primera edició va ser <strong>Carme Brull</strong>, la recepta de la qual incloïa cinquanta grams d'ametlles — un detall que quedaria per a la història. Des de llavors, el concurs se celebra periòdicament, i el títol de <em>Mestre Major Romescaire</em> és un dels reconeixements gastronòmics més preuats del territori.",
-    r_l4:'Els ingredients',
-    r_t4:'La base de la recepta tradicional',
+    r_l4:'Els ingredients',r_t4:'La base de la recepta tradicional',
     r_p8:"No existeix una única recepta de romesco. Com passa amb tots els plats populars, hi ha tantes versions com cuiners. Tanmateix, tots comparteixen una ànima comuna: la nyora, l'all, l'oli d'oliva i la picada de fruits secs.",
-    r_ing1:'Nyores (pebrot sec)',
-    r_ing2:'All',
-    r_ing3:'Tomàquet madur torrat',
-    r_ing4:'Ametlles torrades',
-    r_ing5:'Avellanes torrades',
-    r_ing6:'Pa fregit o carquinyolis',
-    r_ing7:"Oli d'oliva verge extra",
-    r_ing8:'Vinagre',
-    r_ing9:'Sal',
-    r_ing10:'Bitxo (opcional)',
-    r_l5:'La recepta',
-    r_t5:'Romesco tradicional de Tarragona',
-    r_recepta_ing:'Ingredients',
-    r_recepta_prep:'Preparació',
+    r_ing1:'Nyores (pebrot sec)',r_ing2:'All',r_ing3:'Tomàquet madur torrat',
+    r_ing4:'Ametlles torrades',r_ing5:'Avellanes torrades',r_ing6:"Pa fregit o carquinyolis",
+    r_ing7:"Oli d'oliva verge extra",r_ing8:'Vinagre',r_ing9:'Sal',r_ing10:'Bitxo (opcional)',
+    r_l5:'La recepta',r_t5:'Romesco tradicional de Tarragona',
+    r_recepta_ing:'Ingredients',r_recepta_prep:'Preparació',
     r_ing_list:'<li>1 cap d\'alls</li><li>2-3 nyores (pebrot romesco)</li><li>3 llesques de pa sec</li><li>2 tomàquets madurs</li><li>100g ametlles i avellanes torrades</li><li>Oli d\'oliva verge extra</li><li>Vinagre de vi</li><li>Sal (i un pessic de sucre)</li><li>Bitxo al gust</li>',
     r_prep_list:"<li>Torrar el cap d'alls sencer al forn. Reservar un gra en cru.</li><li>Torrar els tomàquets, pelar i treure les llavors.</li><li>Fregir el pa en oli fins daurar. Escórrer sobre paper de cuina.</li><li>Posar les nyores en remull en aigua calenta 15 min. Extreure la polpa raspant amb una cullera.</li><li>Al morter, picar els alls torrats amb el gra cru i la sal fins obtenir una pasta.</li><li>Afegir els fruits secs i treballar fins integrar.</li><li>Incorporar la polpa de nyora, el tomàquet i el pa fregit. Continuar picant.</li><li>Afegir l'oli en un raig fi, remenant sense parar — com una maionesa.</li><li>Acabar amb un rajolí de vinagre. Rectificar de sal.</li>",
     r_recepta_nota:"El secret: la paciència amb el morter. La batedora és vàlida, però la textura rústica del morter és inigualable.",
-    r_l6:'Les Jornades',
-    r_t6:'Romescvs + Macabevs · DO Tarragona',
+    r_l6:'Les Jornades',r_t6:'Romescvs + Macabevs · DO Tarragona',
     r_p9:"Cada tardor, Tarragona celebra les <strong>Jornades Gastronòmiques Romescvs + Macabevs</strong>, organitzades per l'Associació d'Empresaris d'Hostaleria de Tarragona i la DO Tarragona. Durant diverses setmanes, els restaurants de la ciutat ofereixen menús amb el romesco com a protagonista, maridats amb vins Macabeu dels cellers de la Denominació d'Origen.",
     r_p10:"El 2025 van arribar a la seva <strong>10a edició</strong>, celebrades del 31 d'octubre al 16 de novembre, acompanyades pel I Congrés Tècnicocultural del Romesco de Tarragona. Una prova que el romesco ja no és només una salsa: és cultura, identitat i motor gastronòmic del territori.",
     r_jornades_title:'Jornades Gastronòmiques Romescvs + Macabevs',
@@ -230,7 +209,7 @@ function setLang(lang) {
       <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
   </div>
-      <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
     <div class="mobile-item"><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
     <div class="mobile-item"><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
@@ -268,7 +247,6 @@ function setLang(lang) {
 <!-- COS -->
 <main class="entrada-cos">
 
-  <!-- ORIGEN -->
   <span class="e-label" data-i18n="r_l1"></span>
   <h2 class="e-title" data-i18n="r_t1"></h2>
   <div class="e-divider"></div>
@@ -276,13 +254,11 @@ function setLang(lang) {
   <p class="e-p" data-i18n="r_p2"></p>
   <p class="e-p" data-i18n="r_p3"></p>
 
-  <!-- FOTO SERRALLO -->
   <div style="margin:40px 0;position:relative;">
     <img src="../assets/img/romesco/serrallo-vintage.jpg" alt="Barques del Serrallo de Tarragona" style="width:100%;height:300px;object-fit:cover;object-position:center;filter:grayscale(30%);">
     <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 20px;background:linear-gradient(to top,rgba(0,0,0,.6),transparent);font-size:.72rem;color:rgba(255,255,255,.7);font-style:italic;">El Serrallo, barri pescador de Tarragona — bressol del romesco</div>
   </div>
 
-  <!-- CITA JOSEP PLA -->
   <blockquote class="e-cita">
     <span data-i18n="r_cita"></span>
     <span class="e-cita-autor" data-i18n="r_cita_autor"></span>
@@ -290,7 +266,6 @@ function setLang(lang) {
 
   <div class="e-sep">· · ·</div>
 
-  <!-- PLAT I SALSA -->
   <span class="e-label" data-i18n="r_l2"></span>
   <h2 class="e-title" data-i18n="r_t2"></h2>
   <div class="e-divider"></div>
@@ -299,7 +274,6 @@ function setLang(lang) {
 
   <div class="e-sep">· · ·</div>
 
-  <!-- CONCURS -->
   <span class="e-label" data-i18n="r_l3"></span>
   <h2 class="e-title" data-i18n="r_t3"></h2>
   <div class="e-divider"></div>
@@ -313,7 +287,6 @@ function setLang(lang) {
 
   <div class="e-sep">· · ·</div>
 
-  <!-- INGREDIENTS -->
   <span class="e-label" data-i18n="r_l4"></span>
   <h2 class="e-title" data-i18n="r_t4"></h2>
   <div class="e-divider"></div>
@@ -338,7 +311,6 @@ function setLang(lang) {
 
   <div class="e-sep">· · ·</div>
 
-  <!-- RECEPTA -->
   <span class="e-label" data-i18n="r_l5"></span>
   <h2 class="e-title" data-i18n="r_t5"></h2>
   <div class="e-divider"></div>
@@ -361,7 +333,6 @@ function setLang(lang) {
 
   <div class="e-sep">· · ·</div>
 
-  <!-- JORNADES -->
   <span class="e-label" data-i18n="r_l6"></span>
   <h2 class="e-title" data-i18n="r_t6"></h2>
   <div class="e-divider"></div>
@@ -378,12 +349,10 @@ function setLang(lang) {
 
 </main>
 
-<!-- NAV RETORN -->
 <div class="e-nav-retorn">
   <a href="../pages/blog.html" class="btn-outline" data-i18n="back_blog"></a>
 </div>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">

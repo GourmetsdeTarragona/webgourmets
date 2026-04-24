@@ -13,8 +13,8 @@
 <link rel="stylesheet" href="../assets/css/seccions.css">
 <style>
 .entrada-hero{position:relative;min-height:60vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
-.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.35;}
-.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.97) 0%,rgba(11,22,38,.5) 55%,rgba(11,22,38,.1) 100%);}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.65;filter:brightness(1.08) contrast(1.05);}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.92) 0%,rgba(11,22,38,.38) 50%,rgba(11,22,38,.05) 100%);}
 .entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
 .entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
 .entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
@@ -23,11 +23,11 @@
 .entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--navy);color:#fff;padding:6px 14px;}
 .entrada-badge-noticia{background:#2a5298;}
 .entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;}
-.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;}
 .entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
 .entrada-titol{font-family:var(--font-serif);font-size:clamp(2.2rem,5vw,3.8rem);color:#fff;line-height:1.08;font-weight:700;margin-bottom:14px;}
 .entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
-.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.85;max-width:560px;}
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.82);font-weight:300;line-height:1.85;max-width:560px;}
 
 .entrada-cos{max-width:820px;margin:0 auto;padding:72px 4%;}
 .e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
@@ -84,21 +84,17 @@ const t = {
     g_badge:'Editorial',
     g_hero_prefix:'¿Quién es...',
     g_subtitol:'El máximo reconocimiento de los Gourmets de Tarragona a la excelencia culinaria del Camp de Tarragona. Un trofeo, un proceso, una historia.',
-    g_l1:'El nombre',
-    g_t1:'Gastronia: entre el mito y la mesa',
+    g_l1:'El nombre',g_t1:'Gastronia: entre el mito y la mesa',
     g_p1:'En algún rincón de la mitología mediterránea, entre los banquetes del Olimpo y los festines de los héroes, debería existir una figura como <strong>Gastronia</strong>. Una presencia femenina que presidiera la mesa, que velara por el producto, la técnica y el placer de comer bien. Si los antiguos griegos y romanos tenían deidades para el vino, la cosecha y el fuego del hogar, no sería descabellado imaginar que también tuvieran una para el arte de la buena mesa.',
     g_p2:'El nombre <strong>Gastronia</strong> evoca esa figura. Nace de las raíces del Mediterráneo clásico, con una sonoridad que recuerda a las grandes diosas de la Antigüedad. Si existe o no en algún texto olvidado de la mitología antigua, es una cuestión que preferimos dejar abierta — y que invitamos a investigar.',
-    g_l2:'El trofeo',
-    g_t2:'Una pieza diseñada por Joan Blázquez',
+    g_l2:'El trofeo',g_t2:'Una pieza diseñada por Joan Blázquez',
     g_p3:'El trofeo es obra de <strong>Joan Blázquez</strong>, joyero y escultor tarraconense, <strong>Mestre Artesà de la Generalitat de Catalunya</strong> desde 2016 y miembro de la propia asociación. Con décadas de trayectoria a sus espaldas, Blázquez es uno de los artesanos más reconocidos del Camp de Tarragona: ha expuesto en galerías internacionales, ha sido galardonado en Bruselas y ha creado piezas para instituciones de toda la región. Su implicación con los Gourmets de Tarragona va mucho más allá del encargo puntual — es parte del proyecto.',
     g_p4:'Cada pieza es única y artesanal. La base de cristal lleva grabada la inscripción con el nombre del restaurante galardonado y el año de concesión, convirtiéndola en un documento permanente de la historia gastronómica del Camp de Tarragona. Una joya, en todos los sentidos.',
-    g_l3:'El proceso',
-    g_t3:'Ocho criterios, muchos paladares',
+    g_l3:'El proceso',g_t3:'Ocho criterios, muchos paladares',
     g_p5:'La Gastronia no se otorga por intuición ni por votación popular. Cada socio evalúa de forma independiente cada restaurante visitado durante el recorrido anual, puntuando del 1 al 5 ocho criterios específicos:',
     g_criteris_nota:'Cada socio puntúa de forma independiente. La puntuación final es la media acumulada de todas las visitas de la temporada.',
     g_p6:'Al final del recorrido anual, se suman todas las puntuaciones y se calculan las medias. El restaurante con la puntuación más alta recibe el <strong>1er Trofeo Gastronia</strong>. El segundo clasificado recibe el <strong>2º Trofeo</strong>.',
-    g_l4:'Palmarès',
-    g_t4:'Los galardonados',
+    g_l4:'Palmarès',g_t4:'Los galardonados',
     g_wip:'En proceso de recuperación',
     btn_premis:'Ver todos los premios →',
   },
@@ -115,21 +111,17 @@ const t = {
     g_badge:'Editorial',
     g_hero_prefix:"Qui és...",
     g_subtitol:"El màxim reconeixement dels Gourmets de Tarragona a l'excel·lència culinària del Camp de Tarragona. Un trofeu, un procés, una història.",
-    g_l1:'El nom',
-    g_t1:'Gastronia: entre deessa i gastronomia',
+    g_l1:'El nom',g_t1:'Gastronia: entre deessa i gastronomia',
     g_p1:"En algun racó de la mitologia mediterrània, entre els banquets de l'Olimp i els festins dels herois, hauria d'existir una figura com <strong>Gastronia</strong>. Una presència femenina que presidís la taula, que vetllés pel producte, la tècnica i el plaer de menjar bé. Si els antics grecs i romans tenien deïtats per al vi, la collita i el foc de la llar, no seria descabellat imaginar que també en tinguessin una per a l'art de la bona taula.",
     g_p2:"El nom <strong>Gastronia</strong> evoca aquesta figura. Neix de les arrels del Mediterrani clàssic, amb una sonoritat que recorda les grans deesses de l'Antiguitat. Si existeix o no en algun text oblidat de la mitologia antiga, és una qüestió que preferim deixar oberta — i que convidem a investigar.",
-    g_l2:'El trofeu',
-    g_t2:'Una peça dissenyada per Joan Blázquez',
+    g_l2:'El trofeu',g_t2:'Una peça dissenyada per Joan Blázquez',
     g_p3:"El trofeu és obra de <strong>Joan Blázquez</strong>, joier i escultor tarragoní, <strong>Mestre Artesà de la Generalitat de Catalunya</strong> des del 2016 i membre de la pròpia associació. Amb dècades de trajectòria a les espatlles, Blázquez és un dels artesans més reconeguts del Camp de Tarragona: ha exposat en galeries internacionals, ha estat guardonat a Brussel·les i ha creat peces per a institucions de tota la regió. La seva implicació amb els Gourmets de Tarragona va molt més enllà d'un encàrrec puntual — és part del projecte.",
     g_p4:"Cada peça és única i artesanal. La base de cristall porta gravada la inscripció amb el nom del restaurant guardonat i l'any de concessió, convertint-la en un document permanent de la història gastronòmica del Camp de Tarragona. Una joia, en tots els sentits.",
-    g_l3:'El procés',
-    g_t3:'Vuit criteris, molts paladars',
+    g_l3:'El procés',g_t3:'Vuit criteris, molts paladars',
     g_p5:"La Gastronia no s'atorga per intuïció ni per votació popular. Cada soci avalua de forma independent cada restaurant visitat durant el recorregut anual, puntuant de l'1 al 5 vuit criteris específics:",
     g_criteris_nota:"Cada soci puntua de forma independent. La puntuació final és la mitjana acumulada de totes les visites de la temporada.",
     g_p6:"Al final del recorregut anual, se sumen totes les puntuacions i es calculen les mitjanes. El restaurant amb la puntuació més alta rep el <strong>1r Trofeu Gastronia</strong>. El segon classificat rep el <strong>2n Trofeu</strong>.",
-    g_l4:'Palmarès',
-    g_t4:'Els guardonats',
+    g_l4:'Palmarès',g_t4:'Els guardonats',
     g_wip:'En procés de recuperació',
     btn_premis:'Veure tots els premis →',
   }
@@ -173,7 +165,7 @@ function setLang(lang) {
       <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
   </div>
-      <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
     <div class="mobile-item"><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
     <div class="mobile-item"><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
@@ -211,14 +203,12 @@ function setLang(lang) {
 <!-- COS -->
 <main class="entrada-cos">
 
-  <!-- EL NOM -->
   <span class="e-label" data-i18n="g_l1"></span>
   <h2 class="e-title" data-i18n="g_t1"></h2>
   <div class="e-divider"></div>
   <p class="e-p" data-i18n="g_p1"></p>
   <p class="e-p" data-i18n="g_p2"></p>
 
-  <!-- EL TROFEU -->
   <div class="e-sep">· · ·</div>
   <span class="e-label" data-i18n="g_l2"></span>
   <h2 class="e-title" data-i18n="g_t2"></h2>
@@ -226,8 +216,7 @@ function setLang(lang) {
 
   <div class="e-trofeu-bloc">
     <div class="e-trofeu-ico">
-      <img src="../assets/img/gastronia.png" alt="Trofeu Gastronia"
-           onerror="this.style.opacity='.1'">
+      <img src="../assets/img/gastronia.png" alt="Trofeu Gastronia" onerror="this.style.opacity='.1'">
     </div>
     <div class="e-trofeu-text">
       <span class="e-label" data-i18n="g_l2"></span>
@@ -237,7 +226,6 @@ function setLang(lang) {
   </div>
   <p class="e-p" data-i18n="g_p4"></p>
 
-  <!-- EL PROCÉS -->
   <div class="e-sep">· · ·</div>
   <span class="e-label" data-i18n="g_l3"></span>
   <h2 class="e-title" data-i18n="g_t3"></h2>
@@ -257,7 +245,6 @@ function setLang(lang) {
   <p class="e-criteris-nota" data-i18n="g_criteris_nota"></p>
   <p class="e-p" data-i18n="g_p6"></p>
 
-  <!-- PALMARÈS -->
   <div class="e-sep">· · ·</div>
   <span class="e-label" data-i18n="g_l4"></span>
   <h2 class="e-title" data-i18n="g_t4"></h2>
@@ -298,13 +285,11 @@ function setLang(lang) {
 
 </main>
 
-<!-- NAV RETORN -->
 <div class="e-nav-retorn">
   <a href="../pages/blog.html" class="btn-outline" data-i18n="back_blog"></a>
   <a href="../pages/premis.html" class="btn-primary" data-i18n="btn_premis"></a>
 </div>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
