@@ -12,6 +12,10 @@
 <link rel="stylesheet" href="../assets/css/nav.css">
 <link rel="stylesheet" href="../assets/css/seccions.css">
 <style>
+#mobileMenu{position:fixed;left:0;right:0;z-index:999;display:none;background:var(--cream,#f5f0e8);box-shadow:0 8px 32px rgba(28,46,62,.15);}
+#mobileMenu.open{display:block;}
+</style>
+<style>
 /* ── HERO ── */
 .page-hero{background:var(--navy-dark);padding:140px 4% 72px;text-align:center;position:relative;overflow:hidden;}
 .page-hero::before{content:'';position:absolute;inset:0;background-image:url('../assets/img/hero.jpg');background-size:cover;background-position:center;opacity:.08;}
@@ -163,21 +167,36 @@ function setLang(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Nav scroll
   var nav = document.getElementById('nav');
-  if (nav) {
-    window.addEventListener('scroll', function() {
-      nav.classList.toggle('solid', window.scrollY > 50);
-    });
+  var menu = document.getElementById('mobileMenu');
+
+  if (menu && menu.parentNode !== document.body) document.body.appendChild(menu);
+
+  function positionMenu() {
+    if (!nav || !menu) return;
+    menu.style.top = nav.getBoundingClientRect().bottom + 'px';
   }
-  // Hamburger
+
+  window.addEventListener('scroll', function() {
+    if (nav) nav.classList.toggle('solid', window.scrollY > 50);
+    if (menu && menu.classList.contains('open')) positionMenu();
+  });
+
   var burger = document.getElementById('hamburger');
   if (burger) {
     burger.addEventListener('click', function() {
-      document.getElementById('mobileMenu').classList.toggle('open');
+      if (nav) nav.classList.add('solid');
+      positionMenu();
+      menu.classList.toggle('open');
     });
   }
-  // Apply saved language
+
+  if (menu) {
+    menu.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() { menu.classList.remove('open'); });
+    });
+  }
+
   if (currentLang === 'ca') setLang('ca');
 });
 </script>
