@@ -60,14 +60,15 @@
 /* ── SUBSTITUT ── */
 .e-substitut{background:var(--cream,#f5f0e8);border:1px solid var(--border,#ddd);padding:48px;margin:52px 0;}
 .e-substitut-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);margin-bottom:8px;text-align:center;}
-.e-substitut-sub{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;display:block;margin-bottom:32px;}
-.e-substitut-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
-.e-substitut-img img{width:100%;height:260px;object-fit:cover;}
-.e-substitut-list{list-style:none;padding:0;margin:0;}
-.e-substitut-list li{display:flex;align-items:flex-start;gap:12px;margin-bottom:16px;font-size:.9rem;font-weight:300;color:var(--navy-dark);line-height:1.6;}
-.e-substitut-list li::before{content:'→';color:var(--gold);font-weight:700;flex-shrink:0;margin-top:1px;}
-.e-substitut-list strong{font-weight:700;}
-.e-substitut-nota{margin-top:24px;font-size:.82rem;font-style:italic;color:#888;line-height:1.7;}
+.e-substitut-sub{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;display:block;margin-bottom:36px;}
+.e-substitut-intro{font-size:.95rem;font-weight:300;color:#555;line-height:1.8;margin-bottom:28px;}
+.e-substitut-img-wrap{margin-bottom:28px;overflow:hidden;}
+.e-substitut-img-wrap img{width:100%;height:220px;object-fit:cover;object-position:center 20%;}
+.e-substitut-items{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}
+.e-substitut-item{background:#fff;border:1px solid var(--border,#ddd);padding:20px 22px;border-left:3px solid var(--gold);}
+.e-substitut-item-nom{font-family:var(--font-serif);font-size:1rem;font-weight:600;color:var(--navy-dark);margin-bottom:7px;}
+.e-substitut-item-desc{font-size:.87rem;font-weight:300;color:#555;line-height:1.65;}
+.e-substitut-nota{font-size:.82rem;font-style:italic;color:#888;line-height:1.7;padding-top:20px;border-top:1px solid var(--border,#ddd);}
 /* ── RELACIONAT ── */
 .e-relacionat{background:var(--navy-dark,#1c2e3e);padding:36px 40px;margin:52px 0;display:flex;align-items:center;gap:32px;}
 .e-relacionat-ico{font-size:2.5rem;flex-shrink:0;}
@@ -84,10 +85,12 @@
 @media(max-width:768px){
   .entrada-hero-content{padding:0 5% 52px;}
   .entrada-cos{padding:52px 5%;}
-  .e-grid-2,.e-substitut-grid{grid-template-columns:1fr;gap:28px;}
+  .e-grid-2{grid-template-columns:1fr;gap:28px;}
   .e-qualitats{grid-template-columns:1fr 1fr;}
+  .e-substitut-items{grid-template-columns:1fr;}
+  .e-substitut{padding:32px 20px;}
   .e-foto-gran img{height:260px;}
-  .e-cita,.e-substitut,.e-relacionat{padding:24px 22px;}
+  .e-cita,.e-relacionat{padding:24px 22px;}
   .e-relacionat{flex-direction:column;gap:16px;}
 }
 </style>
@@ -291,47 +294,59 @@
   <div class="e-substitut">
     <h3 class="e-substitut-title t" data-es="¿Cómo usarlo hoy?" data-ca="Com usar-lo avui?">¿Cómo usarlo hoy?</h3>
     <span class="e-substitut-sub t" data-es="Guía práctica para cocinar con garum moderno" data-ca="Guia pràctica per cuinar amb garum modern">Guía práctica para cocinar con garum moderno</span>
-    <div class="e-substitut-grid">
-      <div class="e-substitut-img">
-        <img src="../assets/img/garum/garum-substitut.jpg"
-             alt="Nam pla — salsa de peix fermentat, substitut modern del garum"
-             onerror="this.parentElement.style.background='#e8e2d8'">
-      </div>
-      <div>
-        <p class="e-p t" style="margin-bottom:20px;"
-          data-es="No puedes hacer garum en casa en dos días. Pero puedes usarlo. Estas son las mejores opciones modernas:"
-          data-ca="No pots fer garum a casa en dos dies. Però pots usar-lo. Aquestes són les millors opcions modernes:">
-          No puedes hacer garum en casa en dos días. Pero puedes usarlo. Estas son las mejores opciones modernes:
+
+    <div class="e-substitut-img-wrap">
+      <img src="../assets/img/garum/garum-substitut.jpg"
+           alt="Nam pla — salsa de peix fermentat, substitut modern del garum"
+           onerror="this.parentElement.style.background='#e8e2d8'">
+    </div>
+
+    <p class="e-substitut-intro t"
+      data-es="No puedes hacer garum en casa en dos días. Pero puedes usarlo. Estas son las mejores opciones modernas:"
+      data-ca="No pots fer garum a casa en dos dies. Però pots usar-lo. Aquestes són les millors opcions modernes:">
+      No puedes hacer garum en casa en dos días. Pero puedes usarlo. Estas son las mejores opciones modernas:
+    </p>
+
+    <div class="e-substitut-items">
+      <div class="e-substitut-item">
+        <p class="e-substitut-item-nom">Nam pla / Nước mắm</p>
+        <p class="e-substitut-item-desc t"
+          data-es="Tailandia o Vietnam. Los más fieles al garum original. Se encuentran en tiendas asiáticas. Unas gotas en un sofrito lo cambian todo."
+          data-ca="Tailàndia o Vietnam. Els més fidels al garum original. Es troben a botigues asiàtiques. Unes gotes en un sofregit ho canvien tot.">
+          Tailandia o Vietnam. Los más fieles al garum original. Se encuentran en tiendas asiáticas. Unas gotas en un sofrito lo cambian todo.
         </p>
-        <ul class="e-substitut-list">
-          <li class="t"
-            data-es="<strong>Nam pla</strong> (Tailandia) o <strong>nước mắm</strong> (Vietnam) — Los más fieles al garum original. Se encuentran en tiendas asiáticas. Unas gotas en un sofrito lo cambian todo."
-            data-ca="<strong>Nam pla</strong> (Tailàndia) o <strong>nước mắm</strong> (Vietnam) — Els més fidels al garum original. Es troben a botigues asiàtiques. Unes gotes en un sofregit ho canvien tot.">
-            <strong>Nam pla</strong> (Tailandia) o <strong>nước mắm</strong> (Vietnam) — Los más fieles al garum original. Se encuentran en tiendas asiáticas. Unas gotas en un sofrito lo cambian todo.
-          </li>
-          <li class="t"
-            data-es="<strong>Colatura di alici</strong> — La versión italiana, producida en Campania. Más cara, más fina. La encontrarás en tiendas de productos italianos."
-            data-ca="<strong>Colatura di alici</strong> — La versió italiana, produïda a Campania. Més cara, més fina. La trobaràs a botigues de productes italians.">
-            <strong>Colatura di alici</strong> — La versión italiana, producida en Campania. Más cara, más fina. La encontrarás en tiendas de productos italianos.
-          </li>
-          <li class="t"
-            data-es="<strong>Anchoas en aceite</strong> — Un truco: disuelve una anchoa en el sofrito. No sabrá a anchoa. Sabrá a profundidad. A mar. A garum."
-            data-ca="<strong>Anxoves en oli</strong> — Un truc: dissol una anxova en el sofregit. No sabrà a anxova. Sabrà a profunditat. A mar. A garum.">
-            <strong>Anchoas en aceite</strong> — Un truco: disuelve una anchoa en el sofrito. No sabrá a anchoa. Sabrá a profundidad. A mar. A garum.
-          </li>
-          <li class="t"
-            data-es="<strong>Garum artesanal</strong> — Algunos chefs y productores españoles ya elaboran garum moderno. Busca <em>garum de atún</em> o <em>garum de caballa</em> en tiendas gourmet."
-            data-ca="<strong>Garum artesanal</strong> — Alguns cuiners i productors espanyols ja elaboren garum modern. Busca <em>garum de tonyina</em> o <em>garum de verat</em> a botigues gourmet.">
-            <strong>Garum artesanal</strong> — Algunos chefs y productores españoles ya elaboran garum moderno. Busca <em>garum de atún</em> o <em>garum de caballa</em> en tiendas gourmet.
-          </li>
-        </ul>
-        <p class="e-substitut-nota t"
-          data-es="Regla general: empieza con pocas gotas. Es intenso. Su objetivo no es que el plato sepa a pescado, sino que todo sepa más a sí mismo."
-          data-ca="Regla general: comença amb poques gotes. És intens. El seu objectiu no és que el plat sàpiga a peix, sinó que tot sàpiga més a si mateix.">
-          Regla general: empieza con pocas gotas. Es intenso. Su objetivo no es que el plato sepa a pescado, sino que todo sepa más a sí mismo.
+      </div>
+      <div class="e-substitut-item">
+        <p class="e-substitut-item-nom">Colatura di alici</p>
+        <p class="e-substitut-item-desc t"
+          data-es="La versión italiana, producida en Campania. Más cara, más fina. La encontrarás en tiendas de productos italianos."
+          data-ca="La versió italiana, produïda a Campania. Més cara, més fina. La trobaràs a botigues de productes italians.">
+          La versión italiana, producida en Campania. Más cara, más fina. La encontrarás en tiendas de productos italianos.
+        </p>
+      </div>
+      <div class="e-substitut-item">
+        <p class="e-substitut-item-nom t" data-es="Anchoas en aceite" data-ca="Anxoves en oli">Anchoas en aceite</p>
+        <p class="e-substitut-item-desc t"
+          data-es="Disuelve una anchoa en el sofrito. No sabrá a anchoa. Sabrá a profundidad. A mar. A garum."
+          data-ca="Dissol una anxova en el sofregit. No sabrà a anxova. Sabrà a profunditat. A mar. A garum.">
+          Disuelve una anchoa en el sofrito. No sabrá a anchoa. Sabrá a profundidad. A mar. A garum.
+        </p>
+      </div>
+      <div class="e-substitut-item">
+        <p class="e-substitut-item-nom t" data-es="Garum artesanal" data-ca="Garum artesanal">Garum artesanal</p>
+        <p class="e-substitut-item-desc t"
+          data-es="Algunos productores españoles ya elaboran garum moderno. Busca garum de atún o de caballa en tiendas gourmet."
+          data-ca="Alguns productors espanyols ja elaboren garum modern. Busca garum de tonyina o de verat a botigues gourmet.">
+          Algunos productores españoles ya elaboran garum moderno. Busca garum de atún o de caballa en tiendas gourmet.
         </p>
       </div>
     </div>
+
+    <p class="e-substitut-nota t"
+      data-es="Regla general: empieza con pocas gotas. Es intenso. Su objetivo no es que el plato sepa a pescado, sino que todo sepa más a sí mismo."
+      data-ca="Regla general: comença amb poques gotes. És intens. El seu objectiu no és que el plat sàpiga a peix, sinó que tot sàpiga més a si mateix.">
+      Regla general: empieza con pocas gotas. Es intenso. Su objetivo no es que el plato sepa a pescado, sino que todo sepa más a sí mismo.
+    </p>
   </div>
 
   <!-- TANCAMENT -->
