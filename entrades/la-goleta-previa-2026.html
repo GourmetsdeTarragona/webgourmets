@@ -13,8 +13,8 @@
 <link rel="stylesheet" href="../assets/css/seccions.css">
 <style>
 .entrada-hero{position:relative;min-height:70vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
-.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.4;}
-.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.97) 0%,rgba(11,22,38,.55) 55%,rgba(11,22,38,.1) 100%);}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.65;filter:brightness(1.08) contrast(1.05);}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.92) 0%,rgba(11,22,38,.38) 50%,rgba(11,22,38,.05) 100%);}
 .entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
 .entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
 .entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
@@ -23,11 +23,11 @@
 .entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;}
 .entrada-badge-previa{background:var(--navy);}
 .entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;}
-.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;}
 .entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
 .entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
 .entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
-.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.85;max-width:540px;}
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.82);font-weight:300;line-height:1.85;max-width:540px;}
 .entrada-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
 .e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
 .e-title{font-family:var(--font-serif);font-size:1.75rem;color:var(--navy-dark);line-height:1.2;margin-bottom:22px;}
@@ -79,6 +79,12 @@
 .e-fitxa-text{font-size:.87rem;color:var(--muted);line-height:1.5;}
 .e-fitxa-cta{background:var(--navy-dark);padding:36px 40px;display:flex;flex-direction:column;justify-content:center;text-align:center;}
 .e-fitxa-cta p{font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:20px;font-weight:300;}
+.e-equip-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:8px;margin-bottom:52px;}
+.e-equip-card{background:#fff;border:1px solid var(--border);padding:26px 18px;text-align:center;}
+.e-equip-avatar{width:56px;height:56px;border-radius:50%;background:var(--navy);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;color:#fff;}
+.e-equip-nom{font-family:var(--font-serif);font-size:.95rem;color:var(--navy-dark);margin-bottom:4px;line-height:1.3;}
+.e-equip-rol{font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);}
+.e-equip-desc{font-size:.8rem;color:var(--muted);line-height:1.5;margin-top:8px;font-weight:300;}
 .e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;}
 @media(max-width:768px){
   .entrada-hero-content{padding:0 5% 52px;}
@@ -92,168 +98,6 @@
   .e-convidat{flex-direction:column;gap:16px;}
 }
 </style>
-
-<script>
-/* ── I18N INLINE ── */
-const translations = {
-  nav_inicio:'',nav_asoc:'',nav_rest:'',nav_premios:'',nav_blog:'',nav_contacto:'',
-  nav_quienes:'',nav_como:'',nav_visites:'',nav_gastronia:'',nav_bacus:'',
-  nav_rest_short:'',nav_premios_short:'',
-  footer_desc:'',footer_nav:'',footer_legal:'',footer_contacte:'',
-  footer_avis:'',footer_privacitat:'',footer_copy:'',
-};
-const t = {
-  es: {
-    nav_inicio:'Inicio', nav_asoc:'La Asociación', nav_rest:'Restaurantes',
-    nav_premios:'Premios', nav_blog:'Blog Gourmet', nav_contacto:'Contacto',
-    nav_quienes:'Quiénes somos', nav_como:'Cómo funcionamos',
-    nav_visites:'Visitas 2025–26', nav_gastronia:'Trofeo Gastronia',
-    nav_bacus:'Premio Bacus', nav_rest_short:'Restaurantes', nav_premios_short:'Premios',
-    footer_desc:'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',
-    footer_nav:'Navegación', footer_legal:'Legal', footer_contacte:'Contacto',
-    footer_avis:'Aviso Legal', footer_privacitat:'Política de Privacidad',
-    footer_copy:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',
-    back_blog:'Volver al Blog', back_blog_btn:'← Volver al Blog',
-    goleta_badge:'Previa · 2 Abril 2026',
-    goleta_titol_sub:'2º Recorrido Gourmet 2026',
-    goleta_subtitol:'Cuarenta años frente al mar en la Platja dels Capellans. Un restaurante que ha hecho del producto del litoral su razón de ser.',
-    goleta_aniv_text:'años de historia en la Costa Daurada',
-    goleta_l1:'Por qué volvemos al mar',
-    goleta_t1:'Cuatro décadas de cocina marinera en Salou',
-    goleta_p1:'La Goleta abrió sus puertas en 1986, en plena expansión turística de la Costa Daurada. En un momento en que la restauración de la zona optaba mayoritariamente por formatos rápidos y propuestas estacionales, el restaurante eligió un camino distinto: apostar por la cocina de producto, el servicio de sala estructurado y una propuesta centrada en el pescado y el marisco de proximidad.',
-    goleta_p2:'Cuarenta años después, La Goleta mantiene su posición como uno de los restaurantes de referencia del litoral tarragonés. Fundado en 1986 por los hermanos <u><strong>Ángel</strong></u> y <u><strong>Emilio Vicente</strong></u>, el restaurante fue el proyecto de vida de <u><strong>Emilio Vicente</strong></u>, su propietario y alma durante más de tres décadas. Desde su jubilación en 2021, <u><strong>Ignacio Ureña</strong></u> —maître y sumiller con más de once años en la casa— asumió la dirección, garantizando la continuidad de una sala de referencia en la Costa Daurada.',
-    goleta_val1:'Platja dels Capellans, Salou',
-    goleta_val2:'9 de abril 2026',
-    goleta_val3:'Pesca y marisco mediterráneo',
-    goleta_val4:'Celler Hidalgo Albert · Priorat',
-    goleta_foto1_peu:'Producto del mar — la identidad de La Goleta desde 1986',
-    goleta_hist_label:'El restaurante',
-    goleta_hist_title:'Un referente que ha sabido mantenerse',
-    goleta_hist_p1:'Los años ochenta representaron una etapa de cambio para Salou. La expansión turística generó una oferta de restauración diversa, orientada en muchos casos a un público estacional. En este contexto, algunos establecimientos optaron por desarrollar proyectos con una vocación gastronómica más definida. La Goleta se inscribe en esta generación.',
-    goleta_hist_p2:'La propuesta gastronómica del restaurante se ha articulado siempre alrededor de la cocina mediterránea: el pescado y el marisco como protagonistas, elaboraciones que forman parte del repertorio culinario del litoral, y una línea estable que ha resistido las tendencias pasajeras. Llegar a los cuarenta años en activo es una rareza en el sector.',
-    goleta_convidat_label:'Invitado especial de la velada',
-    goleta_convidat_desc:'Licenciado en Derecho, cofundador y vicepresidente de la Asociación Gastronómica Casacas Rojas. Compartirá su visión de la gastronomía del territorio.',
-    goleta_prog_title:'Programa de la velada',
-    goleta_prog1:'Recepción de los asistentes',
-    goleta_prog2:'Presentación del restaurante',
-    goleta_prog3:'Presentación del ponente invitado',
-    goleta_prog4:'Inicio de la cena',
-    goleta_prog5:'Clausura y entrega de premios',
-    goleta_menu_title:'Qué encontraremos en la mesa',
-    goleta_bloc1:'Entrantes fríos',
-    goleta_plat1:'Salmón marinado con salsa de caviar',
-    goleta_plat2:'Montadito de rape y langostinos',
-    goleta_plat3:'Ensalada de langostinos con vinagreta de aguacate y caviar',
-    goleta_bloc2:'Entrantes calientes',
-    goleta_plat4:'Calamares de la ría salteados con habitas y almejas',
-    goleta_plat5:'Pulpo con ajos tiernos y patata panadera',
-    goleta_plat6:'Gamba "pantxuda" de Tarragona salteada',
-    goleta_bloc3:'Degustación de rapes',
-    goleta_plat7:'Rape con salsa de puerros y azafrán',
-    goleta_plat8:'Tempura de rape con crema de roquefort',
-    goleta_bloc4:'Postre',
-    goleta_plat9:'Copa de coco con chocolate',
-    goleta_bodega_label:'Bodega',
-    goleta_bodega_text:'Vino blanco 1270 de <strong>Celler Hidalgo Albert</strong> — D.O. Priorat',
-    goleta_foto2_peu:'La Platja dels Capellans, Salou — el entorno privilegiado de La Goleta',
-    goleta_fitxa_title:'Ficha del restaurante',
-    goleta_fitxa_cuina:'Pescados y mariscos del Mediterráneo',
-    goleta_fitxa_aniv:'40 años de historia — fundado en 1986',
-    goleta_fitxa_data:'Visita: 9 de abril 2026',
-    goleta_cta_desc:'Durante la cena compartiremos algunos momentos en stories. La crónica completa llegará días después.',
-    goleta_equip_label:'El equipo',
-    goleta_equip_title:'Las personas detrás de La Goleta',
-    goleta_eq1_rol:'Fundador del restaurant',
-    goleta_eq1_desc:'Propietario fundador y alma del restaurante durante más de tres décadas. Artífice de su identidad y prestigio en la Costa Daurada.',
-    goleta_eq2_rol:'Director · Maître & Sumiller',
-    goleta_eq2_desc:'Más de once años vinculado al restaurante. Asumió la dirección en 2021 manteniendo la esencia y el nivel de la sala.',
-    goleta_cta_btn:'Leer la crónica completa →',
-    goleta_foto_terrassa_peu:'La terraza de La Goleta — vistas a la Platja dels Capellans, Salou',
-  },
-  ca: {
-    nav_inicio:'Inici', nav_asoc:"L'Associació", nav_rest:'Restaurants',
-    nav_premios:'Premis', nav_blog:'Blog Gourmet', nav_contacto:'Contacte',
-    nav_quienes:'Qui som', nav_como:'Com funcionem',
-    nav_visites:'Visites 2025–26', nav_gastronia:'Trofeu Gastronia',
-    nav_bacus:'Premi Bacus', nav_rest_short:'Restaurants', nav_premios_short:'Premis',
-    footer_desc:"Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.",
-    footer_nav:'Navegació', footer_legal:'Legal', footer_contacte:'Contacte',
-    footer_avis:'Avís Legal', footer_privacitat:'Política de Privacitat',
-    footer_copy:'© 2026 Gourmets de Tarragona · Tots els drets reservats',
-    back_blog:'Tornar al Blog', back_blog_btn:'← Tornar al Blog',
-    goleta_badge:'Prèvia · 2 Abril 2026',
-    goleta_titol_sub:'2n Recorregut Gourmet 2026',
-    goleta_subtitol:"Quaranta anys davant el mar a la Platja dels Capellans. Un restaurant que ha fet del producte del litoral la seva raó de ser.",
-    goleta_aniv_text:"anys d'història a la Costa Daurada",
-    goleta_l1:'Per què tornem al mar',
-    goleta_t1:'Quatre dècades de cuina marinera a Salou',
-    goleta_p1:"La Goleta va obrir les portes el 1986, en plena expansió turística de la Costa Daurada. En un moment en què la restauració de la zona optava majoritàriament per formats ràpids i propostes estacionals, el restaurant va triar un camí diferent: apostar per la cuina de producte, el servei de sala estructurat i una proposta centrada en el peix i el marisc de proximitat.",
-    goleta_p2:"Quaranta anys després, La Goleta manté la seva posició com un dels restaurants de referència del litoral tarragoní. Fundat el 1986 pels germans <u><strong>Ángel</strong></u> i <u><strong>Emilio Vicente</strong></u>, el restaurant va ser el projecte de vida d'<u><strong>Emilio Vicente</strong></u>, propietari i ànima del local durant més de tres dècades. Des de la seva jubilació el 2021, <u><strong>Ignacio Ureña</strong></u> —maître i sommelier amb més d'onze anys a la casa— n'assumeix la direcció, garantint la continuïtat d'una sala de referència a la Costa Daurada.",
-    goleta_val1:'Platja dels Capellans, Salou',
-    goleta_val2:"9 d'abril 2026",
-    goleta_val3:'Pesca i marisc mediterrani',
-    goleta_val4:'Celler Hidalgo Albert · Priorat',
-    goleta_foto1_peu:"Producte del mar — la identitat de La Goleta des de 1986",
-    goleta_hist_label:'El restaurant',
-    goleta_hist_title:"Un referent que ha sabut mantenir-se",
-    goleta_hist_p1:"Els anys vuitanta van representar una etapa de canvi per a Salou. L'expansió turística va generar una oferta de restauració diversa, orientada en molts casos a un públic estacional. En aquest context, alguns establiments van optar per desenvolupar projectes amb una vocació gastronòmica més definida. La Goleta s'inscriu en aquesta generació.",
-    goleta_hist_p2:"La proposta gastronòmica del restaurant s'ha articulat sempre al voltant de la cuina mediterrània: el peix i el marisc com a protagonistes, elaboracions que formen part del repertori culinari del litoral, i una línia estable que ha resistit les tendències passatgeres. Arribar als quaranta anys en actiu és una raresa en el sector.",
-    goleta_convidat_label:'Convidat especial de la vetllada',
-    goleta_convidat_desc:"Llicenciat en Dret, cofundador i vicepresident de l'Associació Gastronòmica Casacas Rojas. Compartirà la seva visió de la gastronomia del territori.",
-    goleta_prog_title:'Programa de la vetllada',
-    goleta_prog1:'Recepció dels assistents',
-    goleta_prog2:'Presentació del restaurant',
-    goleta_prog3:'Presentació del ponent convidat',
-    goleta_prog4:'Inici del sopar',
-    goleta_prog5:'Clausura i lliurament de premis',
-    goleta_menu_title:'Què trobarem a la taula',
-    goleta_bloc1:'Entrants freds',
-    goleta_plat1:'Salmó marinat amb salsa de caviar',
-    goleta_plat2:'Muntadito de rap i llagostins',
-    goleta_plat3:"Amanida de llagostins amb vinagreta d'alvocat i caviar",
-    goleta_bloc2:'Entrants calents',
-    goleta_plat4:'Calamars de la ria saltejats amb faves i cloïsses',
-    goleta_plat5:'Pop amb alls tendres i patata panadera',
-    goleta_plat6:'Gamba "pantxuda" de Tarragona saltejada',
-    goleta_bloc3:'Degustació de raps',
-    goleta_plat7:'Rap amb salsa de porros i safrà',
-    goleta_plat8:'Tempura de rap amb crema de roquefort',
-    goleta_bloc4:'Postre',
-    goleta_plat9:'Copa de coco amb xocolata',
-    goleta_bodega_label:'Bodega',
-    goleta_bodega_text:'Vi blanc 1270 de <strong>Celler Hidalgo Albert</strong> — D.O. Priorat',
-    goleta_foto2_peu:"La Platja dels Capellans, Salou — l'entorn privilegiat de La Goleta",
-    goleta_fitxa_title:'Fitxa del restaurant',
-    goleta_fitxa_cuina:'Peixos i mariscs del Mediterrani',
-    goleta_fitxa_aniv:"40 anys d'història — fundat el 1986",
-    goleta_fitxa_data:"Visita: 9 d'abril 2026",
-    goleta_cta_desc:"Durant el sopar compartirem alguns moments a les stories. La crònica completa arribarà dies després.",
-    goleta_equip_label:"L'equip",
-    goleta_equip_title:'Les persones darrere de La Goleta',
-    goleta_eq1_rol:'Fundador del restaurant',
-    goleta_eq1_desc:"Propietari fundador i ànima del restaurant durant més de tres dècades. Artífex de la seva identitat i prestigi a la Costa Daurada.",
-    goleta_eq2_rol:'Director · Maître & Sommelier',
-    goleta_eq2_desc:"Més d'onze anys vinculat al restaurant. Va assumir la direcció el 2021 mantenint l'essència i el nivell de la sala.",
-    goleta_cta_btn:'Llegir la crònica completa →',
-    goleta_foto_terrassa_peu:"La terrassa de La Goleta — vistes a la Platja dels Capellans, Salou",
-  }
-};
-let currentLang = localStorage.getItem('gdt-lang') || 'es';
-function applyTranslations(lang) {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (t[lang] && t[lang][key] !== undefined) el.innerHTML = t[lang][key];
-  });
-  document.getElementById('html-root')?.setAttribute('lang', lang);
-  document.querySelectorAll('.lang-btn').forEach(btn =>
-    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang));
-}
-function setLang(lang) {
-  currentLang = lang;
-  localStorage.setItem('gdt-lang', lang);
-  applyTranslations(lang);
-}
-</script>
 </head>
 <body>
 
@@ -276,7 +120,7 @@ function setLang(lang) {
       <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
   </div>
-      <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
     <div class="mobile-item"><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
     <div class="mobile-item"><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
@@ -292,7 +136,7 @@ function setLang(lang) {
   </div>
 </nav>
 
-<!-- HERO — foto marina de la Costa Daurada -->
+<!-- HERO -->
 <header class="entrada-hero">
   <div class="entrada-hero-bg" style="background-image:url('../assets/img/goleta/capellans-beach.jpg');"></div>
   <div class="entrada-hero-grad"></div>
@@ -300,156 +144,140 @@ function setLang(lang) {
   <div class="entrada-hero-content">
     <a href="../pages/blog.html" class="entrada-back"><i class="fa fa-arrow-left"></i> <span data-i18n="back_blog"></span></a>
     <div class="entrada-meta-top">
-      <span class="entrada-badge entrada-badge-previa" data-i18n="goleta_badge"></span>
+      <span class="entrada-badge entrada-badge-previa" data-i18n="goleta_prev_badge"></span>
       <div class="entrada-meta-info">
         <span class="entrada-meta-item"><i class="fa fa-map-marker-alt"></i> Salou</span>
-        <span class="entrada-meta-item"><i class="fa fa-fish"></i> Peix &amp; Marisc</span>
+        <span class="entrada-meta-item"><i class="fa fa-fish"></i> <span data-i18n="goleta_prev_cuina"></span></span>
         <span class="entrada-meta-item"><i class="fa fa-calendar"></i> 9 Abril 2026</span>
       </div>
     </div>
-    <h1 class="entrada-titol">La Goleta <em>(Salou)</em><br><span data-i18n="goleta_titol_sub"></span></h1>
-    <p class="entrada-subtitol" data-i18n="goleta_subtitol"></p>
+    <h1 class="entrada-titol">La Goleta <em>(Salou)</em><br><span data-i18n="goleta_prev_titol_sub"></span></h1>
+    <p class="entrada-subtitol" data-i18n="goleta_prev_subtitol"></p>
   </div>
 </header>
 
 <!-- COS -->
 <main class="entrada-cos">
 
-  <!-- INTRO -->
   <div class="e-grid-2">
     <div>
       <div class="e-aniv">
         <span class="e-aniv-num">40</span>
-        <span class="e-aniv-text" data-i18n="goleta_aniv_text"></span>
+        <span class="e-aniv-text" data-i18n="goleta_prev_aniv"></span>
       </div>
-      <span class="e-label" data-i18n="goleta_l1"></span>
-      <h2 class="e-title" data-i18n="goleta_t1"></h2>
+      <span class="e-label" data-i18n="goleta_prev_l1"></span>
+      <h2 class="e-title" data-i18n="goleta_prev_t1"></h2>
       <div class="e-divider"></div>
-      <p class="e-p" data-i18n="goleta_p1"></p>
-      <p class="e-p" data-i18n="goleta_p2"></p>
+      <p class="e-p" data-i18n="goleta_prev_p1"></p>
+      <p class="e-p" data-i18n="goleta_prev_p2"></p>
       <div class="e-vals">
-        <div class="e-val"><i class="fa fa-map-marker-alt"></i><span data-i18n="goleta_val1"></span></div>
-        <div class="e-val"><i class="fa fa-calendar"></i><span data-i18n="goleta_val2"></span></div>
-        <div class="e-val"><i class="fa fa-fish"></i><span data-i18n="goleta_val3"></span></div>
-        <div class="e-val"><i class="fa fa-wine-glass-alt"></i><span data-i18n="goleta_val4"></span></div>
+        <div class="e-val"><i class="fa fa-map-marker-alt"></i><span>Platja dels Capellans, Salou</span></div>
+        <div class="e-val"><i class="fa fa-calendar"></i><span data-i18n="goleta_prev_val2"></span></div>
+        <div class="e-val"><i class="fa fa-fish"></i><span data-i18n="goleta_prev_val3"></span></div>
+        <div class="e-val"><i class="fa fa-wine-glass-alt"></i><span>Celler Hidalgo Albert · Priorat</span></div>
       </div>
     </div>
     <div class="e-img">
-      <!-- Foto de marisc / producte del mar -->
       <img src="../assets/img/goleta/aniversari-40.jpg" alt="La Goleta 40 anys">
     </div>
   </div>
 
-  <!-- FOTO GRAN — platja / mar -->
   <div class="e-foto-gran">
     <img src="../assets/img/goleta/platja-capellans.jpg" alt="Platja dels Capellans — Salou">
-    <div class="e-foto-gran-peu" data-i18n="goleta_foto2_peu"></div>
+    <div class="e-foto-gran-peu" data-i18n="goleta_prev_foto1_peu"></div>
   </div>
 
-  <!-- HISTORIA -->
-  <div style="display:grid;grid-template-columns:1fr 260px;gap:40px;align-items:start;">
-  <div>
-  <span class="e-label" data-i18n="goleta_hist_label"></span>
-  <h2 class="e-title" data-i18n="goleta_hist_title"></h2>
+  <span class="e-label" data-i18n="goleta_prev_hist_label"></span>
+  <h2 class="e-title" data-i18n="goleta_prev_hist_title"></h2>
   <div class="e-divider"></div>
-  <p class="e-p" data-i18n="goleta_hist_p1"></p>
-  <p class="e-p" data-i18n="goleta_hist_p2"></p>
-  </div>
-  <div style="padding-top:8px;"><img src="../assets/img/goleta/taula-mar.jpg" alt="Taula amb vistes al mar — La Goleta" style="width:100%;object-fit:cover;"></div>
-  </div>
+  <p class="e-p" data-i18n="goleta_prev_hist_p1"></p>
+  <p class="e-p" data-i18n="goleta_prev_hist_p2"></p>
 
-  <!-- FOTO TERRASSA -->
   <div class="e-foto-gran" style="margin:40px 0;">
     <img src="../assets/img/goleta/terrassa-goleta.jpg" alt="Terrassa de La Goleta — Platja dels Capellans, Salou">
-    <div class="e-foto-gran-peu" data-i18n="goleta_foto_terrassa_peu"></div>
+    <div class="e-foto-gran-peu" data-i18n="goleta_prev_foto2_peu"></div>
   </div>
 
-  <!-- CONVIDAT -->
   <div class="e-convidat">
     <div class="e-convidat-avatar">JV</div>
     <div>
-      <div class="e-convidat-label" data-i18n="goleta_convidat_label"></div>
+      <div class="e-convidat-label" data-i18n="goleta_prev_conv_label"></div>
       <div class="e-convidat-nom">Sr. José Vilaseca Rius</div>
-      <div class="e-convidat-desc" data-i18n="goleta_convidat_desc"></div>
+      <div class="e-convidat-desc" data-i18n="goleta_prev_conv_desc"></div>
     </div>
   </div>
 
-  <!-- PROGRAMA -->
   <div class="e-programa">
-    <p class="e-programa-title"><i class="fa fa-clock"></i> <span data-i18n="goleta_prog_title"></span></p>
-    <div class="e-programa-item"><span class="e-programa-hora">20:30 h</span><span class="e-programa-desc" data-i18n="goleta_prog1"></span></div>
-    <div class="e-programa-item"><span class="e-programa-hora">20:45 h</span><span class="e-programa-desc" data-i18n="goleta_prog2"></span></div>
-    <div class="e-programa-item"><span class="e-programa-hora">20:50 h</span><span class="e-programa-desc" data-i18n="goleta_prog3"></span></div>
-    <div class="e-programa-item"><span class="e-programa-hora">21:00 h</span><span class="e-programa-desc" data-i18n="goleta_prog4"></span></div>
-    <div class="e-programa-item"><span class="e-programa-hora">23:45 h</span><span class="e-programa-desc" data-i18n="goleta_prog5"></span></div>
+    <p class="e-programa-title"><i class="fa fa-clock"></i> <span data-i18n="goleta_prev_prog_title"></span></p>
+    <div class="e-programa-item"><span class="e-programa-hora">20:30 h</span><span class="e-programa-desc" data-i18n="goleta_prev_prog1"></span></div>
+    <div class="e-programa-item"><span class="e-programa-hora">20:45 h</span><span class="e-programa-desc" data-i18n="goleta_prev_prog2"></span></div>
+    <div class="e-programa-item"><span class="e-programa-hora">20:50 h</span><span class="e-programa-desc" data-i18n="goleta_prev_prog3"></span></div>
+    <div class="e-programa-item"><span class="e-programa-hora">21:00 h</span><span class="e-programa-desc" data-i18n="goleta_prev_prog4"></span></div>
+    <div class="e-programa-item"><span class="e-programa-hora">23:45 h</span><span class="e-programa-desc" data-i18n="goleta_prev_prog5"></span></div>
   </div>
 
-  <!-- MENÚ -->
   <div class="e-menu">
-    <p class="e-menu-title" data-i18n="goleta_menu_title"></p>
+    <p class="e-menu-title" data-i18n="goleta_prev_menu_title"></p>
     <p class="e-menu-sub">Menú Gourmets de Tarragona · La Goleta</p>
     <div class="e-menu-grid">
       <div>
-        <p class="e-menu-bloc-title" data-i18n="goleta_bloc1"></p>
-        <div class="e-menu-plat"><span class="e-menu-plat-ico">🐟</span><span class="e-menu-plat-nom" data-i18n="goleta_plat1"></span></div>
-        <div class="e-menu-plat"><span class="e-menu-plat-ico">🦐</span><span class="e-menu-plat-nom" data-i18n="goleta_plat2"></span></div>
-        <div class="e-menu-plat"><span class="e-menu-plat-ico">🥗</span><span class="e-menu-plat-nom" data-i18n="goleta_plat3"></span></div>
-        <p class="e-menu-bloc-title" style="margin-top:24px;" data-i18n="goleta_bloc2"></p>
-        <div class="e-menu-plat"><span class="e-menu-plat-ico">🦑</span><span class="e-menu-plat-nom" data-i18n="goleta_plat4"></span></div>
-        <div class="e-menu-plat"><span class="e-menu-plat-ico">🐙</span><span class="e-menu-plat-nom" data-i18n="goleta_plat5"></span></div>
-        <div class="e-menu-plat"><span class="e-menu-plat-ico">🦐</span><span class="e-menu-plat-nom" data-i18n="goleta_plat6"></span></div>
+        <p class="e-menu-bloc-title" data-i18n="goleta_prev_bloc1"></p>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🐟</span><span class="e-menu-plat-nom" data-i18n="goleta_prev_plat1"></span></div>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🦐</span><span class="e-menu-plat-nom" data-i18n="goleta_prev_plat2"></span></div>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🥗</span><span class="e-menu-plat-nom" data-i18n="goleta_prev_plat3"></span></div>
+        <p class="e-menu-bloc-title" style="margin-top:24px;" data-i18n="goleta_prev_bloc2"></p>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🦑</span><span class="e-menu-plat-nom" data-i18n="goleta_prev_plat4"></span></div>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🐙</span><span class="e-menu-plat-nom" data-i18n="goleta_prev_plat5"></span></div>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🦐</span><span class="e-menu-plat-nom" data-i18n="goleta_prev_plat6"></span></div>
       </div>
       <div>
-        <p class="e-menu-bloc-title" data-i18n="goleta_bloc3"></p>
-        <div class="e-menu-plat"><span class="e-menu-plat-ico">🐡</span><span class="e-menu-plat-nom" data-i18n="goleta_plat7"></span></div>
-        <div class="e-menu-plat"><span class="e-menu-plat-ico">🍤</span><span class="e-menu-plat-nom" data-i18n="goleta_plat8"></span></div>
-        <p class="e-menu-bloc-title" style="margin-top:24px;" data-i18n="goleta_bloc4"></p>
-        <div class="e-menu-plat"><span class="e-menu-plat-ico">🥥</span><span class="e-menu-plat-nom" data-i18n="goleta_plat9"></span></div>
+        <p class="e-menu-bloc-title" data-i18n="goleta_prev_bloc3"></p>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🐡</span><span class="e-menu-plat-nom" data-i18n="goleta_prev_plat7"></span></div>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🍤</span><span class="e-menu-plat-nom" data-i18n="goleta_prev_plat8"></span></div>
+        <p class="e-menu-bloc-title" style="margin-top:24px;" data-i18n="goleta_prev_bloc4"></p>
+        <div class="e-menu-plat"><span class="e-menu-plat-ico">🥥</span><span class="e-menu-plat-nom" data-i18n="goleta_prev_plat9"></span></div>
       </div>
       <div class="e-menu-vi">
-        <span class="e-menu-vi-label" data-i18n="goleta_bodega_label"></span>
-        <span class="e-menu-vi-text" data-i18n="goleta_bodega_text"></span>
+        <span class="e-menu-vi-label" data-i18n="goleta_prev_bodega_label"></span>
+        <span class="e-menu-vi-text" data-i18n="goleta_prev_bodega_text"></span>
       </div>
     </div>
   </div>
 
-  <!-- EQUIP -->
   <div class="e-divider"></div>
-  <span class="e-label" data-i18n="goleta_equip_label"></span>
-  <h2 class="e-title" data-i18n="goleta_equip_title"></h2>
-  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:8px;margin-bottom:52px;">
-    <div style="background:#fff;border:1px solid var(--border);padding:26px 18px;text-align:center;">
-      <div style="width:56px;height:56px;border-radius:50%;background:var(--navy);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;color:#fff;">EV</div>
-      <p style="font-family:var(--font-serif);font-size:.95rem;color:var(--navy-dark);margin-bottom:4px;line-height:1.3;"><strong>Emilio Vicente</strong></p>
-      <p style="font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);" data-i18n="goleta_eq1_rol"></p>
-      <p style="font-size:.8rem;color:var(--muted);line-height:1.5;margin-top:8px;font-weight:300;" data-i18n="goleta_eq1_desc"></p>
+  <span class="e-label" data-i18n="goleta_prev_equip_label"></span>
+  <h2 class="e-title" data-i18n="goleta_prev_equip_title"></h2>
+  <div class="e-equip-grid">
+    <div class="e-equip-card">
+      <div class="e-equip-avatar">EV</div>
+      <p class="e-equip-nom"><strong>Emilio Vicente</strong></p>
+      <p class="e-equip-rol" data-i18n="goleta_prev_eq1_rol"></p>
+      <p class="e-equip-desc" data-i18n="goleta_prev_eq1_desc"></p>
     </div>
-    <div style="background:#fff;border:1px solid var(--border);padding:26px 18px;text-align:center;">
-      <div style="width:56px;height:56px;border-radius:50%;background:var(--navy);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;color:#fff;">IU</div>
-      <p style="font-family:var(--font-serif);font-size:.95rem;color:var(--navy-dark);margin-bottom:4px;line-height:1.3;"><strong>Ignacio Ureña</strong></p>
-      <p style="font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);" data-i18n="goleta_eq2_rol"></p>
-      <p style="font-size:.8rem;color:var(--muted);line-height:1.5;margin-top:8px;font-weight:300;" data-i18n="goleta_eq2_desc"></p>
+    <div class="e-equip-card">
+      <div class="e-equip-avatar">IU</div>
+      <p class="e-equip-nom"><strong>Ignacio Ureña</strong></p>
+      <p class="e-equip-rol" data-i18n="goleta_prev_eq2_rol"></p>
+      <p class="e-equip-desc" data-i18n="goleta_prev_eq2_desc"></p>
     </div>
   </div>
 
-  <!-- FITXA -->
   <div class="e-fitxa">
     <div class="e-fitxa-info">
-      <h3 data-i18n="goleta_fitxa_title"></h3>
+      <h3 data-i18n="goleta_prev_fitxa_title"></h3>
       <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-map-marker-alt"></i></div><span class="e-fitxa-text">Platja dels Capellans, Salou</span></div>
-      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-fish"></i></div><span class="e-fitxa-text" data-i18n="goleta_fitxa_cuina"></span></div>
-      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-star"></i></div><span class="e-fitxa-text" data-i18n="goleta_fitxa_aniv"></span></div>
-      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-calendar"></i></div><span class="e-fitxa-text" data-i18n="goleta_fitxa_data"></span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-fish"></i></div><span class="e-fitxa-text" data-i18n="goleta_prev_fitxa_cuina"></span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-star"></i></div><span class="e-fitxa-text" data-i18n="goleta_prev_fitxa_aniv"></span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-calendar"></i></div><span class="e-fitxa-text" data-i18n="goleta_prev_fitxa_data"></span></div>
     </div>
     <div class="e-fitxa-cta">
-      <p data-i18n="goleta_cta_desc"></p>
-      <a href="la-goleta-cronica-2026.html" class="btn-primary" style="display:inline-block;" data-i18n="goleta_cta_btn"></a>
+      <p data-i18n="goleta_prev_cta_desc"></p>
+      <a href="la-goleta-cronica-2026.html" class="btn-primary" style="display:inline-block;" data-i18n="goleta_prev_cta_btn"></a>
     </div>
   </div>
 
 </main>
 
-<!-- NAV RETORN -->
 <div class="e-nav-retorn">
   <a href="../pages/blog.html" class="btn-outline" data-i18n="back_blog_btn"></a>
 </div>
@@ -472,7 +300,100 @@ function setLang(lang) {
   <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
 </footer>
 
+<script>
+var T = {
+  nav_inicio:{es:'Inicio',ca:'Inici'},
+  nav_asoc:{es:'La Asociación',ca:"L'Associació"},
+  nav_quienes:{es:'Quiénes somos',ca:'Qui som'},
+  nav_como:{es:'Cómo funcionamos',ca:'Com funcionem'},
+  nav_rest:{es:'Restaurantes',ca:'Restaurants'},
+  nav_visites:{es:'Visitas 2025–26',ca:'Visites 2025–26'},
+  nav_premios:{es:'Premios',ca:'Premis'},
+  nav_gastronia:{es:'Trofeo Gastronía',ca:'Trofeu Gastronía'},
+  nav_bacus:{es:'Premio Bacus',ca:'Premi Bacus'},
+  nav_blog:{es:'Blog Gourmet',ca:'Blog Gourmet'},
+  nav_contacto:{es:'Contacto',ca:'Contacte'},
+  nav_rest_short:{es:'Restaurantes',ca:'Restaurants'},
+  nav_premios_short:{es:'Premios',ca:'Premis'},
+  back_blog:{es:'Volver al Blog',ca:'Tornar al Blog'},
+  back_blog_btn:{es:'← Volver al Blog',ca:'← Tornar al Blog'},
+  footer_desc:{es:'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',ca:'Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.'},
+  footer_nav:{es:'Navegación',ca:'Navegació'},
+  footer_legal:{es:'Legal',ca:'Legal'},
+  footer_contacte:{es:'Contacto',ca:'Contacte'},
+  footer_avis:{es:'Aviso Legal',ca:'Avís Legal'},
+  footer_privacitat:{es:'Política de Privacidad',ca:'Política de Privacitat'},
+  footer_copy:{es:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',ca:'© 2026 Gourmets de Tarragona · Tots els drets reservats'},
+  goleta_prev_badge:{es:'Previa · 2 Abril 2026',ca:'Prèvia · 2 Abril 2026'},
+  goleta_prev_cuina:{es:'Peix & Marisc',ca:'Peix & Marisc'},
+  goleta_prev_titol_sub:{es:'2º Recorrido Gourmet 2026',ca:'2n Recorregut Gourmet 2026'},
+  goleta_prev_subtitol:{es:'Cuarenta años frente al mar en la Platja dels Capellans. Un restaurante que ha hecho del producto del litoral su razón de ser.',ca:"Quaranta anys davant el mar a la Platja dels Capellans. Un restaurant que ha fet del producte del litoral la seva raó de ser."},
+  goleta_prev_aniv:{es:'años de historia en la Costa Daurada',ca:"anys d'història a la Costa Daurada"},
+  goleta_prev_l1:{es:'Por qué volvemos al mar',ca:'Per què tornem al mar'},
+  goleta_prev_t1:{es:'Cuatro décadas de cocina marinera en Salou',ca:'Quatre dècades de cuina marinera a Salou'},
+  goleta_prev_p1:{es:'La Goleta abrió sus puertas en 1986, en plena expansión turística de la Costa Daurada. En un momento en que la restauración de la zona optaba mayoritariamente por formatos rápidos y propuestas estacionales, el restaurante eligió un camino distinto: apostar por la cocina de producto, el servicio de sala estructurado y una propuesta centrada en el pescado y el marisco de proximidad.',ca:"La Goleta va obrir les portes el 1986, en plena expansió turística de la Costa Daurada. En un moment en què la restauració de la zona optava majoritàriament per formats ràpids i propostes estacionals, el restaurant va triar un camí diferent: apostar per la cuina de producte, el servei de sala estructurat i una proposta centrada en el peix i el marisc de proximitat."},
+  goleta_prev_p2:{es:'Cuarenta años después, La Goleta mantiene su posición como uno de los restaurantes de referencia del litoral tarragonés. Fundado por los hermanos Ángel y Emilio Vicente, desde su jubilación en 2021 <strong>Ignacio Ureña</strong> —maître y sumiller con más de once años en la casa— asumió la dirección, garantizando la continuidad de una sala de referencia en la Costa Daurada.',ca:"Quaranta anys després, La Goleta manté la seva posició com un dels restaurants de referència del litoral tarragoní. Fundat pels germans Ángel i Emilio Vicente, des de la seva jubilació el 2021 <strong>Ignacio Ureña</strong> —maître i sommelier amb més d'onze anys a la casa— n'assumeix la direcció, garantint la continuïtat d'una sala de referència a la Costa Daurada."},
+  goleta_prev_val2:{es:'9 de abril 2026',ca:"9 d'abril 2026"},
+  goleta_prev_val3:{es:'Pesca y marisco mediterráneo',ca:'Pesca i marisc mediterrani'},
+  goleta_prev_foto1_peu:{es:'La Platja dels Capellans, Salou — el entorno privilegiado de La Goleta',ca:"La Platja dels Capellans, Salou — l'entorn privilegiat de La Goleta"},
+  goleta_prev_hist_label:{es:'El restaurante',ca:'El restaurant'},
+  goleta_prev_hist_title:{es:'Un referente que ha sabido mantenerse',ca:"Un referent que ha sabut mantenir-se"},
+  goleta_prev_hist_p1:{es:'Los años ochenta representaron una etapa de cambio para Salou. La expansión turística generó una oferta de restauración diversa, orientada en muchos casos a un público estacional. En este contexto, algunos establecimientos optaron por desarrollar proyectos con una vocación gastronómica más definida. La Goleta se inscribe en esta generación.',ca:"Els anys vuitanta van representar una etapa de canvi per a Salou. L'expansió turística va generar una oferta de restauració diversa, orientada en molts casos a un públic estacional. En aquest context, alguns establiments van optar per desenvolupar projectes amb una vocació gastronòmica més definida. La Goleta s'inscriu en aquesta generació."},
+  goleta_prev_hist_p2:{es:'La propuesta gastronómica del restaurante se ha articulado siempre alrededor de la cocina mediterránea: el pescado y el marisco como protagonistas, elaboraciones que forman parte del repertorio culinario del litoral, y una línea estable que ha resistido las tendencias pasajeras. Llegar a los cuarenta años en activo es una rareza en el sector.',ca:"La proposta gastronòmica del restaurant s'ha articulat sempre al voltant de la cuina mediterrània: el peix i el marisc com a protagonistes, elaboracions que formen part del repertori culinari del litoral, i una línia estable que ha resistit les tendències passatgeres. Arribar als quaranta anys en actiu és una raresa en el sector."},
+  goleta_prev_foto2_peu:{es:'La terraza de La Goleta — vistas a la Platja dels Capellans, Salou',ca:"La terrassa de La Goleta — vistes a la Platja dels Capellans, Salou"},
+  goleta_prev_conv_label:{es:'Invitado especial de la velada',ca:'Convidat especial de la vetllada'},
+  goleta_prev_conv_desc:{es:'Licenciado en Derecho, cofundador y vicepresidente de la Asociación Gastronómica Casacas Rojas. Compartirá su visión de la gastronomía del territorio.',ca:"Llicenciat en Dret, cofundador i vicepresident de l'Associació Gastronòmica Casacas Rojas. Compartirà la seva visió de la gastronomia del territori."},
+  goleta_prev_prog_title:{es:'Programa de la velada',ca:'Programa de la vetllada'},
+  goleta_prev_prog1:{es:'Recepción de los asistentes',ca:'Recepció dels assistents'},
+  goleta_prev_prog2:{es:'Presentación del restaurante',ca:'Presentació del restaurant'},
+  goleta_prev_prog3:{es:'Presentación del ponente invitado',ca:'Presentació del ponent convidat'},
+  goleta_prev_prog4:{es:'Inicio de la cena',ca:'Inici del sopar'},
+  goleta_prev_prog5:{es:'Clausura y entrega de premios',ca:'Clausura i lliurament de premis'},
+  goleta_prev_menu_title:{es:'Qué encontraremos en la mesa',ca:'Què trobarem a la taula'},
+  goleta_prev_bloc1:{es:'Entrantes fríos',ca:'Entrants freds'},
+  goleta_prev_plat1:{es:'Salmón marinado con salsa de caviar',ca:'Salmó marinat amb salsa de caviar'},
+  goleta_prev_plat2:{es:'Montadito de rape y langostinos',ca:'Muntadito de rap i llagostins'},
+  goleta_prev_plat3:{es:'Ensalada de langostinos con vinagreta de aguacate y caviar',ca:"Amanida de llagostins amb vinagreta d'alvocat i caviar"},
+  goleta_prev_bloc2:{es:'Entrantes calientes',ca:'Entrants calents'},
+  goleta_prev_plat4:{es:'Calamares de la ría salteados con habitas y almejas',ca:'Calamars de la ria saltejats amb faves i cloïsses'},
+  goleta_prev_plat5:{es:'Pulpo con ajos tiernos y patata panadera',ca:'Pop amb alls tendres i patata panadera'},
+  goleta_prev_plat6:{es:'Gamba "pantxuda" de Tarragona salteada',ca:'Gamba "pantxuda" de Tarragona saltejada'},
+  goleta_prev_bloc3:{es:'Degustación de rapes',ca:'Degustació de raps'},
+  goleta_prev_plat7:{es:'Rape con salsa de puerros y azafrán',ca:'Rap amb salsa de porros i safrà'},
+  goleta_prev_plat8:{es:'Tempura de rape con crema de roquefort',ca:'Tempura de rap amb crema de roquefort'},
+  goleta_prev_bloc4:{es:'Postre',ca:'Postre'},
+  goleta_prev_plat9:{es:'Copa de coco con chocolate',ca:'Copa de coco amb xocolata'},
+  goleta_prev_bodega_label:{es:'Bodega',ca:'Bodega'},
+  goleta_prev_bodega_text:{es:'Vino blanco 1270 de <strong>Celler Hidalgo Albert</strong> — D.O. Priorat',ca:'Vi blanc 1270 de <strong>Celler Hidalgo Albert</strong> — D.O. Priorat'},
+  goleta_prev_equip_label:{es:'El equipo',ca:"L'equip"},
+  goleta_prev_equip_title:{es:'Las personas detrás de La Goleta',ca:'Les persones darrere de La Goleta'},
+  goleta_prev_eq1_rol:{es:'Fundador del restaurante',ca:'Fundador del restaurant'},
+  goleta_prev_eq1_desc:{es:'Propietario fundador y alma del restaurante durante más de tres décadas. Artífice de su identidad y prestigio en la Costa Daurada.',ca:"Propietari fundador i ànima del restaurant durant més de tres dècades. Artífex de la seva identitat i prestigi a la Costa Daurada."},
+  goleta_prev_eq2_rol:{es:'Director · Maître & Sumiller',ca:'Director · Maître & Sommelier'},
+  goleta_prev_eq2_desc:{es:'Más de once años vinculado al restaurante. Asumió la dirección en 2021 manteniendo la esencia y el nivel de la sala.',ca:"Més d'onze anys vinculat al restaurant. Va assumir la direcció el 2021 mantenint l'essència i el nivell de la sala."},
+  goleta_prev_fitxa_title:{es:'Ficha del restaurante',ca:'Fitxa del restaurant'},
+  goleta_prev_fitxa_cuina:{es:'Pescados y mariscos del Mediterráneo',ca:'Peixos i mariscos del Mediterrani'},
+  goleta_prev_fitxa_aniv:{es:'40 años de historia — fundado en 1986',ca:"40 anys d'història — fundat el 1986"},
+  goleta_prev_fitxa_data:{es:'Visita: 9 de abril 2026',ca:"Visita: 9 d'abril 2026"},
+  goleta_prev_cta_desc:{es:'Durante la cena compartiremos algunos momentos en stories. La crónica completa llegará días después.',ca:'Durant el sopar compartirem alguns moments a les stories. La crònica completa arribarà dies després.'},
+  goleta_prev_cta_btn:{es:'Leer la crónica completa →',ca:'Llegir la crònica completa →'}
+};
+var currentLang = localStorage.getItem('gdt-lang') || 'es';
+function applyTranslations(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var k = el.getAttribute('data-i18n');
+    if (T[k] && T[k][lang] !== undefined) el.innerHTML = T[k][lang];
+  });
+  var r = document.getElementById('html-root');
+  if (r) r.setAttribute('lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+}
+function setLang(lang) { currentLang = lang; localStorage.setItem('gdt-lang', lang); applyTranslations(lang); }
+applyTranslations(currentLang);
+</script>
+<script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/main.js"></script>
-<script>applyTranslations(currentLang);</script>
 </body>
 </html>
