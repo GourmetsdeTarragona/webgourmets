@@ -17,12 +17,14 @@
 </style>
 <style>
 /* ── HERO ── */
-.page-hero{background:var(--navy-dark);padding:140px 4% 72px;text-align:center;position:relative;overflow:hidden;}
-.page-hero::before{content:'';position:absolute;inset:0;background-image:url('../assets/img/hero.jpg');background-size:cover;background-position:center;opacity:.08;}
-.page-hero-inner{position:relative;z-index:1;max-width:640px;margin:0 auto;}
-.page-hero .slabel{color:rgba(255,255,255,.4);justify-content:center;display:flex;}
+.page-hero{position:relative;min-height:52vh;display:flex;align-items:flex-end;overflow:hidden;padding:0;background:#0b1626;}
+.page-hero-bg{position:absolute;inset:0;background-image:url('../assets/img/hero.jpg');background-size:cover;background-position:center 40%;opacity:.65;filter:brightness(1.08) contrast(1.05);transform:scale(1.02);transition:transform 8s ease;}
+.page-hero:hover .page-hero-bg{transform:scale(1);}
+.page-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.92) 0%,rgba(11,22,38,.38) 50%,rgba(11,22,38,.05) 100%);}
+.page-hero-inner{position:relative;z-index:2;max-width:640px;margin:0 auto;padding:0 5% 64px;width:100%;text-align:center;}
+.page-hero .slabel{color:var(--gold);justify-content:center;display:flex;}
 .page-hero .stitle{color:#fff;font-size:clamp(2rem,4vw,3rem);margin-top:10px;}
-.page-hero-desc{font-size:.95rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.8;margin-top:10px;}
+.page-hero-desc{font-size:.95rem;color:rgba(255,255,255,.65);font-weight:300;line-height:1.8;margin-top:10px;}
 
 /* ── CARDS TEMPORADA ACTUAL ── */
 .rest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
@@ -80,7 +82,7 @@
 @media(max-width:1024px){.rest-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:680px){
   .rest-grid{grid-template-columns:1fr;}
-  .page-hero{padding:120px 5% 52px;}
+  .page-hero-inner{padding:0 5% 44px;}
   .historic-taula td{padding:12px 8px;}
 }
 </style>
@@ -240,6 +242,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- HERO -->
 <div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grad"></div>
   <div class="page-hero-inner">
     <p class="t slabel"  data-es="Restaurantes" data-ca="Restaurants">Restaurantes</p>
     <h1 class="t stitle"  data-es="El recorrido Gourmet" data-ca="El recorregut Gourmet">El recorrido Gourmet</h1>
