@@ -12,13 +12,19 @@
 <link rel="stylesheet" href="../assets/css/nav.css">
 <link rel="stylesheet" href="../assets/css/seccions.css">
 <style>
+#mobileMenu{position:fixed;left:0;right:0;z-index:999;display:none;background:var(--cream,#f5f0e8);box-shadow:0 8px 32px rgba(28,46,62,.15);}
+#mobileMenu.open{display:block;}
+</style>
+<style>
 /* ── HERO ── */
-.page-hero{background:var(--navy-dark);padding:140px 4% 80px;text-align:center;position:relative;overflow:hidden;}
-.page-hero::before{content:'';position:absolute;inset:0;background-image:url('../assets/img/gala2025/sala-gala.jpg');background-size:cover;background-position:center;opacity:.15;}
-.page-hero-inner{position:relative;z-index:1;max-width:640px;margin:0 auto;}
-.page-hero .slabel{color:rgba(255,255,255,.4);justify-content:center;display:flex;}
+.page-hero{position:relative;min-height:52vh;display:flex;align-items:flex-end;overflow:hidden;padding:0;background:#0b1626;}
+.page-hero-bg{position:absolute;inset:0;background-image:url('../assets/img/gala2025/sala-gala.jpg');background-size:cover;background-position:center 40%;opacity:.65;filter:brightness(1.08) contrast(1.05);transform:scale(1.02);transition:transform 8s ease;}
+.page-hero:hover .page-hero-bg{transform:scale(1);}
+.page-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.92) 0%,rgba(11,22,38,.38) 50%,rgba(11,22,38,.05) 100%);}
+.page-hero-inner{position:relative;z-index:2;max-width:640px;margin:0 auto;padding:0 5% 64px;width:100%;text-align:center;}
+.page-hero .slabel{color:var(--gold);justify-content:center;display:flex;}
 .page-hero .stitle{color:#fff;font-size:clamp(2rem,4vw,3rem);margin-top:10px;}
-.page-hero-desc{font-size:.95rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.8;margin-top:10px;}
+.page-hero-desc{font-size:.95rem;color:rgba(255,255,255,.65);font-weight:300;line-height:1.8;margin-top:10px;}
 
 /* ── PRESENTACIÓ PREMIS ── */
 .premis-presentacio{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-bottom:0;}
@@ -108,7 +114,7 @@
   .recorregut-grid{grid-template-columns:repeat(2,1fr);}
 }
 @media(max-width:680px){
-  .page-hero{padding:120px 5% 52px;}
+  .page-hero-inner{padding:0 5% 44px;}
   .premi-bloc{padding:40px 24px;}
   .palmares-2025{padding:52px 5%;}
   .palmares-card{padding:32px 24px;}
@@ -260,6 +266,8 @@ function setLang(lang) {
 
 <!-- HERO -->
 <div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grad"></div>
   <div class="page-hero-inner">
     <p class="slabel" data-i18n="p_label"></p>
     <h1 class="stitle" data-i18n="p_title"></h1>
@@ -563,5 +571,20 @@ function setLang(lang) {
 
 <script src="../assets/js/main.js"></script>
 <script>applyTranslations(currentLang);</script>
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  var menu=document.getElementById('mobileMenu');
+  if(menu&&menu.parentNode!==document.body)document.body.appendChild(menu);
+  function positionMenu(){if(!nav||!menu)return;menu.style.top=nav.getBoundingClientRect().bottom+'px';}
+  window.addEventListener('scroll',function(){
+    if(nav)nav.classList.toggle('solid',window.scrollY>50);
+    if(menu&&menu.classList.contains('open'))positionMenu();
+  });
+  var burger=document.getElementById('hamburger');
+  if(burger){burger.addEventListener('click',function(){if(nav)nav.classList.add('solid');positionMenu();menu.classList.toggle('open');});}
+  if(menu){menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');});});}
+})();
+</script>
 </body>
 </html>
