@@ -12,12 +12,14 @@
 <link rel="stylesheet" href="../assets/css/nav.css">
 <link rel="stylesheet" href="../assets/css/seccions.css">
 <style>
-.blog-hero{background:var(--navy-dark);padding:140px 4% 64px;text-align:center;position:relative;overflow:hidden;}
-.blog-hero::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80');background-size:cover;background-position:center;opacity:.1;}
-.blog-hero-inner{position:relative;z-index:1;max-width:640px;margin:0 auto;}
-.blog-hero .slabel{color:rgba(255,255,255,.4);justify-content:center;display:flex;margin-bottom:12px;}
+.blog-hero{position:relative;min-height:52vh;display:flex;align-items:flex-end;overflow:hidden;padding:0;background:#0b1626;}
+.blog-hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80');background-size:cover;background-position:center 40%;opacity:.65;filter:brightness(1.08) contrast(1.05);transform:scale(1.02);transition:transform 8s ease;}
+.blog-hero:hover .blog-hero-bg{transform:scale(1);}
+.blog-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.92) 0%,rgba(11,22,38,.38) 50%,rgba(11,22,38,.05) 100%);}
+.blog-hero-inner{position:relative;z-index:2;max-width:640px;margin:0 auto;padding:0 5% 64px;width:100%;text-align:center;}
+.blog-hero .slabel{color:var(--gold);justify-content:center;display:flex;margin-bottom:12px;}
 .blog-hero-title{font-family:var(--font-serif);font-size:clamp(2.2rem,4vw,3.2rem);color:#fff;margin-bottom:14px;font-weight:700;}
-.blog-hero-desc{font-size:.95rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.8;}
+.blog-hero-desc{font-size:.95rem;color:rgba(255,255,255,.65);font-weight:300;line-height:1.8;}
 .blog-filtres{position:sticky;top:72px;z-index:100;background:rgba(245,242,237,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 4%;}
 .blog-filtres-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:0 6px;justify-content:center;scrollbar-width:none;}
 .blog-filtres-inner::-webkit-scrollbar{display:none;}
@@ -70,7 +72,7 @@
 .cat-curiositats{background:#8b5e3c;color:#fff;}
 .cat-cultura{background:#5c6e3f;color:#fff;}
 @media(max-width:1024px){.destacat-card{grid-template-columns:1fr;}.destacat-img{min-height:280px;}.blog-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:680px){.blog-hero{padding:120px 5% 52px;}.destacat-body{padding:32px 24px;}.blog-grid{grid-template-columns:1fr;}.blog-filtres{top:60px;}}
+@media(max-width:680px){.blog-hero-inner{padding:0 5% 44px;}.destacat-body{padding:32px 24px;}.blog-grid{grid-template-columns:1fr;}.blog-filtres{top:60px;}}
 </style>
 
 <script>
@@ -143,6 +145,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </nav>
 
 <div class="blog-hero">
+  <div class="blog-hero-bg"></div>
+  <div class="blog-hero-grad"></div>
   <div class="blog-hero-inner">
     <p class="slabel t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</p>
     <h1 class="blog-hero-title t" data-es="Gastronomía con criterio" data-ca="Gastronomia amb criteri">Gastronomía con criterio</h1>
