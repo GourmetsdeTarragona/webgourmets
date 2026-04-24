@@ -62,8 +62,11 @@
 .e-substitut-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);margin-bottom:8px;text-align:center;}
 .e-substitut-sub{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;display:block;margin-bottom:36px;}
 .e-substitut-intro{font-size:.95rem;font-weight:300;color:#555;line-height:1.8;margin-bottom:28px;}
-.e-substitut-img-wrap{margin-bottom:28px;overflow:hidden;}
-.e-substitut-img-wrap img{width:100%;height:220px;object-fit:cover;object-position:center 20%;}
+.e-substitut-header{display:flex;align-items:center;gap:32px;margin-bottom:32px;}
+.e-substitut-header-img{flex-shrink:0;width:120px;height:180px;overflow:hidden;border:1px solid var(--border,#ddd);}
+.e-substitut-header-img img{width:100%;height:100%;object-fit:contain;background:#fff;padding:8px;}
+.e-substitut-header-text{flex:1;}
+.e-substitut-header-text .e-substitut-intro{margin-bottom:0;}
 .e-substitut-items{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}
 .e-substitut-item{background:#fff;border:1px solid var(--border,#ddd);padding:20px 22px;border-left:3px solid var(--gold);}
 .e-substitut-item-nom{font-family:var(--font-serif);font-size:1rem;font-weight:600;color:var(--navy-dark);margin-bottom:7px;}
@@ -88,6 +91,8 @@
   .e-grid-2{grid-template-columns:1fr;gap:28px;}
   .e-qualitats{grid-template-columns:1fr 1fr;}
   .e-substitut-items{grid-template-columns:1fr;}
+  .e-substitut-header{flex-direction:column;align-items:flex-start;gap:20px;}
+  .e-substitut-header-img{width:90px;height:140px;}
   .e-substitut{padding:32px 20px;}
   .e-foto-gran img{height:260px;}
   .e-cita,.e-relacionat{padding:24px 22px;}
@@ -295,17 +300,20 @@
     <h3 class="e-substitut-title t" data-es="¿Cómo usarlo hoy?" data-ca="Com usar-lo avui?">¿Cómo usarlo hoy?</h3>
     <span class="e-substitut-sub t" data-es="Guía práctica para cocinar con garum moderno" data-ca="Guia pràctica per cuinar amb garum modern">Guía práctica para cocinar con garum moderno</span>
 
-    <div class="e-substitut-img-wrap">
-      <img src="../assets/img/garum/garum-substitut.jpg"
-           alt="Nam pla — salsa de peix fermentat, substitut modern del garum"
-           onerror="this.parentElement.style.background='#e8e2d8'">
+    <div class="e-substitut-header">
+      <div class="e-substitut-header-img">
+        <img src="../assets/img/garum/garum-substitut.jpg"
+             alt="Nam pla — salsa de peix fermentat, substitut modern del garum"
+             onerror="this.parentElement.style.background='#f0ebe3'">
+      </div>
+      <div class="e-substitut-header-text">
+        <p class="e-substitut-intro t"
+          data-es="No puedes hacer garum en casa en dos días. Pero puedes usarlo. Estas son las mejores opciones modernas:"
+          data-ca="No pots fer garum a casa en dos dies. Però pots usar-lo. Aquestes són les millors opcions modernes:">
+          No puedes hacer garum en casa en dos días. Pero puedes usarlo. Estas son las mejores opciones modernas:
+        </p>
+      </div>
     </div>
-
-    <p class="e-substitut-intro t"
-      data-es="No puedes hacer garum en casa en dos días. Pero puedes usarlo. Estas son las mejores opciones modernas:"
-      data-ca="No pots fer garum a casa en dos dies. Però pots usar-lo. Aquestes són les millors opcions modernes:">
-      No puedes hacer garum en casa en dos días. Pero puedes usarlo. Estas son las mejores opciones modernas:
-    </p>
 
     <div class="e-substitut-items">
       <div class="e-substitut-item">
