@@ -21,11 +21,34 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---- Hamburger ---- */
   const hamburger = document.getElementById('hamburger');
 
+  function getNavHeight() {
+    return nav ? nav.getBoundingClientRect().height : 68;
+  }
+
+  function openMobileMenu() {
+    if (!mobileMenu || !hamburger) return;
+    nav.classList.add('solid');
+    nav.classList.add('menu-open');
+    mobileMenu.style.top = getNavHeight() + 'px';
+    mobileMenu.classList.add('open');
+    hamburger.classList.add('open');
+    /* Recalcular top si la nav canvia de mida (p.ex. en resize) */
+    mobileMenu._resizeHandler = () => {
+      mobileMenu.style.top = getNavHeight() + 'px';
+    };
+    window.addEventListener('resize', mobileMenu._resizeHandler, { passive: true });
+  }
+
   function closeMobileMenu() {
-    if (mobileMenu) mobileMenu.classList.remove('open');
-    if (hamburger)  hamburger.classList.remove('open');
-    if (nav)        nav.classList.remove('menu-open');
-    /* Tanca tots els submenús oberts */
+    if (mobileMenu) {
+      mobileMenu.classList.remove('open');
+      if (mobileMenu._resizeHandler) {
+        window.removeEventListener('resize', mobileMenu._resizeHandler);
+        mobileMenu._resizeHandler = null;
+      }
+    }
+    if (hamburger) hamburger.classList.remove('open');
+    if (nav)       nav.classList.remove('menu-open');
     document.querySelectorAll('.mobile-sub.open').forEach(s => s.classList.remove('open'));
     document.querySelectorAll('.mobile-item.expanded').forEach(s => s.classList.remove('expanded'));
   }
@@ -33,34 +56,20 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hamburger && mobileMenu) {
     hamburger.addEventListener('click', e => {
       e.stopPropagation();
-      const isOpen = mobileMenu.classList.contains('open');
-      if (isOpen) {
-        closeMobileMenu();
-      } else {
-        /* Forçar nav visible (solid) quan s'obre el menú */
-        nav.classList.add('solid');
-        nav.classList.add('menu-open');
-        /* Calcular top dinàmicament per si la nav té altura diferent */
-        const navH = nav.getBoundingClientRect().height;
-        mobileMenu.style.top = navH + 'px';
-        mobileMenu.classList.add('open');
-        hamburger.classList.add('open');
-      }
+      mobileMenu.classList.contains('open') ? closeMobileMenu() : openMobileMenu();
     });
 
-    /* Tanca en fer clic fora */
+    /* Tanca en fer clic fora — un sol listener, no s'acumula */
     document.addEventListener('click', e => {
-      if (nav && !nav.contains(e.target)) {
-        closeMobileMenu();
-      }
+      if (!mobileMenu.classList.contains('open')) return;
+      const clickDinsNav  = nav && nav.contains(e.target);
+      const clickDinsMenu = mobileMenu.contains(e.target);
+      if (!clickDinsNav && !clickDinsMenu) closeMobileMenu();
     });
 
-    /* Tanca automàticament quan es fa clic en un enllaç del menú mòbil */
+    /* Tanca en clicar un link del menú mòbil */
     mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        /* Petit delay perquè el navegador tingui temps de processar el href */
-        setTimeout(closeMobileMenu, 80);
-      });
+      link.addEventListener('click', () => setTimeout(closeMobileMenu, 80));
     });
   }
 
@@ -79,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* ---- Submenús mòbil ---- */
 function toggleMobileSub(btn) {
-  /* btn és el .mobile-item-toggle, el submenú és el germà del .mobile-item-row */
   const row  = btn.closest('.mobile-item-row');
   const sub  = row ? row.nextElementSibling : null;
   const item = btn.closest('.mobile-item');
@@ -87,7 +95,6 @@ function toggleMobileSub(btn) {
 
   const isOpen = sub.classList.contains('open');
 
-  /* Tanca tots els altres submenús oberts */
   document.querySelectorAll('.mobile-sub.open').forEach(s => {
     if (s !== sub) s.classList.remove('open');
   });
