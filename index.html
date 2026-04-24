@@ -85,6 +85,19 @@
 <link rel="stylesheet" href="assets/css/nav.css">
 <link rel="stylesheet" href="assets/css/hero.css">
 <link rel="stylesheet" href="assets/css/seccions.css">
+<style>
+/* ── Mobile menu fix: quan és fill de body ── */
+#mobileMenu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: none;
+  background: var(--cream, #f5f0e8);
+  box-shadow: 0 8px 32px rgba(28,46,62,.15);
+}
+#mobileMenu.open { display: block; }
+</style>
 </head>
 <body>
 
@@ -513,17 +526,46 @@ function setLang(lang) {
 
 document.addEventListener('DOMContentLoaded', function() {
   var nav = document.getElementById('nav');
-  if (nav) {
-    window.addEventListener('scroll', function() {
-      nav.classList.toggle('solid', window.scrollY > 50);
-    });
+  var menu = document.getElementById('mobileMenu');
+
+  // ── Moure el mobileMenu a body per evitar clipping del nav ──
+  if (menu && menu.parentNode !== document.body) {
+    document.body.appendChild(menu);
   }
+
+  // ── Funció per posicionar el menú just sota el nav ──
+  function positionMenu() {
+    if (!nav || !menu) return;
+    var rect = nav.getBoundingClientRect();
+    menu.style.top = rect.bottom + 'px';
+  }
+
+  // ── Scroll: solid nav + reposicionar menú si és obert ──
+  window.addEventListener('scroll', function() {
+    if (nav) nav.classList.toggle('solid', window.scrollY > 50);
+    if (menu && menu.classList.contains('open')) positionMenu();
+  });
+
+  // ── Hamburger ──
   var burger = document.getElementById('hamburger');
   if (burger) {
     burger.addEventListener('click', function() {
-      document.getElementById('mobileMenu').classList.toggle('open');
+      // Forçar nav solid abans de calcular la posició
+      if (nav) nav.classList.add('solid');
+      positionMenu();
+      menu.classList.toggle('open');
     });
   }
+
+  // ── Tancar el menú en clicar un enllaç ──
+  if (menu) {
+    menu.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        menu.classList.remove('open');
+      });
+    });
+  }
+
   if (currentLang === 'ca') setLang('ca');
 });
 </script>
