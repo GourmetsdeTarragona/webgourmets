@@ -1,9 +1,51 @@
 <!DOCTYPE html>
-<html lang="es" id="html-root">
+<html lang="ca" id="html-root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══════ SEO BÀSIC ═══════ -->
 <title>Política de Cookies · Gourmets de Tarragona</title>
+<meta name="description" content="Política de cookies del lloc web de l'Associació Gourmets de Tarragona. Només utilitzem una cookie tècnica per recordar la preferència d'idioma.">
+<meta name="keywords" content="politica cookies gourmets tarragona, cookies tecniques, preferencia idioma">
+<meta name="author" content="Gourmets de Tarragona">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://www.gourmetsdetarragona.com/pages/cookies.html">
+
+<!-- ═══════ OPEN GRAPH ═══════ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gourmetsdetarragona.com/pages/cookies.html">
+<meta property="og:title" content="Política de Cookies · Gourmets de Tarragona">
+<meta property="og:description" content="Política de cookies del lloc web de l'Associació Gourmets de Tarragona. Només utilitzem una cookie tècnica per recordar la preferència d'idioma.">
+<meta property="og:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Política de Cookies · Gourmets de Tarragona">
+<meta property="og:site_name" content="Gourmets de Tarragona">
+<meta property="og:locale" content="ca_ES">
+<meta property="og:locale:alternate" content="es_ES">
+
+<!-- ═══════ TWITTER CARD ═══════ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Política de Cookies · Gourmets de Tarragona">
+<meta name="twitter:description" content="Política de cookies del lloc web de l'Associació Gourmets de Tarragona. Només utilitzem una cookie tècnica per recordar la preferència d'idioma.">
+<meta name="twitter:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
+
+<!-- ═══════ STRUCTURED DATA ═══════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Política de Cookies · Gourmets de Tarragona",
+  "url": "https://www.gourmetsdetarragona.com/pages/cookies.html",
+  "inLanguage": ["ca", "es"],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Gourmets de Tarragona",
+    "url": "https://www.gourmetsdetarragona.com"
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/variables.css">
@@ -27,13 +69,13 @@
 const t = {
   es:{
     nav_inicio:'Inicio',nav_asoc:'La Asociación',nav_rest:'Restaurantes',
-    nav_premios:'Premios',nav_blog:'Blog Gourmet',nav_contacto:'Contacto',
+    nav_premios:'Premios',nav_eventos:'Eventos',nav_blog:'Blog Gourmet',nav_contacto:'Contacto',
     nav_quienes:'Quiénes somos',nav_como:'Cómo funcionamos',
-    nav_visites:'Visitas 2025-26',nav_gastronia:'Trofeo Gastronía',
-    nav_bacus:'Premio Baccus',nav_rest_short:'Restaurantes',nav_premios_short:'Premios',
+    nav_visites:'Visitas 2025-26',nav_gastronia:'Trofeo Gastronia',
+    nav_bacus:'Premio Bacus',nav_rest_short:'Restaurantes',nav_premios_short:'Premios',
     footer_desc:'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',
     footer_nav:'Navegación',footer_legal:'Legal',footer_contacte:'Contacto',
-    footer_avis:'Aviso Legal',footer_privacitat:'Política de Privacidad',
+    footer_avis:'Aviso Legal',footer_privacitat:'Política de Privacidad',footer_cookies:'Política de Cookies',
     footer_copy:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',
     legal_label:'Cookies',legal_title:'Política de Cookies',
     legal_contingut:`<h2>1. ¿Qué son las cookies?</h2>
@@ -47,13 +89,13 @@ const t = {
   },
   ca:{
     nav_inicio:'Inici',nav_asoc:"L'Associació",nav_rest:'Restaurants',
-    nav_premios:'Premis',nav_blog:'Blog Gourmet',nav_contacto:'Contacte',
+    nav_premios:'Premis',nav_eventos:'Esdeveniments',nav_blog:'Blog Gourmet',nav_contacto:'Contacte',
     nav_quienes:'Qui som',nav_como:'Com funcionem',
-    nav_visites:'Visites 2025-26',nav_gastronia:'Trofeu Gastronía',
+    nav_visites:'Visites 2025-26',nav_gastronia:'Trofeu Gastronia',
     nav_bacus:'Premi Bacus',nav_rest_short:'Restaurants',nav_premios_short:'Premis',
     footer_desc:"Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.",
     footer_nav:'Navegació',footer_legal:'Legal',footer_contacte:'Contacte',
-    footer_avis:'Avís Legal',footer_privacitat:'Política de Privacitat',
+    footer_avis:'Avís Legal',footer_privacitat:'Política de Privacitat',footer_cookies:'Política de Cookies',
     footer_copy:'© 2026 Gourmets de Tarragona · Tots els drets reservats',
     legal_label:'Cookies',legal_title:'Política de Cookies',
     legal_contingut:`<h2>1. Què són les cookies?</h2>
@@ -128,15 +170,15 @@ function setLang(lang) {
   <div class="legal-links">
     <a href="avis-legal.html" data-i18n="footer_avis"></a>
     <a href="privacitat.html" data-i18n="footer_privacitat"></a>
-    <a href="cookies.html">Cookies</a>
+    <a href="cookies.html" data-i18n="footer_cookies"></a>
     <a href="contacte.html" data-i18n="nav_contacto"></a>
   </div>
 </div>
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona"><p data-i18n="footer_desc"></p></div>
-    <div class="footer-col"><h4 data-i18n="footer_nav"></h4><ul><li><a href="associacio.html" data-i18n="nav_quienes"></a></li><li><a href="blog.html" data-i18n="nav_blog"></a></li><li><a href="contacte.html" data-i18n="nav_contacto"></a></li></ul></div>
-    <div class="footer-col"><h4 data-i18n="footer_legal"></h4><ul><li><a href="avis-legal.html" data-i18n="footer_avis"></a></li><li><a href="privacitat.html" data-i18n="footer_privacitat"></a></li><li><a href="cookies.html">Cookies</a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_nav"></h4><ul><li><a href="associacio.html" data-i18n="nav_quienes"></a></li><li><a href="restaurants.html" data-i18n="nav_rest_short"></a></li><li><a href="premis.html" data-i18n="nav_premios_short"></a></li><li><a href="esdeveniments.html" data-i18n="nav_eventos"></a></li><li><a href="blog.html" data-i18n="nav_blog"></a></li><li><a href="contacte.html" data-i18n="nav_contacto"></a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_legal"></h4><ul><li><a href="avis-legal.html" data-i18n="footer_avis"></a></li><li><a href="privacitat.html" data-i18n="footer_privacitat"></a></li><li><a href="cookies.html" data-i18n="footer_cookies"></a></li></ul></div>
     <div class="footer-col"><h4 data-i18n="footer_contacte"></h4><p>gourmetsdetarragona@gourmetsdetarragona.com</p></div>
   </div>
   <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
