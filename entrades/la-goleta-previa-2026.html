@@ -102,24 +102,68 @@
 <body>
 
 <!-- NAV -->
-<nav id="nav" class="solid">
+<nav id="nav">
   <div class="nav-inner">
-    <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona"></a>
+
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/img/logo.png"
+           alt="Gourmets de Tarragona"
+           onerror="this.src='https://gourmetsdetarragona.com/wp-content/uploads/2025/05/cropped-logo_gourmets_blau_sin_fondo-3-300x296.png'">
+    </a>
+
     <div class="nav-menu">
-      <div class="nav-item"><a href="../index.html" data-i18n="nav_inicio"></a></div>
-      <div class="nav-item"><span data-i18n="nav_asoc"></span><div class="dropdown"><a href="../pages/associacio.html" data-i18n="nav_quienes"></a><a href="../pages/associacio.html#funcionament" data-i18n="nav_como"></a></div></div>
-      <div class="nav-item"><span data-i18n="nav_rest"></span><div class="dropdown"><a href="../pages/restaurants.html" data-i18n="nav_visites"></a></div></div>
-      <div class="nav-item"><span data-i18n="nav_premios"></span><div class="dropdown"><a href="../pages/premis.html" data-i18n="nav_gastronia"></a><a href="../pages/premis.html#bacus" data-i18n="nav_bacus"></a></div></div>
-      <div class="nav-item"><a href="../pages/blog.html" data-i18n="nav_blog"></a></div>
-      <div class="nav-item"><a href="../pages/contacte.html" data-i18n="nav_contacto"></a></div>
+      <div class="nav-item">
+        <a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</span>
+        <div class="dropdown">
+          <a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a>
+          <a href="../pages/associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a>
+          <a href="../pages/associacio.html#valoracio" class="t" data-es="El sistema de valoración" data-ca="El sistema de valoració">El sistema de valoración</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span>
+        <div class="dropdown">
+          <a href="../pages/restaurants.html" class="t" data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visitas 2025–26</a>
+          <a href="../pages/restaurants.html#historic" class="t" data-es="Histórico de visitas" data-ca="Històric de visites">Histórico de visitas</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="Premios" data-ca="Premis">Premios</span>
+        <div class="dropdown">
+          <a href="../pages/premis.html" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</a>
+          <a href="../pages/premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a>
+          <a href="../pages/premis.html#palmares" class="t" data-es="Palmarés histórico" data-ca="Palmarès històric">Palmarés histórico</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</span>
+        <div class="dropdown">
+          <a href="../pages/esdeveniments.html" class="t" data-es="Cenas especiales" data-ca="Sopars especials">Cenas especiales</a>
+          <a href="../pages/esdeveniments.html#cates" class="t" data-es="Catas & Visitas" data-ca="Tasts & Visites">Catas & Visitas</a>
+          <a href="../pages/esdeveniments.html#calendari" class="t" data-es="Calendario" data-ca="Calendari">Calendario</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a>
+      </div>
+      <div class="nav-item">
+        <a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a>
+      </div>
     </div>
+
     <div class="nav-right">
       <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
       <span class="lang-sep">|</span>
       <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
-      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
+
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
     <div class="mobile-item"><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
@@ -286,18 +330,46 @@
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
-      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona">
-      <p data-i18n="footer_desc"></p>
+      <img src="../assets/img/logo.png"
+           alt="Gourmets de Tarragona"
+           onerror="this.style.display='none'">
+      <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucre.<br>Camp de Tarragona.</p>
       <div class="footer-social">
-        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
       </div>
     </div>
-    <div class="footer-col"><h4 data-i18n="footer_nav"></h4><ul><li><a href="../pages/associacio.html" data-i18n="nav_quienes"></a></li><li><a href="../pages/restaurants.html" data-i18n="nav_rest_short"></a></li><li><a href="../pages/premis.html" data-i18n="nav_premios_short"></a></li><li><a href="../pages/blog.html" data-i18n="nav_blog"></a></li></ul></div>
-    <div class="footer-col"><h4 data-i18n="footer_legal"></h4><ul><li><a href="#" data-i18n="footer_avis"></a></li><li><a href="#" data-i18n="footer_privacitat"></a></li></ul></div>
-    <div class="footer-col"><h4 data-i18n="footer_contacte"></h4><p>gourmetsdetarragona@gourmetsdetarragona.com</p><p>Tarragona, Catalunya</p></div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Navegación" data-ca="Navegació">Navegación</h4>
+      <ul>
+        <li><a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a></li>
+        <li><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li>
+        <li><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li>
+        <li><a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></li>
+        <li><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Legal" data-ca="Legal">Legal</h4>
+      <ul>
+        <li><a href="../pages/avis-legal.html" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li>
+        <li><a href="../pages/privacitat.html" class="t" data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a></li>
+        <li><a href="../pages/cookies.html" class="t" data-es="Política de Cookies" data-ca="Política de Cookies">Política de Cookies</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Contacto" data-ca="Contacte">Contacto</h4>
+      <p><a href="mailto:gourmetsdetarragona@gourmetsdetarragona.com">gourmetsdetarragona@gourmetsdetarragona.com</a></p>
+      <p>Tarragona, Catalunya</p>
+    </div>
   </div>
-  <div class="footer-bottom"><p data-i18n="footer_copy"></p></div>
+  <div class="footer-bottom">
+    <p class="t" data-es="© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados" data-ca="© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats">© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados</p>
+  </div>
 </footer>
 
 <script>
