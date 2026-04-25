@@ -25,43 +25,43 @@
 /* ── PRESENTACIÓ PREMIS ── */
 .premis-presentacio{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-bottom:0;}
 .premi-bloc{background:#fff;padding:80px 56px;text-align:center;}
-.premi-bloc-dark{background:var(--cream);}
+.premi-bloc-dark{background:var(--navy-dark);}
 .premi-ico{margin:0 auto 28px;width:120px;height:120px;display:flex;align-items:center;justify-content:center;}
 .premi-ico img{width:100%;height:100%;object-fit:contain;}
 .premi-ico-placeholder{font-size:3rem;opacity:.2;}
 .premi-nom{font-family:var(--font-serif);font-size:2rem;color:var(--navy-dark);margin-bottom:14px;font-weight:700;}
-.premi-bloc-dark .premi-nom{color:var(--navy-dark);}
+.premi-bloc-dark .premi-nom{color:#fff;}
 .premi-desc{font-size:.9rem;color:var(--muted);line-height:1.85;font-weight:300;max-width:380px;margin:0 auto;}
-.premi-bloc-dark .premi-desc{color:var(--muted);}
+.premi-bloc-dark .premi-desc{color:rgba(255,255,255,.55);}
 .premi-criteris{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
 .premi-criteri{font-size:.62rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;background:var(--cream);color:var(--navy);padding:5px 12px;}
-.premi-bloc-dark .premi-criteri{background:var(--cream2);color:var(--navy);}
+.premi-bloc-dark .premi-criteri{background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);}
 
 /* ── PALMARÈS 2025 ── */
-.palmares-2025{background:var(--cream2);padding:80px 4%;position:relative;overflow:hidden;}
-.palmares-2025::before{content:'2025';position:absolute;right:4%;top:50%;transform:translateY(-50%);font-family:var(--font-serif);font-size:12rem;font-weight:700;color:rgba(28,46,62,.04);line-height:1;pointer-events:none;}
+.palmares-2025{background:var(--navy-dark);padding:80px 4%;position:relative;overflow:hidden;}
+.palmares-2025::before{content:'2025';position:absolute;right:4%;top:50%;transform:translateY(-50%);font-family:var(--font-serif);font-size:12rem;font-weight:700;color:rgba(255,255,255,.03);line-height:1;pointer-events:none;}
 .palmares-inner{max-width:1100px;margin:0 auto;}
 .palmares-header{text-align:center;margin-bottom:64px;}
 .palmares-header .slabel{color:rgba(184,146,74,.8);}
-.palmares-header .stitle{color:var(--navy-dark);}
-.palmares-header p{color:var(--muted);font-size:.9rem;font-weight:300;line-height:1.8;margin-top:8px;}
+.palmares-header .stitle{color:#fff;}
+.palmares-header p{color:rgba(255,255,255,.45);font-size:.9rem;font-weight:300;line-height:1.8;margin-top:8px;}
 
 .palmares-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
-.palmares-card{background:#fff;padding:48px 44px;border:1px solid var(--border);position:relative;}
+.palmares-card{background:rgba(255,255,255,.04);padding:48px 44px;border:1px solid rgba(255,255,255,.07);position:relative;}
 .palmares-card-bacus{border-color:rgba(107,39,55,.5);background:rgba(107,39,55,.1);}
 .palmares-pos{
   position:absolute;top:24px;right:24px;
   font-family:var(--font-serif);font-size:3.5rem;font-weight:700;
-  color:rgba(28,46,62,.04);line-height:1;
+  color:rgba(255,255,255,.06);line-height:1;
 }
 .palmares-premi-label{
   font-size:.6rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
   color:rgba(184,146,74,.7);margin-bottom:16px;display:flex;align-items:center;gap:8px;
 }
 .palmares-premi-label::after{content:'';flex:1;height:1px;background:rgba(184,146,74,.2);}
-.palmares-rest{font-family:var(--font-serif);font-size:1.8rem;color:var(--navy-dark);font-weight:700;margin-bottom:6px;line-height:1.15;}
-.palmares-lloc{font-size:.8rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;}
-.palmares-desc{font-size:.88rem;color:var(--muted);font-weight:300;line-height:1.8;}
+.palmares-rest{font-family:var(--font-serif);font-size:1.8rem;color:#fff;font-weight:700;margin-bottom:6px;line-height:1.15;}
+.palmares-lloc{font-size:.8rem;color:rgba(255,255,255,.4);letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;}
+.palmares-desc{font-size:.88rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.8;}
 .palmares-badge{
   display:inline-flex;align-items:center;gap:8px;
   margin-top:20px;
@@ -388,7 +388,7 @@ function setLang(lang) {
         <img src="../assets/img/gala2025/trofeus.jpg" alt="Els tres trofeus de la temporada 2025" style="width:100%;height:100%;object-fit:cover;">
       </div>
     </div>
-    <p style="font-size:.72rem;color:var(--muted);text-align:center;margin-top:10px;font-style:italic;" data-i18n="p_gala_peu">Gala de entrega de premios 2025 · Vermuts Rofes · Reus</p>
+    <p style="font-size:.72rem;color:rgba(255,255,255,.3);text-align:center;margin-top:10px;font-style:italic;" data-i18n="p_gala_peu">Gala de entrega de premios 2025 · Vermuts Rofes · Reus</p>
   </div>
 </div>
 
