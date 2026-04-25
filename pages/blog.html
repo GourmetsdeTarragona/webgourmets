@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html lang="es" id="html-root">
+<html lang="ca" id="html-root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog Gourmet · Gourmets de Tarragona</title>
-<meta name="description" content="Blog gastronòmic de l'associació Gourmets de Tarragona. Prèvies, cròniques, notícies i vins del Camp de Tarragona.">
+
+<!-- ═══════ SEO BÀSIC ═══════ -->
+<title>Blog Gourmet · Gastronomia amb criteri — Gourmets de Tarragona</title>
+<meta name="description" content="Blog gastronòmic dels Gourmets de Tarragona: prèvies i cròniques de visites a restaurants, notícies, vins del Camp de Tarragona i curiositats culinàries.">
+<meta name="keywords" content="blog gourmets tarragona, blog gastronomic tarragona, croniques restaurants, previes restaurants, vins tarragona, romesco, garum, moretum">
+<meta name="author" content="Gourmets de Tarragona">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.gourmetsdetarragona.com/pages/blog.html">
+
+<!-- ═══════ OPEN GRAPH ═══════ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gourmetsdetarragona.com/pages/blog.html">
+<meta property="og:title" content="Blog Gourmet · Gourmets de Tarragona">
+<meta property="og:description" content="Prèvies, cròniques, notícies i vins del Camp de Tarragona. Tot el que envolta la taula dels Gourmets.">
+<meta property="og:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Blog Gourmet · Gourmets de Tarragona">
+<meta property="og:site_name" content="Gourmets de Tarragona">
+<meta property="og:locale" content="ca_ES">
+<meta property="og:locale:alternate" content="es_ES">
+
+<!-- ═══════ TWITTER CARD ═══════ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog Gourmet · Gourmets de Tarragona">
+<meta name="twitter:description" content="Prèvies, cròniques, notícies i vins del Camp de Tarragona.">
+<meta name="twitter:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
+
+<!-- ═══════ STRUCTURED DATA — Blog ═══════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog Gourmet — Gourmets de Tarragona",
+  "url": "https://www.gourmetsdetarragona.com/pages/blog.html",
+  "inLanguage": ["ca", "es"],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Gourmets de Tarragona",
+    "url": "https://www.gourmetsdetarragona.com"
+  }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -116,9 +158,10 @@ document.addEventListener('DOMContentLoaded', function() {
     <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona"></a>
     <div class="nav-menu">
       <div class="nav-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
-      <div class="nav-item"><span class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</span><div class="dropdown"><a href="associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a><a href="associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a></div></div>
-      <div class="nav-item"><span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span><div class="dropdown"><a href="restaurants.html" class="t" data-es="Visitas 2026" data-ca="Visites 2026">Visitas 2026</a></div></div>
-      <div class="nav-item"><span class="t" data-es="Premios" data-ca="Premis">Premios</span><div class="dropdown"><a href="premis.html" class="t" data-es="Trofeo Gastronía" data-ca="Trofeu Gastronía">Trofeo Gastronía</a><a href="premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a></div></div>
+      <div class="nav-item"><span class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</span><div class="dropdown"><a href="associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a><a href="associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a><a href="associacio.html#valoracio" class="t" data-es="El sistema de valoración" data-ca="El sistema de valoració">El sistema de valoración</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span><div class="dropdown"><a href="restaurants.html" class="t" data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visitas 2025–26</a><a href="restaurants.html#historic" class="t" data-es="Histórico de visitas" data-ca="Històric de visites">Histórico de visitas</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Premios" data-ca="Premis">Premios</span><div class="dropdown"><a href="premis.html" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</a><a href="premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a><a href="premis.html#palmares" class="t" data-es="Palmarés histórico" data-ca="Palmarès històric">Palmarés histórico</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</span><div class="dropdown"><a href="esdeveniments.html" class="t" data-es="Cenas especiales" data-ca="Sopars especials">Cenas especiales</a><a href="esdeveniments.html#cates" class="t" data-es="Catas & Visitas" data-ca="Tasts & Visites">Catas & Visitas</a><a href="esdeveniments.html#calendari" class="t" data-es="Calendario" data-ca="Calendari">Calendario</a></div></div>
       <div class="nav-item"><a href="blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
       <div class="nav-item"><a href="contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
     </div>
@@ -134,6 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="mobile-item"><a href="associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
     <div class="mobile-item"><a href="restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
     <div class="mobile-item"><a href="premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></div>
+    <div class="mobile-item"><a href="esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></div>
     <div class="mobile-item"><a href="blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
     <div class="mobile-item"><a href="contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
     <div class="mobile-lang">
@@ -158,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span class="t" data-es="Todos" data-ca="Tots">Todos</span>
-      <span class="filtre-n">14</span>
+      <span class="filtre-n">13</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot" style="background:var(--navy);"></span>
@@ -168,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <button class="filtre-btn" data-cat="cronica" onclick="filterEntrades('cronica')">
       <span class="filtre-dot" style="background:var(--gold);"></span>
       <span class="t" data-es="Crónicas" data-ca="Cròniques">Crónicas</span>
-      <span class="filtre-n">3</span>
+      <span class="filtre-n">2</span>
     </button>
     <button class="filtre-btn" data-cat="noticia" onclick="filterEntrades('noticia')">
       <span class="filtre-dot" style="background:#555;"></span>
@@ -250,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <span class="blog-card-cat cat-cronica t" data-es="Crónica" data-ca="Crònica">Crónica</span>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-meta"><span class="blog-card-data">Marzo 2026</span></div>
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Marzo 2026" data-ca="Març 2026">Marzo 2026</span></div>
         <h3 class="blog-card-title t" data-es='Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica de la 1ª visita</small>' data-ca='Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crònica de la 1a visita</small>'>Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica de la 1ª visita</small></h3>
         <p class="blog-card-exc t" data-es="Brasa, producto de calidad y coctelería diferencial. Crónica completa de la primera visita de la temporada 2026." data-ca="Brasa, producte de qualitat i cocteleria diferencial. Crònica completa de la primera visita de la temporada 2026.">Brasa, producto de calidad y coctelería diferencial. Crónica completa de la primera visita de la temporada 2026.</p>
         <a href="../entrades/kema-cronica-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
@@ -264,7 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <span class="blog-card-cat cat-previa t" data-es="Previa" data-ca="Prèvia">Previa</span>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-meta"><span class="blog-card-data">Febrero 2026</span></div>
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Febrero 2026" data-ca="Febrer 2026">Febrero 2026</span></div>
         <h3 class="blog-card-title t" data-es='Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa de la 1ª visita</small>' data-ca='Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Prèvia de la 1a visita</small>'>Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa de la 1ª visita</small></h3>
         <p class="blog-card-exc t" data-es="Una propuesta 360° donde el fuego manda. Todo lo que había que saber antes de la primera visita de la temporada." data-ca="Una proposta 360° on el foc mana. Tot el que calia saber abans de la primera visita de la temporada.">Una propuesta 360° donde el fuego manda. Todo lo que había que saber antes de la primera visita de la temporada.</p>
         <a href="../entrades/kema-previa-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
@@ -306,7 +350,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <span class="blog-card-cat cat-noticia t" data-es="Noticia" data-ca="Notícia">Noticia</span>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-meta"><span class="blog-card-data">Marzo 2026</span></div>
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Marzo 2026" data-ca="Març 2026">Marzo 2026</span></div>
         <h3 class="blog-card-title t" data-es="La Goleta celebra 40 años" data-ca="La Goleta celebra 40 anys">La Goleta celebra 40 años</h3>
         <p class="blog-card-exc t" data-es="El restaurante de la Platja dels Capellans cumple cuatro décadas. Un referente de la Costa Daurada que ha sabido mantenerse fiel a sus principios." data-ca="El restaurant de la Platja dels Capellans compleix quatre dècades. Un referent de la Costa Daurada que ha sabut mantenir-se fidel als seus principis.">El restaurante de la Platja dels Capellans cumple cuatro décadas. Un referente de la Costa Daurada que ha sabido mantenerse fiel a sus principios.</p>
         <a href="../entrades/la-goleta-previa-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
@@ -379,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
       <div class="blog-card-body">
         <div class="blog-card-meta"><span class="blog-card-data">2026</span></div>
-        <h3 class="blog-card-title t" data-es="¿Quién es... Gastronía?" data-ca="Qui és... Gastronía?">¿Quién es... Gastronía?</h3>
+        <h3 class="blog-card-title t" data-es="¿Quién es... Gastronia?" data-ca="Qui és... Gastronia?">¿Quién es... Gastronia?</h3>
         <p class="blog-card-exc t" data-es="El nombre, el trofeo, el proceso de votación y el palmarés de los galardonados. Todo lo que hay que saber sobre el máximo reconocimiento de los Gourmets de Tarragona." data-ca="El nom, el trofeu, el procés de votació i el palmarès dels guardonats. Tot el que cal saber sobre el màxim reconeixement dels Gourmets de Tarragona.">El nombre, el trofeo, el proceso de votación y el palmarés de los galardonados. Todo lo que hay que saber sobre el máximo reconocimiento de los Gourmets de Tarragona.</p>
         <a href="../entrades/que-es-la-gastronia.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
@@ -394,7 +438,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="blog-card-body">
         <div class="blog-card-meta"><span class="blog-card-data">2025</span></div>
         <h3 class="blog-card-title t" data-es='Gala de Premios 2025<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Vermuts Rofes · Reus</small>' data-ca='Gala de Premis 2025<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Vermuts Rofes · Reus</small>'>Gala de Premios 2025<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Vermuts Rofes · Reus</small></h3>
-        <p class="blog-card-exc t" data-es="Buidasacs y Cambium, Trofeos Gastronía. Cirerets de Mas Alta, Premio Bacus. Una noche de reconocimiento y emoción en el Camp de Tarragona." data-ca="Buidasacs i Cambium, Trofeus Gastronia. Cirerets de Mas Alta, Premi Bacus. Una nit de reconeixement i emoció al Camp de Tarragona.">Buidasacs y Cambium, Trofeos Gastronía. Cirerets de Mas Alta, Premio Bacus. Una noche de reconocimiento y emoción en el Camp de Tarragona.</p>
+        <p class="blog-card-exc t" data-es="Buidasacs y Cambium, Trofeos Gastronia. Cirerets de Mas Alta, Premio Bacus. Una noche de reconocimiento y emoción en el Camp de Tarragona." data-ca="Buidasacs i Cambium, Trofeus Gastronia. Cirerets de Mas Alta, Premi Bacus. Una nit de reconeixement i emoció al Camp de Tarragona.">Buidasacs y Cambium, Trofeos Gastronia. Cirerets de Mas Alta, Premio Bacus. Una noche de reconocimiento y emoción en el Camp de Tarragona.</p>
         <a href="../entrades/gala-premis-2025.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
@@ -470,14 +514,16 @@ document.addEventListener('DOMContentLoaded', function() {
         <li><a href="associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a></li>
         <li><a href="restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li>
         <li><a href="premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li>
+        <li><a href="esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></li>
         <li><a href="blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4 class="t" data-es="Legal" data-ca="Legal">Legal</h4>
       <ul>
-        <li><a href="#" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li>
-        <li><a href="#" class="t" data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a></li>
+        <li><a href="avis-legal.html" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li>
+        <li><a href="privacitat.html" class="t" data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a></li>
+        <li><a href="cookies.html" class="t" data-es="Política de Cookies" data-ca="Política de Cookies">Política de Cookies</a></li>
       </ul>
     </div>
     <div class="footer-col">
