@@ -1,9 +1,57 @@
 <!DOCTYPE html>
-<html lang="es" id="html-root">
+<html lang="ca" id="html-root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Asociación · Gourmets de Tarragona</title>
+
+<!-- ═══════ SEO BÀSIC ═══════ -->
+<title>L'Associació · Gourmets de Tarragona — Qui som i com funcionem</title>
+<meta name="description" content="Coneix l'Associació Gourmets de Tarragona: qui som, com funciona cada visita i el sistema de valoració del Trofeu Gastronia i el Premi Bacus.">
+<meta name="keywords" content="associació gourmets tarragona, qui som gourmets tarragona, junta gourmets, estatuts associació gastronòmica, sistema valoració restaurants, premi gastronia, premi bacus">
+<meta name="author" content="Gourmets de Tarragona">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.gourmetsdetarragona.com/pages/associacio.html">
+
+<!-- ═══════ OPEN GRAPH ═══════ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gourmetsdetarragona.com/pages/associacio.html">
+<meta property="og:title" content="L'Associació · Gourmets de Tarragona">
+<meta property="og:description" content="Qui som i com funcionem: el procés de cada visita, el sistema de valoració i els premis Gastronia i Bacus.">
+<meta property="og:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Socis de Gourmets de Tarragona en una visita">
+<meta property="og:site_name" content="Gourmets de Tarragona">
+<meta property="og:locale" content="ca_ES">
+<meta property="og:locale:alternate" content="es_ES">
+
+<!-- ═══════ TWITTER CARD ═══════ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="L'Associació · Gourmets de Tarragona">
+<meta name="twitter:description" content="Qui som i com funcionem: el procés de cada visita i el sistema de valoració.">
+<meta name="twitter:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
+
+<!-- ═══════ STRUCTURED DATA — AboutPage ═══════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "L'Associació · Gourmets de Tarragona",
+  "url": "https://www.gourmetsdetarragona.com/pages/associacio.html",
+  "inLanguage": ["ca", "es"],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Gourmets de Tarragona",
+    "url": "https://www.gourmetsdetarragona.com"
+  },
+  "about": {
+    "@type": "Organization",
+    "name": "Gourmets de Tarragona",
+    "foundingDate": "2001"
+  }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -268,7 +316,6 @@ const t = {
   footer_avis:{es:'Aviso Legal',ca:'Avís Legal'},
   footer_privacitat:{es:'Política de Privacidad',ca:'Política de Privacitat'},
   footer_copy:{es:'© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados',ca:'© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats'},
-  nav_eventos_short:{es:'Eventos',ca:'Esdeveniments'},
   asoc_hero_label:{es:'La Asociación',ca:"L'Associació"},
   asoc_hero_title:{es:'Quiénes somos y cómo funcionamos',ca:'Qui som i com funcionem'},
   asoc_hero_desc:{es:'Una comunidad de apasionados de la gastronomía que se reúnen para descubrir, valorar y celebrar lo mejor de la cocina tarraconense.',ca:"Una comunitat d'apassionats de la gastronomia que es reuneixen per descobrir, valorar i celebrar el millor de la cuina tarragonina."},
@@ -316,19 +363,19 @@ const t = {
   salut_text:{es:'Bienvenidos a Gourmets de Tarragona. Nuestra asociación nació de una pasión compartida: la gastronomía como forma de conocer el territorio, sus gentes y su cultura. A lo largo de los años hemos construido una comunidad comprometida con la honestidad, el rigor y el placer de la buena mesa. Espero que este espacio os inspire tanto como nos inspira a nosotros.',ca:"Benvinguts a Gourmets de Tarragona. La nostra associació va néixer d'una passió compartida: la gastronomia com a forma de conèixer el territori, les seves gents i la seva cultura. Al llarg dels anys hem construït una comunitat compromesa amb l'honestedat, el rigor i el plaer de la bona taula. Espero que aquest espai us inspiri tant com ens inspira a nosaltres."},
   salut_carrec:{es:'Presidente · Gourmets de Tarragona',ca:'President · Gourmets de Tarragona'},
   missio_label:{es:'Nuestra misión',ca:'La nostra missió'},
-  missio_title:{es:'El arte de descubrir la buena mesa',ca:"L'art de descobrir la bona taula"},
-  missio_p1:{es:'Gourmets de Tarragona nace del respeto profundo por la gastronomía del Camp de Tarragona y por todas las personas que, con su trabajo diario y su pasión, hacen posible que nuestro territorio siga creciendo culinariamente.',ca:"Gourmets de Tarragona neix del respecte profund per la gastronomia del Camp de Tarragona i per totes les persones que, amb el seu treball diari i la seva passió, fan possible que el nostre territori continuï creixent culinàriament."},
-  missio_p2:{es:'Somos gourmets independientes que creen en el poder de la gastronomía para unir personas, territorios y tradiciones. Nuestro compromiso ha sido siempre mantener una mirada honesta, constructiva y vinculada al producto local.',ca:"Som gourmets independents que creuen en el poder de la gastronomia per unir persones, territoris i tradicions. El nostre compromís ha estat sempre mantenir una mirada honesta, constructiva i vinculada al producte local."},
+  missio_title:{es:'Conocer el territorio a través de su cocina',ca:"Conèixer el territori a través de la seva cuina"},
+  missio_p1:{es:'Gourmets de Tarragona nace del respeto por la gastronomía del Camp de Tarragona y por las personas que la sostienen cada día: cocineros, sumilleres, productores, sala.',ca:"Gourmets de Tarragona neix del respecte per la gastronomia del Camp de Tarragona i per les persones que la sostenen cada dia: cuiners, sommeliers, productors, sala."},
+  missio_p2:{es:'Somos gourmets independientes. No vivimos de esto, lo hacemos por afición, y precisamente por eso podemos mantener una mirada honesta y vinculada al producto local.',ca:"Som gourmets independents. No vivim d'això, ho fem per afició, i precisament per això podem mantenir una mirada honesta i vinculada al producte local."},
   missio_p3:{es:'Promovemos la gastronomía del Camp de Tarragona poniendo en valor el producto, la restauración y las personas que sostienen el sector día a día.',ca:"Promovem la gastronomia del Camp de Tarragona posant en valor el producte, la restauració i les persones que sostenen el sector dia a dia."},
   missio_cta:{es:'Contactar con nosotros',ca:'Contactar amb nosaltres'},
   proceso_label:{es:'El proceso',ca:'El procés'},
   proceso_title:{es:'Cómo funciona cada visita',ca:'Com funciona cada visita'},
-  proceso_desc:{es:'Cada visita de los Gourmets sigue un proceso pensado para unir rigor, transparencia y cultura gastronómica. Desde la selección hasta la entrega de premios, todo se hace con criterio compartido.',ca:"Cada visita dels Gourmets segueix un procés pensat per unir rigor, transparència i cultura gastronòmica. Des de la selecció fins al lliurament de premis, tot es fa amb criteri compartit."},
+  proceso_desc:{es:'Cada visita de los Gourmets sigue un proceso compartido: desde cómo elegimos los restaurantes hasta cómo entregamos los premios.',ca:"Cada visita dels Gourmets segueix un procés compartit: des de com triem els restaurants fins a com lliurem els premis."},
 
   // Pas 1 - Selecció
   paso1_title:{es:'Selección',ca:'Selecció'},
   paso1_meta:{es:'~8 restaurantes/año',ca:'~8 restaurants/any'},
-  paso1_desc:{es:'El comité de la asociación selecciona cada temporada una <strong>decena de restaurantes del Camp de Tarragona</strong>, buscando variedad de cocinas, estilos y niveles. No se busca llenar un mapa, sino ofrecer un recorrido coherente: desde la cocina de producto más clásica hasta las propuestas más creativas del territorio.',ca:"El comitè de l'associació selecciona cada temporada una <strong>desena de restaurants del Camp de Tarragona</strong>, buscant varietat de cuines, estils i nivells. No es busca omplir un mapa, sinó oferir un recorregut coherent: des de la cuina de producte més clàssica fins a les propostes més creatives del territori."},
+  paso1_desc:{es:'El comité de la asociación selecciona cada temporada <strong>ocho restaurantes del Camp de Tarragona</strong>, buscando variedad de cocinas, estilos y niveles. No se busca llenar un mapa, sino ofrecer un recorrido coherente: desde la cocina de producto más clásica hasta las propuestas más creativas del territorio.',ca:"El comitè de l'associació selecciona cada temporada <strong>vuit restaurants del Camp de Tarragona</strong>, buscant varietat de cuines, estils i nivells. No es busca omplir un mapa, sinó oferir un recorregut coherent: des de la cuina de producte més clàssica fins a les propostes més creatives del territori."},
   paso1_quote:{es:'El criterio es siempre el mismo: mesa, producto y territorio.',ca:'El criteri és sempre el mateix: taula, producte i territori.'},
 
   // Pas 2 - Prèvia
@@ -355,7 +402,7 @@ const t = {
   // Pas 6 - Premis
   paso6_title:{es:'Premios',ca:'Premis'},
   paso6_meta:{es:'Gala anual · febrero',ca:'Gala anual · febrer'},
-  paso6_desc:{es:'Al cierre del recorrido se suman las puntuaciones acumuladas y se otorgan el <strong>Trofeo Gastronia</strong> al mejor restaurante del año y el <strong>Premio Bacus</strong> a la mejor carta de vinos. Se entregan en una gala pública a la que invitamos a los restaurantes premiados y a nuestros colaboradores.',ca:"Al tancament del recorregut se sumen les puntuacions acumulades i s'atorguen el <strong>Trofeu Gastronia</strong> al millor restaurant de l'any i el <strong>Premi Bacus</strong> a la millor carta de vins. Es lliuren en una gala pública on convidem als restaurants premiats i als nostres col·laboradors."},
+  paso6_desc:{es:'Al cierre del recorrido se suman las puntuaciones acumuladas y se otorgan el <strong>Trofeo Gastronia</strong> al mejor restaurante del año y el <strong>Premio Bacus</strong> al mejor vino. Se entregan en una gala pública a la que invitamos a los restaurantes premiados y a nuestros colaboradores.',ca:"Al tancament del recorregut se sumen les puntuacions acumulades i s'atorguen el <strong>Trofeu Gastronia</strong> al millor restaurant de l'any i el <strong>Premi Bacus</strong> al millor vi. Es lliuren en una gala pública on convidem als restaurants premiats i als nostres col·laboradors."},
 
   // Cita final
   proceso_closing:{es:'Una temporada, un recorrido, un territorio.',ca:'Una temporada, un recorregut, un territori.'},
@@ -387,11 +434,11 @@ const t = {
   gastronia_winner_meta_3:{es:'Baix Camp',ca:'Baix Camp'},
 
   // FOTO BADGE GASTRONIA
-  gastronia_photo_label:{es:'El arte del oficio',ca:"L'art de l'ofici"},
+  gastronia_photo_label:{es:'El emplatado',ca:"L'emplatat"},
   gastronia_photo_text:{es:'El emplatado como expresión final',ca:"L'emplatat com a expressió final"},
   bacus_val_label:{es:'Premio Bacus · Mejor vino de la temporada',ca:'Premi Bacus · Millor vi de la temporada'},
-  bacus_val_title:{es:'Un reconocimiento al arte del vino',ca:'Un reconeixement a l\'art del vi'},
-  bacus_val_desc:{es:'En cada visita valoramos los vinos del maridaje con una puntuación global. El vino que acumula la mejor puntuación a lo largo del recorrido anual recibe el <strong>Premio Bacus</strong> a la gala de entrega.',ca:"En cada visita valorem els vins del maridatge amb una puntuació global. El vi que acumula la millor puntuació al llarg del recorregut anual rep el <strong>Premi Bacus</strong> a la gala de lliurament."},
+  bacus_val_title:{es:'Un premio para el vino que más nos sorprendió',ca:'Un premi per al vi que més ens va sorprendre'},
+  bacus_val_desc:{es:'En cada visita valoramos los vinos del maridaje con una puntuación global. El vino que acumula la mejor puntuación a lo largo del recorrido anual recibe el <strong>Premio Bacus</strong> en la gala de entrega.',ca:"En cada visita valorem els vins del maridatge amb una puntuació global. El vi que acumula la millor puntuació al llarg del recorregut anual rep el <strong>Premi Bacus</strong> a la gala de lliurament."},
   bacus_val_desc2:{es:'La bodega ganadora es <strong>invitada de honor</strong> en la Cena de Entrega de Premios, donde comparte mesa con socios, restauradores y prensa gastronómica.',ca:"El celler guanyador és <strong>convidat d'honor</strong> al Sopar de Lliurament de Premis, on comparteix taula amb socis, restauradors i premsa gastronòmica."},
 
   // GUANYADOR ACTUAL
@@ -402,7 +449,7 @@ const t = {
   bacus_winner_meta_3:{es:'La Vilella Alta',ca:'La Vilella Alta'},
 
   // FOTO BADGE
-  bacus_photo_label:{es:'El alma del vino',ca:"L'ànima del vi"},
+  bacus_photo_label:{es:'La uva',ca:"El raïm"},
   bacus_photo_text:{es:'Uva garnacha del Priorat',ca:'Raïm garnatxa del Priorat'},
   junta_label:{es:'La Junta',ca:'La Junta'},
   junta_title:{es:'Quienes llevan el timón',ca:'Qui porta el timó'},
@@ -495,7 +542,6 @@ function setLang(lang) {
     <p class="slabel" data-i18n="asoc_hero_label"></p>
     <h1 class="stitle" data-i18n="asoc_hero_title"></h1>
     <p class="page-hero-desc" data-i18n="asoc_hero_desc"></p>
-  </div>
   </div>
 </div>
 
