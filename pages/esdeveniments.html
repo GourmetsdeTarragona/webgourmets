@@ -1,10 +1,56 @@
 <!DOCTYPE html>
-<html lang="es" id="html-root">
+<html lang="ca" id="html-root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Esdeveniments · Gourmets de Tarragona</title>
-<meta name="description" content="Agenda d'esdeveniments dels Gourmets de Tarragona. Cata de vins, sopar d'estiu i sopar de Nadal.">
+
+<!-- ═══════ SEO BÀSIC ═══════ -->
+<title>Esdeveniments · Gourmets de Tarragona — Agenda 2026</title>
+<meta name="description" content="L'agenda dels Gourmets de Tarragona: tast de vins DO Tarragona, sopar d'estiu i sopar de Nadal 2026 amb el lliurament del Trofeu Gastronia i el Premi Bacus.">
+<meta name="keywords" content="esdeveniments gourmets tarragona, agenda gourmets, tast vins do tarragona, sopar estiu, sopar nadal, gala premis gastronia bacus">
+<meta name="author" content="Gourmets de Tarragona">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.gourmetsdetarragona.com/pages/esdeveniments.html">
+
+<!-- ═══════ OPEN GRAPH ═══════ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gourmetsdetarragona.com/pages/esdeveniments.html">
+<meta property="og:title" content="Esdeveniments · Gourmets de Tarragona — Agenda 2026">
+<meta property="og:description" content="Tast de vins DO Tarragona, sopar d'estiu i sopar de Nadal 2026 amb el lliurament dels premis Gastronia i Bacus.">
+<meta property="og:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Esdeveniments dels Gourmets de Tarragona">
+<meta property="og:site_name" content="Gourmets de Tarragona">
+<meta property="og:locale" content="ca_ES">
+<meta property="og:locale:alternate" content="es_ES">
+
+<!-- ═══════ TWITTER CARD ═══════ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Esdeveniments · Gourmets de Tarragona — Agenda 2026">
+<meta name="twitter:description" content="Tast de vins, sopar d'estiu i sopar de Nadal 2026.">
+<meta name="twitter:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
+
+<!-- ═══════ STRUCTURED DATA — CollectionPage ═══════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Esdeveniments — Gourmets de Tarragona",
+  "url": "https://www.gourmetsdetarragona.com/pages/esdeveniments.html",
+  "inLanguage": ["ca", "es"],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Gourmets de Tarragona",
+    "url": "https://www.gourmetsdetarragona.com"
+  },
+  "about": {
+    "@type": "Organization",
+    "name": "Gourmets de Tarragona"
+  }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -44,21 +90,21 @@
 const t = {
   es:{
     nav_inicio:'Inicio',nav_asoc:'La Asociación',nav_rest:'Restaurantes',
-    nav_premios:'Premios',nav_events:'Eventos',nav_blog:'Blog Gourmet',nav_contacto:'Contacto',
+    nav_premios:'Premios',nav_eventos:'Eventos',nav_blog:'Blog Gourmet',nav_contacto:'Contacto',
     nav_quienes:'Quiénes somos',nav_como:'Cómo funcionamos',
-    nav_visites:'Visitas 2025–26',nav_gastronia:'Trofeo Gastronía',
-    nav_bacus:'Premio Baccus',nav_rest_short:'Restaurantes',nav_premios_short:'Premios',
+    nav_visites:'Visitas 2025–26',nav_gastronia:'Trofeo Gastronia',
+    nav_bacus:'Premio Bacus',nav_rest_short:'Restaurantes',nav_premios_short:'Premios',
     footer_desc:'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',
     footer_nav:'Navegación',footer_legal:'Legal',footer_contacte:'Contacto',
-    footer_avis:'Aviso Legal',footer_privacitat:'Política de Privacidad',
+    footer_avis:'Aviso Legal',footer_privacitat:'Política de Privacidad',footer_cookies:'Política de Cookies',
     footer_copy:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',
     ev_label:'Agenda 2026',
     ev_title:'Próximos Eventos',
-    ev_desc:'Los encuentros anuales de la asociación. Gastronomía, vino y buena compañía.',
+    ev_desc:'Los encuentros anuales de la asociación: cata de vinos, cena de verano y cena de Navidad.',
     ev1_badge:'Cata',
     ev1_date:'Data per determinar',
     ev1_title:'Cata de Vinos DO Tarragona',
-    ev1_desc:'Una noche de descubrimiento a través de los mejores caldos de la DO Tarragona. Fecha y lugar por confirmar.',
+    ev1_desc:'Una noche de descubrimiento a través de los mejores vinos de la DO Tarragona. Fecha y lugar por confirmar.',
     ev1_loc:'Camp de Tarragona',
     ev2_badge:'Cena',
     ev2_date:'Julio 2026',
@@ -68,23 +114,23 @@ const t = {
     ev3_badge:'Gala',
     ev3_date:'Diciembre 2026',
     ev3_title:'Cena de Navidad 2026',
-    ev3_desc:'Cena de cierre de la temporada 2026. La entrega del Trofeo Gastronía y el Premio Baccus se celebrará en febrero de 2027.',
+    ev3_desc:'Cena de cierre de la temporada 2026. La entrega del Trofeo Gastronia y el Premio Bacus se celebrará en febrero de 2027.',
     ev3_loc:'Por determinar',
     ev_nota:'La información de fechas y lugares se actualizará a medida que se confirme. Síguenos en Instagram para estar al día.',
   },
   ca:{
     nav_inicio:'Inici',nav_asoc:"L'Associació",nav_rest:'Restaurants',
-    nav_premios:'Premis',nav_events:'Esdeveniments',nav_blog:'Blog Gourmet',nav_contacto:'Contacte',
+    nav_premios:'Premis',nav_eventos:'Esdeveniments',nav_blog:'Blog Gourmet',nav_contacto:'Contacte',
     nav_quienes:'Qui som',nav_como:'Com funcionem',
-    nav_visites:'Visites 2025–26',nav_gastronia:'Trofeu Gastronía',
+    nav_visites:'Visites 2025–26',nav_gastronia:'Trofeu Gastronia',
     nav_bacus:'Premi Bacus',nav_rest_short:'Restaurants',nav_premios_short:'Premis',
     footer_desc:"Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.",
     footer_nav:'Navegació',footer_legal:'Legal',footer_contacte:'Contacte',
-    footer_avis:'Avís Legal',footer_privacitat:'Política de Privacitat',
+    footer_avis:'Avís Legal',footer_privacitat:'Política de Privacitat',footer_cookies:'Política de Cookies',
     footer_copy:'© 2026 Gourmets de Tarragona · Tots els drets reservats',
     ev_label:'Agenda 2026',
     ev_title:'Propers Esdeveniments',
-    ev_desc:"Les trobades anuals de l'associació. Gastronomia, vi i bona companyia.",
+    ev_desc:"Les trobades anuals de l'associació: tast de vins, sopar d'estiu i sopar de Nadal.",
     ev1_badge:'Tast',
     ev1_date:'Data per determinar',
     ev1_title:'Tast de Vins DO Tarragona',
@@ -98,7 +144,7 @@ const t = {
     ev3_badge:'Gala',
     ev3_date:'Desembre 2026',
     ev3_title:'Sopar de Nadal 2026',
-    ev3_desc:"Sopar de tancament de la temporada 2026. El lliurament del Trofeu Gastronía i el Premi Bacus se celebrarà el febrer de 2027.",
+    ev3_desc:"Sopar de tancament de la temporada 2026. El lliurament del Trofeu Gastronia i el Premi Bacus es celebrarà el febrer de 2027.",
     ev3_loc:'Per determinar',
     ev_nota:"La informació de dates i llocs s'actualitzarà a mesura que es confirmi. Segueix-nos a Instagram per estar al dia.",
   }
@@ -131,7 +177,7 @@ function setLang(lang) {
       <div class="nav-item"><span data-i18n="nav_asoc"></span><div class="dropdown"><a href="associacio.html" data-i18n="nav_quienes"></a><a href="associacio.html#funcionament" data-i18n="nav_como"></a></div></div>
       <div class="nav-item"><span data-i18n="nav_rest"></span><div class="dropdown"><a href="restaurants.html" data-i18n="nav_visites"></a></div></div>
       <div class="nav-item"><span data-i18n="nav_premios"></span><div class="dropdown"><a href="premis.html" data-i18n="nav_gastronia"></a><a href="premis.html#bacus" data-i18n="nav_bacus"></a></div></div>
-      <div class="nav-item"><a href="esdeveniments.html" data-i18n="nav_events"></a></div>
+      <div class="nav-item"><a href="esdeveniments.html" data-i18n="nav_eventos"></a></div>
       <div class="nav-item"><a href="blog.html" data-i18n="nav_blog"></a></div>
       <div class="nav-item"><a href="contacte.html" data-i18n="nav_contacto"></a></div>
     </div>
