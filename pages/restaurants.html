@@ -1,10 +1,56 @@
 <!DOCTYPE html>
-<html lang="es" id="html-root">
+<html lang="ca" id="html-root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Restaurantes · Gourmets de Tarragona</title>
-<meta name="description" content="Recorrido gastronómico de los Gourmets de Tarragona. Visitas 2026 y historial de temporadas anteriores.">
+
+<!-- ═══════ SEO BÀSIC ═══════ -->
+<title>Restaurants · Gourmets de Tarragona — Recorregut 2026 i històric de visites</title>
+<meta name="description" content="El recorregut gastronòmic dels Gourmets de Tarragona: vuit restaurants per temporada, cròniques de cada visita i històric de temporades anteriors.">
+<meta name="keywords" content="restaurants gourmets tarragona, recorregut 2026, visites restaurants tarragona, kema cambrils, la goleta salou, el terrat tarragona, restaurants camp de tarragona">
+<meta name="author" content="Gourmets de Tarragona">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.gourmetsdetarragona.com/pages/restaurants.html">
+
+<!-- ═══════ OPEN GRAPH ═══════ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gourmetsdetarragona.com/pages/restaurants.html">
+<meta property="og:title" content="Restaurants · Gourmets de Tarragona — Recorregut 2026">
+<meta property="og:description" content="Vuit restaurants per temporada al Camp de Tarragona. Cròniques de cada visita i històric de temporades anteriors.">
+<meta property="og:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Restaurants visitats pels Gourmets de Tarragona">
+<meta property="og:site_name" content="Gourmets de Tarragona">
+<meta property="og:locale" content="ca_ES">
+<meta property="og:locale:alternate" content="es_ES">
+
+<!-- ═══════ TWITTER CARD ═══════ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Restaurants · Gourmets de Tarragona — Recorregut 2026">
+<meta name="twitter:description" content="Vuit restaurants per temporada al Camp de Tarragona. Cròniques i històric.">
+<meta name="twitter:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
+
+<!-- ═══════ STRUCTURED DATA — CollectionPage ═══════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Restaurants · Recorregut 2026 — Gourmets de Tarragona",
+  "url": "https://www.gourmetsdetarragona.com/pages/restaurants.html",
+  "inLanguage": ["ca", "es"],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Gourmets de Tarragona",
+    "url": "https://www.gourmetsdetarragona.com"
+  },
+  "about": {
+    "@type": "Organization",
+    "name": "Gourmets de Tarragona"
+  }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -88,70 +134,6 @@
 </style>
 
 <script>
-const t = {
-  es:{
-    nav_inicio:'Inicio',nav_asoc:'La Asociación',nav_rest:'Restaurantes',
-    nav_premios:'Premios',nav_blog:'Blog Gourmet',nav_contacto:'Contacto',
-    nav_quienes:'Quiénes somos',nav_como:'Cómo funcionamos',
-    nav_visites:'Visitas 2025–26',nav_gastronia:'Trofeo Gastronia',
-    nav_bacus:'Premio Bacus',nav_rest_short:'Restaurantes',nav_premios_short:'Premios',
-    footer_desc:'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',
-    footer_nav:'Navegación',footer_legal:'Legal',footer_contacte:'Contacto',
-    footer_avis:'Aviso Legal',footer_privacitat:'Política de Privacidad',
-    footer_copy:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',
-    r_label:'Restaurantes',
-    r_title:'El recorrido Gourmet',
-    r_desc:'Cada temporada visitamos ocho restaurantes del Camp de Tarragona. Los evaluamos con criterio, compartimos las crónicas y al final del año entregamos nuestros premios.',
-    r_2026_label:'Temporada actual',
-    r_2026_title:'Recorrido 2026',
-    r_visitada:'Visitado',
-    r_proxima:'Próxima visita',
-    r_pendent:'Pendiente',
-    r_link_previa:'Leer la previa →',
-    r_link_cronica:'Crónica completa →',
-    r_kema_cuina:'Brasa contemporánea',
-    r_kema_desc:'Primera visita de la temporada. Cocina de brasa con producto de calidad y una oferta de coctelería diferencial.',
-    r_goleta_cuina:'Pescados & Mariscos',
-    r_goleta_desc:'40 años frente a la Platja dels Capellans. Cocina mediterránea de producto con protagonismo del mar.',
-    r_pendent_desc:'Visita pendiente de confirmar.',
-    r_historic_label:'Historial',
-    r_historic_title:'Temporadas anteriores',
-    r_historic_desc:'Registro de todas las visitas realizadas desde la fundación de la asociación. Documentación en proceso de recuperación.',
-    r_wip:'En proceso de recuperación',
-    r_num:'Nº',r_restaurant:'Restaurante',r_localitat:'Localidad',
-  },
-  ca:{
-    nav_inicio:'Inici',nav_asoc:"L'Associació",nav_rest:'Restaurants',
-    nav_premios:'Premis',nav_blog:'Blog Gourmet',nav_contacto:'Contacte',
-    nav_quienes:'Qui som',nav_como:'Com funcionem',
-    nav_visites:'Visites 2025–26',nav_gastronia:'Trofeu Gastronia',
-    nav_bacus:'Premi Bacus',nav_rest_short:'Restaurants',nav_premios_short:'Premis',
-    footer_desc:"Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.",
-    footer_nav:'Navegació',footer_legal:'Legal',footer_contacte:'Contacte',
-    footer_avis:'Avís Legal',footer_privacitat:'Política de Privacitat',
-    footer_copy:'© 2026 Gourmets de Tarragona · Tots els drets reservats',
-    r_label:'Restaurants',
-    r_title:'El recorregut Gourmet',
-    r_desc:"Cada temporada visitem vuit restaurants del Camp de Tarragona. Els avaluem amb criteri, compartim les cròniques i al final de l'any lliurem els nostres premis.",
-    r_2026_label:'Temporada actual',
-    r_2026_title:'Recorregut 2026',
-    r_visitada:'Visitat',
-    r_proxima:'Propera visita',
-    r_pendent:'Pendent',
-    r_link_previa:'Llegir la prèvia →',
-    r_link_cronica:'Crònica completa →',
-    r_kema_cuina:'Brasa contemporània',
-    r_kema_desc:'Primera visita de la temporada. Cuina de brasa amb producte de qualitat i una oferta de cocteleria diferencial.',
-    r_goleta_cuina:'Peixos & Mariscs',
-    r_goleta_desc:"40 anys davant la Platja dels Capellans. Cuina mediterrània de producte amb protagonisme del mar.",
-    r_pendent_desc:'Visita pendent de confirmar.',
-    r_historic_label:'Historial',
-    r_historic_title:'Temporades anteriors',
-    r_historic_desc:"Registre de totes les visites realitzades des de la fundació de l'associació. Documentació en procés de recuperació.",
-    r_wip:'En procés de recuperació',
-    r_num:'Nº',r_restaurant:'Restaurant',r_localitat:'Localitat',
-  }
-};
 var currentLang = localStorage.getItem('gdt-lang') || 'es';
 
 function setLang(lang) {
@@ -273,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="rest-card-body">
           <div class="rest-card-meta">
             <span class="rest-card-lloc">Cambrils</span>
-            <span class="rest-card-data">Març 2026</span>
+            <span class="rest-card-data t" data-es="Marzo 2026" data-ca="Març 2026">Marzo 2026</span>
           </div>
           <h3 class="rest-card-nom">Kema</h3>
           <p class="t rest-card-cuina"  data-es="Brasa contemporánea" data-ca="Brasa contemporània">Brasa contemporánea</p>
@@ -297,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="rest-card-body">
           <div class="rest-card-meta">
             <span class="rest-card-lloc">Salou</span>
-            <span class="rest-card-data">9 Abril 2026</span>
+            <span class="rest-card-data t" data-es="9 Abril 2026" data-ca="9 Abril 2026">9 Abril 2026</span>
           </div>
           <h3 class="rest-card-nom">La Goleta</h3>
           <p class="t rest-card-cuina"  data-es="Pescados & Mariscos" data-ca="Peixos & Mariscs">Pescados & Mariscos</p>
@@ -471,8 +453,34 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       </div>
     </div>
-    <div class="footer-col"><h4 class="t"  data-es="Navegación" data-ca="Navegació">Navegación</h4><ul><li><a class="t" href="associacio.html"  data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a></li><li><a class="t" href="restaurants.html"  data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li><li><a class="t" href="premis.html"  data-es="Premios" data-ca="Premis">Premios</a></li><li><a class="t" href="blog.html"  data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li></ul></div>
-    <div class="footer-col"><h4 class="t"  data-es="Legal" data-ca="Legal">Legal</h4><ul><li><a class="t" href="avis-legal.html"  data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li><li><a class="t" href="privacitat.html"  data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a></li><li><a href="cookies.html">Cookies</a></li></ul></div>
-    <div class="footer-col"><h4 class="t"  data-es="Contacto" data-ca="Contacte">Contacto</h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8cebe3f9fee1e9f8ffe8e9f8edfefeedebe3e2edccebe3f9fee1e9f8ffe8e9f8edfefeedebe3e2eda2efe3e1">[email&#160;protected]</a></p><p>Tarragona, Catalunya</p></div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Navegación" data-ca="Navegació">Navegación</h4>
+      <ul>
+        <li><a href="associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a></li>
+        <li><a href="restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li>
+        <li><a href="premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li>
+        <li><a href="esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></li>
+        <li><a href="blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Legal" data-ca="Legal">Legal</h4>
+      <ul>
+        <li><a href="avis-legal.html" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li>
+        <li><a href="privacitat.html" class="t" data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a></li>
+        <li><a href="cookies.html" class="t" data-es="Política de Cookies" data-ca="Política de Cookies">Política de Cookies</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Contacto" data-ca="Contacte">Contacto</h4>
+      <p><a href="mailto:gourmetsdetarragona@gourmetsdetarragona.com">gourmetsdetarragona@gourmetsdetarragona.com</a></p>
+      <p>Tarragona, Catalunya</p>
+    </div>
   </div>
-  <div class="footer-bottom"><p data-i18n=
+  <div class="footer-bottom">
+    <p class="t" data-es="© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados" data-ca="© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats">© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados</p>
+  </div>
+</footer>
+
+</body>
+</html>
