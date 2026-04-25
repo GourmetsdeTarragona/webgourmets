@@ -1,10 +1,56 @@
 <!DOCTYPE html>
-<html lang="es" id="html-root">
+<html lang="ca" id="html-root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premios · Gourmets de Tarragona</title>
-<meta name="description" content="Premios Gastronia y Bacus de los Gourmets de Tarragona. Reconocimiento a la excelencia culinaria del Camp de Tarragona.">
+
+<!-- ═══════ SEO BÀSIC ═══════ -->
+<title>Premis Gastronia i Bacus · Gourmets de Tarragona — Palmarès 2025</title>
+<meta name="description" content="Els premis Gastronia (millor restaurant) i Bacus (millor vi) dels Gourmets de Tarragona. Palmarès 2025: Buidasacs, Cambium i Cirerets de Mas Alta.">
+<meta name="keywords" content="premis gastronia, premi bacus, gourmets tarragona, millor restaurant tarragona, millor vi tarragona, palmares 2025, buidasacs, cambium, cirerets mas alta">
+<meta name="author" content="Gourmets de Tarragona">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.gourmetsdetarragona.com/pages/premis.html">
+
+<!-- ═══════ OPEN GRAPH ═══════ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gourmetsdetarragona.com/pages/premis.html">
+<meta property="og:title" content="Premis Gastronia i Bacus · Gourmets de Tarragona">
+<meta property="og:description" content="Els premis Gastronia i Bacus i el palmarès 2025: Buidasacs, Cambium i Cirerets de Mas Alta.">
+<meta property="og:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Trofeus Gastronia i Bacus dels Gourmets de Tarragona">
+<meta property="og:site_name" content="Gourmets de Tarragona">
+<meta property="og:locale" content="ca_ES">
+<meta property="og:locale:alternate" content="es_ES">
+
+<!-- ═══════ TWITTER CARD ═══════ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Premis Gastronia i Bacus · Gourmets de Tarragona">
+<meta name="twitter:description" content="Els premis Gastronia i Bacus i el palmarès 2025.">
+<meta name="twitter:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
+
+<!-- ═══════ STRUCTURED DATA — CollectionPage ═══════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Premis Gastronia i Bacus — Gourmets de Tarragona",
+  "url": "https://www.gourmetsdetarragona.com/pages/premis.html",
+  "inLanguage": ["ca", "es"],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Gourmets de Tarragona",
+    "url": "https://www.gourmetsdetarragona.com"
+  },
+  "about": {
+    "@type": "Organization",
+    "name": "Gourmets de Tarragona"
+  }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -123,13 +169,15 @@
 const t = {
   es:{
     nav_inicio:'Inicio',nav_asoc:'La Asociación',nav_rest:'Restaurantes',
-    nav_premios:'Premios',nav_blog:'Blog Gourmet',nav_contacto:'Contacto',
+    nav_premios:'Premios',nav_eventos:'Eventos',nav_blog:'Blog Gourmet',nav_contacto:'Contacto',
     nav_quienes:'Quiénes somos',nav_como:'Cómo funcionamos',
-    nav_visites:'Visitas 2025–26',nav_gastronia:'Trofeo Gastronia',
-    nav_bacus:'Premio Bacus',nav_rest_short:'Restaurantes',nav_premios_short:'Premios',
+    nav_visites:'Visitas 2025–26',nav_historic:'Histórico de visitas',
+    nav_gastronia:'Trofeo Gastronia',nav_bacus:'Premio Bacus',
+    nav_cenes:'Cenas especiales',nav_cates:'Catas & Visitas',nav_calendari:'Calendario',
+    nav_rest_short:'Restaurantes',nav_premios_short:'Premios',
     footer_desc:'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',
     footer_nav:'Navegación',footer_legal:'Legal',footer_contacte:'Contacto',
-    footer_avis:'Aviso Legal',footer_privacitat:'Política de Privacidad',
+    footer_avis:'Aviso Legal',footer_privacitat:'Política de Privacidad',footer_cookies:'Política de Cookies',
     footer_copy:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',
     p_label:'Premios',
     p_title:'Gastronia & Bacus',
@@ -137,7 +185,7 @@ const t = {
     p_gastronia_nom:'Trofeo Gastronia',
     p_gastronia_desc:'El máximo reconocimiento al mejor restaurante de la temporada. La puntuación final es la media acumulada de los 8 criterios valorados por todos los socios en cada visita.',
     p_bacus_nom:'Premio Bacus',
-    p_bacus_desc:'Reconocimiento al mejor vino o bodega descubierto durante el recorrido. Cada socio puntúa globalmente los vinos de cada visita del 1 al 5.',
+    p_bacus_desc:'Reconocimiento al mejor vino descubierto durante el recorrido. Cada socio puntúa globalmente los vinos de cada visita del 1 al 5.',
     p_c1:'Presentación mesa',p_c2:'Ambiente',p_c3:'Servicio',p_c4:'Materia prima',
     p_c5:'Maridaje',p_c6:'Elaboración',p_c7:'Postres',p_c8:'Explicaciones chef',
     p_bacus_c:'Valoración global 1–5',
@@ -148,7 +196,7 @@ const t = {
     p_2gastronia:'2º Trofeo Gastronia',
     p_bacus_premi:'Premio Bacus',
     p_buidasacs_desc:'Ganador del primer Trofeo Gastronia de la temporada 2025 con la puntuación más alta acumulada en el recorrido anual.',
-    p_cambium_desc:'Segundo Trofeo Gastronia de la temporada 2025. Reconocimiento a la excelencia culinaria de Cambrils.',
+    p_cambium_desc:'Segundo Trofeo Gastronia de la temporada 2025.',
     p_cirerets_desc:'Premio Bacus 2025 a Cirerets de Mas Alta. Reconocimiento al mejor vino del recorrido gastronómico de la temporada.',
     p_guanyador:'1er · Temporada 2025',
     p_segon:'2º · Temporada 2025',
@@ -159,19 +207,21 @@ const t = {
     p_gala_peu:'Gala de entrega de premios 2025 · Vermuts Rofes · Reus',
     p_recorregut_label:'Temporada 2025',
     p_recorregut_title:'El recorrido completo',
-    p_recorregut_desc:'Seis restaurantes que formaron parte de la temporada 2025. A todos ellos, nuestro reconocimiento.',
+    p_recorregut_desc:'Los seis restaurantes que completaron el recorrido 2025.',
     p_cronica_pendent:'Crónica próximamente',
     p_cronica_llegir:'Leer crónica →',
   },
   ca:{
     nav_inicio:'Inici',nav_asoc:"L'Associació",nav_rest:'Restaurants',
-    nav_premios:'Premis',nav_blog:'Blog Gourmet',nav_contacto:'Contacte',
+    nav_premios:'Premis',nav_eventos:'Esdeveniments',nav_blog:'Blog Gourmet',nav_contacto:'Contacte',
     nav_quienes:'Qui som',nav_como:'Com funcionem',
-    nav_visites:'Visites 2025–26',nav_gastronia:'Trofeu Gastronia',
-    nav_bacus:'Premi Bacus',nav_rest_short:'Restaurants',nav_premios_short:'Premis',
+    nav_visites:'Visites 2025–26',nav_historic:'Històric de visites',
+    nav_gastronia:'Trofeu Gastronia',nav_bacus:'Premi Bacus',
+    nav_cenes:'Sopars especials',nav_cates:'Tasts & Visites',nav_calendari:'Calendari',
+    nav_rest_short:'Restaurants',nav_premios_short:'Premis',
     footer_desc:"Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.",
     footer_nav:'Navegació',footer_legal:'Legal',footer_contacte:'Contacte',
-    footer_avis:'Avís Legal',footer_privacitat:'Política de Privacitat',
+    footer_avis:'Avís Legal',footer_privacitat:'Política de Privacitat',footer_cookies:'Política de Cookies',
     footer_copy:'© 2026 Gourmets de Tarragona · Tots els drets reservats',
     p_label:'Premis',
     p_title:'Gastronia & Bacus',
@@ -179,7 +229,7 @@ const t = {
     p_gastronia_nom:'Trofeu Gastronia',
     p_gastronia_desc:"El màxim reconeixement al millor restaurant de la temporada. La puntuació final és la mitjana acumulada dels 8 criteris valorats per tots els socis en cada visita.",
     p_bacus_nom:'Premi Bacus',
-    p_bacus_desc:"Reconeixement al millor vi o celler descobert durant el recorregut. Cada soci puntua globalment els vins de cada visita de l'1 al 5.",
+    p_bacus_desc:"Reconeixement al millor vi descobert durant el recorregut. Cada soci puntua globalment els vins de cada visita de l'1 al 5.",
     p_c1:'Presentació taula',p_c2:'Ambient',p_c3:'Servei',p_c4:'Matèria primera',
     p_c5:'Maridatge',p_c6:'Elaboració',p_c7:'Postres',p_c8:'Explicacions cuiner',
     p_bacus_c:'Valoració global 1–5',
@@ -190,7 +240,7 @@ const t = {
     p_2gastronia:'2n Trofeu Gastronia',
     p_bacus_premi:'Premi Bacus',
     p_buidasacs_desc:"Guanyador del primer Trofeu Gastronia de la temporada 2025 amb la puntuació més alta acumulada en el recorregut anual.",
-    p_cambium_desc:"Segon Trofeu Gastronia de la temporada 2025. Reconeixement a l'excel·lència culinària de Cambrils.",
+    p_cambium_desc:"Segon Trofeu Gastronia de la temporada 2025.",
     p_cirerets_desc:"Premi Bacus 2025 a Cirerets de Mas Alta. Reconeixement al millor vi del recorregut gastronòmic de la temporada.",
     p_guanyador:'1r · Temporada 2025',
     p_segon:'2n · Temporada 2025',
@@ -201,7 +251,7 @@ const t = {
     p_gala_peu:'Gala de lliurament de premis 2025 · Vermuts Rofes · Reus',
     p_recorregut_label:'Temporada 2025',
     p_recorregut_title:'El recorregut complet',
-    p_recorregut_desc:'Sis restaurants que van formar part de la temporada 2025. A tots ells, el nostre reconeixement.',
+    p_recorregut_desc:'Els sis restaurants que van completar el recorregut 2025.',
     p_cronica_pendent:'Crònica pròximament',
     p_cronica_llegir:'Llegir crònica →',
   }
@@ -232,8 +282,9 @@ function setLang(lang) {
     <div class="nav-menu">
       <div class="nav-item"><a href="../index.html" data-i18n="nav_inicio">Inicio</a></div>
       <div class="nav-item"><span data-i18n="nav_asoc">La Asociación</span><div class="dropdown"><a href="associacio.html" data-i18n="nav_quienes">Quiénes somos</a><a href="associacio.html#funcionament" data-i18n="nav_como">Cómo funcionamos</a></div></div>
-      <div class="nav-item"><span data-i18n="nav_rest">Restaurantes</span><div class="dropdown"><a href="restaurants.html" data-i18n="nav_visites">Visitas 2025–26</a></div></div>
+      <div class="nav-item"><span data-i18n="nav_rest">Restaurantes</span><div class="dropdown"><a href="restaurants.html" data-i18n="nav_visites">Visitas 2025–26</a><a href="restaurants.html#historic" data-i18n="nav_historic">Histórico de visitas</a></div></div>
       <div class="nav-item"><span data-i18n="nav_premios">Premios</span><div class="dropdown"><a href="premis.html" data-i18n="nav_gastronia">Trofeo Gastronia</a><a href="premis.html#bacus" data-i18n="nav_bacus">Premio Bacus</a><a href="premis.html#palmares" data-i18n="p_historic_label">Historial</a></div></div>
+      <div class="nav-item"><span data-i18n="nav_eventos">Eventos</span><div class="dropdown"><a href="esdeveniments.html" data-i18n="nav_cenes">Cenas especiales</a><a href="esdeveniments.html#cates" data-i18n="nav_cates">Catas & Visitas</a><a href="esdeveniments.html#calendari" data-i18n="nav_calendari">Calendario</a></div></div>
       <div class="nav-item"><a href="blog.html" data-i18n="nav_blog">Blog Gourmet</a></div>
       <div class="nav-item"><a href="contacte.html" data-i18n="nav_contacto">Contacto</a></div>
     </div>
@@ -303,7 +354,7 @@ function setLang(lang) {
       <div class="premi-ico-placeholder" style="display:none">🍷</div>
     </div>
     <h2 class="premi-nom" data-i18n="p_bacus_nom">Premio Bacus</h2>
-    <p class="premi-desc" data-i18n="p_bacus_desc">Reconocimiento al mejor vino o bodega descubierto durante el recorrido. Cada socio puntúa globalmente los vinos de cada visita del 1 al 5.</p>
+    <p class="premi-desc" data-i18n="p_bacus_desc">Reconocimiento al mejor vino descubierto durante el recorrido. Cada socio puntúa globalmente los vinos de cada visita del 1 al 5.</p>
     <div class="premi-criteris">
       <span class="premi-criteri" data-i18n="p_bacus_c">Valoración global 1–5</span>
     </div>
@@ -347,7 +398,7 @@ function setLang(lang) {
           <div class="palmares-pos" style="top:16px;right:16px;">2</div>
           <div class="palmares-rest">Cambium</div>
           <div class="palmares-lloc">Cambrils · Baix Camp</div>
-          <p class="palmares-desc" data-i18n="p_cambium_desc">Segundo Trofeo Gastronia de la temporada 2025. Reconocimiento a la excelencia culinaria de Cambrils.</p>
+          <p class="palmares-desc" data-i18n="p_cambium_desc">Segundo Trofeo Gastronia de la temporada 2025.</p>
           <span class="palmares-badge" data-i18n="p_segon">2º · Temporada 2025</span>
         </div>
       </div>
@@ -399,7 +450,7 @@ function setLang(lang) {
       <p class="slabel" data-i18n="p_recorregut_label">Temporada 2025</p>
       <h2 class="stitle" data-i18n="p_recorregut_title">El recorrido completo</h2>
       <div class="sdiv"></div>
-      <p data-i18n="p_recorregut_desc">Seis restaurantes que formaron parte de la temporada 2025. A todos ellos, nuestro reconocimiento.</p>
+      <p data-i18n="p_recorregut_desc">Los seis restaurantes que completaron el recorrido 2025.</p>
     </div>
     <div class="recorregut-grid">
 
