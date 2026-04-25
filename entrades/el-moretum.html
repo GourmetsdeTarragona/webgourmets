@@ -16,6 +16,10 @@
 <link rel="stylesheet" href="../assets/css/nav.css">
 <link rel="stylesheet" href="../assets/css/seccions.css">
 <style>
+#mobileMenu{position:fixed;left:0;right:0;z-index:999;display:none;background:var(--cream,#f5f0e8);box-shadow:0 8px 32px rgba(28,46,62,.15);}
+#mobileMenu.open{display:block;}
+</style>
+<style>
 /* ── HERO ── */
 .entrada-hero{position:relative;min-height:70vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
 .entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.65;filter:brightness(1.08) contrast(1.05);}
@@ -420,7 +424,21 @@ document.addEventListener('DOMContentLoaded', function() {
   if (currentLang === 'ca') setLang('ca');
 });
 </script>
-<script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  var menu=document.getElementById('mobileMenu');
+  if(menu&&menu.parentNode!==document.body)document.body.appendChild(menu);
+  function positionMenu(){if(!nav||!menu)return;menu.style.top=nav.getBoundingClientRect().bottom+'px';}
+  window.addEventListener('scroll',function(){
+    if(nav)nav.classList.toggle('solid',window.scrollY>50);
+    if(menu&&menu.classList.contains('open'))positionMenu();
+  });
+  var burger=document.getElementById('hamburger');
+  if(burger){burger.addEventListener('click',function(){if(nav)nav.classList.add('solid');positionMenu();menu.classList.toggle('open');});}
+  if(menu){menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');});});}
+})();
+</script>
 </body>
 </html>
