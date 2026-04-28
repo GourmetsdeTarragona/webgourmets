@@ -184,6 +184,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if (currentLang === 'ca') setLang('ca');
 });
 </script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<style>#gdt-mapa{width:100%!important;height:480px!important;display:block!important;z-index:1;}</style>
 </head>
 <body>
 
@@ -446,8 +448,6 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="sdiv"></div>
       <p class="t" style="font-size:.9rem;color:var(--muted);font-weight:300;line-height:1.8;max-width:580px;" data-es="Todos los restaurantes visitados en las temporadas 2025 y 2026, situados en el territorio que nos define: el Camp de Tarragona y la Costa Daurada." data-ca="Tots els restaurants visitats a les temporades 2025 i 2026, situats al territori que ens defineix: el Camp de Tarragona i la Costa Daurada.">Todos los restaurantes visitados en las temporadas 2025 y 2026, situados en el territorio que nos define: el Camp de Tarragona y la Costa Daurada.</p>
     </div>
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <div style="position:relative;width:100%;border:1px solid var(--border);overflow:hidden;">
       <div id="gdt-mapa" style="width:100%;height:480px;"></div>
       <!-- Llegenda -->
