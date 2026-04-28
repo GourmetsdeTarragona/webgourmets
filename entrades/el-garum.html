@@ -82,6 +82,21 @@
 /* ── TAG FINAL ── */
 .e-tag-final{text-align:center;margin:48px 0 0;padding-top:48px;border-top:1px solid var(--border,#ddd);}
 .e-tag-final p{font-size:.8rem;font-weight:300;color:#999;letter-spacing:.06em;}
+/* ── COMPARTIR ── */
+.e-compartir{border-top:1px solid var(--border,#ddd);padding:40px 0 32px;text-align:center;}
+.e-compartir-label{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:20px;}
+.e-compartir-btns{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;}
+.e-compartir-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--border,#ddd);background:#fff;color:var(--navy-dark,#1c2e3e);transition:all .2s;cursor:pointer;text-decoration:none;}
+.e-compartir-btn:hover{background:var(--navy-dark,#1c2e3e);color:#fff;border-color:var(--navy-dark,#1c2e3e);}
+.e-compartir-btn.wa{border-color:#25d366;color:#25d366;}
+.e-compartir-btn.wa:hover{background:#25d366;color:#fff;}
+.e-compartir-btn.fb{border-color:#1877f2;color:#1877f2;}
+.e-compartir-btn.fb:hover{background:#1877f2;color:#fff;}
+.e-compartir-btn.copy{border-color:var(--gold);}
+.e-compartir-btn.copy:hover{background:var(--gold);color:#fff;border-color:var(--gold);}
+.e-compartir-copied{font-size:.7rem;color:var(--gold);letter-spacing:.08em;opacity:0;transition:opacity .3s;margin-left:8px;}
+.e-compartir-copied.vis{opacity:1;}
+@media(max-width:768px){.e-compartir-btns{gap:8px;}.e-compartir-btn{padding:9px 14px;font-size:.68rem;}}
 /* ── NAV RETORN ── */
 .e-nav-retorn{border-top:1px solid var(--border,#ddd);padding:40px;text-align:center;}
 /* ── RESPONSIVE ── */
@@ -421,6 +436,32 @@
 
 </main>
 
+<!-- COMPARTIR -->
+<div class="e-compartir">
+  <span class="e-compartir-label t" data-es="¿Te ha gustado? Compártelo" data-ca="T'ha agradat? Comparteix-ho">¿Te ha gustado? Compártelo</span>
+  <div class="e-compartir-btns">
+    <a class="e-compartir-btn wa" id="btn-wa" href="#" target="_blank" rel="noopener" aria-label="Compartir per WhatsApp">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.862L.057 23.57a.75.75 0 0 0 .924.924l5.701-1.476A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.694 9.694 0 0 1-4.964-1.366l-.355-.212-3.685.954.975-3.564-.232-.368A9.696 9.696 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+      <span class="t" data-es="WhatsApp" data-ca="WhatsApp">WhatsApp</span>
+    </a>
+    <a class="e-compartir-btn fb" id="btn-fb" href="#" target="_blank" rel="noopener" aria-label="Compartir a Facebook">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      <span class="t" data-es="Facebook" data-ca="Facebook">Facebook</span>
+    </a>
+    <a class="e-compartir-btn x" id="btn-x" href="#" target="_blank" rel="noopener" aria-label="Compartir a X">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      <span class="t" data-es="X / Twitter" data-ca="X / Twitter">X / Twitter</span>
+    </a>
+    <button class="e-compartir-btn copy" onclick="copiarEnllac(this)" aria-label="Copiar enlace">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      <span class="t" data-es="Copiar enlace" data-ca="Copiar enllaç">Copiar enlace</span>
+      <span class="e-compartir-copied" id="copied-msg">
+        <span class="t" data-es="¡Copiado!" data-ca="Copiat!">¡Copiado!</span>
+      </span>
+    </button>
+  </div>
+</div>
+
 <div class="e-nav-retorn">
   <a href="../pages/blog.html" class="btn-outline t" data-es="← Volver al Blog" data-ca="← Tornar al Blog">← Volver al Blog</a>
 </div>
@@ -491,5 +532,23 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var url = encodeURIComponent(window.location.href);
+  var titol = encodeURIComponent(document.title);
+  var wa = document.getElementById('btn-wa');
+  var fb = document.getElementById('btn-fb');
+  var x  = document.getElementById('btn-x');
+  if(wa) wa.href = 'https://wa.me/?text=' + titol + '%20' + url;
+  if(fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if(x)  x.href  = 'https://x.com/intent/tweet?url=' + url + '&text=' + titol;
+})();
+function copiarEnllac(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var msg = btn.querySelector('.e-compartir-copied');
+    if(msg){ msg.classList.add('vis'); setTimeout(function(){ msg.classList.remove('vis'); }, 2200); }
+  });
+}
+</script>
 </body>
 </html>
