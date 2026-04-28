@@ -88,6 +88,76 @@
   .e-foto-gran,.e-grup img{height:260px;}
   .entrada-cos{padding:52px 5%;}
 }
+
+/* ── COMPARTIR ── */
+.e-compartir{
+  position:relative;margin:64px 0 0;padding:56px 40px 52px;
+  background:linear-gradient(135deg,#0b1626 0%,#1c2e3e 100%);
+  overflow:hidden;
+}
+.e-compartir::before{
+  content:'';position:absolute;top:-1px;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);
+}
+.e-compartir::after{
+  content:'"';position:absolute;right:5%;top:50%;transform:translateY(-50%);
+  font-family:'Playfair Display',serif;font-size:14rem;font-weight:700;
+  color:rgba(184,146,74,.06);line-height:1;pointer-events:none;
+  user-select:none;
+}
+.e-compartir-inner{position:relative;z-index:1;max-width:600px;margin:0 auto;text-align:center;}
+.e-compartir-deco{
+  display:flex;align-items:center;gap:16px;justify-content:center;margin-bottom:20px;
+}
+.e-compartir-deco-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,146,74,.3));}
+.e-compartir-deco-line.r{background:linear-gradient(90deg,rgba(184,146,74,.3),transparent);}
+.e-compartir-deco span{
+  font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;
+  color:rgba(184,146,74,.6);font-weight:600;white-space:nowrap;
+}
+.e-compartir-frase{
+  font-family:'Playfair Display',serif;font-size:1.45rem;font-style:italic;
+  color:rgba(255,255,255,.88);line-height:1.5;margin-bottom:32px;font-weight:400;
+}
+.e-compartir-frase strong{
+  font-style:normal;font-weight:700;color:#d4a96a;
+}
+.e-compartir-btns{
+  display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.e-compartir-btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:12px 22px;
+  font-family:'Lato','Montserrat',sans-serif;
+  font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.04);
+  color:rgba(255,255,255,.65);
+  transition:all .25s;cursor:pointer;text-decoration:none;
+  backdrop-filter:blur(4px);
+}
+.e-compartir-btn svg{flex-shrink:0;transition:transform .25s;}
+.e-compartir-btn:hover{
+  border-color:rgba(184,146,74,.6);
+  background:rgba(184,146,74,.1);
+  color:#d4a96a;transform:translateY(-2px);
+}
+.e-compartir-btn:hover svg{transform:scale(1.15);}
+.e-compartir-btn.wa:hover{border-color:#25d366;background:rgba(37,211,102,.1);color:#25d366;}
+.e-compartir-btn.fb:hover{border-color:#1877f2;background:rgba(24,119,242,.1);color:#6fa8ff;}
+.e-compartir-btn.copy:hover{border-color:#d4a96a;background:rgba(212,169,106,.15);color:#d4a96a;}
+.e-compartir-copied{
+  font-size:.65rem;color:#d4a96a;letter-spacing:.08em;
+  opacity:0;transition:opacity .3s;margin-left:4px;
+}
+.e-compartir-copied.vis{opacity:1;}
+@media(max-width:768px){
+  .e-compartir{padding:40px 24px 36px;}
+  .e-compartir::after{font-size:8rem;right:2%;}
+  .e-compartir-frase{font-size:1.2rem;}
+  .e-compartir-btns{gap:8px;}
+  .e-compartir-btn{padding:10px 16px;font-size:.62rem;}
+}
 </style>
 </head>
 <body>
@@ -351,6 +421,44 @@
 
 </main>
 
+
+<!-- COMPARTIR -->
+<div class="e-compartir">
+  <div class="e-compartir-inner">
+    <div class="e-compartir-deco">
+      <span class="e-compartir-deco-line"></span>
+      <span class="t" data-es="Comparte este artículo" data-ca="Comparteix aquest article">Comparte este artículo</span>
+      <span class="e-compartir-deco-line r"></span>
+    </div>
+    <p class="e-compartir-frase t"
+      data-es="Si te ha hecho pensar, <strong>merece llegar más lejos.</strong>"
+      data-ca="Si t'ha fet pensar, <strong>mereix arribar més lluny.</strong>">
+      Si te ha hecho pensar, <strong>merece llegar más lejos.</strong>
+    </p>
+    <div class="e-compartir-btns">
+      <a class="e-compartir-btn wa" id="btn-wa" href="#" target="_blank" rel="noopener" aria-label="Compartir per WhatsApp">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.862L.057 23.57a.75.75 0 0 0 .924.924l5.701-1.476A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.694 9.694 0 0 1-4.964-1.366l-.355-.212-3.685.954.975-3.564-.232-.368A9.696 9.696 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+        <span class="t" data-es="WhatsApp" data-ca="WhatsApp">WhatsApp</span>
+      </a>
+      <a class="e-compartir-btn fb" id="btn-fb" href="#" target="_blank" rel="noopener" aria-label="Compartir a Facebook">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        <span class="t" data-es="Facebook" data-ca="Facebook">Facebook</span>
+      </a>
+      <a class="e-compartir-btn x" id="btn-x" href="#" target="_blank" rel="noopener" aria-label="Compartir a X">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        <span class="t" data-es="X / Twitter" data-ca="X / Twitter">X / Twitter</span>
+      </a>
+      <button class="e-compartir-btn copy" onclick="copiarEnllac(this)" aria-label="Copiar enlace">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span class="t" data-es="Copiar enlace" data-ca="Copiar enllaç">Copiar enlace</span>
+        <span class="e-compartir-copied">
+          <span class="t" data-es="¡Copiado!" data-ca="Copiat!">¡Copiado!</span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
 <div class="e-nav-retorn">
   <div class="e-nav-retorn-links">
     <a href="kema-previa-2026.html" class="btn-outline" data-i18n="cronica_btn_previa"></a>
@@ -496,5 +604,38 @@ function setLang(lang){currentLang=lang;localStorage.setItem('gdt-lang',lang);ap
 applyTranslations(currentLang);
 </script>
 <script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var url = encodeURIComponent(window.location.href);
+  var titol = encodeURIComponent(document.title);
+  var wa = document.getElementById('btn-wa');
+  var fb = document.getElementById('btn-fb');
+  var x  = document.getElementById('btn-x');
+  if(wa) wa.href = 'https://wa.me/?text=' + titol + '%20' + url;
+  if(fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if(x)  x.href  = 'https://x.com/intent/tweet?url=' + url + '&text=' + titol;
+  // Compatibilitat i18n: assegura traduccio del bloc en tots els sistemes
+  function applyShareLang(){
+    var lang = localStorage.getItem('gdt-lang') || 'es';
+    document.querySelectorAll('.e-compartir [data-es]').forEach(function(el){
+      var v = el.getAttribute('data-' + lang);
+      if(v) el.innerHTML = v;
+    });
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', applyShareLang);
+  } else { applyShareLang(); }
+  document.addEventListener('click', function(e){
+    var t = e.target && e.target.closest && e.target.closest('.lang-btn');
+    if(t) setTimeout(applyShareLang, 60);
+  });
+})();
+function copiarEnllac(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var msg = btn.querySelector('.e-compartir-copied');
+    if(msg){ msg.classList.add('vis'); setTimeout(function(){ msg.classList.remove('vis'); }, 2200); }
+  });
+}
+</script>
 </body>
 </html>
