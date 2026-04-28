@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (currentLang === 'ca') setLang('ca');
 });
 </script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<link rel="stylesheet" href="../assets/css/leaflet.css">
 <style>#gdt-mapa{width:100%!important;height:480px!important;display:block!important;z-index:1;}</style>
 </head>
 <body>
@@ -467,7 +467,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
     <!-- Leaflet JS -->
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="../assets/js/leaflet.js"></script>
     <script>
     (function(){
       var map = L.map('gdt-mapa', {scrollWheelZoom: false}).setView([41.12, 1.18], 10);
