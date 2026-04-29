@@ -453,10 +453,10 @@ document.addEventListener('DOMContentLoaded', function() {
       <p class="t" style="font-size:.9rem;color:var(--muted);font-weight:300;line-height:1.8;max-width:580px;" data-es="Todos los restaurantes visitados en las temporadas 2025 y 2026, situados en el territorio que nos define: el Camp de Tarragona y la Costa Daurada." data-ca="Tots els restaurants visitats a les temporades 2025 i 2026, situats al territori que ens defineix: el Camp de Tarragona i la Costa Daurada.">Todos los restaurantes visitados en las temporadas 2025 y 2026.</p>
     </div>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
-      <button class="mapa-filtre actiu" onclick="filtraMapa('tots',this)"><span class="t" data-es="Todos" data-ca="Tots">Todos</span></button>
-      <button class="mapa-filtre" onclick="filtraMapa('2026',this)"><span style="width:8px;height:8px;border-radius:50%;background:#b8924a;display:inline-block;margin-right:6px;"></span>2026</button>
-      <button class="mapa-filtre" onclick="filtraMapa('2025',this)"><span style="width:8px;height:8px;border-radius:50%;background:#1c2e3e;border:1px solid #aaa;display:inline-block;margin-right:6px;"></span>2025</button>
-      <button class="mapa-filtre" onclick="filtraMapa('gastronia',this)"><span style="font-size:.7rem;margin-right:4px;">&#11088;</span><span class="t" data-es="Gastronia" data-ca="Gastronia">Gastronia</span></button>
+      <button class="mapa-filtre actiu" data-f="tots" onclick="filtraMapa('tots',this)"><span class="t" data-es="Todos" data-ca="Tots">Todos</span></button>
+      <button class="mapa-filtre" data-f="2026" onclick="filtraMapa('2026',this)"><span style="width:8px;height:8px;border-radius:50%;background:#b8924a;display:inline-block;margin-right:6px;"></span>2026</button>
+      <button class="mapa-filtre" data-f="2025" onclick="filtraMapa('2025',this)"><span style="width:8px;height:8px;border-radius:50%;background:#1c2e3e;border:1px solid #aaa;display:inline-block;margin-right:6px;"></span>2025</button>
+      <button class="mapa-filtre" data-f="gastronia" onclick="filtraMapa('gastronia',this)"><span style="font-size:.7rem;margin-right:4px;">&#11088;</span><span class="t" data-es="Gastronia" data-ca="Gastronia">Gastronia</span></button>
     </div>
     <div style="position:relative;width:100%;border:1px solid var(--border);overflow:hidden;">
       <div id="gdt-mapa"></div>
@@ -496,28 +496,37 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   var g="#b8924a",n="#1c2e3e";
   var d=[
-    {lat:41.0668837,lng:1.0617647,nom:"Kema",lloc:"Cambrils",any:"2026",adr:"C. Pau Casals, 37",c:g,s:false},
-    {lat:41.0681635,lng:1.1493959,nom:"La Goleta",lloc:"Salou",any:"2026",adr:"C. de la Gavina, 2",c:g,s:false},
-    {lat:41.1138541,lng:1.2524837,nom:"El Terrat",lloc:"Tarragona",any:"2026",adr:"C. Pons d'Icart, 19",c:g,s:false},
-    {lat:41.1520917,lng:1.1091041,nom:"Buidasacs",lloc:"Reus",any:"2025",adr:"C. Pintor Bergada, 7",c:n,s:true},
-    {lat:41.0721909,lng:1.0535021,nom:"Cambium",lloc:"Cambrils",any:"2025",adr:"C. M.J. Verdaguer, 17",c:n,s:true},
-    {lat:41.117998,lng:1.2570257,nom:"Anima",lloc:"Tarragona",any:"2025",adr:"C. de l'Abat, 2",c:n,s:false},
-    {lat:41.1668411,lng:1.469315,nom:"Baramar",lloc:"Roda de Bara",any:"2025",adr:"Pg. Maritim, 1",c:n,s:false},
-    {lat:41.1175787,lng:1.2561823,nom:"Casapepe",lloc:"Tarragona",any:"2025",adr:"C. dels Cavallers, 6",c:n,s:false},
-    {lat:41.1141067,lng:0.9362198,nom:"Ca l'Amadeu",lloc:"Vilanova d'Escornalbou",any:"2025",adr:"Pl. de la Font, s/n",c:n,s:false},
-    {lat:41.079836,lng:1.1328679,nom:"El Raco de Nico",lloc:"Salou",any:"2025",adr:"Via Augusta, 19",c:n,s:false},
-    {lat:41.1145692,lng:1.2652235,nom:"Limboo",lloc:"Tarragona",any:"2025",adr:"Platja del Miracle",c:n,s:false}
+    {lat:41.0668837,lng:1.0617647,nom:"Kema",lloc:"Cambrils",any:"2026",adr:"C. Pau Casals, 37",c:g,s:false,tel:"977 364 054",web:"https://kemacambrils.com"},
+    {lat:41.0681635,lng:1.1493959,nom:"La Goleta",lloc:"Salou",any:"2026",adr:"C. de la Gavina, 2",c:g,s:false,tel:"977 383 566",web:"https://lagoletasalou.com"},
+    {lat:41.1138541,lng:1.2524837,nom:"El Terrat",lloc:"Tarragona",any:"2026",adr:"C. Pons d'Icart, 19",c:g,s:false,tel:"977 248 485",web:"https://elterratrestaurant.com"},
+    {lat:41.1520917,lng:1.1091041,nom:"Buidasacs",lloc:"Reus",any:"2025",adr:"C. Pintor Bergada, 7",c:n,s:true,tel:"877 219 097",web:""},
+    {lat:41.0721909,lng:1.0535021,nom:"Cambium",lloc:"Cambrils",any:"2025",adr:"C. M.J. Verdaguer, 17",c:n,s:true,tel:"",web:"https://cambiumrestaurant.com"},
+    {lat:41.117998,lng:1.2570257,nom:"Anima",lloc:"Tarragona",any:"2025",adr:"C. de l'Abat, 2",c:n,s:false,tel:"",web:""},
+    {lat:41.1668411,lng:1.469315,nom:"Baramar",lloc:"Roda de Bara",any:"2025",adr:"Pg. Maritim, 1",c:n,s:false,tel:"",web:""},
+    {lat:41.1175787,lng:1.2561823,nom:"Casapepe",lloc:"Tarragona",any:"2025",adr:"C. dels Cavallers, 6",c:n,s:false,tel:"",web:""},
+    {lat:41.1141067,lng:0.9362198,nom:"Ca l'Amadeu",lloc:"Vilanova d'Escornalbou",any:"2025",adr:"Pl. de la Font, s/n",c:n,s:false,tel:"",web:""},
+    {lat:41.079836,lng:1.1328679,nom:"El Raco de Nico",lloc:"Salou",any:"2025",adr:"Via Augusta, 19",c:n,s:false,tel:"",web:""},
+    {lat:41.1145692,lng:1.2652235,nom:"Limboo",lloc:"Tarragona",any:"2025",adr:"Platja del Miracle",c:n,s:false,tel:"",web:""}
   ];
   var mk=d.map(function(r){
-    var pop="<div style='min-width:160px;padding:4px 0;'><div style='font-size:.55rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:"+r.c+";margin-bottom:4px;'>"+r.any+" &middot; "+r.lloc+"</div><div style='font-size:1.05rem;font-weight:700;color:#0b1626;margin-bottom:3px;'>"+r.nom+(r.s?" &#9733;":"")+"</div><div style='font-size:.75rem;color:#666;'>"+r.adr+"</div></div>";
+    var telHtml=r.tel?"<a href='tel:+34"+r.tel.replace(/ /g,"")+"' style='display:block;font-size:.75rem;color:"+r.c+";margin-top:5px;text-decoration:none;'>&#128222; "+r.tel+"</a>":"";
+    var webHtml=r.web?"<a href='"+r.web+"' target='_blank' rel='noopener' style='display:block;font-size:.72rem;color:"+r.c+";margin-top:3px;text-decoration:none;'>&#127758; Web</a>":"";
+    var pop="<div style='min-width:180px;padding:4px 0;'><div style='font-size:.55rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:"+r.c+";margin-bottom:4px;'>"+r.any+" &middot; "+r.lloc+"</div><div style='font-size:1.05rem;font-weight:700;color:#0b1626;margin-bottom:3px;'>"+r.nom+(r.s?" &#9733;":"")+"</div><div style='font-size:.75rem;color:#666;'>"+r.adr+"</div>"+telHtml+webHtml+"</div>";
     var m=L.marker([r.lat,r.lng],{icon:icon(r.c,r.s)}).addTo(map).bindPopup(pop,{maxWidth:220});
     m._a=r.any;m._s=r.s;return m;
   });
   window.filtraMapa=function(f,btn){
-    document.querySelectorAll(".mapa-filtre").forEach(function(b){b.classList.remove("actiu");});
-    btn.classList.add("actiu");
+    if(f==="tots"){
+      document.querySelectorAll(".mapa-filtre").forEach(function(b){b.classList.remove("actiu");});
+      btn.classList.add("actiu");
+    } else {
+      document.querySelector(".mapa-filtre[data-f='tots']").classList.remove("actiu");
+      btn.classList.toggle("actiu");
+    }
+    var actius=Array.from(document.querySelectorAll(".mapa-filtre.actiu")).map(function(b){return b.getAttribute("data-f");});
+    var tots=actius.indexOf("tots")>-1||actius.length===0;
     mk.forEach(function(m){
-      var show=f==="tots"||(f==="2026"&&m._a==="2026")||(f==="2025"&&m._a==="2025")||(f==="gastronia"&&m._s);
+      var show=tots||(actius.indexOf("2026")>-1&&m._a==="2026")||(actius.indexOf("2025")>-1&&m._a==="2025")||(actius.indexOf("gastronia")>-1&&m._s);
       show?(!map.hasLayer(m)&&map.addLayer(m)):(map.hasLayer(m)&&map.removeLayer(m));
     });
   };
