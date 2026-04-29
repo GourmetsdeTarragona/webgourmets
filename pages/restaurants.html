@@ -184,8 +184,12 @@ document.addEventListener('DOMContentLoaded', function() {
   if (currentLang === 'ca') setLang('ca');
 });
 </script>
-<link rel="stylesheet" href="../assets/css/leaflet.css">
-<style>#gdt-mapa{width:100%!important;height:480px!important;display:block!important;z-index:1;}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<style>#gdt-mapa{width:100%!important;height:480px!important;display:block!important;z-index:1;}
+.mapa-filtre{display:inline-flex;align-items:center;padding:8px 16px;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--border,#ddd);background:#fff;color:var(--navy-dark,#1c2e3e);cursor:pointer;transition:all .2s;}
+.mapa-filtre:hover{border-color:var(--gold,#b8924a);color:var(--gold,#b8924a);}
+.mapa-filtre.actiu{background:var(--navy-dark,#1c2e3e);color:#fff;border-color:var(--navy-dark,#1c2e3e);}
+</style>
 </head>
 <body>
 
@@ -446,154 +450,80 @@ document.addEventListener('DOMContentLoaded', function() {
       <p class="t slabel" data-es="Geografía Gourmet" data-ca="Geografia Gourmet">Geografía Gourmet</p>
       <h2 class="t stitle" data-es="El mapa del recorrido" data-ca="El mapa del recorregut">El mapa del recorrido</h2>
       <div class="sdiv"></div>
-      <p class="t" style="font-size:.9rem;color:var(--muted);font-weight:300;line-height:1.8;max-width:580px;" data-es="Todos los restaurantes visitados en las temporadas 2025 y 2026, situados en el territorio que nos define: el Camp de Tarragona y la Costa Daurada." data-ca="Tots els restaurants visitats a les temporades 2025 i 2026, situats al territori que ens defineix: el Camp de Tarragona i la Costa Daurada.">Todos los restaurantes visitados en las temporadas 2025 y 2026, situados en el territorio que nos define: el Camp de Tarragona y la Costa Daurada.</p>
+      <p class="t" style="font-size:.9rem;color:var(--muted);font-weight:300;line-height:1.8;max-width:580px;" data-es="Todos los restaurantes visitados en las temporadas 2025 y 2026, situados en el territorio que nos define: el Camp de Tarragona y la Costa Daurada." data-ca="Tots els restaurants visitats a les temporades 2025 i 2026, situats al territori que ens defineix: el Camp de Tarragona i la Costa Daurada.">Todos los restaurantes visitados en las temporadas 2025 y 2026.</p>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+      <button class="mapa-filtre actiu" onclick="filtraMapa('tots',this)"><span class="t" data-es="Todos" data-ca="Tots">Todos</span></button>
+      <button class="mapa-filtre" onclick="filtraMapa('2026',this)"><span style="width:8px;height:8px;border-radius:50%;background:#b8924a;display:inline-block;margin-right:6px;"></span>2026</button>
+      <button class="mapa-filtre" onclick="filtraMapa('2025',this)"><span style="width:8px;height:8px;border-radius:50%;background:#1c2e3e;border:1px solid #aaa;display:inline-block;margin-right:6px;"></span>2025</button>
+      <button class="mapa-filtre" onclick="filtraMapa('gastronia',this)"><span style="font-size:.7rem;margin-right:4px;">&#11088;</span><span class="t" data-es="Gastronia" data-ca="Gastronia">Gastronia</span></button>
     </div>
     <div style="position:relative;width:100%;border:1px solid var(--border);overflow:hidden;">
-      <div id="gdt-mapa" style="width:100%;height:480px;"></div>
-      <!-- Llegenda -->
+      <div id="gdt-mapa"></div>
       <div style="position:absolute;bottom:16px;left:16px;z-index:1000;background:rgba(11,22,38,.88);backdrop-filter:blur(6px);padding:14px 18px;display:flex;flex-direction:column;gap:8px;pointer-events:none;">
-        <div style="display:flex;align-items:center;gap:8px;">
-          <span style="width:10px;height:10px;border-radius:50%;background:#b8924a;display:inline-block;flex-shrink:0;"></span>
-          <span class="t" style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);" data-es="Temporada 2026 (en curso)" data-ca="Temporada 2026 (en curs)">Temporada 2026 (en curso)</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:8px;">
-          <span style="width:10px;height:10px;border-radius:50%;background:#1c2e3e;display:inline-block;flex-shrink:0;border:1px solid rgba(255,255,255,.3);"></span>
-          <span class="t" style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);" data-es="Temporada 2025" data-ca="Temporada 2025">Temporada 2025</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:8px;">
-          <span style="font-size:.75rem;color:#b8924a;line-height:1;">⭐</span>
-          <span class="t" style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);" data-es="Premio Gastronia" data-ca="Premi Gastronia">Premio Gastronia</span>
-        </div>
+        <div style="display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;border-radius:50%;background:#b8924a;display:inline-block;"></span><span class="t" style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</span></div>
+        <div style="display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;border-radius:50%;background:#1c2e3e;display:inline-block;border:1px solid rgba(255,255,255,.3);"></span><span class="t" style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);" data-es="Temporada 2025" data-ca="Temporada 2025">Temporada 2025</span></div>
+        <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:.75rem;color:#b8924a;">&#11088;</span><span class="t" style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);" data-es="Premio Gastronia" data-ca="Premi Gastronia">Premio Gastronia</span></div>
       </div>
     </div>
-    <!-- Leaflet JS -->
-    <script src="../assets/js/leaflet.js"></script>
-    <script>
-    (function(){
-      var map = L.map('gdt-mapa', {scrollWheelZoom: false}).setView([41.12, 1.18], 10);
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
-        subdomains: 'abcd',
-        maxZoom: 19
-      }).addTo(map);
-
-      function makeIcon(color, star) {
-        var inner = star ? '<text x="14" y="18" text-anchor="middle" font-size="9" fill="' + color + '">&#9733;</text>' : '';
-        var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="38" viewBox="0 0 28 38">'
-          + '<path d="M14 0C6.27 0 0 6.27 0 14c0 9.33 14 24 14 24s14-14.67 14-24C28 6.27 21.73 0 14 0z" fill="' + color + '"/>'
-          + '<circle cx="14" cy="14" r="6" fill="rgba(255,255,255,0.9)"/>'
-          + inner
-          + '</svg>';
-        return L.divIcon({
-          html: svg,
-          className: '',
-          iconSize: [28, 38],
-          iconAnchor: [14, 38],
-          popupAnchor: [0, -38]
-        });
-      }
-
-      var gold = '#b8924a', navy = '#1c2e3e';
-
-      var restaurants = [
-        {lat:41.0668837, lng:1.0617647, nom:"Kema", lloc:"Cambrils", any:"2026", adr:"C. Pau Casals, 37", color:gold, star:false},
-        {lat:41.0681635, lng:1.1493959, nom:"La Goleta", lloc:"Salou", any:"2026", adr:"C. de la Gavina, 2", color:gold, star:false},
-        {lat:41.1138541, lng:1.2524837, nom:"El Terrat", lloc:"Tarragona", any:"2026", adr:"C. Pons d'Icart, 19", color:gold, star:false},
-        {lat:41.1520917, lng:1.1091041, nom:"Buidasacs", lloc:"Reus", any:"2025", adr:"C. Pintor Bergada, 7", color:navy, star:true},
-        {lat:41.0721909, lng:1.0535021, nom:"Cambium", lloc:"Cambrils", any:"2025", adr:"C. M.J. Verdaguer, 17", color:navy, star:true},
-        {lat:41.117998,  lng:1.2570257, nom:"Anima", lloc:"Tarragona", any:"2025", adr:"C. de l'Abat, 2", color:navy, star:false},
-        {lat:41.1668411, lng:1.469315,  nom:"Baramar", lloc:"Roda de Bara", any:"2025", adr:"Pg. Maritim, 1", color:navy, star:false},
-        {lat:41.1175787, lng:1.2561823, nom:"Casapepe", lloc:"Tarragona", any:"2025", adr:"C. dels Cavallers, 6", color:navy, star:false},
-        {lat:41.1141067, lng:0.9362198, nom:"Ca l'Amadeu", lloc:"Vilanova d'Escornalbou", any:"2025", adr:"Pl. de la Font, s/n", color:navy, star:false},
-        {lat:41.079836,  lng:1.1328679, nom:"El Raco de Nico", lloc:"Salou", any:"2025", adr:"Via Augusta, 19", color:navy, star:false},
-        {lat:41.1145692, lng:1.2652235, nom:"Limboo", lloc:"Tarragona", any:"2025", adr:"Platja del Miracle", color:navy, star:false}
-      ];
-
-      restaurants.forEach(function(r) {
-        var nom = r.nom + (r.star ? ' ★' : '');
-        var popup = '<div style="min-width:160px;padding:4px 0;">'
-          + '<div style="font-size:.55rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:' + r.color + ';margin-bottom:4px;">' + r.any + ' &middot; ' + r.lloc + '</div>'
-          + '<div style="font-size:1.05rem;font-weight:700;color:#0b1626;margin-bottom:3px;">' + nom + '</div>'
-          + '<div style="font-size:.75rem;color:#666;">' + r.adr + '</div>'
-          + '</div>';
-        L.marker([r.lat, r.lng], {icon: makeIcon(r.color, r.star)})
-          .addTo(map)
-          .bindPopup(popup, {maxWidth:220});
-      });
-    })();
-    </script>
-    <!-- Llista de pins sota el mapa -->
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:2px;border:1px solid var(--border);border-top:none;">
-
-      <!-- 2026 -->
-      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);">
-        <span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">2026 · Cambrils</span>
-        <span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Kema</span>
-        <span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Carrer de Pau Casals, 37</span>
-      </div>
-      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);">
-        <span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">2026 · Salou</span>
-        <span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">La Goleta</span>
-        <span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Carrer de la Gavina, 2</span>
-      </div>
-      <div style="padding:16px 20px;border-bottom:1px solid var(--border);">
-        <span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">2026 · Tarragona</span>
-        <span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">El Terrat</span>
-        <span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Carrer Pons d'Icart, 19</span>
-      </div>
-
-      <!-- 2025 fila 1 -->
-      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);">
-        <span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 · Reus</span>
-        <span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Buidasacs ⭐</span>
-        <span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. del Pintor Bergadà, 7</span>
-      </div>
-      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);">
-        <span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 · Cambrils</span>
-        <span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Cambium ⭐</span>
-        <span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. Mossèn J. Verdaguer, 17</span>
-      </div>
-      <div style="padding:16px 20px;border-bottom:1px solid var(--border);">
-        <span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 · Tarragona</span>
-        <span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Ànima</span>
-        <span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Carrer de l'Abat, 2</span>
-      </div>
-
-      <!-- 2025 fila 2 -->
-      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);">
-        <span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 · Roda de Barà</span>
-        <span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Baramar</span>
-        <span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Pg. Marítim, 1</span>
-      </div>
-      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);">
-        <span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 · Tarragona</span>
-        <span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Casapepe</span>
-        <span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Carrer dels Cavallers, 6</span>
-      </div>
-      <div style="padding:16px 20px;border-bottom:1px solid var(--border);">
-        <span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 · Vilanova d'Escornalbou</span>
-        <span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Ca l'Amadeu</span>
-        <span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Plaça de la Font, s/n</span>
-      </div>
-
-      <!-- 2025 fila 3 -->
-      <div style="padding:16px 20px;border-right:1px solid var(--border);">
-        <span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 · Salou</span>
-        <span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">El Racó de Nico</span>
-        <span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Via Augusta, 19</span>
-      </div>
-      <div style="padding:16px 20px;border-right:1px solid var(--border);">
-        <span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 · Tarragona</span>
-        <span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Limboo</span>
-        <span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Platja del Miracle, s/n</span>
-      </div>
+      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">2026 &middot; Cambrils</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Kema</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. Pau Casals, 37</span></div>
+      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">2026 &middot; Salou</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">La Goleta</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. de la Gavina, 2</span></div>
+      <div style="padding:16px 20px;border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">2026 &middot; Tarragona</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">El Terrat</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. Pons d&apos;Icart, 19</span></div>
+      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 &middot; Reus</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Buidasacs &#11088;</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. Pintor Bergad&agrave;, 7</span></div>
+      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 &middot; Cambrils</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Cambium &#11088;</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. M.J. Verdaguer, 17</span></div>
+      <div style="padding:16px 20px;border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 &middot; Tarragona</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">&Agrave;nima</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. de l&apos;Abat, 2</span></div>
+      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 &middot; Roda de Bar&agrave;</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Baramar</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Pg. Mar&iacute;tim, 1</span></div>
+      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 &middot; Tarragona</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Casapepe</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. dels Cavallers, 6</span></div>
+      <div style="padding:16px 20px;border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 &middot; Vilanova d&apos;Escornalbou</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Ca l&apos;Amadeu</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Pl. de la Font, s/n</span></div>
+      <div style="padding:16px 20px;border-right:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 &middot; Salou</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">El Rac&oacute; de Nico</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Via Augusta, 19</span></div>
+      <div style="padding:16px 20px;border-right:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 &middot; Tarragona</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Limboo</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Platja del Miracle</span></div>
       <div style="padding:16px 20px;"></div>
-
     </div>
-    <!-- Nota peu de mapa -->
-    <p class="t" style="font-size:.72rem;color:var(--muted);margin-top:14px;font-style:italic;" data-es="⭐ Premio Gastronia · El mapa se actualiza cada temporada con los nuevos restaurantes del recorrido." data-ca="⭐ Premi Gastronia · El mapa s'actualitza cada temporada amb els nous restaurants del recorregut.">⭐ Premio Gastronia · El mapa se actualiza cada temporada con los nuevos restaurantes del recorrido.</p>
+    <p class="t" style="font-size:.72rem;color:var(--muted);margin-top:14px;font-style:italic;" data-es="&#11088; Premio Gastronia &middot; El mapa se actualiza cada temporada." data-ca="&#11088; Premi Gastronia &middot; El mapa s'actualitza cada temporada.">&#11088; Premio Gastronia &middot; El mapa se actualiza cada temporada.</p>
   </div>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+(function(){
+  var map = L.map("gdt-mapa",{scrollWheelZoom:false}).setView([41.12,1.18],10);
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{
+    attribution:"&copy; OpenStreetMap &copy; CARTO",subdomains:"abcd",maxZoom:19
+  }).addTo(map);
+  function icon(color,star){
+    var s=star?"<text x='14' y='18' text-anchor='middle' font-size='9' fill='"+color+"'>&#9733;</text>":"";
+    return L.divIcon({html:"<svg xmlns='http://www.w3.org/2000/svg' width='28' height='38' viewBox='0 0 28 38'><path d='M14 0C6.27 0 0 6.27 0 14c0 9.33 14 24 14 24s14-14.67 14-24C28 6.27 21.73 0 14 0z' fill='"+color+"'/><circle cx='14' cy='14' r='6' fill='rgba(255,255,255,0.9)'/>"+s+"</svg>",className:"",iconSize:[28,38],iconAnchor:[14,38],popupAnchor:[0,-38]});
+  }
+  var g="#b8924a",n="#1c2e3e";
+  var d=[
+    {lat:41.0668837,lng:1.0617647,nom:"Kema",lloc:"Cambrils",any:"2026",adr:"C. Pau Casals, 37",c:g,s:false},
+    {lat:41.0681635,lng:1.1493959,nom:"La Goleta",lloc:"Salou",any:"2026",adr:"C. de la Gavina, 2",c:g,s:false},
+    {lat:41.1138541,lng:1.2524837,nom:"El Terrat",lloc:"Tarragona",any:"2026",adr:"C. Pons d'Icart, 19",c:g,s:false},
+    {lat:41.1520917,lng:1.1091041,nom:"Buidasacs",lloc:"Reus",any:"2025",adr:"C. Pintor Bergada, 7",c:n,s:true},
+    {lat:41.0721909,lng:1.0535021,nom:"Cambium",lloc:"Cambrils",any:"2025",adr:"C. M.J. Verdaguer, 17",c:n,s:true},
+    {lat:41.117998,lng:1.2570257,nom:"Anima",lloc:"Tarragona",any:"2025",adr:"C. de l'Abat, 2",c:n,s:false},
+    {lat:41.1668411,lng:1.469315,nom:"Baramar",lloc:"Roda de Bara",any:"2025",adr:"Pg. Maritim, 1",c:n,s:false},
+    {lat:41.1175787,lng:1.2561823,nom:"Casapepe",lloc:"Tarragona",any:"2025",adr:"C. dels Cavallers, 6",c:n,s:false},
+    {lat:41.1141067,lng:0.9362198,nom:"Ca l'Amadeu",lloc:"Vilanova d'Escornalbou",any:"2025",adr:"Pl. de la Font, s/n",c:n,s:false},
+    {lat:41.079836,lng:1.1328679,nom:"El Raco de Nico",lloc:"Salou",any:"2025",adr:"Via Augusta, 19",c:n,s:false},
+    {lat:41.1145692,lng:1.2652235,nom:"Limboo",lloc:"Tarragona",any:"2025",adr:"Platja del Miracle",c:n,s:false}
+  ];
+  var mk=d.map(function(r){
+    var pop="<div style='min-width:160px;padding:4px 0;'><div style='font-size:.55rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:"+r.c+";margin-bottom:4px;'>"+r.any+" &middot; "+r.lloc+"</div><div style='font-size:1.05rem;font-weight:700;color:#0b1626;margin-bottom:3px;'>"+r.nom+(r.s?" &#9733;":"")+"</div><div style='font-size:.75rem;color:#666;'>"+r.adr+"</div></div>";
+    var m=L.marker([r.lat,r.lng],{icon:icon(r.c,r.s)}).addTo(map).bindPopup(pop,{maxWidth:220});
+    m._a=r.any;m._s=r.s;return m;
+  });
+  window.filtraMapa=function(f,btn){
+    document.querySelectorAll(".mapa-filtre").forEach(function(b){b.classList.remove("actiu");});
+    btn.classList.add("actiu");
+    mk.forEach(function(m){
+      var show=f==="tots"||(f==="2026"&&m._a==="2026")||(f==="2025"&&m._a==="2025")||(f==="gastronia"&&m._s);
+      show?(!map.hasLayer(m)&&map.addLayer(m)):(map.hasLayer(m)&&map.removeLayer(m));
+    });
+  };
+})();
+</script>
+
 
 <!-- HISTORIAL -->
 <section class="sec sec-gray" id="historic">
