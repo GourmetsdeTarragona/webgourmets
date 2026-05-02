@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="../assets/css/nav.css">
 <link rel="stylesheet" href="../assets/css/seccions.css">
 <style>
-/* ── HERO ── */
+/* HERO */
 .entrada-hero{position:relative;min-height:70vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
 .entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.48;filter:brightness(1.05) contrast(1.05);}
 .entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.95) 0%,rgba(11,22,38,.45) 55%,rgba(11,22,38,.05) 100%);}
@@ -26,28 +26,32 @@
 .entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
 .entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
 .entrada-back:hover{color:var(--gold);}
-.entrada-meta-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
 .entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;}
+.entrada-meta-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
 .entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;}
 .entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:6px;}
 .entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
 .entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
 .entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.72);font-weight:300;line-height:1.85;max-width:560px;}
 
-/* ── COS ── */
+/* COS */
 .entrada-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
 .e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
 .e-title{font-family:var(--font-serif);font-size:1.75rem;color:var(--navy-dark);line-height:1.2;margin-bottom:22px;}
 .e-p{font-size:1rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:20px;}
 .e-p strong{font-weight:700;color:var(--navy-dark);}
+.e-p em{font-style:italic;color:#888;}
 .e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin:48px 0;}
 
-/* ── FOTO ── */
+/* FOTO FULL */
 .e-foto{margin:48px 0;position:relative;overflow:hidden;}
 .e-foto img{width:100%;height:380px;object-fit:cover;display:block;}
 .e-foto-peu{position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top,rgba(11,22,38,.78),transparent);font-size:.7rem;color:rgba(255,255,255,.62);font-style:italic;}
 
-/* ── CELLERS COMPACTE ── */
+/* FOTO FULL alta (hero-like) */
+.e-foto.tall img{height:480px;}
+
+/* CELLERS COMPACTES */
 .e-cellers{margin:24px 0;}
 .e-celler{background:#fff;border-left:4px solid var(--gold);padding:20px 24px;margin:12px 0;box-shadow:0 2px 16px rgba(28,46,62,.08);display:grid;grid-template-columns:185px 1fr;gap:20px;align-items:start;}
 .e-celler-do{font-size:.58rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
@@ -58,7 +62,7 @@
 .e-celler-p strong{font-weight:700;color:var(--navy-dark);}
 .e-celler-p em{font-style:italic;color:#888;font-size:.85em;}
 
-/* ── FOTO INLINE ── */
+/* FOTO INLINE */
 .e-foto-inline{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:12px 0;background:#fff;box-shadow:0 2px 16px rgba(28,46,62,.08);overflow:hidden;}
 .e-foto-inline img{width:100%;height:260px;object-fit:cover;object-position:center top;}
 .e-foto-inline-text{padding:28px 32px;display:flex;flex-direction:column;justify-content:center;}
@@ -68,12 +72,7 @@
 .e-foto-inline-text .e-title{font-size:1.2rem;margin-bottom:12px;}
 .e-foto-inline-text .e-p{font-size:.9rem;margin-bottom:0;}
 
-/* ── GOURMETS QUOTE ── */
-.e-gourmets{background:var(--navy-dark);color:#fff;padding:24px 28px;margin:12px 0 20px;}
-.e-gourmets p{font-family:var(--font-serif);font-size:.95rem;font-style:italic;line-height:1.7;color:rgba(255,255,255,.85);margin:0;}
-.e-gourmets cite{display:block;margin-top:10px;font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light, #d4a96a);font-style:normal;}
-
-/* ── COMPARTIR ── */
+/* COMPARTIR */
 .e-compartir{position:relative;margin:64px 0 0;padding:56px 40px 52px;background:linear-gradient(135deg,#0b1626 0%,#1c2e3e 100%);overflow:hidden;}
 .e-compartir::before{content:'';position:absolute;top:-1px;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);}
 .e-compartir::after{content:'"';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:14rem;font-weight:700;color:rgba(184,146,74,.06);line-height:1;pointer-events:none;user-select:none;}
@@ -95,15 +94,20 @@
 .e-compartir-copied{font-size:.65rem;color:#d4a96a;letter-spacing:.08em;opacity:0;transition:opacity .3s;margin-left:4px;}
 .e-compartir-copied.vis{opacity:1;}
 
-/* ── NAV RETORN ── */
-.e-nav-retorn{padding:40px;text-align:center;border-top:1px solid var(--border, #e8e2d8);}
+/* NAV RETORN */
+.e-nav-retorn{padding:40px;text-align:center;border-top:1px solid var(--border,#e8e2d8);}
 
-@media(max-width:1024px){.e-foto-inline{grid-template-columns:1fr;}.e-foto-inline img{height:220px;}.e-foto-inline.rev{direction:ltr;}}
+@media(max-width:1024px){
+  .e-foto-inline{grid-template-columns:1fr;}
+  .e-foto-inline img{height:220px;object-position:center center;}
+  .e-foto-inline.rev{direction:ltr;}
+}
 @media(max-width:768px){
   .entrada-hero-content{padding:0 5% 52px;}
   .entrada-cos{padding:52px 5%;}
   .e-celler{grid-template-columns:1fr;}
-  .e-foto img{height:260px;}
+  .e-foto img,.e-foto.tall img{height:240px;}
+  .e-foto-inline-text{padding:20px;}
   .e-compartir{padding:40px 24px 36px;}
   .e-compartir::after{font-size:8rem;right:2%;}
   .e-compartir-frase{font-size:1.2rem;}
@@ -198,7 +202,9 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- ══════════════════════════════════════════════════
+     HERO  ·  foto 11: ampolles-tap-corona.jpg
+══════════════════════════════════════════════════ -->
 <header class="entrada-hero">
   <div class="entrada-hero-bg" style="background-image:url('../assets/img/img-ancestrals/ampolles-tap-corona.jpg');"></div>
   <div class="entrada-hero-grad"></div>
@@ -226,7 +232,6 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </header>
 
-<!-- COS -->
 <main class="entrada-cos">
 
   <!-- INTRO -->
@@ -246,10 +251,15 @@ document.addEventListener('DOMContentLoaded', function() {
     </p>
   </section>
 
-  <!-- FOTO: sediment -->
+  <!-- foto 10: ancestral-sediment-ma.jpg -->
   <div class="e-foto">
-    <img src="../assets/img/img-ancestrals/ancestral-sediment-ma.jpg" alt="Ampolla de vi ancestral amb sediment, mostrant la terbolesa natural del mètode pét-nat">
-    <span class="e-foto-peu t" data-es="El sedimento no es un defecto: es la firma del método ancestral." data-ca="El sediment no és un defecte: és la signatura del mètode ancestral.">El sedimento no es un defecto: es la firma del método ancestral.</span>
+    <img src="../assets/img/img-ancestrals/ancestral-sediment-ma.jpg"
+         alt="Ampolla de vi ancestral inclinada mostrant el sediment natural del mètode pét-nat">
+    <span class="e-foto-peu t"
+          data-es="El sedimento no es un defecto: es la firma del método ancestral."
+          data-ca="El sediment no és un defecte: és la signatura del mètode ancestral.">
+      El sedimento no es un defecto: es la firma del método ancestral.
+    </span>
   </div>
 
   <!-- TÈCNICA -->
@@ -268,16 +278,21 @@ document.addEventListener('DOMContentLoaded', function() {
       La diferencia fundamental con el cava o el champagne: en esos casos la fermentación acaba en depósito y después se induce una <em>segunda</em> fermentación controlada en botella. En el pét-nat <strong>hay una sola fermentación, que empieza en el depósito y acaba en el vidrio.</strong> El resultado: burbuja más fina, sensación cremosa en boca, graduación baja —entre 9 y 11 grados— y una frescura que no se puede fingir.
     </p>
     <p class="e-p t"
-       data-es="Muchos elaboradores optan por un <strong>degüelle</strong> —o <em>dégorgement</em>— para eliminar el sedimento que queda en la botella tras la fermentación. En el método ancestral el proceso es artesanal: se posiciona la botella boca abajo para que los posos se concentren en el cuello, y se abre con un golpe preciso para que la presión interior expulse el sedimento. Sin el frío industrial que usa el champagne, sin líneas de producción automatizadas. <strong>La mano del elaborador, la presión del vino, y el momento justo.</strong> Algunos optan por no degollar —y dejan el sedimento integrado en la botella, que se sirve con suavidad. Ambas opciones son válidas. Ambas son honestas."
-       data-ca="Molts elaboradors opten per un <strong>degollament</strong> —o <em>dégorgement</em>— per eliminar el sediment que queda a l'ampolla després de la fermentació. Al mètode ancestral el procés és artesanal: es posiciona l'ampolla boca avall perquè els pòsits es concentrin al coll, i s'obre amb un cop precís perquè la pressió interior expulsi el sediment. Sense el fred industrial que fa servir el champagne, sense línies de producció automatitzades. <strong>La mà de l'elaborador, la pressió del vi, i el moment just.</strong> Alguns opten per no degollar —i deixen el sediment integrat a l'ampolla, que es serveix amb suavitat. Totes dues opcions són vàlides. Totes dues són honestes.">
-      Muchos elaboradores optan por un <strong>degüelle</strong> —o <em>dégorgement</em>— para eliminar el sedimento que queda en la botella tras la fermentación. En el método ancestral el proceso es artesanal: se posiciona la botella boca abajo para que los posos se concentren en el cuello, y se abre con un golpe preciso para que la presión interior expulse el sedimento. Sin el frío industrial que usa el champagne, sin líneas de producción automatizadas. <strong>La mano del elaborador, la presión del vino, y el momento justo.</strong> Algunos optan por no degollar —y dejan el sedimento integrado en la botella, que se sirve con suavidad. Ambas opciones son válidas. Ambas son honestas.
+       data-es="Muchos elaboradores optan por un <strong>degüelle</strong> artesanal para eliminar el sedimento: se posiciona la botella boca abajo, los posos se concentran en el cuello, y se abre con un golpe preciso para que la presión interior los expulse. Sin frío industrial, sin automatización. <strong>La mano del elaborador, la presión del vino y el momento justo.</strong> Otros no degüellan — y dejan el sedimento integrado, que se sirve con suavidad. Ambas opciones son válidas. Ambas son honestas."
+       data-ca="Molts elaboradors opten per un <strong>degollament</strong> artesanal per eliminar el sediment: es posiciona l'ampolla boca avall, els pòsits es concentren al coll, i s'obre amb un cop precís perquè la pressió interior els expulsi. Sense fred industrial, sense automatització. <strong>La mà de l'elaborador, la pressió del vi i el moment just.</strong> D'altres no degollen — i deixen el sediment integrat, que es serveix amb suavitat. Totes dues opcions són vàlides. Totes dues són honestes.">
+      Muchos elaboradores optan por un <strong>degüelle</strong> artesanal para eliminar el sedimento: se posiciona la botella boca abajo, los posos se concentran en el cuello, y se abre con un golpe preciso para que la presión interior los expulse. Sin frío industrial, sin automatización. <strong>La mano del elaborador, la presión del vino y el momento justo.</strong> Otros no degüellan — y dejan el sedimento integrado, que se sirve con suavidad. Ambas opciones son válidas. Ambas son honestas.
     </p>
   </section>
 
-  <!-- FOTO: degollament -->
+  <!-- foto 2: degoll-ancestral-tecnica.jpg -->
   <div class="e-foto">
-    <img src="../assets/img/img-ancestrals/degoll-ancestral-tecnica.jpg" alt="Tècnica de degollament artesanal d'un vi ancestral: la pressió interior expulsa el sediment del coll de l'ampolla">
-    <span class="e-foto-peu t" data-es="El degüelle artesanal: la presión del vino hace el trabajo. Sin frío industrial, sin automatización." data-ca="El degollament artesanal: la pressió del vi fa la feina. Sense fred industrial, sense automatització.">El degüelle artesanal: la presión del vino hace el trabajo. Sin frío industrial, sin automatización.</span>
+    <img src="../assets/img/img-ancestrals/degoll-ancestral-tecnica.jpg"
+         alt="Tècnica de degollament artesanal d'un vi ancestral: la pressió interior expulsa el sediment del coll de l'ampolla">
+    <span class="e-foto-peu t"
+          data-es="El degüelle artesanal: la presión del vino hace el trabajo. Sin frío industrial, sin automatización."
+          data-ca="El degollament artesanal: la pressió del vi fa la feina. Sense fred industrial, sense automatització.">
+      El degüelle artesanal: la presión del vino hace el trabajo. Sin frío industrial, sin automatización.
+    </span>
   </div>
 
   <!-- PER QUÈ TORNEN -->
@@ -297,13 +312,18 @@ document.addEventListener('DOMContentLoaded', function() {
     </p>
   </section>
 
-  <!-- FOTO: Limoux orígens -->
+  <!-- foto 9: blanquette-limoux-origen.jpg -->
   <div class="e-foto">
-    <img src="../assets/img/img-ancestrals/blanquette-limoux-origen.jpg" alt="Vinyes de Limoux, Occitània, on l'any 1531 els monjos van elaborar el primer vi de mètode ancestral documentat">
-    <span class="e-foto-peu t" data-es="Limoux, Occitania — donde en 1531 los monjes embotellaron la primera burbuja ancestral de la historia." data-ca="Limoux, Occitània — on l'any 1531 els monjos van embolicar la primera bombolla ancestral de la història.">Limoux, Occitania — donde en 1531 los monjes embotellaron la primera burbuja ancestral de la historia.</span>
+    <img src="../assets/img/img-ancestrals/blanquette-limoux-origen.jpg"
+         alt="Vinyes prop de Carcassona i Limoux, Occitània, bressol del primer vi de mètode ancestral documentat, l'any 1531">
+    <span class="e-foto-peu t"
+          data-es="Limoux, Occitania — donde en 1531 los monjes embotellaron la primera burbuja ancestral de la historia."
+          data-ca="Limoux, Occitània — on l'any 1531 els monjos van embolicar la primera bombolla ancestral de la història.">
+      Limoux, Occitania — donde en 1531 los monjes embotellaron la primera burbuja ancestral de la historia.
+    </span>
   </div>
 
-  <!-- CONNEXIÓ TERRITORIAL -->
+  <!-- ARRELS TERRITORIALS -->
   <section style="margin-top:48px;">
     <span class="e-label t" data-es="Las raíces" data-ca="Les arrels">Las raíces</span>
     <h2 class="e-title t" data-es="En casa nuestra, desde siempre" data-ca="A casa nostra, des de sempre">En casa nuestra, desde siempre</h2>
@@ -327,14 +347,20 @@ document.addEventListener('DOMContentLoaded', function() {
     </p>
   </section>
 
-  <!-- FOTO: ampolles genèriques ancestrals -->
-  <div class="e-foto" style="margin-top:24px;">
-    <img src="../assets/img/img-ancestrals/carcassona-vinyes-historia.jpg" alt="Selecció de vins ancestrals i pét-nats de diverses regions — la diversitat del mètode en una sola imatge">
-    <span class="e-foto-peu t" data-es="El método ancestral genera una diversidad de vinos únicos — cada botella es irrepetible." data-ca="El mètode ancestral genera una diversitat de vins únics — cada ampolla és irrepetible.">El método ancestral genera una diversidad de vinos únicos — cada botella es irrepetible.</span>
+  <!-- foto 5: carcassona-vinyes-historia.jpg — ampolles genèriques ancestrals -->
+  <div class="e-foto" style="margin-bottom:32px;">
+    <img src="../assets/img/img-ancestrals/carcassona-vinyes-historia.jpg"
+         alt="Selecció de vins ancestrals i pét-nats de diverses elaboracions — la diversitat del mètode en una sola imatge">
+    <span class="e-foto-peu t"
+          data-es="El método ancestral genera una diversidad irrepetible: cada botella es el resultado de una sola fermentación, sin correcciones ni añadidos."
+          data-ca="El mètode ancestral genera una diversitat irrepetible: cada ampolla és el resultat d'una sola fermentació, sense correccions ni afegits.">
+      El método ancestral genera una diversidad irrepetible: cada botella es el resultado de una sola fermentación, sin correcciones ni añadidos.
+    </span>
   </div>
 
   <div class="e-cellers">
 
+    <!-- Gritelles -->
     <div class="e-celler">
       <div>
         <p class="e-celler-do">DO Montsant</p>
@@ -349,6 +375,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </p>
     </div>
 
+    <!-- Bell Cros -->
     <div class="e-celler">
       <div>
         <p class="e-celler-do">DO Montsant</p>
@@ -363,6 +390,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </p>
     </div>
 
+    <!-- Coop Barberà -->
     <div class="e-celler">
       <div>
         <p class="e-celler-do">DO Conca de Barberà</p>
@@ -377,6 +405,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </p>
     </div>
 
+    <!-- Sanromà -->
     <div class="e-celler">
       <div>
         <p class="e-celler-do t" data-es="Alt Camp · Sin DO" data-ca="Alt Camp · Sense DO">Alt Camp · Sin DO</p>
@@ -393,8 +422,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   </div>
 
-  <!-- FOTO Eduard Sanromà + experiència Gourmets -->
-  <div class="e-foto-inline" style="margin-top:4px;">
+  <!-- foto 1: eduard-sanroma-celler.jpg — bloc Sanromà -->
+  <div class="e-foto-inline">
     <img src="../assets/img/img-ancestrals/eduard-sanroma-celler.jpg"
          alt="Eduard Sanromà al seu celler de Vila-rodona, envoltat de les seves ampolles de vins de mètode ancestral i natural">
     <div class="e-foto-inline-text">
@@ -410,6 +439,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <div class="e-cellers">
 
+    <!-- Mas Vicenç -->
     <div class="e-celler">
       <div>
         <p class="e-celler-do">DO Tarragona</p>
@@ -426,10 +456,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   </div>
 
-  <!-- FOTO Mas Vicenç equip + experiència -->
+  <!-- foto 7: mas-vicenc-colldecabra-equip.jpg — bloc Mas Vicenç -->
   <div class="e-foto-inline rev">
     <img src="../assets/img/img-ancestrals/mas-vicenc-colldecabra-equip.jpg"
-         alt="L'equip de Mas Vicenç presentant els ancestrals Colldecabra de garnatxa negra i blanc, DO Tarragona, Cabra del Camp">
+         alt="L'equip de Mas Vicenç presentant els ancestrals Colldecabra de garnatxa negra i blanc a Cabra del Camp, DO Tarragona">
     <div class="e-foto-inline-text">
       <span class="e-label t" data-es="Experiencia Gourmets" data-ca="Experiència Gourmets">Experiencia Gourmets</span>
       <h3 class="e-title t" data-es="Cena de verano" data-ca="Sopar d'estiu">Cena de verano</h3>
@@ -443,6 +473,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <div class="e-cellers">
 
+    <!-- Jordi Miró -->
     <div class="e-celler">
       <div>
         <p class="e-celler-do">Terra Alta</p>
@@ -459,21 +490,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
   </div>
 
-  <!-- FOTO Andrea Miró — bloc Jordi Miró -->
-  <div class="e-foto-inline rev" style="margin-top:12px;">
+  <!-- foto 8: enologa-tast-copa.jpg — Andrea Miró / Jordi Miró -->
+  <div class="e-foto-inline">
     <img src="../assets/img/img-ancestrals/enologa-tast-copa.jpg"
          alt="Andrea Miró, del Celler Jordi Miró, examinant el Textura 3 Naturalment Ancestral de garnatxa blanca de la Terra Alta">
     <div class="e-foto-inline-text">
       <span class="e-label t" data-es="Experiencia Gourmets" data-ca="Experiència Gourmets">Experiencia Gourmets</span>
       <h3 class="e-title t" data-es="Gastronia 2025 · Buidasacs" data-ca="Gastronia 2025 · Buidasacs">Gastronia 2025 · Buidasacs</h3>
       <p class="e-p t"
-         data-es="<strong>Andrea Miró</strong> y el equipo de Celler Jordi Miró presentaron el Textura 3 «Naturalment Ancestral» en la visita al Buidasacs durante el Gastronia 2025. En esa parte final de las visitas, donde el vino y la conversación se alargan naturalmente, un ancestral ligero es exactamente lo que necesitas."
-         data-ca="<strong>Andrea Miró</strong> i l'equip del Celler Jordi Miró van presentar el Textura 3 «Naturalment Ancestral» a la visita al Buidasacs durant el Gastronia 2025. En aquella part final de les visites, on el vi i la conversa s'allarguen naturalment, un ancestral lleuger és exactament el que necessites.">
-        <strong>Andrea Miró</strong> y el equipo de Celler Jordi Miró presentaron el Textura 3 «Naturalment Ancestral» en la visita al Buidasacs durante el Gastronia 2025. En esa parte final de las visitas, donde el vino y la conversación se alargan naturalmente, un ancestral ligero es exactamente lo que necesitas.
+         data-es="<strong>Andrea Miró</strong> y el equipo de Celler Jordi Miró presentaron el Textura 3 en la visita al Buidasacs durante el Gastronia 2025. En esa parte final de las visitas, donde el vino y la conversación se alargan naturalmente, un ancestral ligero es exactamente lo que necesitas."
+         data-ca="<strong>Andrea Miró</strong> i l'equip del Celler Jordi Miró van presentar el Textura 3 a la visita al Buidasacs durant el Gastronia 2025. En aquella part final de les visites, on el vi i la conversa s'allarguen naturalment, un ancestral lleuger és exactament el que necessites.">
+        <strong>Andrea Miró</strong> y el equipo de Celler Jordi Miró presentaron el Textura 3 en la visita al Buidasacs durante el Gastronia 2025. En esa parte final de las visitas, donde el vino y la conversación se alargan naturalmente, un ancestral ligero es exactamente lo que necesitas.
       </p>
     </div>
   </div>
 
+  <div class="e-cellers">
+
+    <!-- Bàrbara Forés -->
     <div class="e-celler">
       <div>
         <p class="e-celler-do">Terra Alta</p>
@@ -490,8 +524,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   </div>
 
-  <!-- Vinyes del Tiet Pere + foto ampolla -->
-  <div class="e-foto-inline" style="margin-top:12px;">
+  <!-- foto 4: vinyes-tiet-pere-ampolla.jpg — bloc Tiet Pere -->
+  <div class="e-foto-inline rev" style="margin-top:12px;">
     <img src="../assets/img/img-ancestrals/vinyes-tiet-pere-ampolla.jpg"
          alt="Ampolla de l'Ancestral de Vinyes del Tiet Pere — cartoixà vermell de Vilabella, Alt Camp, DO Tarragona">
     <div class="e-foto-inline-text">
@@ -505,10 +539,10 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </div>
 
-  <!-- Celler 9+ + Moisès -->
-  <div class="e-foto-inline rev" style="margin-top:12px;">
+  <!-- foto 6: moises-virgili-9mes.jpg — bloc Celler 9+ -->
+  <div class="e-foto-inline" style="margin-top:12px;">
     <img src="../assets/img/img-ancestrals/moises-virgili-9mes.jpg"
-         alt="Moisès Virgili, fundador del Celler 9+ a la Nou de Gaià, Tarragonès, amb les seves ampolles d'escumós ancestral de sumoll i cartoixà">
+         alt="Ampolles numerades del Celler 9+ de la Nou de Gaià — la línia completa d'escumosos ancestrals de Moisès Virgili">
     <div class="e-foto-inline-text">
       <span class="e-label">Tarragonès · Baix Gaià</span>
       <h3 class="e-title">Celler 9+</h3>
@@ -521,7 +555,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   <!-- COM GAUDIR -->
-  <section style="margin-top:48px;">
+  <section style="margin-top:52px;">
     <span class="e-label t" data-es="En la mesa" data-ca="A taula">En la mesa</span>
     <h2 class="e-title t" data-es="Cómo disfrutarlos" data-ca="Com gaudir-los">Cómo disfrutarlos</h2>
     <div class="e-divider"></div>
@@ -538,9 +572,9 @@ document.addEventListener('DOMContentLoaded', function() {
     <h2 class="e-title t" data-es="La mirada gourmet" data-ca="La mirada gourmet">La mirada gourmet</h2>
     <div class="e-divider"></div>
     <p class="e-p t"
-       data-es="Desde los Gourmets de Tarragona entendemos que <strong>el vino y la cocina son los dos idiomas de un mismo diálogo sobre el territorio.</strong> Beber un pét-nat de morenillo de la Terra Alta es beber la Serra de Pàndols y la historia de una familia que salvó una variedad de la extinción. Beber un ancestral de trepat de la Conca es beber Barberà, la cooperativa de Martinell, la memoria de una variedad que casi no sobrevivió. Beber un cartoixà vermell de Vilabella es beber el Alt Camp, las arcillas blancas, las viñas de 35 años que nadie miraba."
-       data-ca="Des dels Gourmets de Tarragona entenem que <strong>el vi i la cuina són els dos idiomes d'un mateix diàleg sobre el territori.</strong> Beure un pét-nat de morenillo de la Terra Alta és beure la Serra de Pàndols i la història d'una família que va salvar una varietat de l'extinció. Beure un ancestral de trepat de la Conca és beure Barberà, la cooperativa de Martinell, la memòria d'una varietat que gairebé no va sobreviure. Beure un cartoixà vermell de Vilabella és beure l'Alt Camp, les argiles blanques, les vinyes de 35 anys que ningú mirava.">
-      Desde los Gourmets de Tarragona entendemos que <strong>el vino y la cocina son los dos idiomas de un mismo diálogo sobre el territorio.</strong> Beber un pét-nat de morenillo de la Terra Alta es beber la Serra de Pàndols y la historia de una familia que salvó una variedad de la extinción. Beber un ancestral de trepat de la Conca es beber Barberà, la cooperativa de Martinell, la memoria de una variedad que casi no sobrevivió. Beber un cartoixà vermell de Vilabella es beber el Alt Camp, las arcillas blancas, las viñas de 35 años que nadie miraba.
+       data-es="Desde los Gourmets de Tarragona entendemos que <strong>el vino y la cocina son los dos idiomas de un mismo diálogo sobre el territorio.</strong> Beber un pét-nat de morenillo de la Terra Alta es beber la Serra de Pàndols y la historia de una familia que salvó una variedad de la extinción. Beber un ancestral de trepat de la Conca es beber Barberà, la cooperativa de Martinell, la memoria de una variedad que casi no sobrevivió. Beber un cartoixà vermell de Vilabella es beber el Alt Camp, las arcillas blancas, las viñas de 35 años que nadie miraba. Beber un sumoll del Baix Gaià es beber el mar, la marinada, la apuesta de un enólogo que creyó en las viñas de su padre."
+       data-ca="Des dels Gourmets de Tarragona entenem que <strong>el vi i la cuina són els dos idiomes d'un mateix diàleg sobre el territori.</strong> Beure un pét-nat de morenillo de la Terra Alta és beure la Serra de Pàndols i la història d'una família que va salvar una varietat de l'extinció. Beure un ancestral de trepat de la Conca és beure Barberà, la cooperativa de Martinell, la memòria d'una varietat que gairebé no va sobreviure. Beure un cartoixà vermell de Vilabella és beure l'Alt Camp, les argiles blanques, les vinyes de 35 anys que ningú mirava. Beure un sumoll del Baix Gaià és beure el mar, la marinada, l'aposta d'un enòleg que va creure en les vinyes del seu pare.">
+      Desde los Gourmets de Tarragona entendemos que <strong>el vino y la cocina son los dos idiomas de un mismo diálogo sobre el territorio.</strong> Beber un pét-nat de morenillo de la Terra Alta es beber la Serra de Pàndols y la historia de una familia que salvó una variedad de la extinción. Beber un ancestral de trepat de la Conca es beber Barberà, la cooperativa de Martinell, la memoria de una variedad que casi no sobrevivió. Beber un cartoixà vermell de Vilabella es beber el Alt Camp, las arcillas blancas, las viñas de 35 años que nadie miraba. Beber un sumoll del Baix Gaià es beber el mar, la marinada, la apuesta de un enólogo que creyó en las viñas de su padre.
     </p>
     <p class="e-p t"
        style="margin-top:32px;font-style:italic;color:var(--gold);"
@@ -631,7 +665,11 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </div>
   <div class="footer-bottom">
-    <p class="t" data-es="© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados" data-ca="© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats">© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados</p>
+    <p class="t"
+       data-es="© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados"
+       data-ca="© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats">
+      © 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados
+    </p>
   </div>
 </footer>
 
