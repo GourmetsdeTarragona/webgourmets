@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="../assets/css/nav.css">
 <link rel="stylesheet" href="../assets/css/seccions.css">
 <style>
+/* HERO */
 .entrada-hero{position:relative;min-height:70vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
 .entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.48;filter:brightness(1.05) contrast(1.05);}
 .entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.95) 0%,rgba(11,22,38,.45) 55%,rgba(11,22,38,.05) 100%);}
@@ -28,11 +29,12 @@
 .entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;}
 .entrada-meta-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
 .entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;}
-.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);}
 .entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
 .entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
 .entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.72);font-weight:300;line-height:1.85;max-width:560px;}
 
+/* COS */
 .entrada-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
 .e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
 .e-title{font-family:var(--font-serif);font-size:1.75rem;color:var(--navy-dark);line-height:1.2;margin-bottom:22px;}
@@ -41,21 +43,13 @@
 .e-p em{font-style:italic;color:#888;}
 .e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin:48px 0;}
 
+/* FOTOS */
 .e-foto{margin:48px 0;position:relative;overflow:hidden;}
 .e-foto img{width:100%;height:380px;object-fit:cover;display:block;}
 .e-foto-peu{position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top,rgba(11,22,38,.78),transparent);font-size:.7rem;color:rgba(255,255,255,.62);font-style:italic;}
 
-.e-cellers{margin:24px 0;}
-.e-celler{background:#fff;border-left:4px solid var(--gold);padding:20px 24px;margin:12px 0;box-shadow:0 2px 16px rgba(28,46,62,.08);display:grid;grid-template-columns:185px 1fr;gap:20px;align-items:start;}
-.e-celler-do{font-size:.58rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
-.e-celler-nom{font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--navy-dark);margin-bottom:3px;line-height:1.2;}
-.e-celler-lloc{font-size:.7rem;color:#888;margin-bottom:10px;}
-.e-celler-vi{font-size:.64rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:3px 9px;display:inline-block;}
-.e-celler-p{font-size:.88rem;font-weight:300;color:#444;line-height:1.75;}
-.e-celler-p strong{font-weight:700;color:var(--navy-dark);}
-.e-celler-p em{font-style:italic;color:#888;font-size:.85em;}
-
-.e-foto-inline{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:12px 0;background:#fff;box-shadow:0 2px 16px rgba(28,46,62,.08);overflow:hidden;}
+/* FOTO INLINE */
+.e-foto-inline{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:16px 0;background:#fff;box-shadow:0 2px 16px rgba(28,46,62,.08);overflow:hidden;}
 .e-foto-inline img{width:100%;height:260px;object-fit:cover;object-position:center top;}
 .e-foto-inline-text{padding:28px 32px;display:flex;flex-direction:column;justify-content:center;}
 .e-foto-inline.rev{direction:rtl;}
@@ -64,6 +58,24 @@
 .e-foto-inline-text .e-title{font-size:1.2rem;margin-bottom:12px;}
 .e-foto-inline-text .e-p{font-size:.9rem;margin-bottom:0;}
 
+/* CELLERS LLISTA COMPRIMIDA */
+.e-cellers-lista{margin:32px 0;}
+.e-celler-item{padding:16px 0;border-bottom:1px solid #e8e2d8;display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:baseline;}
+.e-celler-item:last-child{border-bottom:none;}
+.e-celler-cap{}
+.e-celler-nom-s{font-family:var(--font-serif);font-size:1rem;font-weight:700;color:var(--navy-dark);margin-bottom:2px;}
+.e-celler-do-s{font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);}
+.e-celler-vi-s{font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:2px 8px;display:inline-block;margin-top:6px;}
+.e-celler-desc{font-size:.9rem;font-weight:300;color:#444;line-height:1.7;}
+.e-celler-desc strong{font-weight:700;color:var(--navy-dark);}
+.e-celler-desc em{font-style:italic;color:#888;font-size:.88em;}
+
+/* GOURMETS QUOTE */
+.e-gourmets{background:var(--navy-dark);color:#fff;padding:24px 28px;margin:16px 0;}
+.e-gourmets p{font-family:var(--font-serif);font-size:.95rem;font-style:italic;line-height:1.7;color:rgba(255,255,255,.85);margin:0;}
+.e-gourmets cite{display:block;margin-top:10px;font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#d4a96a;font-style:normal;}
+
+/* COMPARTIR */
 .e-compartir{position:relative;margin:64px 0 0;padding:56px 40px 52px;background:linear-gradient(135deg,#0b1626 0%,#1c2e3e 100%);overflow:hidden;}
 .e-compartir::before{content:'';position:absolute;top:-1px;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);}
 .e-compartir::after{content:'"';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:14rem;font-weight:700;color:rgba(184,146,74,.06);line-height:1;pointer-events:none;user-select:none;}
@@ -83,18 +95,17 @@
 .e-compartir-btn.fb:hover{border-color:#1877f2;background:rgba(24,119,242,.1);color:#6fa8ff;}
 .e-compartir-copied{font-size:.65rem;color:#d4a96a;letter-spacing:.08em;opacity:0;transition:opacity .3s;margin-left:4px;}
 .e-compartir-copied.vis{opacity:1;}
-
 .e-nav-retorn{padding:40px;text-align:center;border-top:1px solid var(--border,#e8e2d8);}
 
 @media(max-width:1024px){
   .e-foto-inline{grid-template-columns:1fr;}
   .e-foto-inline img{height:220px;object-position:center center;}
   .e-foto-inline.rev{direction:ltr;}
+  .e-celler-item{grid-template-columns:1fr;}
 }
 @media(max-width:768px){
   .entrada-hero-content{padding:0 5% 52px;}
   .entrada-cos{padding:52px 5%;}
-  .e-celler{grid-template-columns:1fr;}
   .e-foto img{height:240px;}
   .e-foto-inline-text{padding:20px;}
   .e-compartir{padding:40px 24px 36px;}
@@ -195,7 +206,7 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
     <div class="entrada-meta-info">
       <span class="entrada-meta-item t" data-es="🍾 Método Ancestral" data-ca="🍾 Mètode Ancestral">🍾 Método Ancestral</span>
       <span class="entrada-meta-item t" data-es="🗺 Demarcación de Tarragona" data-ca="🗺 Demarcació de Tarragona">🗺 Demarcación de Tarragona</span>
-      <span class="entrada-meta-item">📖 10 min</span>
+      <span class="entrada-meta-item">📖 12 min</span>
     </div>
     <h1 class="entrada-titol t"
         data-es="El vino que no olvidó<br><em>de dónde venía</em>"
@@ -231,46 +242,45 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
 
   <!-- FOTO INTRO · sedimento_ancestral.jpg -->
   <div class="e-foto">
-    <img src="../assets/img/img-ancestrals/sedimento_ancestral.jpg"
-         alt="Ampolla de vi ancestral inclinada mostrant el sediment natural acumulat al coll — procés previ al degollament">
-    <span class="e-foto-peu t"
-          data-es="El sedimento no es un defecto: es la firma del método ancestral."
-          data-ca="El sediment no és un defecte: és la signatura del mètode ancestral.">
-      El sedimento no es un defecto: es la firma del método ancestral.
-    </span>
+    <img src="../assets/img/img-ancestrals/sedimento_ancestral.jpg" alt="Ampolla de vi ancestral inclinada mostrant el sediment natural acumulat al coll — procés previ al degollament">
+    <span class="e-foto-peu t" data-es="El sedimento no es un defecto: es la firma del método ancestral." data-ca="El sediment no és un defecte: és la signatura del mètode ancestral.">El sedimento no es un defecto: es la firma del método ancestral.</span>
   </div>
 
-  <!-- TÈCNICA -->
+  <!-- TÈCNICA AMPLIADA -->
   <section style="margin-top:48px;">
     <span class="e-label t" data-es="La técnica" data-ca="La tècnica">La técnica</span>
-    <h2 class="e-title t" data-es="Cómo funciona, en treinta segundos" data-ca="Com funciona, en trenta segons">Cómo funciona, en treinta segundos</h2>
+    <h2 class="e-title t" data-es="Cómo funciona" data-ca="Com funciona">Cómo funciona</h2>
     <div class="e-divider"></div>
+
     <p class="e-p t"
-       data-es="El método es sencillo hasta la brutalidad: se vendimia, se inicia la fermentación con las levaduras naturales de la propia uva, y <strong>cuando esa fermentación todavía no ha acabado, se embotella.</strong> El tapón se pone. El vino continúa fermentando dentro. El gas no puede escapar. Nace la burbuja. Una sola fermentación, de principio a fin. Sin azúcar añadido. Sin levaduras industriales. Sin dosage. <strong>Lo que hay en la copa es exactamente lo que había en la viña.</strong>"
-       data-ca="El mètode és senzill fins a la brutalitat: es verema, s'inicia la fermentació amb els llevats naturals del propi raïm, i <strong>quan aquella fermentació encara no ha acabat, s'embotella.</strong> El tap es posa. El vi continua fermentant a dins. El gas no pot escapar. Neix la bombolla. Una sola fermentació, de principi a fi. Sense sucre afegit. Sense llevats industrials. Sense dosage. <strong>El que hi ha a la copa és exactament el que hi havia a la vinya.</strong>">
-      El método es sencillo hasta la brutalidad: se vendimia, se inicia la fermentación con las levaduras naturales de la propia uva, y <strong>cuando esa fermentación todavía no ha acabado, se embotella.</strong> El tapón se pone. El vino continúa fermentando dentro. El gas no puede escapar. Nace la burbuja. Una sola fermentación, de principio a fin. Sin azúcar añadido. Sin levaduras industriales. Sin dosage. <strong>Lo que hay en la copa es exactamente lo que había en la viña.</strong>
+       data-es="El método es sencillo hasta la brutalidad. Se vendimia el racimo, generalmente de forma manual y en el punto óptimo de madurez. Se inicia la fermentación alcohólica con las levaduras naturales que habitan en la propia piel de la uva y en el aire del celler —no levaduras de laboratorio, sino las que llevan siglos en esa tierra. Y entonces, <strong>cuando esa fermentación todavía no ha acabado —cuando el vino todavía tiene azúcar residual activo y las levaduras siguen trabajando— se embotella.</strong> El tapón se pone. El vino continúa fermentando dentro. El gas carbónico que produce esa fermentación no puede escapar. Queda integrado en el líquido. Nace la burbuja."
+       data-ca="El mètode és senzill fins a la brutalitat. Es verema el raïm, generalment de forma manual i en el punt òptim de maduresa. S'inicia la fermentació alcohòlica amb els llevats naturals que habiten a la pròpia pell del raïm i en l'aire del celler —no llevats de laboratori, sinó els que porten segles en aquella terra. I llavors, <strong>quan aquella fermentació encara no ha acabat —quan el vi encara té sucre residual actiu i els llevats continuen treballant— s'embotella.</strong> El tap es posa. El vi continua fermentant a dins. El gas carbònic que produeix aquella fermentació no pot escapar. Queda integrat en el líquid. Neix la bombolla.">
+      El método es sencillo hasta la brutalidad. Se vendimia el racimo, generalmente de forma manual y en el punto óptimo de madurez. Se inicia la fermentación alcohólica con las levaduras naturales que habitan en la propia piel de la uva y en el aire del celler —no levaduras de laboratorio, sino las que llevan siglos en esa tierra. Y entonces, <strong>cuando esa fermentación todavía no ha acabado —cuando el vino todavía tiene azúcar residual activo y las levaduras siguen trabajando— se embotella.</strong> El tapón se pone. El vino continúa fermentando dentro. El gas carbónico que produce esa fermentación no puede escapar. Queda integrado en el líquido. Nace la burbuja.
     </p>
+
     <p class="e-p t"
-       data-es="La diferencia fundamental con el cava o el champagne: en esos casos la fermentación acaba en depósito y después se induce una <em>segunda</em> fermentación controlada en botella. En el pét-nat <strong>hay una sola fermentación, que empieza en el depósito y acaba en el vidrio.</strong> El resultado: burbuja más fina, sensación cremosa en boca, graduación baja —entre 9 y 11 grados— y una frescura que no se puede fingir."
-       data-ca="La diferència fonamental amb el cava o el champagne: en aquells casos la fermentació acaba en dipòsit i després s'indueix una <em>segona</em> fermentació controlada en ampolla. En el pét-nat <strong>hi ha una sola fermentació, que comença al dipòsit i acaba al vidre.</strong> El resultat: bombolla més fina, sensació cremosa al paladar, graduació baixa —entre 9 i 11 graus— i una frescor que no es pot fingir.">
-      La diferencia fundamental con el cava o el champagne: en esos casos la fermentación acaba en depósito y después se induce una <em>segunda</em> fermentación controlada en botella. En el pét-nat <strong>hay una sola fermentación, que empieza en el depósito y acaba en el vidrio.</strong> El resultado: burbuja más fina, sensación cremosa en boca, graduación baja —entre 9 y 11 grados— y una frescura que no se puede fingir.
+       data-es="Sin adición de azúcar. Sin levaduras industriales. Sin dosage. Sin segunda fermentación artificial. <strong>Lo que hay en la copa es exactamente lo que había en la viña, transformado por la naturaleza con una intervención humana mínima.</strong>"
+       data-ca="Sense addició de sucre. Sense llevats industrials. Sense dosage. Sense segona fermentació artificial. <strong>El que hi ha a la copa és exactament el que hi havia a la vinya, transformat per la naturalesa amb una intervenció humana mínima.</strong>">
+      Sin adición de azúcar. Sin levaduras industriales. Sin dosage. Sin segunda fermentación artificial. <strong>Lo que hay en la copa es exactamente lo que había en la viña, transformado por la naturaleza con una intervención humana mínima.</strong>
     </p>
+
     <p class="e-p t"
-       data-es="Muchos elaboradores optan por un <strong>degüelle</strong> artesanal para eliminar el sedimento: se posiciona la botella boca abajo, los posos se concentran en el cuello, y se abre con un golpe preciso para que la presión interior los expulse. Sin frío industrial, sin automatización. <strong>La mano del elaborador, la presión del vino y el momento justo.</strong> Otros no degüellan y dejan el sedimento integrado, que se sirve con suavidad. Ambas opciones son válidas. Ambas son honestas."
-       data-ca="Molts elaboradors opten per un <strong>degollament</strong> artesanal per eliminar el sediment: es posiciona l'ampolla boca avall, els pòsits es concentren al coll, i s'obre amb un cop precís perquè la pressió interior els expulsi. Sense fred industrial, sense automatització. <strong>La mà de l'elaborador, la pressió del vi i el moment just.</strong> D'altres no degollen i deixen el sediment integrat, que es serveix amb suavitat. Totes dues opcions són vàlides. Totes dues són honestes.">
-      Muchos elaboradores optan por un <strong>degüelle</strong> artesanal para eliminar el sedimento: se posiciona la botella boca abajo, los posos se concentran en el cuello, y se abre con un golpe preciso para que la presión interior los expulse. Sin frío industrial, sin automatización. <strong>La mano del elaborador, la presión del vino y el momento justo.</strong> Otros no degüellan y dejan el sedimento integrado, que se sirve con suavidad. Ambas opciones son válidas. Ambas son honestas.
+       data-es="La diferencia fundamental con el cava o el champagne es esencial: en esos casos la primera fermentación se termina completamente en depósito, el vino queda quieto, y después se añade una mezcla de azúcar y levaduras para provocar una <em>segunda</em> fermentación controlada dentro de la botella —la que crea las burbujas. En el pét-nat <strong>no hay primera y segunda fermentación. Hay una sola, continua, que empieza en el depósito y acaba en la botella.</strong> Eso tiene consecuencias enormes en la copa: la burbuja tiende a ser más fina, más integrada, menos agresiva. La sensación en el paladar es cremosa, casi textil. La graduación alcohólica es naturalmente baja, entre 9 y 11 grados. <strong>El resultado es un vino fresco, vivo, honesto. Un vino que no intenta ser lo que no es.</strong>"
+       data-ca="La diferència fonamental amb el cava o el champagne és essencial: en aquells casos la primera fermentació s'acaba completament en dipòsit, el vi queda quiet, i després s'afegeix una barreja de sucre i llevats per provocar una <em>segona</em> fermentació controlada dins de l'ampolla —la que crea les bombolles. En el pét-nat <strong>no hi ha primera i segona fermentació. Hi ha una de sola, contínua, que comença al dipòsit i acaba a l'ampolla.</strong> Això té conseqüències enormes a la copa: la bombolla tendeix a ser més fina, més integrada, menys agressiva. La sensació al paladar és cremosa, quasi tèxtil. La graduació alcohòlica és naturalment baixa, entre 9 i 11 graus. <strong>El resultat és un vi fresc, viu, honest. Un vi que no intenta ser el que no és.</strong>">
+      La diferencia fundamental con el cava o el champagne es esencial: en esos casos la primera fermentación se termina completamente en depósito, el vino queda quieto, y después se añade una mezcla de azúcar y levaduras para provocar una <em>segunda</em> fermentación controlada dentro de la botella —la que crea las burbujas. En el pét-nat <strong>no hay primera y segunda fermentación. Hay una sola, continua, que empieza en el depósito y acaba en la botella.</strong> Eso tiene consecuencias enormes en la copa: la burbuja tiende a ser más fina, más integrada, menos agresiva. La sensación en el paladar es cremosa, casi textil. La graduación alcohólica es naturalmente baja, entre 9 y 11 grados. <strong>El resultado es un vino fresco, vivo, honesto. Un vino que no intenta ser lo que no es.</strong>
+    </p>
+
+    <p class="e-p t"
+       data-es="Muchos elaboradores optan por un <strong>degüelle</strong> —o <em>dégorgement</em>— para eliminar el sedimento que queda en la botella tras la fermentación. En el método ancestral el proceso es artesanal: se posiciona la botella boca abajo para que los posos se concentren en el cuello, y se abre con un golpe preciso para que la presión interior los expulse. Sin el frío industrial del champagne, sin líneas de producción automatizadas. <strong>La mano del elaborador, la presión del vino y el momento justo.</strong> Algunos optan por no degollar —y dejan el sedimento integrado en la botella, que se sirve con suavidad. Ambas decisiones son válidas. Ambas son honestas."
+       data-ca="Molts elaboradors opten per un <strong>degollament</strong> —o <em>dégorgement</em>— per eliminar el sediment que queda a l'ampolla després de la fermentació. Al mètode ancestral el procés és artesanal: es posiciona l'ampolla boca avall perquè els pòsits es concentrin al coll, i s'obre amb un cop precís perquè la pressió interior els expulsi. Sense el fred industrial del champagne, sense línies de producció automatitzades. <strong>La mà de l'elaborador, la pressió del vi i el moment just.</strong> Alguns opten per no degollar —i deixen el sediment integrat a l'ampolla, que es serveix amb suavitat. Totes dues decisions són vàlides. Totes dues són honestes.">
+      Muchos elaboradores optan por un <strong>degüelle</strong> —o <em>dégorgement</em>— para eliminar el sedimento que queda en la botella tras la fermentación. En el método ancestral el proceso es artesanal: se posiciona la botella boca abajo para que los posos se concentren en el cuello, y se abre con un golpe preciso para que la presión interior los expulse. Sin el frío industrial del champagne, sin líneas de producción automatizadas. <strong>La mano del elaborador, la presión del vino y el momento justo.</strong> Algunos optan por no degollar —y dejan el sedimento integrado en la botella, que se sirve con suavidad. Ambas decisiones son válidas. Ambas son honestas.
     </p>
   </section>
 
   <!-- FOTO DEGOLLAMENT · DEGUELLO.jpg -->
   <div class="e-foto">
-    <img src="../assets/img/img-ancestrals/DEGUELLO.jpg"
-         alt="Degollament artesanal d'un vi ancestral: la pressió interior expulsa el sediment del coll de l'ampolla">
-    <span class="e-foto-peu t"
-          data-es="El degüelle artesanal: la presión del vino hace el trabajo. Sin frío industrial, sin automatización."
-          data-ca="El degollament artesanal: la pressió del vi fa la feina. Sense fred industrial, sense automatització.">
-      El degüelle artesanal: la presión del vino hace el trabajo. Sin frío industrial, sin automatización.
-    </span>
+    <img src="../assets/img/img-ancestrals/DEGUELLO.jpg" alt="Degollament artesanal d'un vi ancestral: la pressió interior expulsa el sediment del coll de l'ampolla">
+    <span class="e-foto-peu t" data-es="El degüelle artesanal: la presión del vino hace el trabajo. Sin frío industrial, sin automatización." data-ca="El degollament artesanal: la pressió del vi fa la feina. Sense fred industrial, sense automatització.">El degüelle artesanal: la presión del vino hace el trabajo. Sin frío industrial, sin automatización.</span>
   </div>
 
   <!-- PER QUÈ TORNEN -->
@@ -292,13 +302,8 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
 
   <!-- FOTO ORÍGENS · limoux.jpg -->
   <div class="e-foto">
-    <img src="../assets/img/img-ancestrals/limoux.jpg"
-         alt="Vinyes prop de Carcassona i Limoux, Occitània, bressol del primer vi de mètode ancestral documentat l'any 1531">
-    <span class="e-foto-peu t"
-          data-es="Limoux, Occitania — donde en 1531 los monjes embotellaron la primera burbuja ancestral de la historia."
-          data-ca="Limoux, Occitània — on l'any 1531 els monjos van embolicar la primera bombolla ancestral de la història.">
-      Limoux, Occitania — donde en 1531 los monjes embotellaron la primera burbuja ancestral de la historia.
-    </span>
+    <img src="../assets/img/img-ancestrals/limoux.jpg" alt="Vinyes prop de Carcassona i Limoux, Occitània, bressol del primer vi de mètode ancestral documentat l'any 1531">
+    <span class="e-foto-peu t" data-es="Limoux, Occitania — donde en 1531 los monjes embotellaron la primera burbuja ancestral de la historia." data-ca="Limoux, Occitània — on l'any 1531 els monjos van embolicar la primera bombolla ancestral de la història.">Limoux, Occitania — donde en 1531 los monjes embotellaron la primera burbuja ancestral de la historia.</span>
   </div>
 
   <!-- ARRELS -->
@@ -326,152 +331,166 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
   </section>
 
   <!-- FOTO GENÈRICA · GENERICA_ANCESTRALES.jpg -->
-  <div class="e-foto" style="margin-top:24px;margin-bottom:32px;">
-    <img src="../assets/img/img-ancestrals/GENERICA_ANCESTRALES.jpg"
-         alt="Selecció de vins ancestrals i pét-nats de diverses elaboracions — la diversitat del mètode en una sola imatge">
-    <span class="e-foto-peu t"
-          data-es="El método ancestral genera una diversidad irrepetible: cada botella es el resultado de una sola fermentación, sin correcciones ni añadidos."
-          data-ca="El mètode ancestral genera una diversitat irrepetible: cada ampolla és el resultat d'una sola fermentació, sense correccions ni afegits.">
-      El método ancestral genera una diversidad irrepetible: cada botella es el resultado de una sola fermentación, sin correcciones ni añadidos.
-    </span>
+  <div class="e-foto" style="margin-top:24px;margin-bottom:8px;">
+    <img src="../assets/img/img-ancestrals/GENERICA_ANCESTRALES.jpg" alt="Selecció de vins ancestrals i pét-nats — la diversitat del mètode en una sola imatge">
+    <span class="e-foto-peu t" data-es="El método ancestral genera una diversidad irrepetible: cada botella es el resultado de una sola fermentación, sin correcciones ni añadidos." data-ca="El mètode ancestral genera una diversitat irrepetible: cada ampolla és el resultat d'una sola fermentació, sense correccions ni afegits.">El método ancestral genera una diversidad irrepetible: cada botella es el resultado de una sola fermentación, sin correcciones ni añadidos.</span>
   </div>
 
-  <div class="e-cellers">
+  <!-- LLISTA CELLERS COMPRIMIDA -->
+  <div class="e-cellers-lista">
 
-    <!-- Gritelles -->
-    <div class="e-celler">
-      <div>
-        <p class="e-celler-do">DO Montsant</p>
-        <p class="e-celler-nom">Celler Gritelles</p>
-        <p class="e-celler-lloc">Cornudella de Montsant</p>
-        <span class="e-celler-vi">🍾 Brisat Ancestral · Macabeu</span>
+    <div class="e-celler-item">
+      <div class="e-celler-cap">
+        <p class="e-celler-nom-s">Celler Gritelles</p>
+        <p class="e-celler-do-s">DO Montsant · Cornudella</p>
+        <span class="e-celler-vi-s">Brisat Ancestral · Macabeu</span>
       </div>
-      <p class="e-celler-p t"
-         data-es="Macabeu blanco autóctono: 24 días de fermentación, embotellado a densidad 997, tres meses adicionales en botella y degüelle manual. Zero sulfitos, zero azúcares. <em>Nota: «brisat» combina el método ancestral con maceración en pieles — dos técnicas en una misma botella, de las que hablaremos en próximo artículo.</em>"
-         data-ca="Macabeu blanc autòcton: 24 dies de fermentació, embotellat a densitat 997, tres mesos addicionals en ampolla i degollament manual. Zero sulfits, zero sucres. <em>Nota: «brisat» combina el mètode ancestral amb maceració amb pells — dues tècniques en una mateixa ampolla, de les quals parlarem en un proper article.</em>">
-        Macabeu blanco autóctono: 24 días de fermentación, embotellado a densidad 997, tres meses adicionales en botella y degüelle manual. Zero sulfitos, zero azúcares. <em>Nota: «brisat» combina el método ancestral con maceración en pieles — dos técnicas en una misma botella, de las que hablaremos en próximo artículo.</em>
+      <p class="e-celler-desc t"
+         data-es="24 días de fermentación, embotellado a densidad 997, tres meses adicionales en botella, degüelle manual. Zero sulfitos, zero azúcares. <em>«Brisat» combina el método ancestral con maceración en pieles — dos técnicas en una botella, de las que hablaremos en próximo artículo.</em>"
+         data-ca="24 dies de fermentació, embotellat a densitat 997, tres mesos addicionals en ampolla, degollament manual. Zero sulfits, zero sucres. <em>«Brisat» combina el mètode ancestral amb maceració amb pells — dues tècniques en una ampolla, de les quals parlarem en un proper article.</em>">
+        24 días de fermentación, embotellado a densidad 997, tres meses adicionales en botella, degüelle manual. Zero sulfitos, zero azúcares. <em>«Brisat» combina el método ancestral con maceración en pieles — dos técnicas en una botella, de las que hablaremos en próximo artículo.</em>
       </p>
     </div>
 
-    <!-- Bell Cros -->
-    <div class="e-celler">
-      <div>
-        <p class="e-celler-do">DO Montsant</p>
-        <p class="e-celler-nom">Bell Cros</p>
-        <p class="e-celler-lloc t" data-es="Marçà · Ecológico certificado UE" data-ca="Marçà · Ecològic certificat UE">Marçà · Ecológico certificado UE</p>
-        <span class="e-celler-vi">🍾 Petillant Natural · Garnatxa Blanca</span>
+    <div class="e-celler-item">
+      <div class="e-celler-cap">
+        <p class="e-celler-nom-s">Bell Cros</p>
+        <p class="e-celler-do-s">DO Montsant · Marçà</p>
+        <span class="e-celler-vi-s">Petillant Natural · Garnatxa Blanca</span>
       </div>
-      <p class="e-celler-p t"
-         data-es="100% garnatxa blanca del Montsant, ceps de 40–70 años. Embotellada antes de acabar la fermentación. Aromática, acidez viva, graduación moderada — la variedad perfecta de la demarcación para este método."
-         data-ca="100% garnatxa blanca del Montsant, ceps de 40–70 anys. Embotellada abans d'acabar la fermentació. Aromàtica, acidesa viva, graduació moderada — la varietat perfecta de la demarcació per a aquest mètode.">
-        100% garnatxa blanca del Montsant, ceps de 40–70 años. Embotellada antes de acabar la fermentación. Aromática, acidez viva, graduación moderada — la variedad perfecta de la demarcación para este método.
+      <p class="e-celler-desc t"
+         data-es="100% garnatxa blanca, ceps de 40–70 años, ecológico certificado UE. Embotellada antes de acabar la fermentación. Aromática, acidez viva, graduación moderada."
+         data-ca="100% garnatxa blanca, ceps de 40–70 anys, ecològic certificat UE. Embotellada abans d'acabar la fermentació. Aromàtica, acidesa viva, graduació moderada.">
+        100% garnatxa blanca, ceps de 40–70 años, ecológico certificado UE. Embotellada antes de acabar la fermentación. Aromática, acidez viva, graduación moderada.
       </p>
     </div>
 
-    <!-- Coop Barberà -->
-    <div class="e-celler">
-      <div>
-        <p class="e-celler-do">DO Conca de Barberà</p>
-        <p class="e-celler-nom">Coop. Agrícola de Barberà</p>
-        <p class="e-celler-lloc t" data-es="Barberà de la Conca · Celler Martinell 1919" data-ca="Barberà de la Conca · Celler Martinell 1919">Barberà de la Conca · Celler Martinell 1919</p>
-        <span class="e-celler-vi">🍾 Cabanal Brut Natural · Trepat</span>
+    <div class="e-celler-item">
+      <div class="e-celler-cap">
+        <p class="e-celler-nom-s t" data-es="Coop. Agrícola de Barberà" data-ca="Coop. Agrícola de Barberà">Coop. Agrícola de Barberà</p>
+        <p class="e-celler-do-s t" data-es="DO Conca de Barberà · Celler Martinell 1919" data-ca="DO Conca de Barberà · Celler Martinell 1919">DO Conca de Barberà · Celler Martinell 1919</p>
+        <span class="e-celler-vi-s">Cabanal Brut Natural · Trepat</span>
       </div>
-      <p class="e-celler-p t"
-         data-es="<strong>El primer celler de Cataluña en elaborar un ancestral con trepat.</strong> Una cooperativa centenaria pionera con una variedad autóctona casi exclusiva de la Conca. El trepat es ideal: piel fina, fruta roja intensa, acidez alta, graduación naturalmente baja."
-         data-ca="<strong>El primer celler de Catalunya a elaborar un ancestral amb trepat.</strong> Una cooperativa centenària pionera amb una varietat autòctona gairebé exclusiva de la Conca. El trepat és ideal: pell fina, fruita vermella intensa, acidesa alta, graduació naturalment baixa.">
-        <strong>El primer celler de Cataluña en elaborar un ancestral con trepat.</strong> Una cooperativa centenaria pionera con una variedad autóctona casi exclusiva de la Conca. El trepat es ideal: piel fina, fruta roja intensa, acidez alta, graduación naturalmente baja.
+      <p class="e-celler-desc t"
+         data-es="<strong>El primer celler de Cataluña en elaborar un ancestral con trepat.</strong> Una cooperativa centenaria pionera con una variedad casi exclusiva de la Conca: piel fina, fruta roja intensa, acidez alta, graduación naturalmente baja."
+         data-ca="<strong>El primer celler de Catalunya a elaborar un ancestral amb trepat.</strong> Una cooperativa centenària pionera amb una varietat gairebé exclusiva de la Conca: pell fina, fruita vermella intensa, acidesa alta, graduació naturalment baixa.">
+        <strong>El primer celler de Cataluña en elaborar un ancestral con trepat.</strong> Una cooperativa centenaria pionera con una variedad casi exclusiva de la Conca: piel fina, fruta roja intensa, acidez alta, graduación naturalmente baja.
       </p>
     </div>
 
-    <!-- Sanromà -->
-    <div class="e-celler">
-      <div>
-        <p class="e-celler-do t" data-es="Alt Camp · Sin DO" data-ca="Alt Camp · Sense DO">Alt Camp · Sin DO</p>
-        <p class="e-celler-nom">Celler Sanromà</p>
-        <p class="e-celler-lloc">Vila-rodona · "Tarragonac"</p>
-        <span class="e-celler-vi">🍾 Ancestral Rosat · Trepat ecològic</span>
+    <div class="e-celler-item">
+      <div class="e-celler-cap">
+        <p class="e-celler-nom-s">Celler Sanromà</p>
+        <p class="e-celler-do-s t" data-es="Alt Camp · Sin DO · Vila-rodona" data-ca="Alt Camp · Sense DO · Vila-rodona">Alt Camp · Sin DO · Vila-rodona</p>
+        <span class="e-celler-vi-s">Ancestral Rosat · Trepat ecològic</span>
       </div>
-      <p class="e-celler-p t"
-         data-es="<strong>Eduard Sanromà</strong> elabora su Ancestral Rosat con 100% trepat ecológico. 10,5 grados, cinco meses de crianza en botella. Sin DO por las limitaciones regulatorias del método ancestral en España."
-         data-ca="<strong>Eduard Sanromà</strong> elabora el seu Ancestral Rosat amb 100% trepat ecològic. 10,5 graus, cinc mesos de criança en ampolla. Sense DO per les limitacions regulatòries del mètode ancestral a Espanya.">
-        <strong>Eduard Sanromà</strong> elabora su Ancestral Rosat con 100% trepat ecológico. 10,5 grados, cinco meses de crianza en botella. Sin DO por las limitaciones regulatorias del método ancestral en España.
+      <p class="e-celler-desc t"
+         data-es="<strong>Eduard Sanromà</strong> elabora su Ancestral Rosat con 100% trepat ecológico. 10,5 grados, cinco meses de crianza en botella. Sin DO por las limitaciones regulatorias del método en España."
+         data-ca="<strong>Eduard Sanromà</strong> elabora el seu Ancestral Rosat amb 100% trepat ecològic. 10,5 graus, cinc mesos de criança en ampolla. Sense DO per les limitacions regulatòries del mètode a Espanya.">
+        <strong>Eduard Sanromà</strong> elabora su Ancestral Rosat con 100% trepat ecológico. 10,5 grados, cinco meses de crianza en botella. Sin DO por las limitaciones regulatorias del método en España.
+      </p>
+    </div>
+
+    <div class="e-celler-item">
+      <div class="e-celler-cap">
+        <p class="e-celler-nom-s">Mas Vicenç</p>
+        <p class="e-celler-do-s t" data-es="DO Tarragona · Cabra del Camp" data-ca="DO Tarragona · Cabra del Camp">DO Tarragona · Cabra del Camp</p>
+        <span class="e-celler-vi-s">Ancestral Colldecabra Rosat</span>
+      </div>
+      <p class="e-celler-desc t"
+         data-es="100% garnatxa negra de finca propia, vendimiada en punto de madurez precoz para preservar la frescura. Aromas de cereza y frambuesa, burbuja fina."
+         data-ca="100% garnatxa negra de finca pròpia, veremada en punt de maduresa precoç per preservar la frescor. Aromes de cirera i gerd, bombolla fina.">
+        100% garnatxa negra de finca propia, vendimiada en punto de madurez precoz para preservar la frescura. Aromas de cereza y frambuesa, burbuja fina.
+      </p>
+    </div>
+
+    <div class="e-celler-item">
+      <div class="e-celler-cap">
+        <p class="e-celler-nom-s">Celler Jordi Miró</p>
+        <p class="e-celler-do-s">Terra Alta</p>
+        <span class="e-celler-vi-s">Textura 3 Naturalment Ancestral</span>
+      </div>
+      <p class="e-celler-desc t"
+         data-es="Garnatxa blanca de la Terra Alta, amarillo paja, burbuja cremosa, notas de fruta del bosque y flores. Lo descubrimos en la visita al Buidasacs con motivo del Gastronia 2025."
+         data-ca="Garnatxa blanca de la Terra Alta, groc palla, bombolla cremosa, notes de fruita del bosc i flors. El vam descobrir a la visita al Buidasacs arran del Gastronia 2025.">
+        Garnatxa blanca de la Terra Alta, amarillo paja, burbuja cremosa, notas de fruta del bosque y flores. Lo descubrimos en la visita al Buidasacs con motivo del Gastronia 2025.
+      </p>
+    </div>
+
+    <div class="e-celler-item">
+      <div class="e-celler-cap">
+        <p class="e-celler-nom-s">Bàrbara Forés · En Moviment</p>
+        <p class="e-celler-do-s t" data-es="Terra Alta · Gandesa · 1.494 botellas" data-ca="Terra Alta · Gandesa · 1.494 ampolles">Terra Alta · Gandesa · 1.494 botellas</p>
+        <span class="e-celler-vi-s">Moviment Ancestral · Morenillo</span>
+      </div>
+      <p class="e-celler-desc t"
+         data-es="<strong>Pili Sanmartín Ferrer</strong>, sexta generación. Elaborado con <strong>morenillo</strong>, variedad casi extinguida recuperada por la familia en los años noventa. Una fermentación, seis meses en botella, degüelle manual. Notas de grosella, naranja y hierbas secas."
+         data-ca="<strong>Pili Sanmartín Ferrer</strong>, sisena generació. Elaborat amb <strong>morenillo</strong>, varietat gairebé extingida recuperada per la família als anys noranta. Una fermentació, sis mesos en ampolla, degollament manual. Notes de grosella, taronja i herbes seques.">
+        <strong>Pili Sanmartín Ferrer</strong>, sexta generación. Elaborado con <strong>morenillo</strong>, variedad casi extinguida recuperada por la familia en los años noventa. Una fermentación, seis meses en botella, degüelle manual. Notas de grosella, naranja y hierbas secas.
+      </p>
+    </div>
+
+    <div class="e-celler-item">
+      <div class="e-celler-cap">
+        <p class="e-celler-nom-s">Vinyes del Tiet Pere</p>
+        <p class="e-celler-do-s t" data-es="DO Tarragona · Alt Camp · Vilabella" data-ca="DO Tarragona · Alt Camp · Vilabella">DO Tarragona · Alt Camp · Vilabella</p>
+        <span class="e-celler-vi-s t" data-es="Ancestral · Cartoixà Vermell · 350 bot." data-ca="Ancestral · Cartoixà Vermell · 350 amp.">Ancestral · Cartoixà Vermell · 350 bot.</span>
+      </div>
+      <p class="e-celler-desc t"
+         data-es="<strong>Oriol Pérez de Tudela y Mercè Salvat</strong>, con <strong>Sara Pérez y René Barbier Jr.</strong> (Venus la Universal / Mas Martinet) como socios. Viñas de 35 años en arcilla blanca calcárea. 11,5 grados."
+         data-ca="<strong>Oriol Pérez de Tudela i Mercè Salvat</strong>, amb <strong>Sara Pérez i René Barbier Jr.</strong> (Venus la Universal / Mas Martinet) com a socis. Vinyes de 35 anys en argila blanca calcàrea. 11,5 graus.">
+        <strong>Oriol Pérez de Tudela y Mercè Salvat</strong>, con <strong>Sara Pérez y René Barbier Jr.</strong> (Venus la Universal / Mas Martinet) como socios. Viñas de 35 años en arcilla blanca calcárea. 11,5 grados.
+      </p>
+    </div>
+
+    <div class="e-celler-item">
+      <div class="e-celler-cap">
+        <p class="e-celler-nom-s">Celler 9+</p>
+        <p class="e-celler-do-s t" data-es="Tarragonès · La Nou de Gaià" data-ca="Tarragonès · La Nou de Gaià">Tarragonès · La Nou de Gaià</p>
+        <span class="e-celler-vi-s t" data-es="Línea numerada de ancestrales" data-ca="Línia numerada d'ancestrals">Línea numerada de ancestrales</span>
+      </div>
+      <p class="e-celler-desc t"
+         data-es="<strong>Moisès Virgili</strong>, a cuatro kilómetros del mar. El 5è: 100% sumoll ecológico, blanco de negro, ancestral puro. El 7è: cartoixà ancestral —denominación local del xarel·lo en el Baix Gaià. <strong>El tesoro está al lado de casa.</strong>"
+         data-ca="<strong>Moisès Virgili</strong>, a quatre quilòmetres del mar. El 5è: 100% sumoll ecològic, blanc de negre, ancestral pur. El 7è: cartoixà ancestral —denominació local del xarel·lo al Baix Gaià. <strong>El tresor és al costat de casa.</strong>">
+        <strong>Moisès Virgili</strong>, a cuatro kilómetros del mar. El 5è: 100% sumoll ecológico, blanco de negro, ancestral puro. El 7è: cartoixà ancestral —denominación local del xarel·lo en el Baix Gaià. <strong>El tesoro está al lado de casa.</strong>
       </p>
     </div>
 
   </div>
+
+  <!-- FOTOS EXPERIÈNCIES GOURMETS -->
 
   <!-- FOTO SANROMÀ · eduard_sanroma.jpg -->
-  <div class="e-foto-inline">
-    <img src="../assets/img/img-ancestrals/eduard_sanroma.jpg"
-         alt="Eduard Sanromà al seu celler de Vila-rodona, envoltat de les seves ampolles de vins de mètode ancestral i natural">
+  <div class="e-foto-inline" style="margin-top:32px;">
+    <img src="../assets/img/img-ancestrals/eduard_sanroma.jpg" alt="Eduard Sanromà al seu celler de Vila-rodona, envoltat de les seves ampolles de vins de mètode ancestral">
     <div class="e-foto-inline-text">
       <span class="e-label t" data-es="Experiencia Gourmets" data-ca="Experiència Gourmets">Experiencia Gourmets</span>
       <h3 class="e-title t" data-es="Una noche en Llepol" data-ca="Una nit a Llepol">Una noche en Llepol</h3>
       <p class="e-p t"
-         data-es="Los Gourmets de Tarragona tuvimos la suerte de conocer a <strong>Eduard Sanromà</strong> de primera mano cuando presentó algunos de sus maridajes en una cena en Llepol: vino en mano, producto sobre la mesa, ninguna distancia entre quien hace y quien bebe."
-         data-ca="Els Gourmets de Tarragona vam tenir la sort de conèixer <strong>Eduard Sanromà</strong> de primera mà quan va presentar alguns dels seus maridatges en una cena a Llepol: vi a la mà, producte sobre la taula, cap distància entre qui fa i qui beu.">
-        Los Gourmets de Tarragona tuvimos la suerte de conocer a <strong>Eduard Sanromà</strong> de primera mano cuando presentó algunos de sus maridajes en una cena en Llepol: vino en mano, producto sobre la mesa, ninguna distancia entre quien hace y quien bebe.
+         data-es="Los Gourmets tuvimos la suerte de conocer a <strong>Eduard Sanromà</strong> de primera mano cuando presentó algunos de sus maridajes en una cena en Llepol: vino en mano, producto sobre la mesa, ninguna distancia entre quien hace y quien bebe."
+         data-ca="Els Gourmets vam tenir la sort de conèixer <strong>Eduard Sanromà</strong> de primera mà quan va presentar alguns dels seus maridatges en una cena a Llepol: vi a la mà, producte sobre la taula, cap distància entre qui fa i qui beu.">
+        Los Gourmets tuvimos la suerte de conocer a <strong>Eduard Sanromà</strong> de primera mano cuando presentó algunos de sus maridajes en una cena en Llepol: vino en mano, producto sobre la mesa, ninguna distancia entre quien hace y quien bebe.
       </p>
     </div>
-  </div>
-
-  <div class="e-cellers">
-
-    <!-- Mas Vicenç -->
-    <div class="e-celler">
-      <div>
-        <p class="e-celler-do">DO Tarragona</p>
-        <p class="e-celler-nom">Mas Vicenç</p>
-        <p class="e-celler-lloc t" data-es="Cabra del Camp · 5ª generación" data-ca="Cabra del Camp · 5a generació">Cabra del Camp · 5ª generación</p>
-        <span class="e-celler-vi">🍾 Ancestral Colldecabra Rosat</span>
-      </div>
-      <p class="e-celler-p t"
-         data-es="100% garnatxa negra de finca propia, vendimiada en punto de madurez precoz para preservar la frescura por encima de la concentración. Aromas de cereza y frambuesa, burbuja fina, versatilidad total en mesa."
-         data-ca="100% garnatxa negra de finca pròpia, veremada en punt de maduresa precoç per preservar la frescor per sobre de la concentració. Aromes de cirera i gerd, bombolla fina, versatilitat total a taula.">
-        100% garnatxa negra de finca propia, vendimiada en punto de madurez precoz para preservar la frescura por encima de la concentración. Aromas de cereza y frambuesa, burbuja fina, versatilidad total en mesa.
-      </p>
-    </div>
-
   </div>
 
   <!-- FOTO MAS VICENÇ · mas_vicens.jpg -->
   <div class="e-foto-inline rev">
-    <img src="../assets/img/img-ancestrals/mas_vicens.jpg"
-         alt="L'equip de Mas Vicenç presentant els ancestrals Colldecabra de garnatxa negra i blanc a Cabra del Camp, DO Tarragona">
+    <img src="../assets/img/img-ancestrals/mas_vicens.jpg" alt="L'equip de Mas Vicenç presentant els ancestrals Colldecabra de garnatxa negra i blanc a Cabra del Camp, DO Tarragona">
     <div class="e-foto-inline-text">
       <span class="e-label t" data-es="Experiencia Gourmets" data-ca="Experiència Gourmets">Experiencia Gourmets</span>
       <h3 class="e-title t" data-es="Cena de verano" data-ca="Sopar d'estiu">Cena de verano</h3>
       <p class="e-p t"
-         data-es="Los Gourmets probamos una primera versión de este vino en una cena de verano, cuando el proyecto apenas iniciaba este camino. El mejor vino no siempre es el que acumula años de bodega, sino el que sabes exactamente de dónde viene y quién lo ha hecho."
-         data-ca="Els Gourmets vam tastar una primera versió d'aquest vi en un sopar d'estiu, quan el projecte tot just encetava aquest camí. El millor vi no sempre és el que acumula anys de celler, sinó el que saps exactament d'on ve i qui l'ha fet.">
-        Los Gourmets probamos una primera versión de este vino en una cena de verano, cuando el proyecto apenas iniciaba este camino. El mejor vino no siempre es el que acumula años de bodega, sino el que sabes exactamente de dónde viene y quién lo ha hecho.
+         data-es="Los Gourmets probamos una primera versión del Colldecabra en una cena de verano, cuando el proyecto apenas iniciaba este camino. El mejor vino no siempre es el que acumula años de bodega, sino el que sabes exactamente de dónde viene."
+         data-ca="Els Gourmets vam tastar una primera versió del Colldecabra en un sopar d'estiu, quan el projecte tot just encetava aquest camí. El millor vi no sempre és el que acumula anys de celler, sinó el que saps exactament d'on ve.">
+        Los Gourmets probamos una primera versión del Colldecabra en una cena de verano, cuando el proyecto apenas iniciaba este camino. El mejor vino no siempre es el que acumula años de bodega, sino el que sabes exactamente de dónde viene.
       </p>
     </div>
-  </div>
-
-  <div class="e-cellers">
-
-    <!-- Jordi Miró -->
-    <div class="e-celler">
-      <div>
-        <p class="e-celler-do">Terra Alta</p>
-        <p class="e-celler-nom">Celler Jordi Miró</p>
-        <p class="e-celler-lloc">Terra Alta</p>
-        <span class="e-celler-vi">🍾 Textura 3 Naturalment Ancestral</span>
-      </div>
-      <p class="e-celler-p t"
-         data-es="<strong>Textura 3 «Naturalment Ancestral»</strong>: garnatxa blanca de la Terra Alta, amarillo paja, burbuja cremosa, notas de fruta del bosque y flores. Lo descubrimos en la visita al Buidasacs con motivo del Gastronia 2025."
-         data-ca="<strong>Textura 3 «Naturalment Ancestral»</strong>: garnatxa blanca de la Terra Alta, groc palla, bombolla cremosa, notes de fruita del bosc i flors. El vam descobrir a la visita al Buidasacs arran del Gastronia 2025.">
-        <strong>Textura 3 «Naturalment Ancestral»</strong>: garnatxa blanca de la Terra Alta, amarillo paja, burbuja cremosa, notas de fruta del bosque y flores. Lo descubrimos en la visita al Buidasacs con motivo del Gastronia 2025.
-      </p>
-    </div>
-
   </div>
 
   <!-- FOTO JORDI MIRÓ · andrea_miro.jpg -->
   <div class="e-foto-inline">
-    <img src="../assets/img/img-ancestrals/andrea_miro.jpg"
-         alt="Andrea Miró, del Celler Jordi Miró, examinant el Textura 3 Naturalment Ancestral de garnatxa blanca de la Terra Alta">
+    <img src="../assets/img/img-ancestrals/andrea_miro.jpg" alt="Andrea Miró, del Celler Jordi Miró, examinant el Textura 3 Naturalment Ancestral de garnatxa blanca de la Terra Alta">
     <div class="e-foto-inline-text">
       <span class="e-label t" data-es="Experiencia Gourmets" data-ca="Experiència Gourmets">Experiencia Gourmets</span>
       <h3 class="e-title t" data-es="Gastronia 2025 · Buidasacs" data-ca="Gastronia 2025 · Buidasacs">Gastronia 2025 · Buidasacs</h3>
@@ -483,51 +502,30 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
     </div>
   </div>
 
-  <div class="e-cellers">
-
-    <!-- Bàrbara Forés -->
-    <div class="e-celler">
-      <div>
-        <p class="e-celler-do">Terra Alta</p>
-        <p class="e-celler-nom">Bàrbara Forés · En Moviment</p>
-        <p class="e-celler-lloc t" data-es="Gandesa · 1.494 botellas" data-ca="Gandesa · 1.494 ampolles">Gandesa · 1.494 botellas</p>
-        <span class="e-celler-vi">🍾 Moviment Ancestral · Morenillo</span>
-      </div>
-      <p class="e-celler-p t"
-         data-es="<strong>Pili Sanmartín Ferrer</strong>, sexta generación. Elaborado con <strong>morenillo</strong>, variedad autóctona casi extinguida recuperada por la familia en los años noventa. Una fermentación, seis meses en botella, degüelle manual. Notas de grosella, naranja y hierbas secas. <strong>Un ancestral de variedad recuperada de casi la extinción.</strong>"
-         data-ca="<strong>Pili Sanmartín Ferrer</strong>, sisena generació. Elaborat amb <strong>morenillo</strong>, varietat autòctona gairebé extingida recuperada per la família als anys noranta. Una fermentació, sis mesos en ampolla, degollament manual. Notes de grosella, taronja i herbes seques. <strong>Un ancestral de varietat recuperada de quasi l'extinció.</strong>">
-        <strong>Pili Sanmartín Ferrer</strong>, sexta generación. Elaborado con <strong>morenillo</strong>, variedad autóctona casi extinguida recuperada por la familia en los años noventa. Una fermentación, seis meses en botella, degüelle manual. Notas de grosella, naranja y hierbas secas. <strong>Un ancestral de variedad recuperada de casi la extinción.</strong>
-      </p>
-    </div>
-
-  </div>
-
   <!-- FOTO TIET PERE · vinyes_del_tiet_pere.jpg -->
-  <div class="e-foto-inline rev" style="margin-top:12px;">
-    <img src="../assets/img/img-ancestrals/vinyes_del_tiet_pere.jpg"
-         alt="Ampolla de l'Ancestral de Vinyes del Tiet Pere — cartoixà vermell de Vilabella, Alt Camp, DO Tarragona">
+  <div class="e-foto-inline rev">
+    <img src="../assets/img/img-ancestrals/vinyes_del_tiet_pere.jpg" alt="Ampolla de l'Ancestral de Vinyes del Tiet Pere — cartoixà vermell de Vilabella, Alt Camp, DO Tarragona">
     <div class="e-foto-inline-text">
       <span class="e-label">Alt Camp · DO Tarragona</span>
       <h3 class="e-title">Vinyes del Tiet Pere</h3>
       <p class="e-p t"
-         data-es="<strong>Oriol Pérez de Tudela y Mercè Salvat</strong>, con <strong>Sara Pérez y René Barbier Jr.</strong> (Venus la Universal / Mas Martinet) como socios. <strong>Ancestral de cartoixà vermell</strong> de viñas de 35 años en arcilla blanca calcárea de Vilabella. <strong>350 botellas, 11,5 grados.</strong> Cuando gente de este nivel apuesta por 350 botellas de una variedad casi desconocida, vale la pena buscarla."
-         data-ca="<strong>Oriol Pérez de Tudela i Mercè Salvat</strong>, amb <strong>Sara Pérez i René Barbier Jr.</strong> (Venus la Universal / Mas Martinet) com a socis. <strong>Ancestral de cartoixà vermell</strong> de vinyes de 35 anys en argila blanca calcàrea de Vilabella. <strong>350 ampolles, 11,5 graus.</strong> Quan gent d'aquest nivell aposta per 350 ampolles d'una varietat quasi desconeguda, val la pena buscar-la.">
-        <strong>Oriol Pérez de Tudela y Mercè Salvat</strong>, con <strong>Sara Pérez y René Barbier Jr.</strong> (Venus la Universal / Mas Martinet) como socios. <strong>Ancestral de cartoixà vermell</strong> de viñas de 35 años en arcilla blanca calcárea de Vilabella. <strong>350 botellas, 11,5 grados.</strong> Cuando gente de este nivel apuesta por 350 botellas de una variedad casi desconocida, vale la pena buscarla.
+         data-es="Cuando gente del nivel de <strong>Sara Pérez y René Barbier Jr.</strong> apuesta por 350 botellas de cartoixà vermell de un pueblo del Alt Camp, vale la pena buscarla. Un ancestral de variedad casi desconocida que llega a Vila Viniteca antes que a la mayoría de tiendas locales."
+         data-ca="Quan gent del nivell de <strong>Sara Pérez i René Barbier Jr.</strong> aposta per 350 ampolles de cartoixà vermell d'un poble de l'Alt Camp, val la pena buscar-la. Un ancestral de varietat quasi desconeguda que arriba a Vila Viniteca abans que a la majoria de botigues locals.">
+        Cuando gente del nivel de <strong>Sara Pérez y René Barbier Jr.</strong> apuesta por 350 botellas de cartoixà vermell de un pueblo del Alt Camp, vale la pena buscarla. Un ancestral de variedad casi desconocida que llega a Vila Viniteca antes que a la mayoría de tiendas locales.
       </p>
     </div>
   </div>
 
   <!-- FOTO CELLER 9+ · celler_9.jpg -->
-  <div class="e-foto-inline" style="margin-top:12px;">
-    <img src="../assets/img/img-ancestrals/celler_9.jpg"
-         alt="Ampolles numerades de la línia d'escumosos ancestrals del Celler 9+ de Moisès Virgili, la Nou de Gaià, Tarragonès">
+  <div class="e-foto-inline">
+    <img src="../assets/img/img-ancestrals/celler_9.jpg" alt="Ampolles numerades de la línia d'escumosos ancestrals del Celler 9+ de Moisès Virgili, la Nou de Gaià, Tarragonès">
     <div class="e-foto-inline-text">
       <span class="e-label">Tarragonès · Baix Gaià</span>
       <h3 class="e-title">Celler 9+</h3>
       <p class="e-p t"
-         data-es="<strong>Moisès Virgili</strong>, Nou de Gaià, a cuatro kilómetros del mar. Una <strong>línea numerada de espumosos ancestrales</strong>: el 5è, 100% sumoll ecológico —blanco de negro, ancestral puro—; el 7è, cartoixà ancestral. El cartoixà es la denominación local del xarel·lo en el Baix Gaià. <strong>El tesoro está, literalmente, al lado de casa.</strong>"
-         data-ca="<strong>Moisès Virgili</strong>, Nou de Gaià, a quatre quilòmetres del mar. Una <strong>línia numerada d'escumosos ancestrals</strong>: el 5è, 100% sumoll ecològic —blanc de negre, ancestral pur—; el 7è, cartoixà ancestral. El cartoixà és la denominació local del xarel·lo al Baix Gaià. <strong>El tresor és, literalment, al costat de casa.</strong>">
-        <strong>Moisès Virgili</strong>, Nou de Gaià, a cuatro kilómetros del mar. Una <strong>línea numerada de espumosos ancestrales</strong>: el 5è, 100% sumoll ecológico —blanco de negro, ancestral puro—; el 7è, cartoixà ancestral. El cartoixà es la denominación local del xarel·lo en el Baix Gaià. <strong>El tesoro está, literalmente, al lado de casa.</strong>
+         data-es="La sorpresa de la lista. <strong>Moisès Virgili</strong> elabora en la Nou de Gaià una línea numerada completa de ancestrales —sumoll, cartoixà— a cuatro kilómetros del mar. El cartoixà es la denominación local del xarel·lo en el Baix Gaià: una variedad que Virgili vindica con la insistencia de quien sabe por dónde va. <strong>El tesoro está, literalmente, al lado de casa.</strong>"
+         data-ca="La sorpresa de la llista. <strong>Moisès Virgili</strong> elabora a la Nou de Gaià una línia numerada completa d'ancestrals —sumoll, cartoixà— a quatre quilòmetres del mar. El cartoixà és la denominació local del xarel·lo al Baix Gaià: una varietat que Virgili vindica amb la insistència de qui sap per on va. <strong>El tresor és, literalment, al costat de casa.</strong>">
+        La sorpresa de la lista. <strong>Moisès Virgili</strong> elabora en la Nou de Gaià una línea numerada completa de ancestrales —sumoll, cartoixà— a cuatro kilómetros del mar. El cartoixà es la denominación local del xarel·lo en el Baix Gaià: una variedad que Virgili vindica con la insistencia de quien sabe por dónde va. <strong>El tesoro está, literalmente, al lado de casa.</strong>
       </p>
     </div>
   </div>
@@ -538,9 +536,9 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
     <h2 class="e-title t" data-es="Cómo disfrutarlos" data-ca="Com gaudir-los">Cómo disfrutarlos</h2>
     <div class="e-divider"></div>
     <p class="e-p t"
-       data-es="Temperatura entre 6 y 9 grados. <strong>Copa amplia, no flauta</strong> — en un pét-nat los aromas lo son todo. Si la botella tiene sedimento, servidla con suavidad. Marida a la perfección con pescado a la plancha, almejas, anchoas, mejillones o arroz de marisco. Para iniciarse: <strong>un pét-nat de garnatxa blanca o trepat, a 7 grados, con unas anchoas de l'Escala o unos mejillones a la vinagreta.</strong>"
-       data-ca="Temperatura entre 6 i 9 graus. <strong>Copa ampla, no flauta</strong> — en un pét-nat els aromes ho són tot. Si l'ampolla té sediment, serviu-la amb suavitat. Marida a la perfecció amb peix a la planxa, cloïsses, anxoves, musclos o arròs de marisc. Per iniciar-se: <strong>un pét-nat de garnatxa blanca o trepat, a 7 graus, amb unes anxoves de l'Escala o uns musclos a la vinagreta.</strong>">
-      Temperatura entre 6 y 9 grados. <strong>Copa amplia, no flauta</strong> — en un pét-nat los aromas lo son todo. Si la botella tiene sedimento, servidla con suavidad. Marida a la perfección con pescado a la plancha, almejas, anchoas, mejillones o arroz de marisco. Para iniciarse: <strong>un pét-nat de garnatxa blanca o trepat, a 7 grados, con unas anchoas de l'Escala o unos mejillones a la vinagreta.</strong>
+       data-es="Temperatura entre 6 y 9 grados. <strong>Copa amplia, no flauta</strong> — en un pét-nat los aromas lo son todo. Si la botella tiene sedimento, servidla con suavidad. Marida a la perfección con pescado a la plancha, almejas, anchoas, mejillones o arroz de marisco. Para iniciarse: <strong>un pét-nat de garnatxa blanca o trepat, a 7 grados, con unas anchoas de l'Escala o unos mejillones a la vinagreta.</strong> Si después de esa experiencia no habéis entendido de qué vino hablábamos, volved a leer desde el principio."
+       data-ca="Temperatura entre 6 i 9 graus. <strong>Copa ampla, no flauta</strong> — en un pét-nat els aromes ho són tot. Si l'ampolla té sediment, serviu-la amb suavitat. Marida a la perfecció amb peix a la planxa, cloïsses, anxoves, musclos o arròs de marisc. Per iniciar-se: <strong>un pét-nat de garnatxa blanca o trepat, a 7 graus, amb unes anxoves de l'Escala o uns musclos a la vinagreta.</strong> Si després d'aquella experiència no heu entès de quin vi parlàvem, torneu a llegir des del principi.">
+      Temperatura entre 6 y 9 grados. <strong>Copa amplia, no flauta</strong> — en un pét-nat los aromas lo son todo. Si la botella tiene sedimento, servidla con suavidad. Marida a la perfección con pescado a la plancha, almejas, anchoas, mejillones o arroz de marisco. Para iniciarse: <strong>un pét-nat de garnatxa blanca o trepat, a 7 grados, con unas anchoas de l'Escala o unos mejillones a la vinagreta.</strong> Si después de esa experiencia no habéis entendido de qué vino hablábamos, volved a leer desde el principio.
     </p>
   </section>
 
@@ -554,8 +552,7 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
        data-ca="Des dels Gourmets de Tarragona entenem que <strong>el vi i la cuina són els dos idiomes d'un mateix diàleg sobre el territori.</strong> Beure un pét-nat de morenillo de la Terra Alta és beure la Serra de Pàndols i la història d'una família que va salvar una varietat de l'extinció. Beure un ancestral de trepat de la Conca és beure Barberà, la cooperativa de Martinell, la memòria d'una varietat que gairebé no va sobreviure. Beure un cartoixà vermell de Vilabella és beure l'Alt Camp, les argiles blanques, les vinyes de 35 anys que ningú mirava. Beure un sumoll del Baix Gaià és beure el mar, la marinada, l'aposta d'un enòleg que va creure en les vinyes del seu pare.">
       Desde los Gourmets de Tarragona entendemos que <strong>el vino y la cocina son los dos idiomas de un mismo diálogo sobre el territorio.</strong> Beber un pét-nat de morenillo de la Terra Alta es beber la Serra de Pàndols y la historia de una familia que salvó una variedad de la extinción. Beber un ancestral de trepat de la Conca es beber Barberà, la cooperativa de Martinell, la memoria de una variedad que casi no sobrevivió. Beber un cartoixà vermell de Vilabella es beber el Alt Camp, las arcillas blancas, las viñas de 35 años que nadie miraba. Beber un sumoll del Baix Gaià es beber el mar, la marinada, la apuesta de un enólogo que creyó en las viñas de su padre.
     </p>
-    <p class="e-p t"
-       style="margin-top:32px;font-style:italic;color:var(--gold);"
+    <p class="e-p t" style="margin-top:32px;font-style:italic;color:var(--gold);"
        data-es="<strong>El vino ancestral no es el pasado que vuelve. Es el futuro que siempre había estado aquí.</strong>"
        data-ca="<strong>El vi ancestral no és el passat que torna. És el futur que sempre havia estat aquí.</strong>">
       <strong>El vino ancestral no es el pasado que vuelve. Es el futuro que siempre había estado aquí.</strong>
