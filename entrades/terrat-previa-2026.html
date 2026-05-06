@@ -96,15 +96,58 @@
 .e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;}
 
 /* ── MENÚ ── */
-.e-menu-card-wrap{margin:36px 0 52px;display:flex;flex-direction:column;gap:0;}
-.e-menu-section{padding:28px 0;border-bottom:1px solid var(--border);}
-.e-menu-section:last-child{border-bottom:none;}
-.e-menu-section-head{display:flex;align-items:baseline;gap:16px;margin-bottom:14px;}
-.e-menu-cat{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);}
-.e-menu-sub{font-size:.8rem;font-weight:300;color:var(--muted);font-style:italic;}
-.e-menu-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;}
-.e-menu-list li{font-size:.95rem;font-weight:300;color:#444;line-height:1.6;padding-left:16px;position:relative;}
-.e-menu-list li::before{content:'—';position:absolute;left:0;color:var(--gold);opacity:.5;font-size:.8rem;}
+.e-menu-card-wrap{
+  margin:40px 0 52px;
+  background:var(--navy-dark);
+  padding:52px 56px;
+  position:relative;
+}
+.e-menu-card-wrap::before{
+  content:'';position:absolute;inset:14px;
+  border:1px solid rgba(184,146,74,.18);
+  pointer-events:none;
+}
+.e-menu-header{text-align:center;margin-bottom:44px;padding-bottom:32px;border-bottom:1px solid rgba(184,146,74,.12);}
+.e-menu-header-rest{
+  font-family:var(--font-serif);font-size:1.6rem;font-weight:700;
+  color:#fff;letter-spacing:.04em;margin-bottom:8px;
+}
+.e-menu-header-data{
+  font-size:.62rem;font-weight:600;letter-spacing:.24em;
+  text-transform:uppercase;color:rgba(184,146,74,.65);
+}
+.e-menu-section{padding:28px 0;border-bottom:1px solid rgba(255,255,255,.05);}
+.e-menu-section:last-child{border-bottom:none;padding-bottom:0;}
+.e-menu-section-head{display:flex;align-items:center;gap:16px;margin-bottom:20px;}
+.e-menu-cat{
+  font-size:.58rem;font-weight:700;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--gold);white-space:nowrap;
+}
+.e-menu-sep{flex:1;height:1px;background:rgba(184,146,74,.18);}
+.e-menu-sub{
+  font-size:.72rem;font-weight:300;
+  color:rgba(255,255,255,.3);font-style:italic;white-space:nowrap;
+}
+.e-menu-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px;}
+.e-menu-list li{line-height:1.5;}
+.e-menu-plat{
+  font-family:var(--font-serif);font-size:1.05rem;font-weight:600;
+  color:#fff;display:block;margin-bottom:3px;
+}
+.e-menu-desc{
+  font-size:.8rem;font-weight:300;
+  color:rgba(255,255,255,.45);display:block;letter-spacing:.01em;
+}
+.e-menu-petit{
+  text-align:center;margin-top:32px;padding-top:24px;
+  border-top:1px solid rgba(184,146,74,.12);
+  font-size:.65rem;font-weight:400;letter-spacing:.2em;
+  text-transform:uppercase;color:rgba(255,255,255,.25);
+}
+@media(max-width:768px){
+  .e-menu-card-wrap{padding:36px 22px;}
+  .e-menu-card-wrap::before{inset:8px;}
+}
 
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
@@ -382,50 +425,82 @@
 
   <div class="e-menu-card-wrap">
 
+    <div class="e-menu-header">
+      <div class="e-menu-header-rest">El Terrat</div>
+      <div class="t e-menu-header-data" data-es="Menú · 7 de mayo de 2026" data-ca="Menú · 7 de maig de 2026">Menú · 7 de mayo de 2026</div>
+    </div>
+
     <div class="e-menu-section">
       <div class="e-menu-section-head">
         <span class="t e-menu-cat" data-es="Aperitivos" data-ca="Aperitius">Aperitivos</span>
+        <span class="e-menu-sep"></span>
         <span class="t e-menu-sub" data-es="El Rif como punto de partida" data-ca="El Rif com a punt de partida">El Rif como punto de partida</span>
       </div>
       <ul class="e-menu-list">
-        <li class="t" data-es="Un viaje por el Rif — la versión de Quach de la ensalada marroquina" data-ca="Un viatge pel Rif — la versió de Quach de l'amanida marroquina">Un viaje por el Rif — la versión de Quach de la ensalada marroquina</li>
-        <li class="t" data-es="Remolacha, manzana verde y espuma de aceituna negra" data-ca="Remolatxa, poma verda i escuma d'oliva negra">Remolacha, manzana verde y espuma de aceituna negra</li>
-        <li class="t" data-es="Merengue crujiente de remolacha, queso en salmuera y harissa" data-ca="Merenga cruixent de remolatxa, formatge en salmorra i harissa">Merengue crujiente de remolacha, queso en salmuera y harissa</li>
-        <li class="t" data-es="Briwat en dos pasos — crujiente de briwat de hígado de pollo · buñuelo líquido de briwat" data-ca="Briwat en dos passes — cruixent de briwat de fetge de pollastre · bunyol líquid de briwat">Briwat en dos pasos — crujiente de briwat de hígado de pollo · buñuelo líquido de briwat</li>
+        <li>
+          <span class="t e-menu-plat" data-es="Un viaje por el Rif" data-ca="Un viatge pel Rif">Un viaje por el Rif</span>
+          <span class="t e-menu-desc" data-es="La versión de Quach de la ensalada marroquina" data-ca="La versió de Quach de l'amanida marroquina">La versión de Quach de la ensalada marroquina</span>
+        </li>
+        <li>
+          <span class="t e-menu-plat" data-es="Remolacha, manzana verde y espuma de aceituna negra" data-ca="Remolatxa, poma verda i escuma d'oliva negra">Remolacha, manzana verde y espuma de aceituna negra</span>
+        </li>
+        <li>
+          <span class="t e-menu-plat" data-es="Merengue crujiente de remolacha" data-ca="Merenga cruixent de remolatxa">Merengue crujiente de remolacha</span>
+          <span class="t e-menu-desc" data-es="Queso en salmuera y harissa" data-ca="Formatge en salmorra i harissa">Queso en salmuera y harissa</span>
+        </li>
+        <li>
+          <span class="t e-menu-plat" data-es="Briwat en dos pasos" data-ca="Briwat en dos passes">Briwat en dos pasos</span>
+          <span class="t e-menu-desc" data-es="Crujiente de hígado de pollo · Buñuelo líquido" data-ca="Cruixent de fetge de pollastre · Bunyol líquid">Crujiente de hígado de pollo · Buñuelo líquido</span>
+        </li>
       </ul>
     </div>
 
     <div class="e-menu-section">
       <div class="e-menu-section-head">
         <span class="t e-menu-cat" data-es="Entrantes" data-ca="Entrants">Entrantes</span>
+        <span class="e-menu-sep"></span>
         <span class="t e-menu-sub" data-es="Homenaje a la cocina catalana" data-ca="Homenatge a la cuina catalana">Homenaje a la cocina catalana</span>
       </div>
       <ul class="e-menu-list">
-        <li class="t" data-es="Empedrat de bacalà en texturas" data-ca="Empedrat de bacallà en textures">Empedrat de bacalà en texturas</li>
-        <li class="t" data-es="Homenaje a Tàrraco — nuestro romesco de gamba roja de Tarragona" data-ca="Homenatge a Tàrraco — el nostre romesco de gamba vermella de Tarragona">Homenaje a Tàrraco — nuestro romesco de gamba roja de Tarragona</li>
+        <li>
+          <span class="t e-menu-plat" data-es="Empedrat de bacalà en texturas" data-ca="Empedrat de bacallà en textures">Empedrat de bacalà en texturas</span>
+        </li>
+        <li>
+          <span class="t e-menu-plat" data-es="Romesco de gamba roja de Tarragona" data-ca="Romesco de gamba vermella de Tarragona">Romesco de gamba roja de Tarragona</span>
+          <span class="t e-menu-desc" data-es="Homenaje a Tàrraco" data-ca="Homenatge a Tàrraco">Homenaje a Tàrraco</span>
+        </li>
       </ul>
     </div>
 
     <div class="e-menu-section">
       <div class="e-menu-section-head">
         <span class="t e-menu-cat" data-es="Carne" data-ca="Carn">Carne</span>
+        <span class="e-menu-sep"></span>
         <span class="t e-menu-sub" data-es="El regreso al Rif" data-ca="El retorn al Rif">El regreso al Rif</span>
       </div>
       <ul class="e-menu-list">
-        <li class="t" data-es="Tajine de cordero lechal con mini zanahorias y cremoso de boniato especiado" data-ca="Tajine de xai lletó amb mini pastanagues i cremós de moniato especiat">Tajine de cordero lechal con mini zanahorias y cremoso de boniato especiado</li>
+        <li>
+          <span class="t e-menu-plat" data-es="Tajine de cordero lechal" data-ca="Tajine de xai lletó">Tajine de cordero lechal</span>
+          <span class="t e-menu-desc" data-es="Mini zanahorias · Cremoso de boniato especiado" data-ca="Mini pastanagues · Cremós de moniato especiat">Mini zanahorias · Cremoso de boniato especiado</span>
+        </li>
       </ul>
     </div>
 
     <div class="e-menu-section">
       <div class="e-menu-section-head">
         <span class="t e-menu-cat" data-es="Postre" data-ca="Postres">Postre</span>
+        <span class="e-menu-sep"></span>
         <span class="t e-menu-sub" data-es="Cierre poético" data-ca="Tancament poètic">Cierre poético</span>
       </div>
       <ul class="e-menu-list">
-        <li class="t" data-es="Texturas del Valle del Rif — menta, fresas, yogur y helado de rosas" data-ca="Textures de la Vall del Rif — menta, maduixes, iogurt i gelat de roses">Texturas del Valle del Rif — menta, fresas, yogur y helado de rosas</li>
-        <li class="t" data-es="Petit fours y café" data-ca="Petit fours i cafè">Petit fours y café</li>
+        <li>
+          <span class="t e-menu-plat" data-es="Texturas del Valle del Rif" data-ca="Textures de la Vall del Rif">Texturas del Valle del Rif</span>
+          <span class="t e-menu-desc" data-es="Menta · Fresas · Yogur · Helado de rosas" data-ca="Menta · Maduixes · Iogurt · Gelat de roses">Menta · Fresas · Yogur · Helado de rosas</span>
+        </li>
       </ul>
     </div>
+
+    <div class="t e-menu-petit" data-es="Petit fours &amp; Café" data-ca="Petit fours &amp; Cafè">Petit fours &amp; Café</div>
 
   </div>
 
