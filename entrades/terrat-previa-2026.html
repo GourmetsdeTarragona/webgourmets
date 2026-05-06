@@ -3,13 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- ═══════ FAVICON ═══════ -->
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon-180.png">
-<link rel="icon" type="image/png" sizes="512x512" href="../assets/img/favicon-512.png">
-<link rel="shortcut icon" href="../favicon.ico">
-
 <title>El Terrat · Prèvia · Gourmets de Tarragona</title>
 <meta name="description" content="Prèvia de la visita dels Gourmets de Tarragona al restaurant El Terrat. Moha Quach, la cuina que Tarragona necessitava i les quinieles per a la primera estrella Michelin de la ciutat.">
 <meta property="og:title" content="El Terrat · Prèvia · Gourmets de Tarragona">
@@ -101,6 +94,17 @@
 
 /* ── NAV RETORN ── */
 .e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;}
+
+/* ── MENÚ ── */
+.e-menu-card-wrap{margin:36px 0 52px;display:flex;flex-direction:column;gap:0;}
+.e-menu-section{padding:28px 0;border-bottom:1px solid var(--border);}
+.e-menu-section:last-child{border-bottom:none;}
+.e-menu-section-head{display:flex;align-items:baseline;gap:16px;margin-bottom:14px;}
+.e-menu-cat{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);}
+.e-menu-sub{font-size:.8rem;font-weight:300;color:var(--muted);font-style:italic;}
+.e-menu-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;}
+.e-menu-list li{font-size:.95rem;font-weight:300;color:#444;line-height:1.6;padding-left:16px;position:relative;}
+.e-menu-list li::before{content:'—';position:absolute;left:0;color:var(--gold);opacity:.5;font-size:.8rem;}
 
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
@@ -368,6 +372,61 @@
         <div class="e-xef-fact"><i class="fa fa-trophy"></i><span class="t" data-es="Premio Revelación Nacional de Gastronomía 2025" data-ca="Premi Revelació Nacional de Gastronomia 2025">Premio Revelación Nacional de Gastronomía 2025</span></div>
       </div>
     </div>
+  </div>
+
+  <!-- BLOC MENÚ -->
+  <div class="e-divider"></div>
+  <span class="t e-label" data-es="El menú de la visita" data-ca="El menú de la visita">El menú de la visita</span>
+  <h2 class="t e-title" data-es="Un viaje entre el Rif y Tàrraco" data-ca="Un viatge entre el Rif i Tàrraco">Un viaje entre el Rif y Tàrraco</h2>
+  <p class="t e-p" data-es="Cuando Moha Quach diseña un menú para los Gourmets de Tarragona, no improvisa. Construye un relato. El que nos ha preparado para el 7 de mayo tiene principio, nudo y desenlace: empieza en el Rif marroquí, pasa por la cocina catalana de siempre y termina volviendo a las montañas del norte de África. No es un menú de fusión. Es una autobiografía en platos." data-ca="Quan Moha Quach dissenya un menú per als Gourmets de Tarragona, no improvisa. Construeix un relat. El que ens ha preparat per al 7 de maig té principi, nus i desenllaç: comença al Rif marroquí, passa per la cuina catalana de sempre i acaba tornant a les muntanyes del nord d'Àfrica. No és un menú de fusió. És una autobiografia en plats.">Cuando Moha Quach diseña un menú para los Gourmets de Tarragona, no improvisa. Construye un relato. El que nos ha preparado para el 7 de mayo tiene principio, nudo y desenlace: empieza en el Rif marroquí, pasa por la cocina catalana de siempre y termina volviendo a las montañas del norte de África. No es un menú de fusión. Es una autobiografía en platos.</p>
+
+  <div class="e-menu-card-wrap">
+
+    <div class="e-menu-section">
+      <div class="e-menu-section-head">
+        <span class="t e-menu-cat" data-es="Aperitivos" data-ca="Aperitius">Aperitivos</span>
+        <span class="t e-menu-sub" data-es="El Rif como punto de partida" data-ca="El Rif com a punt de partida">El Rif como punto de partida</span>
+      </div>
+      <ul class="e-menu-list">
+        <li class="t" data-es="Un viaje por el Rif — la versión de Quach de la ensalada marroquina" data-ca="Un viatge pel Rif — la versió de Quach de l'amanida marroquina">Un viaje por el Rif — la versión de Quach de la ensalada marroquina</li>
+        <li class="t" data-es="Remolacha, manzana verde y espuma de aceituna negra" data-ca="Remolatxa, poma verda i escuma d'oliva negra">Remolacha, manzana verde y espuma de aceituna negra</li>
+        <li class="t" data-es="Merengue crujiente de remolacha, queso en salmuera y harissa" data-ca="Merenga cruixent de remolatxa, formatge en salmorra i harissa">Merengue crujiente de remolacha, queso en salmuera y harissa</li>
+        <li class="t" data-es="Briwat en dos pasos — crujiente de briwat de hígado de pollo · buñuelo líquido de briwat" data-ca="Briwat en dos passes — cruixent de briwat de fetge de pollastre · bunyol líquid de briwat">Briwat en dos pasos — crujiente de briwat de hígado de pollo · buñuelo líquido de briwat</li>
+      </ul>
+    </div>
+
+    <div class="e-menu-section">
+      <div class="e-menu-section-head">
+        <span class="t e-menu-cat" data-es="Entrantes" data-ca="Entrants">Entrantes</span>
+        <span class="t e-menu-sub" data-es="Homenaje a la cocina catalana" data-ca="Homenatge a la cuina catalana">Homenaje a la cocina catalana</span>
+      </div>
+      <ul class="e-menu-list">
+        <li class="t" data-es="Empedrat de bacalà en texturas" data-ca="Empedrat de bacallà en textures">Empedrat de bacalà en texturas</li>
+        <li class="t" data-es="Homenaje a Tàrraco — nuestro romesco de gamba roja de Tarragona" data-ca="Homenatge a Tàrraco — el nostre romesco de gamba vermella de Tarragona">Homenaje a Tàrraco — nuestro romesco de gamba roja de Tarragona</li>
+      </ul>
+    </div>
+
+    <div class="e-menu-section">
+      <div class="e-menu-section-head">
+        <span class="t e-menu-cat" data-es="Carne" data-ca="Carn">Carne</span>
+        <span class="t e-menu-sub" data-es="El regreso al Rif" data-ca="El retorn al Rif">El regreso al Rif</span>
+      </div>
+      <ul class="e-menu-list">
+        <li class="t" data-es="Tajine de cordero lechal con mini zanahorias y cremoso de boniato especiado" data-ca="Tajine de xai lletó amb mini pastanagues i cremós de moniato especiat">Tajine de cordero lechal con mini zanahorias y cremoso de boniato especiado</li>
+      </ul>
+    </div>
+
+    <div class="e-menu-section">
+      <div class="e-menu-section-head">
+        <span class="t e-menu-cat" data-es="Postre" data-ca="Postres">Postre</span>
+        <span class="t e-menu-sub" data-es="Cierre poético" data-ca="Tancament poètic">Cierre poético</span>
+      </div>
+      <ul class="e-menu-list">
+        <li class="t" data-es="Texturas del Valle del Rif — menta, fresas, yogur y helado de rosas" data-ca="Textures de la Vall del Rif — menta, maduixes, iogurt i gelat de roses">Texturas del Valle del Rif — menta, fresas, yogur y helado de rosas</li>
+        <li class="t" data-es="Petit fours y café" data-ca="Petit fours i cafè">Petit fours y café</li>
+      </ul>
+    </div>
+
   </div>
 
   <!-- BLOC 5: MICHELIN -->
