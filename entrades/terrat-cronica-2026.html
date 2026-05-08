@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="shortcut icon" href="../favicon.ico">
+<title>El Terrat · Crònica · Gourmets de Tarragona</title>
+<meta name="description" content="Crònica completa de la visita dels Gourmets de Tarragona al restaurant El Terrat de Tarragona. Moha Quach, 7 de maig de 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/seccions.css">
+<style>
+.entrada-hero{position:relative;min-height:75vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.65;filter:brightness(1.05) contrast(1.05);}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.95) 0%,rgba(11,22,38,.4) 55%,rgba(11,22,38,.05) 100%);}
+.entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
+.entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
+.entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
+.entrada-back:hover{color:var(--gold);}
+.entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;}
+.entrada-meta-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
+.entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:18px;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
+.entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
+.entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.82);font-weight:300;line-height:1.85;max-width:540px;}
+.entrada-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
+.e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-title{font-family:var(--font-serif);font-size:1.75rem;color:var(--navy-dark);line-height:1.2;margin-bottom:22px;}
+.e-p{font-size:1rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:20px;}
+.e-p strong{font-weight:700;color:var(--navy-dark);}
+.e-p em{font-style:italic;color:var(--navy-dark);}
+.e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin:52px 0;}
+.e-foto-gran{margin:48px 0;position:relative;overflow:hidden;}
+.e-foto-gran img{width:100%;height:500px;object-fit:cover;}
+.e-foto-peu{font-size:.72rem;color:var(--muted);font-style:italic;margin-top:10px;padding-left:8px;border-left:2px solid var(--gold);opacity:.8;line-height:1.5;}
+.e-fotos-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:36px 0 8px;}
+.e-fotos-2 img{width:100%;height:320px;object-fit:cover;}
+.e-fotos-2-peu{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:36px;}
+.e-fotos-2-peu span{font-size:.72rem;color:var(--muted);font-style:italic;padding-left:8px;border-left:2px solid var(--gold);opacity:.8;line-height:1.5;display:block;}
+.e-fotos-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:36px 0 8px;}
+.e-fotos-3 img{width:100%;height:240px;object-fit:cover;}
+.e-foto-md{margin:36px 0;}
+.e-foto-md img{width:100%;height:380px;object-fit:cover;}
+.e-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-bottom:52px;}
+.e-img img{width:100%;height:420px;object-fit:cover;}
+.e-vins{background:var(--navy-dark);padding:52px;margin:52px 0;position:relative;}
+.e-vins::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);}
+.e-vins-label{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(184,146,74,.7);margin-bottom:10px;display:block;}
+.e-vins-title{font-family:var(--font-serif);font-size:1.5rem;color:#fff;margin-bottom:8px;}
+.e-vins-desc{font-size:.9rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.8;margin-bottom:32px;}
+.e-vins-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.e-vi{background:rgba(255,255,255,.06);padding:18px 16px;border-left:3px solid rgba(184,146,74,.4);}
+.e-vi-num{font-size:.58rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(184,146,74,.65);margin-bottom:6px;}
+.e-vi-nom{font-size:.9rem;color:#fff;font-weight:600;line-height:1.4;margin-bottom:4px;}
+.e-vi-do{font-size:.75rem;color:rgba(255,255,255,.38);}
+.e-moment{background:#fff;padding:36px;border-left:4px solid var(--gold);margin:36px 0;box-shadow:0 4px 24px rgba(28,46,62,.08);}
+.e-moment-title{font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:12px;font-weight:600;}
+.e-moment-p{font-size:.95rem;color:#555;line-height:1.75;}
+.e-moment-p strong{color:var(--navy-dark);font-weight:700;}
+.e-fitxa{background:var(--cream);border:1px solid var(--border);display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:52px 0;text-align:center;}
+.e-fitxa-item{padding:32px 24px;border-right:1px solid var(--border);}
+.e-fitxa-item:last-child{border-right:none;}
+.e-fitxa-label{font-size:.62rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block;}
+.e-fitxa-valor{font-family:var(--font-serif);font-size:1rem;color:var(--navy-dark);}
+.e-compartir{position:relative;margin:64px 0 0;padding:56px 40px 52px;background:linear-gradient(135deg,#0b1626 0%,#1c2e3e 100%);overflow:hidden;}
+.e-compartir::before{content:'';position:absolute;top:-1px;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);}
+.e-compartir::after{content:'"';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:14rem;font-weight:700;color:rgba(184,146,74,.06);line-height:1;pointer-events:none;user-select:none;}
+.e-compartir-inner{position:relative;z-index:1;max-width:600px;margin:0 auto;text-align:center;}
+.e-compartir-deco{display:flex;align-items:center;gap:16px;justify-content:center;margin-bottom:20px;}
+.e-compartir-deco-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,146,74,.3));}
+.e-compartir-deco-line.r{background:linear-gradient(90deg,rgba(184,146,74,.3),transparent);}
+.e-compartir-deco span{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(184,146,74,.6);font-weight:600;white-space:nowrap;}
+.e-compartir-frase{font-family:'Playfair Display',serif;font-size:1.45rem;font-style:italic;color:rgba(255,255,255,.88);line-height:1.5;margin-bottom:32px;font-weight:400;}
+.e-compartir-frase strong{font-style:normal;font-weight:700;color:#d4a96a;}
+.e-compartir-btns{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;}
+.e-compartir-btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;font-family:'Lato',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:rgba(255,255,255,.65);transition:all .25s;cursor:pointer;text-decoration:none;}
+.e-compartir-btn:hover{border-color:rgba(184,146,74,.6);background:rgba(184,146,74,.1);color:#d4a96a;transform:translateY(-2px);}
+.e-compartir-btn.wa:hover{border-color:#25d366;background:rgba(37,211,102,.1);color:#25d366;}
+.e-compartir-btn.fb:hover{border-color:#1877f2;background:rgba(24,119,242,.1);color:#6fa8ff;}
+.e-compartir-copied{font-size:.65rem;color:#d4a96a;letter-spacing:.08em;opacity:0;transition:opacity .3s;margin-left:4px;}
+.e-compartir-copied.vis{opacity:1;}
+.e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;}
+.e-nav-retorn-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+@media(max-width:768px){
+  .entrada-hero-content{padding:0 5% 52px;}
+  .entrada-cos{padding:52px 5%;}
+  .e-grid-2{grid-template-columns:1fr;gap:32px;}
+  .e-img img{height:280px;}
+  .e-foto-gran img{height:300px;}
+  .e-foto-md img{height:260px;}
+  .e-fotos-2{grid-template-columns:1fr;}
+  .e-fotos-2 img{height:260px;}
+  .e-fotos-2-peu{grid-template-columns:1fr;}
+  .e-fotos-3{grid-template-columns:1fr 1fr;}
+  .e-vins{padding:32px 20px;}
+  .e-vins-grid{grid-template-columns:1fr 1fr;}
+  .e-fitxa{grid-template-columns:1fr;}
+  .e-fitxa-item{border-right:none;border-bottom:1px solid var(--border);}
+  .e-fitxa-item:last-child{border-bottom:none;}
+  .e-compartir{padding:40px 24px 36px;}
+  .e-compartir::after{font-size:8rem;}
+  .e-compartir-frase{font-size:1.2rem;}
+}
+</style>
+</head>
+<body>
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona" onerror="this.src='https://gourmetsdetarragona.com/wp-content/uploads/2025/05/cropped-logo_gourmets_blau_sin_fondo-3-300x296.png'"></a>
+    <div class="nav-menu">
+      <div class="nav-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
+      <div class="nav-item"><span class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</span><div class="dropdown"><a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a><a href="../pages/associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a><a href="../pages/associacio.html#valoracio" class="t" data-es="El sistema de valoración" data-ca="El sistema de valoració">El sistema de valoración</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span><div class="dropdown"><a href="../pages/restaurants.html" class="t" data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visitas 2025–26</a><a href="../pages/restaurants.html#historic" class="t" data-es="Histórico de visitas" data-ca="Històric de visites">Histórico de visitas</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Premios" data-ca="Premis">Premios</span><div class="dropdown"><a href="../pages/premis.html" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</a><a href="../pages/premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a><a href="../pages/premis.html#palmares" class="t" data-es="Palmarés histórico" data-ca="Palmarès històric">Palmarés histórico</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</span><div class="dropdown"><a href="../pages/esdeveniments.html" class="t" data-es="Cenas especiales" data-ca="Sopars especials">Cenas especiales</a><a href="../pages/esdeveniments.html#cates" class="t" data-es="Catas &amp; Visitas" data-ca="Tasts &amp; Visites">Catas &amp; Visitas</a><a href="../pages/esdeveniments.html#calendari" class="t" data-es="Calendario" data-ca="Calendari">Calendario</a></div></div>
+      <div class="nav-item"><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+      <div class="nav-item"><a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
+    <div class="mobile-item"><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
+    <div class="mobile-item"><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
+    <div class="mobile-item"><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></div>
+    <div class="mobile-item"><a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></div>
+    <div class="mobile-item"><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+    <div class="mobile-item"><a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="entrada-hero">
+  <div class="entrada-hero-bg" style="background-image:url('../assets/img/terrat/cronica/sala-02.jpg');"></div>
+  <div class="entrada-hero-grad"></div>
+  <div class="entrada-hero-line"></div>
+  <div class="entrada-hero-content">
+    <a href="../pages/blog.html" class="entrada-back"><i class="fa fa-arrow-left"></i> <span class="t" data-es="Volver al Blog" data-ca="Tornar al Blog">Volver al Blog</span></a>
+    <div class="entrada-meta-top">
+      <span class="entrada-badge t" data-es="Crònica · 3a Visita · Temporada 2026" data-ca="Crònica · 3a Visita · Temporada 2026">Crònica · 3a Visita · Temporada 2026</span>
+    </div>
+    <div class="entrada-meta-info">
+      <span class="entrada-meta-item"><i class="fa fa-map-marker-alt"></i> Tarragona</span>
+      <span class="entrada-meta-item"><i class="fa fa-leaf"></i> <span class="t" data-es="Cocina mediterránea creativa" data-ca="Cuina mediterrània creativa">Cocina mediterránea creativa</span></span>
+      <span class="entrada-meta-item"><i class="fa fa-calendar"></i> <span class="t" data-es="7 Mayo 2026" data-ca="7 Maig 2026">7 Mayo 2026</span></span>
+    </div>
+    <h1 class="entrada-titol">El Terrat · <em class="t" data-es="Tarragona" data-ca="Tarragona">Tarragona</em></h1>
+    <p class="entrada-subtitol t" data-es="Moha Quach nos recibió con agua de rosas y nos despidió con la certeza de que Tarragona tiene un restaurante que sabe exactamente lo que es." data-ca="Moha Quach ens va rebre amb aigua de roses i ens va acomiadar amb la certesa que Tarragona té un restaurant que sap exactament el que és.">Moha Quach nos recibió con agua de rosas y nos despidió con la certeza de que Tarragona tiene un restaurante que sabe exactamente lo que es.</p>
+  </div>
+</header>
+
+<main class="entrada-cos">
+
+  <!-- B1: PRESENTACIÓ -->
+  <span class="e-label t" data-es="El inicio de la velada" data-ca="L'inici de la vetllada">El inicio de la velada</span>
+  <h2 class="e-title t" data-es="Yarritu presenta, Quach escucha" data-ca="Yarritu presenta, Quach escolta">Yarritu presenta, Quach escucha</h2>
+  <div class="e-divider"></div>
+  <div class="e-grid-2">
+    <div>
+      <p class="e-p t" data-es="Los Gourmets de Tarragona llegaron al carrer Pons d&apos;Icart con una expectativa inusual. La sala ya estaba preparada: mesa larga de madera maciza, sillas de terciopelo verde y mostaza, luz cálida, litografías de Joan Miró sobre la piedra vista. En el centro de cada cubierto, la tarjeta que lo resumía todo: <strong>Tarraco · Desde la época romana hasta la actualidad</strong>." data-ca="Els Gourmets de Tarragona van arribar al carrer Pons d&apos;Icart amb una expectativa inusual. La sala ja estava parada: taula llarga de fusta massissa, cadires de vellut verd i mostassa, llum càlida, litografies de Joan Miró sobre la pedra vista. Al centre de cada lloc, la targeta que ho resumia tot: <strong>Tarraco · Desde la época romana hasta la actualidad</strong>.">Los Gourmets de Tarragona llegaron al carrer Pons d&apos;Icart con una expectativa inusual. La sala ya estaba preparada: mesa larga de madera maciza, sillas de terciopelo verde y mostaza, luz cálida, litografías de Joan Miró sobre la piedra vista. En el centro de cada cubierto, la tarjeta que lo resumía todo: <strong>Tarraco · Desde la época romana hasta la actualidad</strong>.</p>
+      <p class="e-p t" data-es="El presidente de la asociación, <strong>Juan Manuel Rodríguez Yarritu</strong>, tomó la palabra para presentar el restaurante y su chef. Habló de El Terrat como un proyecto construido con convicción, sin atajos, y de <strong>Moha Quach</strong> como un cocinero que ha crecido en Tarragona, que conoce su territorio y que ha sabido convertir su biografía en propuesta gastronómica." data-ca="El president de l&apos;associació, <strong>Juan Manuel Rodríguez Yarritu</strong>, va prendre la paraula per presentar el restaurant i el seu xef. Va parlar d&apos;El Terrat com d&apos;un projecte construït amb convicció, sense atajos, i de <strong>Moha Quach</strong> com d&apos;un cuiner que ha crescut a Tarragona, que coneix el seu territori i que ha sabut convertir la seva biografia en proposta gastronòmica.">El presidente de la asociación, <strong>Juan Manuel Rodríguez Yarritu</strong>, tomó la palabra para presentar el restaurante y su chef. Habló de El Terrat como un proyecto construido con convicción, sin atajos, y de <strong>Moha Quach</strong> como un cocinero que ha crecido en Tarragona, que conoce su territorio y que ha sabido convertir su biografía en propuesta gastronómica.</p>
+      <p class="e-p t" data-es="Quach respondió con un breve parlamento. Sin estridencias. Agradeció la visita y soltó la frase que resumía la noche: <em>cocino lo que soy, con lo que tenemos aquí</em>. Luego volvió a la cocina." data-ca="Quach va respondre amb un breu parlament. Sense estridències. Va agrair la visita i va deixar anar la frase que resumia la nit: <em>cuino el que sóc, amb el que tenim aquí</em>. Llavors va tornar a la cuina.">Quach respondió con un breve parlamento. Sin estridencias. Agradeció la visita y soltó la frase que resumía la noche: <em>cocino lo que soy, con lo que tenemos aquí</em>. Luego volvió a la cocina.</p>
+    </div>
+    <div class="e-img"><img src="../assets/img/terrat/cronica/sala-04.jpg" alt="Sala d'El Terrat preparada pels Gourmets de Tarragona"></div>
+  </div>
+  <div class="e-fotos-2">
+    <img src="../assets/img/terrat/cronica/sala-taula.jpg" alt="Detall posada de taula — El Terrat by Quach i targeta Tarraco">
+    <img src="../assets/img/terrat/cronica/sala-mesa.jpg" alt="Taula dels Gourmets de Tarragona a El Terrat">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="Detalle de mesa — servilleta 'El Terrat by Quach' y tarjeta 'Tarraco · Desde la época romana hasta la actualidad'" data-ca="Detall de taula — tovalló 'El Terrat by Quach' i targeta 'Tarraco · Desde la época romana hasta la actualidad'">Detalle de mesa — servilleta 'El Terrat by Quach' y tarjeta 'Tarraco · Desde la época romana hasta la actualidad'</span>
+    <span class="t" data-es="La mesa de los Gourmets, sobre madera maciza con cerámica artesanal y cristalería" data-ca="La taula dels Gourmets, sobre fusta massissa amb ceràmica artesanal i cristalleria">La mesa de los Gourmets, sobre madera maciza con cerámica artesanal y cristalería</span>
+  </div>
+
+  <!-- B2: EMILI I ROMESCO -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="La sabiduría a la mesa" data-ca="La saviesa a la taula">La sabiduría a la mesa</span>
+  <h2 class="e-title t" data-es="Dos salsas, un solo nombre, cien años de confusión" data-ca="Dues salses, un sol nom, cent anys de confusió">Dos salsas, un solo nombre, cien años de confusión</h2>
+  <div class="e-grid-2">
+    <div class="e-img"><img src="../assets/img/terrat/cronica/moha-emili.jpg" alt="Emili Mateu parlant al micròfon amb Moha Quach al costat"></div>
+    <div>
+      <p class="e-p t" data-es="Tomó el micrófono <strong>Emili Mateu</strong>, socio de los Gourmets y pozo de sabiduría gastronómica. Su disertación sobre el romesco fue uno de los momentos más valiosos de la noche, y no salió de ningún plato." data-ca="Va agafar el micròfon <strong>Emili Mateu</strong>, soci dels Gourmets i pou de saviesa gastronòmica. La seva dissertació sobre el romesco va ser un dels moments més valuosos de la nit, i no va sortir de cap plat.">Tomó el micrófono <strong>Emili Mateu</strong>, socio de los Gourmets y pozo de sabiduría gastronómica. Su disertación sobre el romesco fue uno de los momentos más valiosos de la noche, y no salió de ningún plato.</p>
+      <p class="e-p t" data-es="Emili dejó clara una distinción que mucha gente confunde: el <strong>romesco como salsa</strong> —nyora, tomate, avellanas y ajo— y el <strong>romesco como guiso</strong> —el plato de pescadores del Serrallo, con pescado, patata y pimiento—. Dos preparaciones, un solo nombre, orígenes y funciones bien distintas." data-ca="Emili va deixar clara una distinció que molta gent confon: el <strong>romesco com a salsa</strong> —nyora, tomàquet, avellanes i all— i el <strong>romesco com a guisat</strong> —el plat de pescadors del Serrallo, amb peix, patata i pebrot—. Dues preparacions, un sol nom, orígens i funcions ben diferents.">Emili dejó clara una distinción que mucha gente confunde: el <strong>romesco como salsa</strong> —nyora, tomate, avellanas y ajo— y el <strong>romesco como guiso</strong> —el plato de pescadores del Serrallo, con pescado, patata y pimiento—. Dos preparaciones, un solo nombre, orígenes y funciones bien distintas.</p>
+      <p class="e-p t" data-es="El momento cumbre: Emili explicó que el romesco original se hacía con el <strong>pimiento de romesco</strong>, variedad genuina de Tarragona que creía desaparecida. Moha Quach, que escuchaba con los brazos cruzados y una sonrisa sutil, intervino: <em>&apos;Lo estamos recuperando.&apos;</em> Una variedad que algunos productores del Camp están volviendo a cultivar. La tradición vuelve por el mismo camino de siempre: el mercado, la tierra y los cocineros que preguntan." data-ca="El moment culminant: Emili va explicar que el romesco original es feia amb el <strong>pebrot de romesco</strong>, varietat genuïna de Tarragona que creia desapareguda. Moha Quach, que escoltava amb els braços creuats i un somriure subtil, va intervenir: <em>&apos;L&apos;estem recuperant.&apos;</em> Una varietat que alguns productors del Camp estan tornant a cultivar. La tradició torna pel mateix camí de sempre: el mercat, la terra i els cuiners que pregunten.">El momento cumbre: Emili explicó que el romesco original se hacía con el <strong>pimiento de romesco</strong>, variedad genuina de Tarragona que creía desaparecida. Moha Quach, que escuchaba con los brazos cruzados y una sonrisa sutil, intervino: <em>&apos;Lo estamos recuperando.&apos;</em> Una variedad que algunos productores del Camp están volviendo a cultivar. La tradición vuelve por el mismo camino de siempre: el mercado, la tierra y los cocineros que preguntan.</p>
+    </div>
+  </div>
+
+  <!-- B3: ÀNGEL PÉREZ -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="El invitado de honor" data-ca="El convidat d'honor">El invitado de honor</span>
+  <h2 class="e-title t" data-es="Un sector que trabaja por el producto y el territorio" data-ca="Un sector que treballa pel producte i el territori">Un sector que trabaja por el producto y el territorio</h2>
+  <p class="e-p t" data-es="Habló <strong>Àngel Pérez</strong>, director del Grupo El Pósito. Su parlamento fue un elogio generoso a El Terrat y a todo el entramado gastronómico local que trabaja, a menudo en silencio, para poner el producto y el territorio en el centro. No se trata de un solo restaurante, sino de un ecosistema que avanza." data-ca="Va parlar <strong>Àngel Pérez</strong>, director del Grup El Pósito. El seu parlament va ser un elogi generós a El Terrat i a tot l&apos;entramat gastronòmic local que treballa, sovint en silenci, per posar el producte i el territori al centre. No es tracta d&apos;un sol restaurant, sinó d&apos;un ecosistema que avança.">Habló <strong>Àngel Pérez</strong>, director del Grupo El Pósito. Su parlamento fue un elogio generoso a El Terrat y a todo el entramado gastronómico local que trabaja, a menudo en silencio, para poner el producto y el territorio en el centro. No se trata de un solo restaurante, sino de un ecosistema que avanza.</p>
+  <div class="e-moment">
+    <p class="e-moment-title">&#127885; <span class="t" data-es="El trofeo de honor" data-ca="El trofeu d'honor">El trofeo de honor</span></p>
+    <p class="e-moment-p t" data-es="Los Gourmets de Tarragona hicieron entrega a Àngel Pérez del <strong>trofeo de honor de la velada</strong>, en reconocimiento a su trayectoria y a su apuesta por la gastronomía del territorio. Lo recibió con la misma generosidad con que había hablado." data-ca="Els Gourmets de Tarragona van lliurar a Àngel Pérez el <strong>trofeu d&apos;honor de la vetllada</strong>, en reconeixement a la seva trajectòria i a la seva aposta per la gastronomia del territori. El va rebre amb la mateixa generositat amb què havia parlat.">Los Gourmets de Tarragona hicieron entrega a Àngel Pérez del <strong>trofeo de honor de la velada</strong>, en reconocimiento a su trayectoria y a su apuesta por la gastronomía del territorio. Lo recibió con la misma generosidad con que había hablado.</p>
+  </div>
+
+  <!-- B4: VINS -->
+  <div class="e-vins">
+    <span class="e-vins-label t" data-es="El maridaje · Josep Foraster · Conca de Barberà" data-ca="El maridatge · Josep Foraster · Conca de Barberà">El maridaje · Josep Foraster · Conca de Barberà</span>
+    <p class="e-vins-title t" data-es="Cuatro vinos de una sola denominación" data-ca="Quatre vins d'una sola denominació">Cuatro vinos de una sola denominación</p>
+    <p class="e-vins-desc t" data-es="El representante del celler Josep Foraster acompañó cada pase con una explicación precisa y apasionada. Cuatro vinos, una sola denominación, un argumento claro: el territorio lo tiene todo. Ningún Priorat. Ninguna Ribera del Duero. Conca de Barberà de principio a fin." data-ca="El representant del celler Josep Foraster va acompanyar cada pase amb una explicació precisa i apassionada. Quatre vins, una sola denominació, un argument clar: el territori ho té tot. Cap Priorat. Cap Ribera del Duero. Conca de Barberà de principi a fi.">El representante del celler Josep Foraster acompañó cada pase con una explicación precisa y apasionada. Cuatro vinos, una sola denominación, un argumento claro: el territorio lo tiene todo. Ningún Priorat. Ninguna Ribera del Duero. Conca de Barberà de principio a fin.</p>
+    <div class="e-vins-grid">
+      <div class="e-vi"><p class="e-vi-num t" data-es="1r pase" data-ca="1r pase">1r pase</p><p class="e-vi-nom">Lilla</p><p class="e-vi-do">Mètode Ancestral · Josep Foraster</p></div>
+      <div class="e-vi"><p class="e-vi-num t" data-es="2n pase" data-ca="2n pase">2n pase</p><p class="e-vi-nom">Brisat del Coster</p><p class="e-vi-do">Macabeu · Josep Foraster</p></div>
+      <div class="e-vi"><p class="e-vi-num t" data-es="3r pase" data-ca="3r pase">3r pase</p><p class="e-vi-nom">Trepat Serra de Miramar</p><p class="e-vi-do">Trepat negre · Josep Foraster</p></div>
+      <div class="e-vi"><p class="e-vi-num t" data-es="Tancament" data-ca="Tancament">Tancament</p><p class="e-vi-nom">Tripat Rosé Cava</p><p class="e-vi-do">Trepat rosat · Mètode tradicional</p></div>
+    </div>
+  </div>
+  <div class="e-foto-md">
+    <img src="../assets/img/terrat/cronica/vins-01.jpg" alt="Els quatre vins de Josep Foraster de la Conca de Barberà">
+    <p class="e-foto-peu t" data-es="Los cuatro vinos de Josep Foraster: Lilla (Mètode Ancestral), Brisat del Coster (Macabeu), Trepat Serra de Miramar i Tripat Rosé Cava" data-ca="Els quatre vins de Josep Foraster: Lilla (Mètode Ancestral), Brisat del Coster (Macabeu), Trepat Serra de Miramar i Tripat Rosé Cava">Los cuatro vinos de Josep Foraster: Lilla (Mètode Ancestral), Brisat del Coster (Macabeu), Trepat Serra de Miramar i Tripat Rosé Cava</p>
+  </div>
+
+  <!-- B5: RENTAMANS -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="El inicio del pase" data-ca="L'inici del pase">El inicio del pase</span>
+  <h2 class="e-title t" data-es="Agua de rosas y servicio impecable" data-ca="Aigua de roses i servei impecable">Agua de rosas y servicio impecable</h2>
+  <p class="e-p t" data-es="El primer gesto del servicio fue un <strong>lavamanos de agua de rosas</strong>. Una tradición de raíz amazigh, presente en la cultura del Magreb desde siglos, que Quach incorpora como bienvenida porque es parte de quien es. En treinta segundos, antes de que nadie hubiera probado nada, el menú ya había dicho su primera palabra." data-ca="El primer gest del servei va ser un <strong>rentamans d&apos;aigua de roses</strong>. Una tradició d&apos;arrel amaziga, present a la cultura del Magrib des de segles, que Quach incorpora com a benvinguda perquè és part de qui és. En trenta segons, abans que ningú hagués provat res, el menú ja havia dit la seva primera paraula.">El primer gesto del servicio fue un <strong>lavamanos de agua de rosas</strong>. Una tradición de raíz amazigh, presente en la cultura del Magreb desde siglos, que Quach incorpora como bienvenida porque es parte de quien es. En treinta segundos, antes de que nadie hubiera probado nada, el menú ya había dicho su primera palabra.</p>
+  <p class="e-p t" data-es="El servicio de sala fue <strong>impecable durante toda la velada</strong>. Presente sin ser intrusivo. Atento sin ser obsesivo. Uno de los pilares invisibles de una noche que no tuvo ninguna grieta." data-ca="El servei de sala va ser <strong>impecable durant tota la vetllada</strong>. Present sense ser intrusiu. Atent sense ser obsessiu. Un dels pilars invisibles d&apos;una nit que no va tenir cap grieta.">El servicio de sala fue <strong>impecable durante toda la velada</strong>. Presente sin ser intrusivo. Atento sin ser obsesivo. Uno de los pilars invisibles de una noche que no tuvo ninguna grieta.</p>
+
+  <!-- B6: APERITIUS -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Aperitivos" data-ca="Aperitius">Aperitivos</span>
+  <h2 class="e-title t" data-es="Un viaje por el Rif" data-ca="Un viatge pel Rif">Un viaje por el Rif</h2>
+  <p class="e-p t" data-es="El menú arrancó con cinco aperitivos que construían un relato geográfico y biográfico a la vez. La <strong>versión de la ensalada marroquina</strong> abrió con acidez y frescor. La <strong>remolacha con manzana verde y espuma de aceituna negra</strong> —servida en copa de color carmesí intenso— sorprendió por el equilibrio entre dulzor y amargor. La <strong>merengue crujiente de remolacha con queso en salmuera y harissa</strong> aportó el primer golpe de especias del Magreb: suave, pero inequívoco." data-ca="El menú va arrencar amb cinc aperitius que construïen un relat geogràfic i biogràfic alhora. La <strong>versió de l&apos;amanida marroquina</strong> va obrir amb acidesa i frescor. La <strong>remolatxa amb poma verda i escuma d&apos;oliva negra</strong> —servida en copa de color carmesí intens— va sorprendre per l&apos;equilibri entre dolçor i amargor. La <strong>merenga cruixent de remolatxa amb formatge en salmorra i harissa</strong> va aportar el primer cop d&apos;espècies del Magrib: suau, però inequívoc.">El menú arrancó con cinco aperitivos que construían un relato geográfico y biográfico a la vez. La <strong>versión de la ensalada marroquina</strong> abrió con acidez y frescor. La <strong>remolacha con manzana verde y espuma de aceituna negra</strong> —servida en copa de color carmesí intenso— sorprendió por el equilibrio entre dulzor y amargor. La <strong>merengue crujiente de remolacha con queso en salmuera y harissa</strong> aportó el primer golpe de especias del Magreb: suave, pero inequívoco.</p>
+  <div class="e-fotos-2">
+    <img src="../assets/img/terrat/cronica/aperitius.jpg" alt="Aperitius — esferes especiades sobre llit d'espècies del Rif">
+    <img src="../assets/img/terrat/cronica/briwat-02.jpg" alt="Briwat — cruixent triangular de fetge de pollastre">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="Aperitivos — esferas especiadas sobre lecho de canela, anís estrellado y cilantro seco" data-ca="Aperitius — esferes especiades sobre llit de canyella, anís estrellat i coriandre sec">Aperitivos — esferas especiadas sobre lecho de canela, anís estrellado y cilantro seco</span>
+    <span class="t" data-es="Briwat en dos pasos — crujiente triangular de hígado de pollo con flores y puntos de crema" data-ca="Briwat en dos passes — cruixent triangular de fetge de pollastre amb flors i punts de crema">Briwat en dos pasos — crujiente triangular de hígado de pollo con flores y puntos de crema</span>
+  </div>
+  <p class="e-p t" data-es="Y entonces, el <strong>briwat en dos pasos</strong>: el pastelito triangular marroquí de hígado de pollo y piel crujiente, seguido del buñuelo líquido del mismo briwat. La misma idea en dos texturas, en dos temperaturas, en dos momentos. Un ejercicio de técnica que no pretendía impresionar. Pretendía explicar." data-ca="I llavors, el <strong>briwat en dos passes</strong>: el pastisset triangular marroquí de fetge de pollastre i pell cruixent, seguit del bunyol líquid del mateix briwat. La mateixa idea en dues textures, en dues temperatures, en dos moments. Un exercici de tècnica que no pretenia impressionar. Pretenia explicar.">Y entonces, el <strong>briwat en dos pasos</strong>: el pastelito triangular marroquí de hígado de pollo y piel crujiente, seguido del buñuelo líquido del mismo briwat. La misma idea en dos texturas, en dos temperaturas, en dos momentos. Un ejercicio de técnica que no pretendía impresionar. Pretendía explicar.</p>
+  <div class="e-fotos-3">
+    <img src="../assets/img/terrat/cronica/briwat-01.jpg" alt="Briwat — detall del cruixent triangular">
+    <img src="../assets/img/terrat/cronica/briwat-03.jpg" alt="Briwat — presentació sobre plat blanc">
+    <img src="../assets/img/terrat/cronica/briwat-04.jpg" alt="Briwat — visió conjunta dels aperitius">
+  </div>
+  <p class="e-foto-peu t" data-es="El briwat en sus distintas versiones — crujiente de hígado, piel crujiente y buñuelo líquido" data-ca="El briwat en les seves versions — cruixent de fetge, pell cruixent i bunyol líquid">El briwat en sus distintas versiones — crujiente de hígado, piel crujiente y buñuelo líquido</p>
+
+  <!-- B7: ENTRANTS -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Homenaje a la cocina catalana" data-ca="Homenatge a la cuina catalana">Homenaje a la cocina catalana</span>
+  <h2 class="e-title t" data-es="Tàrraco en el plato" data-ca="Tàrraco al plat">Tàrraco en el plato</h2>
+  <p class="e-p t" data-es="Si los aperitivos eran el Rif, los entrantes eran Tarragona. El <strong>empedrat de bacallà en texturas</strong> llegó en un bol de piedra volcánica negra —uno de los contrastes visuales más potentes de la noche—. La espuma blanca del bacalà, la base naranja intensa, la trufa, los guisantes y las flores. Un plato que habla de la cocina catalana de siempre con una ejecución que no renuncia a nada." data-ca="Si els aperitius eren el Rif, els entrants eren Tarragona. L&apos;<strong>empedrat de bacallà en textures</strong> va arribar en un bol de pedra volcànica negra —un dels contrastos visuals més potents de la nit—. L&apos;escuma blanca del bacallà, la base taronja intensa, la tòfona, els pèsols i les flors. Un plat que parla de la cuina catalana de sempre amb una execució que no renuncia a res.">Si los aperitivos eran el Rif, los entrantes eran Tarragona. El <strong>empedrat de bacallà en texturas</strong> llegó en un bol de piedra volcánica negra —uno de los contrastes visuales más potentes de la noche—. La espuma blanca del bacalà, la base naranja intensa, la trufa, los guisantes y las flores. Un plato que habla de la cocina catalana de siempre con una ejecución que no renuncia a nada.</p>
+  <div class="e-fotos-2">
+    <img src="../assets/img/terrat/cronica/empedrat-01.jpg" alt="Empedrat de bacallà — bol de pedra volcànica i cúpula d'escuma">
+    <img src="../assets/img/terrat/cronica/empedrat-02.jpg" alt="Empedrat de bacallà — detall de l'escuma, tòfona i flors">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="Empedrat de bacalà en texturas — bol de piedra volcánica, espuma blanca, base de romesco y trufa" data-ca="Empedrat de bacallà en textures — bol de pedra volcànica, escuma blanca, base de romesco i tòfona">Empedrat de bacalà en texturas — bol de piedra volcánica, espuma blanca, base de romesco y trufa</span>
+    <span class="t" data-es="Detalle del empedrat — la cúpula de espuma sobre el bacalà con flores y guisantes" data-ca="Detall de l'empedrat — la cúpula d'escuma sobre el bacallà amb flors i pèsols">Detalle del empedrat — la cúpula de espuma sobre el bacalà con flores y guisantes</span>
+  </div>
+  <p class="e-p t" data-es="Y después, <strong>el romesco de gamba roja de Tarragona</strong>. Las gambas del Serrallo dispuestas alrededor del romesco, la espuma en el centro, las hierbas. Con la disertación de Emili Mateu todavía fresca en la memoria, el plato adquiría una dimensión extra. No era solo un entrante excelente. Era la conclusión de una lección." data-ca="I després, <strong>el romesco de gamba vermella de Tarragona</strong>. Les gambes del Serrallo disposades al voltant del romesco, l&apos;escuma al centre, les herbes. Amb la dissertació d&apos;Emili Mateu encara fresca a la memòria, el plat adquiria una dimensió extra. No era només un entrant excel·lent. Era la conclusió d&apos;una lliçó.">Y después, <strong>el romesco de gamba roja de Tarragona</strong>. Las gambas del Serrallo dispuestas alrededor del romesco, la espuma en el centro, las hierbas. Con la disertación de Emili Mateu todavía fresca en la memoria, el plato adquiría una dimensión extra. No era solo un entrante excelente. Era la conclusión de una lección.</p>
+  <div class="e-fotos-2">
+    <img src="../assets/img/terrat/cronica/romesco-01.jpg" alt="Romesco de gamba vermella de Tarragona — presentació en pedestal">
+    <img src="../assets/img/terrat/cronica/romesco-02.jpg" alt="Romesco de gamba — gambes del Serrallo i escuma central">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="Romesco de gamba roja de Tarragona — presentación en pedestal con espuma central" data-ca="Romesco de gamba vermella de Tarragona — presentació en pedestal amb escuma central">Romesco de gamba roja de Tarragona — presentación en pedestal con espuma central</span>
+    <span class="t" data-es="Vista aérea — las gambas del Serrallo dispuestas en círculo alrededor del romesco" data-ca="Vista aèria — les gambes del Serrallo disposades en cercle al voltant del romesco">Vista aérea — las gambas del Serrallo dispuestas en círculo alrededor del romesco</span>
+  </div>
+
+  <!-- B8: CARN -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="El regreso al Rif" data-ca="El retorn al Rif">El regreso al Rif</span>
+  <h2 class="e-title t" data-es="Tajine de cordero lechal" data-ca="Tajine de xai lletó">Tajine de cordero lechal</h2>
+  <p class="e-p t" data-es="El plato de carne cerró el círculo narrativo del menú. El <strong>tajine de cordero lechal</strong> —cocción lenta, confitada, brillante— sobre un cremoso de boniato especiado con mini zanahorias. La carne se deshacía sola. La salsa tenía profundidad. Era un tajine pero no era un tajine: era el recuerdo de un tajine filtrado por años de cocina catalana y técnica contemporánea." data-ca="El plat de carn va cloure el cercle narratiu del menú. El <strong>tajine de xai lletó</strong> —cocció lenta, confitada, brillant— sobre un cremós de moniato especiat amb mini pastanagues. La carn es desfeia sola. La salsa tenia profunditat. Era un tajine però no era un tajine: era el record d&apos;un tajine filtrat per anys de cuina catalana i tècnica contemporània.">El plato de carne cerró el círculo narrativo del menú. El <strong>tajine de cordero lechal</strong> —cocción lenta, confitada, brillante— sobre un cremoso de boniato especiado con mini zanahorias. La carne se deshacía sola. La salsa tenía profundidad. Era un tajine pero no era un tajine: era el recuerdo de un tajine filtrado por años de cocina catalana y técnica contemporánea.</p>
+  <div class="e-foto-gran">
+    <img src="../assets/img/terrat/cronica/tajine-02.jpg" alt="Tajine de xai lletó — El Terrat · Moha Quach · Tarragona">
+  </div>
+  <p class="e-foto-peu t" data-es="Tajine de cordero lechal — cocción lenta, glasa brillante y cremoso de boniato especiado" data-ca="Tajine de xai lletó — cocció lenta, glassa brillant i cremós de moniato especiat">Tajine de cordero lechal — cocción lenta, glasa brillante y cremoso de boniato especiado</p>
+  <div class="e-fotos-2">
+    <img src="../assets/img/terrat/cronica/tajine-01.jpg" alt="Tajine — primera presentació, vista frontal neta">
+    <img src="../assets/img/terrat/cronica/tajine-03.jpg" alt="Tajine — detall de la salsa i el cremós">
+  </div>
+  <p class="e-foto-peu t" data-es="El tajine desde dos ángulos — la pieza entera y el detalle de la salsa con el cremoso de boniato" data-ca="El tajine des de dos angles — la peça sencera i el detall de la salsa amb el cremós de moniato">El tajine desde dos ángulos — la pieza entera y el detalle de la salsa con el cremoso de boniato</p>
+
+  <!-- B9: POSTRES -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="El cierre" data-ca="El tancament">El cierre</span>
+  <h2 class="e-title t" data-es="Texturas del Valle del Rif" data-ca="Textures de la Vall del Rif">Texturas del Valle del Rif</h2>
+  <p class="e-p t" data-es="El postre fue el regreso definitivo. <strong>Menta, fresas, yogur y helado de rosas</strong> —colores vivos, contrastes de temperatura, ligereza—. Un postre que no quiere cerrar con rotundidad. Quiere dejar una sensación de frescor y de nostalgia a la vez. Como un paisaje del Rif que Quach lleva dentro y que de vez en cuando saca a la luz." data-ca="El postre va ser el retorn definitiu. <strong>Menta, maduixes, iogurt i gelat de roses</strong> —colors vius, contrastos de temperatura, lleugeresa—. Un postre que no vol tancar amb rotunditat. Vol deixar una sensació de frescor i de nostàlgia alhora. Com un paisatge del Rif que Quach porta a dins i que de tant en tant treu a la llum.">El postre fue el regreso definitivo. <strong>Menta, fresas, yogur y helado de rosas</strong> —colores vivos, contrastes de temperatura, ligereza—. Un postre que no quiere cerrar con rotundidad. Quiere dejar una sensación de frescor y de nostalgia a la vez. Como un paisaje del Rif que Quach lleva dentro y que de vez en cuando saca a la luz.</p>
+  <div class="e-fotos-2">
+    <img src="../assets/img/terrat/cronica/postre-01.jpg" alt="Textures de la Vall del Rif — postre de menta, maduixes i gelat de roses">
+    <img src="../assets/img/terrat/cronica/postre-02.jpg" alt="Postre — detall del gelat de roses i les textures de color">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="Texturas del Valle del Rif — menta, fresas, yogur y helado de rosas" data-ca="Textures de la Vall del Rif — menta, maduixes, iogurt i gelat de roses">Texturas del Valle del Rif — menta, fresas, yogur y helado de rosas</span>
+    <span class="t" data-es="Detalle del postre — los colores vivos del helado de rosas y las texturas de temporada" data-ca="Detall del postre — els colors vius del gelat de roses i les textures de temporada">Detalle del postre — los colores vivos del helado de rosas y las texturas de temporada</span>
+  </div>
+  <p class="e-p t" data-es="Los <strong>petit fours</strong> —esferas lacadas, bolitas de coco, bombones de chocolate con fruta confitada, dispuestos en círculo sobre cerámica artesanal— fueron el punto final. Bellos y buenos. Como había sido toda la noche." data-ca="Els <strong>petit fours</strong> —esferes laquejades, boletes de coco, bombons de xocolata amb fruita confitada, disposats en cercle sobre ceràmica artesanal— van ser el punt final. Bells i bons. Com havia estat tota la nit.">Los <strong>petit fours</strong> —esferas lacadas, bolitas de coco, bombones de chocolate con fruta confitada, dispuestos en círculo sobre cerámica artesanal— fueron el punto final. Bellos y buenos. Como había sido toda la noche.</p>
+  <div class="e-fotos-3">
+    <img src="../assets/img/terrat/cronica/petitfours-01.jpg" alt="Petit fours — disposats en cercle sobre ceràmica artesanal">
+    <img src="../assets/img/terrat/cronica/petitfours-02.jpg" alt="Petit fours — esferes laquejades, boletes de coco i bombons">
+    <img src="../assets/img/terrat/cronica/petitfours-03.jpg" alt="Petit fours — detall de les tres elaboracions">
+  </div>
+  <p class="e-foto-peu t" data-es="Los petit fours — esferas lacadas, bolitas de coco y bombones sobre cerámica artesanal" data-ca="Els petit fours — esferes laquejades, boletes de coco i bombons sobre ceràmica artesanal">Los petit fours — esferas lacadas, bolitas de coco y bombones sobre cerámica artesanal</p>
+
+  <!-- B10: DIPLOMA -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="El reconocimiento" data-ca="El reconeixement">El reconocimiento</span>
+  <h2 class="e-title t" data-es="El diploma de los Gourmets" data-ca="El diploma dels Gourmets">El diploma de los Gourmets</h2>
+  <p class="e-p t" data-es="Al cierre de la velada, los Gourmets de Tarragona entregaron a Moha Quach el <strong>diploma acreditativo de la visita</strong>. Con el diploma en las manos y la sonrisa amplia de alguien que sabe que la noche ha ido bien, Quach posó para la foto junto a la junta. Era un momento sencillo. Pero tenía peso." data-ca="Al tancament de la vetllada, els Gourmets de Tarragona van lliurar a Moha Quach el <strong>diploma acreditatiu de la visita</strong>. Amb el diploma a les mans i el somriure ampli d&apos;algú que sap que la nit ha anat bé, Quach va posar per a la foto amb la junta. Era un moment senzill. Però tenia pes.">Al cierre de la velada, los Gourmets de Tarragona entregaron a Moha Quach el <strong>diploma acreditativo de la visita</strong>. Con el diploma en las manos y la sonrisa amplia de alguien que sabe que la noche ha ido bien, Quach posó para la foto junto a la junta. Era un momento sencillo. Pero tenía peso.</p>
+  <div class="e-foto-gran">
+    <img src="../assets/img/terrat/cronica/diploma.jpg" alt="Lliurament del diploma dels Gourmets de Tarragona a Moha Quach">
+  </div>
+  <p class="e-foto-peu t" data-es="Entrega del diploma de los Gourmets de Tarragona a Moha Quach · El Terrat · 7 de mayo de 2026" data-ca="Lliurament del diploma dels Gourmets de Tarragona a Moha Quach · El Terrat · 7 de maig de 2026">Entrega del diploma de los Gourmets de Tarragona a Moha Quach · El Terrat · 7 de mayo de 2026</p>
+
+  <!-- B11: CONCLUSIÓ -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Nuestra mirada" data-ca="La nostra mirada">Nuestra mirada</span>
+  <h2 class="e-title t" data-es="Sin competencia real en Tarragona" data-ca="Sense competència real a Tarragona">Sin competencia real en Tarragona</h2>
+  <p class="e-p t" data-es="Sales de El Terrat con la sensación de haber comido en un lugar que sabe exactamente lo que es. No hay dudas en la propuesta. No hay platos que intenten gustar a todos. Hay una cocina con una voz propia, construida durante años, arraigada en el territorio y honesta hasta la última cucharada." data-ca="Surts d&apos;El Terrat amb la sensació que acabes de menjar en un lloc que sap exactament el que és. No hi ha dubtes en la proposta. No hi ha plats que intenten agradar a tothom. Hi ha una cuina amb una veu pròpia, construïda durant anys, arrelada al territori i honesta fins a la darrera cullerada.">Sales de El Terrat con la sensación de haber comido en un lugar que sabe exactamente lo que es. No hay dudas en la propuesta. No hay platos que intenten gustar a todos. Hay una cocina con una voz propia, construida durante años, arraigada en el territorio y honesta hasta la última cucharada.</p>
+  <p class="e-p t" data-es="La pregunta que el sector se hace —<em>si no es El Terrat, ¿quién podría traer la primera estrella Michelin a Tarragona?</em>— no tiene respuesta fácil. Pero después de esta noche, la pregunta tiene menos interrogante que nunca." data-ca="La pregunta que el sector es fa —<em>si no és El Terrat, qui podria portar la primera estrella Michelin a Tarragona?</em>— no té resposta fàcil. Però després d&apos;aquesta nit, la pregunta té menys interrogant que mai.">La pregunta que el sector se hace —<em>si no es El Terrat, ¿quién podría traer la primera estrella Michelin a Tarragona?</em>— no tiene respuesta fácil. Pero después de esta noche, la pregunta tiene menos interrogante que nunca.</p>
+  <p class="e-p t" data-es="La valoración definitiva llegará en la Gala de finales de año. Pero el veredicto de la velada fue unánime: ningún plato decepcionó, todos se ejecutaron con excelencia, y Tarragona, por una noche, se sintió exactamente en el lugar que le corresponde en el mapa gastronómico catalán." data-ca="La valoració definitiva arribarà a la Gala de finals d&apos;any. Però el veredicte de la vetllada va ser unànime: cap plat va decebre, tots van executar-se amb excel·lència, i Tarragona, per una nit, es va sentir exactament al lloc que li correspon al mapa gastronòmic català.">La valoración definitiva llegará en la Gala de finales de año. Pero el veredicto de la velada fue unánime: ningún plato decepcionó, todos se ejecutaron con excelencia, y Tarragona, por una noche, se sintió exactamente en el lugar que le corresponde en el mapa gastronómico catalán.</p>
+
+  <!-- FITXA -->
+  <div class="e-fitxa">
+    <div class="e-fitxa-item"><span class="e-fitxa-label t" data-es="Restaurante" data-ca="Restaurant">Restaurante</span><span class="e-fitxa-valor">El Terrat · Tarragona</span></div>
+    <div class="e-fitxa-item"><span class="e-fitxa-label t" data-es="Chef" data-ca="Xef">Chef</span><span class="e-fitxa-valor">Moha Quach</span></div>
+    <div class="e-fitxa-item"><span class="e-fitxa-label t" data-es="Visita" data-ca="Visita">Visita</span><span class="e-fitxa-valor t" data-es="3ª · 7 Mayo 2026" data-ca="3a · 7 Maig 2026">3ª · 7 Mayo 2026</span></div>
+  </div>
+
+  <!-- COMPARTIR -->
+  <div class="e-compartir">
+    <div class="e-compartir-inner">
+      <div class="e-compartir-deco">
+        <div class="e-compartir-deco-line"></div>
+        <span class="t" data-es="Compartir esta crónica" data-ca="Compartir aquesta crònica">Compartir esta crónica</span>
+        <div class="e-compartir-deco-line r"></div>
+      </div>
+      <p class="e-compartir-frase t" data-es="<em>La cuina que Tarragona necessitava.</em><br><strong>El Terrat · Moha Quach · 2026</strong>" data-ca="<em>La cuina que Tarragona necessitava.</em><br><strong>El Terrat · Moha Quach · 2026</strong>"><em>La cuina que Tarragona necessitava.</em><br><strong>El Terrat · Moha Quach · 2026</strong></p>
+      <div class="e-compartir-btns">
+        <a id="btn-wa" href="#" class="e-compartir-btn wa" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
+        <a id="btn-fb" href="#" class="e-compartir-btn fb" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a>
+        <a id="btn-x" href="#" class="e-compartir-btn" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>X</a>
+        <button class="e-compartir-btn copy" onclick="copiarEnllac(this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg><span class="t" data-es="Copiar enlace" data-ca="Copiar enllaç">Copiar enlace</span><span class="e-compartir-copied t" data-es="¡Copiado!" data-ca="Copiat!">¡Copiado!</span></button>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- NAV RETORN -->
+<div class="e-nav-retorn">
+  <div class="e-nav-retorn-links">
+    <a href="terrat-previa-2026.html" class="btn-outline t" data-es="← Leer la previa" data-ca="← Llegir la prèvia">← Leer la previa</a>
+    <a href="../pages/blog.html" class="btn-outline t" data-es="Volver al Blog" data-ca="Tornar al Blog">Volver al Blog</a>
+    <a href="../pages/restaurants.html" class="btn-primary t" data-es="Ver el recorrido 2026" data-ca="Veure el recorregut 2026">Ver el recorrido 2026</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona" onerror="this.style.display='none'">
+      <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4 class="t" data-es="Navegación" data-ca="Navegació">Navegación</h4><ul><li><a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a></li><li><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li><li><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li><li><a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></li><li><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li></ul></div>
+    <div class="footer-col"><h4 class="t" data-es="Legal" data-ca="Legal">Legal</h4><ul><li><a href="../pages/avis-legal.html" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li><li><a href="../pages/privacitat.html" class="t" data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a></li><li><a href="../pages/cookies.html" class="t" data-es="Política de Cookies" data-ca="Política de Cookies">Política de Cookies</a></li></ul></div>
+    <div class="footer-col"><h4 class="t" data-es="Contacto" data-ca="Contacte">Contacto</h4><p><a href="mailto:gourmetsdetarragona@gourmetsdetarragona.com">gourmetsdetarragona@gourmetsdetarragona.com</a></p><p>Tarragona, Catalunya</p></div>
+  </div>
+  <div class="footer-bottom"><p class="t" data-es="© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados" data-ca="© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats">© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados</p></div>
+</footer>
+
+<script>
+var currentLang = localStorage.getItem('gdt-lang') || 'es';
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('gdt-lang', lang);
+  document.querySelectorAll('.t').forEach(function(el) {
+    var val = el.getAttribute('data-' + lang);
+    if (val !== null) el.innerHTML = val;
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+  document.getElementById('html-root').setAttribute('lang', lang);
+}
+document.addEventListener('DOMContentLoaded', function() {
+  if (currentLang === 'ca') setLang('ca');
+});
+</script>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var url=encodeURIComponent(window.location.href);
+  var titol=encodeURIComponent(document.title);
+  var wa=document.getElementById('btn-wa');
+  var fb=document.getElementById('btn-fb');
+  var x=document.getElementById('btn-x');
+  if(wa)wa.href='https://wa.me/?text='+titol+'%20'+url;
+  if(fb)fb.href='https://www.facebook.com/sharer/sharer.php?u='+url;
+  if(x)x.href='https://x.com/intent/tweet?url='+url+'&text='+titol;
+})();
+function copiarEnllac(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var msg=btn.querySelector('.e-compartir-copied');
+    if(msg){msg.classList.add('vis');setTimeout(function(){msg.classList.remove('vis');},2200);}
+  });
+}
+</script>
+</body>
+</html>
