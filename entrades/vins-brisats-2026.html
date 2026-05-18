@@ -44,17 +44,36 @@
 .e-p strong{font-weight:700;color:var(--navy-dark);}
 .e-p em{font-style:italic;color:#888;}
 .e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin:48px 0;}
-.e-foto{margin:48px 0;position:relative;overflow:hidden;}
+.e-foto{margin:48px 0 0;}
 .e-foto img{width:100%;height:380px;object-fit:cover;display:block;}
-.e-foto-peu{position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top,rgba(11,22,38,.78),transparent);font-size:.7rem;color:rgba(255,255,255,.62);font-style:italic;}
-.e-foto-inline{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:16px 0;background:#fff;box-shadow:0 2px 16px rgba(28,46,62,.08);overflow:hidden;}
-.e-foto-inline img{width:100%;height:260px;object-fit:cover;object-position:center top;}
+.e-foto-peu{display:block;padding:10px 4px;font-size:.72rem;color:#888;font-style:italic;border-bottom:1px solid #e8e2d8;margin-bottom:48px;}
+.e-foto-inline-wrap{margin:16px 0 48px;}
+.e-foto-inline{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;box-shadow:0 2px 16px rgba(28,46,62,.08);overflow:hidden;}
+.e-foto-inline img{width:100%;height:300px;object-fit:contain;object-position:center center;background:#f5f0e8;}
 .e-foto-inline-text{padding:28px 32px;display:flex;flex-direction:column;justify-content:center;}
 .e-foto-inline.rev{direction:rtl;}
 .e-foto-inline.rev > *{direction:ltr;}
 .e-foto-inline-text .e-label{margin-bottom:6px;}
 .e-foto-inline-text .e-title{font-size:1.2rem;margin-bottom:12px;}
 .e-foto-inline-text .e-p{font-size:.9rem;margin-bottom:0;}
+.e-foto-peu-inline{display:block;padding:10px 4px;font-size:.72rem;color:#888;font-style:italic;border-bottom:1px solid #e8e2d8;}
+/* TAMBÉ ET POT INTERESSAR */
+.e-tambe{margin:64px 0 0;padding-top:48px;border-top:1px solid #e8e2d8;}
+.e-tambe-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-tambe-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);margin-bottom:32px;}
+.e-tambe-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.e-tambe-card{background:#fff;border:1px solid #e8e2d8;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s;}
+.e-tambe-card:hover{box-shadow:0 8px 32px rgba(28,46,62,.12);transform:translateY(-3px);}
+.e-tambe-card-img{height:160px;overflow:hidden;position:relative;}
+.e-tambe-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.e-tambe-card:hover .e-tambe-card-img img{transform:scale(1.04);}
+.e-tambe-card-cat{position:absolute;top:10px;left:10px;font-size:.56rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 9px;color:#fff;background:#6b2737;}
+.e-tambe-card-body{padding:18px 20px;flex:1;display:flex;flex-direction:column;}
+.e-tambe-card-title{font-family:var(--font-serif);font-size:1rem;color:var(--navy-dark);line-height:1.3;margin-bottom:8px;font-weight:600;}
+.e-tambe-card-exc{font-size:.82rem;font-weight:300;color:#6b6b6b;line-height:1.65;margin-bottom:14px;flex:1;}
+.e-tambe-card-link{font-size:.62rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy-dark);border-bottom:1px solid var(--gold);padding-bottom:2px;width:fit-content;transition:color .2s;}
+.e-tambe-card-link:hover{color:var(--gold);}
+@media(max-width:680px){.e-tambe-grid{grid-template-columns:1fr;}}
 .e-cellers-lista{margin:32px 0;}
 .e-celler-item{padding:16px 0;border-bottom:1px solid #e8e2d8;display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:baseline;}
 .e-celler-item:last-child{border-bottom:none;}
@@ -86,7 +105,7 @@
 .e-nav-retorn{padding:40px;text-align:center;border-top:1px solid var(--border,#e8e2d8);}
 @media(max-width:1024px){
   .e-foto-inline{grid-template-columns:1fr;}
-  .e-foto-inline img{height:220px;}
+  .e-foto-inline img{height:260px;}
   .e-foto-inline.rev{direction:ltr;}
   .e-celler-item{grid-template-columns:1fr;}
 }
@@ -235,10 +254,10 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
   <!-- FOTO COPAS · assets/img/brisats/copas-brisat.jpg -->
   <div class="e-foto">
     <img src="../assets/img/brisats/copas-brisat.jpg" alt="Copes de vi brisat vistes des de dalt mostrant els tons ambre i taronja característics de l'orange wine">
-    <span class="e-foto-peu t"
-          data-es="El color lo dice todo: ámbar, dorado intenso, a veces casi anaranjado. No es un blanco. No es un tinto. Es otra cosa."
-          data-ca="El color ho diu tot: ambre, daurat intens, de vegades gairebé ataronjat. No és un blanc. No és un negre. És una altra cosa.">El color lo dice todo: ámbar, dorado intenso, a veces casi anaranjado. No es un blanco. No es un tinto. Es otra cosa.</span>
   </div>
+  <span class="e-foto-peu t"
+        data-es="El color lo dice todo: ámbar, dorado intenso, a veces casi anaranjado. No es un blanco. No es un tinto. Es otra cosa."
+        data-ca="El color ho diu tot: ambre, daurat intens, de vegades gairebé ataronjat. No és un blanc. No és un negre. És una altra cosa.">El color lo dice todo: ámbar, dorado intenso, a veces casi anaranjado. No es un blanco. No es un tinto. Es otra cosa.</span>
 
   <!-- HISTORIA -->
   <section style="margin-top:48px;">
@@ -265,10 +284,10 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
   <!-- FOTO MACERACIÓN · assets/img/brisats/maceracio-pells.jpg -->
   <div class="e-foto">
     <img src="../assets/img/brisats/maceracio-pells.jpg" alt="Mans treballant les pells del raïm blanc durant la maceració en contacte — elaboració de vi brisat orange wine">
-    <span class="e-foto-peu t"
-          data-es="La maceración en contacto con las pieles: el momento en que el blanco empieza a dejar de serlo."
-          data-ca="La maceració en contacte amb les pells: el moment en que el blanc comença a deixar de ser-ho.">La maceración en contacto con las pieles: el momento en que el blanco empieza a dejar de serlo.</span>
   </div>
+  <span class="e-foto-peu t"
+        data-es="La maceración en contacto con las pieles: el momento en que el blanco empieza a dejar de serlo."
+        data-ca="La maceració en contacte amb les pells: el moment en que el blanc comença a deixar de ser-ho.">La maceración en contacto con las pieles: el momento en que el blanco empieza a dejar de serlo.</span>
 
   <!-- TÉCNICA -->
   <section style="margin-top:48px;">
@@ -295,10 +314,10 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
   <!-- FOTO TINA · assets/img/brisats/tina-maceracio.jpg -->
   <div class="e-foto">
     <img src="../assets/img/brisats/tina-maceracio.jpg" alt="Remuntatge en tina de fusta durant la maceració de vi brisat — elaboració artesanal de vi blanc amb pells">
-    <span class="e-foto-peu t"
-          data-es="La maceración en tina: el tiempo de contacto entre el mosto y las pieles define el carácter final del vino."
-          data-ca="La maceració en tina: el temps de contacte entre el most i les pells defineix el caràcter final del vi.">La maceración en tina: el tiempo de contacto entre el mosto y las pieles define el carácter final del vino.</span>
   </div>
+  <span class="e-foto-peu t"
+        data-es="La maceración en tina: el tiempo de contacto entre el mosto y las pieles define el carácter final del vino."
+        data-ca="La maceració en tina: el temps de contacte entre el most i les pells defineix el caràcter final del vi.">La maceración en tina: el tiempo de contacto entre el mosto y las pieles define el carácter final del vino.</span>
 
   <!-- EN LA COPA -->
   <section style="margin-top:48px;">
@@ -352,12 +371,12 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
   </section>
 
   <!-- FOTO SELECCIÓ AMPOLLES · assets/img/brisats/seleccio-ampolles.jpg -->
-  <div class="e-foto" style="margin-top:24px;margin-bottom:8px;">
+  <div class="e-foto" style="margin-top:24px;">
     <img src="../assets/img/brisats/seleccio-ampolles.jpg" alt="Selecció de vins brisats i orange wines de la demarcació de Tarragona sobre fons blanc">
-    <span class="e-foto-peu t"
-          data-es="Una misma técnica, muchos caracteres distintos. Cada brisat es el resultado de una decisión: cuánto tiempo, qué variedad, qué suelo."
-          data-ca="Una mateixa tècnica, molts caràcters diferents. Cada brisat és el resultat d'una decisió: quant de temps, quina varietat, quin sòl.">Una misma técnica, muchos caracteres distintos. Cada brisat es el resultado de una decisión: cuánto tiempo, qué variedad, qué suelo.</span>
   </div>
+  <span class="e-foto-peu t"
+        data-es="Una misma técnica, muchos caracteres distintos. Cada brisat es el resultado de una decisión: cuánto tiempo, qué variedad, qué suelo."
+        data-ca="Una mateixa tècnica, molts caràcters diferents. Cada brisat és el resultat d'una decisió: quant de temps, quina varietat, quin sòl.">Una misma técnica, muchos caracteres distintos. Cada brisat es el resultado de una decisión: cuánto tiempo, qué variedad, qué suelo.</span>
 
   <!-- LLISTA CELLERS -->
   <div class="e-cellers-lista">
@@ -417,31 +436,46 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
   </div>
 
   <!-- FOTO INLINE L'INCORRECTE · assets/img/brisats/incorrecte-sanroma.jpg -->
-  <div class="e-foto-inline" style="margin-top:32px;">
-    <img src="../assets/img/brisats/incorrecte-sanroma.jpg" alt="L'Incorrecte de Cellers Sanromà — vi brisat de parellada de Vila-rodona, Alt Camp, gastronomia Tarragona">
-    <div class="e-foto-inline-text">
-      <span class="e-label t" data-es="Alt Camp · Vila-rodona" data-ca="Alt Camp · Vila-rodona">Alt Camp · Vila-rodona</span>
-      <h3 class="e-title t" data-es="L'Incorrecte" data-ca="L'Incorrecte">L'Incorrecte</h3>
-      <p class="e-p t"
-         data-es="La parellada no era una uva para brisar. Eso decían. Eduard Sanromà decidió que, si total nadie miraba, valía la pena intentarlo. &lt;strong&gt;El resultado es un vino que lleva el nombre de lo que era: incorrecto.&lt;/strong&gt; Y que funciona exactamente por eso."
-         data-ca="La parellada no era un raïm per brissar. Això deien. Eduard Sanromà va decidir que, si total ningú mirava, valia la pena provar-ho. &lt;strong&gt;El resultat és un vi que porta el nom del que era: incorrecte.&lt;/strong&gt; I que funciona exactament per això.">
-        La parellada no era una uva para brisar. Eso decían. Eduard Sanromà decidió que, si total nadie miraba, valía la pena intentarlo. <strong>El resultado es un vino que lleva el nombre de lo que era: incorrecto.</strong> Y que funciona exactamente por eso.
-      </p>
+  <!-- FOTO INLINE L'INCORRECTE -->
+  <div class="e-foto-inline-wrap" style="margin-top:32px;">
+    <div class="e-foto-inline">
+      <img src="../assets/img/brisats/incorrecte-sanroma.jpg" alt="L'Incorrecte de Cellers Sanromà — vi brisat de parellada de Vila-rodona, Alt Camp">
+      <div class="e-foto-inline-text">
+        <span class="e-label t" data-es="Alt Camp · Vila-rodona" data-ca="Alt Camp · Vila-rodona">Alt Camp · Vila-rodona</span>
+        <h3 class="e-title t" data-es="L'Incorrecte" data-ca="L'Incorrecte">L'Incorrecte</h3>
+        <p class="e-p t"
+           data-es="La parellada no era una uva para brisar. Eso decían. Eduard Sanromà decidió que, si total nadie miraba, valía la pena intentarlo. &lt;strong&gt;El resultado es un vino que lleva el nombre de lo que era: incorrecto.&lt;/strong&gt; Y que funciona exactamente por eso."
+           data-ca="La parellada no era un raïm per brissar. Això deien. Eduard Sanromà va decidir que, si total ningú mirava, valia la pena provar-ho. &lt;strong&gt;El resultat és un vi que porta el nom del que era: incorrecte.&lt;/strong&gt; I que funciona exactament per això.">
+          La parellada no era una uva para brisar. Eso decían. Eduard Sanromà decidió que, si total nadie miraba, valía la pena intentarlo. <strong>El resultado es un vino que lleva el nombre de lo que era: incorrecto.</strong> Y que funciona exactamente por eso.
+        </p>
+      </div>
     </div>
+    <span class="e-foto-peu-inline t"
+          data-es="L'Incorrecte · Cellers Sanromà · Parellada brisada · Alt Camp, Vila-rodona"
+          data-ca="L'Incorrecte · Cellers Sanromà · Parellada brisada · Alt Camp, Vila-rodona">
+      L'Incorrecte · Cellers Sanromà · Parellada brisada · Alt Camp, Vila-rodona
+    </span>
   </div>
 
-  <!-- FOTO INLINE BRISAT DEL COSTER rev · assets/img/brisats/brisat-del-coster.jpg -->
-  <div class="e-foto-inline rev">
-    <img src="../assets/img/brisats/brisat-del-coster.jpg" alt="Brisat del Coster 2018 de Josep Foraster — macabeu brisat D.O. Conca de Barberà, Montblanc, restaurants Tarragona">
-    <div class="e-foto-inline-text">
-      <span class="e-label t" data-es="Conca de Barberà · Montblanc" data-ca="Conca de Barberà · Montblanc">Conca de Barberà · Montblanc</span>
-      <h3 class="e-title t" data-es="Brisat del Coster" data-ca="Brisat del Coster">Brisat del Coster</h3>
-      <p class="e-p t"
-         data-es="El tapón de cera naranja ya te avisa de qué vas a encontrar dentro. Macabeu de la Conca, maceración larga, color profundo. &lt;strong&gt;Un brisat que demuestra que esta técnica tiene historia en toda la provincia, no solo en la Terra Alta.&lt;/strong&gt;"
-         data-ca="El tap de cera taronja ja t'avisa del que trobaràs a dins. Macabeu de la Conca, maceració llarga, color profund. &lt;strong&gt;Un brisat que demostra que aquesta tècnica té història a tota la província, no només a la Terra Alta.&lt;/strong&gt;">
-        El tapón de cera naranja ya te avisa de qué vas a encontrar dentro. Macabeu de la Conca, maceración larga, color profundo. <strong>Un brisat que demuestra que esta técnica tiene historia en toda la provincia, no solo en la Terra Alta.</strong>
-      </p>
+  <!-- FOTO INLINE BRISAT DEL COSTER -->
+  <div class="e-foto-inline-wrap">
+    <div class="e-foto-inline rev">
+      <img src="../assets/img/brisats/brisat-del-coster.jpg" alt="Brisat del Coster 2018 de Josep Foraster — macabeu brisat D.O. Conca de Barberà, Montblanc">
+      <div class="e-foto-inline-text">
+        <span class="e-label t" data-es="Conca de Barberà · Montblanc" data-ca="Conca de Barberà · Montblanc">Conca de Barberà · Montblanc</span>
+        <h3 class="e-title t" data-es="Brisat del Coster" data-ca="Brisat del Coster">Brisat del Coster</h3>
+        <p class="e-p t"
+           data-es="El tapón de cera naranja ya te avisa de qué vas a encontrar dentro. Macabeu de la Conca, maceración larga, color profundo. &lt;strong&gt;Un brisat que demuestra que esta técnica tiene historia en toda la provincia, no solo en la Terra Alta.&lt;/strong&gt;"
+           data-ca="El tap de cera taronja ja t'avisa del que trobaràs a dins. Macabeu de la Conca, maceració llarga, color profund. &lt;strong&gt;Un brisat que demostra que aquesta tècnica té història a tota la província, no només a la Terra Alta.&lt;/strong&gt;">
+          El tapón de cera naranja ya te avisa de qué vas a encontrar dentro. Macabeu de la Conca, maceración larga, color profundo. <strong>Un brisat que demuestra que esta técnica tiene historia en toda la provincia, no solo en la Terra Alta.</strong>
+        </p>
+      </div>
     </div>
+    <span class="e-foto-peu-inline t"
+          data-es="Brisat del Coster 2018 · Josep Foraster · Macabeu · D.O. Conca de Barberà, Montblanc"
+          data-ca="Brisat del Coster 2018 · Josep Foraster · Macabeu · D.O. Conca de Barberà, Montblanc">
+      Brisat del Coster 2018 · Josep Foraster · Macabeu · D.O. Conca de Barberà, Montblanc
+    </span>
   </div>
 
   <!-- CONCLUSIÓ -->
@@ -467,6 +501,63 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
   </section>
 
 </main>
+
+<!-- TAMBIÉN TE PUEDE INTERESAR -->
+<div class="entrada-cos" style="padding-top:0;padding-bottom:0;">
+  <div class="e-tambe">
+    <span class="e-tambe-label t" data-es="También te puede interesar" data-ca="També et pot interessar">También te puede interesar</span>
+    <h2 class="e-tambe-title t"
+        data-es="Más sobre vino y territorio"
+        data-ca="Més sobre vi i territori">Más sobre vino y territorio</h2>
+    <div class="e-tambe-grid">
+
+      <a href="../entrades/vins-ancestrals-metode.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/img-ancestrals/ampolles-tap-corona.jpg"
+               alt="Vins ancestrals i pét-nat de la demarcació de Tarragona"
+               onerror="this.parentElement.style.background='#6b2737'">
+          <span class="e-tambe-card-cat t" data-es="Vinos" data-ca="Vins">Vinos</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <h3 class="e-tambe-card-title t"
+              data-es="El vino que no olvidó de dónde venía"
+              data-ca="El vi que no va oblidar d'on venia">
+            El vino que no olvidó de dónde venía
+          </h3>
+          <p class="e-tambe-card-exc t"
+             data-es="Método ancestral y pét-nat: los elaboradores de la demarcación que hacen las burbujas más honestas de Cataluña."
+             data-ca="Mètode ancestral i pét-nat: els elaboradors de la demarcació que fan les bombolles més honestes de Catalunya.">
+            Método ancestral y pét-nat: los elaboradores de la demarcación que hacen las burbujas más honestas de Cataluña.
+          </p>
+          <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+
+      <a href="../entrades/vino-tarragona.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/vins/paisatge-tarragona.jpg"
+               alt="El vi a la província de Tarragona"
+               onerror="this.parentElement.style.background='#6b2737'">
+          <span class="e-tambe-card-cat t" data-es="Vinos" data-ca="Vins">Vinos</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <h3 class="e-tambe-card-title t"
+              data-es="El vino en la provincia de Tarragona"
+              data-ca="El vi a la província de Tarragona">
+            El vino en la provincia de Tarragona
+          </h3>
+          <p class="e-tambe-card-exc t"
+             data-es="Ocho denominaciones, ocho territorios con voz propia. Historia, suelos y variedades del vino de Tarragona."
+             data-ca="Vuit denominacions, vuit territoris amb veu pròpia. Història, sòls i varietats del vi de Tarragona.">
+            Ocho denominaciones, ocho territorios con voz propia. Historia, suelos y variedades del vino de Tarragona.
+          </p>
+          <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
 
 <!-- COMPARTIR -->
 <div class="e-compartir">
