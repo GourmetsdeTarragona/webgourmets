@@ -165,6 +165,24 @@
   .e-compartir-btns{gap:8px;}
   .e-compartir-btn{padding:10px 16px;font-size:.62rem;}
 }
+
+/* ── TAMBÉ ET POT INTERESSAR ── */
+.e-tambe{margin:64px 0 0;padding-top:48px;border-top:1px solid #e8e2d8;}
+.e-tambe-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-tambe-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);margin-bottom:32px;}
+.e-tambe-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.e-tambe-card{background:#fff;border:1px solid #e8e2d8;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s;}
+.e-tambe-card:hover{box-shadow:0 8px 32px rgba(28,46,62,.12);transform:translateY(-3px);}
+.e-tambe-card-img{height:160px;overflow:hidden;position:relative;}
+.e-tambe-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.e-tambe-card:hover .e-tambe-card-img img{transform:scale(1.04);}
+.e-tambe-card-cat{position:absolute;top:10px;left:10px;font-size:.56rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 9px;color:#fff;background:#1c2e3e;}
+.e-tambe-card-body{padding:18px 20px;flex:1;display:flex;flex-direction:column;}
+.e-tambe-card-title{font-family:var(--font-serif);font-size:1rem;color:var(--navy-dark);line-height:1.3;margin-bottom:8px;font-weight:600;}
+.e-tambe-card-exc{font-size:.82rem;font-weight:300;color:#6b6b6b;line-height:1.65;margin-bottom:14px;flex:1;}
+.e-tambe-card-link{font-size:.62rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy-dark);border-bottom:1px solid var(--gold);padding-bottom:2px;width:fit-content;transition:color .2s;}
+.e-tambe-card-link:hover{color:var(--gold);}
+@media(max-width:680px){.e-tambe-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -426,6 +444,55 @@
   </div>
   <p class="e-nota-final" data-i18n="cronica_nota_final"></p>
 
+
+  <div class="e-tambe">
+    <span class="e-tambe-label t" data-es="También te puede interesar" data-ca="També et pot interessar">También te puede interesar</span>
+    <h2 class="e-tambe-title t"
+        data-es="Más crónicas de restaurante"
+        data-ca="Més cròniques de restaurant">Más crónicas de restaurante</h2>
+    <div class="e-tambe-grid">
+
+      <a href="kema-previa-2026.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/kema/hero-brasa.jpg"
+               alt="Kema · Previa"
+               onerror="this.parentElement.style.background='#1c2e3e'">
+          <span class="e-tambe-card-cat t" data-es="Previa" data-ca="Prèvia">Previa</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <h3 class="e-tambe-card-title t"
+              data-es="Kema · Previa"
+              data-ca="Kema · Prèvia">Kema · Previa</h3>
+          <p class="e-tambe-card-exc t"
+             data-es="La previa de nuestra visita a Kema. Lo que esperábamos encontrar antes de sentarnos a la mesa."
+             data-ca="La prèvia de la nostra visita a Kema. El que esperàvem trobar abans d'asseure'ns a taula.">
+            La previa de nuestra visita a Kema. Lo que esperábamos encontrar antes de sentarnos a la mesa.
+          </p>
+          <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+
+      <a href="la-goleta-cronica-2026.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/goleta/goleta-hero.jpg"
+               alt="La Goleta · Crónica"
+               onerror="this.parentElement.style.background='#1c2e3e'">
+          <span class="e-tambe-card-cat t" data-es="Crónica" data-ca="Crònica">Crónica</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <h3 class="e-tambe-card-title t"
+              data-es="La Goleta · Crónica"
+              data-ca="La Goleta · Crònica">La Goleta · Crónica</h3>
+          <p class="e-tambe-card-exc t"
+             data-es="Crónica de nuestra visita a La Goleta. Cocina de producto frente al mar, en Les Cases d'Alcanar."
+             data-ca="Crònica de la nostra visita a La Goleta. Cuina de producte davant del mar, a les Cases d'Alcanar.">
+            Crónica de nuestra visita a La Goleta. Cocina de producto frente al mar, en Les Cases d'Alcanar.
+          </p>
+          <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+    </div>
+  </div>
 </main>
 
 
