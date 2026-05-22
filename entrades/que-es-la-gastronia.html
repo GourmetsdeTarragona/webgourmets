@@ -230,6 +230,7 @@ function applyTranslations(lang) {
   document.getElementById('html-root')?.setAttribute('lang', lang);
   document.querySelectorAll('.lang-btn').forEach(btn =>
     btn.classList.toggle('active', btn.getAttribute('data-lang') === lang));
+  document.querySelectorAll('[data-es]').forEach(function(el){ var v=el.getAttribute('data-'+lang); if(v!==null)el.innerHTML=v; });
 }
 function setLang(lang) {
   currentLang = lang;
