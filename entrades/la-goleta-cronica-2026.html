@@ -739,6 +739,7 @@ function applyTranslations(lang) {
   document.querySelectorAll('.lang-btn').forEach(function(b) {
     b.classList.toggle('active', b.getAttribute('data-lang') === lang);
   });
+  document.querySelectorAll('[data-es]').forEach(function(el){ var v=el.getAttribute('data-'+lang); if(v!==null)el.innerHTML=v; });
 }
 function setLang(lang) { currentLang = lang; localStorage.setItem('gdt-lang', lang); applyTranslations(lang); }
 applyTranslations(currentLang);
