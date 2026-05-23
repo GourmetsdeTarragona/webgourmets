@@ -107,6 +107,21 @@
 .scroll-hint-line{width:28px;height:1px;background:currentColor;}
 
 /* ════════════════════════════════════════
+   CARRUSEL — FLECHAS + DRAG
+════════════════════════════════════════ */
+.carrusel-wrap{position:relative;}
+.carrusel-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:10;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--border);background:rgba(255,255,255,.95);color:var(--navy-dark);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.3rem;line-height:1;transition:opacity .2s,background .2s,box-shadow .2s;box-shadow:0 2px 10px rgba(0,0,0,.12);padding:0;user-select:none;}
+.carrusel-arrow:hover{background:#fff;border-color:var(--navy);box-shadow:0 4px 16px rgba(0,0,0,.18);}
+.carrusel-arrow.prev{left:-19px;}
+.carrusel-arrow.next{right:-19px;}
+.carrusel-arrow.oculta{opacity:0;pointer-events:none;}
+.sec-dark .carrusel-arrow{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.72);}
+.sec-dark .carrusel-arrow:hover{background:rgba(255,255,255,.18);}
+.carrusel{cursor:grab;}
+.carrusel.dragging{cursor:grabbing;scroll-snap-type:none !important;user-select:none;}
+@media(max-width:680px){.carrusel-arrow{display:none;}}
+
+/* ════════════════════════════════════════
    BLOG CARDS BASE
 ════════════════════════════════════════ */
 .blog-card{background:#fff;border:1px solid var(--border);overflow:hidden;transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;}
@@ -288,6 +303,76 @@ document.addEventListener('DOMContentLoaded', function() {
       el.classList.add('in');
     });
   }
+
+  // ── Carrusel: flechas + drag ──────────────────────────
+  document.querySelectorAll('.carrusel').forEach(function(car) {
+    // Envolver en .carrusel-wrap
+    var wrap = document.createElement('div');
+    wrap.className = 'carrusel-wrap';
+    car.parentNode.insertBefore(wrap, car);
+    wrap.appendChild(car);
+
+    // Botones flecha
+    var btnPrev = document.createElement('button');
+    btnPrev.className = 'carrusel-arrow prev oculta';
+    btnPrev.setAttribute('aria-label', 'Anterior');
+    btnPrev.innerHTML = '&#8249;';
+
+    var btnNext = document.createElement('button');
+    btnNext.className = 'carrusel-arrow next';
+    btnNext.setAttribute('aria-label', 'Siguiente');
+    btnNext.innerHTML = '&#8250;';
+
+    wrap.insertBefore(btnPrev, car);
+    wrap.appendChild(btnNext);
+
+    var paso = 278; // 260px card + 18px gap
+
+    function actualitzarFletxes() {
+      btnPrev.classList.toggle('oculta', car.scrollLeft < 6);
+      btnNext.classList.toggle('oculta', car.scrollLeft + car.clientWidth >= car.scrollWidth - 6);
+    }
+
+    btnPrev.addEventListener('click', function() {
+      car.scrollBy({ left: -paso * 2, behavior: 'smooth' });
+    });
+    btnNext.addEventListener('click', function() {
+      car.scrollBy({ left: paso * 2, behavior: 'smooth' });
+    });
+    car.addEventListener('scroll', actualitzarFletxes);
+    actualitzarFletxes();
+
+    // ── Mouse drag ──
+    var baixat = false, xInici, scrollInici;
+
+    car.addEventListener('mousedown', function(e) {
+      if (e.button !== 0) return;
+      baixat = true;
+      xInici = e.pageX - car.getBoundingClientRect().left;
+      scrollInici = car.scrollLeft;
+      car.classList.add('dragging');
+      car.style.scrollSnapType = 'none';
+    });
+
+    document.addEventListener('mouseup', function() {
+      if (!baixat) return;
+      baixat = false;
+      car.classList.remove('dragging');
+      car.style.scrollSnapType = '';
+    });
+
+    car.addEventListener('mousemove', function(e) {
+      if (!baixat) return;
+      e.preventDefault();
+      var x = e.pageX - car.getBoundingClientRect().left;
+      car.scrollLeft = scrollInici - (x - xInici) * 1.4;
+    });
+
+    // Evitar que el drag active links/cards
+    car.addEventListener('click', function(e) {
+      if (Math.abs(car.scrollLeft - scrollInici) > 5) e.preventDefault();
+    }, true);
+  });
 });
 </script>
 </head>
