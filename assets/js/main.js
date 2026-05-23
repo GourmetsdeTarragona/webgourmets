@@ -84,6 +84,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.08 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+  /* ---- Barra de progrés de lectura (entry pages only) ---- */
+  if (document.querySelector('.entrada-cos')) {
+    var readBar = document.createElement('div');
+    readBar.id = 'read-progress';
+    readBar.style.cssText = 'position:fixed;top:0;left:0;width:0%;height:3px;background:var(--gold,#b8924a);z-index:10000;transition:width .12s linear;pointer-events:none;';
+    document.body.appendChild(readBar);
+    function updateReadProgress() {
+      var cos = document.querySelector('.entrada-cos');
+      if (!cos) return;
+      var cosTop = cos.getBoundingClientRect().top + window.scrollY;
+      var cosBottom = cosTop + cos.offsetHeight;
+      var wh = window.innerHeight;
+      var total = cosBottom - cosTop - wh;
+      var pct = Math.max(0, Math.min(100, ((window.scrollY - cosTop + wh * 0.15) / total) * 100));
+      readBar.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', updateReadProgress, { passive: true });
+    updateReadProgress();
+  }
+
 });
 
 /* ---- Submenús mòbil ---- */
