@@ -24,9 +24,7 @@
 <meta property="og:url" content="https://www.gourmetsdetarragona.com/pages/restaurants.html">
 <meta property="og:title" content="Restaurants · Gourmets de Tarragona — Recorregut 2026">
 <meta property="og:description" content="Vuit restaurants per temporada al Camp de Tarragona. Cròniques de cada visita i històric de temporades anteriors.">
-<meta property="og:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="https://www.gourmetsdetarragona.com/assets/img/hero.jpg">
 <meta property="og:image:alt" content="Restaurants visitats pels Gourmets de Tarragona">
 <meta property="og:site_name" content="Gourmets de Tarragona">
 <meta property="og:locale" content="ca_ES">
@@ -36,7 +34,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Restaurants · Gourmets de Tarragona — Recorregut 2026">
 <meta name="twitter:description" content="Vuit restaurants per temporada al Camp de Tarragona. Cròniques i històric.">
-<meta name="twitter:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
+<meta name="twitter:image" content="https://www.gourmetsdetarragona.com/assets/img/hero.jpg">
 
 <!-- ═══════ STRUCTURED DATA — CollectionPage ═══════ -->
 <script type="application/ld+json">
@@ -138,6 +136,12 @@
   .page-hero-inner{padding:0 5% 44px;}
   .historic-taula td{padding:12px 8px;}
 }
+/* ── CARDS PENDENTS COMPACTES ── */
+.rest-card:has(.rest-card-pending-inner) .rest-card-pending-inner{height:90px;gap:6px;}
+.rest-card:has(.rest-card-pending-inner) .rest-card-pending-inner i{font-size:1.3rem;}
+.rest-card:has(.rest-card-pending-inner) .rest-card-body{padding:10px 16px 12px;}
+.rest-card:has(.rest-card-pending-inner) .rest-card-desc{display:none;}
+.rest-card:has(.rest-card-pending-inner) .rest-card-nom{margin-bottom:0;}
 </style>
 
 <script>
@@ -497,20 +501,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     </div>
 
-    <!-- Graella inferior -->
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:2px;border:1px solid var(--border);border-top:none;">
-      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">2026 &middot; Cambrils</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Kema</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. Pau Casals, 37</span></div>
-      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">2026 &middot; Salou</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">La Goleta</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. de la Gavina, 2</span></div>
-      <div style="padding:16px 20px;border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">2026 &middot; Tarragona</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">El Terrat</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. Pons d&apos;Icart, 19</span></div>
-      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 &middot; Reus</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Buidasacs &#11088;</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. Pintor Bergad&agrave;, 7</span></div>
-      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 &middot; Cambrils</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Cambium &#11088;</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. M.J. Verdaguer, 17</span></div>
-      <div style="padding:16px 20px;border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 &middot; Tarragona</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">&Agrave;nima</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. de l&apos;Abat, 2</span></div>
-      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 &middot; Roda de Bar&agrave;</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Baramar</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Pg. Mar&iacute;tim, 1</span></div>
-      <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 &middot; Tarragona</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Casapepe</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. dels Cavallers, 6</span></div>
-      <div style="padding:16px 20px;border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 &middot; Vilanova d&apos;Escornalbou</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Ca l&apos;Amadeu</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Pl. de la Font, s/n</span></div>
-      <div style="padding:16px 20px;border-right:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 &middot; Salou</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">El Rac&oacute; de Nico</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Via Augusta, 19</span></div>
-      <div style="padding:16px 20px;border-right:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">2025 &middot; Tarragona</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Limboo</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Platja del Miracle</span></div>
-      <div style="padding:16px 20px;"></div>
+    <!-- Graella inferior — agrupada per any -->
+
+    <!-- 2026 -->
+    <div style="margin-top:2px;">
+      <div style="padding:8px 18px;background:var(--navy-dark);border:1px solid var(--navy-dark);">
+        <span class="t" style="font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-top:none;">
+        <div style="padding:16px 20px;border-right:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">Cambrils</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Kema</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. Pau Casals, 37</span></div>
+        <div style="padding:16px 20px;border-right:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">Salou</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">La Goleta</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. de la Gavina, 2</span></div>
+        <div style="padding:16px 20px;border-right:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">Tarragona</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">El Terrat</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. Pons d&apos;Icart, 19</span></div>
+        <div style="padding:16px 20px;"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">Reus</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Cervus</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Raval de Jes&uacute;s, Reus</span></div>
+      </div>
+    </div>
+
+    <!-- 2025 -->
+    <div style="margin-top:8px;">
+      <div style="padding:8px 18px;background:var(--cream);border:1px solid var(--border);">
+        <span class="t" style="font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);" data-es="Temporada 2025" data-ca="Temporada 2025">Temporada 2025</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border);border-top:none;">
+        <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Reus</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Buidasacs &#11088;</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. Pintor Bergad&agrave;, 7</span></div>
+        <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Cambrils</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Cambium &#11088;</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. M.J. Verdaguer, 17</span></div>
+        <div style="padding:16px 20px;border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Tarragona</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">&Agrave;nima</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. de l&apos;Abat, 2</span></div>
+        <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Roda de Bar&agrave;</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Baramar</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Pg. Mar&iacute;tim, 1</span></div>
+        <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Tarragona</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Casapepe</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. dels Cavallers, 6</span></div>
+        <div style="padding:16px 20px;border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Vilanova d&apos;Escornalbou</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Ca l&apos;Amadeu</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Pl. de la Font, s/n</span></div>
+        <div style="padding:16px 20px;border-right:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Salou</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">El Rac&oacute; de Nico</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Via Augusta, 19</span></div>
+        <div style="padding:16px 20px;border-right:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Tarragona</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Limboo</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Platja del Miracle</span></div>
+        <div style="padding:16px 20px;"></div>
+      </div>
     </div>
     <p class="t" style="font-size:.72rem;color:var(--muted);margin-top:14px;font-style:italic;" data-es="&#11088; Premio Gastronia &middot; El mapa se actualiza cada temporada." data-ca="&#11088; Premi Gastronia &middot; El mapa s'actualitza cada temporada.">&#11088; Premio Gastronia &middot; El mapa se actualiza cada temporada.</p>
   </div>
@@ -633,18 +654,17 @@ function gdtImgErr(el){el.style.display='none';if(el.parentNode)el.parentNode.st
   buildTargetes(d);
 
   window.filtraMapa=function(f,btn){
-    if(f==="tots"){
-      document.querySelectorAll(".mapa-filtre").forEach(function(b){b.classList.remove("actiu");});
+    var jaActiu=btn.classList.contains("actiu");
+    document.querySelectorAll(".mapa-filtre").forEach(function(b){b.classList.remove("actiu");});
+    if(!jaActiu){
       btn.classList.add("actiu");
     } else {
-      document.querySelector(".mapa-filtre[data-f='tots']").classList.remove("actiu");
-      btn.classList.toggle("actiu");
+      document.querySelector(".mapa-filtre[data-f='tots']").classList.add("actiu");
+      f="tots";
     }
-    var actius=Array.from(document.querySelectorAll(".mapa-filtre.actiu")).map(function(b){return b.getAttribute("data-f");});
-    var tots=actius.indexOf("tots")>-1||actius.length===0;
     var visibles=[];
     d.forEach(function(r,i){
-      var show=tots||(actius.indexOf("2026")>-1&&r.any==="2026")||(actius.indexOf("2025")>-1&&r.any==="2025")||(actius.indexOf("gastronia")>-1&&r.s);
+      var show=(f==="tots")||(f==="2026"&&r.any==="2026")||(f==="2025"&&r.any==="2025")||(f==="gastronia"&&r.s);
       show?(!map.hasLayer(mk[i])&&map.addLayer(mk[i])):(map.hasLayer(mk[i])&&map.removeLayer(mk[i]));
       if(show) visibles.push(r);
     });
