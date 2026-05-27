@@ -98,36 +98,31 @@
 #mobileMenu.open{display:block;}
 
 /* ════════════════════════════════════════
-   SEASON TIMELINE
+   RECORRIDO — LISTA EDITORIAL
 ════════════════════════════════════════ */
-.season-timeline{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:0 0 28px;scrollbar-width:none;}
-.season-timeline::-webkit-scrollbar{display:none;}
-.stl-track{display:flex;align-items:flex-start;min-width:max-content;padding:28px 2% 0;position:relative;}
-.stl-track::before{content:'';position:absolute;top:45px;left:5%;right:5%;height:1px;background:linear-gradient(90deg,transparent,var(--border) 8%,var(--border) 92%,transparent);z-index:0;}
-.stl-stop{display:flex;flex-direction:column;align-items:center;flex:1;min-width:110px;max-width:148px;position:relative;z-index:1;padding:0 4px;}
-.stl-dot{width:36px;height:36px;border-radius:50%;border:2px solid var(--border);background:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:.75rem;font-weight:700;color:var(--muted);transition:all .3s;margin-bottom:18px;flex-shrink:0;}
-.stl-stop.done .stl-dot{background:var(--gold);border-color:var(--gold);color:#fff;box-shadow:0 2px 14px rgba(184,146,74,.38);}
-.stl-stop.next .stl-dot{background:var(--navy-dark);border-color:var(--navy-dark);color:var(--gold);animation:stl-pulse 2.2s ease-in-out infinite;}
-@keyframes stl-pulse{0%,100%{box-shadow:0 0 0 0 rgba(184,146,74,.45);}60%{box-shadow:0 0 0 9px rgba(184,146,74,.0);}}
-.stl-info{text-align:center;}
-.stl-vis-num{display:block;font-size:.52rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:5px;}
-.stl-name{display:block;font-family:var(--font-serif);font-size:.95rem;color:var(--navy-dark);font-weight:600;margin-bottom:2px;line-height:1.2;}
-.stl-loc{display:block;font-size:.7rem;color:var(--muted);margin-bottom:3px;}
-.stl-data{display:block;font-size:.63rem;font-weight:600;letter-spacing:.3px;color:var(--muted);margin-bottom:9px;}
-.stl-badge{display:inline-block;font-size:.52rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;margin-bottom:10px;}
-.stl-badge-done{background:var(--gold);color:#fff;}
-.stl-badge-next{background:var(--navy-dark);color:var(--gold);}
-.stl-badge-pend{background:transparent;color:var(--muted);border:1px solid var(--border);}
-.stl-links{display:flex;flex-direction:column;gap:5px;align-items:center;}
-.stl-link{font-size:.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy-dark);border-bottom:1px solid var(--gold);padding-bottom:1px;transition:color .2s;text-decoration:none;}
-.stl-link:hover{color:var(--gold);}
-.stl-stop.pend .stl-name{color:rgba(28,46,62,.25);}
-.stl-stop.pend .stl-loc,.stl-stop.pend .stl-data{opacity:.35;}
-.stl-progress-bar{display:flex;align-items:center;gap:14px;margin-bottom:36px;}
-.stl-progress-track{flex:1;height:3px;background:var(--border);border-radius:2px;}
-.stl-progress-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--gold),#d4a96a);}
-.stl-progress-label{font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
-@media(max-width:680px){.stl-stop{min-width:80px;}.stl-name{font-size:.82rem;}.stl-dot{width:30px;height:30px;font-size:.65rem;}}
+.rec-progress{display:flex;align-items:center;gap:14px;margin-bottom:32px;}
+.rec-progress-track{flex:1;height:2px;background:var(--border);}
+.rec-progress-fill{height:100%;background:var(--gold);}
+.rec-progress-label{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
+.rec-list{width:100%;border-collapse:collapse;}
+.rec-row{display:grid;grid-template-columns:32px 1fr 90px 90px auto auto;align-items:center;gap:0 20px;padding:14px 0;border-bottom:1px solid var(--border);transition:background .2s;}
+.rec-row:last-child{border-bottom:none;}
+.rec-row.done:hover{background:rgba(184,146,74,.04);}
+.rec-row.pend{opacity:.35;pointer-events:none;}
+.rec-num{font-family:var(--font-serif);font-size:1rem;color:var(--muted);font-weight:600;line-height:1;}
+.rec-name{font-family:var(--font-serif);font-size:1rem;color:var(--navy-dark);font-weight:600;}
+.rec-row.next .rec-name{color:var(--navy-dark);}
+.rec-city{font-size:.72rem;color:var(--muted);}
+.rec-date{font-size:.72rem;color:var(--muted);}
+.rec-badge{display:inline-block;font-size:.52rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;white-space:nowrap;}
+.rec-badge-done{background:var(--gold);color:#fff;}
+.rec-badge-next{background:var(--navy-dark);color:var(--gold);}
+.rec-badge-pend{border:1px solid var(--border);color:var(--muted);}
+.rec-links{display:flex;gap:10px;justify-content:flex-end;}
+.rec-link{font-size:.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy-dark);border-bottom:1px solid var(--gold);padding-bottom:1px;text-decoration:none;white-space:nowrap;transition:color .2s;}
+.rec-link:hover{color:var(--gold);}
+@media(max-width:860px){.rec-row{grid-template-columns:28px 1fr 80px auto auto;}.rec-date{display:none;}}
+@media(max-width:680px){.rec-row{grid-template-columns:24px 1fr auto auto;gap:0 12px;padding:12px 0;}.rec-city{display:none;}.rec-num{font-size:.85rem;}.rec-name{font-size:.9rem;}}
 
 /* ════════════════════════════════════════
    MANIFIESTO
@@ -274,97 +269,99 @@
       <p class="sec-desc t" data-es="Ocho restaurantes, una temporada, un territorio. Evaluamos con criterio y compartimos con honestidad." data-ca="Vuit restaurants, una temporada, un territori. Avaluem amb criteri i compartim amb honestedat.">Ocho restaurantes, una temporada, un territorio. Evaluamos con criterio y compartimos con honestidad.</p>
     </div>
     <!-- Barra progrés temporada -->
-    <div class="stl-progress-bar">
-      <div class="stl-progress-track"><div class="stl-progress-fill" style="width:37.5%;"></div></div>
-      <span class="stl-progress-label t" data-es="3 de 8 visitas" data-ca="3 de 8 visites">3 de 8 visitas</span>
+    <div class="rec-progress">
+      <div class="rec-progress-track"><div class="rec-progress-fill" style="width:37.5%;"></div></div>
+      <span class="rec-progress-label t" data-es="3 de 8 visitas" data-ca="3 de 8 visites">3 de 8 visitas</span>
     </div>
 
-    <!-- Timeline -->
-    <div class="season-timeline">
-      <div class="stl-track">
+    <!-- Lista editorial -->
+    <div role="list">
 
-        <!-- 01 Kema -->
-        <div class="stl-stop done">
-          <div class="stl-dot">01</div>
-          <div class="stl-info">
-            <span class="stl-vis-num t" data-es="1ª VISITA" data-ca="1a VISITA">1ª VISITA</span>
-            <span class="stl-name">Kema</span>
-            <span class="stl-loc">Cambrils</span>
-            <span class="stl-data t" data-es="Marzo 2026" data-ca="Març 2026">Marzo 2026</span>
-            <span class="stl-badge stl-badge-done t" data-es="Visitado" data-ca="Visitat">Visitado</span>
-            <div class="stl-links">
-              <a href="entrades/kema-previa-2026.html" class="stl-link t" data-es="Previa →" data-ca="Prèvia →">Previa →</a>
-              <a href="entrades/kema-cronica-2026.html" class="stl-link t" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
-            </div>
-          </div>
+      <!-- 01 Kema -->
+      <div class="rec-row done" role="listitem">
+        <span class="rec-num">01</span>
+        <span class="rec-name">Kema</span>
+        <span class="rec-city">Cambrils</span>
+        <span class="rec-date t" data-es="Marzo 2026" data-ca="Març 2026">Marzo 2026</span>
+        <span class="rec-badge rec-badge-done t" data-es="Visitado" data-ca="Visitat">Visitado</span>
+        <div class="rec-links">
+          <a href="entrades/kema-previa-2026.html" class="rec-link t" data-es="Previa" data-ca="Prèvia">Previa</a>
+          <a href="entrades/kema-cronica-2026.html" class="rec-link t" data-es="Crónica" data-ca="Crònica">Crónica</a>
         </div>
-
-        <!-- 02 La Goleta -->
-        <div class="stl-stop done">
-          <div class="stl-dot">02</div>
-          <div class="stl-info">
-            <span class="stl-vis-num t" data-es="2ª VISITA" data-ca="2a VISITA">2ª VISITA</span>
-            <span class="stl-name">La Goleta</span>
-            <span class="stl-loc">Salou</span>
-            <span class="stl-data t" data-es="Abril 2026" data-ca="Abril 2026">Abril 2026</span>
-            <span class="stl-badge stl-badge-done t" data-es="Visitado" data-ca="Visitat">Visitado</span>
-            <div class="stl-links">
-              <a href="entrades/la-goleta-previa-2026.html" class="stl-link t" data-es="Previa →" data-ca="Prèvia →">Previa →</a>
-              <a href="entrades/la-goleta-cronica-2026.html" class="stl-link t" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 03 El Terrat -->
-        <div class="stl-stop done">
-          <div class="stl-dot">03</div>
-          <div class="stl-info">
-            <span class="stl-vis-num t" data-es="3ª VISITA" data-ca="3a VISITA">3ª VISITA</span>
-            <span class="stl-name">El Terrat</span>
-            <span class="stl-loc">Tarragona</span>
-            <span class="stl-data t" data-es="7 Mayo 2026" data-ca="7 Maig 2026">7 Mayo 2026</span>
-            <span class="stl-badge stl-badge-done t" data-es="Visitado" data-ca="Visitat">Visitado</span>
-            <div class="stl-links">
-              <a href="entrades/terrat-previa-2026.html" class="stl-link t" data-es="Previa →" data-ca="Prèvia →">Previa →</a>
-              <a href="entrades/terrat-cronica-2026.html" class="stl-link t" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 04 Cervus — Próxima -->
-        <div class="stl-stop next">
-          <div class="stl-dot">04</div>
-          <div class="stl-info">
-            <span class="stl-vis-num t" data-es="4ª VISITA" data-ca="4a VISITA">4ª VISITA</span>
-            <span class="stl-name">Cervus</span>
-            <span class="stl-loc">Reus</span>
-            <span class="stl-data t" data-es="10–11 Jun 2026" data-ca="10–11 Juny 2026">10–11 Jun 2026</span>
-            <span class="stl-badge stl-badge-next t" data-es="Próxima" data-ca="Propera">Próxima</span>
-            <div class="stl-links">
-              <a href="entrades/cervus-previa-2026.html" class="stl-link t" data-es="Previa →" data-ca="Prèvia →">Previa →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 05–08 Pendents -->
-        <div class="stl-stop pend">
-          <div class="stl-dot">05</div>
-          <div class="stl-info"><span class="stl-vis-num t" data-es="5ª VISITA" data-ca="5a VISITA">5ª VISITA</span><span class="stl-name t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span><span class="stl-data">2026</span><span class="stl-badge stl-badge-pend t" data-es="Pendiente" data-ca="Pendent">Pendiente</span></div>
-        </div>
-        <div class="stl-stop pend">
-          <div class="stl-dot">06</div>
-          <div class="stl-info"><span class="stl-vis-num t" data-es="6ª VISITA" data-ca="6a VISITA">6ª VISITA</span><span class="stl-name t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span><span class="stl-data">2026</span><span class="stl-badge stl-badge-pend t" data-es="Pendiente" data-ca="Pendent">Pendiente</span></div>
-        </div>
-        <div class="stl-stop pend">
-          <div class="stl-dot">07</div>
-          <div class="stl-info"><span class="stl-vis-num t" data-es="7ª VISITA" data-ca="7a VISITA">7ª VISITA</span><span class="stl-name t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span><span class="stl-data">2026</span><span class="stl-badge stl-badge-pend t" data-es="Pendiente" data-ca="Pendent">Pendiente</span></div>
-        </div>
-        <div class="stl-stop pend">
-          <div class="stl-dot">08</div>
-          <div class="stl-info"><span class="stl-vis-num t" data-es="8ª VISITA" data-ca="8a VISITA">8ª VISITA</span><span class="stl-name t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span><span class="stl-data">2026</span><span class="stl-badge stl-badge-pend t" data-es="Pendiente" data-ca="Pendent">Pendiente</span></div>
-        </div>
-
       </div>
+
+      <!-- 02 La Goleta -->
+      <div class="rec-row done" role="listitem">
+        <span class="rec-num">02</span>
+        <span class="rec-name">La Goleta</span>
+        <span class="rec-city">Salou</span>
+        <span class="rec-date t" data-es="Abril 2026" data-ca="Abril 2026">Abril 2026</span>
+        <span class="rec-badge rec-badge-done t" data-es="Visitado" data-ca="Visitat">Visitado</span>
+        <div class="rec-links">
+          <a href="entrades/la-goleta-previa-2026.html" class="rec-link t" data-es="Previa" data-ca="Prèvia">Previa</a>
+          <a href="entrades/la-goleta-cronica-2026.html" class="rec-link t" data-es="Crónica" data-ca="Crònica">Crónica</a>
+        </div>
+      </div>
+
+      <!-- 03 El Terrat -->
+      <div class="rec-row done" role="listitem">
+        <span class="rec-num">03</span>
+        <span class="rec-name">El Terrat</span>
+        <span class="rec-city">Tarragona</span>
+        <span class="rec-date t" data-es="7 Mayo 2026" data-ca="7 Maig 2026">7 Mayo 2026</span>
+        <span class="rec-badge rec-badge-done t" data-es="Visitado" data-ca="Visitat">Visitado</span>
+        <div class="rec-links">
+          <a href="entrades/terrat-previa-2026.html" class="rec-link t" data-es="Previa" data-ca="Prèvia">Previa</a>
+          <a href="entrades/terrat-cronica-2026.html" class="rec-link t" data-es="Crónica" data-ca="Crònica">Crónica</a>
+        </div>
+      </div>
+
+      <!-- 04 Cervus — Próxima -->
+      <div class="rec-row next" role="listitem">
+        <span class="rec-num">04</span>
+        <span class="rec-name">Cervus</span>
+        <span class="rec-city">Reus</span>
+        <span class="rec-date t" data-es="10–11 Jun 2026" data-ca="10–11 Juny 2026">10–11 Jun 2026</span>
+        <span class="rec-badge rec-badge-next t" data-es="Próxima" data-ca="Propera">Próxima</span>
+        <div class="rec-links">
+          <a href="entrades/cervus-previa-2026.html" class="rec-link t" data-es="Previa" data-ca="Prèvia">Previa</a>
+        </div>
+      </div>
+
+      <!-- 05–08 Pendents -->
+      <div class="rec-row pend" role="listitem">
+        <span class="rec-num">05</span>
+        <span class="rec-name t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span>
+        <span class="rec-city">—</span>
+        <span class="rec-date">2026</span>
+        <span class="rec-badge rec-badge-pend t" data-es="Pendiente" data-ca="Pendent">Pendiente</span>
+        <div class="rec-links"></div>
+      </div>
+      <div class="rec-row pend" role="listitem">
+        <span class="rec-num">06</span>
+        <span class="rec-name t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span>
+        <span class="rec-city">—</span>
+        <span class="rec-date">2026</span>
+        <span class="rec-badge rec-badge-pend t" data-es="Pendiente" data-ca="Pendent">Pendiente</span>
+        <div class="rec-links"></div>
+      </div>
+      <div class="rec-row pend" role="listitem">
+        <span class="rec-num">07</span>
+        <span class="rec-name t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span>
+        <span class="rec-city">—</span>
+        <span class="rec-date">2026</span>
+        <span class="rec-badge rec-badge-pend t" data-es="Pendiente" data-ca="Pendent">Pendiente</span>
+        <div class="rec-links"></div>
+      </div>
+      <div class="rec-row pend" role="listitem">
+        <span class="rec-num">08</span>
+        <span class="rec-name t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span>
+        <span class="rec-city">—</span>
+        <span class="rec-date">2026</span>
+        <span class="rec-badge rec-badge-pend t" data-es="Pendiente" data-ca="Pendent">Pendiente</span>
+        <div class="rec-links"></div>
+      </div>
+
     </div>
 
     <div style="text-align:center;margin-top:36px;">
