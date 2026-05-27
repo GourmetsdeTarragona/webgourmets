@@ -240,6 +240,25 @@
   .cur-thumb{height:90px;}
   .cur-body-title{font-size:1rem;}
   .noticies-grid{grid-template-columns:1fr;}
+
+  /* Estabilitat cards en mòbil: desactivar reveal i hover transforms */
+  .carrusel .reveal,
+  .carrusel .reveal-sec {
+    opacity:1 !important;
+    transform:none !important;
+    transition:none !important;
+  }
+  .blog-card:hover,
+  .blog-card-vin:hover,
+  .card-proxima:hover {
+    transform:none;
+    box-shadow:none;
+  }
+  .blog-card:hover .blog-card-img img,
+  .cur-item:hover .cur-thumb img,
+  .featured-wrap:hover .featured-img-bg img {
+    transform:none;
+  }
 }
 </style>
 
