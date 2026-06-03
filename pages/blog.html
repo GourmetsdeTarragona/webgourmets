@@ -23,9 +23,7 @@
 <meta property="og:url" content="https://www.gourmetsdetarragona.com/pages/blog.html">
 <meta property="og:title" content="Blog Gourmet · Gourmets de Tarragona">
 <meta property="og:description" content="Prèvies, cròniques, notícies i vins del Camp de Tarragona. Tot el que envolta la taula dels Gourmets.">
-<meta property="og:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="https://www.gourmetsdetarragona.com/assets/img/hero.jpg">
 <meta property="og:image:alt" content="Blog Gourmet · Gourmets de Tarragona">
 <meta property="og:site_name" content="Gourmets de Tarragona">
 <meta property="og:locale" content="ca_ES">
@@ -35,9 +33,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Blog Gourmet · Gourmets de Tarragona">
 <meta name="twitter:description" content="Prèvies, cròniques, notícies i vins del Camp de Tarragona.">
-<meta name="twitter:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
+<meta name="twitter:image" content="https://www.gourmetsdetarragona.com/assets/img/hero.jpg">
 
-<!-- ═══════ STRUCTURED DATA — Blog ═══════ -->
+<!-- ═══════ STRUCTURED DATA ═══════ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -59,7 +57,9 @@
 <link rel="stylesheet" href="../assets/css/variables.css">
 <link rel="stylesheet" href="../assets/css/nav.css">
 <link rel="stylesheet" href="../assets/css/seccions.css">
+
 <style>
+/* ── HERO ── */
 .blog-hero{position:relative;min-height:52vh;display:flex;align-items:flex-end;overflow:hidden;padding:0;background:#0b1626;}
 .blog-hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80');background-size:cover;background-position:center 40%;opacity:.65;filter:brightness(1.08) contrast(1.05);transform:scale(1.02);transition:transform 8s ease;}
 .blog-hero:hover .blog-hero-bg{transform:scale(1);}
@@ -68,6 +68,8 @@
 .blog-hero .slabel{color:var(--gold);justify-content:center;display:flex;margin-bottom:12px;}
 .blog-hero-title{font-family:var(--font-serif);font-size:clamp(2.2rem,4vw,3.2rem);color:#fff;margin-bottom:14px;font-weight:700;}
 .blog-hero-desc{font-size:.95rem;color:rgba(255,255,255,.65);font-weight:300;line-height:1.8;}
+
+/* ── FILTRES ── */
 .blog-filtres{position:sticky;top:72px;z-index:100;background:rgba(245,242,237,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 4%;}
 .blog-filtres-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:0 6px;justify-content:center;scrollbar-width:none;}
 .blog-filtres-inner::-webkit-scrollbar{display:none;}
@@ -76,6 +78,8 @@
 .filtre-btn.actiu{color:var(--navy-dark);border-bottom-color:var(--gold);}
 .filtre-btn .filtre-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
 .filtre-btn .filtre-n{font-size:.6rem;background:rgba(28,46,62,.08);padding:2px 7px;border-radius:20px;color:var(--navy-dark);font-weight:700;letter-spacing:0;flex-shrink:0;}
+
+/* ── DESTACAT ── */
 .blog-destacat{max-width:1100px;margin:52px auto 0;padding:0 4%;}
 .destacat-card{display:grid;grid-template-columns:1.1fr 1fr;background:#fff;border:1px solid var(--border);overflow:hidden;transition:box-shadow .3s;}
 .destacat-card:hover{box-shadow:var(--shadow-md);}
@@ -91,36 +95,72 @@
 .destacat-link{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--navy-dark);border-bottom:2px solid var(--gold);padding-bottom:3px;transition:color .2s;width:fit-content;}
 .destacat-link:hover{color:var(--gold);}
 .destacat-badge{font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;margin-right:4px;}
-.blog-grid-wrap{max-width:1100px;margin:48px auto 80px;padding:0 4%;}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+
+/* ── CARRUSEL SECTIONS ── */
+.car-sec{padding:64px 0 44px;border-bottom:1px solid var(--border);}
+.car-sec:last-of-type{border-bottom:none;padding-bottom:80px;}
+.car-head{max-width:1100px;margin:0 auto;padding:0 4% 24px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;}
+.car-head-left .slabel{justify-content:flex-start;display:flex;}
+.car-head-left .stitle{font-size:clamp(1.3rem,2vw,1.8rem);margin-top:6px;}
+.car-nav{display:flex;gap:8px;flex-shrink:0;}
+.car-btn{width:38px;height:38px;border:1px solid var(--border);background:#fff;cursor:pointer;font-size:1.3rem;color:var(--navy-dark);transition:.2s;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;}
+.car-btn:hover{border-color:var(--gold);color:var(--gold);}
+.carrusel{display:flex;gap:22px;overflow-x:auto;padding:0 4% 28px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab;align-items:stretch;}
+.carrusel::-webkit-scrollbar{display:none;}
+.carrusel.dragging{cursor:grabbing;user-select:none;}
+.carrusel .blog-card{flex-shrink:0;width:300px;scroll-snap-align:start;}
+.carrusel .blog-card-proxima{flex-shrink:0;width:240px;scroll-snap-align:start;}
+
+/* ── BLOG CARDS ── */
 .blog-card{background:#fff;border:1px solid var(--border);overflow:hidden;transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;}
 .blog-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
-.blog-card-img{height:200px;overflow:hidden;position:relative;}
+.blog-card-img{height:190px;overflow:hidden;position:relative;flex-shrink:0;}
 .blog-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
 .blog-card:hover .blog-card-img img{transform:scale(1.05);}
 .blog-card-cat{position:absolute;top:12px;left:12px;font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 10px;color:#fff;}
 .blog-card-body{padding:22px;flex:1;display:flex;flex-direction:column;}
 .blog-card-meta{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
 .blog-card-data{font-size:.68rem;color:var(--muted);letter-spacing:.5px;}
-.blog-card-title{font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);line-height:1.3;margin-bottom:10px;font-weight:600;}
-.blog-card-exc{font-size:.85rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:16px;flex:1;}
+.blog-card-title{font-family:var(--font-serif);font-size:1.1rem;color:var(--navy-dark);line-height:1.3;margin-bottom:10px;font-weight:600;}
+.blog-card-exc{font-size:.84rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:16px;flex:1;}
 .blog-card-link{font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy-dark);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;width:fit-content;margin-top:auto;}
 .blog-card-link:hover{color:var(--gold);}
-.blog-card-proxima{background:var(--navy-dark);border:none;justify-content:center;align-items:center;text-align:center;padding:36px 28px;min-height:320px;}
+
+/* ── PROPERA VISITA CARD ── */
+.blog-card-proxima{background:var(--navy-dark);border:none;justify-content:center;align-items:center;text-align:center;padding:32px 24px;min-height:300px;}
 .blog-card-proxima:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
-.proxima-ico{font-size:2rem;margin-bottom:16px;opacity:.3;}
-.proxima-label{font-size:.62rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(184,146,74,.8);margin-bottom:10px;}
-.proxima-rest{font-family:var(--font-serif);font-size:1.4rem;color:#fff;margin-bottom:6px;}
-.proxima-data{font-size:.82rem;color:rgba(255,255,255,.45);margin-bottom:20px;}
+.proxima-ico{font-size:1.8rem;margin-bottom:14px;opacity:.3;}
+.proxima-label{font-size:.6rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(184,146,74,.8);margin-bottom:8px;}
+.proxima-rest{font-family:var(--font-serif);font-size:1.2rem;color:#fff;margin-bottom:6px;}
+.proxima-data{font-size:.78rem;color:rgba(255,255,255,.4);}
+
+/* ── CATEGORIES ── */
 .cat-previa{background:var(--navy);}
 .cat-cronica{background:var(--gold);}
 .cat-noticia{background:#555;}
 .cat-vi{background:#6b2737;}
 .cat-event{background:#2a7a4b;}
-.cat-curiositats{background:#8b5e3c;color:#fff;}
-.cat-cultura{background:#5c6e3f;color:#fff;}
-@media(max-width:1024px){.destacat-card{grid-template-columns:1fr;}.destacat-img{min-height:280px;}.blog-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:680px){.blog-hero-inner{padding:0 5% 44px;}.destacat-body{padding:32px 24px;}.blog-grid{grid-template-columns:1fr;}.blog-filtres{top:60px;}}
+.cat-curiositats{background:#8b5e3c;}
+.cat-cultura{background:#5c6e3f;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .destacat-card{grid-template-columns:1fr;}
+  .destacat-img{min-height:280px;}
+  .carrusel .blog-card{width:270px;}
+}
+@media(max-width:680px){
+  .blog-hero-inner{padding:0 5% 44px;}
+  .destacat-body{padding:32px 24px;}
+  .blog-filtres{top:60px;}
+  .car-sec{padding:44px 0 32px;}
+  .carrusel .blog-card{width:240px;}
+  .car-btn{width:34px;height:34px;font-size:1.1rem;}
+  /* Estabilitat mòbil: desactivar reveal i hover dins carrusel */
+  .carrusel .reveal,.carrusel .reveal-sec{opacity:1!important;transform:none!important;transition:none!important;}
+  .blog-card:hover,.blog-card-proxima:hover{transform:none!important;box-shadow:none!important;}
+  .blog-card:hover .blog-card-img img{transform:none!important;}
+}
 </style>
 
 <script>
@@ -139,24 +179,40 @@ function setLang(lang) {
   var localeInput = document.getElementById('nl-locale');
   if (localeInput) localeInput.value = lang;
 }
+
 var currentCat = 'tots';
 function filterEntrades(cat) {
   currentCat = cat;
   document.querySelectorAll('.filtre-btn').forEach(function(btn) {
     btn.classList.toggle('actiu', btn.dataset.cat === cat);
   });
+
+  /* Filtrar cards */
   document.querySelectorAll('.blog-card[data-cat]').forEach(function(card) {
-    card.style.display = (cat === 'tots' || card.dataset.cat === cat) ? 'flex' : 'none';
+    var show = cat === 'tots' || card.dataset.cat === cat;
+    card.style.display = show ? '' : 'none';
   });
-  var dest = document.querySelector('.destacat-card');
-  if (dest) {
-    var show = cat === 'tots' || dest.dataset.cat === cat;
-    dest.closest('.blog-destacat').style.display = show ? 'block' : 'none';
+
+  /* Destacat */
+  var destWrap = document.querySelector('.blog-destacat');
+  if (destWrap) {
+    var dest = destWrap.querySelector('.destacat-card');
+    destWrap.style.display = (!dest || cat === 'tots' || dest.dataset.cat === cat) ? 'block' : 'none';
   }
-  // Scroll back to the filter bar so filtered content is visible from the start
-  var filtresEl = document.querySelector('.blog-filtres');
-  if (filtresEl) window.scrollTo({ top: filtresEl.offsetTop, behavior: 'smooth' });
+
+  /* Mostrar/amagar seccions si no tenen cards visibles */
+  document.querySelectorAll('.car-sec').forEach(function(sec) {
+    var hasVisible = Array.from(sec.querySelectorAll('.blog-card[data-cat]')).some(function(c) {
+      return c.style.display !== 'none';
+    });
+    sec.style.display = hasVisible ? '' : 'none';
+  });
+
+  /* Scroll suau al principi del contingut */
+  var f = document.querySelector('.blog-filtres');
+  if (f) window.scrollTo({top: f.offsetTop - 10, behavior: 'smooth'});
 }
+
 document.addEventListener('DOMContentLoaded', function() {
   if (currentLang === 'ca') setLang('ca');
 });
@@ -239,6 +295,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </nav>
 
+<!-- HERO -->
 <div class="blog-hero">
   <div class="blog-hero-bg"></div>
   <div class="blog-hero-grad"></div>
@@ -249,12 +306,12 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- FILTRES — Tots:21 · Previes:4 · Cròniques:3 · Notícies:2 · Cultura:1 · Vins:5 · Events:1 · Curiositats:7 -->
+<!-- FILTRES — Tots:23 · Previes:4 · Cròniques:3 · Notícies:2 · Cultura:1 · Vins:5 · Events:1 · Curiositats:7 -->
 <div class="blog-filtres">
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span class="t" data-es="Todos" data-ca="Tots">Todos</span>
-      <span class="filtre-n">21</span>
+      <span class="filtre-n">23</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot" style="background:var(--navy);"></span>
@@ -313,14 +370,25 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- GRID -->
-<div class="blog-grid-wrap">
-  <div class="blog-grid">
+<!-- ═══ SECCIÓ 1: RECORREGUT GOURMET 2026 ═══ -->
+<section class="car-sec reveal" id="sec-visites">
+  <div class="car-head">
+    <div class="car-head-left">
+      <p class="slabel t" data-es="Recorrido Gourmet" data-ca="Recorregut Gourmet">Recorrido Gourmet</p>
+      <h2 class="stitle t" data-es="Visitas 2026" data-ca="Visites 2026">Visitas 2026</h2>
+      <div class="sdiv"></div>
+    </div>
+    <div class="car-nav">
+      <button class="car-btn" onclick="scrollCar('car-visites',-1)" aria-label="Anterior">&#8249;</button>
+      <button class="car-btn" onclick="scrollCar('car-visites',1)" aria-label="Siguiente">&#8250;</button>
+    </div>
+  </div>
+  <div class="carrusel" id="car-visites">
 
     <!-- Cervus Prèvia -->
     <article class="blog-card" data-cat="previa">
       <div class="blog-card-img">
-        <img src="../assets/img/cervus/hero.jpg" alt="Cervus · Reus · Nil Bono i Lucía Fernández" onerror="this.parentElement.style.background='var(--cream)'">
+        <img src="../assets/img/cervus/hero.jpg" alt="Cervus · Reus" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-previa t" data-es="Previa" data-ca="Prèvia">Previa</span>
       </div>
       <div class="blog-card-body">
@@ -333,7 +401,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <p class="blog-card-exc t"
            data-es="Dos cocineros, una decisión de vida y un Sol Repsol en catorce meses. Nil Bono y Lucía Fernández en el Raval de Jesús de Reus."
            data-ca="Dos cuiners, una decisió de vida i un Sol Repsol en catorze mesos. Nil Bono i Lucía Fernández al Raval de Jesús de Reus.">
-          Dos cocineros, una decisión de vida y un Sol Repsol en catorce meses. Nil Bono y Lucía Fernández en el Raval de Jesús de Reus.
+          Dos cocineros, una decisión de vida y un Sol Repsol en catorce meses.
         </p>
         <a href="../entrades/cervus-previa-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
@@ -342,7 +410,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- El Terrat Crònica -->
     <article class="blog-card" data-cat="cronica">
       <div class="blog-card-img">
-        <img src="../assets/img/terrat/cronica/romesco-01.jpg" alt="El Terrat · Crònica · Romesco de gamba vermella" onerror="this.parentElement.style.background='var(--cream)'">
+        <img src="../assets/img/terrat/cronica/romesco-01.jpg" alt="El Terrat · Crònica" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-cronica t" data-es="Crónica" data-ca="Crònica">Crónica</span>
       </div>
       <div class="blog-card-body">
@@ -353,9 +421,9 @@ document.addEventListener('DOMContentLoaded', function() {
           El Terrat · Tarragona<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica de la 3ª visita</small>
         </h3>
         <p class="blog-card-exc t"
-           data-es="Agua de rosas, briwat en dos pasos, romesco de gamba y tajine de cordero. Moha Quach, los vinos de Josep Foraster y una noche sin ninguna grieta."
-           data-ca="Aigua de roses, briwat en dos passes, romesco de gamba i tajine de xai. Moha Quach, els vins de Josep Foraster i una nit sense cap grieta.">
-          Agua de rosas, briwat en dos pasos, romesco de gamba y tajine de cordero. Moha Quach, los vinos de Josep Foraster y una noche sin ninguna grieta.
+           data-es="Agua de rosas, briwat en dos pasos, romesco de gamba y tajine de cordero. Una noche sin ninguna grieta."
+           data-ca="Aigua de roses, briwat en dos passes, romesco de gamba i tajine de xai. Una nit sense cap grieta.">
+          Agua de rosas, briwat en dos pasos, romesco de gamba y tajine de cordero.
         </p>
         <a href="../entrades/terrat-cronica-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
@@ -375,55 +443,11 @@ document.addEventListener('DOMContentLoaded', function() {
           El Terrat · Tarragona<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa · 3ª visita 2026</small>
         </h3>
         <p class="blog-card-exc t"
-           data-es="Moha Quach, Sol Repsol, Guía Michelin y Premio Revelación Nacional 2025. El chef del momento en Tarragona y las quinielas para la primera estrella Michelin de la ciudad."
-           data-ca="Moha Quach, Sol Repsol, Guia Michelin i Premi Revelació Nacional 2025. El xef del moment a Tarragona i les quinieles per a la primera estrella Michelin de la ciutat.">
-          Moha Quach, Sol Repsol, Guía Michelin y Premio Revelación Nacional 2025. El chef del momento en Tarragona y las quinielas para la primera estrella Michelin de la ciudad.
+           data-es="Moha Quach, Sol Repsol, Guía Michelin y Premio Revelación Nacional 2025. Las quinielas para la primera estrella Michelin de Tarragona."
+           data-ca="Moha Quach, Sol Repsol, Guia Michelin i Premi Revelació Nacional 2025. Les quinieles per a la primera estrella Michelin de Tarragona.">
+          Moha Quach, Sol Repsol, Guía Michelin y Premio Revelación Nacional 2025.
         </p>
         <a href="../entrades/terrat-previa-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
-      </div>
-    </article>
-
-    <!-- Kema Crònica -->
-    <article class="blog-card" data-cat="cronica">
-      <div class="blog-card-img">
-        <img src="../assets/img/kema/hero.jpg" alt="Kema · Cambrils">
-        <span class="blog-card-cat cat-cronica t" data-es="Crónica" data-ca="Crònica">Crónica</span>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Marzo 2026" data-ca="Març 2026">Marzo 2026</span></div>
-        <h3 class="blog-card-title t"
-            data-es='Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica de la 1ª visita</small>'
-            data-ca='Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crònica de la 1a visita</small>'>
-          Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica de la 1ª visita</small>
-        </h3>
-        <p class="blog-card-exc t"
-           data-es="Brasa, producto de calidad y coctelería diferencial. Crónica completa de la primera visita de la temporada 2026."
-           data-ca="Brasa, producte de qualitat i cocteleria diferencial. Crònica completa de la primera visita de la temporada 2026.">
-          Brasa, producto de calidad y coctelería diferencial. Crónica completa de la primera visita de la temporada 2026.
-        </p>
-        <a href="../entrades/kema-cronica-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
-      </div>
-    </article>
-
-    <!-- Kema Prèvia -->
-    <article class="blog-card" data-cat="previa">
-      <div class="blog-card-img">
-        <img src="../assets/img/kema/brasa-carn.jpg" alt="Kema · Prèvia">
-        <span class="blog-card-cat cat-previa t" data-es="Previa" data-ca="Prèvia">Previa</span>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Febrero 2026" data-ca="Febrer 2026">Febrero 2026</span></div>
-        <h3 class="blog-card-title t"
-            data-es='Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa de la 1ª visita</small>'
-            data-ca='Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Prèvia de la 1a visita</small>'>
-          Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa de la 1ª visita</small>
-        </h3>
-        <p class="blog-card-exc t"
-           data-es="Una propuesta 360° donde el fuego manda. Todo lo que había que saber antes de la primera visita de la temporada."
-           data-ca="Una proposta 360° on el foc mana. Tot el que calia saber abans de la primera visita de la temporada.">
-          Una propuesta 360° donde el fuego manda. Todo lo que había que saber antes de la primera visita de la temporada.
-        </p>
-        <a href="../entrades/kema-previa-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
@@ -441,9 +465,9 @@ document.addEventListener('DOMContentLoaded', function() {
           La Goleta · Salou<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica del 40 aniversario</small>
         </h3>
         <p class="blog-card-exc t"
-           data-es="Cuarenta años frente a la Platja dels Capellans. Cocina mediterránea de producto, servicio clásico y la constatación de que no siempre es necesario cambiar lo que funciona."
-           data-ca="Quaranta anys davant la Platja dels Capellans. Cuina mediterrània de producte, servei clàssic i la constatació que no sempre cal canviar el que funciona.">
-          Cuarenta años frente a la Platja dels Capellans. Cocina mediterránea de producto, servicio clásico y la constatación de que no siempre es necesario cambiar lo que funciona.
+           data-es="Cuarenta años frente a la Platja dels Capellans. La constatación de que no siempre es necesario cambiar lo que funciona."
+           data-ca="Quaranta anys davant la Platja dels Capellans. La constatació que no sempre cal canviar el que funciona.">
+          Cuarenta años frente a la Platja dels Capellans.
         </p>
         <a href="../entrades/la-goleta-cronica-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
@@ -465,16 +489,86 @@ document.addEventListener('DOMContentLoaded', function() {
         <p class="blog-card-exc t"
            data-es="Cuarenta años frente a la Platja dels Capellans. Todo lo que había que saber antes de la 2ª visita del Recorrido Gourmet 2026."
            data-ca="Quaranta anys davant la Platja dels Capellans. Tot el que calia saber abans de la 2a visita del Recorregut Gourmet 2026.">
-          Cuarenta años frente a la Platja dels Capellans. Todo lo que había que saber antes de la 2ª visita del Recorrido Gourmet 2026.
+          Todo lo que había que saber antes de la 2ª visita del Recorrido Gourmet 2026.
         </p>
         <a href="../entrades/la-goleta-previa-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
-    <!-- Notícia: Tendencias 2026 -->
+    <!-- Kema Crònica -->
+    <article class="blog-card" data-cat="cronica">
+      <div class="blog-card-img">
+        <img src="../assets/img/kema/hero.jpg" alt="Kema · Cambrils">
+        <span class="blog-card-cat cat-cronica t" data-es="Crónica" data-ca="Crònica">Crónica</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Marzo 2026" data-ca="Març 2026">Marzo 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es='Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica de la 1ª visita</small>'
+            data-ca='Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crònica de la 1a visita</small>'>
+          Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica de la 1ª visita</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Brasa, producto de calidad y coctelería diferencial. Crónica completa de la primera visita de la temporada 2026."
+           data-ca="Brasa, producte de qualitat i cocteleria diferencial. Crònica completa de la primera visita de la temporada 2026.">
+          Brasa, producto de calidad y coctelería diferencial.
+        </p>
+        <a href="../entrades/kema-cronica-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
+    <!-- Kema Prèvia -->
+    <article class="blog-card" data-cat="previa">
+      <div class="blog-card-img">
+        <img src="../assets/img/kema/brasa-carn.jpg" alt="Kema · Prèvia">
+        <span class="blog-card-cat cat-previa t" data-es="Previa" data-ca="Prèvia">Previa</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Febrero 2026" data-ca="Febrer 2026">Febrero 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es='Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa de la 1ª visita</small>'
+            data-ca='Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Prèvia de la 1a visita</small>'>
+          Kema · Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa de la 1ª visita</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Una propuesta 360° donde el fuego manda. Todo lo que había que saber antes de la primera visita de la temporada."
+           data-ca="Una proposta 360° on el foc mana. Tot el que calia saber abans de la primera visita de la temporada.">
+          Una propuesta 360° donde el fuego manda.
+        </p>
+        <a href="../entrades/kema-previa-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
+    <!-- Propera Visita -->
+    <div class="blog-card blog-card-proxima" data-cat="tots">
+      <div class="proxima-ico">🗓</div>
+      <div class="proxima-label t" data-es="Próxima visita" data-ca="Propera visita">Próxima visita</div>
+      <div class="proxima-rest t" data-es="5ª Visita · Por confirmar" data-ca="5a Visita · Per confirmar">5ª Visita · Por confirmar</div>
+      <div class="proxima-data t" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ SECCIÓ 2: NOTÍCIES & CULTURA ═══ -->
+<section class="car-sec reveal" id="sec-noticies">
+  <div class="car-head">
+    <div class="car-head-left">
+      <p class="slabel t" data-es="Actualidad" data-ca="Actualitat">Actualidad</p>
+      <h2 class="stitle t" data-es="Noticias & Cultura" data-ca="Notícies & Cultura">Noticias & Cultura</h2>
+      <div class="sdiv"></div>
+    </div>
+    <div class="car-nav">
+      <button class="car-btn" onclick="scrollCar('car-noticies',-1)" aria-label="Anterior">&#8249;</button>
+      <button class="car-btn" onclick="scrollCar('car-noticies',1)" aria-label="Siguiente">&#8250;</button>
+    </div>
+  </div>
+  <div class="carrusel" id="car-noticies">
+
+    <!-- Tendencias 2026 -->
     <article class="blog-card" data-cat="noticia">
       <div class="blog-card-img">
-        <img src="../assets/img/tendencias/hero%20para%20tendencias.jpg" alt="Tendencias Gastronómicas 2026: Comer con Sentido en el Territorio" onerror="this.parentElement.style.background='#1a3a52'">
+        <img src="../assets/img/tendencias/hero%20para%20tendencias.jpg" alt="Tendencias Gastronómicas 2026" onerror="this.parentElement.style.background='#1a3a52'">
         <span class="blog-card-cat cat-noticia t" data-es="Tendencias" data-ca="Tendències">Tendencias</span>
       </div>
       <div class="blog-card-body">
@@ -486,14 +580,14 @@ document.addEventListener('DOMContentLoaded', function() {
         </h3>
         <p class="blog-card-exc t"
            data-es="La gastronomía de 2026 respira diferente. Menos ruido permanente, más conexión honesta con el territorio. Recuperación de técnicas ancestrales y sostenibilidad real."
-           data-ca="La gastronomia de 2026 respira diferent. Menys soroll permanent, més connexió honesta amb el territori. Recuperació de tècniques ancestrals i sostenibilitat real.">
-          La gastronomía de 2026 respira diferente. Menos ruido permanente, más conexión honesta con el territorio. Recuperación de técnicas ancestrales y sostenibilidad real.
+           data-ca="La gastronomia de 2026 respira diferent. Menys soroll permanent, més connexió honesta amb el territori.">
+          La gastronomía de 2026 respira diferente. Menos ruido, más territorio.
         </p>
         <a href="../entrades/tendencias-gastronomiques-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
-    <!-- Notícia: 40 anys La Goleta -->
+    <!-- La Goleta 40 anys -->
     <article class="blog-card" data-cat="noticia">
       <div class="blog-card-img">
         <img src="../assets/img/goleta/aniversari-40.jpg" alt="La Goleta 40 anys">
@@ -507,121 +601,11 @@ document.addEventListener('DOMContentLoaded', function() {
           La Goleta celebra 40 años
         </h3>
         <p class="blog-card-exc t"
-           data-es="El restaurante de la Platja dels Capellans cumple cuatro décadas. Un referente de la Costa Daurada que ha sabido mantenerse fiel a sus principios."
-           data-ca="El restaurant de la Platja dels Capellans compleix quatre dècades. Un referent de la Costa Daurada que ha sabut mantenir-se fidel als seus principis.">
-          El restaurante de la Platja dels Capellans cumple cuatro décadas. Un referente de la Costa Daurada que ha sabido mantenerse fiel a sus principios.
+           data-es="El restaurante de la Platja dels Capellans cumple cuatro décadas. Un referente de la Costa Daurada fiel a sus principios."
+           data-ca="El restaurant de la Platja dels Capellans compleix quatre dècades. Un referent de la Costa Daurada fidel als seus principis.">
+          Un referente de la Costa Daurada que ha sabido mantenerse fiel a sus principios.
         </p>
         <a href="../entrades/la-goleta-previa-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
-      </div>
-    </article>
-
-    <!-- Menjablanc de Reus — Curiositat -->
-    <article class="blog-card" data-cat="curiositats">
-      <div class="blog-card-img">
-        <img src="../assets/img/menjablanc/hero-menjablanc.jpg" alt="Menjablanc de Reus — postre tradicional del Camp de Tarragona en terrina de test" onerror="this.parentElement.style.background='#8b5e3c'">
-        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Mayo 2026" data-ca="Maig 2026">Mayo 2026</span></div>
-        <h3 class="blog-card-title t"
-            data-es='El postre medieval que Reus no ha olvidado<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Menjablanc · Reus · Camp de Tarragona</small>'
-            data-ca='El postre medieval que Reus no ha oblidat<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Menjablanc · Reus · Camp de Tarragona</small>'>
-          El postre medieval que Reus no ha olvidado<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Menjablanc · Reus · Camp de Tarragona</small>
-        </h3>
-        <p class="blog-card-exc t"
-           data-es="Una crema de almendras con siglos de historia. Del Llibre de Sent Soví del siglo XIV a las confiterías de Reus. Historia, receta tradicional y territorio."
-           data-ca="Una crema d'ametlles amb segles d'història. Del Llibre de Sent Soví del segle XIV a les confiteries de Reus. Història, recepta tradicional i territori.">
-          Una crema de almendras con siglos de historia. Del Llibre de Sent Soví del siglo XIV a las confiterías de Reus. Historia, receta tradicional y territorio.
-        </p>
-        <a href="../entrades/menjablanc-reus-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
-      </div>
-    </article>
-
-    <!-- Curiositat: El Romesco -->
-    <article class="blog-card" data-cat="curiositats">
-      <div class="blog-card-img">
-        <img src="../assets/img/romesco/romesco-guisat.jpg" alt="El Romesco de Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
-        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-meta"><span class="blog-card-data">2026</span></div>
-        <h3 class="blog-card-title t"
-            data-es="El Romesco de Tarragona"
-            data-ca="El Romesco de Tarragona">
-          El Romesco de Tarragona
-        </h3>
-        <p class="blog-card-exc t"
-           data-es="Historia, origen y receta de la salsa que define la cocina del Camp de Tarragona. Del Serrallo a las mesas del mundo."
-           data-ca="Història, origen i recepta de la salsa que defineix la cuina del Camp de Tarragona. Del Serrallo a les taules del món.">
-          Historia, origen y receta de la salsa que define la cocina del Camp de Tarragona. Del Serrallo a las mesas del mundo.
-        </p>
-        <a href="../entrades/el-romesco.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
-      </div>
-    </article>
-
-    <!-- Curiositat: El Moretum -->
-    <article class="blog-card" data-cat="curiositats">
-      <div class="blog-card-img">
-        <img src="../assets/img/moretum/moretum-hero.jpg" alt="El Moretum — la salsa romana de Tarraco" onerror="this.parentElement.style.background='var(--cream)'">
-        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-meta"><span class="blog-card-data">2026</span></div>
-        <h3 class="blog-card-title t"
-            data-es="El moretum: la salsa romana de Tarraco"
-            data-ca="El moretum: la salsa romana de Tàrraco">
-          El moretum: la salsa romana de Tarraco
-        </h3>
-        <p class="blog-card-exc t"
-           data-es="Queso, ajo, hierbas y aceite. Una preparación humilde de hace dos mil años que Virgilio puso en verso y que en nuestra ciudad ya se comía antes de que existiera el pesto."
-           data-ca="Formatge, all, herbes i oli. Una preparació humil de fa dos mil anys que Virgili va posar en vers i que a la nostra ciutat ja es menjava abans que existís el pesto.">
-          Queso, ajo, hierbas y aceite. Una preparación humilde de hace dos mil años que Virgilio puso en verso y que en nuestra ciudad ya se comía antes de que existiera el pesto.
-        </p>
-        <a href="../entrades/el-moretum.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
-      </div>
-    </article>
-
-    <!-- Curiositat: El Garum -->
-    <article class="blog-card" data-cat="curiositats">
-      <div class="blog-card-img">
-        <img src="../assets/img/garum/garum-hero.jpg" alt="El Garum — la salsa universal de Roma" onerror="this.parentElement.style.background='var(--cream)'">
-        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-meta"><span class="blog-card-data">2026</span></div>
-        <h3 class="blog-card-title t"
-            data-es="El garum: la salsa que conquistó Roma y se fabricaba en Tarraco"
-            data-ca="El garum: la salsa que va conquerir Roma i es fabricava a Tàrraco">
-          El garum: la salsa que conquistó Roma y se fabricaba en Tarraco
-        </h3>
-        <p class="blog-card-exc t"
-           data-es="Pescado, sal, fermentación y tiempo. El condimento universal que Roma ponía en todo y que Tarraco fabricaba y exportaba al mundo. Su herencia vive en las anchoas de tu nevera."
-           data-ca="Peix, sal, fermentació i temps. El condiment universal que Roma posava a tot i que Tarraco fabricava i exportava al món. El seu llegat viu a les anxoves de la nevera.">
-          Pescado, sal, fermentación y tiempo. El condimento universal que Roma ponía en todo y que Tarraco fabricaba y exportaba al mundo. Su herencia vive en las anchoas de tu nevera.
-        </p>
-        <a href="../entrades/el-garum.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
-      </div>
-    </article>
-
-    <!-- Curiositat: Gastronia -->
-    <article class="blog-card" data-cat="curiositats">
-      <div class="blog-card-img">
-        <img src="../assets/img/gala2025/trofeus.jpg" alt="Trofeu Gastronia">
-        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-meta"><span class="blog-card-data">2026</span></div>
-        <h3 class="blog-card-title t"
-            data-es="¿Quién es... Gastronia?"
-            data-ca="Qui és... Gastronia?">
-          ¿Quién es... Gastronia?
-        </h3>
-        <p class="blog-card-exc t"
-           data-es="El nombre, el trofeo, el proceso de votación y el palmarés de los galardonados. Todo lo que hay que saber sobre el máximo reconocimiento de los Gourmets de Tarragona."
-           data-ca="El nom, el trofeu, el procés de votació i el palmarès dels guardonats. Tot el que cal saber sobre el màxim reconeixement dels Gourmets de Tarragona.">
-          El nombre, el trofeo, el proceso de votación y el palmarés de los galardonados. Todo lo que hay que saber sobre el máximo reconocimiento de los Gourmets de Tarragona.
-        </p>
-        <a href="../entrades/que-es-la-gastronia.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
@@ -639,9 +623,9 @@ document.addEventListener('DOMContentLoaded', function() {
           Gala de Premios 2025<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Vermuts Rofes · Reus</small>
         </h3>
         <p class="blog-card-exc t"
-           data-es="Buidasacs y Cambium, Trofeos Gastronia. Cirerets de Mas Alta, Premio Bacus. Una noche de reconocimiento y emoción en el Camp de Tarragona."
-           data-ca="Buidasacs i Cambium, Trofeus Gastronia. Cirerets de Mas Alta, Premi Bacus. Una nit de reconeixement i emoció al Camp de Tarragona.">
-          Buidasacs y Cambium, Trofeos Gastronia. Cirerets de Mas Alta, Premio Bacus. Una noche de reconocimiento y emoción en el Camp de Tarragona.
+           data-es="Buidasacs y Cambium, Trofeos Gastronia. Cirerets de Mas Alta, Premio Bacus. Una noche de reconocimiento en el Camp de Tarragona."
+           data-ca="Buidasacs i Cambium, Trofeus Gastronia. Cirerets de Mas Alta, Premi Bacus. Una nit de reconeixement al Camp de Tarragona.">
+          Buidasacs y Cambium, Trofeos Gastronia. Cirerets de Mas Alta, Premio Bacus.
         </p>
         <a href="../entrades/gala-premis-2025.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
@@ -661,15 +645,33 @@ document.addEventListener('DOMContentLoaded', function() {
           8 libros para Sant Jordi<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Selección Gourmet 2026</small>
         </h3>
         <p class="blog-card-exc t"
-           data-es="Nuestra selección de lecturas gastronómicas para este 23 de abril. Tres títulos de Cossetània Edicions (Valls) y un autor de Reus hacen de esta lista un recorrido literario con raíces en el Camp de Tarragona."
-           data-ca="La nostra selecció de lectures gastronòmiques per a aquest 23 d'abril. Tres títols de Cossetània Edicions (Valls) i un autor de Reus fan d'aquesta llista un recorregut literari amb arrels al Camp de Tarragona.">
+           data-es="Nuestra selección de lecturas gastronómicas. Tres títulos de Cossetània Edicions y un autor de Reus: un recorrido literario con raíces en el Camp de Tarragona."
+           data-ca="La nostra selecció de lectures gastronòmiques. Tres títols de Cossetània Edicions i un autor de Reus.">
           Nuestra selección de lecturas gastronómicas para este 23 de abril.
         </p>
         <a href="../entrades/santjordi-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
-    <!-- Vins Brisats — NOU · Mayo 2026 -->
+  </div>
+</section>
+
+<!-- ═══ SECCIÓ 3: VINS DEL TERRITORI ═══ -->
+<section class="car-sec reveal" id="sec-vins">
+  <div class="car-head">
+    <div class="car-head-left">
+      <p class="slabel t" data-es="Enología" data-ca="Enologia">Enología</p>
+      <h2 class="stitle t" data-es="Vinos del Territorio" data-ca="Vins del Territori">Vinos del Territorio</h2>
+      <div class="sdiv"></div>
+    </div>
+    <div class="car-nav">
+      <button class="car-btn" onclick="scrollCar('car-vins',-1)" aria-label="Anterior">&#8249;</button>
+      <button class="car-btn" onclick="scrollCar('car-vins',1)" aria-label="Siguiente">&#8250;</button>
+    </div>
+  </div>
+  <div class="carrusel" id="car-vins">
+
+    <!-- Vins Brisats -->
     <article class="blog-card" data-cat="vi">
       <div class="blog-card-img">
         <img src="../assets/img/brisats/hero-ampolles-brisat.jpg" alt="Vins brisats i orange wines de la demarcació de Tarragona" onerror="this.parentElement.style.background='#6b2737'">
@@ -683,15 +685,15 @@ document.addEventListener('DOMContentLoaded', function() {
           El orange wine de toda la vida<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Vins Brisats · Demarcació de Tarragona</small>
         </h3>
         <p class="blog-card-exc t"
-           data-es="Una elaboración milenaria que el mundo acaba de descubrir. En la Terra Alta llevan siglos haciéndolo. Qué son, cómo se elaboran y por qué vuelven con fuerza a la mesa."
-           data-ca="Una elaboració mil·lenària que el món acaba de descobrir. A la Terra Alta fa segles que ho fan. Què són, com s'elaboren i per què tornen amb força a la taula.">
-          Una elaboración milenaria que el mundo acaba de descubrir. En la Terra Alta llevan siglos haciéndolo. Qué son, cómo se elaboran y por qué vuelven con fuerza a la mesa.
+           data-es="Una elaboración milenaria que el mundo acaba de descubrir. En la Terra Alta llevan siglos haciéndolo."
+           data-ca="Una elaboració mil·lenària que el món acaba de descobrir. A la Terra Alta fa segles que ho fan.">
+          Una elaboración milenaria que el mundo acaba de descubrir.
         </p>
         <a href="../entrades/vins-brisats-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
-    <!-- Vins Ancestrals — Editorial Vi -->
+    <!-- Vins Ancestrals -->
     <article class="blog-card" data-cat="vi">
       <div class="blog-card-img">
         <img src="../assets/img/img-ancestrals/ampolles-tap-corona.jpg" alt="Vins ancestrals i pét-nat de la demarcació de Tarragona" onerror="this.parentElement.style.background='#6b2737'">
@@ -705,15 +707,59 @@ document.addEventListener('DOMContentLoaded', function() {
           El vino que no olvidó de dónde venía<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Método ancestral · Demarcación de Tarragona</small>
         </h3>
         <p class="blog-card-exc t"
-           data-es="La burbuja más antigua del mundo ha vuelto. Orígenes, técnica y los celleres de la demarcación que elaboran los pét-nats más territoriales de Cataluña."
-           data-ca="La bombolla més antiga del món ha tornat. Orígens, tècnica i els cellers de la demarcació que elaboren els pét-nats més territorials de Catalunya.">
-          La burbuja más antigua del mundo ha vuelto. Orígenes, técnica y los celleres de la demarcación que elaboran los pét-nats más territoriales de Cataluña.
+           data-es="La burbuja más antigua del mundo ha vuelto. Los celleres de la demarcación que elaboran los pét-nats más territoriales de Cataluña."
+           data-ca="La bombolla més antiga del món ha tornat. Els cellers de la demarcació que elaboren els pét-nats més territorials de Catalunya.">
+          La burbuja más antigua del mundo ha vuelto.
         </p>
         <a href="../entrades/vins-ancestrals-metode.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
-    <!-- Vi — El vi a la província de Tarragona -->
+    <!-- Jean Leon -->
+    <article class="blog-card" data-cat="vi">
+      <div class="blog-card-img">
+        <img src="../assets/img/jeanleon/jean-leon-copa-la-scala.jpg" alt="Jean Leon · Ceferino Carrión" onerror="this.parentElement.style.background='var(--cream)'">
+        <span class="blog-card-cat cat-vi t" data-es="Vinos" data-ca="Vins">Vinos</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Mayo 2026" data-ca="Maig 2026">Mayo 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es='Jean Leon · D.O. Penedès<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">El taxista de Beverly Hills</small>'
+            data-ca='Jean Leon · D.O. Penedès<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">El taxista de Beverly Hills</small>'>
+          Jean Leon · D.O. Penedès<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">El taxista de Beverly Hills</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Ceferino Carrión cruzó los Pirineos a pie y acabó sirviendo la última cena a Marilyn Monroe. Su legado: el primer Cabernet Sauvignon elaborado en España."
+           data-ca="Ceferino Carrión va creuar els Pirineus a peu i va acabar servint el darrer sopar a Marilyn Monroe.">
+          Cruzó los Pirineos a pie y acabó sirviendo la última cena a Marilyn Monroe.
+        </p>
+        <a href="../entrades/jean-leon-ceferino-carrion.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
+    <!-- Els Cinc Magnífics -->
+    <article class="blog-card" data-cat="vi">
+      <div class="blog-card-img">
+        <img src="../assets/img/priorat/loscincomagnificos.jpg" alt="Els Cinc Magnífics del Priorat" onerror="this.parentElement.style.background='var(--cream)'">
+        <span class="blog-card-cat cat-vi t" data-es="Vinos" data-ca="Vins">Vinos</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Mayo 2026" data-ca="Maig 2026">Mayo 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es="Els Cinc Magnífics · DOQ Priorat<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>El origen de una revolución vinícola</small>"
+            data-ca="Els Cinc Magnífics · DOQ Priorat<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>L'origen d'una revolució vinícola</small>">
+          Els Cinc Magnífics · DOQ Priorat<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">El origen de una revolución vinícola</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Barbier, Glorian, Palacios, Pérez i Pastrana van transformar una comarca oblidada en una de les denominacions més reconegudes del món."
+           data-ca="Barbier, Glorian, Palacios, Pérez i Pastrana van transformar una comarca oblidada en una de les denominacions més reconegudes del món.">
+          Cinco personas que transformaron una comarca olvidada en una denominación de referencia mundial.
+        </p>
+        <a href="../entrades/los-5-magnificos-priorat.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
+    <!-- Vi Tarragona -->
     <article class="blog-card" data-cat="vi">
       <div class="blog-card-img">
         <img src="../assets/img/vins/paisatge-tarragona.jpg" alt="El vi a la província de Tarragona" onerror="this.parentElement.style.background='#6b2737'">
@@ -729,63 +775,35 @@ document.addEventListener('DOMContentLoaded', function() {
         <p class="blog-card-exc t"
            data-es="Ocho denominaciones, ocho territorios con voz propia. Una lectura por la historia, los suelos y las variedades del vino de Tarragona."
            data-ca="Vuit denominacions, vuit territoris amb veu pròpia. Una lectura per la història, els sòls i les varietats del vi de Tarragona.">
-          Ocho denominaciones, ocho territorios con voz propia. Una lectura por la historia, los suelos y las variedades del vino de Tarragona.
+          Ocho denominaciones, ocho territorios con voz propia.
         </p>
         <a href="../entrades/vino-tarragona.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
-    <!-- Jean Leon · Ceferino Carrión -->
-    <article class="blog-card" data-cat="vi">
-      <div class="blog-card-img">
-        <img src="../assets/img/jeanleon/jean-leon-copa-la-scala.jpg" alt="Jean Leon · Ceferino Carrión · Vins D.O. Penedès" onerror="this.parentElement.style.background='var(--cream)'">
-        <span class="blog-card-cat cat-vi t" data-es="Vinos" data-ca="Vins">Vinos</span>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Mayo 2026" data-ca="Maig 2026">Mayo 2026</span></div>
-        <h3 class="blog-card-title t"
-            data-es='Jean Leon · D.O. Penedès<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">El taxista de Beverly Hills</small>'
-            data-ca='Jean Leon · D.O. Penedès<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">El taxista de Beverly Hills</small>'>
-          Jean Leon · D.O. Penedès<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">El taxista de Beverly Hills</small>
-        </h3>
-        <p class="blog-card-exc t"
-           data-es="Ceferino Carrión cruzó los Pirineos a pie, se coló en ocho barcos y acabó sirviendo la última cena a Marilyn Monroe. Su legado: el primer Cabernet Sauvignon elaborado en España."
-           data-ca="Ceferino Carrión va creuar els Pirineus a peu, es va colar en vuit vaixells i va acabar servint el darrer sopar a Marilyn Monroe. El seu llegat: el primer Cabernet Sauvignon elaborat a Espanya.">
-          Ceferino Carrión cruzó los Pirineos a pie, se coló en ocho barcos y acabó sirviendo la última cena a Marilyn Monroe. Su legado: el primer Cabernet Sauvignon elaborado en España.
-        </p>
-        <a href="../entrades/jean-leon-ceferino-carrion.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
-      </div>
-    </article>
+  </div>
+</section>
 
+<!-- ═══ SECCIÓ 4: CURIOSITATS DEL CAMP ═══ -->
+<section class="car-sec reveal" id="sec-curiositats">
+  <div class="car-head">
+    <div class="car-head-left">
+      <p class="slabel t" data-es="Patrimonio gastronómico" data-ca="Patrimoni gastronòmic">Patrimonio gastronómico</p>
+      <h2 class="stitle t" data-es="Curiosidades del Camp" data-ca="Curiositats del Camp">Curiosidades del Camp</h2>
+      <div class="sdiv"></div>
+    </div>
+    <div class="car-nav">
+      <button class="car-btn" onclick="scrollCar('car-curiositats',-1)" aria-label="Anterior">&#8249;</button>
+      <button class="car-btn" onclick="scrollCar('car-curiositats',1)" aria-label="Siguiente">&#8250;</button>
+    </div>
+  </div>
+  <div class="carrusel" id="car-curiositats">
 
-    <!-- Els 5 Magnífics del Priorat -->
-    <article class="blog-card" data-cat="vi">
-      <div class="blog-card-img">
-        <img src="../assets/img/priorat/loscincomagnificos.jpg" alt="Els Cinc Magnífics del Priorat: René Barbier, Daphne Glorian, Álvaro Palacios, Josep Lluís Pérez i Carles Pastrana" onerror="this.parentElement.style.background='var(--cream)'">
-        <span class="blog-card-cat cat-vi t" data-es="Vinos" data-ca="Vins">Vinos</span>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Mayo 2026" data-ca="Maig 2026">Mayo 2026</span></div>
-        <h3 class="blog-card-title t"
-            data-es="Els Cinc Magnífics · DOQ Priorat<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>El origen de una revolución vinícola</small>"
-            data-ca="Els Cinc Magnífics · DOQ Priorat<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>L'origen d'una revolució vinícola</small>">
-          Els Cinc Magnífics · DOQ Priorat<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">El origen de una revolución vinícola</small>
-        </h3>
-        <p class="blog-card-exc t"
-           data-es="Barbier, Glorian, Palacios, Pérez i Pastrana van transformar una comarca oblidada en una de les denominacions més reconegudes del món. I la història té arrels tarragonines."
-           data-ca="Barbier, Glorian, Palacios, Pérez i Pastrana van transformar una comarca oblidada en una de les denominacions més reconegudes del món. I la història té arrels tarragonines.">
-          Barbier, Glorian, Palacios, Pérez i Pastrana van transformar una comarca oblidada en una de les denominacions més reconegudes del món. I la història té arrels tarragonines.
-        </p>
-        <a href="../entrades/los-5-magnificos-priorat.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
-      </div>
-    </article>
-
-
-    <!-- Vermut de Reus — Curiositat -->
+    <!-- Vermut Reus -->
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img src="../assets/img/vermut/vermut-reus-aperitivo.jpg" alt="Vermut de Reus amb taronja, aperitiu tradicional del Camp de Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
-        <span class="blog-card-cat cat-curiositats t" data-es="Curiositats" data-ca="Curiositats">Curiositats</span>
+        <img src="../assets/img/vermut/vermut-reus-aperitivo.jpg" alt="Vermut de Reus" onerror="this.parentElement.style.background='var(--cream)'">
+        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
         <div class="blog-card-meta"><span class="blog-card-data t" data-es="Junio 2026" data-ca="Juny 2026">Junio 2026</span></div>
@@ -796,19 +814,18 @@ document.addEventListener('DOMContentLoaded', function() {
         </h3>
         <p class="blog-card-exc t"
            data-es="Del aguardiente al aperitivo más elegante de Europa. Yzaguirre, Miró, Rofes... La historia de cómo Reus se convirtió en referencia mundial."
-           data-ca="De l'aiguardent a l'aperitiu més elegant d'Europa. Yzaguirre, Miró, Rofes... La història de com Reus es va convertir en referència mundial.">
-          Del aguardiente al aperitivo más elegante de Europa. Yzaguirre, Miró, Rofes... La historia de cómo Reus se convirtió en referencia mundial.
+           data-ca="De l'aiguardent a l'aperitiu més elegant d'Europa. Yzaguirre, Miró, Rofes...">
+          Del aguardiente al aperitivo más elegante de Europa.
         </p>
         <a href="../entrades/vermut-reus-capital.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
-
-    <!-- Coca amb Cireres — Curiositat -->
+    <!-- Coca amb Cireres -->
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img src="../assets/img/coca-cireres/coca-cireres-corpus-gegants.jpg" alt="Gegants ballant al Mercadal de Reus per Corpus mentre els nens mengen coca amb cireres" onerror="this.parentElement.style.background='var(--cream)'">
-        <span class="blog-card-cat cat-curiositats t" data-es="Curiositats" data-ca="Curiositats">Curiositats</span>
+        <img src="../assets/img/coca-cireres/coca-cireres-corpus-gegants.jpg" alt="Coca amb cireres per Corpus" onerror="this.parentElement.style.background='var(--cream)'">
+        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
         <div class="blog-card-meta"><span class="blog-card-data t" data-es="Junio 2026" data-ca="Juny 2026">Junio 2026</span></div>
@@ -818,24 +835,126 @@ document.addEventListener('DOMContentLoaded', function() {
           La coca amb cireres<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">El dulce que Reus regala por Corpus</small>
         </h3>
         <p class="blog-card-exc t"
-           data-es="Un pesador de harina, unas cerezas a punto de perderse y un gesto generoso. Así nació, en el siglo XIX, la tradición más dulce del Camp de Tarragona."
-           data-ca="Un pesador de farina, unes cireres a punt de perdre's i un gest generós. Així va néixer, al segle XIX, la tradició més dolça del Camp de Tarragona.">
-          Un pesador de harina, unas cerezas a punto de perderse y un gesto generoso. Así nació, en el siglo XIX, la tradición más dulce del Camp de Tarragona.
+           data-es="Un pesador de harina, unas cerezas a punto de perderse y un gesto generoso. Así nació la tradición más dulce del Camp de Tarragona."
+           data-ca="Un pesador de farina, unes cireres a punt de perdre's i un gest generós. Així va néixer la tradició més dolça del Camp de Tarragona.">
+          Un gesto generoso del siglo XIX que se convirtió en tradición.
         </p>
         <a href="../entrades/coca-amb-cireres-corpus-reus.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
 
-    <!-- Propera Visita — 4ª -->
-    <div class="blog-card blog-card-proxima" data-cat="tots">
-      <div class="proxima-ico">🗓</div>
-      <div class="proxima-label t" data-es="Próxima visita" data-ca="Propera visita">Próxima visita</div>
-      <div class="proxima-rest t" data-es="5ª Visita · Por confirmar" data-ca="5a Visita · Per confirmar">5ª Visita · Por confirmar</div>
-      <div class="proxima-data t" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</div>
-    </div>
+    <!-- Menjablanc -->
+    <article class="blog-card" data-cat="curiositats">
+      <div class="blog-card-img">
+        <img src="../assets/img/menjablanc/hero-menjablanc.jpg" alt="Menjablanc de Reus" onerror="this.parentElement.style.background='#8b5e3c'">
+        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Mayo 2026" data-ca="Maig 2026">Mayo 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es='El postre medieval que Reus no ha olvidado<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Menjablanc · Reus · Camp de Tarragona</small>'
+            data-ca='El postre medieval que Reus no ha oblidat<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Menjablanc · Reus · Camp de Tarragona</small>'>
+          El postre medieval que Reus no ha olvidado<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Menjablanc · Reus · Camp de Tarragona</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Una crema de almendras con siglos de historia. Del Llibre de Sent Soví del siglo XIV a las confiterías de Reus."
+           data-ca="Una crema d'ametlles amb segles d'història. Del Llibre de Sent Soví del segle XIV a les confiteries de Reus.">
+          Del Llibre de Sent Soví del siglo XIV a las confiterías de Reus.
+        </p>
+        <a href="../entrades/menjablanc-reus-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
+    <!-- El Romesco -->
+    <article class="blog-card" data-cat="curiositats">
+      <div class="blog-card-img">
+        <img src="../assets/img/romesco/romesco-guisat.jpg" alt="El Romesco de Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
+        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data">2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es="El Romesco de Tarragona"
+            data-ca="El Romesco de Tarragona">
+          El Romesco de Tarragona
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Historia, origen y receta de la salsa que define la cocina del Camp de Tarragona. Del Serrallo a las mesas del mundo."
+           data-ca="Història, origen i recepta de la salsa que defineix la cuina del Camp de Tarragona. Del Serrallo a les taules del món.">
+          La salsa que define la cocina del Camp de Tarragona.
+        </p>
+        <a href="../entrades/el-romesco.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
+    <!-- El Moretum -->
+    <article class="blog-card" data-cat="curiositats">
+      <div class="blog-card-img">
+        <img src="../assets/img/moretum/moretum-hero.jpg" alt="El Moretum — la salsa romana de Tarraco" onerror="this.parentElement.style.background='var(--cream)'">
+        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data">2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es="El moretum: la salsa romana de Tarraco"
+            data-ca="El moretum: la salsa romana de Tàrraco">
+          El moretum: la salsa romana de Tarraco
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Queso, ajo, hierbas y aceite. Dos mil años de historia y ya se comía en nuestra ciudad antes de que existiera el pesto."
+           data-ca="Formatge, all, herbes i oli. Dos mil anys d'història i ja es menjava a la nostra ciutat abans que existís el pesto.">
+          Ya se comía en Tarraco antes de que existiera el pesto.
+        </p>
+        <a href="../entrades/el-moretum.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
+    <!-- El Garum -->
+    <article class="blog-card" data-cat="curiositats">
+      <div class="blog-card-img">
+        <img src="../assets/img/garum/garum-hero.jpg" alt="El Garum — la salsa universal de Roma" onerror="this.parentElement.style.background='var(--cream)'">
+        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data">2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es="El garum: la salsa que conquistó Roma"
+            data-ca="El garum: la salsa que va conquerir Roma">
+          El garum: la salsa que conquistó Roma
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Pescado, sal, fermentación y tiempo. El condimento universal que Tarraco fabricaba y exportaba al mundo. Su herencia vive en las anchoas de tu nevera."
+           data-ca="Peix, sal, fermentació i temps. El condiment universal que Tàrraco fabricava i exportava al món.">
+          Tarraco lo fabricaba y exportaba al mundo. Su herencia vive en las anchoas de tu nevera.
+        </p>
+        <a href="../entrades/el-garum.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
+    <!-- Gastronia -->
+    <article class="blog-card" data-cat="curiositats">
+      <div class="blog-card-img">
+        <img src="../assets/img/gala2025/trofeus.jpg" alt="Trofeu Gastronia">
+        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data">2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es="¿Quién es... Gastronia?"
+            data-ca="Qui és... Gastronia?">
+          ¿Quién es... Gastronia?
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="El nombre, el trofeo, el proceso de votación y el palmarés. Todo lo que hay que saber sobre el máximo reconocimiento de los Gourmets de Tarragona."
+           data-ca="El nom, el trofeu, el procés de votació i el palmarès. Tot el que cal saber sobre el màxim reconeixement dels Gourmets de Tarragona.">
+          Todo lo que hay que saber sobre el máximo reconocimiento de los Gourmets.
+        </p>
+        <a href="../entrades/que-es-la-gastronia.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
 
   </div>
-</div>
+</section>
 
 <!-- ═══ NEWSLETTER ═══ -->
 <section id="newsletter" style="padding:80px 0;text-align:center;background:var(--navy-dark);">
@@ -879,40 +998,36 @@ document.addEventListener('DOMContentLoaded', function() {
          data-es="Te hemos enviado un email de confirmación (revisa spam si no aparece)."
          data-ca="T'hem enviat un email de confirmació (revisa l'spam si no apareix).">Te hemos enviado un email de confirmación (revisa spam si no aparece).</p>
     </div>
-
     <div id="nl-err" style="display:none;padding:10px 0;">
       <p class="t" style="color:#f5a0a0;font-size:.85rem;"
          data-es="Algo ha ido mal. Inténtalo de nuevo."
          data-ca="Quelcom ha fallat. Torna-ho a intentar.">Algo ha ido mal. Inténtalo de nuevo.</p>
     </div>
   </div>
-
   <script>
-  (function() {
-    var form = document.getElementById('nl-form');
-    if (!form) return;
-    form.addEventListener('submit', function(e) {
+  (function(){
+    var form=document.getElementById('nl-form');
+    if(!form)return;
+    form.addEventListener('submit',function(e){
       e.preventDefault();
-      var email = document.getElementById('nl-email').value.trim();
-      if (!email) return;
-      var btn = form.querySelector('button[type=submit]');
-      btn.disabled = true; btn.style.opacity = '.5';
-      var params = new URLSearchParams();
-      params.append('EMAIL', email);
-      params.append('email_address_check', '');
-      params.append('locale', (typeof currentLang !== 'undefined' ? currentLang : null) || localStorage.getItem('gdt-lang') || 'es');
-      fetch(form.action, {
-        method: 'POST', mode: 'no-cors',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: params.toString()
-      }).then(function() {
-        document.getElementById('nl-wrap').style.display = 'none';
-        document.getElementById('nl-ok').style.display = 'block';
-        if (typeof setLang === 'function' && typeof currentLang !== 'undefined') setLang(currentLang);
-      }).catch(function() {
-        document.getElementById('nl-err').style.display = 'block';
-        btn.disabled = false; btn.style.opacity = '1';
-      });
+      var email=document.getElementById('nl-email').value.trim();
+      if(!email)return;
+      var btn=form.querySelector('button[type=submit]');
+      btn.disabled=true;btn.style.opacity='.5';
+      var params=new URLSearchParams();
+      params.append('EMAIL',email);
+      params.append('email_address_check','');
+      params.append('locale',(typeof currentLang!=='undefined'?currentLang:null)||localStorage.getItem('gdt-lang')||'es');
+      fetch(form.action,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:params.toString()})
+        .then(function(){
+          document.getElementById('nl-wrap').style.display='none';
+          document.getElementById('nl-ok').style.display='block';
+          if(typeof setLang==='function'&&typeof currentLang!=='undefined')setLang(currentLang);
+        })
+        .catch(function(){
+          document.getElementById('nl-err').style.display='block';
+          btn.disabled=false;btn.style.opacity='1';
+        });
     });
   })();
   </script>
@@ -922,9 +1037,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
-      <img src="../assets/img/logo.png"
-           alt="Gourmets de Tarragona"
-           onerror="this.style.display='none'">
+      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona" onerror="this.style.display='none'">
       <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
       <div class="footer-social">
         <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener" aria-label="Instagram">
@@ -969,5 +1082,32 @@ document.addEventListener('DOMContentLoaded', function() {
 </footer>
 
 <script src="../assets/js/main.js"></script>
+<script>
+/* ── CARRUSEL: scroll per fletxes ── */
+function scrollCar(id, dir) {
+  var c = document.getElementById(id);
+  if (!c) return;
+  var card = c.querySelector('.blog-card');
+  var cardW = card ? card.offsetWidth + 22 : 322;
+  c.scrollBy({left: dir * cardW * 2, behavior: 'smooth'});
+}
+
+/* ── CARRUSEL: drag to scroll ── */
+(function(){
+  document.querySelectorAll('.carrusel').forEach(function(c){
+    var down=false, sx=0, sl=0;
+    c.addEventListener('mousedown',function(e){
+      down=true; sx=e.pageX-c.offsetLeft; sl=c.scrollLeft; c.classList.add('dragging');
+    });
+    c.addEventListener('mouseleave',function(){ down=false; c.classList.remove('dragging'); });
+    c.addEventListener('mouseup',function(){ down=false; c.classList.remove('dragging'); });
+    c.addEventListener('mousemove',function(e){
+      if(!down) return;
+      e.preventDefault();
+      c.scrollLeft = sl - (e.pageX - c.offsetLeft - sx) * 1.5;
+    });
+  });
+})();
+</script>
 </body>
 </html>
