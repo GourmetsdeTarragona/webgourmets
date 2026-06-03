@@ -136,6 +136,8 @@ function setLang(lang) {
     b.classList.toggle('active', b.getAttribute('data-lang') === lang);
   });
   document.getElementById('html-root').setAttribute('lang', lang);
+  var localeInput = document.getElementById('nl-locale');
+  if (localeInput) localeInput.value = lang;
 }
 var currentCat = 'tots';
 function filterEntrades(cat) {
@@ -151,6 +153,9 @@ function filterEntrades(cat) {
     var show = cat === 'tots' || dest.dataset.cat === cat;
     dest.closest('.blog-destacat').style.display = show ? 'block' : 'none';
   }
+  // Scroll back to the filter bar so filtered content is visible from the start
+  var filtresEl = document.querySelector('.blog-filtres');
+  if (filtresEl) window.scrollTo({ top: filtresEl.offsetTop, behavior: 'smooth' });
 }
 document.addEventListener('DOMContentLoaded', function() {
   if (currentLang === 'ca') setLang('ca');
@@ -831,6 +836,87 @@ document.addEventListener('DOMContentLoaded', function() {
 
   </div>
 </div>
+
+<!-- ═══ NEWSLETTER ═══ -->
+<section id="newsletter" style="padding:80px 0;text-align:center;background:var(--navy-dark);">
+  <div style="max-width:580px;margin:0 auto;padding:0 5%;">
+    <span style="display:block;font-size:.6rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">Newsletter</span>
+    <h2 class="t" style="font-family:var(--font-serif);font-size:clamp(1.55rem,3vw,2.1rem);color:#fff;margin-bottom:14px;line-height:1.25;"
+        data-es="Gastronomía con criterio, directa a tu correo"
+        data-ca="Gastronomia amb criteri, directa al teu correu">Gastronomía con criterio, directa a tu correo</h2>
+    <p class="t" style="color:rgba(255,255,255,.55);font-size:.88rem;line-height:1.85;margin-bottom:38px;"
+       data-es="Crónicas, vinos y lo mejor del Camp de Tarragona. Sin ruido. Una vez al mes."
+       data-ca="Cròniques, vins i el millor del Camp de Tarragona. Sense soroll. Un cop al mes.">Crónicas, vinos y lo mejor del Camp de Tarragona. Sin ruido. Una vez al mes.</p>
+
+    <div id="nl-wrap">
+      <form id="nl-form"
+            action="https://fe0daaff.sibforms.com/serve/MUIFAMSYb3h5hzjCYPN-GiItYcbChszEiV-2Ci_yU_3sfesrzldVY_nwtUN7RfIi41NyXnMu3sl9-ob6jEY1i8D_lfWkjTx2BPx-DdkMBNRhY_UX6RYT8Q6OtL_RSXdw1Nxw1cQMI50KFEuV5agn87hBqKVShQPjzSVyuaqjxyjEXiMI4ec7wdY55xdTRqGDyO937oVLzoaKi6MUtQ=="
+            method="post"
+            style="display:flex;max-width:460px;margin:0 auto 14px;">
+        <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off"
+               style="display:none;position:absolute;left:-9999px;">
+        <input type="hidden" name="locale" id="nl-locale" value="es">
+        <input type="email" name="EMAIL" id="nl-email" required
+               placeholder="hola@tucorreo.com"
+               style="flex:1;min-width:0;padding:13px 16px;font-size:.88rem;font-family:inherit;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-right:none;color:#fff;outline:none;transition:border-color .2s;"
+               onfocus="this.style.borderColor='rgba(201,169,110,.7)'"
+               onblur="this.style.borderColor='rgba(255,255,255,.18)'">
+        <button type="submit" class="t"
+                data-es="APUNTARME" data-ca="APUNTAR-ME"
+                style="padding:13px 20px;background:var(--gold);color:var(--navy-dark);font-size:.6rem;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;font-family:inherit;border:none;cursor:pointer;white-space:nowrap;transition:opacity .2s;">APUNTARME</button>
+      </form>
+      <p class="t" style="color:rgba(255,255,255,.28);font-size:.73rem;"
+         data-es="Sin spam. Baja cuando quieras."
+         data-ca="Sense spam. Baixa quan vulguis.">Sin spam. Baja cuando quieras.</p>
+    </div>
+
+    <div id="nl-ok" style="display:none;padding:24px 0;">
+      <p style="font-size:1.6rem;margin-bottom:10px;color:var(--gold);">✓</p>
+      <p class="t" style="color:#fff;font-size:1.05rem;font-family:var(--font-serif);margin-bottom:6px;"
+         data-es="¡Apuntado! Revisa tu correo para confirmar."
+         data-ca="Apuntat! Revisa el teu correu per confirmar.">¡Apuntado! Revisa tu correo para confirmar.</p>
+      <p class="t" style="color:rgba(255,255,255,.4);font-size:.8rem;"
+         data-es="Te hemos enviado un email de confirmación (revisa spam si no aparece)."
+         data-ca="T'hem enviat un email de confirmació (revisa l'spam si no apareix).">Te hemos enviado un email de confirmación (revisa spam si no aparece).</p>
+    </div>
+
+    <div id="nl-err" style="display:none;padding:10px 0;">
+      <p class="t" style="color:#f5a0a0;font-size:.85rem;"
+         data-es="Algo ha ido mal. Inténtalo de nuevo."
+         data-ca="Quelcom ha fallat. Torna-ho a intentar.">Algo ha ido mal. Inténtalo de nuevo.</p>
+    </div>
+  </div>
+
+  <script>
+  (function() {
+    var form = document.getElementById('nl-form');
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var email = document.getElementById('nl-email').value.trim();
+      if (!email) return;
+      var btn = form.querySelector('button[type=submit]');
+      btn.disabled = true; btn.style.opacity = '.5';
+      var params = new URLSearchParams();
+      params.append('EMAIL', email);
+      params.append('email_address_check', '');
+      params.append('locale', (typeof currentLang !== 'undefined' ? currentLang : null) || localStorage.getItem('gdt-lang') || 'es');
+      fetch(form.action, {
+        method: 'POST', mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString()
+      }).then(function() {
+        document.getElementById('nl-wrap').style.display = 'none';
+        document.getElementById('nl-ok').style.display = 'block';
+        if (typeof setLang === 'function' && typeof currentLang !== 'undefined') setLang(currentLang);
+      }).catch(function() {
+        document.getElementById('nl-err').style.display = 'block';
+        btn.disabled = false; btn.style.opacity = '1';
+      });
+    });
+  })();
+  </script>
+</section>
 
 <!-- FOOTER -->
 <footer class="footer">
