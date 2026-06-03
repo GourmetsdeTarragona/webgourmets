@@ -105,6 +105,10 @@
 .car-head-left .stitle{font-size:clamp(1.3rem,2vw,1.8rem);margin-top:6px;}
 .car-track{position:relative;}
 .car-track::after{content:'';position:absolute;right:0;top:0;bottom:28px;width:110px;background:linear-gradient(to right,transparent,#fff 82%);pointer-events:none;z-index:5;}
+.car-footer{display:flex;align-items:center;gap:16px;padding:0 4% 4px;margin-top:-8px;}
+.car-progress{flex:1;height:2px;background:var(--border);overflow:hidden;}
+.car-progress-fill{height:100%;background:var(--gold);width:0%;transition:width .12s linear;}
+.car-hint{font-size:.58rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);opacity:.45;white-space:nowrap;flex-shrink:0;}
 .carrusel{display:flex;gap:22px;overflow-x:auto;padding:0 4% 28px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab;align-items:stretch;}
 .carrusel::-webkit-scrollbar{display:none;}
 .carrusel.dragging{cursor:grabbing;user-select:none;}
@@ -208,14 +212,8 @@ function filterEntrades(cat) {
     sec.style.display = hasVisible ? '' : 'none';
   });
 
-  /* Scroll: posicionar just sota la barra de filtres */
-  var f = document.querySelector('.blog-filtres');
-  if (f) {
-    var nav = document.getElementById('nav');
-    var navH = nav ? nav.offsetHeight : 68;
-    var top = f.getBoundingClientRect().top + window.scrollY - navH;
-    window.scrollTo({top: Math.max(0, top), behavior: 'smooth'});
-  }
+  /* Scroll: tornar al principi del contingut */
+  window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -551,6 +549,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   </div>
   </div>
+  <div class="car-footer">
+    <div class="car-progress"><div class="car-progress-fill" id="car-visites-fill"></div></div>
+    <span class="car-hint t" data-es="← desliza →" data-ca="← llisca →">← desliza →</span>
+  </div>
 </section>
 
 <!-- ═══ SECCIÓ 2: NOTÍCIES & CULTURA ═══ -->
@@ -654,6 +656,10 @@ document.addEventListener('DOMContentLoaded', function() {
     </article>
 
   </div>
+  </div>
+  <div class="car-footer">
+    <div class="car-progress"><div class="car-progress-fill" id="car-noticies-fill"></div></div>
+    <span class="car-hint t" data-es="← desliza →" data-ca="← llisca →">← desliza →</span>
   </div>
 </section>
 
@@ -780,6 +786,10 @@ document.addEventListener('DOMContentLoaded', function() {
     </article>
 
   </div>
+  </div>
+  <div class="car-footer">
+    <div class="car-progress"><div class="car-progress-fill" id="car-vins-fill"></div></div>
+    <span class="car-hint t" data-es="← desliza →" data-ca="← llisca →">← desliza →</span>
   </div>
 </section>
 
@@ -951,6 +961,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   </div>
   </div>
+  <div class="car-footer">
+    <div class="car-progress"><div class="car-progress-fill" id="car-curiositats-fill"></div></div>
+    <span class="car-hint t" data-es="← desliza →" data-ca="← llisca →">← desliza →</span>
+  </div>
 </section>
 
 <!-- ═══ NEWSLETTER ═══ -->
@@ -1080,6 +1094,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script src="../assets/js/main.js"></script>
 <script>
+/* ── CARRUSEL: barra de progrés ── */
+(function(){
+  ['car-visites','car-noticies','car-vins','car-curiositats'].forEach(function(id){
+    var c=document.getElementById(id);
+    var fill=document.getElementById(id+'-fill');
+    if(!c||!fill) return;
+    function update(){
+      var max=c.scrollWidth-c.offsetWidth;
+      if(max<=0){fill.style.width='100%';return;}
+      fill.style.width=Math.round((c.offsetWidth+c.scrollLeft)/c.scrollWidth*100)+'%';
+    }
+    update();
+    c.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update,{passive:true});
+  });
+})();
+
 /* ── CARRUSEL: drag to scroll ── */
 (function(){
   document.querySelectorAll('.carrusel').forEach(function(c){
