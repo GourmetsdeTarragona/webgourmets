@@ -100,11 +100,11 @@
 .car-sec{padding:64px 0 44px;border-bottom:1px solid var(--border);}
 .car-sec:last-of-type{border-bottom:none;padding-bottom:80px;}
 .car-head{max-width:1100px;margin:0 auto;padding:0 4% 24px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;}
+.car-head{justify-content:flex-start;}
 .car-head-left .slabel{justify-content:flex-start;display:flex;}
 .car-head-left .stitle{font-size:clamp(1.3rem,2vw,1.8rem);margin-top:6px;}
-.car-nav{display:flex;gap:8px;flex-shrink:0;}
-.car-btn{width:38px;height:38px;border:1px solid var(--border);background:#fff;cursor:pointer;font-size:1.3rem;color:var(--navy-dark);transition:.2s;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;}
-.car-btn:hover{border-color:var(--gold);color:var(--gold);}
+.car-track{position:relative;}
+.car-track::after{content:'';position:absolute;right:0;top:0;bottom:28px;width:110px;background:linear-gradient(to right,transparent,#fff 82%);pointer-events:none;z-index:5;}
 .carrusel{display:flex;gap:22px;overflow-x:auto;padding:0 4% 28px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab;align-items:stretch;}
 .carrusel::-webkit-scrollbar{display:none;}
 .carrusel.dragging{cursor:grabbing;user-select:none;}
@@ -208,9 +208,14 @@ function filterEntrades(cat) {
     sec.style.display = hasVisible ? '' : 'none';
   });
 
-  /* Scroll suau al principi del contingut */
+  /* Scroll: posicionar just sota la barra de filtres */
   var f = document.querySelector('.blog-filtres');
-  if (f) window.scrollTo({top: f.offsetTop - 10, behavior: 'smooth'});
+  if (f) {
+    var nav = document.getElementById('nav');
+    var navH = nav ? nav.offsetHeight : 68;
+    var top = f.getBoundingClientRect().top + window.scrollY - navH;
+    window.scrollTo({top: Math.max(0, top), behavior: 'smooth'});
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -378,11 +383,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <h2 class="stitle t" data-es="Visitas 2026" data-ca="Visites 2026">Visitas 2026</h2>
       <div class="sdiv"></div>
     </div>
-    <div class="car-nav">
-      <button class="car-btn" onclick="scrollCar('car-visites',-1)" aria-label="Anterior">&#8249;</button>
-      <button class="car-btn" onclick="scrollCar('car-visites',1)" aria-label="Siguiente">&#8250;</button>
-    </div>
   </div>
+  <div class="car-track">
   <div class="carrusel" id="car-visites">
 
     <!-- Cervus Prèvia -->
@@ -548,6 +550,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 
   </div>
+  </div>
 </section>
 
 <!-- ═══ SECCIÓ 2: NOTÍCIES & CULTURA ═══ -->
@@ -558,11 +561,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <h2 class="stitle t" data-es="Noticias & Cultura" data-ca="Notícies & Cultura">Noticias & Cultura</h2>
       <div class="sdiv"></div>
     </div>
-    <div class="car-nav">
-      <button class="car-btn" onclick="scrollCar('car-noticies',-1)" aria-label="Anterior">&#8249;</button>
-      <button class="car-btn" onclick="scrollCar('car-noticies',1)" aria-label="Siguiente">&#8250;</button>
-    </div>
   </div>
+  <div class="car-track">
   <div class="carrusel" id="car-noticies">
 
     <!-- Tendencias 2026 -->
@@ -654,6 +654,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </article>
 
   </div>
+  </div>
 </section>
 
 <!-- ═══ SECCIÓ 3: VINS DEL TERRITORI ═══ -->
@@ -664,11 +665,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <h2 class="stitle t" data-es="Vinos del Territorio" data-ca="Vins del Territori">Vinos del Territorio</h2>
       <div class="sdiv"></div>
     </div>
-    <div class="car-nav">
-      <button class="car-btn" onclick="scrollCar('car-vins',-1)" aria-label="Anterior">&#8249;</button>
-      <button class="car-btn" onclick="scrollCar('car-vins',1)" aria-label="Siguiente">&#8250;</button>
-    </div>
   </div>
+  <div class="car-track">
   <div class="carrusel" id="car-vins">
 
     <!-- Vins Brisats -->
@@ -782,6 +780,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </article>
 
   </div>
+  </div>
 </section>
 
 <!-- ═══ SECCIÓ 4: CURIOSITATS DEL CAMP ═══ -->
@@ -792,11 +791,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <h2 class="stitle t" data-es="Curiosidades del Camp" data-ca="Curiositats del Camp">Curiosidades del Camp</h2>
       <div class="sdiv"></div>
     </div>
-    <div class="car-nav">
-      <button class="car-btn" onclick="scrollCar('car-curiositats',-1)" aria-label="Anterior">&#8249;</button>
-      <button class="car-btn" onclick="scrollCar('car-curiositats',1)" aria-label="Siguiente">&#8250;</button>
-    </div>
   </div>
+  <div class="car-track">
   <div class="carrusel" id="car-curiositats">
 
     <!-- Vermut Reus -->
@@ -954,6 +950,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </article>
 
   </div>
+  </div>
 </section>
 
 <!-- ═══ NEWSLETTER ═══ -->
@@ -1083,15 +1080,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script src="../assets/js/main.js"></script>
 <script>
-/* ── CARRUSEL: scroll per fletxes ── */
-function scrollCar(id, dir) {
-  var c = document.getElementById(id);
-  if (!c) return;
-  var card = c.querySelector('.blog-card');
-  var cardW = card ? card.offsetWidth + 22 : 322;
-  c.scrollBy({left: dir * cardW * 2, behavior: 'smooth'});
-}
-
 /* ── CARRUSEL: drag to scroll ── */
 (function(){
   document.querySelectorAll('.carrusel').forEach(function(c){
