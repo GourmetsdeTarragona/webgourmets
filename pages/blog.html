@@ -100,9 +100,13 @@
 .car-sec{padding:64px 0 44px;border-bottom:1px solid var(--border);}
 .car-sec:last-of-type{border-bottom:none;padding-bottom:80px;}
 .car-head{max-width:1100px;margin:0 auto;padding:0 4% 24px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;}
-.car-head{justify-content:flex-start;}
+.car-head{justify-content:space-between;}
 .car-head-left .slabel{justify-content:flex-start;display:flex;}
 .car-head-left .stitle{font-size:clamp(1.3rem,2vw,1.8rem);margin-top:6px;}
+.car-nav{display:flex;gap:6px;flex-shrink:0;align-self:center;}
+.car-btn{width:44px;height:44px;background:var(--navy-dark);color:#fff;border:none;cursor:pointer;font-size:1.6rem;display:flex;align-items:center;justify-content:center;transition:background .2s,opacity .2s;line-height:1;padding:0;}
+.car-btn:hover:not(:disabled){background:var(--gold);}
+.car-btn:disabled{opacity:.2;cursor:default;}
 .car-track{position:relative;}
 .car-track::after{content:'';position:absolute;right:0;top:0;bottom:28px;width:110px;background:linear-gradient(to right,transparent,#fff 82%);pointer-events:none;z-index:5;}
 .car-footer{display:flex;align-items:center;gap:16px;padding:0 4% 4px;margin-top:-8px;}
@@ -381,6 +385,10 @@ document.addEventListener('DOMContentLoaded', function() {
       <h2 class="stitle t" data-es="Visitas 2026" data-ca="Visites 2026">Visitas 2026</h2>
       <div class="sdiv"></div>
     </div>
+    <div class="car-nav">
+      <button class="car-btn" id="car-visites-prev" onclick="scrollCar('car-visites',-1)" aria-label="Anterior" disabled>&#8249;</button>
+      <button class="car-btn" id="car-visites-next" onclick="scrollCar('car-visites',1)" aria-label="Siguiente">&#8250;</button>
+    </div>
   </div>
   <div class="car-track">
   <div class="carrusel" id="car-visites">
@@ -563,6 +571,10 @@ document.addEventListener('DOMContentLoaded', function() {
       <h2 class="stitle t" data-es="Noticias & Cultura" data-ca="Notícies & Cultura">Noticias & Cultura</h2>
       <div class="sdiv"></div>
     </div>
+    <div class="car-nav">
+      <button class="car-btn" id="car-noticies-prev" onclick="scrollCar('car-noticies',-1)" aria-label="Anterior" disabled>&#8249;</button>
+      <button class="car-btn" id="car-noticies-next" onclick="scrollCar('car-noticies',1)" aria-label="Siguiente">&#8250;</button>
+    </div>
   </div>
   <div class="car-track">
   <div class="carrusel" id="car-noticies">
@@ -670,6 +682,10 @@ document.addEventListener('DOMContentLoaded', function() {
       <p class="slabel t" data-es="Enología" data-ca="Enologia">Enología</p>
       <h2 class="stitle t" data-es="Vinos del Territorio" data-ca="Vins del Territori">Vinos del Territorio</h2>
       <div class="sdiv"></div>
+    </div>
+    <div class="car-nav">
+      <button class="car-btn" id="car-vins-prev" onclick="scrollCar('car-vins',-1)" aria-label="Anterior" disabled>&#8249;</button>
+      <button class="car-btn" id="car-vins-next" onclick="scrollCar('car-vins',1)" aria-label="Siguiente">&#8250;</button>
     </div>
   </div>
   <div class="car-track">
@@ -800,6 +816,10 @@ document.addEventListener('DOMContentLoaded', function() {
       <p class="slabel t" data-es="Patrimonio gastronómico" data-ca="Patrimoni gastronòmic">Patrimonio gastronómico</p>
       <h2 class="stitle t" data-es="Curiosidades del Camp" data-ca="Curiositats del Camp">Curiosidades del Camp</h2>
       <div class="sdiv"></div>
+    </div>
+    <div class="car-nav">
+      <button class="car-btn" id="car-curiositats-prev" onclick="scrollCar('car-curiositats',-1)" aria-label="Anterior" disabled>&#8249;</button>
+      <button class="car-btn" id="car-curiositats-next" onclick="scrollCar('car-curiositats',1)" aria-label="Siguiente">&#8250;</button>
     </div>
   </div>
   <div class="car-track">
@@ -1094,16 +1114,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script src="../assets/js/main.js"></script>
 <script>
-/* ── CARRUSEL: barra de progrés ── */
+/* ── CARRUSEL: scroll per fletxes ── */
+function scrollCar(id,dir){
+  var c=document.getElementById(id);
+  if(!c) return;
+  var card=c.querySelector('.blog-card');
+  var cardW=card?card.offsetWidth+22:322;
+  c.scrollBy({left:dir*cardW*2,behavior:'smooth'});
+}
+
+/* ── CARRUSEL: barra de progrés + estat fletxes ── */
 (function(){
   ['car-visites','car-noticies','car-vins','car-curiositats'].forEach(function(id){
     var c=document.getElementById(id);
     var fill=document.getElementById(id+'-fill');
-    if(!c||!fill) return;
+    var btnP=document.getElementById(id+'-prev');
+    var btnN=document.getElementById(id+'-next');
+    if(!c) return;
     function update(){
       var max=c.scrollWidth-c.offsetWidth;
-      if(max<=0){fill.style.width='100%';return;}
-      fill.style.width=Math.round((c.offsetWidth+c.scrollLeft)/c.scrollWidth*100)+'%';
+      /* barra */
+      if(fill){
+        if(max<=0){fill.style.width='100%';return;}
+        fill.style.width=Math.round((c.offsetWidth+c.scrollLeft)/c.scrollWidth*100)+'%';
+      }
+      /* fletxes */
+      if(btnP) btnP.disabled=c.scrollLeft<=2;
+      if(btnN) btnN.disabled=c.scrollLeft>=max-2;
     }
     update();
     c.addEventListener('scroll',update,{passive:true});
