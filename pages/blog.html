@@ -313,12 +313,12 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- FILTRES — Tots:23 · Previes:4 · Cròniques:3 · Notícies:2 · Cultura:1 · Vins:5 · Events:1 · Curiositats:7 -->
+<!-- FILTRES — Tots:24 · Previes:4 · Cròniques:3 · Notícies:2 · Cultura:2 · Vins:5 · Events:1 · Curiositats:7 -->
 <div class="blog-filtres">
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span class="t" data-es="Todos" data-ca="Tots">Todos</span>
-      <span class="filtre-n">23</span>
+      <span class="filtre-n">24</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot" style="background:var(--navy);"></span>
@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <button class="filtre-btn" data-cat="cultura" onclick="filterEntrades('cultura')">
       <span class="filtre-dot" style="background:#5c6e3f;"></span>
       <span class="t" data-es="Cultura" data-ca="Cultura">Cultura</span>
-      <span class="filtre-n">1</span>
+      <span class="filtre-n">2</span>
     </button>
     <button class="filtre-btn" data-cat="vi" onclick="filterEntrades('vi')">
       <span class="filtre-dot" style="background:#6b2737;"></span>
@@ -646,6 +646,27 @@ document.addEventListener('DOMContentLoaded', function() {
     </article>
 
     <!-- Sant Jordi 2026 -->
+    <article class="blog-card" data-cat="cultura">
+      <div class="blog-card-img">
+        <img src="../assets/img/cine/cine-gastronomia-portada.jpg" alt="La mesa y la pantalla: cine y gastronomía, películas imprescindibles para gourmets" onerror="this.parentElement.style.background='var(--navy-dark)'">
+        <span class="blog-card-cat cat-cultura t" data-es="Cultura" data-ca="Cultura">Cultura</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Junio 2026" data-ca="Juny 2026">Junio 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es="La mesa y la pantalla<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>Cuando el cine tiene hambre</small>"
+            data-ca="La taula i la pantalla<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>Quan el cinema té gana</small>">
+          La mesa y la pantalla<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Cuando el cine tiene hambre</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="De Babette a Ratatouille, de Tampopo a The Bear. Diez películas donde la comida no es el tema: es el lenguaje."
+           data-ca="De Babette a Ratatouille, de Tampopo a The Bear. Deu pel·lícules on el menjar no és el tema: és el llenguatge.">
+          De Babette a Ratatouille, de Tampopo a The Bear. Diez películas donde la comida no es el tema: es el lenguaje.
+        </p>
+        <a href="../entrades/cine-gastronomia-peliculas.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
     <article class="blog-card" data-cat="cultura">
       <div class="blog-card-img">
         <img src="../assets/img/santjordi/santjordi-calcotada.jpg" alt="8 llibres per a un Sant Jordi Gourmet 2026">
