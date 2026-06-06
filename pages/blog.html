@@ -313,12 +313,12 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- FILTRES — Tots:25 · Previes:4 · Cròniques:3 · Notícies:2 · Cultura:2 · Vins:5 · Events:1 · Curiositats:8 -->
+<!-- FILTRES — Tots:26 · Previes:4 · Cròniques:3 · Notícies:2 · Cultura:2 · Vins:5 · Events:1 · Curiositats:9 -->
 <div class="blog-filtres">
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span class="t" data-es="Todos" data-ca="Tots">Todos</span>
-      <span class="filtre-n">25</span>
+      <span class="filtre-n">26</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot" style="background:var(--navy);"></span>
@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <button class="filtre-btn" data-cat="curiositats" onclick="filterEntrades('curiositats')">
       <span class="filtre-dot" style="background:#8b5e3c;"></span>
       <span class="t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
-      <span class="filtre-n">8</span>
+      <span class="filtre-n">9</span>
     </button>
   </div>
 </div>
@@ -845,6 +845,48 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
   <div class="car-track">
   <div class="carrusel" id="car-curiositats">
+    <article class="blog-card" data-cat="curiositats">
+      <div class="blog-card-img">
+        <img src="../assets/img/gamba/gamba-roja-fresca-plat.jpg" alt="Gamba roja de Tarragona fresca, Aristeus antennatus" onerror="this.parentElement.style.background='var(--navy-dark)'">
+        <span class="blog-card-cat cat-curiositats t" data-es="Curiositats" data-ca="Curiositats">Curiositats</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Junio 2026" data-ca="Juny 2026">Junio 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es="La gamba de Tarragona<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>El gran producto del litoral</small>"
+            data-ca="La gamba de Tarragona<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>El gran producte del litoral</small>">
+          La gamba de Tarragona<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">El gran producto del litoral</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="La misma especie que en Palamós o Dénia, pescada a 400 brazas en el Serrallo. Aquí la tienen desde siempre. Solo les faltaba contarlo bien."
+           data-ca="La mateixa espècie que a Palamós o Dénia, pescada a 400 braces al Serrallo. Aquí la tenen des de sempre. Només els faltava explicar-ho bé.">
+          La misma especie que en Palamós o Dénia, pescada a 400 brazas en el Serrallo. Aquí la tienen desde siempre. Solo les faltaba contarlo bien.
+        </p>
+        <a href="../entrades/gamba-tarragona-producte.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
+    <article class="blog-card" data-cat="curiositats">
+      <div class="blog-card-img">
+        <img src="../assets/img/gamba/gamba-roja-fresca-detall.jpg" alt="Gamba roja de Tarragona, Aristeus antennatus, calibre 1" onerror="this.parentElement.style.background='var(--navy-dark)'">
+        <span class="blog-card-cat cat-curiositats t" data-es="Curiositats" data-ca="Curiositats">Curiositats</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Junio 2026" data-ca="Juny 2026">Junio 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es="La gamba de Tarragona<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>La reina del Serrallo</small>"
+            data-ca="La gamba de Tarragona<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>La reina del Serrallo</small>">
+          La gamba de Tarragona<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">La reina del Serrallo</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Mateixa espècie, mateixos fons, mateixa qualitat. Però la gamba de Tarragona mai no va tenir el màrqueting que es mereix. Un article per esmenar-ho."
+           data-ca="Mateixa espècie, mateixos fons, mateixa qualitat. Però la gamba de Tarragona mai no va tenir el màrqueting que es mereix. Un article per esmenar-ho.">
+          Misma especie, mismos fondos, misma calidad. Pero la gamba de Tarragona nunca tuvo el marketing que se merece. Un artículo para enmendarlo.
+        </p>
+        <a href="../entrades/gamba-de-tarragona.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
         <img src="../assets/img/calcot/calcot-valls-brasa-festa.jpg" alt="Calçots a la brasa a la Gran Festa de la Calçotada de Valls" onerror="this.parentElement.style.background='var(--cream)'">
