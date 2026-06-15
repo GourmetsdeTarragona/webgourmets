@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="shortcut icon" href="../favicon.ico">
+<title>Cervus · Crònica · Gourmets de Tarragona</title>
+<meta name="description" content="Crònica completa de la visita dels Gourmets de Tarragona al restaurant Cervus de Reus. Nil Bono i Lucía Fernández, juny de 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/seccions.css">
+<style>
+.entrada-hero{position:relative;min-height:75vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.65;filter:brightness(1.05) contrast(1.05);}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.95) 0%,rgba(11,22,38,.4) 55%,rgba(11,22,38,.05) 100%);}
+.entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
+.entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
+.entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
+.entrada-back:hover{color:var(--gold);}
+.entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;}
+.entrada-meta-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
+.entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:18px;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
+.entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
+.entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.82);font-weight:300;line-height:1.85;max-width:540px;}
+.entrada-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
+.e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-title{font-family:var(--font-serif);font-size:1.75rem;color:var(--navy-dark);line-height:1.2;margin-bottom:22px;}
+.e-p{font-size:1rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:20px;}
+.e-p strong{font-weight:700;color:var(--navy-dark);}
+.e-p em{font-style:italic;color:var(--navy-dark);}
+.e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin:52px 0;}
+.e-foto-gran{margin:48px 0;position:relative;overflow:hidden;}
+.e-foto-gran img{width:100%;height:500px;object-fit:cover;display:block;}
+.e-foto-peu{font-size:.72rem;color:var(--muted);font-style:italic;margin-top:10px;padding-left:8px;border-left:2px solid var(--gold);opacity:.8;line-height:1.5;}
+.e-fotos-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:36px 0 8px;}
+.e-fotos-2 img{width:100%;height:320px;object-fit:cover;}
+.e-fotos-2-peu{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:36px;}
+.e-fotos-2-peu span{font-size:.72rem;color:var(--muted);font-style:italic;padding-left:8px;border-left:2px solid var(--gold);opacity:.8;line-height:1.5;display:block;}
+.e-fotos-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:36px 0 8px;}
+.e-fotos-3 img{width:100%;height:240px;object-fit:cover;}
+.e-foto-md{margin:36px 0;}
+.e-foto-md img{width:100%;height:380px;object-fit:cover;display:block;}
+.e-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-bottom:52px;}
+.e-img img{width:100%;height:420px;object-fit:cover;}
+.e-vins{background:var(--navy-dark);padding:52px;margin:52px 0;position:relative;}
+.e-vins::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);}
+.e-vins-label{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(184,146,74,.7);margin-bottom:10px;display:block;}
+.e-vins-title{font-family:var(--font-serif);font-size:1.5rem;color:#fff;margin-bottom:8px;}
+.e-vins-desc{font-size:.9rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.8;margin-bottom:32px;}
+.e-vins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.e-vi{background:rgba(255,255,255,.06);padding:18px 16px;border-left:3px solid rgba(184,146,74,.4);}
+.e-vi-num{font-size:.58rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(184,146,74,.65);margin-bottom:6px;}
+.e-vi-nom{font-size:.9rem;color:#fff;font-weight:600;line-height:1.4;margin-bottom:4px;}
+.e-vi-do{font-size:.75rem;color:rgba(255,255,255,.38);}
+.e-moment{background:#fff;padding:36px;border-left:4px solid var(--gold);margin:36px 0;box-shadow:0 4px 24px rgba(28,46,62,.08);}
+.e-moment-title{font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:12px;font-weight:600;}
+.e-moment-p{font-size:.95rem;color:#555;line-height:1.75;}
+.e-moment-p strong{color:var(--navy-dark);font-weight:700;}
+.e-fitxa{background:var(--cream);border:1px solid var(--border);display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:52px 0;text-align:center;}
+.e-fitxa-item{padding:32px 24px;border-right:1px solid var(--border);}
+.e-fitxa-item:last-child{border-right:none;}
+.e-fitxa-label{font-size:.62rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block;}
+.e-fitxa-valor{font-family:var(--font-serif);font-size:1rem;color:var(--navy-dark);}
+.e-compartir{position:relative;margin:64px 0 0;padding:56px 40px 52px;background:linear-gradient(135deg,#0b1626 0%,#1c2e3e 100%);overflow:hidden;}
+.e-compartir::before{content:'';position:absolute;top:-1px;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);}
+.e-compartir::after{content:'"';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:14rem;font-weight:700;color:rgba(184,146,74,.06);line-height:1;pointer-events:none;user-select:none;}
+.e-compartir-inner{position:relative;z-index:1;max-width:600px;margin:0 auto;text-align:center;}
+.e-compartir-deco{display:flex;align-items:center;gap:16px;justify-content:center;margin-bottom:20px;}
+.e-compartir-deco-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,146,74,.3));}
+.e-compartir-deco-line.r{background:linear-gradient(90deg,rgba(184,146,74,.3),transparent);}
+.e-compartir-deco span{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(184,146,74,.6);font-weight:600;white-space:nowrap;}
+.e-compartir-frase{font-family:'Playfair Display',serif;font-size:1.45rem;font-style:italic;color:rgba(255,255,255,.88);line-height:1.5;margin-bottom:32px;font-weight:400;}
+.e-compartir-frase strong{font-style:normal;font-weight:700;color:#d4a96a;}
+.e-compartir-btns{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;}
+.e-compartir-btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;font-family:'Lato',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:rgba(255,255,255,.65);transition:all .25s;cursor:pointer;text-decoration:none;}
+.e-compartir-btn:hover{border-color:rgba(184,146,74,.6);background:rgba(184,146,74,.1);color:#d4a96a;transform:translateY(-2px);}
+.e-compartir-btn.wa:hover{border-color:#25d366;background:rgba(37,211,102,.1);color:#25d366;}
+.e-compartir-btn.fb:hover{border-color:#1877f2;background:rgba(24,119,242,.1);color:#6fa8ff;}
+.e-compartir-copied{font-size:.65rem;color:#d4a96a;letter-spacing:.08em;opacity:0;transition:opacity .3s;margin-left:4px;}
+.e-compartir-copied.vis{opacity:1;}
+.e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;}
+.e-nav-retorn-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.e-tambe{margin:64px 0 0;padding-top:48px;border-top:1px solid var(--border);}
+.e-tambe-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-tambe-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);margin-bottom:32px;}
+.e-tambe-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.e-tambe-card{background:#fff;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;text-decoration:none;}
+.e-tambe-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(28,46,62,.12);}
+.e-tambe-card-img{height:172px;overflow:hidden;position:relative;}
+.e-tambe-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.e-tambe-card:hover .e-tambe-card-img img{transform:scale(1.05);}
+.e-tambe-card-cat{position:absolute;top:12px;left:12px;font-size:.57rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 10px;color:#fff;}
+.e-tambe-card-body{padding:20px;flex:1;display:flex;flex-direction:column;}
+.e-tambe-card-title{font-family:var(--font-serif);font-size:1rem;color:var(--navy-dark);line-height:1.3;margin-bottom:8px;font-weight:600;}
+.e-tambe-card-exc{font-size:.83rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:14px;flex:1;}
+.e-tambe-card-link{font-size:.63rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy-dark);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;width:fit-content;margin-top:auto;}
+.e-tambe-card:hover .e-tambe-card-link{color:var(--gold);}
+@media(max-width:768px){
+  .entrada-hero-content{padding:0 5% 52px;}
+  .entrada-cos{padding:52px 5%;}
+  .e-grid-2{grid-template-columns:1fr;gap:32px;}
+  .e-img img{height:280px;}
+  .e-foto-gran img{height:300px;}
+  .e-foto-md img{height:260px;}
+  .e-fotos-2{grid-template-columns:1fr;}
+  .e-fotos-2 img{height:260px;}
+  .e-fotos-2-peu{grid-template-columns:1fr;}
+  .e-fotos-3{grid-template-columns:1fr 1fr;}
+  .e-vins{padding:32px 20px;}
+  .e-vins-grid{grid-template-columns:1fr;}
+  .e-fitxa{grid-template-columns:1fr;}
+  .e-fitxa-item{border-right:none;border-bottom:1px solid var(--border);}
+  .e-fitxa-item:last-child{border-bottom:none;}
+  .e-compartir{padding:40px 24px 36px;}
+  .e-compartir::after{font-size:8rem;}
+  .e-compartir-frase{font-size:1.2rem;}
+}
+@media(max-width:680px){.e-tambe-grid{grid-template-columns:1fr;}}
+</style>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.gourmetsdetarragona.com/entrades/cervus-cronica-2026.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.gourmetsdetarragona.com/entrades/cervus-cronica-2026.html">
+<meta property="og:title" content="Cervus · Crònica · Gourmets de Tarragona">
+<meta property="og:description" content="Crònica completa de la visita dels Gourmets de Tarragona al restaurant Cervus de Reus. Nil Bono i Lucía Fernández, juny de 2026.">
+<meta property="og:image" content="https://www.gourmetsdetarragona.com/assets/img/cervus/cronica/sala-taula.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cervus · Crònica · Gourmets de Tarragona">
+<meta property="og:site_name" content="Gourmets de Tarragona">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="ca_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cervus · Crònica · Gourmets de Tarragona">
+<meta name="twitter:description" content="Crònica completa de la visita dels Gourmets de Tarragona al restaurant Cervus de Reus. Nil Bono i Lucía Fernández, juny de 2026.">
+<meta name="twitter:image" content="https://www.gourmetsdetarragona.com/assets/img/cervus/cronica/sala-taula.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cervus · Crònica · Gourmets de Tarragona",
+  "description": "Crònica completa de la visita dels Gourmets de Tarragona al restaurant Cervus de Reus. Nil Bono i Lucía Fernández, juny de 2026.",
+  "image": "https://www.gourmetsdetarragona.com/assets/img/cervus/cronica/sala-taula.jpg",
+  "url": "https://www.gourmetsdetarragona.com/entrades/cervus-cronica-2026.html",
+  "datePublished": "2026-06-12",
+  "inLanguage": ["es","ca"],
+  "author": {
+    "@type": "Organization",
+    "name": "Gourmets de Tarragona",
+    "url": "https://www.gourmetsdetarragona.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Gourmets de Tarragona",
+    "url": "https://www.gourmetsdetarragona.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gourmetsdetarragona.com/assets/img/logo.png"
+    }
+  }
+}
+</script>
+<script>
+var currentLang = localStorage.getItem('gdt-lang') || 'es';
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('gdt-lang', lang);
+  document.querySelectorAll('.t').forEach(function(el) {
+    var val = el.getAttribute('data-' + lang);
+    if (val !== null) el.innerHTML = val;
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+  document.getElementById('html-root').setAttribute('lang', lang);
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona" onerror="this.src='https://gourmetsdetarragona.com/wp-content/uploads/2025/05/cropped-logo_gourmets_blau_sin_fondo-3-300x296.png'"></a>
+    <div class="nav-menu">
+      <div class="nav-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
+      <div class="nav-item"><span class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</span><div class="dropdown"><a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a><a href="../pages/associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a><a href="../pages/associacio.html#valoracio" class="t" data-es="El sistema de valoración" data-ca="El sistema de valoració">El sistema de valoración</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span><div class="dropdown"><a href="../pages/restaurants.html" class="t" data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visitas 2025–26</a><a href="../pages/restaurants.html#historic" class="t" data-es="Histórico de visitas" data-ca="Històric de visites">Histórico de visitas</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Premios" data-ca="Premis">Premios</span><div class="dropdown"><a href="../pages/premis.html" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</a><a href="../pages/premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a><a href="../pages/premis.html#palmares" class="t" data-es="Palmarés histórico" data-ca="Palmarès històric">Palmarés histórico</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</span><div class="dropdown"><a href="../pages/esdeveniments.html" class="t" data-es="Cenas especiales" data-ca="Sopars especials">Cenas especiales</a><a href="../pages/esdeveniments.html#cates" class="t" data-es="Catas &amp; Visitas" data-ca="Tasts &amp; Visites">Catas &amp; Visites</a><a href="../pages/esdeveniments.html#calendari" class="t" data-es="Calendario" data-ca="Calendari">Calendario</a></div></div>
+      <div class="nav-item"><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+      <div class="nav-item"><a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
+    <div class="mobile-item"><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
+    <div class="mobile-item"><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
+    <div class="mobile-item"><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></div>
+    <div class="mobile-item"><a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></div>
+    <div class="mobile-item"><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+    <div class="mobile-item"><a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="entrada-hero">
+  <div class="entrada-hero-bg" style="background-image:url('../assets/img/cervus/cronica/sala-taula.jpg');"></div>
+  <div class="entrada-hero-grad"></div>
+  <div class="entrada-hero-line"></div>
+  <div class="entrada-hero-content">
+    <a href="../pages/blog.html" class="entrada-back"><i class="fa fa-arrow-left"></i> <span class="t" data-es="Volver al Blog" data-ca="Tornar al Blog">Volver al Blog</span></a>
+    <div class="entrada-meta-top">
+      <span class="entrada-badge t" data-es="Crónica · 4ª Visita · Temporada 2026" data-ca="Crònica · 4a Visita · Temporada 2026">Crónica · 4ª Visita · Temporada 2026</span>
+    </div>
+    <div class="entrada-meta-info">
+      <span class="entrada-meta-item"><i class="fa fa-map-marker-alt"></i> Reus</span>
+      <span class="entrada-meta-item"><i class="fa fa-leaf"></i> <span class="t" data-es="Cocina de producto y territorio" data-ca="Cuina de producte i territori">Cocina de producto y territorio</span></span>
+      <span class="entrada-meta-item"><i class="fa fa-calendar"></i> <span class="t" data-es="10–11 Junio 2026" data-ca="10–11 Juny 2026">10–11 Junio 2026</span></span>
+    </div>
+    <h1 class="entrada-titol">Cervus · <em class="t" data-es="Reus" data-ca="Reus">Reus</em></h1>
+    <p class="entrada-subtitol t"
+       data-es="Nil Bono y Lucía Fernández nos recibieron con un rebujito reinterpretado y nos despidieron con la certeza de que Reus tiene una cocina que sabe exactamente dónde está."
+       data-ca="Nil Bono i Lucía Fernández ens van rebre amb un rebujito reinterpretat i ens van acomiadar amb la certesa que Reus té una cuina que sap exactament on és.">
+      Nil Bono y Lucía Fernández nos recibieron con un rebujito reinterpretado y nos despidieron con la certeza de que Reus tiene una cocina que sabe exactamente dónde está.
+    </p>
+  </div>
+</header>
+
+<main class="entrada-cos">
+
+  <!-- B1: PRESENTACIÓ -->
+  <span class="e-label t" data-es="Una visita, dos noches" data-ca="Una visita, dues nits">Una visita, dos noches</span>
+  <h2 class="e-title t" data-es="Cervus no necesita gritar" data-ca="Cervus no necessita cridar">Cervus no necesita gritar</h2>
+  <div class="e-divider"></div>
+  <div class="e-grid-2">
+    <div>
+      <p class="e-p t"
+         data-es="Cervus no es un restaurante que llame la atención desde la calle. Pero cuando se abre la puerta y aparece aquella sala austera, de paredes oscuras y luz contenida, con la cocina vista al fondo como si fuera el escenario de un teatro pequeño, ya se entiende que aquí pasa algo diferente. Reus, que lleva tiempo demostrando que tiene mucho más que decir gastronómicamente de lo que a menudo se le reconoce, tiene en <strong>Nil Bono</strong> y <strong>Lucía Fernández</strong> dos cocineros que trabajan con la seriedad y la delicadeza de los que no necesitan gritar para hacerse escuchar."
+         data-ca="Cervus no és un restaurant que cridi l'atenció des del carrer. Però quan s'obre la porta i apareix aquella sala austera, de parets fosques i llum contida, amb la cuina vista al fons com si fos l'escenari d'un teatre petit, ja s'entén que aquí passa alguna cosa diferent. Reus, que porta temps demostrant que té molt més a dir gastronòmicament del que sovint se li reconeix, té en <strong>Nil Bono</strong> i <strong>Lucía Fernández</strong> dos cuiners que treballen amb la seriositat i la delicadesa dels que no necessiten cridar per fer-se escoltar.">
+        Cervus no es un restaurante que llame la atención desde la calle. Pero cuando se abre la puerta y aparece aquella sala austera, de paredes oscuras y luz contenida, con la cocina vista al fondo como si fuera el escenario de un teatro pequeño, ya se entiende que aquí pasa algo diferente. Reus, que lleva tiempo demostrando que tiene mucho más que decir gastronómicamente de lo que a menudo se le reconoce, tiene en <strong>Nil Bono</strong> y <strong>Lucía Fernández</strong> dos cocineros que trabajan con la seriedad y la delicadeza de los que no necesitan gritar para hacerse escuchar.
+      </p>
+      <p class="e-p t"
+         data-es="La visita de los Gourmets de Tarragona al Cervus fue, por cuestiones de aforo, una visita doble: dos noches, dos grupos, un mismo menú. El restaurante, en un gesto que dice mucho de su carácter, se ofreció sin dudar a doblar la jornada para acoger a todos los socios. Un detalle que no pasó desapercibido."
+         data-ca="La visita dels Gourmets de Tarragona al Cervus va ser, per qüestions d'aforament, una visita doble: dues nits, dos grups, un mateix menú. El restaurant, en un gest que diu molt del seu caràcter, es va oferir sense dubtar a doblar la jornada per acollir tots els socis. Un detall que no va passar desapercebut.">
+        La visita de los Gourmets de Tarragona al Cervus fue, por cuestiones de aforo, una visita doble: dos noches, dos grupos, un mismo menú. El restaurante, en un gesto que dice mucho de su carácter, se ofreció sin dudar a doblar la jornada para acoger a todos los socios. Un detalle que no pasó desapercibido.
+      </p>
+    </div>
+    <div class="e-img">
+      <img src="../assets/img/cervus/cronica/sala-taula.jpg" alt="La sala del Cervus preparada per als Gourmets de Tarragona — taula llarga, cadires de reixeta i cuina vista al fons">
+    </div>
+  </div>
+
+  <div class="e-fotos-2">
+    <img src="../assets/img/cervus/cronica/sala-detall.jpg" alt="Detall de la sala del Cervus — llum contida i ambient auster">
+    <img src="../assets/img/cervus/cronica/minuta.jpg" alt="Minuta del sopar dels Gourmets de Tarragona al Cervus — juny 2026" style="object-fit:contain;background:#f5f0e8;">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="La sala del Cervus — paredes oscuras, iluminación de acento y la cocina como telón de fondo" data-ca="La sala del Cervus — parets fosques, il·luminació d'accent i la cuina com a teló de fons">La sala del Cervus — paredes oscuras, iluminación de acento y la cocina como telón de fondo</span>
+    <span class="t" data-es="La minuta de la velada: cinco pases y tres referencias vinícolas de criterio" data-ca="La minuta de la vetllada: cinc pases i tres referències vinícoles de criteri">La minuta de la velada: cinco pases y tres referencias vinícolas de criterio</span>
+  </div>
+
+  <!-- B2: REBUJITO -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="La bienvenida" data-ca="La benvinguda">La bienvenida</span>
+  <h2 class="e-title t" data-es="El rebujito que no era rebujito" data-ca="El rebujito que no era rebujito">El rebujito que no era rebujito</h2>
+  <p class="e-p t"
+     data-es="La noche arrancó con una sorpresa: una reinterpretación del rebujito traída al territorio. <strong>Vermut de Reus y oloroso</strong>, servidos juntos con una elegancia discreta. Lo que en Andalucía es fiesta y bullicio, aquí se convertía en bienvenida civilizada, un guiño de complicidad entre culturas que puso a todos de buen humor desde el primer momento."
+     data-ca="La nit va arrencar amb una sorpresa: una reinterpretació del rebujito portada al territori. <strong>Vermut de Reus i oloroso</strong>, servits junts amb una elegància discreta. El que a Andalusia és festa i gresca, aquí es convertia en benvinguda civilitzada, un gest de complicitat entre cultures que va posar tothom de bon humor des del primer moment.">
+    La noche arrancó con una sorpresa: una reinterpretación del rebujito traída al territorio. <strong>Vermut de Reus y oloroso</strong>, servidos juntos con una elegancia discreta. Lo que en Andalucía es fiesta y bullicio, aquí se convertía en bienvenida civilizada, un guiño de complicidad entre culturas que puso a todos de buen humor desde el primer momento.
+  </p>
+  <p class="e-p t"
+     data-es="Nil Bono escribe sus minutas como poemas breves: tres palabras por plato, ningún adorno innecesario. Y la cocina, después, es exactamente así."
+     data-ca="Nil Bono escriu les seves minutas com poemes breus: tres paraules per plat, cap ornament innecessari. I la cuina, després, és exactament així.">
+    Nil Bono escribe sus minutas como poemas breves: tres palabras por plato, ningún adorno innecesario. Y la cocina, después, es exactamente así.
+  </p>
+
+  <!-- B3: APERITIUS -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="El inicio del pase" data-ca="L'inici del pase">El inicio del pase</span>
+  <h2 class="e-title t" data-es="Tres bocados, tres maneras de decir de dónde vienes" data-ca="Tres bocins, tres maneres de dir d'on véns">Tres bocados, tres maneras de decir de dónde vienes</h2>
+  <p class="e-p t"
+     data-es="Los aperitivos llegaron en una estructura de madera escalonada que ya anunciaba el sentido estético de la casa: <em>clotxa</em> —un plato tradicional hecho con pan redondo—, <em>alcachofa con Palo Cortado</em> y <em>pato asado con higos</em>. Tres bocados, tres maneras de decir de dónde vienes."
+     data-ca="Els aperitius van arribar en una estructura de fusta escalonada que ja anunciava el sentit estètic de la casa: <em>clotxa</em> —un plat tradicional fet amb pa rodó—, <em>carxofa amb Palo Cortado</em> i <em>ànec rostit amb figues</em>. Tres bocins, tres maneres de dir d'on véns.">
+    Los aperitivos llegaron en una estructura de madera escalonada que ya anunciaba el sentido estético de la casa: <em>clotxa</em> —un plato tradicional hecho con pan redondo—, <em>alcachofa con Palo Cortado</em> y <em>pato asado con higos</em>. Tres bocados, tres maneras de decir de dónde vienes.
+  </p>
+
+  <div class="e-fotos-2">
+    <img src="../assets/img/cervus/cronica/aperitius-torre.jpg" alt="Torre de fusta amb els aperitius del Cervus — clotxa, carxofa i ànec">
+    <img src="../assets/img/cervus/cronica/aperitius-clotxa.jpg" alt="Clotxa del Cervus — plat tradicional servit en plat de ceràmica verda">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="La torre de madera: clotxa, alcachofa con Palo Cortado y pato asado con higos" data-ca="La torre de fusta: clotxa, carxofa amb Palo Cortado i ànec rostit amb figues">La torre de madera: clotxa, alcachofa con Palo Cortado y pato asado con higos</span>
+    <span class="t" data-es="La clotxa, servida en cerámica artesanal verde — un clásico de la tierra tratado con respeto" data-ca="La clotxa, servida en ceràmica artesanal verda — un clàssic de la terra tractat amb respecte">La clotxa, servida en cerámica artesanal verde — un clásico de la tierra tratado con respeto</span>
+  </div>
+
+  <!-- B4: GALERA -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Primer plato" data-ca="Primer plat">Primer plato</span>
+  <h2 class="e-title t" data-es="Galera, amontillado, lácteos" data-ca="Galera, amontillado, làctics">Galera, amontillado, lácteos</h2>
+  <p class="e-p t"
+     data-es="El primer plato fue la <strong>galera con amontillado y lácteos</strong>: un bol de color ocre intenso, con la galera —aquel crustáceo injustamente relegado a los caldos de mercado y raramente elevado a protagonista— en primer plano, acompañada de notas de hinojo que aportaban una frescura inesperada. La incorporación del amontillado sumaba una profundidad umami que levantó comentarios en la mesa."
+     data-ca="El primer plat va ser la <strong>galera amb amontillado i làctics</strong>: un bol de color ocre intens, amb la galera —aquell crustaci injustament relegat als brous dels mercats i rarament elevat a protagonista— en primer pla, acompanyada de notes de fonoll que aportaven una frescor inesperada. La incorporació de l'amontillado sumava una profunditat umami que va aixecar comentaris a la taula.">
+    El primer plato fue la <strong>galera con amontillado y lácteos</strong>: un bol de color ocre intenso, con la galera —aquel crustáceo injustamente relegado a los caldos de mercado y raramente elevado a protagonista— en primer plano, acompañada de notas de hinojo que aportaban una frescura inesperada. La incorporación del amontillado sumaba una profundidad umami que levantó comentarios en la mesa.
+  </p>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/cervus/cronica/galera.jpg" alt="Galera amb amontillado i làctics — Cervus, Reus" style="object-position:center;">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="Galera, amontillado y lácteos — la galera como protagonista, con notas de hinojo y una profundidad umami notable"
+     data-ca="Galera, amontillado i làctics — la galera com a protagonista, amb notes de fonoll i una profunditat umami notable">
+    Galera, amontillado y lácteos — la galera como protagonista, con notas de hinojo y una profundidad umami notable
+  </p>
+
+  <!-- B5: PORC IBÈRIC -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Segundo plato" data-ca="Segon plat">Segundo plato</span>
+  <h2 class="e-title t" data-es="Cerdo ibérico, chipirones, tinta" data-ca="Porc ibèric, xipirons, tinta">Cerdo ibérico, chipirones, tinta</h2>
+  <p class="e-p t"
+     data-es="Continuó el <strong>cerdo ibérico, chipirones y tinta</strong>: un plato de dos mundos que se encuentran sin imponerse el uno al otro. Las albóndigas de cerdo ibérico en su salsa morena y los chipirones sobre fondo de tinta, con aquellos puntos de <strong>alioli</strong> que actuaban como contrapunto graso y goloso. Visualmente impactante, sabiamente equilibrado."
+     data-ca="Va continuar el <strong>porc ibèric, xipirons i tinta</strong>: un plat de dos móns que es troben sense imposar-se l'un a l'altre. Les mandonguilles de porc ibèric en la seva salsa bruna i els xipirons sobre fons de tinta, amb aquells punts d'<strong>allioli</strong> que actuaven com a contrapunt gras i golós. Visualment impactant, sàviament equilibrat.">
+    Continuó el <strong>cerdo ibérico, chipirones y tinta</strong>: un plato de dos mundos que se encuentran sin imponerse el uno al otro. Las albóndigas de cerdo ibérico en su salsa morena y los chipirones sobre fondo de tinta, con aquellos puntos de <strong>alioli</strong> que actuaban como contrapunto graso y goloso. Visualmente impactante, sabiamente equilibrado.
+  </p>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/cervus/cronica/porc-xipirons.jpg" alt="Porc ibèric, xipirons i tinta — Cervus, Reus" style="object-position:center;">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="Cerdo ibérico, chipirones y tinta — las albóndigas en salsa morena y los chipirones sobre tinta, con puntos de alioli"
+     data-ca="Porc ibèric, xipirons i tinta — les mandonguilles en salsa bruna i els xipirons sobre tinta, amb punts d'allioli">
+    Cerdo ibérico, chipirones y tinta — las albóndigas en salsa morena y los chipirones sobre tinta, con puntos de alioli
+  </p>
+
+  <!-- B6: ARRÒS -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="El plato de la noche" data-ca="El plat de la nit">El plato de la noche</span>
+  <h2 class="e-title t" data-es="Arroz, mejilla, fricandó" data-ca="Arròs, galta, fricandó">Arroz, mejilla, fricandó</h2>
+  <p class="e-p t"
+     data-es="El <strong>arroz, mejilla y fricandó</strong> fue el momento de máxima intensidad de la noche. Un arroz meloso —ni caldoso ni seco— con mejilla de cerdo y fricandó, acompañado de patatas fritas, coronado por una galleta calada como un rosetón gótico que parecía salida de un taller de orfebrería. El tipo de plato que recuerda por qué el arroz es mucho más que un ingrediente cuando se trata con respeto."
+     data-ca="L'<strong>arròs, galta i fricandó</strong> va ser el moment de màxima intensitat de la nit. Un arròs melós —ni caldós ni sec— amb galta de porc i fricandó, acompanyat de patates fregides, coronat per una galeta calada com un rosetó gòtic que semblava sortida d'un taller d'orfebreria. El tipus de plat que recorda per què l'arròs és molt més que un ingredient quan es tracta amb respecte.">
+    El <strong>arroz, mejilla y fricandó</strong> fue el momento de máxima intensidad de la noche. Un arroz meloso —ni caldoso ni seco— con mejilla de cerdo y fricandó, acompañado de patatas fritas, coronado por una galleta calada como un rosetón gótico que parecía salida de un taller de orfebrería. El tipo de plato que recuerda por qué el arroz es mucho más que un ingrediente cuando se trata con respeto.
+  </p>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/cervus/cronica/arros.jpg" alt="Arròs, galta i fricandó — Cervus, Reus — coronat per una galeta calada" style="object-position:center;">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="Arroz, mejilla y fricandó — meloso, con patatas fritas y la galleta calada como firma visual del plato"
+     data-ca="Arròs, galta i fricandó — melós, amb patates fregides i la galeta calada com a firma visual del plat">
+    Arroz, mejilla y fricandó — meloso, con patatas fritas y la galleta calada como firma visual del plato
+  </p>
+
+  <!-- B7: POSTRE -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="El cierre" data-ca="El tancament">El cierre</span>
+  <h2 class="e-title t" data-es="Chocolate blanco, hierbas, limón" data-ca="Xocolata blanca, herbes, llimona">Chocolate blanco, hierbas, limón</h2>
+  <p class="e-p t"
+     data-es="El postre, <strong>chocolate blanco, hierbas y limón</strong>, cerró el círculo con una elegancia ligera: una crema espiralada sobre la que reposaba un sorbete inmaculado, con pequeños fragmentos de limón confitado y hierbas. Fresco, limpio, sin endulzar el final innecesariamente."
+     data-ca="El postre, <strong>xocolata blanca, herbes i llimona</strong>, va tancar el cercle amb una elegància lleugera: una crema espirulada sobre la qual reposava un sorbet immaculat, amb petits fragments de llimona confitada i herbes. Fresc, net, sense ensucrar el final innecessàriament.">
+    El postre, <strong>chocolate blanco, hierbas y limón</strong>, cerró el círculo con una elegancia ligera: una crema espiralada sobre la que reposaba un sorbete inmaculado, con pequeños fragmentos de limón confitado y hierbas. Fresco, limpio, sin endulzar el final innecesariamente.
+  </p>
+
+  <div class="e-foto-md">
+    <img src="../assets/img/cervus/cronica/postre.jpg" alt="Xocolata blanca, herbes i llimona — postre del Cervus, Reus">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="Chocolate blanco, hierbas y limón — crema espiralada, sorbete y limón confitado. Un final fresco y sin excesos"
+     data-ca="Xocolata blanca, herbes i llimona — crema espirulada, sorbet i llimona confitada. Un final fresc i sense excessos">
+    Chocolate blanco, hierbas y limón — crema espiralada, sorbete y limón confitado. Un final fresco y sin excesos
+  </p>
+
+  <!-- B8: VINS -->
+  <div class="e-vins">
+    <span class="e-vins-label t" data-es="El maridaje · Tres referencias de criterio" data-ca="El maridatge · Tres referències de criteri">El maridaje · Tres referencias de criterio</span>
+    <p class="e-vins-title t" data-es="De Cádiz al Montsant, pasando por el Penedès" data-ca="De Cadis al Montsant, passant pel Penedès">De Cádiz al Montsant, pasando por el Penedès</p>
+    <p class="e-vins-desc t"
+       data-es="La selección vinícola corrió a cargo de la casa con un criterio que merece mención. Tres vinos, tres territorios, un hilo conductor claro: honestidad y maridaje pensado plato a plato."
+       data-ca="La selecció vinícola va córrer a càrrec de la casa amb un criteri que mereix menció. Tres vins, tres territoris, un fil conductor clar: honestedat i maridatge pensat plat a plat.">
+      La selección vinícola corrió a cargo de la casa con un criterio que merece mención. Tres vinos, tres territorios, un hilo conductor claro: honestidad y maridaje pensado plato a plato.
+    </p>
+    <div class="e-vins-grid">
+      <div class="e-vi">
+        <p class="e-vi-num t" data-es="Aperitivos · Galera" data-ca="Aperitius · Galera">Aperitivos · Galera</p>
+        <p class="e-vi-nom">Muelle de Olaso</p>
+        <p class="e-vi-do">Palomino · Luis Pérez · Cádiz</p>
+      </div>
+      <div class="e-vi">
+        <p class="e-vi-num t" data-es="Cerdo · Arroz" data-ca="Porc · Arròs">Cerdo · Arroz</p>
+        <p class="e-vi-nom">Cairats Origen</p>
+        <p class="e-vi-do">Ull de llebre, Carinyena, Garnatxa · Montsant</p>
+      </div>
+      <div class="e-vi">
+        <p class="e-vi-num t" data-es="Postre" data-ca="Postre">Postre</p>
+        <p class="e-vi-nom">Albet i Noya Entorns</p>
+        <p class="e-vi-do">Xarel·lo, Macabeu, Parellada · Penedès</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="e-fotos-2">
+    <img src="../assets/img/cervus/cronica/vins-ampolles.jpg" alt="Les tres ampolles del maridatge del Cervus — Muelle de Olaso, Cairats Origen i Albet i Noya Entorns">
+    <img src="../assets/img/cervus/cronica/bodega.jpg" alt="El prestatge de vins del Cervus — la carta en pedra vista">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="Las tres referencias del maridaje: Muelle de Olaso, Cairats Origen y Albet i Noya Entorns" data-ca="Les tres referències del maridatge: Muelle de Olaso, Cairats Origen i Albet i Noya Entorns">Las tres referencias del maridaje: Muelle de Olaso, Cairats Origen y Albet i Noya Entorns</span>
+    <span class="t" data-es="El expositor de vinos del Cervus — una carta con criterio y apuesta clara por el territorio" data-ca="L'expositor de vins del Cervus — una carta amb criteri i aposta clara pel territori">El expositor de vinos del Cervus — una carta con criterio y apuesta clara por el territorio</span>
+  </div>
+
+  <!-- B9: DIPLOMA -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="El reconocimiento" data-ca="El reconeixement">El reconocimiento</span>
+  <h2 class="e-title t" data-es="El diploma de los Gourmets" data-ca="El diploma dels Gourmets">El diploma de los Gourmets</h2>
+  <p class="e-p t"
+     data-es="La segunda noche tuvo un momento especial: la entrega del diploma de los Gourmets de Tarragona a <strong>Nil Bono</strong> y <strong>Lucía Fernández</strong>. Carles Just, socio de la asociación, y <strong>Juan Manuel Rodríguez Yarritu</strong>, presidente, hicieron entrega del reconocimiento a una pareja de cocineros que lo recibió con la misma discreción con la que cocinan: sin estridencias, con una sonrisa sincera y el orgullo bien contenido de quien sabe que el trabajo bien hecho acaba siempre hablando solo."
+     data-ca="La segona nit va tenir un moment especial: el lliurament del diploma dels Gourmets de Tarragona a <strong>Nil Bono</strong> i <strong>Lucía Fernández</strong>. Carles Just, soci de l'associació, i <strong>Juan Manuel Rodríguez Yarritu</strong>, president, van fer lliurament del reconeixement a una parella de cuiners que el va rebre amb la mateixa discreció amb la qual cuinen: sense estridències, amb un somriure sincer i l'orgull ben contingut de qui sap que la feina ben feta acaba sempre parlant sola.">
+    La segunda noche tuvo un momento especial: la entrega del diploma de los Gourmets de Tarragona a <strong>Nil Bono</strong> y <strong>Lucía Fernández</strong>. Carles Just, socio de la asociación, y <strong>Juan Manuel Rodríguez Yarritu</strong>, presidente, hicieron entrega del reconocimiento a una pareja de cocineros que lo recibió con la misma discreción con la que cocinan: sin estridencias, con una sonrisa sincera y el orgullo bien contenido de quien sabe que el trabajo bien hecho acaba siempre hablando solo.
+  </p>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/cervus/cronica/diploma.jpg" alt="Lliurament del diploma dels Gourmets de Tarragona a Nil Bono i Lucía Fernández — Cervus, Reus" style="object-position:center 20%;">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="De izq. a dcha.: Carles Just (socio), Lucía Fernández, Nil Bono y Juan Manuel Rodríguez Yarritu (presidente) · Cervus · Junio 2026"
+     data-ca="D'esq. a dreta: Carles Just (soci), Lucía Fernández, Nil Bono i Juan Manuel Rodríguez Yarritu (president) · Cervus · Juny 2026">
+    De izq. a dcha.: Carles Just (socio), Lucía Fernández, Nil Bono y Juan Manuel Rodríguez Yarritu (presidente) · Cervus · Junio 2026
+  </p>
+
+  <!-- B11: CONCLUSIÓ -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Nuestra mirada" data-ca="La nostra mirada">Nuestra mirada</span>
+  <h2 class="e-title t" data-es="Reus tiene lo que tiene" data-ca="Reus té el que té">Reus tiene lo que tiene</h2>
+  <p class="e-p t"
+     data-es="Cervus es el tipo de restaurante que te hace agradecer que Reus tenga lo que tiene. Una cocina sin imposturas, ejecutada con oficio y sensibilidad, que sitúa el producto del territorio en el centro sin renunciar a la técnica. Nil Bono y Lucía Fernández llevan catorce meses con un Sol Repsol al hombro y se nota que no les pesa: siguen cocinando como si cada noche fuera la primera vez que tienen que demostrar algo."
+     data-ca="Cervus és el tipus de restaurant que et fa agrair que Reus tingui el que té. Una cuina sense impostures, executada amb ofici i sensibilitat, que situa el producte del territori al centre sense renunciar a la tècnica. Nil Bono i Lucía Fernández porten catorze mesos amb un Sol Repsol a l'espatlla i es nota que no els pesa: segueixen cuinant com si cada nit fos la primera vegada que han de demostrar alguna cosa.">
+    Cervus es el tipo de restaurante que te hace agradecer que Reus tenga lo que tiene. Una cocina sin imposturas, ejecutada con oficio y sensibilidad, que sitúa el producto del territorio en el centro sin renunciar a la técnica. Nil Bono y Lucía Fernández llevan catorce meses con un Sol Repsol al hombro y se nota que no les pesa: siguen cocinando como si cada noche fuera la primera vez que tienen que demostrar algo.
+  </p>
+  <p class="e-p t"
+     data-es="La valoración definitiva llegará en la Gala de finales de año, cuando los socios expresen su voto. Pero el veredicto de las dos veladas fue claro: ningún plato decepcionó, la sala estuvo atenta en todo momento, y los Gourmets de Tarragona salieron de Reus con la satisfacción de quien ha descubierto que una ciudad a diez minutos de casa puede sorprenderte todavía."
+     data-ca="La valoració definitiva arribarà a la Gala de finals d'any, quan els socis expressin el seu vot. Però el veredicte de les dues vetllades va ser clar: cap plat va decebre, la sala va estar atenta en tot moment, i els Gourmets de Tarragona van sortir de Reus amb la satisfacció de qui ha descobert que una ciutat a deu minuts de casa encara pot sorprendre.">
+    La valoración definitiva llegará en la Gala de finales de año, cuando los socios expresen su voto. Pero el veredicto de las dos veladas fue claro: ningún plato decepcionó, la sala estuvo atenta en todo momento, y los Gourmets de Tarragona salieron de Reus con la satisfacción de quien ha descubierto que una ciudad a diez minutos de casa puede sorprenderte todavía.
+  </p>
+
+  <!-- FITXA -->
+  <div class="e-fitxa">
+    <div class="e-fitxa-item"><span class="e-fitxa-label t" data-es="Restaurante" data-ca="Restaurant">Restaurante</span><span class="e-fitxa-valor">Cervus · Reus</span></div>
+    <div class="e-fitxa-item"><span class="e-fitxa-label t" data-es="Chefs" data-ca="Xefs">Chefs</span><span class="e-fitxa-valor">Nil Bono · Lucía Fernández</span></div>
+    <div class="e-fitxa-item"><span class="e-fitxa-label t" data-es="Visita" data-ca="Visita">Visita</span><span class="e-fitxa-valor t" data-es="4ª · 10–11 Junio 2026" data-ca="4a · 10–11 Juny 2026">4ª · 10–11 Junio 2026</span></div>
+  </div>
+
+  <!-- COMPARTIR -->
+  <div class="e-compartir">
+    <div class="e-compartir-inner">
+      <div class="e-compartir-deco">
+        <div class="e-compartir-deco-line"></div>
+        <span class="t" data-es="Compartir esta crónica" data-ca="Compartir aquesta crònica">Compartir esta crónica</span>
+        <div class="e-compartir-deco-line r"></div>
+      </div>
+      <p class="e-compartir-frase t"
+         data-es="<em>La cuina que Reus es mereixia.</em><br><strong>Cervus · Nil Bono · Lucía Fernández · 2026</strong>"
+         data-ca="<em>La cuina que Reus es mereixia.</em><br><strong>Cervus · Nil Bono · Lucía Fernández · 2026</strong>">
+        <em>La cuina que Reus es mereixia.</em><br><strong>Cervus · Nil Bono · Lucía Fernández · 2026</strong>
+      </p>
+      <div class="e-compartir-btns">
+        <a id="btn-wa" href="#" class="e-compartir-btn wa" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
+        <a id="btn-fb" href="#" class="e-compartir-btn fb" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a>
+        <a id="btn-x" href="#" class="e-compartir-btn" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>X</a>
+        <button class="e-compartir-btn copy" onclick="copiarEnllac(this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg><span class="t" data-es="Copiar enlace" data-ca="Copiar enllaç">Copiar enlace</span><span class="e-compartir-copied t" data-es="¡Copiado!" data-ca="Copiat!">¡Copiado!</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAMBÉ ET POT INTERESSAR -->
+  <div class="e-tambe">
+    <span class="e-tambe-label t" data-es="También te puede interesar" data-ca="També et pot interessar">También te puede interesar</span>
+    <h2 class="e-tambe-title t" data-es="Más crónicas de restaurante" data-ca="Més cròniques de restaurant">Más crónicas de restaurante</h2>
+    <div class="e-tambe-grid">
+      <a href="cervus-previa-2026.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/cervus/hero.jpg" alt="Cervus · Prèvia" onerror="this.parentElement.style.background='#1c2e3e'">
+          <span class="e-tambe-card-cat t" style="background:var(--navy);" data-es="Previa" data-ca="Prèvia">Previa</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <h3 class="e-tambe-card-title t" data-es="Cervus · Previa" data-ca="Cervus · Prèvia">Cervus · Previa</h3>
+          <p class="e-tambe-card-exc t"
+             data-es="Dos cocineros, una decisión de vida y un Sol Repsol en catorce meses. Todo lo que había que saber antes de la visita."
+             data-ca="Dos cuiners, una decisió de vida i un Sol Repsol en catorze mesos. Tot el que calia saber abans de la visita.">
+            Dos cocineros, una decisión de vida y un Sol Repsol en catorce meses.
+          </p>
+          <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+      <a href="terrat-cronica-2026.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/terrat/cronica/romesco-01.jpg" alt="El Terrat · Crònica" onerror="this.parentElement.style.background='#1c2e3e'">
+          <span class="e-tambe-card-cat t" style="background:var(--gold);" data-es="Crónica" data-ca="Crònica">Crónica</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <h3 class="e-tambe-card-title t" data-es="El Terrat · Crónica" data-ca="El Terrat · Crònica">El Terrat · Crónica</h3>
+          <p class="e-tambe-card-exc t"
+             data-es="Agua de rosas, briwat en dos pasos, romesco de gamba y tajine de cordero. Una noche sin ninguna grieta."
+             data-ca="Aigua de roses, briwat en dos passes, romesco de gamba i tajine de xai. Una nit sense cap grieta.">
+            Agua de rosas, briwat en dos pasos, romesco de gamba y tajine de cordero.
+          </p>
+          <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- NAV RETORN -->
+<div class="e-nav-retorn">
+  <div class="e-nav-retorn-links">
+    <a href="../pages/blog.html" class="btn-outline t" data-es="Volver al Blog" data-ca="Tornar al Blog">Volver al Blog</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona" onerror="this.style.display='none'">
+      <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4 class="t" data-es="Navegación" data-ca="Navegació">Navegación</h4><ul><li><a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a></li><li><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li><li><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li><li><a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></li><li><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li></ul></div>
+    <div class="footer-col"><h4 class="t" data-es="Legal" data-ca="Legal">Legal</h4><ul><li><a href="../pages/avis-legal.html" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li><li><a href="../pages/privacitat.html" class="t" data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a></li><li><a href="../pages/cookies.html" class="t" data-es="Política de Cookies" data-ca="Política de Cookies">Política de Cookies</a></li></ul></div>
+    <div class="footer-col"><h4 class="t" data-es="Contacto" data-ca="Contacte">Contacto</h4><p><a href="mailto:gourmetsdetarragona@gourmetsdetarragona.com">gourmetsdetarragona@gourmetsdetarragona.com</a></p><p>Tarragona, Catalunya</p></div>
+  </div>
+  <div class="footer-bottom"><p class="t" data-es="© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados" data-ca="© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats">© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados</p></div>
+</footer>
+
+<script>
+var currentLang = localStorage.getItem('gdt-lang') || 'es';
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('gdt-lang', lang);
+  document.querySelectorAll('.t').forEach(function(el) {
+    var val = el.getAttribute('data-' + lang);
+    if (val !== null) el.innerHTML = val;
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+  document.getElementById('html-root').setAttribute('lang', lang);
+}
+document.addEventListener('DOMContentLoaded', function() {
+  if (currentLang === 'ca') setLang('ca');
+});
+</script>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var url=encodeURIComponent(window.location.href);
+  var titol=encodeURIComponent(document.title);
+  var wa=document.getElementById('btn-wa');
+  var fb=document.getElementById('btn-fb');
+  var x=document.getElementById('btn-x');
+  if(wa)wa.href='https://wa.me/?text='+titol+'%20'+url;
+  if(fb)fb.href='https://www.facebook.com/sharer/sharer.php?u='+url;
+  if(x)x.href='https://x.com/intent/tweet?url='+url+'&text='+titol;
+})();
+function copiarEnllac(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var msg=btn.querySelector('.e-compartir-copied');
+    if(msg){msg.classList.add('vis');setTimeout(function(){msg.classList.remove('vis');},2200);}
+  });
+}
+</script>
+</body>
+</html>
