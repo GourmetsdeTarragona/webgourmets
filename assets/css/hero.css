@@ -35,6 +35,10 @@
 }
 
 /* Línia vertical daurada esquerra */
+@keyframes clipReveal {
+  from { clip-path: inset(0 0 100% 0); }
+  to   { clip-path: inset(0 0 0% 0); }
+}
 .hero-left-line {
   position: absolute; left: 3.5%; top: 0; bottom: 0; width: 1px;
   background: linear-gradient(
@@ -44,6 +48,7 @@
     rgba(184,146,74,.35) 80%,
     transparent 100%
   );
+  animation: clipReveal 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.4s both;
 }
 
 /* Contingut principal */

@@ -11,29 +11,25 @@
 /* ════════════════════════════════════════
    REVEAL ON SCROLL — stagger helpers
 ════════════════════════════════════════ */
-.reveal { opacity:0; transform:translateY(24px); transition:opacity .65s var(--ease-out), transform .65s var(--ease-out); }
+.reveal { opacity:0; transform:translateY(24px); transition:opacity .65s ease, transform .65s ease; }
 .reveal.vis { opacity:1; transform:translateY(0); }
 .reveal-delay-1 { transition-delay:.1s; }
 .reveal-delay-2 { transition-delay:.2s; }
 .reveal-delay-3 { transition-delay:.32s; }
 .reveal-delay-4 { transition-delay:.44s; }
-.reveal-left { opacity:0; transform:translateX(-28px); transition:opacity .65s var(--ease-out), transform .65s var(--ease-out); }
+.reveal-left { opacity:0; transform:translateX(-28px); transition:opacity .65s ease, transform .65s ease; }
 .reveal-left.vis { opacity:1; transform:translateX(0); }
-.reveal-scale { opacity:0; transform:scale(.96); transition:opacity .5s var(--ease-out), transform .5s var(--ease-out); }
+.reveal-scale { opacity:0; transform:scale(.96); transition:opacity .5s ease, transform .5s ease; }
 .reveal-scale.vis { opacity:1; transform:scale(1); }
 
 /* ---- Qui som ---- */
 .home-about {
   display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
 }
-.img-frame { position: relative; overflow: hidden; }
+.img-frame { position: relative; }
 .img-frame img {
   width: 100%; height: 440px; object-fit: cover;
   display: block; position: relative; z-index: 1;
-  transition: transform 500ms var(--ease-out);
-}
-@media (hover: hover) and (pointer: fine) {
-  .img-frame:hover img { transform: scale(1.04); }
 }
 .img-frame::after {
   content: ''; position: absolute; bottom: -18px; right: -18px;
@@ -48,13 +44,11 @@
 .val {
   display: flex; gap: 11px; padding: 13px;
   background: #fff; border-left: 3px solid var(--navy); align-items: flex-start;
-  transition: border-color 200ms var(--ease-out), background 200ms var(--ease-out);
+  transition: border-color 200ms ease, background 200ms ease;
 }
-.val i    { color: var(--navy); opacity: .65; margin-top: 2px; font-size: .9rem; transition: color 200ms var(--ease-out), opacity 200ms var(--ease-out); }
-@media (hover: hover) and (pointer: fine) {
-  .val:hover { border-left-color: var(--gold); background: var(--cream); }
-  .val:hover i { color: var(--gold); opacity: 1; }
-}
+.val:hover { border-left-color: var(--gold); background: var(--cream); }
+.val i    { color: var(--navy); opacity: .65; margin-top: 2px; font-size: .9rem; transition: color 200ms ease, opacity 200ms ease; }
+.val:hover i { color: var(--gold); opacity: 1; }
 .val span { font-size: .88rem; line-height: 1.4; }
 
 /* ---- Premis home ---- */
@@ -64,11 +58,9 @@
 .premio-box {
   background: #fff; border: 1px solid var(--border);
   padding: 40px 36px; text-align: center;
-  transition: transform 280ms var(--ease-out), box-shadow 280ms var(--ease-out), border-color 280ms var(--ease-out);
+  transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
 }
-@media (hover: hover) and (pointer: fine) {
-  .premio-box:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: rgba(184,146,74,.35); }
-}
+.premio-box:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: rgba(184,146,74,.35); }
 .premio-icon {
   height: 340px; margin: 0 auto 20px;
   display: flex; align-items: center; justify-content: center;
@@ -86,13 +78,11 @@
 }
 .card {
   background: #fff; border: 1px solid var(--border);
-  overflow: hidden; transition: transform 280ms var(--ease-out), box-shadow 280ms var(--ease-out);
+  overflow: hidden; transition: transform 280ms ease, box-shadow 280ms ease;
 }
-.card-img  { width: 100%; height: 200px; object-fit: cover; display: block; transition: transform 420ms var(--ease-out); }
-@media (hover: hover) and (pointer: fine) {
-  .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
-  .card:hover .card-img { transform: scale(1.05); }
-}
+.card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.card-img  { width: 100%; height: 200px; object-fit: cover; display: block; transition: transform 420ms ease; }
+.card:hover .card-img { transform: scale(1.05); }
 .card-badge {
   display: inline-block; background: var(--navy); color: #fff;
   font-size: .68rem; letter-spacing: 2px; text-transform: uppercase;
