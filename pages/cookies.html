@@ -121,6 +121,10 @@ function applyTranslations(lang) {
     const key = el.getAttribute('data-i18n');
     if (t[lang] && t[lang][key] !== undefined) el.innerHTML = t[lang][key];
   });
+  document.querySelectorAll('.t').forEach(el => {
+    const val = el.getAttribute('data-' + lang);
+    if (val) el.innerHTML = val;
+  });
   document.getElementById('html-root')?.setAttribute('lang', lang);
   document.querySelectorAll('.lang-btn').forEach(btn =>
     btn.classList.toggle('active', btn.getAttribute('data-lang') === lang));
