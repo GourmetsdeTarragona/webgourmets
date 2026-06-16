@@ -133,6 +133,10 @@ function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('gdt-lang', lang);
   applyTranslations(lang);
+  document.querySelectorAll('.t').forEach(el => {
+    const val = el.getAttribute('data-' + lang);
+    if (val) el.innerHTML = val;
+  });
 }
 </script>
 </head>
