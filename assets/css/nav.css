@@ -45,15 +45,19 @@
 
 /* Dropdown */
 .dropdown {
-  display: none; position: absolute; top: 100%; left: 0;
+  position: absolute; top: calc(100% + 4px); left: 0;
   background: #fff; border: 1px solid var(--border);
   min-width: 210px; box-shadow: 0 8px 24px rgba(0,0,0,.1); z-index: 300;
+  opacity: 0; transform: translateY(-6px); pointer-events: none;
+  transition: opacity 180ms ease, transform 180ms ease;
 }
-.nav-item:hover .dropdown { display: block; }
+.nav-item:hover .dropdown {
+  opacity: 1; transform: translateY(0); pointer-events: auto;
+}
 .dropdown a {
   display: block; padding: 11px 18px;
   font-size: .8rem; color: var(--text); letter-spacing: .5px;
-  border-bottom: 1px solid var(--border); transition: .2s;
+  border-bottom: 1px solid var(--border); transition: background 150ms ease, color 150ms ease;
 }
 .dropdown a:last-child { border-bottom: none; }
 .dropdown a:hover { background: var(--cream); color: var(--navy); }
