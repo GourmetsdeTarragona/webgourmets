@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="ca" id="html-root">
+<html lang="es" id="html-root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <!-- ═══════ FAVICON ═══════ -->
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
@@ -10,180 +11,580 @@
 <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
 <link rel="shortcut icon" href="favicon.ico">
 
-
-<!-- ═══════ SEO BÀSIC ═══════ -->
+<!-- ═══════ SEO ═══════ -->
 <title>Gourmets de Tarragona · Associació Gastronòmica del Camp de Tarragona</title>
 <meta name="description" content="Associació gastronòmica del Camp de Tarragona. Visitem restaurants, atorguem el Premi Gastronia i el Premi Bacus a la millor cuina i celler del territori.">
 <meta name="keywords" content="gourmets tarragona, associació gastronòmica tarragona, restaurants tarragona, premi gastronia, premi bacus, gastronomia camp de tarragona, cuina mediterrània, restaurantes tarragona">
 <meta name="author" content="Gourmets de Tarragona">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.gourmetsdetarragona.com/">
-
-<!-- ═══════ OPEN GRAPH ═══════ -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.gourmetsdetarragona.com/">
 <meta property="og:title" content="Gourmets de Tarragona · Associació Gastronòmica">
-<meta property="og:description" content="Visitem els millors restaurants del Camp de Tarragona. Premi Gastronia i Premi Bacus a l'excel·lència gastronòmica i vinícola del territori.">
-<meta property="og:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Gourmets de Tarragona – gastronomia mediterrània">
-<meta property="og:site_name" content="Gourmets de Tarragona">
-<meta property="og:locale" content="ca_ES">
-<meta property="og:locale:alternate" content="es_ES">
-
-<!-- ═══════ TWITTER CARD ═══════ -->
+<meta property="og:description" content="Associació gastronòmica del Camp de Tarragona. Visitem restaurants i atorguem els millors premis gastronòmics del territori.">
+<meta property="og:image" content="https://www.gourmetsdetarragona.com/assets/img/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Gourmets de Tarragona · Associació Gastronòmica">
-<meta name="twitter:description" content="Visitem els millors restaurants del Camp de Tarragona. Premi Gastronia i Premi Bacus.">
-<meta name="twitter:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
 
-<!-- ═══════ STRUCTURED DATA — Organization ═══════ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Gourmets de Tarragona",
-  "alternateName": "Associació Gourmets de Tarragona",
-  "url": "https://www.gourmetsdetarragona.com",
-  "logo": "https://gourmetsdetarragona.com/wp-content/uploads/2025/05/cropped-logo_gourmets_blau_sin_fondo-3-300x296.png",
-  "description": "Associació gastronòmica sense ànim de lucre del Camp de Tarragona. Visitem restaurants, avaluem amb criteri i atorguem el Premi Gastronia i el Premi Bacus.",
-  "foundingDate": "2001",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Tarragona",
-    "addressRegion": "Catalunya",
-    "addressCountry": "ES"
-  },
-  "sameAs": [
-    "https://www.instagram.com/gourmetsdetarragona/",
-    "https://www.facebook.com/GourmetsdetaRRagona"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "gourmetsdetarragona@gourmetsdetarragona.com",
-    "contactType": "customer service"
-  }
-}
-</script>
-
-<!-- ═══════ STRUCTURED DATA — WebSite ═══════ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Gourmets de Tarragona",
-  "url": "https://www.gourmetsdetarragona.com",
-  "inLanguage": ["es", "ca"],
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://www.gourmetsdetarragona.com/pages/blog.html?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-
-<!-- ═══════ FONTS I RECURSOS ═══════ -->
+<!-- ═══════ FONTS ═══════ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/variables.css">
-<link rel="stylesheet" href="assets/css/nav.css">
-<link rel="stylesheet" href="assets/css/hero.css">
-<link rel="stylesheet" href="assets/css/seccions.css">
+
 <style>
-/* ════════════════════════════════════════
-   MEJORAS UI — Emil Kowalski philosophy
-════════════════════════════════════════ */
-
-/* prefers-reduced-motion */
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;}}
-
-/* Keyframes */
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-@keyframes scrollBounce{0%,100%{transform:translateY(0);opacity:.6;}50%{transform:translateY(5px);opacity:1;}}
-
-/* ── Mobile menu — transición en lugar de display toggle ── */
-#mobileMenu{
-  position:fixed;left:0;right:0;z-index:999;
-  background:rgba(245,240,232,.97);
-  backdrop-filter:blur(8px);
-  box-shadow:0 8px 32px rgba(28,46,62,.15);
-  opacity:0;
-  transform:translateY(-8px);
-  pointer-events:none;
-  transition:opacity 180ms ease-out,transform 180ms ease-out;
+/* ══════════════════════════════════════════════
+   TOKENS
+══════════════════════════════════════════════ */
+:root {
+  --navy:       #1B3A6B;
+  --navy-dark:  #122850;
+  --navy-deep:  #0b1a2e;
+  --gold:       #B8924A;
+  --gold-light: #d4a96a;
+  --cream:      #F8F4EC;
+  --border:     #E2D9C8;
+  --muted:      #6B6B6B;
+  --text:       #2C2C2C;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans:  'Lato', system-ui, sans-serif;
+  --max:        1280px;
+  --ease-out:   cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-io:    cubic-bezier(0.77, 0, 0.175, 1);
 }
-#mobileMenu.open{opacity:1;transform:translateY(0);pointer-events:auto;}
 
-/* ── Hero — entrada animada escalonada ── */
-.hero-label{animation:fadeUp 600ms ease both;animation-delay:100ms;}
-.hero-title{animation:fadeUp 600ms ease both;animation-delay:200ms;}
-.hero-sub  {animation:fadeUp 600ms ease both;animation-delay:320ms;}
-.hero-btns {animation:fadeUp 600ms ease both;animation-delay:430ms;}
-.hero-scroll{animation:fadeIn 800ms ease both;animation-delay:700ms;}
+/* ══════════════════════════════════════════════
+   RESET
+══════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html   { scroll-behavior: smooth; }
+body   { font-family: var(--font-sans); color: var(--text); background: #fff; overflow-x: hidden; line-height: 1.6; }
+img    { max-width: 100%; height: auto; display: block; }
+a      { color: inherit; text-decoration: none; }
+ul     { list-style: none; }
+button { font-family: var(--font-sans); cursor: pointer; }
 
-/* ── Scroll indicator — bounce animado ── */
-.hero-scroll-line{animation:scrollBounce 1.8s ease-in-out infinite;}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
 
-/* ── Botones — feedback :active ── */
-.btn-hero-primary,.btn-hero-ghost,.btn-primary,.btn-outline{transition:background 200ms ease,border-color 200ms ease,color 200ms ease,transform 120ms ease;}
-.btn-hero-primary:active,.btn-hero-ghost:active,.btn-primary:active,.btn-outline:active{transform:scale(0.97);}
+/* ══════════════════════════════════════════════
+   KEYFRAMES
+══════════════════════════════════════════════ */
+@keyframes clipDown    { from{clip-path:inset(0 0 100% 0)} to{clip-path:inset(0 0 0% 0)} }
+@keyframes fadeUp      { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeIn      { from{opacity:0} to{opacity:1} }
+@keyframes scrollLine  { 0%,100%{transform:translateY(0);opacity:.5} 50%{transform:translateY(7px);opacity:1} }
+@keyframes ticker      { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+@keyframes rowIn       { from{opacity:0;transform:translateX(-14px)} to{opacity:1;transform:translateX(0)} }
 
-/* ════════════════════════════════════════
-   RECORRIDO — LISTA EDITORIAL
-════════════════════════════════════════ */
-.rec-progress{display:flex;align-items:center;gap:14px;margin-bottom:32px;}
-.rec-progress-track{flex:1;height:2px;background:var(--border);}
-.rec-progress-fill{height:100%;background:var(--gold);}
-.rec-progress-label{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
-.rec-list{width:100%;border-collapse:collapse;}
-/* transición solo en background, no transition:all */
-.rec-row{display:grid;grid-template-columns:32px 1fr 90px 90px auto auto;align-items:center;gap:0 20px;padding:14px 0;border-bottom:1px solid var(--border);transition:background 200ms ease;opacity:0;animation:fadeUp 400ms ease both;}
-.rec-row:last-child{border-bottom:none;}
-.rec-row.done:hover{background:rgba(184,146,74,.04);}
-.rec-row.pend{pointer-events:none;}
-/* delays escalonados */
-.rec-row:nth-child(1){animation-delay:50ms;}
-.rec-row:nth-child(2){animation-delay:130ms;}
-.rec-row:nth-child(3){animation-delay:210ms;}
-.rec-row:nth-child(4){animation-delay:290ms;}
-.rec-row:nth-child(5){animation-delay:350ms;}
-.rec-row:nth-child(6){animation-delay:400ms;}
-.rec-row:nth-child(7){animation-delay:440ms;}
-.rec-row:nth-child(8){animation-delay:470ms;}
-.rec-row.pend.anim-done{opacity:.35;}
-.rec-num{font-family:var(--font-serif);font-size:1rem;color:var(--muted);font-weight:600;line-height:1;}
-.rec-name{font-family:var(--font-serif);font-size:1rem;color:var(--navy-dark);font-weight:600;}
-.rec-row.next .rec-name{color:var(--navy-dark);}
-.rec-city{font-size:.72rem;color:var(--muted);}
-.rec-date{font-size:.72rem;color:var(--muted);}
-.rec-badge{display:inline-block;font-size:.52rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;white-space:nowrap;}
-.rec-badge-done{background:var(--gold);color:#fff;}
-.rec-badge-next{background:var(--navy-dark);color:var(--gold);}
-.rec-badge-pend{border:1px solid var(--border);color:var(--muted);}
-.rec-links{display:flex;gap:10px;justify-content:flex-end;}
-/* transición explícita en rec-link */
-.rec-link{font-size:.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy-dark);border-bottom:1px solid var(--gold);padding-bottom:1px;text-decoration:none;white-space:nowrap;transition:color 150ms ease;}
-.rec-link:hover{color:var(--gold);}
-@media(max-width:860px){.rec-row{grid-template-columns:28px 1fr 80px auto auto;}.rec-date{display:none;}}
-@media(max-width:680px){.rec-row{grid-template-columns:24px 1fr auto auto;gap:0 12px;padding:12px 0;}.rec-city{display:none;}.rec-num{font-size:.85rem;}.rec-name{font-size:.9rem;}}
+/* ══════════════════════════════════════════════
+   NAV
+══════════════════════════════════════════════ */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+  transition: background 250ms var(--ease-out),
+              border-bottom-color 250ms var(--ease-out),
+              backdrop-filter 250ms;
+  border-bottom: 1px solid transparent;
+}
+#nav.solid {
+  background: rgba(18,40,80,.97);
+  backdrop-filter: blur(14px);
+  border-bottom-color: rgba(184,146,74,.18);
+}
+.nav-inner {
+  max-width: var(--max); margin: 0 auto;
+  display: flex; align-items: center;
+  padding: 0 4%; height: 64px;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--font-serif); font-size: .95rem; font-weight: 700;
+  color: #fff; margin-right: auto;
+  transition: opacity 200ms;
+}
+.nav-logo:hover { opacity: .8; }
+.nav-logo-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--gold); flex-shrink: 0;
+}
+.nav-menu { display: flex; align-items: center; }
+.nav-item { position: relative; }
+.nav-item > a, .nav-item > span {
+  display: flex; align-items: center; height: 64px; padding: 0 16px;
+  font-size: .65rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(255,255,255,.5); cursor: pointer;
+  transition: color 150ms var(--ease-out);
+}
+.nav-item > a:hover, .nav-item > span:hover { color: rgba(255,255,255,.9); }
+.nav-item > a.active { color: #fff; }
+.dropdown {
+  position: absolute; top: calc(100% + 2px); left: 0; min-width: 200px;
+  background: rgba(18,40,80,.98); border: 1px solid rgba(184,146,74,.15);
+  opacity: 0; transform: translateY(-6px); pointer-events: none;
+  transition: opacity 180ms var(--ease-out), transform 180ms var(--ease-out);
+}
+.nav-item:hover .dropdown { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.dropdown a {
+  display: block; padding: 11px 16px;
+  font-size: .72rem; color: rgba(255,255,255,.45);
+  transition: color 130ms var(--ease-out), background 130ms var(--ease-out);
+}
+.dropdown a:hover { color: var(--gold); background: rgba(184,146,74,.06); }
+.nav-right { display: flex; align-items: center; gap: 8px; margin-left: 20px; }
+.lang-btn {
+  background: none; border: none; padding: 6px 10px;
+  font-size: .65rem; font-weight: 700; letter-spacing: 2px;
+  color: rgba(255,255,255,.3); transition: color 150ms;
+  min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center;
+}
+.lang-btn.active { color: var(--gold); }
+.lang-btn:hover  { color: rgba(255,255,255,.7); }
+.lang-sep { color: rgba(255,255,255,.15); font-size: .7rem; }
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; padding: 10px; margin-left: 8px; cursor: pointer;
+}
+.hamburger span { width: 22px; height: 1.5px; background: rgba(255,255,255,.6); transition: .2s; }
+.mobile-menu {
+  position: fixed; left: 0; right: 0; z-index: 899;
+  background: rgba(18,40,80,.98); backdrop-filter: blur(10px);
+  opacity: 0; transform: translateY(-8px); pointer-events: none;
+  transition: opacity 180ms var(--ease-out), transform 180ms var(--ease-out);
+  padding: 16px 0;
+}
+.mobile-menu.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.mobile-item a {
+  display: block; padding: 13px 5%;
+  font-size: .75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(255,255,255,.55); border-bottom: 1px solid rgba(255,255,255,.05);
+  transition: color 150ms;
+}
+.mobile-item a:hover { color: var(--gold); }
+.mobile-lang { display: flex; align-items: center; gap: 8px; padding: 14px 5%; }
 
-/* ════════════════════════════════════════
+/* ══════════════════════════════════════════════
+   HERO
+══════════════════════════════════════════════ */
+#hero {
+  position: relative; min-height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 120px 6% 80px;
+  background: var(--navy-deep); overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background-image: url('assets/img/hero.jpg');
+  background-size: cover; background-position: center 55%;
+  opacity: .32;
+  animation: fadeIn 1.4s var(--ease-out) both;
+}
+.hero-gradient {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top,
+    rgba(11,26,46,.98) 0%,
+    rgba(11,26,46,.7) 45%,
+    rgba(11,26,46,.3) 100%);
+}
+.hero-line-l, .hero-line-r {
+  position: absolute; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(184,146,74,.3) 15%,
+    rgba(184,146,74,.3) 85%,
+    transparent 100%);
+  animation: clipDown 1s var(--ease-out) .2s both;
+}
+.hero-line-l { left: 4%; }
+.hero-line-r { right: 4%; }
+.hero-bg-num {
+  position: absolute; right: 5%; bottom: 6%;
+  font-family: var(--font-serif); font-size: min(16vw, 180px); font-weight: 700;
+  color: rgba(255,255,255,.025); line-height: 1;
+  pointer-events: none; user-select: none;
+  animation: fadeIn 1.6s var(--ease-out) .3s both;
+}
+.hero-content { position: relative; z-index: 2; max-width: 700px; }
+.hero-season {
+  font-size: .62rem; font-weight: 700; letter-spacing: 5px; text-transform: uppercase;
+  color: rgba(184,146,74,.8); display: flex; align-items: center; gap: 14px;
+  justify-content: center; margin-bottom: 22px;
+  animation: fadeUp .55s var(--ease-out) .3s both;
+}
+.hero-season::before, .hero-season::after {
+  content: ''; width: 36px; height: 1px; background: rgba(184,146,74,.45); flex-shrink: 0;
+}
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3.2rem, 7.5vw, 6rem); font-weight: 700; line-height: 1.0; color: #fff;
+  margin-bottom: 10px;
+  animation: fadeUp .65s var(--ease-out) .45s both;
+}
+.hero-title em { font-style: italic; color: var(--gold-light); font-weight: 400; }
+.hero-assoc {
+  font-size: .62rem; letter-spacing: 5px; text-transform: uppercase;
+  color: rgba(255,255,255,.25); margin-bottom: 28px;
+  animation: fadeUp .6s var(--ease-out) .58s both;
+}
+.hero-sub {
+  font-size: clamp(.9rem, 1.5vw, 1.05rem); font-weight: 300;
+  color: rgba(255,255,255,.5); line-height: 1.85; max-width: 460px; margin: 0 auto 38px;
+  animation: fadeUp .6s var(--ease-out) .68s both;
+}
+.hero-btns {
+  display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+  animation: fadeUp .6s var(--ease-out) .78s both;
+}
+.btn-hero-gold {
+  display: inline-block; padding: 15px 36px; background: var(--gold); color: #fff;
+  font-size: .72rem; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700;
+  transition: background 160ms var(--ease-out), transform 100ms var(--ease-out);
+}
+.btn-hero-gold:hover  { background: #c9a05a; }
+.btn-hero-gold:active { transform: scale(0.97); }
+.btn-hero-ghost {
+  display: inline-block; padding: 14px 36px;
+  border: 1.5px solid rgba(255,255,255,.3); color: rgba(255,255,255,.75);
+  font-size: .72rem; letter-spacing: 2.5px; text-transform: uppercase;
+  transition: border-color 160ms var(--ease-out), color 160ms var(--ease-out), transform 100ms;
+}
+.btn-hero-ghost:hover  { border-color: rgba(255,255,255,.7); color: #fff; }
+.btn-hero-ghost:active { transform: scale(0.97); }
+.hero-scroll {
+  position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 8px; z-index: 2;
+  animation: fadeIn .8s var(--ease-out) 1.1s both;
+}
+.hero-scroll span {
+  font-size: .58rem; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,.2);
+}
+.hero-scroll-line {
+  width: 1px; height: 36px;
+  background: linear-gradient(to bottom, rgba(184,146,74,.5), transparent);
+  animation: scrollLine 2s ease-in-out 1.5s infinite;
+}
+
+/* ══════════════════════════════════════════════
+   STRIP TICKER
+══════════════════════════════════════════════ */
+.strip {
+  background: var(--navy); padding: 16px 0; overflow: hidden; position: relative;
+}
+.strip::before, .strip::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2;
+}
+.strip::before { left: 0; background: linear-gradient(90deg, var(--navy), transparent); }
+.strip::after  { right: 0; background: linear-gradient(270deg, var(--navy), transparent); }
+.strip-track {
+  display: flex; width: max-content;
+  animation: ticker 18s linear infinite;
+}
+.strip-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: .62rem; letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(255,255,255,.4); white-space: nowrap;
+  padding: 0 28px; border-right: 1px solid rgba(184,146,74,.18);
+}
+.strip-dot { width: 3px; height: 3px; border-radius: 50%; background: rgba(184,146,74,.65); flex-shrink: 0; }
+
+/* ══════════════════════════════════════════════
+   SECCIONS BASE
+══════════════════════════════════════════════ */
+.sec      { padding: 100px 6%; }
+.sec-gray { background: var(--cream); }
+.sec-inner { max-width: var(--max); margin: 0 auto; }
+.sec-head { margin-bottom: 52px; }
+.sec-num {
+  font-family: var(--font-serif); font-size: clamp(72px,10vw,110px); font-weight: 700;
+  color: rgba(27,58,107,.055); line-height: 1; margin-bottom: -28px; user-select: none;
+}
+.slabel {
+  font-size: .65rem; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--gold); font-weight: 700; display: block; margin-bottom: 12px;
+}
+.stitle {
+  font-family: var(--font-serif); font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  color: var(--navy-dark); line-height: 1.15; margin-bottom: 16px;
+}
+.sdiv { width: 44px; height: 2px; background: var(--gold); margin-bottom: 22px; opacity: .75; }
+.sec-desc {
+  font-size: 1rem; color: var(--muted); line-height: 1.85; max-width: 520px; font-weight: 300;
+}
+
+/* ══════════════════════════════════════════════
+   REVEAL SYSTEM
+══════════════════════════════════════════════ */
+.reveal {
+  opacity: 0; transform: translateY(22px);
+  transition: opacity .65s var(--ease-out), transform .65s var(--ease-out);
+}
+.reveal.vis { opacity: 1; transform: translateY(0); }
+.reveal-left {
+  opacity: 0; transform: translateX(-28px);
+  transition: opacity .65s var(--ease-out), transform .65s var(--ease-out);
+}
+.reveal-left.vis { opacity: 1; transform: translateX(0); }
+.reveal-d1 { transition-delay: .08s; }
+.reveal-d2 { transition-delay: .18s; }
+.reveal-d3 { transition-delay: .28s; }
+.reveal-d4 { transition-delay: .38s; }
+
+/* ══════════════════════════════════════════════
+   RECORREGUT
+══════════════════════════════════════════════ */
+.rec-progress { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+.rec-progress-track { flex: 1; height: 1px; background: var(--border); }
+.rec-progress-fill  { height: 100%; background: var(--gold); transition: width .9s var(--ease-io) .3s; }
+.rec-progress-label { font-size: .6rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.rec-row {
+  display: grid; grid-template-columns: 32px 1fr 88px 100px auto auto;
+  align-items: center; gap: 0 20px; padding: 15px 0; border-bottom: 1px solid var(--border);
+  opacity: 0; transition: background 180ms var(--ease-out);
+}
+.rec-row:last-child { border-bottom: none; }
+.rec-row.done:hover { background: rgba(184,146,74,.04); }
+.rec-row.anim-done  { opacity: .3; }
+.rec-num  { font-family: var(--font-serif); font-size: 1rem; color: var(--gold); font-weight: 600; }
+.rec-name { font-family: var(--font-serif); font-size: 1rem; color: var(--navy-dark); font-weight: 600; }
+.rec-city { font-size: .72rem; color: var(--muted); }
+.rec-date { font-size: .72rem; color: var(--muted); }
+.rec-badge {
+  display: inline-block; font-size: .52rem; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 9px; white-space: nowrap;
+}
+.rec-badge-done { background: var(--gold); color: #fff; }
+.rec-badge-pend { border: 1px solid var(--border); color: var(--muted); }
+.rec-links { display: flex; gap: 10px; justify-content: flex-end; }
+.rec-link {
+  font-size: .6rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--navy-dark); border-bottom: 1px solid var(--gold); padding-bottom: 1px;
+  white-space: nowrap; transition: color 150ms var(--ease-out);
+}
+.rec-link:hover { color: var(--gold); }
+
+@media (max-width:860px) { .rec-row { grid-template-columns: 28px 1fr 72px auto auto; } .rec-date { display: none; } }
+@media (max-width:640px) { .rec-row { grid-template-columns: 24px 1fr auto auto; gap: 0 10px; } .rec-city { display: none; } }
+
+/* ══════════════════════════════════════════════
+   QUI SOM
+══════════════════════════════════════════════ */
+.home-about { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.img-frame  { position: relative; overflow: hidden; }
+.img-frame img { width: 100%; height: 480px; object-fit: cover; transition: transform 500ms var(--ease-out); }
+.img-frame:hover img { transform: scale(1.04); }
+.img-frame-deco {
+  position: absolute; bottom: -18px; right: -18px; width: 52%; height: 52%;
+  border: 2px solid rgba(27,58,107,.12); pointer-events: none;
+}
+.img-frame-g {
+  position: absolute; bottom: 16px; left: 20px;
+  font-family: var(--font-serif); font-size: 130px; font-weight: 700;
+  color: rgba(255,255,255,.06); line-height: 1; pointer-events: none; user-select: none;
+}
+.about-p { font-size: 1rem; line-height: 1.9; color: #555; font-weight: 300; margin-bottom: 16px; }
+.vals { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 28px; }
+.val {
+  display: flex; gap: 11px; padding: 14px; background: #fff;
+  border-left: 2px solid var(--navy); align-items: flex-start;
+  transition: border-left-color 200ms var(--ease-out), background 200ms var(--ease-out);
+}
+.val:hover { border-left-color: var(--gold); background: var(--cream); }
+.val i { color: var(--navy); opacity: .65; margin-top: 3px; font-size: .9rem; transition: color 200ms var(--ease-out), opacity 200ms var(--ease-out); }
+.val:hover i { color: var(--gold); opacity: 1; }
+.val span { font-size: .88rem; line-height: 1.4; }
+
+@media (max-width:860px) { .home-about { grid-template-columns: 1fr; gap: 36px; } .img-frame img { height: 300px; } }
+
+/* ══════════════════════════════════════════════
    MANIFIESTO
-════════════════════════════════════════ */
-.sec-manifesto{background:#0b1626;padding:100px 5%;text-align:center;position:relative;overflow:hidden;}
-.sec-manifesto::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(184,146,74,.28) 25%,rgba(184,146,74,.28) 75%,transparent);}
-.sec-manifesto::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(184,146,74,.28) 25%,rgba(184,146,74,.28) 75%,transparent);}
-.sec-manifesto-bg-deco{position:absolute;inset:0;font-family:var(--font-serif);font-size:28vw;font-weight:700;color:rgba(255,255,255,.018);display:flex;align-items:center;justify-content:center;pointer-events:none;user-select:none;line-height:1;}
-.manifesto-deco{display:flex;align-items:center;gap:18px;justify-content:center;margin-bottom:38px;position:relative;}
-.manifesto-deco-line{width:44px;height:1px;background:rgba(184,146,74,.35);}
-.manifesto-deco-label{font-size:.57rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(184,146,74,.55);}
-.manifesto-quote{font-family:var(--font-serif);font-size:clamp(1.55rem,3.2vw,2.7rem);font-style:italic;color:rgba(255,255,255,.88);line-height:1.4;max-width:860px;margin:0 auto 30px;font-weight:400;position:relative;}
-.manifesto-quote em{font-style:normal;color:var(--gold);}
-.manifesto-attr{font-size:.6rem;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:rgba(255,255,255,.2);}
+══════════════════════════════════════════════ */
+.sec-manifesto {
+  background: #0b1626; padding: 100px 6%; text-align: center; position: relative; overflow: hidden;
+}
+.sec-manifesto::before {
+  content: ''; position: absolute; top: 0; left: 8%; right: 8%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184,146,74,.25) 30%, rgba(184,146,74,.25) 70%, transparent);
+}
+.sec-manifesto::after {
+  content: ''; position: absolute; bottom: 0; left: 8%; right: 8%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184,146,74,.25) 30%, rgba(184,146,74,.25) 70%, transparent);
+}
+.manifesto-frame {
+  display: inline-block; border: 1px solid rgba(184,146,74,.18); padding: 52px 64px;
+  position: relative; max-width: 820px;
+  opacity: 0; clip-path: inset(0 0 100% 0);
+  transition: opacity .8s var(--ease-io), clip-path .8s var(--ease-io);
+}
+.manifesto-frame.vis { opacity: 1; clip-path: inset(0 0 0% 0); }
+.manifesto-diamond { position: absolute; font-size: 10px; color: var(--gold); background: #0b1626; padding: 0 8px; line-height: 1; }
+.manifesto-diamond.top { top: -6px; left: 50%; transform: translateX(-50%); }
+.manifesto-diamond.bot { bottom: -6px; left: 50%; transform: translateX(-50%); }
+.manifesto-deco {
+  display: flex; align-items: center; gap: 18px; justify-content: center; margin-bottom: 32px;
+  opacity: 0; transition: opacity .5s ease .6s;
+}
+.manifesto-frame.vis .manifesto-deco { opacity: 1; }
+.manifesto-deco-line  { width: 44px; height: 1px; background: rgba(184,146,74,.3); }
+.manifesto-deco-label { font-size: .57rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(184,146,74,.5); }
+.manifesto-quote {
+  font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2.6rem);
+  font-style: italic; color: rgba(255,255,255,.88); line-height: 1.4; font-weight: 400;
+  opacity: 0; transform: translateY(12px);
+  transition: opacity .65s var(--ease-out) .7s, transform .65s var(--ease-out) .7s;
+}
+.manifesto-frame.vis .manifesto-quote { opacity: 1; transform: translateY(0); }
+.manifesto-quote em { font-style: normal; color: var(--gold); }
+.manifesto-attr {
+  font-size: .6rem; font-weight: 700; letter-spacing: 3.5px; text-transform: uppercase;
+  color: rgba(255,255,255,.18); margin-top: 28px;
+  opacity: 0; transition: opacity .5s ease .95s;
+}
+.manifesto-frame.vis .manifesto-attr { opacity: 1; }
+
+@media (max-width:640px) { .manifesto-frame { padding: 36px 28px; } }
+
+/* ══════════════════════════════════════════════
+   PREMIS
+══════════════════════════════════════════════ */
+.premios-home { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.premio-box {
+  padding: 44px 40px; border: 1px solid var(--border); text-align: center;
+  position: relative; overflow: hidden;
+  transition: transform 280ms var(--ease-out), border-color 280ms var(--ease-out);
+}
+.premio-box::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--gold); transform: scaleX(0); transform-origin: left;
+  transition: transform 380ms var(--ease-out);
+}
+.premio-box:hover { transform: translateY(-5px); border-color: rgba(184,146,74,.3); }
+.premio-box:hover::before { transform: scaleX(1); }
+.premio-icon { height: 160px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; }
+.premio-icon img { max-height: 120px; margin: 0 auto; }
+.premio-icon i { font-size: 3.5rem; color: var(--gold); opacity: .7; }
+.premio-icon-fa { font-size: 3.5rem; color: var(--gold); opacity: .7; transition: transform 300ms var(--ease-out); }
+.premio-box:hover .premio-icon-fa { transform: scale(1.1); }
+.premio-box h3 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--navy-dark); margin-bottom: 14px; }
+.premio-box p  { font-size: .92rem; color: var(--muted); line-height: 1.75; font-weight: 300; }
+.premio-num {
+  position: absolute; bottom: -8px; right: 14px;
+  font-family: var(--font-serif); font-size: 72px; font-weight: 700;
+  color: rgba(27,58,107,.05); line-height: 1; pointer-events: none; user-select: none;
+  transition: color 300ms var(--ease-out);
+}
+.premio-box:hover .premio-num { color: rgba(184,146,74,.08); }
+
+@media (max-width:640px) { .premios-home { grid-template-columns: 1fr; } }
+
+/* ══════════════════════════════════════════════
+   CARDS EVENTS
+══════════════════════════════════════════════ */
+.cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.card {
+  background: #fff; border: 1px solid var(--border); overflow: hidden; position: relative;
+  transition: transform 280ms var(--ease-out), border-color 280ms var(--ease-out);
+}
+.card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--gold); transform: scaleX(0); transform-origin: left;
+  transition: transform 320ms var(--ease-out); z-index: 1;
+}
+.card:hover { transform: translateY(-6px); border-color: rgba(184,146,74,.3); }
+.card:hover::before { transform: scaleX(1); }
+.card-img-wrap { overflow: hidden; height: 210px; }
+.card-img { width: 100%; height: 100%; object-fit: cover; transition: transform 450ms var(--ease-out); }
+.card:hover .card-img { transform: scale(1.06); }
+.card-badge {
+  display: inline-block; background: var(--navy); color: #fff;
+  font-size: .6rem; letter-spacing: 2px; text-transform: uppercase;
+  padding: 4px 12px; margin: 18px 18px 0; font-weight: 700;
+}
+.card-body  { padding: 10px 18px 18px; }
+.card-date  { font-size: .75rem; color: var(--muted); margin-bottom: 6px; }
+.card-title { font-family: var(--font-serif); font-size: 1.1rem; color: var(--navy-dark); margin-bottom: 8px; line-height: 1.3; }
+.card-desc  { font-size: .85rem; color: var(--muted); line-height: 1.75; font-weight: 300; }
+.card-foot  { padding: 13px 18px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+.card-loc   { font-size: .78rem; color: var(--muted); }
+.card-link  {
+  font-size: .6rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--navy-dark); border-bottom: 1px solid var(--gold); padding-bottom: 1px;
+  transition: color 150ms var(--ease-out);
+}
+.card-link:hover { color: var(--gold); }
+
+@media (max-width:860px) { .cards-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width:540px) { .cards-grid { grid-template-columns: 1fr; } }
+
+/* ══════════════════════════════════════════════
+   BOTONS
+══════════════════════════════════════════════ */
+.btn-primary {
+  display: inline-block; padding: 13px 30px; background: var(--navy); color: #fff;
+  font-size: .75rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+  border: 2px solid var(--navy);
+  transition: background 220ms var(--ease-out), border-color 220ms var(--ease-out), transform 100ms;
+}
+.btn-primary:hover  { background: var(--navy-dark); border-color: var(--navy-dark); }
+.btn-primary:active { transform: scale(0.97); }
+.btn-outline {
+  display: inline-block; padding: 12px 30px; background: transparent; color: var(--navy);
+  font-size: .75rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+  border: 2px solid var(--navy);
+  transition: background 220ms var(--ease-out), color 220ms var(--ease-out), transform 100ms;
+}
+.btn-outline:hover  { background: var(--navy); color: #fff; }
+.btn-outline:active { transform: scale(0.97); }
+
+/* ══════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════ */
+.footer { background: #0C1B38; padding: 72px 6% 32px; }
+.footer-main {
+  max-width: var(--max); margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 48px;
+  padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.07);
+}
+.footer-brand p  { font-size: .88rem; color: rgba(255,255,255,.3); line-height: 1.75; margin-bottom: 20px; font-weight: 300; }
+.footer-social   { display: flex; gap: 14px; }
+.footer-social a {
+  width: 36px; height: 36px; border: 1px solid rgba(255,255,255,.1);
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,.3); font-size: .9rem;
+  transition: border-color 150ms, color 150ms;
+}
+.footer-social a:hover { border-color: var(--gold); color: var(--gold); }
+.footer-logo { max-height: 60px; margin-bottom: 16px; filter: brightness(10); opacity: .2; }
+.footer-col h4 {
+  font-size: .6rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(255,255,255,.2); margin-bottom: 20px;
+}
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { font-size: .88rem; color: rgba(255,255,255,.38); transition: color 150ms; }
+.footer-col ul li a:hover { color: var(--gold); }
+.footer-col p { font-size: .85rem; color: rgba(255,255,255,.35); line-height: 1.7; }
+.footer-col p a { color: rgba(255,255,255,.35); transition: color 150ms; }
+.footer-col p a:hover { color: var(--gold); }
+.footer-bottom {
+  max-width: var(--max); margin: 28px auto 0;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+}
+.footer-bottom p { font-size: .72rem; color: rgba(255,255,255,.2); }
+
+@media (max-width:860px) { .footer-main { grid-template-columns: 1fr 1fr; gap: 32px; } }
+@media (max-width:540px) { .footer-main { grid-template-columns: 1fr; } }
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE NAV
+══════════════════════════════════════════════ */
+@media (max-width:768px) {
+  .nav-menu { display: none; }
+  .hamburger { display: flex; }
+}
+@media (max-width:480px) {
+  .hero-title { font-size: clamp(2.6rem, 14vw, 4rem); }
+  .hero-btns  { flex-direction: column; align-items: center; }
+  .btn-hero-gold, .btn-hero-ghost { width: 100%; max-width: 280px; text-align: center; }
+}
 </style>
 </head>
 <body>
@@ -191,229 +592,214 @@
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-inner">
-
-    <a href="index.html" class="nav-logo">
-      <img src="assets/img/logo.png"
-           alt="Gourmets de Tarragona"
-           onerror="this.src='https://gourmetsdetarragona.com/wp-content/uploads/2025/05/cropped-logo_gourmets_blau_sin_fondo-3-300x296.png'">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-dot"></div>
+      Gourmets de Tarragona
     </a>
-
     <div class="nav-menu">
+      <div class="nav-item"><a href="/" class="active">Inici</a></div>
       <div class="nav-item">
-        <a href="index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a>
-      </div>
-      <div class="nav-item">
-        <span class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</span>
+        <span>L'Associació</span>
         <div class="dropdown">
-          <a href="pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a>
-          <a href="pages/associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a>
-          <a href="pages/associacio.html#valoracio" class="t" data-es="El sistema de valoración" data-ca="El sistema de valoració">El sistema de valoración</a>
+          <a href="qui-som.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Qui som</a>
+          <a href="com-funcionem.html" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Com funcionem</a>
+          <a href="valoracio.html" class="t" data-es="El sistema de valoración" data-ca="El sistema de valoració">El sistema de valoració</a>
         </div>
       </div>
       <div class="nav-item">
-        <span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span>
+        <span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurants</span>
         <div class="dropdown">
-          <a href="pages/restaurants.html" class="t" data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visitas 2025–26</a>
-          <a href="pages/restaurants.html#historic" class="t" data-es="Histórico de visitas" data-ca="Històric de visites">Histórico de visitas</a>
+          <a href="recorregut.html" class="t" data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visites 2025–26</a>
+          <a href="historic.html" class="t" data-es="Histórico de visitas" data-ca="Històric de visites">Històric de visites</a>
         </div>
       </div>
       <div class="nav-item">
-        <span class="t" data-es="Premios" data-ca="Premis">Premios</span>
+        <span class="t" data-es="Premios" data-ca="Premis">Premis</span>
         <div class="dropdown">
-          <a href="pages/premis.html" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</a>
-          <a href="pages/premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a>
-          <a href="pages/premis.html#palmares" class="t" data-es="Palmarés histórico" data-ca="Palmarès històric">Palmarés histórico</a>
+          <a href="gastronia.html" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeu Gastronia</a>
+          <a href="bacus.html" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premi Bacus</a>
+          <a href="palmares.html" class="t" data-es="Palmarés" data-ca="Palmarès">Palmarès</a>
         </div>
       </div>
       <div class="nav-item">
-        <span class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</span>
-        <div class="dropdown">
-          <a href="pages/esdeveniments.html" class="t" data-es="Cenas especiales" data-ca="Sopars especials">Cenas especiales</a>
-          <a href="pages/esdeveniments.html#cates" class="t" data-es="Catas & Visitas" data-ca="Tasts & Visites">Catas & Visitas</a>
-          <a href="pages/esdeveniments.html#calendari" class="t" data-es="Calendario" data-ca="Calendari">Calendario</a>
-        </div>
+        <a href="blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a>
       </div>
       <div class="nav-item">
-        <a href="pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a>
-      </div>
-      <div class="nav-item">
-        <a href="pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a>
+        <a href="contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacte</a>
       </div>
     </div>
-
     <div class="nav-right">
-      <button type="button" class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <button type="button" class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
       <span class="lang-sep">|</span>
-      <button type="button" class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
-      <button class="hamburger" id="hamburger" aria-label="Menú">
+      <button type="button" class="lang-btn" id="btn-ca" onclick="setLang('ca')">CA</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
-
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-item"><a href="index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
-    <div class="mobile-item"><a href="pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
-    <div class="mobile-item"><a href="pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
-    <div class="mobile-item"><a href="pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></div>
-    <div class="mobile-item"><a href="pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></div>
-    <div class="mobile-item"><a href="pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
-    <div class="mobile-item"><a href="pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
-    <div class="mobile-lang">
-      <button type="button" class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
-      <span class="lang-sep">|</span>
-      <button type="button" class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
-    </div>
-  </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menú mòbil">
+  <div class="mobile-item"><a href="/" class="t" data-es="Inicio" data-ca="Inici">Inici</a></div>
+  <div class="mobile-item"><a href="qui-som.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Qui som</a></div>
+  <div class="mobile-item"><a href="recorregut.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurants</a></div>
+  <div class="mobile-item"><a href="gastronia.html" class="t" data-es="Premios" data-ca="Premis">Premis</a></div>
+  <div class="mobile-item"><a href="blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+  <div class="mobile-item"><a href="contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacte</a></div>
+  <div class="mobile-lang">
+    <button type="button" class="lang-btn active" onclick="setLang('es')">ES</button>
+    <span class="lang-sep">|</span>
+    <button type="button" class="lang-btn" onclick="setLang('ca')">CA</button>
+  </div>
+</div>
 
 <!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-gradient"></div>
-  <div class="hero-left-line"></div>
-
+  <div class="hero-line-l"></div>
+  <div class="hero-line-r"></div>
+  <div class="hero-bg-num">2026</div>
   <div class="hero-content">
-    <p class="t hero-label" data-es="Asociación Gastronómica · Camp de Tarragona" data-ca="Associació Gastronòmica · Camp de Tarragona">Asociación Gastronómica · Camp de Tarragona</p>
-    <h1 class="hero-title">
-      Gourmets<br>de <em>Tarragona</em>
-    </h1>
-    <p class="t hero-sub" data-es="Una comunidad apasionada por la gastronomía mediterránea, la alta cocina y el arte de compartir la mesa." data-ca="Una comunitat apassionada per la gastronomia mediterrània, l'alta cuina i l'art de compartir la taula.">Una comunidad apasionada por la gastronomía mediterránea, la alta cocina y el arte de compartir la mesa.</p>
+    <p class="hero-season t" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</p>
+    <h1 class="hero-title">Gourmets<br>de <em>Tarragona</em></h1>
+    <p class="hero-assoc t"
+       data-es="Asociación Gastronómica · Camp de Tarragona"
+       data-ca="Associació Gastronòmica · Camp de Tarragona">
+      Associació Gastronòmica · Camp de Tarragona
+    </p>
+    <p class="hero-sub t"
+       data-es="Una comunidad apasionada por la gastronomía mediterránea, la alta cocina y el arte de compartir la mesa."
+       data-ca="Una comunitat apassionada per la gastronomia mediterrània, l'alta cuina i l'art de compartir la taula.">
+      Una comunitat apassionada per la gastronomia mediterrània, l'alta cuina i l'art de compartir la taula.
+    </p>
     <div class="hero-btns">
-      <a href="pages/associacio.html" class="t btn-hero-primary" data-es="Descúbrenos" data-ca="Descobreix-nos">Descúbrenos</a>
-      <a href="pages/contacte.html"   class="t btn-hero-ghost" data-es="Hazte socio" data-ca="Fes-te soci">Hazte socio</a>
+      <a href="qui-som.html" class="btn-hero-gold t" data-es="Descúbrenos" data-ca="Descobreix-nos">Descobreix-nos</a>
+      <a href="contacte.html" class="btn-hero-ghost t" data-es="Hazte socio" data-ca="Fes-te soci">Fes-te soci</a>
     </div>
   </div>
-
-  <div class="hero-meta">
-    <div class="t hero-meta-item" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</div>
-    <div class="t hero-meta-item" data-es="Recorrido Gourmet" data-ca="Recorregut Gourmet">Recorrido Gourmet</div>
-  </div>
-
-  <div class="hero-scroll">
-    <span class="t" data-es="Scroll" data-ca="Scroll">Scroll</span>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
     <div class="hero-scroll-line"></div>
   </div>
 </section>
 
-<!-- STRIP -->
-<div class="strip">
-  <div class="strip-inner">
-    <div class="t strip-item" data-es="8 Restaurantes al año" data-ca="8 Restaurants a l'any">8 Restaurantes al año</div>
-    <div class="t strip-item" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</div>
-    <div class="t strip-item" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</div>
-    <div class="t strip-item" data-es="Tarragona, Catalunya" data-ca="Tarragona, Catalunya">Tarragona, Catalunya</div>
+<!-- STRIP TICKER -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-track">
+    <div class="strip-item"><div class="strip-dot"></div><span class="t" data-es="8 Restaurantes al año" data-ca="8 Restaurants a l'any">8 Restaurants a l'any</span></div>
+    <div class="strip-item"><div class="strip-dot"></div><span class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeu Gastronia</span></div>
+    <div class="strip-item"><div class="strip-dot"></div><span class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premi Bacus</span></div>
+    <div class="strip-item"><div class="strip-dot"></div><span>Tarragona · Catalunya</span></div>
+    <div class="strip-item"><div class="strip-dot"></div><span class="t" data-es="Desde 2001" data-ca="Des de 2001">Des de 2001</span></div>
+    <div class="strip-item"><div class="strip-dot"></div><span class="t" data-es="8 Restaurantes al año" data-ca="8 Restaurants a l'any">8 Restaurants a l'any</span></div>
+    <div class="strip-item"><div class="strip-dot"></div><span class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeu Gastronia</span></div>
+    <div class="strip-item"><div class="strip-dot"></div><span class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premi Bacus</span></div>
+    <div class="strip-item"><div class="strip-dot"></div><span>Tarragona · Catalunya</span></div>
+    <div class="strip-item"><div class="strip-dot"></div><span class="t" data-es="Desde 2001" data-ca="Des de 2001">Des de 2001</span></div>
   </div>
 </div>
 
-<!-- RECORREGUT 2026 -->
+<!-- RECORREGUT -->
 <section class="sec" id="recorregut">
   <div class="sec-inner">
-    <div style="margin-bottom:48px;">
+    <div class="sec-head">
+      <div class="sec-num reveal" aria-hidden="true">01</div>
       <p class="slabel t reveal" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</p>
-      <h2 class="stitle t reveal reveal-delay-1" data-es="Recorrido Gourmet" data-ca="Recorregut Gourmet">Recorrido Gourmet</h2>
-      <div class="sdiv reveal reveal-delay-2"></div>
-      <p class="sec-desc t reveal reveal-delay-3" data-es="Ocho restaurantes, una temporada, un territorio. Evaluamos con criterio y compartimos con honestidad." data-ca="Vuit restaurants, una temporada, un territori. Avaluem amb criteri i compartim amb honestedat.">Ocho restaurantes, una temporada, un territorio. Evaluamos con criterio y compartimos con honestidad.</p>
+      <h2 class="stitle t reveal reveal-d1" data-es="Recorrido Gourmet" data-ca="Recorregut Gourmet">Recorregut Gourmet</h2>
+      <div class="sdiv reveal reveal-d2"></div>
+      <p class="sec-desc t reveal reveal-d3"
+         data-es="Ocho restaurantes, una temporada, un territorio. Evaluamos con criterio y compartimos con honestidad."
+         data-ca="Vuit restaurants, una temporada, un territori. Avaluem amb criteri i compartim amb honestedat.">
+        Vuit restaurants, una temporada, un territori. Avaluem amb criteri i compartim amb honestedat.
+      </p>
     </div>
-    <!-- Barra progrés temporada -->
     <div class="rec-progress reveal">
-      <div class="rec-progress-track"><div class="rec-progress-fill" data-width="50" style="width:0%;transition:width .9s ease .3s;"></div></div>
-      <span class="rec-progress-label t" data-es="4 de 8 visitas" data-ca="4 de 8 visites">4 de 8 visitas</span>
+      <div class="rec-progress-track">
+        <div class="rec-progress-fill" data-width="50" style="width:0%"></div>
+      </div>
+      <span class="rec-progress-label t" data-es="4 de 8 visitas" data-ca="4 de 8 visites">4 de 8 visites</span>
     </div>
-
-    <!-- Lista editorial -->
     <div role="list">
-
-      <!-- 01 Kema -->
       <div class="rec-row done" role="listitem">
         <span class="rec-num">01</span>
-        <span class="rec-name">Kema</span>
+        <a href="kema.html" class="rec-name">Kema</a>
         <span class="rec-city">Cambrils</span>
-        <span class="rec-date t" data-es="Marzo 2026" data-ca="Març 2026">Marzo 2026</span>
-        <span class="rec-badge rec-badge-done t" data-es="Visitado" data-ca="Visitat">Visitado</span>
+        <span class="rec-date t" data-es="Marzo 2026" data-ca="Març 2026">Març 2026</span>
+        <span class="rec-badge rec-badge-done t" data-es="Visitado" data-ca="Visitat">Visitat</span>
         <div class="rec-links">
-          <a href="entrades/kema-previa-2026.html" class="rec-link t" data-es="Previa" data-ca="Prèvia">Previa</a>
-          <a href="entrades/kema-cronica-2026.html" class="rec-link t" data-es="Crónica" data-ca="Crònica">Crónica</a>
+          <a href="kema-previa.html" class="rec-link t" data-es="Previa" data-ca="Prèvia">Prèvia</a>
+          <a href="kema-cronica.html" class="rec-link t" data-es="Crónica" data-ca="Crònica">Crònica</a>
         </div>
       </div>
-
-      <!-- 02 La Goleta -->
       <div class="rec-row done" role="listitem">
         <span class="rec-num">02</span>
-        <span class="rec-name">La Goleta</span>
+        <a href="la-goleta.html" class="rec-name">La Goleta</a>
         <span class="rec-city">Salou</span>
         <span class="rec-date t" data-es="Abril 2026" data-ca="Abril 2026">Abril 2026</span>
-        <span class="rec-badge rec-badge-done t" data-es="Visitado" data-ca="Visitat">Visitado</span>
+        <span class="rec-badge rec-badge-done t" data-es="Visitado" data-ca="Visitat">Visitat</span>
         <div class="rec-links">
-          <a href="entrades/la-goleta-previa-2026.html" class="rec-link t" data-es="Previa" data-ca="Prèvia">Previa</a>
-          <a href="entrades/la-goleta-cronica-2026.html" class="rec-link t" data-es="Crónica" data-ca="Crònica">Crónica</a>
+          <a href="la-goleta-previa.html" class="rec-link t" data-es="Previa" data-ca="Prèvia">Prèvia</a>
+          <a href="la-goleta-cronica.html" class="rec-link t" data-es="Crónica" data-ca="Crònica">Crònica</a>
         </div>
       </div>
-
-      <!-- 03 El Terrat -->
       <div class="rec-row done" role="listitem">
         <span class="rec-num">03</span>
-        <span class="rec-name">El Terrat</span>
+        <a href="el-terrat.html" class="rec-name">El Terrat</a>
         <span class="rec-city">Tarragona</span>
-        <span class="rec-date t" data-es="7 Mayo 2026" data-ca="7 Maig 2026">7 Mayo 2026</span>
-        <span class="rec-badge rec-badge-done t" data-es="Visitado" data-ca="Visitat">Visitado</span>
+        <span class="rec-date t" data-es="7 Mayo 2026" data-ca="7 Maig 2026">7 Maig 2026</span>
+        <span class="rec-badge rec-badge-done t" data-es="Visitado" data-ca="Visitat">Visitat</span>
         <div class="rec-links">
-          <a href="entrades/terrat-previa-2026.html" class="rec-link t" data-es="Previa" data-ca="Prèvia">Previa</a>
-          <a href="entrades/terrat-cronica-2026.html" class="rec-link t" data-es="Crónica" data-ca="Crònica">Crónica</a>
+          <a href="el-terrat-previa.html" class="rec-link t" data-es="Previa" data-ca="Prèvia">Prèvia</a>
+          <a href="el-terrat-cronica.html" class="rec-link t" data-es="Crónica" data-ca="Crònica">Crònica</a>
         </div>
       </div>
-
-      <!-- 04 Cervus — Visitado -->
       <div class="rec-row done" role="listitem">
         <span class="rec-num">04</span>
-        <span class="rec-name">Cervus</span>
+        <a href="cervus.html" class="rec-name">Cervus</a>
         <span class="rec-city">Reus</span>
-        <span class="rec-date t" data-es="10–11 Jun 2026" data-ca="10–11 Juny 2026">10–11 Jun 2026</span>
-        <span class="rec-badge rec-badge-done t" data-es="Visitado" data-ca="Visitat">Visitado</span>
+        <span class="rec-date t" data-es="10–11 Jun 2026" data-ca="10–11 Juny 2026">10–11 Juny 2026</span>
+        <span class="rec-badge rec-badge-done t" data-es="Visitado" data-ca="Visitat">Visitat</span>
         <div class="rec-links">
-          <a href="entrades/cervus-previa-2026.html" class="rec-link t" data-es="Previa" data-ca="Prèvia">Previa</a>
-          <a href="entrades/cervus-cronica-2026.html" class="rec-link t" data-es="Crónica" data-ca="Crònica">Crónica</a>
+          <a href="cervus-previa.html" class="rec-link t" data-es="Previa" data-ca="Prèvia">Prèvia</a>
+          <a href="cervus-cronica.html" class="rec-link t" data-es="Crónica" data-ca="Crònica">Crònica</a>
         </div>
       </div>
-
-      <!-- 05–08 Pendents -->
       <div class="rec-row pend" role="listitem">
         <span class="rec-num">05</span>
-        <span class="rec-name t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span>
+        <span class="rec-name t" data-es="Por confirmar" data-ca="Per confirmar">Per confirmar</span>
         <span class="rec-city">—</span>
         <span class="rec-date">2026</span>
-        <span class="rec-badge rec-badge-pend t" data-es="Pendiente" data-ca="Pendent">Pendiente</span>
+        <span class="rec-badge rec-badge-pend t" data-es="Pendiente" data-ca="Pendent">Pendent</span>
         <div class="rec-links"></div>
       </div>
       <div class="rec-row pend" role="listitem">
         <span class="rec-num">06</span>
-        <span class="rec-name t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span>
+        <span class="rec-name t" data-es="Por confirmar" data-ca="Per confirmar">Per confirmar</span>
         <span class="rec-city">—</span>
         <span class="rec-date">2026</span>
-        <span class="rec-badge rec-badge-pend t" data-es="Pendiente" data-ca="Pendent">Pendiente</span>
+        <span class="rec-badge rec-badge-pend t" data-es="Pendiente" data-ca="Pendent">Pendent</span>
         <div class="rec-links"></div>
       </div>
       <div class="rec-row pend" role="listitem">
         <span class="rec-num">07</span>
-        <span class="rec-name t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span>
+        <span class="rec-name t" data-es="Por confirmar" data-ca="Per confirmar">Per confirmar</span>
         <span class="rec-city">—</span>
         <span class="rec-date">2026</span>
-        <span class="rec-badge rec-badge-pend t" data-es="Pendiente" data-ca="Pendent">Pendiente</span>
+        <span class="rec-badge rec-badge-pend t" data-es="Pendiente" data-ca="Pendent">Pendent</span>
         <div class="rec-links"></div>
       </div>
       <div class="rec-row pend" role="listitem">
         <span class="rec-num">08</span>
-        <span class="rec-name t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span>
+        <span class="rec-name t" data-es="Por confirmar" data-ca="Per confirmar">Per confirmar</span>
         <span class="rec-city">—</span>
         <span class="rec-date">2026</span>
-        <span class="rec-badge rec-badge-pend t" data-es="Pendiente" data-ca="Pendent">Pendiente</span>
+        <span class="rec-badge rec-badge-pend t" data-es="Pendiente" data-ca="Pendent">Pendent</span>
         <div class="rec-links"></div>
       </div>
-
     </div>
-
-    <div style="text-align:center;margin-top:36px;">
-      <a href="pages/restaurants.html" class="btn-outline t" data-es="Ver todas las visitas" data-ca="Veure totes les visites">Ver todas las visitas</a>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="recorregut.html" class="btn-outline t" data-es="Ver todas las visitas" data-ca="Veure totes les visites">Veure totes les visites</a>
     </div>
   </div>
 </section>
@@ -423,21 +809,37 @@
   <div class="sec-inner">
     <div class="home-about">
       <div class="img-frame reveal-left">
-        <img src="assets/img/about.jpg" alt="Sobremesa de socios de Gourmets de Tarragona">
+        <img src="assets/img/hero.jpg" alt="Gastronomia mediterrània al Camp de Tarragona" loading="lazy">
+        <div class="img-frame-deco" aria-hidden="true"></div>
+        <div class="img-frame-g" aria-hidden="true">G</div>
       </div>
       <div>
-        <p class="t slabel reveal" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</p>
-        <h2 class="t stitle reveal reveal-delay-1" data-es="La excelencia culinaria del Camp de Tarragona" data-ca="L'excel·lència culinària del Camp de Tarragona">La excelencia culinaria del Camp de Tarragona</h2>
-        <div class="sdiv reveal reveal-delay-2"></div>
-        <p class="t about-p reveal reveal-delay-2" data-es="Gourmets de Tarragona es una asociación formada por amantes de la gastronomía, chefs, productores locales y entusiastas del buen comer que comparten la misma pasión: descubrir y dar a conocer la cocina del territorio." data-ca="Gourmets de Tarragona és una associació formada per amants de la gastronomia, cuiners, productors locals i entusiastes del bon menjar que comparteixen la mateixa passió: descobrir i donar a conèixer la cuina del territori.">Gourmets de Tarragona es una asociación formada por amantes de la gastronomía, chefs, productores locales y entusiastas del buen comer que comparten la misma pasión: descubrir y dar a conocer la cocina del territorio.</p>
-        <p class="t about-p reveal reveal-delay-3" data-es="A lo largo del año visitamos cerca de ocho restaurantes, los socios valoran cada experiencia y al final del año los mejores reciben sus galardones." data-ca="Al llarg de l'any visitem prop de vuit restaurants, els socis valoren cada experiència i a final d'any els millors reben els seus guardons.">A lo largo del año visitamos cerca de ocho restaurantes, los socios valoran cada experiencia y al final del año los mejores reciben sus galardones.</p>
+        <div class="sec-num reveal" aria-hidden="true" style="color:rgba(27,58,107,.04)">02</div>
+        <p class="slabel t reveal" data-es="Quiénes somos" data-ca="Qui som">Qui som</p>
+        <h2 class="stitle t reveal reveal-d1"
+            data-es="La excelencia culinaria del Camp de Tarragona"
+            data-ca="L'excel·lència culinària del Camp de Tarragona">
+          L'excel·lència culinària<br>del Camp de Tarragona
+        </h2>
+        <div class="sdiv reveal reveal-d2"></div>
+        <p class="about-p t reveal reveal-d2"
+           data-es="Gourmets de Tarragona es una asociación formada por amantes de la gastronomía, chefs, productores locales y entusiastas del buen comer que comparten la misma pasión: descubrir y dar a conocer la cocina del territorio."
+           data-ca="Gourmets de Tarragona és una associació formada per amants de la gastronomia, cuiners, productors locals i entusiastes del bon menjar que comparteixen la mateixa passió: descobrir i donar a conèixer la cuina del territori.">
+          Gourmets de Tarragona és una associació formada per amants de la gastronomia, cuiners, productors locals i entusiastes del bon menjar que comparteixen la mateixa passió: descobrir i donar a conèixer la cuina del territori.
+        </p>
+        <p class="about-p t reveal reveal-d3"
+           data-es="A lo largo del año visitamos cerca de ocho restaurantes, los socios valoran cada experiencia y al final del año los mejores reciben sus galardones."
+           data-ca="Al llarg de l'any visitem prop de vuit restaurants, els socis valoren cada experiència i a final d'any els millors reben els seus guardons.">
+          Al llarg de l'any visitem prop de vuit restaurants, els socis valoren cada experiència i a final d'any els millors reben els seus guardons.
+        </p>
         <div class="vals">
-          <div class="val reveal reveal-delay-2"><i class="fa fa-star"></i><span class="t" data-es="Excelencia gastronómica" data-ca="Excel·lència gastronòmica">Excelencia gastronómica</span></div>
-          <div class="val reveal reveal-delay-3"><i class="fa fa-leaf"></i><span class="t" data-es="Producto local y de temporada" data-ca="Producte local i de temporada">Producto local y de temporada</span></div>
-          <div class="val reveal reveal-delay-3"><i class="fa fa-wine-glass"></i><span class="t" data-es="Cultura del vino y el maridaje" data-ca="Cultura del vi i el maridatge">Cultura del vino y el maridaje</span></div>
-          <div class="val reveal reveal-delay-4"><i class="fa fa-users"></i><span class="t" data-es="Respeto por el territorio y sus profesionales" data-ca="Respecte pel territori i els seus professionals">Respeto por el territorio y sus profesionales</span></div>
+          <div class="val reveal reveal-d1"><i class="fa fa-star" aria-hidden="true"></i><span class="t" data-es="Excelencia gastronómica" data-ca="Excel·lència gastronòmica">Excel·lència gastronòmica</span></div>
+          <div class="val reveal reveal-d2"><i class="fa fa-leaf" aria-hidden="true"></i><span class="t" data-es="Producto local y de temporada" data-ca="Producte local i de temporada">Producte local i de temporada</span></div>
+          <div class="val reveal reveal-d3"><i class="fa fa-wine-glass" aria-hidden="true"></i><span class="t" data-es="Cultura del vino y el maridaje" data-ca="Cultura del vi i el maridatge">Cultura del vi i el maridatge</span></div>
+          <div class="val reveal reveal-d4"><i class="fa fa-users" aria-hidden="true"></i><span class="t" data-es="Respeto por el territorio" data-ca="Respecte pel territori">Respecte pel territori</span></div>
         </div>
-        <a href="pages/associacio.html" class="t btn-primary reveal reveal-delay-4" style="margin-top:28px;display:inline-block;" data-es="Conocer la asociación" data-ca="Conèixer l'associació">Conocer la asociación</a>
+        <a href="qui-som.html" class="btn-primary t reveal reveal-d4" style="margin-top:32px;display:inline-block;"
+           data-es="Conocer la asociación" data-ca="Conèixer l'associació">Conèixer l'associació</a>
       </div>
     </div>
   </div>
@@ -445,101 +847,141 @@
 
 <!-- MANIFIESTO -->
 <section class="sec-manifesto">
-  <div class="sec-manifesto-bg-deco">G</div>
-  <div class="manifesto-deco reveal">
-    <div class="manifesto-deco-line"></div>
-    <span class="manifesto-deco-label t" data-es="Nuestra filosofía" data-ca="La nostra filosofia">Nuestra filosofía</span>
-    <div class="manifesto-deco-line"></div>
+  <div class="manifesto-frame" id="manifestoFrame">
+    <span class="manifesto-diamond top" aria-hidden="true">◆</span>
+    <span class="manifesto-diamond bot" aria-hidden="true">◆</span>
+    <div class="manifesto-deco" aria-hidden="true">
+      <div class="manifesto-deco-line"></div>
+      <span class="manifesto-deco-label t" data-es="Nuestra filosofía" data-ca="La nostra filosofia">La nostra filosofia</span>
+      <div class="manifesto-deco-line"></div>
+    </div>
+    <p class="manifesto-quote t"
+       data-es='La gastronomía del Camp de Tarragona<br>merece ser <em>leída, escrita y recordada.</em>'
+       data-ca='La gastronomia del Camp de Tarragona<br>mereix ser <em>llegida, escrita i recordada.</em>'>
+      La gastronomia del Camp de Tarragona<br>mereix ser <em>llegida, escrita i recordada.</em>
+    </p>
+    <p class="manifesto-attr">Gourmets de Tarragona · Des de 2001</p>
   </div>
-  <p class="manifesto-quote t reveal reveal-delay-1"
-     data-es="La gastronomía del Camp de Tarragona<br>merece ser <em>leída, escrita y recordada.</em>"
-     data-ca="La gastronomia del Camp de Tarragona<br>mereix ser <em>llegida, escrita i recordada.</em>">
-    La gastronomía del Camp de Tarragona<br>merece ser <em>leída, escrita y recordada.</em>
-  </p>
-  <p class="manifesto-attr">Gourmets de Tarragona · Des de 2001</p>
 </section>
 
-<!-- PREMIS HOME -->
+<!-- PREMIS -->
 <section class="sec" id="premis-home">
   <div class="sec-inner">
-    <p class="t slabel reveal" data-es="Nuestros Galardones" data-ca="Els nostres Guardons">Nuestros Galardones</p>
-    <h2 class="t stitle reveal reveal-delay-1" data-es="Los premios de referencia de la gastronomía tarraconense" data-ca="Els premis de referència de la gastronomia tarragonina">Los premios de referencia de la gastronomía tarraconense</h2>
-    <div class="sdiv reveal reveal-delay-2"></div>
+    <div class="sec-num reveal" aria-hidden="true" style="color:rgba(27,58,107,.04)">03</div>
+    <p class="slabel t reveal" data-es="Nuestros Galardones" data-ca="Els nostres Guardons">Els nostres Guardons</p>
+    <h2 class="stitle t reveal reveal-d1"
+        data-es="Los premios de referencia de la gastronomía tarraconense"
+        data-ca="Els premis de referència de la gastronomia tarragonina">
+      Els premis de referència<br>de la gastronomia tarragonina
+    </h2>
+    <div class="sdiv reveal reveal-d2" style="margin-bottom:44px;"></div>
     <div class="premios-home">
-      <div class="premio-box reveal reveal-delay-2">
+      <div class="premio-box reveal reveal-d2">
         <div class="premio-icon">
-          <img src="assets/img/gastronia.png"
-               alt="Trofeu Gastronia"
+          <img src="assets/img/gastronia.png" alt="Trofeu Gastronia"
                onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-          <span style="display:none;font-size:2.8rem;">🏆</span>
+          <i class="fa fa-trophy premio-icon-fa" style="display:none" aria-hidden="true"></i>
         </div>
-        <h3 class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</h3>
-        <p class="t" data-es="El máximo reconocimiento al mejor restaurante del año según la valoración acumulada de todos los socios a lo largo de las visitas." data-ca="El màxim reconeixement al millor restaurant de l'any segons la valoració acumulada de tots els socis al llarg de les visites.">El máximo reconocimiento al mejor restaurante del año según la valoración acumulada de todos los socios a lo largo de las visitas.</p>
+        <h3 class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeu Gastronia</h3>
+        <p class="t"
+           data-es="El máximo reconocimiento al mejor restaurante del año según la valoración acumulada de todos los socios a lo largo de las visitas."
+           data-ca="El màxim reconeixement al millor restaurant de l'any segons la valoració acumulada de tots els socis al llarg de les visites.">
+          El màxim reconeixement al millor restaurant de l'any segons la valoració acumulada de tots els socis.
+        </p>
+        <div class="premio-num" aria-hidden="true">01</div>
       </div>
-      <div class="premio-box reveal reveal-delay-3">
+      <div class="premio-box reveal reveal-d3">
         <div class="premio-icon">
-          <img src="assets/img/bacus.png"
-               alt="Premi Bacus"
+          <img src="assets/img/bacus.png" alt="Premi Bacus"
                onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-          <span style="display:none;font-size:2.8rem;">🍷</span>
+          <i class="fa fa-wine-glass premio-icon-fa" style="display:none" aria-hidden="true"></i>
         </div>
-        <h3 class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</h3>
-        <p class="t" data-es="Otorgado al mejor vino descubierto durante las visitas del año. La bodega premiada es invitada de honor a la Cena de Entrega de Premios." data-ca="Atorgat al millor vi descobert durant les visites de l'any. El celler premiat és convidat d'honor al Sopar de Lliurament de Premis.">Otorgado al mejor vino descubierto durante las visitas del año. La bodega premiada es invitada de honor a la Cena de Entrega de Premios.</p>
+        <h3 class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premi Bacus</h3>
+        <p class="t"
+           data-es="Otorgado al mejor vino descubierto durante las visitas del año. La bodega premiada es invitada de honor a la Cena de Entrega de Premios."
+           data-ca="Atorgat al millor vi descobert durant les visites de l'any. El celler premiat és convidat d'honor al Sopar de Lliurament de Premis.">
+          Atorgat al millor vi descobert durant les visites de l'any. El celler premiat és convidat d'honor.
+        </p>
+        <div class="premio-num" aria-hidden="true">02</div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:36px;">
-      <a href="pages/premis.html" class="btn-outline t" data-es="Ver todos los premios" data-ca="Veure tots els premis">Ver todos los premios</a>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="gastronia.html" class="btn-outline t" data-es="Ver todos los premios" data-ca="Veure tots els premis">Veure tots els premis</a>
     </div>
   </div>
 </section>
 
-<!-- PROPERS EVENTS -->
-<section class="sec sec-gray" id="events">
+<!-- AGENDA -->
+<section class="sec sec-gray" id="agenda">
   <div class="sec-inner">
-    <p class="t slabel reveal" data-es="Próximos Eventos" data-ca="Propers Esdeveniments">Próximos Eventos</p>
-    <h2 class="t stitle reveal reveal-delay-1" data-es="La agenda de los Gourmets" data-ca="L'agenda dels Gourmets">La agenda de los Gourmets</h2>
-    <div class="sdiv reveal reveal-delay-2"></div>
+    <div class="sec-num reveal" aria-hidden="true" style="color:rgba(27,58,107,.055)">04</div>
+    <p class="slabel t reveal" data-es="Próximos Eventos" data-ca="Propers Esdeveniments">Propers Esdeveniments</p>
+    <h2 class="stitle t reveal reveal-d1" data-es="La agenda de los Gourmets" data-ca="L'agenda dels Gourmets">L'agenda dels Gourmets</h2>
+    <div class="sdiv reveal reveal-d2" style="margin-bottom:44px;"></div>
     <div class="cards-grid">
-
-      <div class="card reveal reveal-delay-2">
-        <img class="card-img" src="assets/img/event-cata.jpg" alt="Cata de vinos DO Tarragona">
-        <span class="t card-badge" data-es="Cata" data-ca="Tast">Cata</span>
+      <div class="card reveal reveal-d1">
+        <div class="card-img-wrap">
+          <img class="card-img"
+               src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=70"
+               alt="Tast de vins" loading="lazy">
+        </div>
+        <span class="card-badge t" data-es="Cata" data-ca="Tast">Tast</span>
         <div class="card-body">
-          <p class="t card-date" data-es="Fecha por determinar" data-ca="Data per determinar">Fecha por determinar</p>
-          <h3 class="t card-title" data-es="Cata de Vinos DO Tarragona" data-ca="Tast de Vins DO Tarragona">Cata de Vinos DO Tarragona</h3>
-          <p class="t card-desc" data-es="Una noche de descubrimiento a través de los mejores caldos de la DO Tarragona. Fecha y lugar por confirmar." data-ca="Una nit de descoberta a través dels millors vins de la DO Tarragona. Data i lloc per confirmar.">Una noche de descubrimiento a través de los mejores caldos de la DO Tarragona. Fecha y lugar por confirmar.</p>
+          <p class="card-date t" data-es="Fecha por determinar" data-ca="Data per determinar">Data per determinar</p>
+          <h3 class="card-title t" data-es="Cata de Vinos DO Tarragona" data-ca="Tast de Vins DO Tarragona">Tast de Vins DO Tarragona</h3>
+          <p class="card-desc t"
+             data-es="Una noche de descubrimiento a través de los mejores caldos de la DO Tarragona."
+             data-ca="Una nit de descoberta a través dels millors vins de la DO Tarragona.">
+            Una nit de descoberta a través dels millors vins de la DO Tarragona.
+          </p>
         </div>
         <div class="card-foot">
-          <span class="card-loc"><i class="fa fa-map-marker-alt"></i> <span class="t" data-es="Camp de Tarragona" data-ca="Camp de Tarragona">Camp de Tarragona</span></span>
+          <span class="card-loc"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Camp de Tarragona</span>
+          <a href="#" class="card-link t" data-es="Más info" data-ca="Més info">Més info</a>
         </div>
       </div>
-
-      <div class="card reveal reveal-delay-3">
-        <img class="card-img" src="assets/img/event-sopar.jpg" alt="Cena de verano de los Gourmets">
-        <span class="t card-badge" data-es="Cena" data-ca="Sopar">Cena</span>
+      <div class="card reveal reveal-d2">
+        <div class="card-img-wrap">
+          <img class="card-img"
+               src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600&q=70"
+               alt="Sopar d'estiu" loading="lazy">
+        </div>
+        <span class="card-badge t" data-es="Cena" data-ca="Sopar">Sopar</span>
         <div class="card-body">
-          <p class="t card-date" data-es="Julio 2026" data-ca="Juliol 2026">Julio 2026</p>
-          <h3 class="t card-title" data-es="Cena de Verano 2026" data-ca="Sopar d'Estiu 2026">Cena de Verano 2026</h3>
-          <p class="t card-desc" data-es="Encuentro estival de los Gourmets de Tarragona. Fecha y lugar por confirmar." data-ca="Trobada estival dels Gourmets de Tarragona. Data i lloc per confirmar.">Encuentro estival de los Gourmets de Tarragona. Fecha y lugar por confirmar.</p>
+          <p class="card-date t" data-es="Julio 2026" data-ca="Juliol 2026">Juliol 2026</p>
+          <h3 class="card-title t" data-es="Cena de Verano 2026" data-ca="Sopar d'Estiu 2026">Sopar d'Estiu 2026</h3>
+          <p class="card-desc t"
+             data-es="Encuentro estival de los Gourmets de Tarragona. Fecha y lugar por confirmar."
+             data-ca="Trobada estival dels Gourmets de Tarragona. Data i lloc per confirmar.">
+            Trobada estival dels Gourmets de Tarragona. Data i lloc per confirmar.
+          </p>
         </div>
         <div class="card-foot">
-          <span class="card-loc"><i class="fa fa-map-marker-alt"></i> <span class="t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span></span>
+          <span class="card-loc"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Per confirmar</span>
+          <a href="#" class="card-link t" data-es="Más info" data-ca="Més info">Més info</a>
         </div>
       </div>
-
-      <div class="card reveal reveal-delay-4">
-        <img class="card-img" src="assets/img/gala2025/sala-gala.jpg" alt="Gala de entrega de premios 2025">
-        <span class="t card-badge" data-es="Gala" data-ca="Gala">Gala</span>
+      <div class="card reveal reveal-d3">
+        <div class="card-img-wrap">
+          <img class="card-img"
+               src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=70"
+               alt="Sopar de Nadal" loading="lazy">
+        </div>
+        <span class="card-badge t" data-es="Gala" data-ca="Gala">Gala</span>
         <div class="card-body">
-          <p class="t card-date" data-es="Diciembre 2026" data-ca="Desembre 2026">Diciembre 2026</p>
-          <h3 class="t card-title" data-es="Cena de Navidad 2026" data-ca="Sopar de Nadal 2026">Cena de Navidad 2026</h3>
-          <p class="t card-desc" data-es="Cena de cierre de la temporada 2026. La entrega del Trofeo Gastronia y el Premio Bacus se celebrará en febrero de 2027." data-ca="Sopar de tancament de la temporada 2026. El lliurament del Trofeu Gastronia i el Premi Bacus es celebrarà el febrer de 2027.">Cena de cierre de la temporada 2026. La entrega del Trofeo Gastronia y el Premio Bacus se celebrará en febrero de 2027.</p>
+          <p class="card-date t" data-es="Diciembre 2026" data-ca="Desembre 2026">Desembre 2026</p>
+          <h3 class="card-title t" data-es="Cena de Navidad 2026" data-ca="Sopar de Nadal 2026">Sopar de Nadal 2026</h3>
+          <p class="card-desc t"
+             data-es="Cena de cierre de la temporada 2026. Entrega del Trofeo Gastronia y el Premio Bacus en febrero 2027."
+             data-ca="Sopar de tancament de la temporada 2026. El lliurament dels premis es celebrarà el febrer de 2027.">
+            Sopar de tancament de la temporada 2026. El lliurament dels premis es celebrarà el febrer de 2027.
+          </p>
         </div>
         <div class="card-foot">
-          <span class="card-loc"><i class="fa fa-map-marker-alt"></i> <span class="t" data-es="Por determinar" data-ca="Per determinar">Por determinar</span></span>
+          <span class="card-loc"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Per determinar</span>
+          <a href="#" class="card-link t" data-es="Más info" data-ca="Més info">Més info</a>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -548,187 +990,147 @@
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
-      <img src="assets/img/logo.png"
-           alt="Gourmets de Tarragona"
-           onerror="this.style.display='none'">
-      <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
+      <img src="assets/img/logo.png" alt="Gourmets de Tarragona" class="footer-logo">
+      <p class="t"
+         data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona."
+         data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">
+        Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.
+      </p>
       <div class="footer-social">
         <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          <i class="fab fa-instagram"></i>
         </a>
         <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          <i class="fab fa-facebook-f"></i>
         </a>
       </div>
     </div>
     <div class="footer-col">
-      <h4 class="t" data-es="Navegación" data-ca="Navegació">Navegación</h4>
+      <h4 class="t" data-es="Navegación" data-ca="Navegació">Navegació</h4>
       <ul>
-        <li><a href="pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a></li>
-        <li><a href="pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li>
-        <li><a href="pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li>
-        <li><a href="pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></li>
-        <li><a href="pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li>
+        <li><a href="qui-som.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Qui som</a></li>
+        <li><a href="recorregut.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurants</a></li>
+        <li><a href="gastronia.html" class="t" data-es="Premios" data-ca="Premis">Premis</a></li>
+        <li><a href="blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li>
+        <li><a href="contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacte</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4 class="t" data-es="Legal" data-ca="Legal">Legal</h4>
       <ul>
-        <li><a href="pages/avis-legal.html" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li>
-        <li><a href="pages/privacitat.html" class="t" data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a></li>
-        <li><a href="pages/cookies.html" class="t" data-es="Política de Cookies" data-ca="Política de Cookies">Política de Cookies</a></li>
+        <li><a href="avis-legal.html" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Avís Legal</a></li>
+        <li><a href="privacitat.html" class="t" data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacitat</a></li>
+        <li><a href="cookies.html" class="t" data-es="Política de Cookies" data-ca="Política de Cookies">Política de Cookies</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4 class="t" data-es="Contacto" data-ca="Contacte">Contacto</h4>
-      <p><a href="mailto:gourmetsdetarragona@gourmetsdetarragona.com">gourmetsdetarragona@gourmetsdetarragona.com</a></p>
-      <p>Tarragona, Catalunya</p>
+      <h4 class="t" data-es="Contacto" data-ca="Contacte">Contacte</h4>
+      <p>
+        <a href="mailto:gourmetsdetarragona@gourmetsdetarragona.com">
+          gourmetsdetarragona@<br>gourmetsdetarragona.com
+        </a>
+      </p>
+      <p style="margin-top:8px;">Tarragona, Catalunya</p>
     </div>
   </div>
   <div class="footer-bottom">
-    <p class="t" data-es="© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados" data-ca="© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats">© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados</p>
+    <p class="t"
+       data-es="© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados"
+       data-ca="© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats">
+      © 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats
+    </p>
   </div>
 </footer>
 
 <script>
-const translations = {
-  nav_inicio:{es:'Inicio',ca:'Inici'},
-  nav_asoc:{es:'La Asociación',ca:"L'Associació"},
-  nav_asoc_short:{es:'La Asociación',ca:"L'Associació"},
-  nav_rest:{es:'Restaurantes',ca:'Restaurants'},
-  nav_rest_short:{es:'Restaurantes',ca:'Restaurants'},
-  nav_premios:{es:'Premios',ca:'Premis'},
-  nav_premios_short:{es:'Premios',ca:'Premis'},
-  nav_eventos:{es:'Eventos',ca:'Esdeveniments'},
-  nav_eventos_short:{es:'Eventos',ca:'Esdeveniments'},
-  nav_blog:{es:'Blog Gourmet',ca:'Blog Gourmet'},
-  nav_contacto:{es:'Contacto',ca:'Contacte'},
-  nav_quienes:{es:'Quiénes somos',ca:'Qui som'},
-  nav_como:{es:'Cómo funcionamos',ca:'Com funcionem'},
-  nav_sistema:{es:'El sistema de valoración',ca:'El sistema de valoració'},
-  nav_visites:{es:'Visitas 2025–26',ca:'Visites 2025–26'},
-  nav_historic:{es:'Histórico de visitas',ca:'Històric de visites'},
-  nav_gastronia:{es:'Trofeo Gastronia',ca:'Trofeu Gastronia'},
-  nav_bacus:{es:'Premio Bacus',ca:'Premi Bacus'},
-  nav_palmares:{es:'Palmarés histórico',ca:'Palmarès històric'},
-  nav_cenes:{es:'Cenas especiales',ca:'Sopars especials'},
-  nav_cates:{es:'Catas & Visitas',ca:'Tasts & Visites'},
-  nav_calendari:{es:'Calendario',ca:'Calendari'},
-  footer_desc:{es:'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',ca:'Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.'},
-  footer_nav:{es:'Navegación',ca:'Navegació'},
-  footer_legal:{es:'Legal',ca:'Legal'},
-  footer_contacte:{es:'Contacto',ca:'Contacte'},
-  footer_avis:{es:'Aviso Legal',ca:'Avís Legal'},
-  footer_privacitat:{es:'Política de Privacidad',ca:'Política de Privacitat'},
-  footer_cookies:{es:'Política de Cookies',ca:'Política de Cookies'},
-  footer_copy:{es:'© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados',ca:'© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats'},
-};
+(function () {
+  var currentLang = localStorage.getItem('gdt-lang') || 'ca';
 
-let currentLang = localStorage.getItem('gdt-lang') || 'es';
+  function setLang(lang) {
+    currentLang = lang;
+    localStorage.setItem('gdt-lang', lang);
+    document.getElementById('html-root').setAttribute('lang', lang);
+    document.querySelectorAll('#btn-es,#btn-ca').forEach(function(b) {
+      b.classList.toggle('active', b.id === 'btn-' + lang);
+    });
+    document.querySelectorAll('.mobile-lang .lang-btn').forEach(function(b) {
+      b.classList.toggle('active', b.getAttribute('onclick') === "setLang('" + lang + "')");
+    });
+    document.querySelectorAll('.t').forEach(function(el) {
+      var val = el.getAttribute('data-' + lang);
+      if (val) el.innerHTML = val;
+    });
+  }
+  window.setLang = setLang;
 
-function applyTranslations(lang) {
-  document.querySelectorAll('[data-i18n]').forEach(function(el) {
-    var key = el.getAttribute('data-i18n');
-    if (translations[key] && translations[key][lang] !== undefined) {
-      el.innerHTML = translations[key][lang];
+  document.addEventListener('DOMContentLoaded', function () {
+    var nav  = document.getElementById('nav');
+    var menu = document.getElementById('mobileMenu');
+    var ham  = document.getElementById('hamburger');
+
+    function positionMenu() {
+      menu.style.top = nav.getBoundingClientRect().bottom + 'px';
     }
-  });
-  document.getElementById('html-root').setAttribute('lang', lang);
-  document.querySelectorAll('.lang-btn').forEach(function(btn) {
-    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-  });
-}
 
-function setLang(lang) {
-  currentLang = lang;
-  localStorage.setItem('gdt-lang', lang);
-  applyTranslations(lang);
-  document.querySelectorAll('.t').forEach(function(el) {
-    var val = el.getAttribute('data-' + lang);
-    if (val) el.innerHTML = val;
-  });
-  document.getElementById('mobileMenu').classList.remove('open');
-}
+    window.addEventListener('scroll', function () {
+      nav.classList.toggle('solid', window.scrollY > 60);
+      if (menu.classList.contains('open')) positionMenu();
+    }, { passive: true });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var nav = document.getElementById('nav');
-  var menu = document.getElementById('mobileMenu');
-
-  // ── Moure el mobileMenu a body per evitar clipping del nav ──
-  if (menu && menu.parentNode !== document.body) {
-    document.body.appendChild(menu);
-  }
-
-  // ── Funció per posicionar el menú just sota el nav ──
-  function positionMenu() {
-    if (!nav || !menu) return;
-    var rect = nav.getBoundingClientRect();
-    menu.style.top = rect.bottom + 'px';
-  }
-
-  // ── Scroll: solid nav + reposicionar menú si és obert ──
-  window.addEventListener('scroll', function() {
-    if (nav) nav.classList.toggle('solid', window.scrollY > 50);
-    if (menu && menu.classList.contains('open')) positionMenu();
-  });
-
-  // ── Hamburger ──
-  var burger = document.getElementById('hamburger');
-  if (burger) {
-    burger.addEventListener('click', function() {
-      if (nav) nav.classList.add('solid');
+    ham.addEventListener('click', function () {
+      nav.classList.add('solid');
       positionMenu();
-      menu.classList.toggle('open');
+      var open = menu.classList.toggle('open');
+      ham.setAttribute('aria-expanded', open);
     });
-  }
+    menu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { menu.classList.remove('open'); ham.setAttribute('aria-expanded', 'false'); });
+    });
 
-  // ── Tancar el menú en clicar un enllaç ──
-  if (menu) {
-    menu.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() {
-        menu.classList.remove('open');
+    /* ── Reveal on scroll ── */
+    var revObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('vis'); revObs.unobserve(e.target); }
       });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal, .reveal-left').forEach(function (el) { revObs.observe(el); });
+
+    /* ── Manifesto reveal ── */
+    var mf = document.getElementById('manifestoFrame');
+    if (mf) {
+      var mObs = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { mf.classList.add('vis'); mObs.disconnect(); }
+      }, { threshold: 0.3 });
+      mObs.observe(mf);
+    }
+
+    /* ── Progress bar ── */
+    var pObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var fill = e.target.querySelector('.rec-progress-fill[data-width]');
+          if (fill) fill.style.width = fill.getAttribute('data-width') + '%';
+          pObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.rec-progress').forEach(function (el) { pObs.observe(el); });
+
+    /* ── Rec-rows stagger ── */
+    document.querySelectorAll('.rec-row').forEach(function (row, i) {
+      setTimeout(function () {
+        row.style.animation = 'rowIn 380ms cubic-bezier(0.23,1,0.32,1) both';
+        row.style.animationDelay = (i * 70) + 'ms';
+        row.addEventListener('animationend', function () {
+          if (row.classList.contains('pend')) row.classList.add('anim-done');
+        }, { once: true });
+      }, 400);
     });
-  }
 
-  // ── Rec-rows: afegir classe anim-done a pend quan acaba l'animació ──
-  document.querySelectorAll('.rec-row.pend').forEach(function(row) {
-    row.addEventListener('animationend', function() {
-      row.classList.add('anim-done');
-    }, { once: true });
+    /* ── Idioma inicial ── */
+    setLang(currentLang);
   });
-
-  // ── Reveal on scroll ──
-  var revealObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('vis');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.reveal, .reveal-left, .reveal-scale').forEach(function(el) {
-    revealObserver.observe(el);
-  });
-
-  // ── Progress bar: animar amplada quan entra en viewport ──
-  var progressObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        var fill = entry.target.querySelector('.rec-progress-fill[data-width]');
-        if (fill) fill.style.width = fill.getAttribute('data-width') + '%';
-        progressObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  document.querySelectorAll('.rec-progress').forEach(function(el) {
-    progressObserver.observe(el);
-  });
-
-  if (currentLang === 'ca') setLang('ca');
-});
+}());
 </script>
 </body>
 </html>
