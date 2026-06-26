@@ -696,6 +696,24 @@
   </div>
 </footer>
 
+<script>
+var currentLang = localStorage.getItem('gdt-lang') || 'es';
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('gdt-lang', lang);
+  document.querySelectorAll('.t').forEach(function(el) {
+    var val = el.getAttribute('data-' + lang);
+    if (val !== null) el.innerHTML = val;
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+  document.getElementById('html-root').setAttribute('lang', lang);
+}
+document.addEventListener('DOMContentLoaded', function() {
+  if (currentLang === 'ca') setLang('ca');
+});
+</script>
 <script src="../assets/js/main.js"></script>
 <script>
 function copyLink(btn) {
