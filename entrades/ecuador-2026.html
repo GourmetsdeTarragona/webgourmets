@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon-180.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../assets/img/favicon-512.png">
+<link rel="shortcut icon" href="../favicon.ico">
+<title>A mitad de camino · Balance Temporada 2026 · Gourmets de Tarragona</title>
+<meta name="description" content="Balance del ecuador de la temporada 2026: cuatro visitas, cuatro municipios, cuatro maneras distintas de entender la mesa. Kema, La Goleta, El Terrat y Cervus.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/seccions.css">
+<style>
+.entrada-hero{position:relative;min-height:75vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.55;filter:brightness(1.05) contrast(1.08);}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.95) 0%,rgba(11,22,38,.45) 55%,rgba(11,22,38,.1) 100%);}
+.entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
+.entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
+.entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
+.entrada-back:hover{color:var(--gold);}
+.entrada-meta-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
+.entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--navy);color:#fff;padding:6px 14px;border:1px solid rgba(184,146,74,.3);}
+.entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
+.entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
+.entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.82);font-weight:300;line-height:1.85;max-width:560px;}
+/* COS */
+.entrada-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
+.e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-title{font-family:var(--font-serif);font-size:1.75rem;color:var(--navy-dark);line-height:1.2;margin-bottom:22px;}
+.e-p{font-size:1rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:20px;}
+.e-p strong{font-weight:700;color:var(--navy-dark);}
+.e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin:52px 0;}
+.e-sep{text-align:center;margin:56px 0;color:var(--gold);font-size:1rem;letter-spacing:10px;opacity:.35;}
+/* REST SECTIONS */
+.e-rest-header{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-bottom:40px;}
+.e-rest-num{font-family:var(--font-serif);font-size:5rem;font-weight:700;color:var(--navy);opacity:.08;line-height:1;display:block;margin-bottom:-16px;}
+.e-rest-badge{font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;background:var(--navy);color:#fff;padding:5px 12px;display:inline-block;margin-bottom:10px;}
+.e-rest-lloc{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block;}
+.e-rest-nom{font-family:var(--font-serif);font-size:2.4rem;font-weight:700;color:var(--navy-dark);line-height:1.1;margin-bottom:8px;}
+.e-rest-cuina{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+.e-foto-hero{margin:0 0 40px;position:relative;height:420px;overflow:hidden;}
+.e-foto-hero img{width:100%;height:100%;object-fit:cover;}
+.e-foto-hero-peu{font-size:.72rem;color:var(--muted);font-style:italic;margin-top:10px;padding-left:8px;border-left:2px solid var(--gold);opacity:.8;line-height:1.5;}
+/* MENU BLOCK */
+.e-menu-rest{background:var(--cream);border:1px solid var(--border);padding:36px 40px;margin:32px 0;}
+.e-menu-rest-title{font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:24px;padding-bottom:14px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;}
+.e-menu-rest-title i{color:var(--gold);font-size:.9rem;}
+.e-menu-col{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;}
+.e-menu-bloc{margin-bottom:20px;}
+.e-menu-bloc-label{font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--border);display:block;}
+.e-menu-plat{font-size:.88rem;font-weight:300;color:var(--navy);line-height:1.6;padding:4px 0;border-bottom:1px solid rgba(0,0,0,.04);}
+.e-menu-plat:last-child{border-bottom:none;}
+.e-menu-plat strong{font-weight:600;}
+/* VINS */
+.e-vins-rest{background:var(--navy-dark);padding:24px 40px;margin:0 0 32px;}
+.e-vins-rest-label{font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(184,146,74,.6);margin-bottom:12px;display:block;}
+.e-vins-rest-grid{display:flex;gap:16px;flex-wrap:wrap;}
+.e-vi-rest{background:rgba(255,255,255,.06);padding:10px 16px;border-left:2px solid rgba(184,146,74,.35);flex:1;min-width:160px;}
+.e-vi-rest-acte{font-size:.57rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(184,146,74,.6);display:block;margin-bottom:3px;}
+.e-vi-rest-nom{font-size:.83rem;color:#fff;line-height:1.4;}
+.e-vi-rest-do{font-size:.72rem;color:rgba(255,255,255,.38);margin-top:2px;}
+/* LINK REST */
+.e-rest-link{display:inline-flex;align-items:center;gap:8px;font-size:.63rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:3px;transition:color .2s;margin-top:8px;}
+.e-rest-link:hover{color:var(--gold);}
+/* CIERRE */
+.e-cierre{background:linear-gradient(135deg,#0b1626 0%,#1a2b3d 100%);padding:64px 48px;margin:52px 0;position:relative;overflow:hidden;}
+.e-cierre::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);}
+.e-cierre-inner{max-width:680px;margin:0 auto;text-align:center;}
+.e-cierre-label{font-size:.6rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:rgba(184,146,74,.6);margin-bottom:16px;display:block;}
+.e-cierre-title{font-family:var(--font-serif);font-size:clamp(1.6rem,3vw,2.4rem);color:#fff;line-height:1.25;margin-bottom:24px;}
+.e-cierre-p{font-size:.95rem;font-weight:300;color:rgba(255,255,255,.65);line-height:1.9;margin-bottom:16px;}
+.e-cierre-nota{font-size:.82rem;color:rgba(184,146,74,.55);font-style:italic;margin-top:20px;padding-top:20px;border-top:1px solid rgba(184,146,74,.15);}
+/* FITXA RESUM */
+.e-fitxa-resum{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);margin:48px 0;}
+.e-fitxa-resum-item{padding:28px 20px;border-right:1px solid var(--border);text-align:center;}
+.e-fitxa-resum-item:last-child{border-right:none;}
+.e-fitxa-resum-num{font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--navy);display:block;line-height:1;}
+.e-fitxa-resum-label{font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-top:4px;}
+.e-fitxa-resum-val{font-size:.82rem;font-weight:300;color:var(--muted);line-height:1.5;margin-top:6px;}
+/* COMPARTIR */
+.e-compartir{position:relative;margin:64px 0 0;padding:56px 40px 52px;background:linear-gradient(135deg,#0b1626 0%,#1c2e3e 100%);overflow:hidden;}
+.e-compartir::before{content:'';position:absolute;top:-1px;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);}
+.e-compartir::after{content:'"';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:14rem;font-weight:700;color:rgba(184,146,74,.06);line-height:1;pointer-events:none;user-select:none;}
+.e-compartir-inner{position:relative;z-index:1;max-width:600px;margin:0 auto;text-align:center;}
+.e-compartir-deco{display:flex;align-items:center;gap:16px;justify-content:center;margin-bottom:20px;}
+.e-compartir-deco-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,146,74,.3));}
+.e-compartir-deco-line.r{background:linear-gradient(90deg,rgba(184,146,74,.3),transparent);}
+.e-compartir-deco span{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(184,146,74,.6);font-weight:600;white-space:nowrap;}
+.e-compartir-frase{font-family:'Playfair Display',serif;font-size:1.45rem;font-style:italic;color:rgba(255,255,255,.88);line-height:1.5;margin-bottom:32px;font-weight:400;}
+.e-compartir-frase strong{font-style:normal;font-weight:700;color:#d4a96a;}
+.e-compartir-btns{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;}
+.e-compartir-btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;font-family:'Lato',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:rgba(255,255,255,.65);transition:all .25s;cursor:pointer;text-decoration:none;backdrop-filter:blur(4px);}
+.e-compartir-btn:hover{border-color:rgba(184,146,74,.6);background:rgba(184,146,74,.1);color:#d4a96a;transform:translateY(-2px);}
+.e-compartir-btn.wa:hover{border-color:#25d366;background:rgba(37,211,102,.1);color:#25d366;}
+.e-compartir-btn.fb:hover{border-color:#1877f2;background:rgba(24,119,242,.1);color:#6fa8ff;}
+.e-compartir-copied{font-size:.65rem;color:#d4a96a;letter-spacing:.08em;opacity:0;transition:opacity .3s;margin-left:4px;}
+.e-compartir-copied.vis{opacity:1;}
+/* TAMBE */
+.e-tambe{margin:64px 0 0;padding-top:48px;border-top:1px solid var(--border);}
+.e-tambe-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-tambe-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);margin-bottom:32px;}
+.e-tambe-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.e-tambe-card{background:#fff;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;text-decoration:none;}
+.e-tambe-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(28,46,62,.12);}
+.e-tambe-card-img{height:172px;overflow:hidden;position:relative;}
+.e-tambe-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.e-tambe-card:hover .e-tambe-card-img img{transform:scale(1.05);}
+.e-tambe-card-cat{position:absolute;top:12px;left:12px;font-size:.57rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 10px;color:#fff;background:var(--gold);}
+.e-tambe-card-body{padding:20px;flex:1;display:flex;flex-direction:column;}
+.e-tambe-card-title{font-family:var(--font-serif);font-size:1rem;color:var(--navy-dark);line-height:1.3;margin-bottom:8px;font-weight:600;}
+.e-tambe-card-exc{font-size:.83rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:14px;flex:1;}
+.e-tambe-card-link{font-size:.63rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy-dark);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;width:fit-content;margin-top:auto;}
+.e-tambe-card:hover .e-tambe-card-link{color:var(--gold);}
+/* NAV RETORN */
+.e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;}
+.e-nav-retorn-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+/* RESPONSIVE */
+@media(max-width:768px){
+  .entrada-hero-content{padding:0 5% 52px;}
+  .e-rest-header{grid-template-columns:1fr;gap:20px;}
+  .e-menu-col{grid-template-columns:1fr;}
+  .e-vins-rest{padding:20px 24px;}
+  .e-fitxa-resum{grid-template-columns:1fr 1fr;}
+  .e-fitxa-resum-item:nth-child(2){border-right:none;}
+  .e-fitxa-resum-item:nth-child(3){border-top:1px solid var(--border);}
+  .e-fitxa-resum-item:nth-child(4){border-top:1px solid var(--border);border-right:none;}
+  .e-tambe-grid{grid-template-columns:1fr;}
+  .e-compartir{padding:40px 24px 36px;}
+  .e-compartir::after{font-size:8rem;right:2%;}
+  .e-cierre{padding:44px 24px;}
+  .e-foto-hero{height:280px;}
+  .e-menu-rest{padding:24px 20px;}
+  .entrada-cos{padding:52px 5%;}
+}
+</style>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.gourmetsdetarragona.com/entrades/ecuador-2026.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.gourmetsdetarragona.com/entrades/ecuador-2026.html">
+<meta property="og:title" content="A mitad de camino · Balance Temporada 2026 · Gourmets de Tarragona">
+<meta property="og:description" content="Cuatro visitas, cuatro municipios, cuatro maneras distintas de entender la mesa. Balance del ecuador de la temporada 2026.">
+<meta property="og:image" content="https://www.gourmetsdetarragona.com/assets/img/terrat/cronica/sala-taula.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tarraco · Desde la época romana hasta la actualidad — El Terrat">
+<meta property="og:site_name" content="Gourmets de Tarragona">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="ca_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A mitad de camino · Balance Temporada 2026 · Gourmets de Tarragona">
+<meta name="twitter:description" content="Cuatro visitas, cuatro municipios, cuatro maneras distintas de entender la mesa.">
+<meta name="twitter:image" content="https://www.gourmetsdetarragona.com/assets/img/terrat/cronica/sala-taula.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "A mitad de camino · Balance de la Temporada 2026",
+  "description": "Balance del ecuador de la temporada 2026 de los Gourmets de Tarragona: Kema, La Goleta, El Terrat y Cervus.",
+  "image": "https://www.gourmetsdetarragona.com/assets/img/terrat/cronica/sala-taula.jpg",
+  "url": "https://www.gourmetsdetarragona.com/entrades/ecuador-2026.html",
+  "datePublished": "2026-06-26",
+  "inLanguage": ["es","ca"],
+  "author": {"@type":"Organization","name":"Gourmets de Tarragona","url":"https://www.gourmetsdetarragona.com"},
+  "publisher": {"@type":"Organization","name":"Gourmets de Tarragona","url":"https://www.gourmetsdetarragona.com","logo":{"@type":"ImageObject","url":"https://www.gourmetsdetarragona.com/assets/img/logo.png"}}
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona" onerror="handleLogoError(this)">
+    </a>
+    <div class="nav-menu">
+      <div class="nav-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
+      <div class="nav-item">
+        <span class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</span>
+        <div class="dropdown">
+          <a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a>
+          <a href="../pages/associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a>
+          <a href="../pages/associacio.html#valoracio" class="t" data-es="El sistema de valoración" data-ca="El sistema de valoració">El sistema de valoración</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span>
+        <div class="dropdown">
+          <a href="../pages/restaurants.html" class="t" data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visitas 2025–26</a>
+          <a href="../pages/restaurants.html#historic" class="t" data-es="Histórico de visitas" data-ca="Històric de visites">Histórico de visitas</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="Premios" data-ca="Premis">Premios</span>
+        <div class="dropdown">
+          <a href="../pages/premis.html" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</a>
+          <a href="../pages/premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a>
+          <a href="../pages/premis.html#palmares" class="t" data-es="Palmarés histórico" data-ca="Palmarès històric">Palmarés histórico</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</span>
+        <div class="dropdown">
+          <a href="../pages/esdeveniments.html" class="t" data-es="Cenas especiales" data-ca="Sopars especials">Cenas especiales</a>
+          <a href="../pages/esdeveniments.html#cates" class="t" data-es="Catas &amp; Visitas" data-ca="Tasts &amp; Visites">Catas &amp; Visitas</a>
+          <a href="../pages/esdeveniments.html#calendari" class="t" data-es="Calendario" data-ca="Calendari">Calendario</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+      <div class="nav-item"><a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
+    </div>
+    <div class="nav-lang">
+      <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
+      <span>|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menú" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div id="mobileMenu">
+  <a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a>
+  <a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a>
+  <a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a>
+  <a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a>
+  <a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a>
+  <a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a>
+  <a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a>
+</div>
+
+<!-- HERO -->
+<header class="entrada-hero">
+  <div class="entrada-hero-bg" style="background-image:url('../assets/img/terrat/cronica/sala-taula.jpg');background-position:center 40%;"></div>
+  <div class="entrada-hero-grad"></div>
+  <div class="entrada-hero-line"></div>
+  <div class="entrada-hero-content">
+    <a href="../pages/blog.html" class="entrada-back">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span class="t" data-es="Volver al Blog" data-ca="Tornar al Blog">Volver al Blog</span>
+    </a>
+    <div class="entrada-meta-top">
+      <span class="t entrada-badge" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</span>
+    </div>
+    <div class="entrada-meta-info">
+      <span class="entrada-meta-item"><i class="fa-regular fa-calendar"></i> <span class="t" data-es="Junio 2026" data-ca="Juny 2026">Junio 2026</span></span>
+      <span class="entrada-meta-item"><i class="fa-solid fa-utensils"></i> <span class="t" data-es="4 restaurantes · 4 municipios" data-ca="4 restaurants · 4 municipis">4 restaurantes · 4 municipios</span></span>
+      <span class="entrada-meta-item"><i class="fa-solid fa-map-pin"></i> Camp de Tarragona &amp; Costa Daurada</span>
+    </div>
+    <h1 class="t entrada-titol" data-es="A mitad de camino" data-ca="A mig camí">A mitad de camino</h1>
+    <p class="t entrada-subtitol" data-es="Cuatro visitas completadas. Cuatro municipios. Cuatro maneras distintas de entender la mesa." data-ca="Quatre visites completades. Quatre municipis. Quatre maneres diferents d'entendre la taula.">Cuatro visitas completadas. Cuatro municipios. Cuatro maneras distintas de entender la mesa.</p>
+  </div>
+</header>
+
+<!-- COS -->
+<article class="entrada-cos">
+
+  <!-- INTRO -->
+  <p class="t e-p" data-es="El recorrido anual de los Gourmets de Tarragona ha llegado a su ecuador. Cuatro visitas completadas sobre ocho previstas. Y, a la distancia que da el tiempo, la posibilidad de detenerse un momento antes de continuar." data-ca="El recorregut anual dels Gourmets de Tarragona ha arribat al seu ecuador. Quatre visites completades sobre vuit previstes. I, a la distància que dóna el temps, la possibilitat d'aturar-se un moment abans de continuar.">El recorrido anual de los Gourmets de Tarragona ha llegado a su ecuador. Cuatro visitas completadas sobre ocho previstas. Y, a la distancia que da el tiempo, la posibilidad de detenerse un momento antes de continuar.</p>
+
+  <p class="t e-p" data-es="No se trata de adelantar valoraciones. La Gala de final de año tiene ese cometido, y los socios harán entonces su trabajo con rigor. Se trata, simplemente, de trazar un mapa provisional: cuatro propuestas, cuatro identidades, cuatro lecturas distintas del territorio que nos define." data-ca="No es tracta d'avançar valoracions. La Gala de final d'any té aquest comès, i els socis faran llavors la seva feina amb rigor. Es tracta, simplement, de traçar un mapa provisional: quatre propostes, quatre identitats, quatre lectures diferents del territori que ens defineix.">No se trata de adelantar valoraciones. La Gala de final de año tiene ese cometido, y los socios harán entonces su trabajo con rigor. Se trata, simplemente, de trazar un mapa provisional: cuatro propuestas, cuatro identidades, cuatro lecturas distintas del territorio que nos define.</p>
+
+  <div class="e-divider"></div>
+
+  <!-- ═══ 1 · KEMA ═══ -->
+  <div class="e-rest-header">
+    <div>
+      <span class="e-rest-num">01</span>
+      <span class="t e-rest-badge" data-es="Primera visita · Marzo 2026" data-ca="Primera visita · Març 2026">Primera visita · Marzo 2026</span>
+      <span class="t e-rest-lloc" data-es="Cambrils" data-ca="Cambrils">Cambrils</span>
+      <h2 class="e-rest-nom">Kema</h2>
+      <span class="t e-rest-cuina" data-es="Brasas &amp; Coctelería" data-ca="Brases &amp; Cocteleria">Brasas &amp; Coctelería</span>
+    </div>
+    <p class="t e-p" style="margin-bottom:0;" data-es="La primera visita del año nos llevó a Cambrils. Kema no disimula lo que es: un restaurante de brasas y coctelería que ha construido un discurso coherente alrededor del fuego —de la robata al horno de leña— y lo complementa con una selección enológica de criterio. Martín Juza y su equipo firmaron una noche con tesis clara: la brasa no es un método, es una actitud." data-ca="La primera visita de l'any ens va portar a Cambrils. Kema no dissimula el que és: un restaurant de brases i cocteleria que ha construït un discurs coherent al voltant del foc —de la robata al forn de llenya— i el complementa amb una selecció enològica de criteri. Martín Juza i el seu equip van signar una nit amb tesi clara: la brasa no és un mètode, és una actitud.">La primera visita del año nos llevó a Cambrils. Kema no disimula lo que es: un restaurante de brasas y coctelería que ha construido un discurso coherente alrededor del fuego —de la robata al horno de leña— y lo complementa con una selección enológica de criterio. Martín Juza y su equipo firmaron una noche con tesis clara: la brasa no es un método, es una actitud.</p>
+  </div>
+
+  <div class="e-foto-hero">
+    <img src="../assets/img/kema/hero-cronica.jpg" alt="Kema · Brasas &amp; Cocktail · Cambrils" loading="lazy">
+  </div>
+  <p class="e-foto-hero-peu">Kema · Cambrils — La robata y el producto: el fuego como lenguaje</p>
+
+  <!-- MENU KEMA -->
+  <div class="e-menu-rest">
+    <div class="e-menu-rest-title"><i class="fa-solid fa-utensils"></i> <span class="t" data-es="Menú de la visita" data-ca="Menú de la visita">Menú de la visita</span></div>
+    <div class="e-menu-col">
+      <div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Obertura" data-ca="Obertura">Obertura</span>
+          <div class="e-menu-plat">"La Gilda del Kema" a la brasa amb caballa de Cambrils</div>
+          <div class="e-menu-plat">Panipuri de tàrtar de camarón rojo</div>
+          <div class="e-menu-plat">Papa arrugà al forn de llenya amb costella Black Angus BBQ</div>
+        </div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Intermezzo" data-ca="Intermezzo">Intermezzo</span>
+          <div class="e-menu-plat">Micuit de foie fumat al Calvados</div>
+          <div class="e-menu-plat">Ceviche de llobarro salvatge amb llet de tigre de carabinero</div>
+          <div class="e-menu-plat">Gamba roja de Tarragona amb salsa satay</div>
+        </div>
+      </div>
+      <div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Àries" data-ca="Àries">Àries</span>
+          <div class="e-menu-plat">Mar i muntanya · Steak tartar de vaca gallega</div>
+          <div class="e-menu-plat">Bacallà Skrei a la Robata</div>
+          <div class="e-menu-plat">Rib-eye de vaca gallega amb tòfona negra de Prades</div>
+        </div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Finale" data-ca="Finale">Finale</span>
+          <div class="e-menu-plat">Pre-finale líquid: Frozen Moscow Mule</div>
+          <div class="e-menu-plat"><strong>Cheesecake en deconstrucció</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="e-vins-rest">
+    <span class="t e-vins-rest-label" data-es="Maridatge · Filosofia enològica de Josep Serra" data-ca="Maridatge · Filosofia enològica de Josep Serra">Maridatge · Filosofia enològica de Josep Serra</span>
+    <div class="e-vins-rest-grid">
+      <div class="e-vi-rest"><span class="e-vi-rest-acte">Obertura</span><div class="e-vi-rest-nom">Cava Oriol Rosell Brut Nature Reserva 20 mesos</div><div class="e-vi-rest-do">D.O. Cava</div></div>
+      <div class="e-vi-rest"><span class="e-vi-rest-acte">Intermezzo</span><div class="e-vi-rest-nom">Picasoques Blanc 2024 · Picasoques Negre 2025</div><div class="e-vi-rest-do">Montsant</div></div>
+      <div class="e-vi-rest"><span class="e-vi-rest-acte">Àries</span><div class="e-vi-rest-nom">Aucalà Blanc 2019 Magnum · Aucalà Negre 2023 Magnum</div><div class="e-vi-rest-do">Terra Alta</div></div>
+      <div class="e-vi-rest"><span class="e-vi-rest-acte">Finale</span><div class="e-vi-rest-nom">Vi Dolç de Foc Espurnes</div><div class="e-vi-rest-do">Postre</div></div>
+    </div>
+  </div>
+
+  <a href="kema-cronica-2026.html" class="t e-rest-link" data-es="Leer la crónica completa de Kema →" data-ca="Llegir la crònica completa de Kema →">Leer la crónica completa de Kema →</a>
+
+  <div class="e-sep">· · ·</div>
+
+  <!-- ═══ 2 · LA GOLETA ═══ -->
+  <div class="e-rest-header">
+    <div>
+      <span class="e-rest-num">02</span>
+      <span class="t e-rest-badge" data-es="Segunda visita · Abril 2026" data-ca="Segona visita · Abril 2026">Segunda visita · Abril 2026</span>
+      <span class="t e-rest-lloc" data-es="Salou" data-ca="Salou">Salou</span>
+      <h2 class="e-rest-nom">La Goleta</h2>
+      <span class="t e-rest-cuina" data-es="Pescados &amp; Mariscos · 40 años" data-ca="Peixos &amp; Mariscs · 40 anys">Pescados &amp; Mariscos · 40 años</span>
+    </div>
+    <p class="t e-p" style="margin-bottom:0;" data-es="Cuarenta años. La Goleta arrancó en 1986, frente a la Platja dels Capellans de Salou, y desde entonces ha hecho de la coherencia su principal argumento. La visita del 10 de abril encontró un restaurante que no necesita reinventarse porque nunca lo ha olvidado. Ignacio Ureña lo resume en tres palabras: &quot;Todo es evolución.&quot;" data-ca="Quaranta anys. La Goleta va arrencar el 1986, davant la Platja dels Capellans de Salou, i des de llavors ha fet de la coherència el seu principal argument. La visita del 10 d'abril va trobar un restaurant que no necessita reinventar-se perquè mai no ho ha oblidat. Ignacio Ureña ho resumeix en tres paraules: &quot;Tot és evolució.&quot;">Cuarenta años. La Goleta arrancó en 1986, frente a la Platja dels Capellans de Salou, y desde entonces ha hecho de la coherencia su principal argumento. La visita del 10 de abril encontró un restaurante que no necesita reinventarse porque nunca lo ha olvidado. Ignacio Ureña lo resume en tres palabras: "Todo es evolución."</p>
+  </div>
+
+  <div class="e-foto-hero">
+    <img src="../assets/img/goleta/capellans-beach.jpg" alt="La Goleta · Platja dels Capellans · Salou" loading="lazy" style="object-position:center 60%;">
+  </div>
+  <p class="e-foto-hero-peu">La Platja dels Capellans de Salou — escenario de cuarenta años de gastronomía</p>
+
+  <p class="t e-p" data-es="La decisión enológica fue singular: un único vino para toda la noche —el 1270 de Celler Hidalgo Albert, Garnatxa Blanca del Priorat— y la sala lo aceptó sin objeciones. Porque cuando algo funciona, la coherencia es más poderosa que la variedad. La presencia de José Vilaseca Rius, cofundador de los Casacas Rojas de Barcelona, añadió una dimensión que ningún guion habría previsto. El grito de &quot;¡FESTIVAL!&quot; que surgió espontáneamente de la sala al final de la noche resumía, mejor que cualquier crítica, lo que La Goleta consigue todavía después de cuatro décadas." data-ca="La decisió enològica va ser singular: un únic vi per a tota la nit —el 1270 de Celler Hidalgo Albert, Garnatxa Blanca del Priorat— i la sala ho va acceptar sense objeccions. Perquè quan alguna cosa funciona, la coherència és més poderosa que la varietat. La presència de José Vilaseca Rius, cofundador dels Casacas Rojas de Barcelona, va afegir una dimensió que cap guió hauria previst. El crit de &quot;FESTIVAL!&quot; que va sorgir espontàniament de la sala al final de la nit resumia, millor que qualsevol crítica, el que La Goleta aconsegueix encara després de quatre dècades.">La decisión enológica fue singular: un único vino para toda la noche —el 1270 de Celler Hidalgo Albert, Garnatxa Blanca del Priorat— y la sala lo aceptó sin objeciones. Porque cuando algo funciona, la coherencia es más poderosa que la variedad. La presencia de José Vilaseca Rius, cofundador de los Casacas Rojas de Barcelona, añadió una dimensión que ningún guion habría previsto. El grito de "¡FESTIVAL!" que surgió espontáneamente de la sala al final de la noche resumía, mejor que cualquier crítica, lo que La Goleta consigue todavía después de cuatro décadas.</p>
+
+  <!-- MENU LA GOLETA -->
+  <div class="e-menu-rest">
+    <div class="e-menu-rest-title"><i class="fa-solid fa-utensils"></i> <span class="t" data-es="Menú de la visita" data-ca="Menú de la visita">Menú de la visita</span></div>
+    <div class="e-menu-col">
+      <div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Entrants freds" data-ca="Entrants freds">Entrants freds</span>
+          <div class="e-menu-plat">Salmón marinado con salsa de caviar</div>
+          <div class="e-menu-plat">Montadito de rape y langostinos</div>
+          <div class="e-menu-plat">Ensalada de langostinos con vinagreta de aguacate y caviar</div>
+        </div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Entrants calents" data-ca="Entrants calents">Entrants calents</span>
+          <div class="e-menu-plat">Calamares de la ría salteados con habitas y almejas</div>
+          <div class="e-menu-plat">Pulpo con ajos tiernos y patata panadera</div>
+          <div class="e-menu-plat">Gamba "pantxuda" de Tarragona salteada</div>
+        </div>
+      </div>
+      <div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Degustació de rapes" data-ca="Degustació de rapes">Degustació de rapes</span>
+          <div class="e-menu-plat">Rape con salsa de puerros y azafrán</div>
+          <div class="e-menu-plat"><strong>Tempura de rape con crema de roquefort ★</strong></div>
+        </div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Postre" data-ca="Postre">Postre</span>
+          <div class="e-menu-plat">Copa de coco con chocolate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="e-vins-rest">
+    <span class="t e-vins-rest-label" data-es="Bodega · Un solo vino para toda la noche" data-ca="Celler · Un sol vi per a tota la nit">Bodega · Un solo vino para toda la noche</span>
+    <div class="e-vins-rest-grid">
+      <div class="e-vi-rest"><span class="e-vi-rest-acte">Tota la nit</span><div class="e-vi-rest-nom">1270 · Celler Hidalgo Albert · Garnatxa Blanca</div><div class="e-vi-rest-do">DO Priorat · Blanc</div></div>
+    </div>
+  </div>
+
+  <a href="la-goleta-cronica-2026.html" class="t e-rest-link" data-es="Leer la crónica completa de La Goleta →" data-ca="Llegir la crònica completa de La Goleta →">Leer la crónica completa de La Goleta →</a>
+
+  <div class="e-sep">· · ·</div>
+
+  <!-- ═══ 3 · EL TERRAT ═══ -->
+  <div class="e-rest-header">
+    <div>
+      <span class="e-rest-num">03</span>
+      <span class="t e-rest-badge" data-es="Tercera visita · Mayo 2026" data-ca="Tercera visita · Maig 2026">Tercera visita · Mayo 2026</span>
+      <span class="t e-rest-lloc" data-es="Tarragona" data-ca="Tarragona">Tarragona</span>
+      <h2 class="e-rest-nom">El Terrat</h2>
+      <span class="t e-rest-cuina" data-es="Cocina mediterránea creativa" data-ca="Cuina mediterrània creativa">Cocina mediterránea creativa</span>
+    </div>
+    <p class="t e-p" style="margin-bottom:0;" data-es="La tercera visita de los Gourmets a El Terrat confirmó lo que las dos anteriores habían apuntado: Tarragona tiene un restaurante que sabe exactamente lo que es. Moha Quach lo dijo él mismo, con la brevedad de quien no necesita más palabras: &quot;Cocino lo que soy, con lo que tenemos aquí.&quot;" data-ca="La tercera visita dels Gourmets a El Terrat va confirmar el que les dues anteriors havien apuntat: Tarragona té un restaurant que sap exactament el que és. Moha Quach ho va dir ell mateix, amb la brevetat de qui no necessita més paraules: &quot;Cuino el que sóc, amb el que tenim aquí.&quot;">La tercera visita de los Gourmets a El Terrat confirmó lo que las dos anteriores habían apuntado: Tarragona tiene un restaurante que sabe exactamente lo que es. Moha Quach lo dijo él mismo, con la brevedad de quien no necesita más palabras: "Cocino lo que soy, con lo que tenemos aquí."</p>
+  </div>
+
+  <div class="e-foto-hero">
+    <img src="../assets/img/terrat/cronica/moha-emili.jpg" alt="Emili Mateu i Moha Quach · El Terrat · Gourmets de Tarragona" loading="lazy" style="object-position:center 30%;">
+  </div>
+  <p class="e-foto-hero-peu">Emili Mateu diserta sobre el romesco. Moha Quach escucha. El momento más valioso de la noche no salió de ningún plato.</p>
+
+  <p class="t e-p" data-es="El lavamanos de agua de rosas como bienvenida —tradición amazigh incorporada como gesto de identidad—, la disertación de Emili Mateu sobre el romesco y el pimiento genuino de Tarragona que algunos productores del Camp están recuperando, los cuatro vinos de Josep Foraster (todos de la Conca de Barberà, de principio a fin), el trofeo de honor a Àngel Pérez del Grupo El Pósito. Una velada sin grietas en la que la cocina fue el hilo conductor de una conversación sobre el territorio que ninguno de los asistentes olvidará pronto." data-ca="El rentamans d'aigua de roses com a benvinguda —tradició amaziga incorporada com a gest d'identitat—, la dissertació d'Emili Mateu sobre el romesco i el pebrot genuí de Tarragona que alguns productors del Camp estan recuperant, els quatre vins de Josep Foraster (tots de la Conca de Barberà, de principi a fi), el trofeu d'honor a Àngel Pérez del Grup El Pósito. Una vetllada sense esquerdes en la qual la cuina va ser el fil conductor d'una conversa sobre el territori que cap dels assistents oblidarà aviat.">El lavamanos de agua de rosas como bienvenida —tradición amazigh incorporada como gesto de identidad—, la disertación de Emili Mateu sobre el romesco y el pimiento genuino de Tarragona que algunos productores del Camp están recuperando, los cuatro vinos de Josep Foraster (todos de la Conca de Barberà, de principio a fin), el trofeo de honor a Àngel Pérez del Grupo El Pósito. Una velada sin grietas en la que la cocina fue el hilo conductor de una conversación sobre el territorio que ninguno de los asistentes olvidará pronto.</p>
+
+  <!-- MENU EL TERRAT -->
+  <div class="e-menu-rest">
+    <div class="e-menu-rest-title"><i class="fa-solid fa-utensils"></i> <span class="t" data-es="Menú de la visita" data-ca="Menú de la visita">Menú de la visita</span></div>
+    <div class="e-menu-col">
+      <div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Aperitius · Un viaje por el Rif" data-ca="Aperitius · Un viatge pel Rif">Aperitius · Un viaje por el Rif</span>
+          <div class="e-menu-plat">Versión de la ensalada marroquina</div>
+          <div class="e-menu-plat">Remolacha con manzana verde y espuma de aceituna negra</div>
+          <div class="e-menu-plat">Merengue crujiente de remolacha con queso en salmuera y harissa</div>
+          <div class="e-menu-plat"><strong>Briwat en dos pasos</strong> — crujiente de hígado de pollo + buñuelo líquido</div>
+        </div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Entrants · Tàrraco en el plato" data-ca="Entrants · Tàrraco al plat">Entrants · Tàrraco en el plato</span>
+          <div class="e-menu-plat">Empedrat de bacallà en texturas — bol de piedra volcánica, espuma, trufa y guisantes</div>
+          <div class="e-menu-plat"><strong>Romesco de gamba roja de Tarragona ★</strong></div>
+        </div>
+      </div>
+      <div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Plat de carn · Tornada al Rif" data-ca="Plat de carn · Tornada al Rif">Plat de carn · Tornada al Rif</span>
+          <div class="e-menu-plat">Tajine de cordero lechal — cocción lenta, cremoso de boniato especiado y mini zanahorias</div>
+        </div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Postre · Texturas del Valle del Rif" data-ca="Postre · Textures de la Vall del Rif">Postre · Texturas del Valle del Rif</span>
+          <div class="e-menu-plat">Menta, fresas, yogur y helado de rosas</div>
+          <div class="e-menu-plat">Petit fours</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="e-vins-rest">
+    <span class="t e-vins-rest-label" data-es="Maridatge · Josep Foraster · Conca de Barberà" data-ca="Maridatge · Josep Foraster · Conca de Barberà">Maridatge · Josep Foraster · Conca de Barberà</span>
+    <div class="e-vins-rest-grid">
+      <div class="e-vi-rest"><span class="e-vi-rest-acte">1r pase</span><div class="e-vi-rest-nom">Lilla · Mètode Ancestral</div><div class="e-vi-rest-do">Conca de Barberà</div></div>
+      <div class="e-vi-rest"><span class="e-vi-rest-acte">2n pase</span><div class="e-vi-rest-nom">Brisat del Coster · Macabeu</div><div class="e-vi-rest-do">Conca de Barberà</div></div>
+      <div class="e-vi-rest"><span class="e-vi-rest-acte">3r pase</span><div class="e-vi-rest-nom">Trepat Serra de Miramar · Trepat negre</div><div class="e-vi-rest-do">Conca de Barberà</div></div>
+      <div class="e-vi-rest"><span class="e-vi-rest-acte">Tancament</span><div class="e-vi-rest-nom">Trepat Rosé Cava · Trepat rosat</div><div class="e-vi-rest-do">Mètode tradicional</div></div>
+    </div>
+  </div>
+
+  <a href="terrat-cronica-2026.html" class="t e-rest-link" data-es="Leer la crónica completa de El Terrat →" data-ca="Llegir la crònica completa d'El Terrat →">Leer la crónica completa de El Terrat →</a>
+
+  <div class="e-sep">· · ·</div>
+
+  <!-- ═══ 4 · CERVUS ═══ -->
+  <div class="e-rest-header">
+    <div>
+      <span class="e-rest-num">04</span>
+      <span class="t e-rest-badge" data-es="Cuarta visita · Junio 2026" data-ca="Quarta visita · Juny 2026">Cuarta visita · Junio 2026</span>
+      <span class="t e-rest-lloc" data-es="Reus" data-ca="Reus">Reus</span>
+      <h2 class="e-rest-nom">Cervus</h2>
+      <span class="t e-rest-cuina" data-es="Cocina de producto y territorio" data-ca="Cuina de producte i territori">Cocina de producto y territorio</span>
+    </div>
+    <p class="t e-p" style="margin-bottom:0;" data-es="La cuarta visita fue doble: dos noches, dos grupos, un mismo menú. Cervus, con solo dieciocho meses de vida y ya con un Sol Repsol, tuvo el gesto de doblar jornada para acoger a todos los socios sin dividir la experiencia. Un detalle que dice mucho del carácter de Nil Bono y Lucía Fernández." data-ca="La quarta visita va ser doble: dues nits, dos grups, un mateix menú. Cervus, amb només divuit mesos de vida i ja amb un Sol Repsol, va tenir el gest de doblar jornada per acollir tots els socis sense dividir l'experiència. Un detall que diu molt del caràcter de Nil Bono i Lucía Fernández.">La cuarta visita fue doble: dos noches, dos grupos, un mismo menú. Cervus, con solo dieciocho meses de vida y ya con un Sol Repsol, tuvo el gesto de doblar jornada para acoger a todos los socios sin dividir la experiencia. Un detalle que dice mucho del carácter de Nil Bono y Lucía Fernández.</p>
+  </div>
+
+  <div class="e-foto-hero">
+    <img src="../assets/img/cervus/cronica/galera.jpg" alt="Galera, amontillado y lácteos · Cervus · Reus" loading="lazy">
+  </div>
+  <p class="e-foto-hero-peu">Galera, amontillado y lácteos — la galera elevada a protagonista. El plato más comentado del primer pase.</p>
+
+  <p class="t e-p" data-es="El rebujito reinterpretado —vermut de Reus y oloroso juntos— abrió la noche con un guiño de complicidad entre Cataluña y Andalucía que no necesitó explicación. Y así fue el menú entero: una conversación natural entre dos culturas gastronómicas que, cuando se entienden bien, se potencian mutuamente. La galera elevada a protagonista, el cerdo ibérico junto a los chipirones en tinta, el arroz meloso de mejilla y fricandó coronado por aquella galleta calada que parecía salida de un taller de orfebrería. Cervus no grita. Trabaja con la discreción de quien confía en que el plato acaba siempre hablando solo." data-ca="El rebujito reinterpretat —vermut de Reus i olorós junts— va obrir la nit amb un giny de complicitat entre Catalunya i Andalusia que no va necessitar explicació. I així va ser tot el menú: una conversa natural entre dues cultures gastronòmiques que, quan s'entenen bé, es potencien mútuament. La galera elevada a protagonista, el porc ibèric juntament amb els xipirons en tinta, l'arròs melós de galta i fricandó coronat per aquella galeta calada que semblava sortida d'un taller d'orfebreria. Cervus no crida. Treballa amb la discreció de qui confia que el plat acaba sempre parlant sol.">El rebujito reinterpretado —vermut de Reus y oloroso juntos— abrió la noche con un guiño de complicidad entre Cataluña y Andalucía que no necesitó explicación. Y así fue el menú entero: una conversación natural entre dos culturas gastronómicas que, cuando se entienden bien, se potencian mutuamente. La galera elevada a protagonista, el cerdo ibérico junto a los chipirones en tinta, el arroz meloso de mejilla y fricandó coronado por aquella galleta calada que parecía salida de un taller de orfebrería. Cervus no grita. Trabaja con la discreción de quien confía en que el plato acaba siempre hablando solo.</p>
+
+  <!-- MENU CERVUS -->
+  <div class="e-menu-rest">
+    <div class="e-menu-rest-title"><i class="fa-solid fa-utensils"></i> <span class="t" data-es="Menú de la visita" data-ca="Menú de la visita">Menú de la visita</span></div>
+    <div class="e-menu-col">
+      <div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Bienvenida" data-ca="Benvinguda">Bienvenida</span>
+          <div class="e-menu-plat">Rebujito reinterpretado — vermut de Reus y oloroso</div>
+        </div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Aperitius" data-ca="Aperitius">Aperitius</span>
+          <div class="e-menu-plat">Clotxa — pa rodó tradicional</div>
+          <div class="e-menu-plat">Alcachofa con Palo Cortado</div>
+          <div class="e-menu-plat">Pato asado con higos</div>
+        </div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Primer plato" data-ca="Primer plat">Primer plato</span>
+          <div class="e-menu-plat"><strong>Galera, amontillado y lácteos ★</strong> — con notas de hinojo</div>
+        </div>
+      </div>
+      <div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Segundo plato" data-ca="Segon plat">Segundo plato</span>
+          <div class="e-menu-plat">Cerdo ibérico, chipirones y tinta — con alioli</div>
+        </div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Plato de la noche" data-ca="Plat de la nit">Plato de la noche</span>
+          <div class="e-menu-plat"><strong>Arroz, mejilla y fricandó</strong> — con galleta calada</div>
+        </div>
+        <div class="e-menu-bloc">
+          <span class="t e-menu-bloc-label" data-es="Postre" data-ca="Postre">Postre</span>
+          <div class="e-menu-plat">Chocolate blanco, hierbas y limón</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="e-vins-rest">
+    <span class="t e-vins-rest-label" data-es="Maridatge · De Cádiz al Montsant, passant pel Penedès" data-ca="Maridatge · De Cadis al Montsant, passant pel Penedès">Maridatge · De Cádiz al Montsant, passant pel Penedès</span>
+    <div class="e-vins-rest-grid">
+      <div class="e-vi-rest"><span class="e-vi-rest-acte">Aperitius · Galera</span><div class="e-vi-rest-nom">Muelle de Olaso · Luis Pérez · Palomino</div><div class="e-vi-rest-do">Cádiz</div></div>
+      <div class="e-vi-rest"><span class="e-vi-rest-acte">Cerdo · Arroz</span><div class="e-vi-rest-nom">Cairats Origen · Ull de llebre, Carinyena, Garnatxa</div><div class="e-vi-rest-do">Montsant</div></div>
+      <div class="e-vi-rest"><span class="e-vi-rest-acte">Postre</span><div class="e-vi-rest-nom">Albet i Noya Entorns · Xarel·lo, Macabeu, Parellada</div><div class="e-vi-rest-do">Penedès</div></div>
+    </div>
+  </div>
+
+  <a href="cervus-cronica-2026.html" class="t e-rest-link" data-es="Leer la crónica completa de Cervus →" data-ca="Llegir la crònica completa de Cervus →">Leer la crónica completa de Cervus →</a>
+
+  <div class="e-divider"></div>
+
+  <!-- CIERRE: EL MAPA -->
+  <div class="e-cierre">
+    <div class="e-cierre-inner">
+      <span class="t e-cierre-label" data-es="El mapa a mitad de camino" data-ca="El mapa a mig camí">El mapa a mitad de camino</span>
+      <h2 class="t e-cierre-title" data-es="Cuatro propuestas. Un solo territorio." data-ca="Quatre propostes. Un sol territori.">Cuatro propuestas. Un solo territorio.</h2>
+      <p class="t e-cierre-p" data-es="Cuatro municipios, cuatro identidades distintas. Y sin embargo, un hilo conductor que aparece en todos: el territorio. No como recurso retórico ni como etiqueta de marketing, sino como punto de partida real." data-ca="Quatre municipis, quatre identitats diferents. I tanmateix, un fil conductor que apareix a tots: el territori. No com a recurs retòric ni com a etiqueta de màrqueting, sinó com a punt de partida real.">Cuatro municipios, cuatro identidades distintas. Y sin embargo, un hilo conductor que aparece en todos: el territorio. No como recurso retórico ni como etiqueta de marketing, sino como punto de partida real.</p>
+      <p class="t e-cierre-p" data-es="La gamba roja de Tarragona en Kema. El mar de Salou en La Goleta. El pimiento de romesco que vuelve a los campos del Camp a través de El Terrat. El vermut de Reus como primer gesto de bienvenida en Cervus." data-ca="La gamba vermella de Tarragona a Kema. El mar de Salou a La Goleta. El pebrot de romesco que torna als camps del Camp a través d'El Terrat. El vermut de Reus com a primer gest de benvinguda a Cervus.">La gamba roja de Tarragona en Kema. El mar de Salou en La Goleta. El pimiento de romesco que vuelve a los campos del Camp a través de El Terrat. El vermut de Reus como primer gesto de bienvenida en Cervus.</p>
+      <p class="t e-cierre-nota" data-es="El Camp de Tarragona tiene más mesa de la que a menudo se le reconoce. La temporada 2026 lleva cuatro visitas demostrándolo. Quedan cuatro restaurantes por visitar. La Gala de final de año dará las valoraciones definitivas." data-ca="El Camp de Tarragona té més taula de la que sovint se li reconeix. La temporada 2026 porta quatre visites demostrant-ho. Queden quatre restaurants per visitar. La Gala de final d'any donarà les valoracions definitives.">El Camp de Tarragona tiene más mesa de la que a menudo se le reconoce. La temporada 2026 lleva cuatro visitas demostrándolo. Quedan cuatro restaurantes por visitar. La Gala de final de año dará las valoraciones definitivas.</p>
+    </div>
+  </div>
+
+  <!-- FITXA RESUM -->
+  <div class="e-fitxa-resum">
+    <div class="e-fitxa-resum-item">
+      <span class="e-fitxa-resum-num">4</span>
+      <span class="t e-fitxa-resum-label" data-es="Visitas" data-ca="Visites">Visitas</span>
+      <div class="t e-fitxa-resum-val" data-es="completadas" data-ca="completades">completadas</div>
+    </div>
+    <div class="e-fitxa-resum-item">
+      <span class="e-fitxa-resum-num">4</span>
+      <span class="t e-fitxa-resum-label" data-es="Municipios" data-ca="Municipis">Municipios</span>
+      <div class="t e-fitxa-resum-val" data-es="Cambrils · Salou · Tarragona · Reus" data-ca="Cambrils · Salou · Tarragona · Reus">Cambrils · Salou · Tarragona · Reus</div>
+    </div>
+    <div class="e-fitxa-resum-item">
+      <span class="e-fitxa-resum-num">4</span>
+      <span class="t e-fitxa-resum-label" data-es="Pendientes" data-ca="Pendents">Pendientes</span>
+      <div class="t e-fitxa-resum-val" data-es="hasta la Gala" data-ca="fins a la Gala">hasta la Gala</div>
+    </div>
+    <div class="e-fitxa-resum-item">
+      <span class="e-fitxa-resum-num">1</span>
+      <span class="t e-fitxa-resum-label" data-es="Territorio" data-ca="Territori">Territorio</span>
+      <div class="t e-fitxa-resum-val" data-es="Camp de Tarragona" data-ca="Camp de Tarragona">Camp de Tarragona</div>
+    </div>
+  </div>
+
+  <!-- FUENTES -->
+  <p style="font-size:.72rem;color:var(--muted);font-style:italic;text-align:center;margin-top:32px;opacity:.7;">
+    <span class="t" data-es="Fuentes consultadas: crónicas de la temporada 2026 publicadas en gourmetsdetarragona.com" data-ca="Fonts consultades: cròniques de la temporada 2026 publicades a gourmetsdetarragona.com">Fuentes consultadas: crónicas de la temporada 2026 publicadas en gourmetsdetarragona.com</span>
+  </p>
+
+  <!-- COMPARTIR -->
+  <div class="e-compartir">
+    <div class="e-compartir-inner">
+      <div class="e-compartir-deco">
+        <div class="e-compartir-deco-line"></div>
+        <span class="t" data-es="Comparte este artículo" data-ca="Comparteix aquest article">Comparte este artículo</span>
+        <div class="e-compartir-deco-line r"></div>
+      </div>
+      <p class="t e-compartir-frase" data-es="Cuatro mesas, un solo territorio. <strong>La temporada 2026 tiene mucho más que decir.</strong>" data-ca="Quatre taules, un sol territori. <strong>La temporada 2026 té molt més a dir.</strong>">Cuatro mesas, un solo territorio. <strong>La temporada 2026 tiene mucho más que decir.</strong></p>
+      <div class="e-compartir-btns">
+        <a href="https://wa.me/?text=A%20mitad%20de%20camino%20%E2%80%94%20Balance%20Temporada%202026%20%7C%20Gourmets%20de%20Tarragona%20https%3A%2F%2Fwww.gourmetsdetarragona.com%2Fentrades%2Fecuador-2026.html" target="_blank" rel="noopener" class="e-compartir-btn wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.096.541 4.062 1.489 5.775L.057 23.25l5.61-1.474A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.81 9.81 0 01-5.007-1.37l-.36-.214-3.73.979.995-3.638-.234-.374A9.82 9.82 0 012.182 12c0-5.421 4.397-9.818 9.818-9.818 5.42 0 9.818 4.397 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+          WhatsApp
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.gourmetsdetarragona.com%2Fentrades%2Fecuador-2026.html" target="_blank" rel="noopener" class="e-compartir-btn fb">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>
+        <a href="https://twitter.com/intent/tweet?text=A%20mitad%20de%20camino%20%E2%80%94%20Balance%20Temporada%202026%20%7C%20Gourmets%20de%20Tarragona&url=https%3A%2F%2Fwww.gourmetsdetarragona.com%2Fentrades%2Fecuador-2026.html" target="_blank" rel="noopener" class="e-compartir-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.261 5.633 5.903-5.633zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X
+        </a>
+        <button class="e-compartir-btn copy" onclick="copyLink(this)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          <span class="t" data-es="Copiar enlace" data-ca="Copiar enllaç">Copiar enlace</span>
+          <span class="e-compartir-copied t" data-es="¡Copiado!" data-ca="Copiat!">¡Copiado!</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAMBE -->
+  <div class="e-tambe">
+    <span class="t e-tambe-label" data-es="Las crónicas completas" data-ca="Les cròniques completes">Las crónicas completas</span>
+    <h3 class="t e-tambe-title" data-es="Lee cada visita en detalle" data-ca="Llegeix cada visita en detall">Lee cada visita en detalle</h3>
+    <div class="e-tambe-grid">
+      <a href="kema-cronica-2026.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/kema/hero-cronica.jpg" alt="Kema · Crónica 2026" loading="lazy">
+          <span class="e-tambe-card-cat">Crònica</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <div class="t e-tambe-card-title" data-es="Kema · Crónica" data-ca="Kema · Crònica">Kema · Crónica</div>
+          <p class="t e-tambe-card-exc" data-es="Fuego, producto y cocina de raíz. Primera visita de la temporada 2026 en Cambrils." data-ca="Foc, producte i cuina d'arrel. Primera visita de la temporada 2026 a Cambrils.">Fuego, producto y cocina de raíz. Primera visita de la temporada 2026 en Cambrils.</p>
+          <span class="t e-tambe-card-link" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+      <a href="la-goleta-cronica-2026.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/goleta/capellans-beach.jpg" alt="La Goleta · Crónica 2026" loading="lazy" style="object-position:center 60%;">
+          <span class="e-tambe-card-cat">Crònica</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <div class="t e-tambe-card-title" data-es="La Goleta · Crónica" data-ca="La Goleta · Crònica">La Goleta · Crónica</div>
+          <p class="t e-tambe-card-exc" data-es="Cuarenta años sin decepcionar. Una noche junto al mar y a los Casacas Rojas." data-ca="Quaranta anys sense decebre. Una nit al costat del mar i dels Casacas Rojas.">Cuarenta años sin decepcionar. Una noche junto al mar y a los Casacas Rojas.</p>
+          <span class="t e-tambe-card-link" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+      <a href="terrat-cronica-2026.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/terrat/cronica/sala-taula.jpg" alt="El Terrat · Crónica 2026" loading="lazy">
+          <span class="e-tambe-card-cat">Crònica</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <div class="t e-tambe-card-title" data-es="El Terrat · Crónica" data-ca="El Terrat · Crònica">El Terrat · Crónica</div>
+          <p class="t e-tambe-card-exc" data-es="Agua de rosas, briwat en dos pasos, romesco de gamba y tajine de cordero. Tarragona con todo el argumento." data-ca="Aigua de roses, briwat en dos passos, romesco de gamba i tajine de xai. Tarragona amb tot l'argument.">Agua de rosas, briwat en dos pasos, romesco de gamba y tajine de cordero. Tarragona con todo el argumento.</p>
+          <span class="t e-tambe-card-link" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+      <a href="cervus-cronica-2026.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/cervus/cronica/galera.jpg" alt="Cervus · Crónica 2026" loading="lazy">
+          <span class="e-tambe-card-cat">Crònica</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <div class="t e-tambe-card-title" data-es="Cervus · Crónica" data-ca="Cervus · Crònica">Cervus · Crónica</div>
+          <p class="t e-tambe-card-exc" data-es="Dos cocineros, dos noches, un Sol Repsol. La cuina que Reus es mereixia." data-ca="Dos cuiners, dues nits, un Sol Repsol. La cuina que Reus es mereixia.">Dos cocineros, dos noches, un Sol Repsol. La cuina que Reus es mereixia.</p>
+          <span class="t e-tambe-card-link" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- NAV RETORN -->
+  <div class="e-nav-retorn">
+    <div class="e-nav-retorn-links">
+      <a href="../pages/blog.html" class="btn-outline t" data-es="← Volver al Blog" data-ca="← Tornar al Blog">← Volver al Blog</a>
+    </div>
+  </div>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona" class="footer-logo" onerror="handleLogoError(this)">
+      <p class="t footer-desc" data-es="Asociación gastronómica sin ánimo de lucro. Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre. Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro. Camp de Tarragona.</p>
+    </div>
+    <nav class="footer-nav">
+      <strong class="t" data-es="Navegación" data-ca="Navegació">Navegación</strong>
+      <a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a>
+      <a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a>
+      <a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a>
+      <a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a>
+      <a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a>
+    </nav>
+    <nav class="footer-nav">
+      <strong class="t" data-es="Legal" data-ca="Legal">Legal</strong>
+      <a href="../pages/avis-legal.html" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a>
+      <a href="../pages/politica-privacitat.html" class="t" data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a>
+      <a href="../pages/politica-cookies.html" class="t" data-es="Política de Cookies" data-ca="Política de Cookies">Política de Cookies</a>
+    </nav>
+    <div class="footer-contact">
+      <strong class="t" data-es="Contacto" data-ca="Contacte">Contacto</strong>
+      <a href="mailto:gourmetsdetarragona@gourmetsdetarragona.com">gourmetsdetarragona@gourmetsdetarragona.com</a>
+      <span>Tarragona, Catalunya</span>
+    </div>
+  </div>
+  <div class="footer-copy">
+    <p class="t" data-es="© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados" data-ca="© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats">© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script>
+function copyLink(btn) {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    var copied = btn.querySelector('.e-compartir-copied');
+    if (copied) { copied.classList.add('vis'); setTimeout(function(){ copied.classList.remove('vis'); }, 2500); }
+  });
+}
+</script>
+</body>
+</html>

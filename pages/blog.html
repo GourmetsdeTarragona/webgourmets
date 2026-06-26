@@ -313,12 +313,12 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- FILTRES — Tots:28 · Previes:4 · Cròniques:4 · Notícies:2 · Cultura:2 · Vins:6 · Events:1 · Curiositats:9 -->
+<!-- FILTRES — Tots:29 · Previes:4 · Cròniques:4 · Notícies:3 · Cultura:2 · Vins:6 · Events:1 · Curiositats:9 -->
 <div class="blog-filtres">
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span class="t" data-es="Todos" data-ca="Tots">Todos</span>
-      <span class="filtre-n">28</span>
+      <span class="filtre-n">29</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot" style="background:var(--navy);"></span>
@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <button class="filtre-btn" data-cat="noticia" onclick="filterEntrades('noticia')">
       <span class="filtre-dot" style="background:#555;"></span>
       <span class="t" data-es="Noticias" data-ca="Notícies">Noticias</span>
-      <span class="filtre-n">2</span>
+      <span class="filtre-n">3</span>
     </button>
     <button class="filtre-btn" data-cat="cultura" onclick="filterEntrades('cultura')">
       <span class="filtre-dot" style="background:#5c6e3f;"></span>
@@ -392,6 +392,28 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
   <div class="car-track">
   <div class="carrusel" id="car-visites">
+
+    <!-- Ecuador 2026 — Notícia -->
+    <article class="blog-card" data-cat="noticia">
+      <div class="blog-card-img">
+        <img src="../assets/img/terrat/cronica/sala-taula.jpg" alt="A mitad de camino · Balance Temporada 2026 · Gourmets de Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
+        <span class="blog-card-cat cat-noticia t" data-es="Noticia" data-ca="Notícia">Noticia</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Junio 2026" data-ca="Juny 2026">Junio 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es="A mitad de camino<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>Balance de la Temporada 2026</small>"
+            data-ca="A mig camí<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>Balanç de la Temporada 2026</small>">
+          A mitad de camino<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Balance de la Temporada 2026</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Cuatro visitas, cuatro municipios, cuatro maneras distintas de entender la mesa. El ecuador del recorrido 2026."
+           data-ca="Quatre visites, quatre municipis, quatre maneres distintes d'entendre la taula. L'equador del recorregut 2026.">
+          Cuatro visitas, cuatro municipios, cuatro maneras distintas de entender la mesa.
+        </p>
+        <a href="../entrades/ecuador-2026.html" class="blog-card-link t" data-es="Leer el balance →" data-ca="Llegir el balanç →">Leer el balance →</a>
+      </div>
+    </article>
 
     <!-- Cervus Prèvia -->
     <!-- Cervus Crònica -->
