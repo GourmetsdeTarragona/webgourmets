@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ═══════ FAVICON ═══════ -->
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon-180.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../assets/img/favicon-512.png">
+<link rel="shortcut icon" href="../favicon.ico">
+
+<title>Brumma · Prèvia · Gourmets de Tarragona</title>
+<meta name="description" content="Prèvia de la visita dels Gourmets de Tarragona al restaurant Brumma (Flamma Beach Foodhouse, Infinitum Resort, Salou). Menú maridatge 'Cataluña, su gastronomía y sus vinos' amb 7 DOs catalanes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/seccions.css">
+<style>
+.entrada-hero{position:relative;min-height:70vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.65;filter:brightness(1.08) contrast(1.05);}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.92) 0%,rgba(11,22,38,.38) 50%,rgba(11,22,38,.05) 100%);}
+.entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
+.entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
+.entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
+.entrada-back:hover{color:var(--gold);}
+.entrada-meta-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
+.entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;}
+.entrada-badge-previa{background:var(--navy);}
+.entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
+.entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
+.entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.82);font-weight:300;line-height:1.85;max-width:540px;}
+.entrada-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
+.e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-title{font-family:var(--font-serif);font-size:1.75rem;color:var(--navy-dark);line-height:1.2;margin-bottom:22px;}
+.e-p{font-size:1rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:20px;}
+.e-p strong{font-weight:700;color:var(--navy-dark);}
+.e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin:48px 0;}
+.e-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:60px;}
+.e-img{position:relative;}
+.e-img img{width:100%;height:420px;object-fit:cover;position:relative;z-index:1;}
+.e-img::after{content:'';position:absolute;bottom:-14px;right:-14px;width:50%;height:50%;border:2px solid var(--gold);opacity:.2;z-index:0;}
+.e-vals{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px;}
+.e-val{display:flex;gap:10px;padding:12px 14px;background:#fff;border-left:3px solid var(--navy);align-items:center;}
+.e-val i{color:var(--navy);opacity:.6;font-size:.9rem;width:16px;text-align:center;}
+.e-val span{font-size:.87rem;line-height:1.4;}
+.e-convidat{background:var(--navy-dark);padding:36px;margin:40px 0;display:flex;gap:28px;align-items:flex-start;}
+.e-convidat-avatar{width:56px;height:56px;border-radius:50%;background:rgba(184,146,74,.2);border:1px solid rgba(184,146,74,.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.3rem;color:var(--gold);}
+.e-convidat-label{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(184,146,74,.7);margin-bottom:6px;}
+.e-convidat-nom{font-family:var(--font-serif);font-size:1.1rem;color:#fff;margin-bottom:4px;}
+.e-convidat-desc{font-size:.85rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.6;}
+.e-programa{background:var(--cream);border:1px solid var(--border);padding:36px;margin:32px 0;}
+.e-programa-title{font-family:var(--font-serif);font-size:1.1rem;color:var(--navy-dark);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+.e-programa-title i{color:var(--gold);}
+.e-programa-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:12px;}
+.e-programa-hora{font-size:.75rem;font-weight:700;color:var(--gold);letter-spacing:1px;white-space:nowrap;padding-top:2px;min-width:52px;}
+.e-programa-desc{font-size:.88rem;color:var(--muted);line-height:1.5;}
+
+/* ── MENÚ MARIDATGE ── */
+.e-menu{background:var(--cream);border:1px solid var(--border);padding:48px;margin:52px 0;}
+.e-menu-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);margin-bottom:6px;text-align:center;}
+.e-menu-sub{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:32px;}
+.e-maridatge{display:flex;flex-direction:column;gap:0;}
+.e-maridatge-row{display:grid;grid-template-columns:160px 1fr 220px;gap:0;border-bottom:1px solid var(--border);padding:16px 0;align-items:center;}
+.e-maridatge-row:last-child{border-bottom:none;}
+.e-maridatge-do{display:flex;flex-direction:column;gap:3px;}
+.e-maridatge-do-badge{font-size:.55rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;background:var(--navy-dark);color:var(--gold);padding:3px 8px;width:fit-content;}
+.e-maridatge-do-name{font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;}
+.e-maridatge-plat{font-size:.92rem;font-weight:300;color:var(--navy-dark);line-height:1.45;padding:0 24px;}
+.e-maridatge-vi{font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.45;text-align:right;}
+.e-maridatge-vi strong{font-weight:600;color:var(--navy);display:block;font-size:.82rem;}
+.e-maridatge-header{display:grid;grid-template-columns:160px 1fr 220px;gap:0;padding:0 0 12px;margin-bottom:4px;border-bottom:2px solid var(--gold);}
+.e-maridatge-header span{font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);}
+.e-maridatge-header span:last-child{text-align:right;}
+.e-maridatge-header span:nth-child(2){padding:0 24px;}
+
+.e-foto-gran{margin:52px 0;position:relative;height:420px;overflow:hidden;}
+.e-foto-gran img{width:100%;height:100%;object-fit:cover;}
+.e-foto-gran-peu{font-size:.72rem;color:var(--muted);font-style:italic;margin-top:10px;padding-left:8px;border-left:2px solid var(--gold);opacity:.8;line-height:1.5;}
+.e-fitxa{background:var(--cream);border:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:0;margin:52px 0;}
+.e-fitxa-info{padding:36px 40px;}
+.e-fitxa-info h3{font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:20px;}
+.e-fitxa-row{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;}
+.e-fitxa-ico{width:32px;height:32px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.e-fitxa-ico i{color:var(--navy);opacity:.6;font-size:.8rem;}
+.e-fitxa-text{font-size:.87rem;color:var(--muted);line-height:1.5;}
+.e-fitxa-cta{background:var(--navy-dark);padding:36px 40px;display:flex;flex-direction:column;justify-content:center;text-align:center;}
+.e-fitxa-cta p{font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:20px;font-weight:300;}
+.e-equip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px;margin-bottom:52px;}
+.e-equip-card{background:#fff;border:1px solid var(--border);padding:26px 18px;text-align:center;}
+.e-equip-avatar{width:56px;height:56px;border-radius:50%;background:var(--navy);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;color:#fff;}
+.e-equip-nom{font-family:var(--font-serif);font-size:.95rem;color:var(--navy-dark);margin-bottom:4px;line-height:1.3;}
+.e-equip-rol{font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);}
+.e-equip-desc{font-size:.8rem;color:var(--muted);line-height:1.5;margin-top:8px;font-weight:300;}
+.e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;}
+@media(max-width:768px){
+  .entrada-hero-content{padding:0 5% 52px;}
+  .e-grid-2{grid-template-columns:1fr;gap:36px;}
+  .e-menu{padding:32px 20px;}
+  .e-maridatge-row{grid-template-columns:1fr;gap:8px;padding:14px 0;}
+  .e-maridatge-plat{padding:0;}
+  .e-maridatge-vi{text-align:left;}
+  .e-maridatge-header{display:none;}
+  .e-vals{grid-template-columns:1fr;}
+  .e-fitxa{grid-template-columns:1fr;}
+  .e-foto-gran{height:260px;}
+  .entrada-cos{padding:52px 5%;}
+  .e-convidat{flex-direction:column;gap:16px;}
+  .e-equip-grid{grid-template-columns:1fr 1fr;}
+}
+
+/* ── COMPARTIR ── */
+.e-compartir{
+  position:relative;margin:64px 0 0;padding:56px 40px 52px;
+  background:linear-gradient(135deg,#0b1626 0%,#1c2e3e 100%);
+  overflow:hidden;
+}
+.e-compartir::before{
+  content:'';position:absolute;top:-1px;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);
+}
+.e-compartir::after{
+  content:'"';position:absolute;right:5%;top:50%;transform:translateY(-50%);
+  font-family:'Playfair Display',serif;font-size:14rem;font-weight:700;
+  color:rgba(184,146,74,.06);line-height:1;pointer-events:none;
+  user-select:none;
+}
+.e-compartir-inner{position:relative;z-index:1;max-width:600px;margin:0 auto;text-align:center;}
+.e-compartir-deco{display:flex;align-items:center;gap:16px;justify-content:center;margin-bottom:20px;}
+.e-compartir-deco-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,146,74,.3));}
+.e-compartir-deco-line.r{background:linear-gradient(90deg,rgba(184,146,74,.3),transparent);}
+.e-compartir-deco span{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(184,146,74,.6);font-weight:600;white-space:nowrap;}
+.e-compartir-frase{font-family:'Playfair Display',serif;font-size:1.45rem;font-style:italic;color:rgba(255,255,255,.88);line-height:1.5;margin-bottom:32px;font-weight:400;}
+.e-compartir-frase strong{font-style:normal;font-weight:700;color:#d4a96a;}
+.e-compartir-btns{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;}
+.e-compartir-btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;font-family:'Lato','Montserrat',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:rgba(255,255,255,.65);transition:all .25s;cursor:pointer;text-decoration:none;backdrop-filter:blur(4px);}
+.e-compartir-btn svg{flex-shrink:0;transition:transform .25s;}
+.e-compartir-btn:hover{border-color:rgba(184,146,74,.6);background:rgba(184,146,74,.1);color:#d4a96a;transform:translateY(-2px);}
+.e-compartir-btn:hover svg{transform:scale(1.15);}
+.e-compartir-btn.wa:hover{border-color:#25d366;background:rgba(37,211,102,.1);color:#25d366;}
+.e-compartir-btn.fb:hover{border-color:#1877f2;background:rgba(24,119,242,.1);color:#6fa8ff;}
+.e-compartir-btn.copy:hover{border-color:#d4a96a;background:rgba(212,169,106,.15);color:#d4a96a;}
+.e-compartir-copied{font-size:.65rem;color:#d4a96a;letter-spacing:.08em;opacity:0;transition:opacity .3s;margin-left:4px;}
+.e-compartir-copied.vis{opacity:1;}
+@media(max-width:768px){
+  .e-compartir{padding:40px 24px 36px;}
+  .e-compartir::after{font-size:8rem;right:2%;}
+  .e-compartir-frase{font-size:1.2rem;}
+  .e-compartir-btns{gap:8px;}
+  .e-compartir-btn{padding:10px 16px;font-size:.62rem;}
+}
+
+/* ── TAMBÉ ET POT INTERESSAR ── */
+.e-tambe{margin:64px 0 0;padding-top:48px;border-top:1px solid var(--border);}
+.e-tambe-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-tambe-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);margin-bottom:32px;}
+.e-tambe-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.e-tambe-card{background:#fff;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;text-decoration:none;}
+.e-tambe-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(28,46,62,.12);}
+.e-tambe-card-img{height:172px;overflow:hidden;position:relative;}
+.e-tambe-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.e-tambe-card:hover .e-tambe-card-img img{transform:scale(1.05);}
+.e-tambe-card-cat{position:absolute;top:12px;left:12px;font-size:.57rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 10px;color:#fff;}
+.e-tambe-card-body{padding:20px;flex:1;display:flex;flex-direction:column;}
+.e-tambe-card-title{font-family:var(--font-serif);font-size:1rem;color:var(--navy-dark);line-height:1.3;margin-bottom:8px;font-weight:600;}
+.e-tambe-card-exc{font-size:.83rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:14px;flex:1;}
+.e-tambe-card-link{font-size:.63rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy-dark);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;width:fit-content;margin-top:auto;}
+.e-tambe-card:hover .e-tambe-card-link{color:var(--gold);}
+@media(max-width:680px){.e-tambe-grid{grid-template-columns:1fr;}}
+</style>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.gourmetsdetarragona.com/entrades/brumma-previa-2026.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.gourmetsdetarragona.com/entrades/brumma-previa-2026.html">
+<meta property="og:title" content="Brumma · Prèvia · Gourmets de Tarragona">
+<meta property="og:description" content="Prèvia de la visita dels Gourmets de Tarragona al restaurant Brumma (Flamma Beach Foodhouse, Infinitum Resort, Salou). Menú maridatge 'Cataluña, su gastronomía y sus vinos' amb 7 DOs catalanes.">
+<meta property="og:image" content="https://www.gourmetsdetarragona.com/assets/img/brumma/05_brumma_vistas_mar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Brumma · Vistes al Mediterrani · Infinitum Resort Salou">
+<meta property="og:site_name" content="Gourmets de Tarragona">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="ca_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Brumma · Prèvia · Gourmets de Tarragona">
+<meta name="twitter:description" content="Prèvia de la visita dels Gourmets de Tarragona al restaurant Brumma (Flamma Beach Foodhouse, Infinitum Resort, Salou). Menú maridatge 'Cataluña, su gastronomía y sus vinos' amb 7 DOs catalanes.">
+<meta name="twitter:image" content="https://www.gourmetsdetarragona.com/assets/img/brumma/05_brumma_vistas_mar.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Brumma · Prèvia · Gourmets de Tarragona",
+  "description": "Prèvia de la visita dels Gourmets de Tarragona al restaurant Brumma (Flamma Beach Foodhouse, Infinitum Resort, Salou). Menú maridatge 'Cataluña, su gastronomía y sus vinos' amb 7 DOs catalanes.",
+  "image": "https://www.gourmetsdetarragona.com/assets/img/brumma/05_brumma_vistas_mar.jpg",
+  "url": "https://www.gourmetsdetarragona.com/entrades/brumma-previa-2026.html",
+  "datePublished": "2026-06-27",
+  "inLanguage": ["es", "ca"],
+  "author": {
+    "@type": "Organization",
+    "name": "Gourmets de Tarragona",
+    "url": "https://www.gourmetsdetarragona.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Gourmets de Tarragona",
+    "url": "https://www.gourmetsdetarragona.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gourmetsdetarragona.com/assets/img/logo.png"
+    }
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/img/logo.png"
+           alt="Gourmets de Tarragona"
+           onerror="this.src='https://gourmetsdetarragona.com/wp-content/uploads/2025/05/cropped-logo_gourmets_blau_sin_fondo-3-300x296.png'">
+    </a>
+    <div class="nav-menu">
+      <div class="nav-item">
+        <a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</span>
+        <div class="dropdown">
+          <a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a>
+          <a href="../pages/associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a>
+          <a href="../pages/associacio.html#valoracio" class="t" data-es="El sistema de valoración" data-ca="El sistema de valoració">El sistema de valoración</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span>
+        <div class="dropdown">
+          <a href="../pages/restaurants.html" class="t" data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visitas 2025–26</a>
+          <a href="../pages/restaurants.html#historic" class="t" data-es="Histórico de visitas" data-ca="Històric de visites">Histórico de visitas</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="Premios" data-ca="Premis">Premios</span>
+        <div class="dropdown">
+          <a href="../pages/premis.html" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</a>
+          <a href="../pages/premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a>
+          <a href="../pages/premis.html#palmares" class="t" data-es="Palmarés histórico" data-ca="Palmarès històric">Palmarés histórico</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</span>
+        <div class="dropdown">
+          <a href="../pages/esdeveniments.html" class="t" data-es="Cenas especiales" data-ca="Sopars especials">Cenas especiales</a>
+          <a href="../pages/esdeveniments.html#cates" class="t" data-es="Catas & Visitas" data-ca="Tasts & Visites">Catas & Visitas</a>
+          <a href="../pages/esdeveniments.html#calendari" class="t" data-es="Calendario" data-ca="Calendari">Calendario</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a>
+      </div>
+      <div class="nav-item">
+        <a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a>
+      </div>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
+    <div class="mobile-item"><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
+    <div class="mobile-item"><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
+    <div class="mobile-item"><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></div>
+    <div class="mobile-item"><a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></div>
+    <div class="mobile-item"><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+    <div class="mobile-item"><a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="entrada-hero">
+  <div class="entrada-hero-bg" style="background-image:url('../assets/img/brumma/05_brumma_vistas_mar.jpg');"></div>
+  <div class="entrada-hero-grad"></div>
+  <div class="entrada-hero-line"></div>
+  <div class="entrada-hero-content">
+    <a href="../pages/blog.html" class="entrada-back"><i class="fa fa-arrow-left"></i> <span data-i18n="back_blog"></span></a>
+    <div class="entrada-meta-top">
+      <span class="entrada-badge entrada-badge-previa" data-i18n="brumma_prev_badge"></span>
+      <div class="entrada-meta-info">
+        <span class="entrada-meta-item"><i class="fa fa-map-marker-alt"></i> Salou</span>
+        <span class="entrada-meta-item"><i class="fa fa-fire"></i> <span data-i18n="brumma_prev_cuina"></span></span>
+        <span class="entrada-meta-item"><i class="fa fa-calendar"></i> 2 Julio 2026</span>
+      </div>
+    </div>
+    <h1 class="entrada-titol">Brumma <em>(Infinitum Resort)</em><br><span data-i18n="brumma_prev_titol_sub"></span></h1>
+    <p class="entrada-subtitol" data-i18n="brumma_prev_subtitol"></p>
+  </div>
+</header>
+
+<!-- COS -->
+<main class="entrada-cos">
+
+  <div class="e-grid-2">
+    <div>
+      <span class="e-label" data-i18n="brumma_prev_l1"></span>
+      <h2 class="e-title" data-i18n="brumma_prev_t1"></h2>
+      <div class="e-divider"></div>
+      <p class="e-p" data-i18n="brumma_prev_p1"></p>
+      <p class="e-p" data-i18n="brumma_prev_p2"></p>
+      <div class="e-vals">
+        <div class="e-val"><i class="fa fa-map-marker-alt"></i><span>Infinitum Resort, Salou</span></div>
+        <div class="e-val"><i class="fa fa-calendar"></i><span data-i18n="brumma_prev_val2"></span></div>
+        <div class="e-val"><i class="fa fa-fire"></i><span data-i18n="brumma_prev_val3"></span></div>
+        <div class="e-val"><i class="fa fa-wine-glass-alt"></i><span data-i18n="brumma_prev_val4"></span></div>
+      </div>
+    </div>
+    <div class="e-img">
+      <img src="../assets/img/brumma/01_brumma_sala_interior.jpg" alt="Brumma — sala interior">
+    </div>
+  </div>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/brumma/02_brumma_sala_vistas.jpg" alt="Brumma — sala amb vistes al Mediterrani, Infinitum Resort Salou">
+    <div class="e-foto-gran-peu" data-i18n="brumma_prev_foto1_peu"></div>
+  </div>
+
+  <span class="e-label" data-i18n="brumma_prev_cuina_label"></span>
+  <h2 class="e-title" data-i18n="brumma_prev_cuina_title"></h2>
+  <div class="e-divider"></div>
+  <p class="e-p" data-i18n="brumma_prev_cuina_p1"></p>
+  <p class="e-p" data-i18n="brumma_prev_cuina_p2"></p>
+
+  <div class="e-foto-gran" style="height:340px;margin:40px 0;">
+    <img src="../assets/img/brumma/04_flamma_beach_foodhouse.jpg" alt="Flamma Beach Foodhouse — Infinitum Resort, Costa Daurada">
+    <div class="e-foto-gran-peu" data-i18n="brumma_prev_foto2_peu"></div>
+  </div>
+
+  <div class="e-divider"></div>
+  <span class="e-label" data-i18n="brumma_prev_conv_section_label"></span>
+  <h2 class="e-title" data-i18n="brumma_prev_conv_section_title"></h2>
+
+  <div class="e-convidat">
+    <div class="e-convidat-avatar">DG</div>
+    <div>
+      <div class="e-convidat-label" data-i18n="brumma_prev_conv1_label"></div>
+      <div class="e-convidat-nom">Sr. Diego García González</div>
+      <div class="e-convidat-desc" data-i18n="brumma_prev_conv1_desc"></div>
+    </div>
+  </div>
+
+  <div class="e-convidat" style="margin-top:-16px;">
+    <div class="e-convidat-avatar">JV</div>
+    <div>
+      <div class="e-convidat-label" data-i18n="brumma_prev_conv2_label"></div>
+      <div class="e-convidat-nom">Sr. Josep Vilaseca Rius <em style="font-size:.85rem;color:rgba(255,255,255,.4);font-style:italic;">"Suqui"</em></div>
+      <div class="e-convidat-desc" data-i18n="brumma_prev_conv2_desc"></div>
+    </div>
+  </div>
+
+  <div class="e-programa">
+    <p class="e-programa-title"><i class="fa fa-clock"></i> <span data-i18n="brumma_prev_prog_title"></span></p>
+    <div class="e-programa-item"><span class="e-programa-hora">20:30 h</span><span class="e-programa-desc" data-i18n="brumma_prev_prog1"></span></div>
+    <div class="e-programa-item"><span class="e-programa-hora">20:45 h</span><span class="e-programa-desc" data-i18n="brumma_prev_prog2"></span></div>
+    <div class="e-programa-item"><span class="e-programa-hora">20:50 h</span><span class="e-programa-desc" data-i18n="brumma_prev_prog3"></span></div>
+    <div class="e-programa-item"><span class="e-programa-hora">21:00 h</span><span class="e-programa-desc" data-i18n="brumma_prev_prog4"></span></div>
+    <div class="e-programa-item"><span class="e-programa-hora">00:00 h</span><span class="e-programa-desc" data-i18n="brumma_prev_prog5"></span></div>
+  </div>
+
+  <div class="e-menu">
+    <p class="e-menu-title" data-i18n="brumma_prev_menu_title"></p>
+    <p class="e-menu-sub" data-i18n="brumma_prev_menu_sub"></p>
+    <div class="e-maridatge">
+      <div class="e-maridatge-header">
+        <span data-i18n="brumma_prev_col_do"></span>
+        <span data-i18n="brumma_prev_col_plat"></span>
+        <span data-i18n="brumma_prev_col_vi"></span>
+      </div>
+      <div class="e-maridatge-row">
+        <div class="e-maridatge-do">
+          <span class="e-maridatge-do-badge">D.O. Tarragona</span>
+          <span class="e-maridatge-do-name">De Muller</span>
+        </div>
+        <div class="e-maridatge-plat">Tosta de berenjena al Josper con sardina ahumada y naranja</div>
+        <div class="e-maridatge-vi"><strong>Chardonnay</strong> Blancs del Mas</div>
+      </div>
+      <div class="e-maridatge-row">
+        <div class="e-maridatge-do">
+          <span class="e-maridatge-do-badge">D.O. Penedès</span>
+          <span class="e-maridatge-do-name">Juvé &amp; Camps</span>
+        </div>
+        <div class="e-maridatge-plat">Ensalada de tomates con nectarina y burrata con vinagreta de pistachos</div>
+        <div class="e-maridatge-vi"><strong>Gregal d'Espiells</strong> Blanc</div>
+      </div>
+      <div class="e-maridatge-row">
+        <div class="e-maridatge-do">
+          <span class="e-maridatge-do-badge">D.O. Terra Alta</span>
+          <span class="e-maridatge-do-name">Celler Piñol</span>
+        </div>
+        <div class="e-maridatge-plat">Volandeiras a la brasa con papada ibérica braseada y fondo de jamón ibérico</div>
+        <div class="e-maridatge-vi"><strong>Ànima de l'avi Arrufi</strong> Blanc</div>
+      </div>
+      <div class="e-maridatge-row">
+        <div class="e-maridatge-do">
+          <span class="e-maridatge-do-badge">D.O. Montsant</span>
+          <span class="e-maridatge-do-name">Celler de Capçanes</span>
+        </div>
+        <div class="e-maridatge-plat">Arroz de lágrima ibérica, shitakes y huevo de codorniz</div>
+        <div class="e-maridatge-vi"><strong>Mas Collet</strong> Negre</div>
+      </div>
+      <div class="e-maridatge-row">
+        <div class="e-maridatge-do">
+          <span class="e-maridatge-do-badge">D.O.Q. Priorat</span>
+          <span class="e-maridatge-do-name">Cellers Scala Dei</span>
+        </div>
+        <div class="e-maridatge-plat">Tataki de chuletón de vaca madurado sobre escalivada</div>
+        <div class="e-maridatge-vi"><strong>Prior Scala Dei</strong> Negre</div>
+      </div>
+      <div class="e-maridatge-row">
+        <div class="e-maridatge-do">
+          <span class="e-maridatge-do-badge">D.O. Costers del Segre</span>
+          <span class="e-maridatge-do-name">Castell d'Encús</span>
+        </div>
+        <div class="e-maridatge-plat">Ceviche de corvina con crujiente de puerro</div>
+        <div class="e-maridatge-vi"><strong>Ekam</strong> Blanc</div>
+      </div>
+      <div class="e-maridatge-row">
+        <div class="e-maridatge-do">
+          <span class="e-maridatge-do-badge">Corpinnat</span>
+          <span class="e-maridatge-do-name">Torelló Viticultors</span>
+        </div>
+        <div class="e-maridatge-plat">Mató, pera confitada, almendra Marcona tostada y miel de romero</div>
+        <div class="e-maridatge-vi"><strong>Torelló 225 Brut Nature</strong> Cava</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="e-foto-gran" style="height:360px;">
+    <img src="../assets/img/brumma/06_flamma_bogavante_brasa.jpg" alt="Bogavante a la brasa — Flamma Beach Foodhouse">
+    <div class="e-foto-gran-peu" data-i18n="brumma_prev_foto3_peu"></div>
+  </div>
+
+  <div class="e-divider"></div>
+  <span class="e-label" data-i18n="brumma_prev_equip_label"></span>
+  <h2 class="e-title" data-i18n="brumma_prev_equip_title"></h2>
+  <div class="e-equip-grid">
+    <div class="e-equip-card">
+      <div class="e-equip-avatar">GM</div>
+      <p class="e-equip-nom"><strong>Guillem Martínez Batiste</strong></p>
+      <p class="e-equip-rol" data-i18n="brumma_prev_eq1_rol"></p>
+      <p class="e-equip-desc" data-i18n="brumma_prev_eq1_desc"></p>
+    </div>
+    <div class="e-equip-card">
+      <div class="e-equip-avatar">EP</div>
+      <p class="e-equip-nom"><strong>Esteban Puga Claver</strong></p>
+      <p class="e-equip-rol" data-i18n="brumma_prev_eq2_rol"></p>
+      <p class="e-equip-desc" data-i18n="brumma_prev_eq2_desc"></p>
+    </div>
+    <div class="e-equip-card">
+      <div class="e-equip-avatar">AR</div>
+      <p class="e-equip-nom"><strong>Aroa Ruiz Ait</strong></p>
+      <p class="e-equip-rol" data-i18n="brumma_prev_eq3_rol"></p>
+      <p class="e-equip-desc" data-i18n="brumma_prev_eq3_desc"></p>
+    </div>
+  </div>
+
+  <div class="e-fitxa">
+    <div class="e-fitxa-info">
+      <h3 data-i18n="brumma_prev_fitxa_title"></h3>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-map-marker-alt"></i></div><span class="e-fitxa-text">Infinitum Resort · Salou, Costa Daurada</span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-fire"></i></div><span class="e-fitxa-text" data-i18n="brumma_prev_fitxa_cuina"></span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-wine-glass-alt"></i></div><span class="e-fitxa-text" data-i18n="brumma_prev_fitxa_vi"></span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-calendar"></i></div><span class="e-fitxa-text" data-i18n="brumma_prev_fitxa_data"></span></div>
+    </div>
+    <div class="e-fitxa-cta">
+      <p data-i18n="brumma_prev_cta_desc"></p>
+      <a href="brumma-cronica-2026.html" class="btn-primary" style="display:inline-block;" data-i18n="brumma_prev_cta_btn"></a>
+    </div>
+  </div>
+
+  <div class="e-tambe">
+    <span class="e-tambe-label t" data-es="También te puede interesar" data-ca="També et pot interessar">También te puede interesar</span>
+    <h2 class="e-tambe-title t"
+        data-es="Más crónicas de restaurante"
+        data-ca="Més cròniques de restaurant">Más crónicas de restaurante</h2>
+    <div class="e-tambe-grid">
+      <a href="la-goleta-previa-2026.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/goleta/capellans-beach.jpg"
+               alt="La Goleta · Previa"
+               onerror="this.parentElement.style.background='#1c2e3e'">
+          <span class="e-tambe-card-cat t" data-es="Previa" data-ca="Prèvia">Previa</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <h3 class="e-tambe-card-title t"
+              data-es="La Goleta · Previa"
+              data-ca="La Goleta · Prèvia">La Goleta · Previa</h3>
+          <p class="e-tambe-card-exc t"
+             data-es="La previa de nuestra visita a La Goleta de Salou. Cuarenta años de cocina marinera frente a la Platja dels Capellans."
+             data-ca="La prèvia de la nostra visita a La Goleta de Salou. Quaranta anys de cuina marinera davant la Platja dels Capellans.">
+            La previa de nuestra visita a La Goleta de Salou. Cuarenta años de cocina marinera frente a la Platja dels Capellans.
+          </p>
+          <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+      <a href="kema-previa-2026.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/kema/hero-brasa.jpg"
+               alt="Kema · Previa"
+               onerror="this.parentElement.style.background='#1c2e3e'">
+          <span class="e-tambe-card-cat t" data-es="Previa" data-ca="Prèvia">Previa</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <h3 class="e-tambe-card-title t"
+              data-es="Kema · Previa"
+              data-ca="Kema · Prèvia">Kema · Previa</h3>
+          <p class="e-tambe-card-exc t"
+             data-es="La previa de nuestra primera visita de la temporada a Kema, Cambrils. Brasa, producto y coctelería con personalidad."
+             data-ca="La prèvia de la nostra primera visita de la temporada a Kema, Cambrils. Brasa, producte i cocteleria amb personalitat.">
+            La previa de nuestra primera visita de la temporada a Kema, Cambrils. Brasa, producto y coctelería con personalidad.
+          </p>
+          <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- COMPARTIR -->
+<div class="e-compartir">
+  <div class="e-compartir-inner">
+    <div class="e-compartir-deco">
+      <span class="e-compartir-deco-line"></span>
+      <span class="t" data-es="Comparte este artículo" data-ca="Comparteix aquest article">Comparte este artículo</span>
+      <span class="e-compartir-deco-line r"></span>
+    </div>
+    <p class="e-compartir-frase t"
+      data-es="Si te ha hecho pensar, <strong>merece llegar más lejos.</strong>"
+      data-ca="Si t'ha fet pensar, <strong>mereix arribar més lluny.</strong>">
+      Si te ha hecho pensar, <strong>merece llegar más lejos.</strong>
+    </p>
+    <div class="e-compartir-btns">
+      <a class="e-compartir-btn wa" id="btn-wa" href="#" target="_blank" rel="noopener" aria-label="Compartir per WhatsApp">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.862L.057 23.57a.75.75 0 0 0 .924.924l5.701-1.476A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.694 9.694 0 0 1-4.964-1.366l-.355-.212-3.685.954.975-3.564-.232-.368A9.696 9.696 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+        <span class="t" data-es="WhatsApp" data-ca="WhatsApp">WhatsApp</span>
+      </a>
+      <a class="e-compartir-btn fb" id="btn-fb" href="#" target="_blank" rel="noopener" aria-label="Compartir a Facebook">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        <span class="t" data-es="Facebook" data-ca="Facebook">Facebook</span>
+      </a>
+      <a class="e-compartir-btn x" id="btn-x" href="#" target="_blank" rel="noopener" aria-label="Compartir a X">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        <span class="t" data-es="X / Twitter" data-ca="X / Twitter">X / Twitter</span>
+      </a>
+      <button class="e-compartir-btn copy" onclick="copiarEnllac(this)" aria-label="Copiar enlace">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span class="t" data-es="Copiar enlace" data-ca="Copiar enllaç">Copiar enlace</span>
+        <span class="e-compartir-copied">
+          <span class="t" data-es="¡Copiado!" data-ca="Copiat!">¡Copiado!</span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="e-nav-retorn">
+  <a href="../pages/blog.html" class="btn-outline" data-i18n="back_blog_btn"></a>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="../assets/img/logo.png"
+           alt="Gourmets de Tarragona"
+           onerror="this.style.display='none'">
+      <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Navegación" data-ca="Navegació">Navegación</h4>
+      <ul>
+        <li><a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a></li>
+        <li><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li>
+        <li><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li>
+        <li><a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></li>
+        <li><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Legal" data-ca="Legal">Legal</h4>
+      <ul>
+        <li><a href="../pages/avis-legal.html" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li>
+        <li><a href="../pages/privacitat.html" class="t" data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a></li>
+        <li><a href="../pages/cookies.html" class="t" data-es="Política de Cookies" data-ca="Política de Cookies">Política de Cookies</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Contacto" data-ca="Contacte">Contacto</h4>
+      <p><a href="mailto:gourmetsdetarragona@gourmetsdetarragona.com">gourmetsdetarragona@gourmetsdetarragona.com</a></p>
+      <p>Tarragona, Catalunya</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="t" data-es="© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados" data-ca="© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats">© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<script>
+var T = {
+  nav_inicio:{es:'Inicio',ca:'Inici'},
+  nav_asoc:{es:'La Asociación',ca:"L'Associació"},
+  nav_quienes:{es:'Quiénes somos',ca:'Qui som'},
+  nav_como:{es:'Cómo funcionamos',ca:'Com funcionem'},
+  nav_rest:{es:'Restaurantes',ca:'Restaurants'},
+  nav_visites:{es:'Visitas 2025–26',ca:'Visites 2025–26'},
+  nav_premios:{es:'Premios',ca:'Premis'},
+  nav_gastronia:{es:'Trofeo Gastronía',ca:'Trofeu Gastronía'},
+  nav_bacus:{es:'Premio Bacus',ca:'Premi Bacus'},
+  nav_blog:{es:'Blog Gourmet',ca:'Blog Gourmet'},
+  nav_contacto:{es:'Contacto',ca:'Contacte'},
+  nav_rest_short:{es:'Restaurantes',ca:'Restaurants'},
+  nav_premios_short:{es:'Premios',ca:'Premis'},
+  back_blog:{es:'Volver al Blog',ca:'Tornar al Blog'},
+  back_blog_btn:{es:'← Volver al Blog',ca:'← Tornar al Blog'},
+  footer_desc:{es:'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',ca:'Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.'},
+  footer_nav:{es:'Navegación',ca:'Navegació'},
+  footer_legal:{es:'Legal',ca:'Legal'},
+  footer_contacte:{es:'Contacto',ca:'Contacte'},
+  footer_avis:{es:'Aviso Legal',ca:'Avís Legal'},
+  footer_privacitat:{es:'Política de Privacidad',ca:'Política de Privacitat'},
+  footer_copy:{es:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',ca:'© 2026 Gourmets de Tarragona · Tots els drets reservats'},
+
+  /* ── BRUMMA PREVIA ── */
+  brumma_prev_badge:{es:'Previa · 27 Junio 2026',ca:'Prèvia · 27 Juny 2026'},
+  brumma_prev_cuina:{es:'Brasa & Arroces',ca:'Brasa & Arrossos'},
+  brumma_prev_titol_sub:{es:'5º Recorrido Gourmet 2026',ca:'5è Recorregut Gourmet 2026'},
+  brumma_prev_subtitol:{es:'El antiguo Lumine se reinventa como Infinitum Resort. En su sala interior, Brumma nos propone un viaje gastronómico por las siete denominaciones de origen catalanas.',ca:"L'antic Lumine es reinventa com Infinitum Resort. A la seva sala interior, Brumma ens proposa un viatge gastronòmic per les set denominacions d'origen catalanes."},
+
+  brumma_prev_l1:{es:'Un escenario nuevo para una historia conocida',ca:'Un escenari nou per a una història coneguda'},
+  brumma_prev_t1:{es:'De Lumine a Infinitum: la Costa Daurada reinventada',ca:'De Lumine a Infinitum: la Costa Daurada reinventada'},
+  brumma_prev_p1:{es:'El resort que durante años conocimos como Lumine Beach &amp; Golf Community ha cambiado de nombre. Desde 2024 es <strong>Infinitum Resort</strong>, y con la nueva identidad ha llegado también una renovación integral de su oferta gastronómica. Siete espacios de restauración, una filosofía de producto mediterráneo y un escenario único en la Costa Daurada, en pleno corazón del territorio PortAventura.',ca:"El resort que durant anys vam conèixer com Lumine Beach &amp; Golf Community ha canviat de nom. Des del 2024 és <strong>Infinitum Resort</strong>, i amb la nova identitat ha arribat també una renovació integral de la seva oferta gastronòmica. Set espais de restauració, una filosofia de producte mediterrani i un escenari únic a la Costa Daurada, en ple cor del territori PortAventura."},
+  brumma_prev_p2:{es:'<strong>Brumma</strong> es la sala interior del Flamma Beach Foodhouse, el espacio de referencia del resort. Mientras Flamma abre sus terrazas al Mediterráneo en temporada estival, Brumma ofrece el mismo concepto —brasas, arroces, producto del litoral— en un entorno más íntimo y controlado, con vistas al mar que convierten cada cena en algo más que una comida.',ca:"<strong>Brumma</strong> és la sala interior del Flamma Beach Foodhouse, l'espai de referència del resort. Mentre Flamma obre les seves terrasses al Mediterrani en temporada estival, Brumma ofereix el mateix concepte —brases, arrossos, producte del litoral— en un entorn més íntim i controlat, amb vistes al mar que converteixen cada sopar en quelcom més que un àpat."},
+
+  brumma_prev_val2:{es:'2 de julio 2026',ca:'2 de juliol 2026'},
+  brumma_prev_val3:{es:'Brasa, arroces y producto mediterráneo',ca:'Brasa, arrossos i producte mediterrani'},
+  brumma_prev_val4:{es:'7 DOs catalanas en maridatge',ca:'7 DOs catalanes en maridatge'},
+
+  brumma_prev_foto1_peu:{es:'La sala Brumma — vistas al Mediterráneo desde Infinitum Resort, Salou',ca:'La sala Brumma — vistes al Mediterrani des d\'Infinitum Resort, Salou'},
+
+  brumma_prev_cuina_label:{es:'La cocina',ca:'La cuina'},
+  brumma_prev_cuina_title:{es:'Fuego lento, producto honesto',ca:'Foc lent, producte honest'},
+  brumma_prev_cuina_p1:{es:'La propuesta de Brumma gira alrededor del fuego. El Josper y la brasa son los ejes de una cocina que trabaja cortes madurados, arroces caldosos y producto del litoral con una ejecución directa y sin artificios. Tartar de atún Balfegó, croquetas de chuletón con ajo negro, mejillones al vapor, pulpo a la brasa o bogavante son algunos de los platos que definen la identidad del espacio.',ca:"La proposta de Brumma gira al voltant del foc. El Josper i la brasa són els eixos d'una cuina que treballa talls madurats, arrossos caldosos i producte del litoral amb una execució directa i sense artificis. Tàrtar de tonyina Balfegó, croquetes de costella amb all negre, musclos al vapor, pop a la brasa o llamàntol són alguns dels plats que defineixen la identitat de l'espai."},
+  brumma_prev_cuina_p2:{es:'Al frente de la cocina está <strong>Guillem Martínez Batiste</strong>, formado en los Jesuïtes de Sarrià y con nueve años de trayectoria en Infinitum. Un chef que conoce a fondo el territorio y que en los últimos meses ha asumido la dirección culinaria de todo el resort. Para el 2 de julio nos ha preparado un menú especial que es un recorrido por la identidad gastronómica de Catalunya: siete platos, siete denominaciones de origen.',ca:"Al capdavant de la cuina hi ha <strong>Guillem Martínez Batiste</strong>, format als Jesuïtes de Sarrià i amb nou anys de trajectòria a Infinitum. Un xef que coneix a fons el territori i que en els últims mesos ha assumit la direcció culinària de tot el resort. Per al 2 de juliol ens ha preparat un menú especial que és un recorregut per la identitat gastronòmica de Catalunya: set plats, set denominacions d'origen."},
+
+  brumma_prev_foto2_peu:{es:'Flamma Beach Foodhouse — el restaurante insignia de Infinitum Resort, con acceso directo a la playa',ca:"Flamma Beach Foodhouse — el restaurant insígnia d'Infinitum Resort, amb accés directe a la platja"},
+
+  brumma_prev_conv_section_label:{es:'Los invitados de la velada',ca:'Els convidats de la vetllada'},
+  brumma_prev_conv_section_title:{es:'Una noche con dos ponentes de excepción',ca:'Una nit amb dos ponents d\'excepció'},
+
+  brumma_prev_conv1_label:{es:'Ponente invitado de la velada',ca:'Ponent convidat de la vetllada'},
+  brumma_prev_conv1_desc:{es:'Head of Sales Smart Infrastructures en Siemens España. Compartirá su visión desde el cruce entre tecnología, empresa y territorio en la España contemporánea.',ca:'Head of Sales Smart Infrastructures a Siemens España. Compartirà la seva visió des del creuament entre tecnologia, empresa i territori a l\'Espanya contemporània.'},
+
+  brumma_prev_conv2_label:{es:'Convidat especial · Retorn de La Goleta',ca:'Convidat especial · Retorn de La Goleta'},
+  brumma_prev_conv2_desc:{es:'Cofundador de la Asociación Gastronómica Casacas Rojas, entidad nacida en 2006 y referencia del turismo gastronómico en España. Nos acompañó como ponente en la cena de La Goleta, y esta noche regresa como invitado.',ca:"Cofundador de l'Associació Gastronòmica Casacas Rojas, entitat nascuda el 2006 i referència del turisme gastronòmic a Espanya. Ens va acompanyar com a ponent al sopar de La Goleta, i aquesta nit torna com a convidat."},
+
+  brumma_prev_prog_title:{es:'Programa de la velada',ca:'Programa de la vetllada'},
+  brumma_prev_prog1:{es:'Recepción de los asistentes',ca:'Recepció dels assistents'},
+  brumma_prev_prog2:{es:'Presentación del restaurante',ca:'Presentació del restaurant'},
+  brumma_prev_prog3:{es:'Presentación del ponente invitado',ca:'Presentació del ponent convidat'},
+  brumma_prev_prog4:{es:'Inicio de la cena',ca:'Inici del sopar'},
+  brumma_prev_prog5:{es:'Clausura y entrega de premios',ca:'Clausura i lliurament de premis'},
+
+  brumma_prev_menu_title:{es:'Un viaje por las DOs catalanas',ca:'Un viatge per les DOs catalanes'},
+  brumma_prev_menu_sub:{es:'Menú maridaje · "Cataluña, su gastronomía y sus vinos" · Brumma · 2 julio 2026',ca:"Menú maridatge · «Catalunya, la seva gastronomia i els seus vins» · Brumma · 2 juliol 2026"},
+  brumma_prev_col_do:{es:'D.O.',ca:'D.O.'},
+  brumma_prev_col_plat:{es:'Plato',ca:'Plat'},
+  brumma_prev_col_vi:{es:'Vino',ca:'Vi'},
+
+  brumma_prev_foto3_peu:{es:'Bogavante a la brasa — emblema de la cocina de Flamma Beach Foodhouse',ca:"Llamàntol a la brasa — emblema de la cuina de Flamma Beach Foodhouse"},
+
+  brumma_prev_equip_label:{es:'El equipo',ca:"L'equip"},
+  brumma_prev_equip_title:{es:'Las personas detrás de Brumma',ca:'Les persones darrere de Brumma'},
+  brumma_prev_eq1_rol:{es:'Chef & Director Culinario',ca:'Xef & Director Culinari'},
+  brumma_prev_eq1_desc:{es:'Formado en los Jesuïtes de Sarrià. Nueve años en Infinitum Resort, donde recientemente ha asumido la dirección culinaria de todos los espacios gastronómicos.',ca:"Format als Jesuïtes de Sarrià. Nou anys a Infinitum Resort, on recentment ha assumit la direcció culinària de tots els espais gastronòmics."},
+  brumma_prev_eq2_rol:{es:'Director de F&B',ca:'Director de F&B'},
+  brumma_prev_eq2_desc:{es:'Familia de hosteleros de Tarragona. Cinco años al frente de la estrategia de alimentos y bebidas de Infinitum Resort, con vocación de posicionar el resort como referente gastronómico de la Costa Daurada.',ca:"Família d'hotelers de Tarragona. Cinc anys al capdavant de l'estratègia d'aliments i begudes d'Infinitum Resort, amb vocació de posicionar el resort com a referent gastronòmic de la Costa Daurada."},
+  brumma_prev_eq3_rol:{es:'Restaurant Manager',ca:'Restaurant Manager'},
+  brumma_prev_eq3_desc:{es:'Responsable de la experiencia de sala en Brumma y Flamma Beach Foodhouse. Coordina el equipo de servicio y garantiza que cada visita esté a la altura del entorno.',ca:"Responsable de l'experiència de sala a Brumma i Flamma Beach Foodhouse. Coordina l'equip de servei i garanteix que cada visita estigui a l'alçada de l'entorn."},
+
+  brumma_prev_fitxa_title:{es:'Ficha del restaurante',ca:'Fitxa del restaurant'},
+  brumma_prev_fitxa_cuina:{es:'Brasa, arroces y marisco mediterráneo',ca:'Brasa, arrossos i marisc mediterrani'},
+  brumma_prev_fitxa_vi:{es:'7 DOs catalanas · maridaje especial',ca:'7 DOs catalanes · maridatge especial'},
+  brumma_prev_fitxa_data:{es:'Visita: 2 de julio 2026',ca:'Visita: 2 de juliol 2026'},
+  brumma_prev_cta_desc:{es:'Durante la cena compartiremos algunos momentos en stories. La crónica completa llegará días después.',ca:'Durant el sopar compartirem alguns moments a les stories. La crònica completa arribarà dies després.'},
+  brumma_prev_cta_btn:{es:'Leer la crónica completa →',ca:'Llegir la crònica completa →'}
+};
+
+var currentLang = localStorage.getItem('gdt-lang') || 'es';
+function applyTranslations(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var k = el.getAttribute('data-i18n');
+    if (T[k] && T[k][lang] !== undefined) el.innerHTML = T[k][lang];
+  });
+  var r = document.getElementById('html-root');
+  if (r) r.setAttribute('lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+  document.querySelectorAll('[data-es]').forEach(function(el){ var v=el.getAttribute('data-'+lang); if(v!==null)el.innerHTML=v; });
+}
+function setLang(lang) { currentLang = lang; localStorage.setItem('gdt-lang', lang); applyTranslations(lang); }
+applyTranslations(currentLang);
+</script>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var url = encodeURIComponent(window.location.href);
+  var titol = encodeURIComponent(document.title);
+  var wa = document.getElementById('btn-wa');
+  var fb = document.getElementById('btn-fb');
+  var x  = document.getElementById('btn-x');
+  if(wa) wa.href = 'https://wa.me/?text=' + titol + '%20' + url;
+  if(fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if(x)  x.href  = 'https://x.com/intent/tweet?url=' + url + '&text=' + titol;
+  function applyShareLang(){
+    var lang = localStorage.getItem('gdt-lang') || 'es';
+    document.querySelectorAll('.e-compartir [data-es]').forEach(function(el){
+      var v = el.getAttribute('data-' + lang);
+      if(v) el.innerHTML = v;
+    });
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', applyShareLang);
+  } else { applyShareLang(); }
+  document.addEventListener('click', function(e){
+    var t = e.target && e.target.closest && e.target.closest('.lang-btn');
+    if(t) setTimeout(applyShareLang, 60);
+  });
+})();
+function copiarEnllac(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var msg = btn.querySelector('.e-compartir-copied');
+    if(msg){ msg.classList.add('vis'); setTimeout(function(){ msg.classList.remove('vis'); }, 2200); }
+  });
+}
+</script>
+</body>
+</html>
