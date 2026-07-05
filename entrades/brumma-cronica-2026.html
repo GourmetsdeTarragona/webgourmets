@@ -1,723 +1,706 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" id="html-root">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brumma · Crònica · Gourmets de Tarragona</title>
-  <meta name="description" content="Crònica de la 5a visita dels Gourmets de Tarragona al restaurant Brumma (Flamma Beach Foodhouse, Infinitum Resort, Salou). Juliol 2026. Menú maridatge 'Cataluña, su gastronomía y sus vinos' amb set DOs catalanes." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.gourmetsdetarragona.com/entrades/brumma-cronica-2026.html" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:site_name" content="Gourmets de Tarragona" />
-  <meta property="og:title" content="Brumma · Crònica · Gourmets de Tarragona" />
-  <meta property="og:description" content="Crònica de la 5a visita dels Gourmets de Tarragona al restaurant Brumma. Juliol 2026." />
-  <meta property="og:url" content="https://www.gourmetsdetarragona.com/entrades/brumma-cronica-2026.html" />
-  <meta property="og:image" content="https://www.gourmetsdetarragona.com/assets/img/brumma/05_brumma_vistas_mar.jpg" />
-  <meta property="og:image:alt" content="Brumma · Vistes al Mediterrani · Infinitum Resort Salou" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:locale" content="es_ES" />
-  <meta property="og:locale:alternate" content="ca_ES" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Brumma · Crònica · Gourmets de Tarragona" />
-  <meta name="twitter:description" content="Crònica de la 5a visita dels Gourmets de Tarragona al restaurant Brumma. Juliol 2026." />
-  <meta name="twitter:image" content="https://www.gourmetsdetarragona.com/assets/img/brumma/05_brumma_vistas_mar.jpg" />
-
-  <!-- Schema.org Article -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Brumma · Crònica · Gourmets de Tarragona",
-    "description": "Crònica de la 5a visita dels Gourmets de Tarragona al restaurant Brumma (Infinitum Resort, Salou). Juliol 2026.",
-    "image": "https://www.gourmetsdetarragona.com/assets/img/brumma/05_brumma_vistas_mar.jpg",
-    "datePublished": "2026-07-05",
-    "dateModified": "2026-07-05",
-    "author": {
-      "@type": "Organization",
-      "name": "Gourmets de Tarragona",
-      "url": "https://www.gourmetsdetarragona.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Gourmets de Tarragona",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.gourmetsdetarragona.com/assets/img/logo.png"
-      }
-    },
-    "url": "https://www.gourmetsdetarragona.com/entrades/brumma-cronica-2026.html",
-    "about": {
-      "@type": "Restaurant",
-      "name": "Brumma / Flamma Beach Foodhouse",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Salou",
-        "addressRegion": "Tarragona",
-        "addressCountry": "ES"
-      }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="shortcut icon" href="../favicon.ico">
+<title>Brumma · Crònica · Gourmets de Tarragona</title>
+<meta name="description" content="Crónica completa de la visita dels Gourmets de Tarragona al restaurant Brumma, Flamma Beach Foodhouse, Infinitum Resort de Salou. Setze DOs catalanes i més de seixanta comensals. Juliol 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/seccions.css">
+<style>
+.entrada-hero{position:relative;min-height:75vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.65;filter:brightness(1.05) contrast(1.05);}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.95) 0%,rgba(11,22,38,.4) 55%,rgba(11,22,38,.05) 100%);}
+.entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
+.entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
+.entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
+.entrada-back:hover{color:var(--gold);}
+.entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;}
+.entrada-meta-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
+.entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:18px;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
+.entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
+.entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.82);font-weight:300;line-height:1.85;max-width:540px;}
+.entrada-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
+.e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-title{font-family:var(--font-serif);font-size:1.75rem;color:var(--navy-dark);line-height:1.2;margin-bottom:22px;}
+.e-p{font-size:1rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:20px;}
+.e-p strong{font-weight:700;color:var(--navy-dark);}
+.e-p em{font-style:italic;color:var(--navy-dark);}
+.e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin:52px 0;}
+.e-foto-gran{margin:48px 0;position:relative;overflow:hidden;}
+.e-foto-gran img{width:100%;height:500px;object-fit:cover;display:block;}
+.e-foto-peu{font-size:.72rem;color:var(--muted);font-style:italic;margin-top:10px;padding-left:8px;border-left:2px solid var(--gold);opacity:.8;line-height:1.5;}
+.e-fotos-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:36px 0 8px;}
+.e-fotos-2 img{width:100%;height:320px;object-fit:cover;}
+.e-fotos-2-peu{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:36px;}
+.e-fotos-2-peu span{font-size:.72rem;color:var(--muted);font-style:italic;padding-left:8px;border-left:2px solid var(--gold);opacity:.8;line-height:1.5;display:block;}
+.e-fotos-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:36px 0 8px;}
+.e-fotos-3 img{width:100%;height:240px;object-fit:cover;}
+.e-foto-md{margin:36px 0;}
+.e-foto-md img{width:100%;height:380px;object-fit:cover;display:block;}
+.e-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-bottom:52px;}
+.e-img img{width:100%;height:420px;object-fit:cover;}
+.e-vins{background:var(--navy-dark);padding:52px;margin:52px 0;position:relative;}
+.e-vins::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);}
+.e-vins-label{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(184,146,74,.7);margin-bottom:10px;display:block;}
+.e-vins-title{font-family:var(--font-serif);font-size:1.5rem;color:#fff;margin-bottom:8px;}
+.e-vins-desc{font-size:.9rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.8;margin-bottom:32px;}
+.e-vins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.e-vi{background:rgba(255,255,255,.06);padding:18px 16px;border-left:3px solid rgba(184,146,74,.4);}
+.e-vi-num{font-size:.58rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(184,146,74,.65);margin-bottom:6px;}
+.e-vi-nom{font-size:.9rem;color:#fff;font-weight:600;line-height:1.4;margin-bottom:4px;}
+.e-vi-do{font-size:.75rem;color:rgba(255,255,255,.38);}
+.e-moment{background:#fff;padding:36px;border-left:4px solid var(--gold);margin:36px 0;box-shadow:0 4px 24px rgba(28,46,62,.08);}
+.e-moment-title{font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:12px;font-weight:600;}
+.e-moment-p{font-size:.95rem;color:#555;line-height:1.75;}
+.e-moment-p strong{color:var(--navy-dark);font-weight:700;}
+.e-fitxa{background:var(--cream);border:1px solid var(--border);display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:52px 0;text-align:center;}
+.e-fitxa-item{padding:32px 24px;border-right:1px solid var(--border);}
+.e-fitxa-item:last-child{border-right:none;}
+.e-fitxa-label{font-size:.62rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block;}
+.e-fitxa-valor{font-family:var(--font-serif);font-size:1rem;color:var(--navy-dark);}
+.e-compartir{position:relative;margin:64px 0 0;padding:56px 40px 52px;background:linear-gradient(135deg,#0b1626 0%,#1c2e3e 100%);overflow:hidden;}
+.e-compartir::before{content:'';position:absolute;top:-1px;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);}
+.e-compartir::after{content:'"';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:14rem;font-weight:700;color:rgba(184,146,74,.06);line-height:1;pointer-events:none;user-select:none;}
+.e-compartir-inner{position:relative;z-index:1;max-width:600px;margin:0 auto;text-align:center;}
+.e-compartir-deco{display:flex;align-items:center;gap:16px;justify-content:center;margin-bottom:20px;}
+.e-compartir-deco-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,146,74,.3));}
+.e-compartir-deco-line.r{background:linear-gradient(90deg,rgba(184,146,74,.3),transparent);}
+.e-compartir-deco span{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(184,146,74,.6);font-weight:600;white-space:nowrap;}
+.e-compartir-frase{font-family:'Playfair Display',serif;font-size:1.45rem;font-style:italic;color:rgba(255,255,255,.88);line-height:1.5;margin-bottom:32px;font-weight:400;}
+.e-compartir-frase strong{font-style:normal;font-weight:700;color:#d4a96a;}
+.e-compartir-btns{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;}
+.e-compartir-btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;font-family:'Lato',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:rgba(255,255,255,.65);transition:all .25s;cursor:pointer;text-decoration:none;}
+.e-compartir-btn:hover{border-color:rgba(184,146,74,.6);background:rgba(184,146,74,.1);color:#d4a96a;transform:translateY(-2px);}
+.e-compartir-btn.wa:hover{border-color:#25d366;background:rgba(37,211,102,.1);color:#25d366;}
+.e-compartir-btn.fb:hover{border-color:#1877f2;background:rgba(24,119,242,.1);color:#6fa8ff;}
+.e-compartir-copied{font-size:.65rem;color:#d4a96a;letter-spacing:.08em;opacity:0;transition:opacity .3s;margin-left:4px;}
+.e-compartir-copied.vis{opacity:1;}
+.e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;}
+.e-nav-retorn-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.e-tambe{margin:64px 0 0;padding-top:48px;border-top:1px solid var(--border);}
+.e-tambe-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-tambe-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);margin-bottom:32px;}
+.e-tambe-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.e-tambe-card{background:#fff;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;text-decoration:none;}
+.e-tambe-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(28,46,62,.12);}
+.e-tambe-card-img{height:172px;overflow:hidden;position:relative;}
+.e-tambe-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.e-tambe-card:hover .e-tambe-card-img img{transform:scale(1.05);}
+.e-tambe-card-cat{position:absolute;top:12px;left:12px;font-size:.57rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 10px;color:#fff;}
+.e-tambe-card-body{padding:20px;flex:1;display:flex;flex-direction:column;}
+.e-tambe-card-title{font-family:var(--font-serif);font-size:1rem;color:var(--navy-dark);line-height:1.3;margin-bottom:8px;font-weight:600;}
+.e-tambe-card-exc{font-size:.83rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:14px;flex:1;}
+.e-tambe-card-link{font-size:.63rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy-dark);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;width:fit-content;margin-top:auto;}
+.e-tambe-card:hover .e-tambe-card-link{color:var(--gold);}
+@media(max-width:768px){
+  .entrada-hero-content{padding:0 5% 52px;}
+  .entrada-cos{padding:52px 5%;}
+  .e-grid-2{grid-template-columns:1fr;gap:32px;}
+  .e-img img{height:280px;}
+  .e-foto-gran img{height:300px;}
+  .e-foto-md img{height:260px;}
+  .e-fotos-2{grid-template-columns:1fr;}
+  .e-fotos-2 img{height:260px;}
+  .e-fotos-2-peu{grid-template-columns:1fr;}
+  .e-fotos-3{grid-template-columns:1fr 1fr;}
+  .e-vins{padding:32px 20px;}
+  .e-vins-grid{grid-template-columns:1fr;}
+  .e-fitxa{grid-template-columns:1fr;}
+  .e-fitxa-item{border-right:none;border-bottom:1px solid var(--border);}
+  .e-fitxa-item:last-child{border-bottom:none;}
+  .e-compartir{padding:40px 24px 36px;}
+  .e-compartir::after{font-size:8rem;}
+  .e-compartir-frase{font-size:1.2rem;}
+}
+@media(max-width:680px){.e-tambe-grid{grid-template-columns:1fr;}}
+</style>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.gourmetsdetarragona.com/entrades/brumma-cronica-2026.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.gourmetsdetarragona.com/entrades/brumma-cronica-2026.html">
+<meta property="og:title" content="Brumma · Crònica · Gourmets de Tarragona">
+<meta property="og:description" content="Sala acristalada, set DOs catalanes i més de seixanta comensals. La 5a visita dels Gourmets de Tarragona a Brumma, Infinitum Resort, Salou.">
+<meta property="og:image" content="https://www.gourmetsdetarragona.com/assets/img/brumma/05_brumma_vistas_mar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Brumma · Infinitum Resort · Salou · Gourmets de Tarragona 2026">
+<meta property="og:site_name" content="Gourmets de Tarragona">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="ca_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Brumma · Crònica · Gourmets de Tarragona">
+<meta name="twitter:description" content="Sala acristalada, set DOs catalanes i més de seixanta comensals. La 5a visita dels Gourmets de Tarragona a Brumma, Salou.">
+<meta name="twitter:image" content="https://www.gourmetsdetarragona.com/assets/img/brumma/05_brumma_vistas_mar.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Brumma · Crònica · Gourmets de Tarragona",
+  "description": "Crónica de la 5ª visita dels Gourmets de Tarragona al restaurant Brumma, Flamma Beach Foodhouse, Infinitum Resort de Salou. Juliol 2026.",
+  "image": "https://www.gourmetsdetarragona.com/assets/img/brumma/05_brumma_vistas_mar.jpg",
+  "url": "https://www.gourmetsdetarragona.com/entrades/brumma-cronica-2026.html",
+  "datePublished": "2026-07-05",
+  "inLanguage": ["es","ca"],
+  "author": {
+    "@type": "Organization",
+    "name": "Gourmets de Tarragona",
+    "url": "https://www.gourmetsdetarragona.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Gourmets de Tarragona",
+    "url": "https://www.gourmetsdetarragona.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gourmetsdetarragona.com/assets/img/logo.png"
     }
   }
-  </script>
-
-  <link rel="stylesheet" href="../assets/css/main.css" />
-  <link rel="stylesheet" href="../assets/css/nav.css" />
-  <link rel="stylesheet" href="../assets/css/entrada.css" />
+}
+</script>
+<script>
+var currentLang = localStorage.getItem('gdt-lang') || 'es';
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('gdt-lang', lang);
+  document.querySelectorAll('.t').forEach(function(el) {
+    var val = el.getAttribute('data-' + lang);
+    if (val !== null) el.innerHTML = val;
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+  document.getElementById('html-root').setAttribute('lang', lang);
+}
+</script>
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════════ NAV -->
-<nav>
+<!-- NAV -->
+<nav id="nav">
   <div class="nav-inner">
-    <a href="../index.html" class="nav-logo">
-      <img src="../assets/img/logo.png"
-           onerror="this.src='https://gourmetsdetarragona.com/wp-content/uploads/2025/05/cropped-logo_gourmets_blau_sin_fondo-3-300x296.png'"
-           alt="Gourmets de Tarragona" />
-    </a>
-
-    <ul class="nav-menu">
-      <li><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></li>
-      <li class="nav-dropdown">
-        <a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a>
-        <ul class="nav-dropdown-menu">
-          <li><a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a></li>
-          <li><a href="../pages/associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a></li>
-          <li><a href="../pages/associacio.html#valoracio" class="t" data-es="El sistema de valoración" data-ca="El sistema de valoració">El sistema de valoración</a></li>
-        </ul>
-      </li>
-      <li class="nav-dropdown">
-        <a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a>
-        <ul class="nav-dropdown-menu">
-          <li><a href="../pages/restaurants.html" class="t" data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visitas 2025–26</a></li>
-          <li><a href="../pages/restaurants.html#historic" class="t" data-es="Histórico de visitas" data-ca="Històric de visites">Histórico de visitas</a></li>
-        </ul>
-      </li>
-      <li class="nav-dropdown">
-        <a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a>
-        <ul class="nav-dropdown-menu">
-          <li><a href="../pages/premis.html" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</a></li>
-          <li><a href="../pages/premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a></li>
-          <li><a href="../pages/premis.html#palmares" class="t" data-es="Palmarés histórico" data-ca="Palmarès històric">Palmarés histórico</a></li>
-        </ul>
-      </li>
-      <li class="nav-dropdown">
-        <a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a>
-        <ul class="nav-dropdown-menu">
-          <li><a href="../pages/esdeveniments.html" class="t" data-es="Cenas especiales" data-ca="Sopars especials">Cenas especiales</a></li>
-          <li><a href="../pages/esdeveniments.html#cates" class="t" data-es="Catas &amp; Visitas" data-ca="Cates &amp; Visites">Catas &amp; Visitas</a></li>
-          <li><a href="../pages/esdeveniments.html#calendari" class="t" data-es="Calendario" data-ca="Calendari">Calendario</a></li>
-        </ul>
-      </li>
-      <li><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li>
-      <li><a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></li>
-    </ul>
-
-    <div class="nav-right">
-      <button class="lang-btn" onclick="toggleLang()">
-        <span class="lang-es">ES</span> | <span class="lang-ca">CA</span>
-      </button>
-      <button class="hamburger" aria-label="Menú" onclick="toggleMobileMenu()">
-        <span></span><span></span><span></span>
-      </button>
+    <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona" onerror="this.src='https://gourmetsdetarragona.com/wp-content/uploads/2025/05/cropped-logo_gourmets_blau_sin_fondo-3-300x296.png'"></a>
+    <div class="nav-menu">
+      <div class="nav-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
+      <div class="nav-item"><span class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</span><div class="dropdown"><a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a><a href="../pages/associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a><a href="../pages/associacio.html#valoracio" class="t" data-es="El sistema de valoración" data-ca="El sistema de valoració">El sistema de valoración</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span><div class="dropdown"><a href="../pages/restaurants.html" class="t" data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visitas 2025–26</a><a href="../pages/restaurants.html#historic" class="t" data-es="Histórico de visitas" data-ca="Històric de visites">Histórico de visitas</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Premios" data-ca="Premis">Premios</span><div class="dropdown"><a href="../pages/premis.html" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</a><a href="../pages/premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a><a href="../pages/premis.html#palmares" class="t" data-es="Palmarés histórico" data-ca="Palmarès històric">Palmarés histórico</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</span><div class="dropdown"><a href="../pages/esdeveniments.html" class="t" data-es="Cenas especiales" data-ca="Sopars especials">Cenas especiales</a><a href="../pages/esdeveniments.html#cates" class="t" data-es="Catas &amp; Visitas" data-ca="Tasts &amp; Visites">Catas &amp; Visitas</a><a href="../pages/esdeveniments.html#calendari" class="t" data-es="Calendario" data-ca="Calendari">Calendario</a></div></div>
+      <div class="nav-item"><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+      <div class="nav-item"><a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
     </div>
-
-    <div class="mobile-menu" id="mobileMenu">
-      <ul>
-        <li><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></li>
-        <li><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></li>
-        <li><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li>
-        <li><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li>
-        <li><a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></li>
-        <li><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li>
-        <li><a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></li>
-      </ul>
+    <div class="nav-right">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
+    <div class="mobile-item"><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
+    <div class="mobile-item"><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
+    <div class="mobile-item"><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></div>
+    <div class="mobile-item"><a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></div>
+    <div class="mobile-item"><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+    <div class="mobile-item"><a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
     </div>
   </div>
 </nav>
-<!-- /NAV ══════════════════════════════════════════════════════════ -->
 
+<!-- HERO -->
+<header class="entrada-hero">
+  <div class="entrada-hero-bg" style="background-image:url('../assets/img/brumma/05_brumma_vistas_mar.jpg');"></div>
+  <div class="entrada-hero-grad"></div>
+  <div class="entrada-hero-line"></div>
+  <div class="entrada-hero-content">
+    <a href="../pages/blog.html" class="entrada-back"><i class="fa fa-arrow-left"></i> <span class="t" data-es="Volver al Blog" data-ca="Tornar al Blog">Volver al Blog</span></a>
+    <div class="entrada-meta-top">
+      <span class="entrada-badge t" data-es="Crónica · 5ª Visita · Temporada 2026" data-ca="Crònica · 5a Visita · Temporada 2026">Crónica · 5ª Visita · Temporada 2026</span>
+    </div>
+    <div class="entrada-meta-info">
+      <span class="entrada-meta-item"><i class="fa fa-map-marker-alt"></i> Salou</span>
+      <span class="entrada-meta-item"><i class="fa fa-leaf"></i> <span class="t" data-es="Brasería · Arrocería mediterránea" data-ca="Braseria · Arrosseria mediterrània">Brasería · Arrocería mediterránea</span></span>
+      <span class="entrada-meta-item"><i class="fa fa-calendar"></i> <span class="t" data-es="2 Julio 2026" data-ca="2 Juliol 2026">2 Julio 2026</span></span>
+    </div>
+    <h1 class="entrada-titol">Brumma · <em class="t" data-es="Infinitum Resort" data-ca="Infinitum Resort">Infinitum Resort</em></h1>
+    <p class="entrada-subtitol t"
+       data-es="Una sala acristalada frente al Mediterráneo, siete DOs catalanas en el centro de la mesa y más de sesenta comensales. El lugar lo merecía, y la noche no decepcionó."
+       data-ca="Una sala envidrada davant el Mediterrani, set DOs catalanes al centre de la taula i més de seixanta comensals. El lloc s'ho mereixia, i la nit no va decebre.">
+      Una sala acristalada frente al Mediterráneo, siete DOs catalanas en el centro de la mesa y más de sesenta comensales. El lugar lo merecía, y la noche no decepcionó.
+    </p>
+  </div>
+</header>
 
-<!-- ═══════════════════════════════════════════════════════ ARTICLE -->
-<main class="e-article-main">
+<main class="entrada-cos">
 
-  <!-- Breadcrumb -->
-  <div class="e-breadcrumb">
-    <a href="../pages/blog.html" class="e-back-link t" data-es="← Volver al Blog" data-ca="← Tornar al Blog">← Volver al Blog</a>
+  <!-- B1: LA LLEGADA -->
+  <span class="e-label t" data-es="La llegada" data-ca="L'arribada">La llegada</span>
+  <h2 class="e-title t" data-es="Cuando el espacio ya es un argumento" data-ca="Quan l'espai ja és un argument">Cuando el espacio ya es un argumento</h2>
+  <div class="e-divider"></div>
+  <div class="e-grid-2">
+    <div>
+      <p class="e-p t"
+         data-es="Brumma no empieza cuando se pone el primer plato. Empieza cuando se abre la puerta y aparece aquella sala acristalada, con el Mediterráneo al fondo como si alguien hubiera olvidado cerrar el horizonte. Las mesas, redondas, estaban montadas con una atención al detalle que ya anticipaba el tono de la noche: la <strong>minuta cuidadosamente impresa</strong>, las copas en posición, y en el centro de cada mesa —no como adorno, sino como declaración de intenciones— las botellas de vino que iban a protagonizar el recorrido de la velada."
+         data-ca="Brumma no comença quan es posa el primer plat. Comença quan s'obre la porta i apareix aquella sala envidrada, amb el Mediterrani al fons com si algú hagués oblidat tancar l'horitzó. Les taules, rodones, estaven muntades amb una atenció al detall que ja anticipava el to de la nit: la <strong>minuta acuradament impresa</strong>, les copes en posició, i al centre de cada taula —no com a adorn, sinó com a declaració d'intencions— les ampolles de vi que havien de protagonitzar el recorregut de la vetllada.">
+        Brumma no empieza cuando se pone el primer plato. Empieza cuando se abre la puerta y aparece aquella sala acristalada, con el Mediterráneo al fondo como si alguien hubiera olvidado cerrar el horizonte. Las mesas, redondas, estaban montadas con una atención al detalle que ya anticipaba el tono de la noche: la <strong>minuta cuidadosamente impresa</strong>, las copas en posición, y en el centro de cada mesa —no como adorno, sino como declaración de intenciones— las botellas de vino que iban a protagonizar el recorrido de la velada.
+      </p>
+      <p class="e-p t"
+         data-es="<strong>Infinitum Resort</strong> acumula títulos que no son fáciles de ignorar: Mejor Beach Club de Europa tres años consecutivos según los World Travel Awards. Dos campos y medio de golf, seis piscinas, seis puntos de restauración. Brumma —sala interior del Flamma Beach Foodhouse— es la pieza más cuidada de ese conjunto: un espacio con vistas que cualquier restaurante del Camp de Tarragona envidiaría, reformado para funcionar como restaurante de autor y como espacio de eventos de altura."
+         data-ca="<strong>Infinitum Resort</strong> acumula títols que no són fàcils d'ignorar: Millor Beach Club d'Europa tres anys consecutius segons els World Travel Awards. Dos camps i mig de golf, sis piscines, sis punts de restauració. Brumma —sala interior del Flamma Beach Foodhouse— és la peça més acurada d'aquest conjunt: un espai amb vistes que qualsevol restaurant del Camp de Tarragona envejaria, reformat per funcionar com a restaurant d'autor i com a espai d'esdeveniments d'altura.">
+        <strong>Infinitum Resort</strong> acumula títulos que no son fáciles de ignorar: Mejor Beach Club de Europa tres años consecutivos según los World Travel Awards. Dos campos y medio de golf, seis piscinas, seis puntos de restauración. Brumma —sala interior del Flamma Beach Foodhouse— es la pieza más cuidada de ese conjunto: un espacio con vistas que cualquier restaurante del Camp de Tarragona envidiaría, reformado para funcionar como restaurante de autor y como espacio de eventos de altura.
+      </p>
+    </div>
+    <div class="e-img">
+      <img src="../assets/img/brumma/cronica/sala-cena.jpg" alt="La sala de Brumma preparada para los Gourmets de Tarragona — mesas redondas con vinos en el centro, vistas al Mediterráneo">
+    </div>
   </div>
 
-  <!-- Header -->
-  <header class="e-article-header">
-    <p class="e-kicker t" data-es="Crónica · 5ª Visita · Temporada 2026" data-ca="Crònica · 5a Visita · Temporada 2026">Crónica · 5ª Visita · Temporada 2026</p>
-    <p class="e-meta">
-      <span class="t" data-es="Salou" data-ca="Salou">Salou</span>
-      &nbsp;&nbsp;
-      <span class="t" data-es="Braseria / Arroceria mediterránea" data-ca="Braseria / Arrosseria mediterrània">Braseria / Arroceria mediterránea</span>
-      &nbsp;&nbsp;
-      <span>2 Julio 2026</span>
+  <div class="e-fotos-2">
+    <img src="../assets/img/brumma/01_brumma_sala_interior.jpg" alt="Interior de la sala acristalada de Brumma — Flamma Beach Foodhouse, Infinitum Resort Salou">
+    <img src="../assets/img/brumma/cronica/minuta.jpg" alt="Minuta de la cena Gourmets de Tarragona en Brumma — 2 de julio de 2026" style="object-fit:contain;background:#f5f0e8;">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="La sala de Brumma — acristalada, con vistas al Mediterráneo y las botellas en el centro de cada mesa redonda" data-ca="La sala de Brumma — envidrada, amb vistes al Mediterrani i les ampolles al centre de cada taula rodona">La sala de Brumma — acristalada, con vistas al Mediterráneo y las botellas en el centro de cada mesa redonda</span>
+    <span class="t" data-es="La minuta de la velada: siete pases, siete DOs catalanas. Un recorrido por Cataluña desde la copa" data-ca="La minuta de la vetllada: set passos, set DOs catalanes. Un recorregut per Catalunya des de la copa">La minuta de la velada: siete pases, siete DOs catalanas. Un recorrido por Cataluña desde la copa</span>
+  </div>
+
+  <!-- B2: LA VELADA -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Una noche excepcional" data-ca="Una nit excepcional">Una noche excepcional</span>
+  <h2 class="e-title t" data-es="Más invitados que socios, y el sitio lo merecía" data-ca="Més convidats que socis, i el lloc s'ho mereixia">Más invitados que socios, y el sitio lo merecía</h2>
+  <p class="e-p t"
+     data-es="Fue, en el sentido más literal de la palabra, una cena excepcional. No solo por la calidad de lo que se sirvió, sino porque se salió de lo ordinario en todo: el aforo, los asistentes y el tono de la noche. Los Gourmets de Tarragona abrieron las puertas a invitados, y por primera vez en la temporada el número de comensales superó al de socios. <strong>Más de sesenta personas</strong> ocuparon la sala de Brumma aquella noche del 2 de julio. El sitio lo merecía, y quienes se quedaron fuera ya lo sabrán cuando se repita."
+     data-ca="Va ser, en el sentit més literal de la paraula, un sopar excepcional. No només per la qualitat del que es va servir, sinó perquè es va sortir de l'ordinari en tot: l'aforament, els assistents i el to de la nit. Els Gourmets de Tarragona van obrir les portes als convidats, i per primera vegada a la temporada el nombre de comensals va superar el de socis. <strong>Més de seixanta persones</strong> van ocupar la sala de Brumma aquella nit del 2 de juliol. El lloc s'ho mereixia, i els que es van quedar fora ja ho sabran quan es repeteixi.">
+    Fue, en el sentido más literal de la palabra, una cena excepcional. No solo por la calidad de lo que se sirvió, sino porque se salió de lo ordinario en todo: el aforo, los asistentes y el tono de la noche. Los Gourmets de Tarragona abrieron las puertas a invitados, y por primera vez en la temporada el número de comensales superó al de socios. <strong>Más de sesenta personas</strong> ocuparon la sala de Brumma aquella noche del 2 de julio. El sitio lo merecía, y quienes se quedaron fuera ya lo sabrán cuando se repita.
+  </p>
+  <p class="e-p t"
+     data-es="Entre los asistentes, caras conocidas y nuevas que enriquecieron la conversación de mesa. El <strong>Sr. Diego García González</strong>, Head of Sales Smart Infrastructures en Siemens España, fue el ponente invitado de la noche: compartió sus recuerdos de los inicios en la compañía con una sala que lo escuchaba con atención genuina. <strong>Josep Vilaseca Rius, «Suqui»</strong>, vicepresidente y cofundador de la asociación gastronómica Casacas Rojas, regresaba después de acompañarnos en La Goleta, y su don para calentar cualquier sala sin que nadie se lo pida es ya parte del guión. Completaban la mesa el <strong>subdelegado de defensa D. José Manuel LaTorre Morales</strong>, <strong>Xavier Coll, Managing Director de Westinghouse Spain</strong>, y directivos de Siemens. La presencia del <strong>Sr. Emili Mateu</strong>, socio de los Gourmets de Tarragona, fue recibida, como siempre, con el honor que merece."
+     data-ca="Entre els assistents, cares conegudes i noves que van enriquir la conversa de taula. El <strong>Sr. Diego García González</strong>, Head of Sales Smart Infrastructures a Siemens Espanya, va ser el ponent convidat de la nit: va compartir els seus records dels inicis a la companyia amb una sala que l'escoltava amb atenció genuïna. <strong>Josep Vilaseca Rius, «Suqui»</strong>, vicepresident i cofundador de l'associació gastronòmica Casacas Rojas, tornava després d'acompanyar-nos a La Goleta, i el seu do per escalfar qualsevol sala sense que ningú li ho demani ja és part del guió. Completaven la taula el <strong>subdelegat de defensa D. José Manuel LaTorre Morales</strong>, <strong>Xavier Coll, Managing Director de Westinghouse Spain</strong>, i directius de Siemens. La presència del <strong>Sr. Emili Mateu</strong>, soci dels Gourmets de Tarragona, va ser rebuda, com sempre, amb l'honor que es mereix.">
+    Entre los asistentes, caras conocidas y nuevas que enriquecieron la conversación de mesa. El <strong>Sr. Diego García González</strong>, Head of Sales Smart Infrastructures en Siemens España, fue el ponente invitado de la noche: compartió sus recuerdos de los inicios en la compañía con una sala que lo escuchaba con atención genuina. <strong>Josep Vilaseca Rius, «Suqui»</strong>, vicepresidente y cofundador de la asociación gastronómica Casacas Rojas, regresaba después de acompañarnos en La Goleta, y su don para calentar cualquier sala sin que nadie se lo pida es ya parte del guión. Completaban la mesa el <strong>subdelegado de defensa D. José Manuel LaTorre Morales</strong>, <strong>Xavier Coll, Managing Director de Westinghouse Spain</strong>, y directivos de Siemens. La presencia del <strong>Sr. Emili Mateu</strong>, socio de los Gourmets de Tarragona, fue recibida, como siempre, con el honor que merece.
+  </p>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/brumma/cronica/invitado.jpg" alt="Diego García González, Head of Sales Smart Infrastructures en Siemens España — ponente invitado en la cena Gourmets de Tarragona en Brumma">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="Diego García González (Siemens España) durante su intervención como ponente invitado de la velada · Brumma · Julio 2026"
+     data-ca="Diego García González (Siemens Espanya) durant la seva intervenció com a ponent convidat de la vetllada · Brumma · Juliol 2026">
+    Diego García González (Siemens España) durante su intervención como ponente invitado de la velada · Brumma · Julio 2026
+  </p>
+
+  <!-- B3: EL EQUIPO -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="El equipo" data-ca="L'equip">El equipo</span>
+  <h2 class="e-title t" data-es="Guillem, Esteban y Aroa: tres maneras de entender la hospitalidad" data-ca="Guillem, Esteban i Aroa: tres maneres d'entendre l'hospitalitat">Guillem, Esteban y Aroa: tres maneras de entender la hospitalidad</h2>
+  <p class="e-p t"
+     data-es="Detrás de la cocina, <strong>Guillem Martínez Batiste</strong>. Nueve años en Infinitum —llegó como estudiante en prácticas, formado en Dirección de Cocina en los Jesuitas de Sarrià— y hace seis meses asumió la dirección culinaria de todo el proyecto gastronómico del resort. Es la trayectoria de alguien que ha crecido en la casa, que conoce cada rincón porque en algún momento ha trabajado en todos. Durante la cena salió a sala a explicar cada elaboración con la precisión y la cercanía de quien habla de algo que conoce de verdad."
+     data-ca="Darrere de la cuina, <strong>Guillem Martínez Batiste</strong>. Nou anys a Infinitum —va arribar com a estudiant en pràctiques, format en Direcció de Cuina als Jesuïtes de Sarrià— i fa sis mesos va assumir la direcció culinària de tot el projecte gastronòmic del resort. És la trajectòria d'algú que ha crescut a la casa, que coneix cada racó perquè en algun moment hi ha treballat a tots. Durant el sopar va sortir a sala a explicar cada elaboració amb la precisió i la proximitat de qui parla d'alguna cosa que coneix de debò.">
+    Detrás de la cocina, <strong>Guillem Martínez Batiste</strong>. Nueve años en Infinitum —llegó como estudiante en prácticas, formado en Dirección de Cocina en los Jesuitas de Sarrià— y hace seis meses asumió la dirección culinaria de todo el proyecto gastronómico del resort. Es la trayectoria de alguien que ha crecido en la casa, que conoce cada rincón porque en algún momento ha trabajado en todos. Durante la cena salió a sala a explicar cada elaboración con la precisión y la cercanía de quien habla de algo que conoce de verdad.
+  </p>
+  <p class="e-p t"
+     data-es="<strong>Esteban Puga Claver</strong>, director de Food &amp; Beverage y Beach Club de Infinitum, presentó cada vino antes de cada pase con el rigor de un sumiller y la cercanía de alguien que quiere que entiendas lo que estás bebiendo, no solo que lo apruebes. Proviene de una familia de hosteleros de Tarragona y ha vivido el sector desde la infancia: se notó. <strong>Aroa Ruiz Ait</strong>, restaurant manager de Brumma, completaba el equipo de sala: discreta, eficaz, atenta a cada detalle de una sala con más de sesenta personas sin que se notara el esfuerzo. De esas personas que hacen que todo funcione sin que nadie tenga que pedirlo."
+     data-ca="<strong>Esteban Puga Claver</strong>, director de Food &amp; Beverage i Beach Club d'Infinitum, va presentar cada vi abans de cada pas amb el rigor d'un sommelier i la proximitat d'algú que vol que entenguis el que estàs bevent, no només que ho aproveu. Prové d'una família d'hostalers de Tarragona i ha viscut el sector des de la infància: es va notar. <strong>Aroa Ruiz Ait</strong>, restaurant manager de Brumma, completava l'equip de sala: discreta, eficaç, atenta a cada detall d'una sala amb més de seixanta persones sense que es notés l'esforç. D'aquelles persones que fan que tot funcioni sense que ningú ho hagi de demanar.">
+    <strong>Esteban Puga Claver</strong>, director de Food &amp; Beverage y Beach Club de Infinitum, presentó cada vino antes de cada pase con el rigor de un sumiller y la cercanía de alguien que quiere que entiendas lo que estás bebiendo, no solo que lo apruebes. Proviene de una familia de hosteleros de Tarragona y ha vivido el sector desde la infancia: se notó. <strong>Aroa Ruiz Ait</strong>, restaurant manager de Brumma, completaba el equipo de sala: discreta, eficaz, atenta a cada detalle de una sala con más de sesenta personas sin que se notara el esfuerzo. De esas personas que hacen que todo funcione sin que nadie tenga que pedirlo.
+  </p>
+
+  <!-- B4: EL CONCEPTO -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="El concepto de la noche" data-ca="El concepte de la nit">El concepto de la noche</span>
+  <h2 class="e-title t" data-es="Siete DOs. Un recorrido por Cataluña desde la copa" data-ca="Set DOs. Un recorregut per Catalunya des de la copa">Siete DOs. Un recorrido por Cataluña desde la copa</h2>
+  <p class="e-p t"
+     data-es="El título del menú lo decía sin rodeos: <em>Cataluña, su gastronomía y sus vinos</em>. Y la organización se lo tomó en serio. <strong>Siete denominaciones de origen catalanas</strong> —Tarragona, Penedès, Terra Alta, Montsant, Priorat, Costers del Segre y Corpinnat— servidas en un recorrido que iba de norte a sur, de blanco a espumoso, con la intención de que cada vino tuviera algo que decir junto al plato con el que se presentaba."
+     data-ca="El títol del menú ho deia sense embuts: <em>Catalunya, la seva gastronomia i els seus vins</em>. I l'organització s'ho va prendre seriosament. <strong>Set denominacions d'origen catalanes</strong> —Tarragona, Penedès, Terra Alta, Montsant, Priorat, Costers del Segre i Corpinnat— servides en un recorregut que anava de nord a sud, de blanc a escumós, amb la intenció que cada vi tingués alguna cosa a dir al costat del plat amb el qual es presentava.">
+    El título del menú lo decía sin rodeos: <em>Cataluña, su gastronomía y sus vinos</em>. Y la organización se lo tomó en serio. <strong>Siete denominaciones de origen catalanas</strong> —Tarragona, Penedès, Terra Alta, Montsant, Priorat, Costers del Segre y Corpinnat— servidas en un recorrido que iba de norte a sur, de blanco a espumoso, con la intención de que cada vino tuviera algo que decir junto al plato con el que se presentaba.
+  </p>
+  <p class="e-p t"
+     data-es="Las botellas no esperaban en ninguna bodega: estaban en el <strong>centro de las mesas redondas</strong>, visibles y accesibles desde el principio, como si la organización quisiera recordar desde el primer momento que aquí los vinos no eran un acompañamiento. Eran el hilo conductor. Esteban Puga se encargó de presentar cada referencia antes de cada pase: procedencia, variedad, por qué ese vino con ese plato. No era una clase magistral, era una conversación. Y la sala la agradeció."
+     data-ca="Les ampolles no esperaven a cap celler: estaven al <strong>centre de les taules rodones</strong>, visibles i accessibles des del principi, com si l'organització volgués recordar des del primer moment que aquí els vins no eren un acompanyament. Eren el fil conductor. Esteban Puga es va encarregar de presentar cada referència abans de cada pas: procedència, varietat, per quin motiu aquell vi amb aquell plat. No era una classe magistral, era una conversa. I la sala ho va agrair.">
+    Las botellas no esperaban en ninguna bodega: estaban en el <strong>centro de las mesas redondas</strong>, visibles y accesibles desde el principio, como si la organización quisiera recordar desde el primer momento que aquí los vinos no eran un acompañamiento. Eran el hilo conductor. Esteban Puga se encargó de presentar cada referencia antes de cada pase: procedencia, variedad, por qué ese vino con ese plato. No era una clase magistral, era una conversación. Y la sala la agradeció.
+  </p>
+
+  <div class="e-fotos-2">
+    <img src="../assets/img/brumma/cronica/vinos.jpg" alt="Los vinos del maridaje en el centro de la mesa — cena Gourmets de Tarragona en Brumma">
+    <img src="../assets/img/brumma/cronica/detalle-vinos.jpg" alt="Detalle de copas y etiquetas — maridaje Cataluña, su gastronomía y sus vinos — Brumma">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="Los vinos, protagonistas desde el principio: en el centro de cada mesa redonda, no como adorno sino como declaración de intenciones" data-ca="Els vins, protagonistes des del principi: al centre de cada taula rodona, no com a decoració sinó com a declaració d'intencions">Los vinos, protagonistas desde el principio: en el centro de cada mesa redonda, no como adorno sino como declaración de intenciones</span>
+    <span class="t" data-es="Detalle de copas y etiquetas: siete referencias, siete territorios catalanes" data-ca="Detall de copes i etiquetes: set referències, set territoris catalans">Detalle de copas y etiquetas: siete referencias, siete territorios catalanes</span>
+  </div>
+
+  <!-- B5: LA TOSTA -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Primer pase" data-ca="Primer pas">Primer pase</span>
+  <h2 class="e-title t" data-es="La tosta que puso el listón desde el principio" data-ca="La tosta que va posar el llistó des del principi">La tosta que puso el listón desde el principio</h2>
+  <p class="e-p t"
+     data-es="La <strong>tosta de berenjena al Josper con sardina ahumada y naranja</strong> marcó el tono desde el primer bocado: una cocina sin miedo a los sabores pronunciados, que usa la brasa —el Josper, el horno que Guillem maneja como un instrumento— como herramienta de precisión, no de potencia. La berenjena cocinada al Josper adquiere una suavidad ahumada que pocas técnicas logran, y la sardina ahumada y el toque de naranja añadían complejidad sin robar protagonismo al conjunto. El <strong>Muller Chardonnay</strong> de la D.O. Tarragona, fresco y mineral, fue un arranque limpio y pertinente."
+     data-ca="La <strong>tosta d'albergínia al Josper amb sardina fumada i taronja</strong> va marcar el to des del primer mos: una cuina sense por als sabors pronunciats, que usa la brasa —el Josper, el forn que Guillem maneja com un instrument— com a eina de precisió, no de potència. L'albergínia cuinada al Josper adquireix una suavitat fumada que poques tècniques assoleixen, i la sardina fumada i el toc de taronja afegien complexitat sense robar protagonisme al conjunt. El <strong>Muller Chardonnay</strong> de la D.O. Tarragona, fresc i mineral, va ser un arrencada neta i pertinent.">
+    La <strong>tosta de berenjena al Josper con sardina ahumada y naranja</strong> marcó el tono desde el primer bocado: una cocina sin miedo a los sabores pronunciados, que usa la brasa —el Josper, el horno que Guillem maneja como un instrumento— como herramienta de precisión, no de potencia. La berenjena cocinada al Josper adquiere una suavidad ahumada que pocas técnicas logran, y la sardina ahumada y el toque de naranja añadían complejidad sin robar protagonismo al conjunto. El <strong>Muller Chardonnay</strong> de la D.O. Tarragona, fresco y mineral, fue un arranque limpio y pertinente.
+  </p>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/brumma/cronica/tosta.jpg" alt="Tosta de berenjena al Josper con sardina ahumada y naranja — Brumma, Infinitum Resort Salou">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="Tosta de berenjena al Josper con sardina ahumada y naranja — el primer pase marcó el tono de una cocina de brasas con oficio"
+     data-ca="Tosta d'albergínia al Josper amb sardina fumada i taronja — el primer pas va marcar el to d'una cuina de brases amb ofici">
+    Tosta de berenjena al Josper con sardina ahumada y naranja — el primer pase marcó el tono de una cocina de brasas con oficio
+  </p>
+
+  <!-- B6: ENSALADA -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Segundo pase" data-ca="Segon pas">Segundo pase</span>
+  <h2 class="e-title t" data-es="La ensalada que reconcilia con el verano" data-ca="L'amanida que reconcilia amb l'estiu">La ensalada que reconcilia con el verano</h2>
+  <p class="e-p t"
+     data-es="La <strong>ensalada de tomates con nectarina y burrata con vinagreta de pistachos</strong> fue la pausa refrescante que la noche necesitaba entre los sabores más contundentes de la brasa. No es el plato que te obliga a inclinarte sobre la mesa, sino el que te reconcilia con el verano: la acidez madura del tomate, la dulzura de la nectarina en su punto, la cremosidad de la burrata y esa <strong>vinagreta de pistachos</strong> que lo elevaba por encima de cualquier ensalada de temporada convencional. El Gregal d'Espiells de Juvé &amp; Camps —Moscatel de Alejandría y Gewürztraminer— era exactamente lo que hacía falta: aromático, ligero, cómplice."
+     data-ca="L'<strong>amanida de tomàquets amb nectarina i burrata amb vinagreta de festucs</strong> va ser la pausa refrescant que la nit necessitava entre els sabors més contundents de la brasa. No és el plat que t'obliga a inclinar-te sobre la taula, sinó el que et reconcilia amb l'estiu: l'acidesa madura del tomàquet, la dolçor de la nectarina en el seu punt, la cremositat de la burrata i aquella <strong>vinagreta de festucs</strong> que l'elevava per sobre de qualsevol amanida de temporada convencional. El Gregal d'Espiells de Juvé &amp; Camps —Moscatel d'Alexandria i Gewürztraminer— era exactament el que calia: aromàtic, lleuger, còmplice.">
+    La <strong>ensalada de tomates con nectarina y burrata con vinagreta de pistachos</strong> fue la pausa refrescante que la noche necesitaba entre los sabores más contundentes de la brasa. No es el plato que te obliga a inclinarte sobre la mesa, sino el que te reconcilia con el verano: la acidez madura del tomate, la dulzura de la nectarina en su punto, la cremosidad de la burrata y esa <strong>vinagreta de pistachos</strong> que lo elevaba por encima de cualquier ensalada de temporada convencional. El Gregal d'Espiells de Juvé &amp; Camps —Moscatel de Alejandría y Gewürztraminer— era exactamente lo que hacía falta: aromático, ligero, cómplice.
+  </p>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/brumma/cronica/ensalada.jpg" alt="Ensalada de tomates con nectarina y burrata con vinagreta de pistachos — Brumma, Salou">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="Ensalada de tomates con nectarina y burrata — una pausa refrescante y bien construida, con el Penedès como maridaje"
+     data-ca="Amanida de tomàquets amb nectarina i burrata — una pausa refrescant i ben construïda, amb el Penedès com a maridatge">
+    Ensalada de tomates con nectarina y burrata — una pausa refrescante y bien construida, con el Penedès como maridaje
+  </p>
+
+  <!-- B7: VOLANDEIRAS -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Tercer pase" data-ca="Tercer pas">Tercer pase</span>
+  <h2 class="e-title t" data-es="Las volandeiras: mar y montaña en un plato de aplausos silenciosos" data-ca="Les volanderes: mar i muntanya en un plat d'aplaudiments silenciosos">Las volandeiras: mar y montaña en un plato de aplausos silenciosos</h2>
+  <p class="e-p t"
+     data-es="Las <strong>volandeiras a la brasa con papada ibérica braseada y fondo de jamón ibérico</strong> fueron el primer momento de aplauso silencioso de la noche. Mar y montaña en un solo plato, sin que ninguno de los dos mundos aplastara al otro. Las volandeiras, de una frescura que se notaba en la textura, se servían sobre aquel fondo de jamón ibérico que actuaba como una salsa de intensidad calculada —presente, pero sin imponerse—, y la <strong>papada ibérica braseada</strong> añadía esa nota grasa que redondea. El Ànima de l'avi Arrufi de Celler Piñol —100% Garnacha Blanca de Terra Alta— era el maridaje menos obvio de la noche y el que mejor funcionó."
+     data-ca="Les <strong>volanderes a la brasa amb papada ibèrica braseada i fons de pernil ibèric</strong> van ser el primer moment d'aplaudiment silenciós de la nit. Mar i muntanya en un sol plat, sense que cap dels dos móns aplastés l'altre. Les volanderes, d'una frescor que es notava en la textura, es servien sobre aquell fons de pernil ibèric que actuava com una salsa d'intensitat calculada —present, però sense imposar-se—, i la <strong>papada ibèrica braseada</strong> afegia aquella nota grassa que arrodoneix. L'Ànima de l'avi Arrufi de Celler Piñol —100% Garnatxa Blanca de Terra Alta— era el maridatge menys obvi de la nit i el que millor va funcionar.">
+    Las <strong>volandeiras a la brasa con papada ibérica braseada y fondo de jamón ibérico</strong> fueron el primer momento de aplauso silencioso de la noche. Mar y montaña en un solo plato, sin que ninguno de los dos mundos aplastara al otro. Las volandeiras, de una frescura que se notaba en la textura, se servían sobre aquel fondo de jamón ibérico que actuaba como una salsa de intensidad calculada —presente, pero sin imponerse—, y la <strong>papada ibérica braseada</strong> añadía esa nota grasa que redondea. El Ànima de l'avi Arrufi de Celler Piñol —100% Garnacha Blanca de Terra Alta— era el maridaje menos obvio de la noche y el que mejor funcionó.
+  </p>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/brumma/cronica/volandeiras.jpg" alt="Volandeiras a la brasa con papada ibérica braseada y fondo de jamón ibérico — Brumma, Infinitum Resort">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="Volandeiras a la brasa con papada ibérica y fondo de jamón — el maridaje con el Terra Alta fue el más sorprendente de la noche"
+     data-ca="Volanderes a la brasa amb papada ibèrica i fons de pernil — el maridatge amb el Terra Alta va ser el més sorprenent de la nit">
+    Volandeiras a la brasa con papada ibérica y fondo de jamón — el maridaje con el Terra Alta fue el más sorprendente de la noche
+  </p>
+
+  <!-- B8: EL ARROZ -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="El plato de la noche" data-ca="El plat de la nit">El plato de la noche</span>
+  <h2 class="e-title t" data-es="El arroz de lágrima ibérica que todos recordarán" data-ca="L'arròs de llàgrima ibèrica que tothom recordarà">El arroz de lágrima ibérica que todos recordarán</h2>
+  <p class="e-p t"
+     data-es="El <strong>arroz de lágrima ibérica, shitakes y huevo de codorniz</strong> fue el momento de máxima intensidad de la noche, sin discusión. No todos los arroces merecen silencio. Este lo mereció. Meloso —en ese punto difícil de conseguir que no es ni caldoso ni seco— con aquella lágrima ibérica que lo impregna todo de una profundidad que ninguna técnica puede simular, los <strong>shitakes</strong> aportando textura y un umami que dialogaba con el ibérico, y el <strong>huevo de codorniz</strong> como remate: esa yema que se rompe y convierte el arroz en algo todavía más complejo, más redondo. Guillem lo explicó en sala con la autoridad tranquila de quien sabe lo que ha cocinado. El Mas Collet de Celler de Capçanes —Garnacha, Cariñena y Cabernet del Montsant— aguantaba el peso del plato sin pestañear."
+     data-ca="L'<strong>arròs de llàgrima ibèrica, xitakes i ou de guàtlla</strong> va ser el moment de màxima intensitat de la nit, sense discussió. No tots els arrossos mereixen silenci. Aquest el va merèixer. Melós —en aquell punt difícil d'aconseguir que no és ni caldós ni sec— amb aquella llàgrima ibèrica que ho impregna tot d'una profunditat que cap tècnica pot simular, els <strong>xitakes</strong> aportant textura i un umami que dialogava amb l'ibèric, i l'<strong>ou de guàtlla</strong> com a remat: aquell rovell que es trenca i converteix l'arròs en alguna cosa encara més complexa, més rodona. Guillem ho va explicar a sala amb l'autoritat tranquil·la de qui sap el que ha cuinat. El Mas Collet de Celler de Capçanes —Garnatxa, Carinyena i Cabernet del Montsant— aguantava el pes del plat sense parpellejar.">
+    El <strong>arroz de lágrima ibérica, shitakes y huevo de codorniz</strong> fue el momento de máxima intensidad de la noche, sin discusión. No todos los arroces merecen silencio. Este lo mereció. Meloso —en ese punto difícil de conseguir que no es ni caldoso ni seco— con aquella lágrima ibérica que lo impregna todo de una profundidad que ninguna técnica puede simular, los <strong>shitakes</strong> aportando textura y un umami que dialogaba con el ibérico, y el <strong>huevo de codorniz</strong> como remate: esa yema que se rompe y convierte el arroz en algo todavía más complejo, más redondo. Guillem lo explicó en sala con la autoridad tranquila de quien sabe lo que ha cocinado. El Mas Collet de Celler de Capçanes —Garnacha, Cariñena y Cabernet del Montsant— aguantaba el peso del plato sin pestañear.
+  </p>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/brumma/cronica/arroz.jpg" alt="Arroz de lágrima ibérica, shitakes y huevo de codorniz — Brumma, Infinitum Resort Salou">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="Arroz de lágrima ibérica, shitakes y huevo de codorniz — el plato de la noche, con el Montsant a la altura"
+     data-ca="Arròs de llàgrima ibèrica, xitakes i ou de guàtlla — el plat de la nit, amb el Montsant a l'alçada">
+    Arroz de lágrima ibérica, shitakes y huevo de codorniz — el plato de la noche, con el Montsant a la altura
+  </p>
+
+  <!-- B9: TATAKI + CEVICHE -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Quinto y sexto pase" data-ca="Cinquè i sisè pas">Quinto y sexto pase</span>
+  <h2 class="e-title t" data-es="El tataki que llega en el momento justo, y el ceviche que no busca consenso" data-ca="El tataki que arriba en el moment just, i el ceviche que no busca consens">El tataki que llega en el momento justo, y el ceviche que no busca consenso</h2>
+  <p class="e-p t"
+     data-es="El <strong>tataki de chuletón de vaca madurado sobre escalivada</strong> llegó en el momento exacto en que la cena necesitaba peso. La maduración del chuletón se notaba en cada bocado: una carne que había tenido tiempo de desarrollarse, servida con el punto de cocción que la técnica del tataki impone —vuelta y vuelta, con el interior en su punto— y con la <strong>escalivada</strong> como fondo de paisaje quemado y dulce. El Prior Scala Dei de Cellers Scala Dei —Garnacha, Cariñena, Cabernet Sauvignon y Syrah del Priorat— no necesitaba presentación, pero Esteban la hizo de todas formas, y fue la correcta."
+     data-ca="El <strong>tataki de chuletó de vaca madurat sobre escalivada</strong> va arribar en el moment exacte en què el sopar necessitava pes. La maduració del chuletó es notava a cada mos: una carn que havia tingut temps de desenvolupar-se, servida amb el punt de cocció que la tècnica del tataki imposa —volta i volta, amb l'interior en el seu punt— i amb l'<strong>escalivada</strong> com a fons de paisatge cremat i dolç. El Prior Scala Dei de Cellers Scala Dei —Garnatxa, Carinyena, Cabernet Sauvignon i Syrah del Priorat— no necessitava presentació, però Esteban la va fer de totes maneres, i va ser la correcta.">
+    El <strong>tataki de chuletón de vaca madurado sobre escalivada</strong> llegó en el momento exacto en que la cena necesitaba peso. La maduración del chuletón se notaba en cada bocado: una carne que había tenido tiempo de desarrollarse, servida con el punto de cocción que la técnica del tataki impone —vuelta y vuelta, con el interior en su punto— y con la <strong>escalivada</strong> como fondo de paisaje quemado y dulce. El Prior Scala Dei de Cellers Scala Dei —Garnacha, Cariñena, Cabernet Sauvignon y Syrah del Priorat— no necesitaba presentación, pero Esteban la hizo de todas formas, y fue la correcta.
+  </p>
+  <p class="e-p t"
+     data-es="El <strong>ceviche de corvina con crujiente de puerro</strong> fue, como siempre que aparece un ceviche en una cena de estas características, el plato más personal de la velada. A los amantes de la cocina ácida —que los había, y con criterio— les pareció sobresaliente: la corvina en su punto de curación, el <strong>crujiente de puerro</strong> como contrapunto de textura, el punto de leche de tigre medido y sin excesos. A los que no terminan de hacer las paces con el ácido, el plato les resultó más desafiante. Pero incluso entre estos últimos, nadie puso en cuestión la ejecución. El Ekam de Castell d'Encús —Riesling y Albariño de Costers del Segre— fue la elección más atrevida del menú y la que mejor encajó en su contexto."
+     data-ca="El <strong>ceviche de corbina amb cruixent de porro</strong> va ser, com sempre que apareix un ceviche en un sopar d'aquestes característiques, el plat més personal de la vetllada. Als amants de la cuina àcida —que n'hi havia, i amb criteri— els va semblar sobresaliente: la corbina en el seu punt de curació, el <strong>cruixent de porro</strong> com a contrapunt de textura, el punt de llet de tigre mesurat i sense excessos. Als que no acaben de fer les paus amb l'àcid, el plat els va resultar més desafiant. Però fins i tot entre aquests últims, ningú va posar en qüestió l'execució. L'Ekam de Castell d'Encús —Riesling i Albariño de Costers del Segre— va ser l'elecció més atrevida del menú i la que millor va encaixar en el seu context.">
+    El <strong>ceviche de corvina con crujiente de puerro</strong> fue, como siempre que aparece un ceviche en una cena de estas características, el plato más personal de la velada. A los amantes de la cocina ácida —que los había, y con criterio— les pareció sobresaliente: la corvina en su punto de curación, el <strong>crujiente de puerro</strong> como contrapunto de textura, el punto de leche de tigre medido y sin excesos. A los que no terminan de hacer las paces con el ácido, el plato les resultó más desafiante. Pero incluso entre estos últimos, nadie puso en cuestión la ejecución. El Ekam de Castell d'Encús —Riesling y Albariño de Costers del Segre— fue la elección más atrevida del menú y la que mejor encajó en su contexto.
+  </p>
+
+  <div class="e-fotos-2">
+    <img src="../assets/img/brumma/cronica/tataki.jpg" alt="Tataki de chuletón de vaca madurado sobre escalivada — Brumma, Salou">
+    <img src="../assets/img/brumma/cronica/ceviche.jpg" alt="Ceviche de corvina con crujiente de puerro — Brumma, Infinitum Resort Salou">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="Tataki de chuletón madurado sobre escalivada — el Priorat encontró en este plato su mejor argumentación" data-ca="Tataki de chuletó madurat sobre escalivada — el Priorat va trobar en aquest plat la seva millor argumentació">Tataki de chuletón madurado sobre escalivada — el Priorat encontró en este plato su mejor argumentación</span>
+    <span class="t" data-es="Ceviche de corvina con crujiente de puerro — el plato que divide, pero no por falta de oficio" data-ca="Ceviche de corbina amb cruixent de porro — el plat que divideix, però no per manca d'ofici">Ceviche de corvina con crujiente de puerro — el plato que divide, pero no por falta de oficio</span>
+  </div>
+
+  <!-- B10: POSTRE -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="El cierre" data-ca="El tancament">El cierre</span>
+  <h2 class="e-title t" data-es="Mató, pera y miel: cuando el postre acierta con no pedir más" data-ca="Mató, pera i mel: quan el postre encerta amb no demanar més">Mató, pera y miel: cuando el postre acierta con no pedir más</h2>
+  <p class="e-p t"
+     data-es="El <strong>mató con pera confitada, almendra Marcona tostada y miel de romero</strong> cerró el recorrido con una elegancia mediterránea de las que no saturan. Dulce sin ser empalagoso, con la acidez suave de la pera confitada, el toque tostado y levemente amargo de la <strong>almendra Marcona</strong> y esa miel de romero que perfumaba el conjunto sin imponerse. Un postre que no pide que te rindas ante él, sino que te invita a terminarlo tranquilamente. El <strong>Torelló 225 Brut Nature</strong> —Xarel·lo, Macabeo y Parellada de Corpinnat— cerró el ciclo vinícola con sus burbujas finas y su frescura estructurada: el compañero perfecto para un final que no quiso excederse."
+     data-ca="El <strong>mató amb pera confitada, ametlla Marcona torrada i mel de romaní</strong> va tancar el recorregut amb una elegància mediterrània de les que no saturen. Dolç sense ser empalagós, amb l'acidesa suau de la pera confitada, el toc torrat i lleugerament amarg de l'<strong>ametlla Marcona</strong> i aquella mel de romaní que perfumava el conjunt sense imposar-se. Un postre que no demana que et rendeixis davant seu, sinó que t'invita a acabar-lo tranquil·lament. El <strong>Torelló 225 Brut Nature</strong> —Xarel·lo, Macabeu i Parellada de Corpinnat— va tancar el cicle vinícola amb les seves bombolles fines i la seva frescor estructurada: el company perfecte per a un final que no va voler excedir-se.">
+    El <strong>mató con pera confitada, almendra Marcona tostada y miel de romero</strong> cerró el recorrido con una elegancia mediterránea de las que no saturan. Dulce sin ser empalagoso, con la acidez suave de la pera confitada, el toque tostado y levemente amargo de la <strong>almendra Marcona</strong> y esa miel de romero que perfumaba el conjunto sin imponerse. Un postre que no pide que te rindas ante él, sino que te invita a terminarlo tranquilamente. El <strong>Torelló 225 Brut Nature</strong> —Xarel·lo, Macabeo y Parellada de Corpinnat— cerró el ciclo vinícola con sus burbujas finas y su frescura estructurada: el compañero perfecto para un final que no quiso excederse.
+  </p>
+
+  <div class="e-foto-md">
+    <img src="../assets/img/brumma/cronica/postre.jpg" alt="Mató con pera confitada, almendra Marcona tostada y miel de romero — Brumma, Salou">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="Mató, pera confitada, almendra Marcona y miel de romero — un cierre mediterráneo y sin excesos, con el Torelló 225 Brut Nature"
+     data-ca="Mató, pera confitada, ametlla Marcona i mel de romaní — un tancament mediterrani i sense excessos, amb el Torelló 225 Brut Nature">
+    Mató, pera confitada, almendra Marcona y miel de romero — un cierre mediterráneo y sin excesos, con el Torelló 225 Brut Nature
+  </p>
+
+  <!-- VINS -->
+  <div class="e-vins">
+    <span class="e-vins-label t" data-es="El maridaje · Siete referencias, siete territorios" data-ca="El maridatge · Set referències, set territoris">El maridaje · Siete referencias, siete territorios</span>
+    <p class="e-vins-title t" data-es="Cataluña, su gastronomía y sus vinos" data-ca="Catalunya, la seva gastronomia i els seus vins">Cataluña, su gastronomía y sus vinos</p>
+    <p class="e-vins-desc t"
+       data-es="Un recorrido por el mapa vinícola catalán, de norte a sur, de blanco a espumoso, construido plato a plato. Siete DOs, siete argumentos."
+       data-ca="Un recorregut pel mapa vinícola català, de nord a sud, de blanc a escumós, construït plat a plat. Set DOs, set arguments.">
+      Un recorrido por el mapa vinícola catalán, de norte a sur, de blanco a espumoso, construido plato a plato. Siete DOs, siete argumentos.
     </p>
-    <h1>Brumma <em>(Infinitum Resort)</em></h1>
-    <p class="e-intro">Una sala acristalada frente al Mediterráneo, los vinos en el centro de cada mesa y más de sesenta comensales. Brumma sabía que tenía algo especial que ofrecer. Y no decepcionó.</p>
-  </header>
-
-  <!-- Hero image -->
-  <figure class="e-hero-figure">
-    <img
-      src="../assets/img/brumma/05_brumma_vistas_mar.jpg"
-      alt="Brumma — sala interior amb vistes al Mediterrani, Infinitum Resort Salou"
-      class="e-hero-img"
-    />
-  </figure>
-
-  <!-- ─── Section 1: El espacio ─────────────────────────────────── -->
-  <article class="e-article-body">
-
-    <section class="e-section">
-      <span class="e-section-label t" data-es="La llegada" data-ca="L'arribada">La llegada</span>
-      <h2 class="t" data-es="Cuando el espacio ya es un argumento" data-ca="Quan l'espai ja és un argument">Cuando el espacio ya es un argumento</h2>
-
-      <p class="e-p">
-        Brumma no empieza cuando se pone el primer plato. Empieza cuando se abre la puerta y aparece aquella sala acristalada, con el Mediterráneo al fondo como si alguien hubiera olvidado cerrar el horizonte. Las mesas, redondas, estaban montadas con una atención al detalle que ya anticipaba el tono de la noche: la minuta cuidadosamente impresa, las copas en posición, y en el centro de cada mesa —no como adorno, sino como declaración de intenciones— las botellas de vino que iban a protagonizar el recorrido de la noche.
-      </p>
-      <p class="e-p">
-        Infinitum Resort acumula títulos que no son fáciles de ignorar: <strong>Mejor Beach Club de Europa</strong> tres años consecutivos, según los World Travel Awards. Dos campos y medio de golf, seis piscinas, seis puntos de restauración, y un proyecto residencial que cuando esté completo habrá transformado la franja costera de Salou de una manera que hoy todavía cuesta imaginar. Brumma —sala interior del Flamma Beach Foodhouse— es la pieza más cuidada de ese conjunto: un espacio reformado para funcionar como restaurante de autor y como espacio de eventos, con capacidad para doscientas cincuenta personas en banquete y vistas que cualquier restaurante del Camp de Tarragona envidiaría.
-      </p>
-
-      <div class="e-img-duo">
-        <figure>
-          <img src="../assets/img/brumma/01_brumma_sala_interior.jpg"
-               alt="Brumma — sala interior acristalada, Infinitum Resort Salou" />
-          <figcaption class="t" data-es="La sala de Brumma — mesas redondas, vistas al mar, vinos como protagonistas de cada mesa" data-ca="La sala de Brumma — taules rodones, vistes al mar, vins com a protagonistes de cada taula">La sala de Brumma — mesas redondas, vistas al mar, vinos como protagonistas de cada mesa</figcaption>
-        </figure>
-        <figure>
-          <img src="../assets/img/brumma/cronica/minuta.jpg"
-               alt="Minuta de la cena Gourmets de Tarragona en Brumma — 2 de julio de 2026" />
-          <figcaption class="t" data-es="La minuta de la velada: siete pases y siete DOs catalanas. Un recorrido por Cataluña desde la copa" data-ca="La minuta de la vetllada: set passos i set DOs catalanes. Un recorregut per Catalunya des de la copa">La minuta de la velada: siete pases y siete DOs catalanas. Un recorrido por Cataluña desde la copa</figcaption>
-        </figure>
+    <div class="e-vins-grid">
+      <div class="e-vi">
+        <p class="e-vi-num t" data-es="Tosta · D.O. Tarragona" data-ca="Tosta · D.O. Tarragona">Tosta · D.O. Tarragona</p>
+        <p class="e-vi-nom">Muller Chardonnay</p>
+        <p class="e-vi-do t" data-es="100% Chardonnay · De Muller" data-ca="100% Chardonnay · De Muller">100% Chardonnay · De Muller</p>
       </div>
-    </section>
-
-    <!-- ─── Section 2: La noche excepcional ──────────────────────── -->
-    <section class="e-section">
-      <span class="e-section-label t" data-es="La velada" data-ca="La vetllada">La velada</span>
-      <h2 class="t" data-es="Más invitados que socios, y el sitio lo merecía" data-ca="Més convidats que socis, i el lloc s'ho mereixia">Más invitados que socios, y el sitio lo merecía</h2>
-
-      <p class="e-p">
-        Fue, en el sentido más literal de la palabra, una cena excepcional. No solo por la calidad de lo que se sirvió, sino porque se salió de lo ordinario en todo: el aforo, los asistentes y el tono de la noche. Los Gourmets de Tarragona abrieron las puertas a invitados, y por primera vez en la temporada el número de comensales superó el de socios. <strong>Más de sesenta personas</strong> ocuparon la sala de Brumma aquella noche del 2 de julio. El sitio lo merecía, y quienes se quedaron fuera ya lo sabrán cuando se repita.
-      </p>
-      <p class="e-p">
-        Entre los asistentes, caras conocidas y nuevas que enriquecieron la conversación de mesa. El <strong>Sr. Diego García González</strong>, Head of Sales Smart Infrastructures en Siemens España, fue el ponente invitado de la noche. Compartió sus recuerdos de los inicios en la compañía con una sala que lo escuchaba con atención genuina: la trayectoria de alguien que construyó su carrera con esfuerzo, en una empresa que ha marcado la historia industrial del país. A su lado, <strong>Josep Vilaseca Rius, "Suqui"</strong>, regresaba después de habernos acompañado en La Goleta. Vicepresidente y cofundador de la asociación gastronómica Casacas Rojas —aquel grupo de Barcelona que desde 2003 ha convertido la gastronomía en un festival permanente—, Suqui tiene el don de calentar cualquier sala sin que nadie se lo pida. También se sentaron a la mesa el <strong>subdelegado de defensa de Tarragona, D. José Manuel LaTorre Morales</strong>; <strong>Xavier Coll, Managing Director de Westinghouse Spain</strong>; y directivos de Siemens que acompañaron a su compañero. Y la presencia del <strong>Sr. Emili Mateu</strong>, socio de los Gourmets de Tarragona, fue recibida como siempre: con el honor que merece.
-      </p>
-
-      <figure>
-        <img src="../assets/img/brumma/cronica/invitado.jpg"
-             alt="Diego García González, Head of Sales Smart Infrastructures en Siemens España — ponente invitado en la cena Gourmets de Tarragona en Brumma" />
-        <figcaption class="t"
-          data-es="Diego García González (Siemens España) durante su intervención como ponente invitado de la velada"
-          data-ca="Diego García González (Siemens Espanya) durant la seva intervenció com a ponent convidat de la vetllada">Diego García González (Siemens España) durante su intervención como ponente invitado de la velada</figcaption>
-      </figure>
-    </section>
-
-    <!-- ─── Section 3: El equipo ──────────────────────────────────── -->
-    <section class="e-section">
-      <span class="e-section-label t" data-es="El equipo" data-ca="L'equip">El equipo</span>
-      <h2 class="t" data-es="Guillem, Esteban y Aroa: tres maneras de entender la hospitalidad" data-ca="Guillem, Esteban i Aroa: tres maneres d'entendre l'hospitalitat">Guillem, Esteban y Aroa: tres maneras de entender la hospitalidad</h2>
-
-      <p class="e-p">
-        Detrás de la cocina, <strong>Guillem Martínez Batiste</strong>. Nueve años en Infinitum —llegó como estudiante en prácticas, formado en Dirección de Cocina en los Jesuitas de Sarrià— y hace seis meses asumió la dirección culinaria de todo el proyecto gastronómico del resort. Es el tipo de trayectoria que no se improvisa: la de alguien que ha crecido en la casa, que conoce cada rincón de la cocina porque en algún momento ha trabajado en todos. Durante la cena salió a sala a explicar cada elaboración con la precisión y la cercanía de quien habla de algo que conoce de verdad.
-      </p>
-      <p class="e-p">
-        A su lado, <strong>Esteban Puga Claver</strong>, director de Food &amp; Beverage y Beach Club de Infinitum. Cinco años en la compañía, dos liderando la estrategia gastronómica de todos los puntos de restauración del resort. Su vinculación con la hostelería va mucho más allá de lo profesional: proviene de una familia de hosteleros de Tarragona y ha vivido el sector desde la infancia. Se notó durante la noche: Esteban presentó cada vino antes de cada pase con el rigor de un sumiller y la cercanía de alguien que quiere que entiendas lo que estás bebiendo, no solo que lo apruebes. <strong>Aroa Ruiz Ait</strong>, restaurant manager de Brumma y Flamma, completaba el equipo de sala: discreta, eficaz, atenta a cada detalle de una sala con más de sesenta personas sin que se notara el esfuerzo. De esas personas que hacen que todo funcione sin que nadie tenga que pedirlo.
-      </p>
-    </section>
-
-    <!-- ─── Section 4: El concepto vinícola ──────────────────────── -->
-    <section class="e-section">
-      <span class="e-section-label t" data-es="El concepto de la noche" data-ca="El concepte de la nit">El concepto de la noche</span>
-      <h2 class="t" data-es="Siete DOs. Un recorrido por Cataluña desde la copa" data-ca="Set DOs. Un recorregut per Catalunya des de la copa">Siete DOs. Un recorrido por Cataluña desde la copa</h2>
-
-      <p class="e-p">
-        El título del menú lo decía sin rodeos: <em>Cataluña, su gastronomía y sus vinos</em>. Y la organización se lo tomó en serio. Siete denominaciones de origen catalanas —<strong>Tarragona, Penedès, Terra Alta, Montsant, Priorat, Costers del Segre y Corpinnat</strong>— servidas en un recorrido que iba de norte a sur, de blanco a tinto, de la brisa marina del Chardonnay de De Muller al músculo mediterráneo del Prior Scala Dei, con el frescor inesperado del Ekam de Castell d'Encús como coletazo final antes del cava.
-      </p>
-      <p class="e-p">
-        Las botellas no esperaban en ninguna bodega: estaban en el centro de las mesas redondas, visibles y accesibles desde el principio, como si la organización quisiera recordar desde el primer momento que aquí los vinos no eran un acompañamiento. Eran el hilo conductor. Esteban Puga se encargó de presentar cada referencia antes de cada pase: procedencia, variedad, por qué ese vino con ese plato. No era una clase magistral, era una conversación. Y la sala la agradeció.
-      </p>
-
-      <div class="e-img-duo">
-        <figure>
-          <img src="../assets/img/brumma/cronica/vinos.jpg"
-               alt="Detalle de los vinos en el centro de la mesa — cena Gourmets de Tarragona en Brumma" />
-          <figcaption class="t"
-            data-es="Los vinos, protagonistas desde el principio: en el centro de cada mesa redonda, no como adorno sino como declaración de intenciones"
-            data-ca="Els vins, protagonistes des del principi: al centre de cada taula rodona, no com a decoració sinó com a declaració d'intencions">Los vinos, protagonistas desde el principio: en el centro de cada mesa redonda</figcaption>
-        </figure>
-        <figure>
-          <img src="../assets/img/brumma/cronica/detalle-vinos.jpg"
-               alt="Detalle de copas y etiquetas — maridaje Cataluña, su gastronomía y sus vinos — Brumma" />
-          <figcaption class="t"
-            data-es="Detalle de copas y etiquetas: siete referencias, siete territorios catalanes"
-            data-ca="Detall de copes i etiquetes: set referències, set territoris catalans">Detalle de copas y etiquetas: siete referencias, siete territorios catalanes</figcaption>
-        </figure>
+      <div class="e-vi">
+        <p class="e-vi-num t" data-es="Ensalada · D.O. Penedès" data-ca="Amanida · D.O. Penedès">Ensalada · D.O. Penedès</p>
+        <p class="e-vi-nom">Gregal d'Espiells</p>
+        <p class="e-vi-do t" data-es="Moscatel de Alejandría y Gewürztraminer · Juvé &amp; Camps" data-ca="Moscatel d'Alexandria i Gewürztraminer · Juvé &amp; Camps">Moscatel de Alejandría y Gewürztraminer · Juvé &amp; Camps</p>
       </div>
-    </section>
-
-    <!-- ─── Section 5: Pase a pase ───────────────────────────────── -->
-    <section class="e-section">
-      <span class="e-section-label t" data-es="El inicio del pase" data-ca="L'inici del servei">El inicio del pase</span>
-      <h2 class="t" data-es="La tosta que puso el listón desde el principio" data-ca="La tosta que va posar el llistó des del principi">La tosta que puso el listón desde el principio</h2>
-
-      <p class="e-p">
-        La <strong>tosta de berenjena al Josper con sardina ahumada y naranja</strong> marcó el tono desde el primer bocado: una cocina sin miedo a los sabores pronunciados, que usa la brasa —aquí el Josper, el horno que Guillem maneja como un instrumento— como herramienta de precisión, no de potencia. La berenjena cocinada al Josper adquiere una suavidad ahumada que pocas técnicas logran, y la sardina ahumada y el toque de naranja añadían complejidad sin robar el protagonismo al conjunto. El Muller Chardonnay de la D.O. Tarragona, fresco y mineral, fue un arranque limpio y pertinente.
-      </p>
-
-      <figure>
-        <img src="../assets/img/brumma/cronica/tosta.jpg"
-             alt="Tosta de berenjena al Josper con sardina ahumada y naranja — Brumma, Infinitum Resort Salou" />
-        <figcaption class="t"
-          data-es="Tosta de berenjena al Josper con sardina ahumada y naranja — el primer pase marcó el tono de una cocina de brasas con oficio"
-          data-ca="Tosta d'albergínia al Josper amb sardina fumada i taronja — el primer pas va marcar el to d'una cuina de brases amb ofici">Tosta de berenjena al Josper con sardina ahumada y naranja — el tono quedó marcado</figcaption>
-      </figure>
-    </section>
-
-    <section class="e-section">
-      <span class="e-section-label t" data-es="Segundo pase" data-ca="Segon pas">Segundo pase</span>
-      <h2 class="t" data-es="La ensalada que reconcilia con el verano" data-ca="L'amanida que reconcilia amb l'estiu">La ensalada que reconcilia con el verano</h2>
-
-      <p class="e-p">
-        La <strong>ensalada de tomates con nectarina y burrata con vinagreta de pistachos</strong> fue la pausa refrescante que la noche necesitaba entre los sabores más contundentes de la brasa. No es el plato que te obliga a inclinarte sobre la mesa, sino el que te reconcilia con el verano: la acidez madura del tomate, la dulzura de la nectarina en su punto, la cremosidad de la burrata y esa vinagreta de pistachos que lo elevaba por encima de cualquier ensalada de temporada convencional. El Gregal d'Espiells de Juvé &amp; Camps —Moscatel de Alejandría y Gewürztraminer— era exactamente lo que hacía falta: aromático, ligero, cómplice.
-      </p>
-
-      <figure>
-        <img src="../assets/img/brumma/cronica/ensalada.jpg"
-             alt="Ensalada de tomates con nectarina y burrata con vinagreta de pistachos — Brumma, Salou" />
-        <figcaption class="t"
-          data-es="Ensalada de tomates con nectarina y burrata — una pausa refrescante y bien construida"
-          data-ca="Amanida de tomàquets amb nectarina i burrata — una pausa refrescant i ben construïda">Ensalada de tomates con nectarina y burrata con vinagreta de pistachos</figcaption>
-      </figure>
-    </section>
-
-    <section class="e-section">
-      <span class="e-section-label t" data-es="Tercer pase" data-ca="Tercer pas">Tercer pase</span>
-      <h2 class="t" data-es="Las volandeiras: mar y montaña en un plato de aplausos silenciosos" data-ca="Les volanderes: mar i muntanya en un plat d'aplaudiments silenciosos">Las volandeiras: mar y montaña en un plato de aplausos silenciosos</h2>
-
-      <p class="e-p">
-        Las <strong>volandeiras a la brasa con papada ibérica braseada y fondo de jamón ibérico</strong> fueron el primer momento de aplauso silencioso de la noche. Mar y montaña en un solo plato, sin que ninguno de los dos mundos aplastara al otro. Las volandeiras, de una frescura que se notaba en la textura, se servían sobre aquel fondo de jamón ibérico que actuaba como una salsa de intensidad calculada —presente, pero sin imponerse—, y la papada ibérica braseada añadía esa nota grasa que redondea. El Ànima de l'avi Arrufi de Celler Piñol —100% Garnacha Blanca de Terra Alta— era el maridaje menos obvio de la noche y el que mejor funcionó: un blanco con cuerpo y carácter que tenía algo que decir junto a la grasa del ibérico.
-      </p>
-
-      <figure>
-        <img src="../assets/img/brumma/cronica/volandeiras.jpg"
-             alt="Volandeiras a la brasa con papada ibérica braseada y fondo de jamón ibérico — Brumma, Infinitum Resort" />
-        <figcaption class="t"
-          data-es="Volandeiras a la brasa con papada ibérica y fondo de jamón — el maridaje con el Terra Alta fue el más sorprendente de la noche"
-          data-ca="Volanderes a la brasa amb papada ibèrica i fons de pernil — el maridatge amb el Terra Alta va ser el més sorprenent de la nit">Volandeiras a la brasa con papada ibérica y fondo de jamón ibérico</figcaption>
-      </figure>
-    </section>
-
-    <!-- ─── Section 6: El plato de la noche ──────────────────────── -->
-    <section class="e-section">
-      <span class="e-section-label t" data-es="El plato de la noche" data-ca="El plat de la nit">El plato de la noche</span>
-      <h2 class="t" data-es="El arroz de lágrima ibérica que todos recordarán" data-ca="L'arròs de llàgrima ibèrica que tothom recordarà">El arroz de lágrima ibérica que todos recordarán</h2>
-
-      <p class="e-p">
-        El <strong>arroz de lágrima ibérica, shitakes y huevo de codorniz</strong> fue el momento de máxima intensidad de la noche, sin discusión. No todos los arroces merecen silencio. Este lo mereció. Meloso —en ese punto difícil de conseguir que no es ni caldoso ni seco— con aquella lágrima ibérica que lo impregna todo de una profundidad que ninguna técnica puede simular, los shitakes aportando textura y un umami que dialogaba con el ibérico, y el huevo de codorniz como remate: esa yema que se rompe y convierte el arroz en algo todavía más complejo, más redondo. Guillem lo explicó en sala con la autoridad tranquila de quien sabe lo que ha cocinado. El Mas Collet de Celler de Capçanes —una Garnacha, Cariñena y Cabernet del Montsant— aguantaba el peso del plato sin pestañear.
-      </p>
-
-      <figure>
-        <img src="../assets/img/brumma/cronica/arroz.jpg"
-             alt="Arroz de lágrima ibérica, shitakes y huevo de codorniz — Brumma, Infinitum Resort Salou" />
-        <figcaption class="t"
-          data-es="Arroz de lágrima ibérica, shitakes y huevo de codorniz — el plato de la noche, con el Montsant como acompañante a la altura"
-          data-ca="Arròs de llàgrima ibèrica, xitakes i ou de guàtlla — el plat de la nit, amb el Montsant com a acompanyant a l'alçada">Arroz de lágrima ibérica, shitakes y huevo de codorniz — el plato que nadie olvidará</figcaption>
-      </figure>
-    </section>
-
-    <section class="e-section">
-      <span class="e-section-label t" data-es="Quinto pase" data-ca="Cinquè pas">Quinto pase</span>
-      <h2 class="t" data-es="El tataki de chuletón: cuando la maduración habla sola" data-ca="El tataki de chuletó: quan la maduració parla per si sola">El tataki de chuletón: cuando la maduración habla sola</h2>
-
-      <p class="e-p">
-        El <strong>tataki de chuletón de vaca madurado sobre escalivada</strong> fue la apuesta más carnívora de la noche, y llegó en el momento exacto en que la cena necesitaba peso. La maduración del chuletón se notaba en cada bocado: una carne que había tenido tiempo de desarrollarse, de concentrarse, servida con el punto de cocción que la técnica del tataki impone —vuelta y vuelta, con el interior en su punto— y con la escalivada como fondo de paisaje quemado y dulce. El Prior Scala Dei de Cellers Scala Dei —Garnacha, Cariñena, Cabernet Sauvignon y Syrah del Priorat— no necesitaba presentación, pero Esteban la hizo de todas formas, y fue la correcta.
-      </p>
-
-      <figure>
-        <img src="../assets/img/brumma/cronica/tataki.jpg"
-             alt="Tataki de chuletón de vaca madurado sobre escalivada — Brumma, Salou" />
-        <figcaption class="t"
-          data-es="Tataki de chuletón madurado sobre escalivada — el Priorat encontró en este plato su mejor argumentación"
-          data-ca="Tataki de chuletó madurat sobre escalivada — el Priorat va trobar en aquest plat la seva millor argumentació">Tataki de chuletón de vaca madurado sobre escalivada — con el Prior Scala Dei del Priorat</figcaption>
-      </figure>
-    </section>
-
-    <section class="e-section">
-      <span class="e-section-label t" data-es="Sexto pase" data-ca="Sisè pas">Sexto pase</span>
-      <h2 class="t" data-es="El ceviche no busca consenso, y eso también es un mérito" data-ca="El ceviche no busca consens, i això també és un mèrit">El ceviche no busca consenso, y eso también es un mérito</h2>
-
-      <p class="e-p">
-        El <strong>ceviche de corvina con crujiente de puerro</strong> fue, como siempre que aparece un ceviche en una cena de estas características, el plato más personal de la velada. A los amantes de la cocina ácida —que los había, y con criterio— les pareció sobresaliente: la corvina en su punto de curación, el crujiente de puerro como contrapunto de textura, el punto de leche de tigre medido y sin excesos de agresividad. A los que no terminan de hacer las paces con el ácido, el plato les resultó más desafiante. Pero incluso entre estos últimos, nadie puso en cuestión la ejecución. El Ekam de Castell d'Encús —Riesling y Albariño de Costers del Segre— fue la elección más atrevida del menú y la que mejor encajó en su contexto: una frescura que limpiaba, preparaba y ponía en valor lo que venía a continuación.
-      </p>
-
-      <figure>
-        <img src="../assets/img/brumma/cronica/ceviche.jpg"
-             alt="Ceviche de corvina con crujiente de puerro — Brumma, Infinitum Resort Salou" />
-        <figcaption class="t"
-          data-es="Ceviche de corvina con crujiente de puerro — el plato que divide, pero no por falta de oficio"
-          data-ca="Ceviche de corbina amb cruixent de porro — el plat que divideix, però no per manca d'ofici">Ceviche de corvina con crujiente de puerro — un plato que no busca consenso</figcaption>
-      </figure>
-    </section>
-
-    <section class="e-section">
-      <span class="e-section-label t" data-es="El cierre dulce" data-ca="El tancament dolç">El cierre dulce</span>
-      <h2 class="t" data-es="Mató, pera y miel: cuando el postre acierta con no pedir más" data-ca="Mató, pera i mel: quan el postre encerta amb no demanar més">Mató, pera y miel: cuando el postre acierta con no pedir más</h2>
-
-      <p class="e-p">
-        El <strong>mató con pera confitada, almendra Marcona tostada y miel de romero</strong> cerró el recorrido con una elegancia mediterránea de las que no saturan. Dulce sin ser empalagoso, con la acidez suave de la pera confitada, el toque tostado y levemente amargo de la almendra Marcona y esa miel de romero que perfumaba el conjunto sin imponerse. Un postre que no pide que te rindas ante él, sino que te invita a terminarlo tranquilamente. El <strong>Torelló 225 Brut Nature</strong> —Xarel·lo, Macabeo y Parellada de Corpinnat— cerró el ciclo vinícola con sus burbujas finas y su frescura estructurada: el compañero perfecto para un final que no quiso excederse.
-      </p>
-
-      <figure>
-        <img src="../assets/img/brumma/cronica/postre.jpg"
-             alt="Mató con pera confitada, almendra Marcona tostada y miel de romero — Brumma, Salou" />
-        <figcaption class="t"
-          data-es="Mató, pera confitada, almendra Marcona y miel de romero — un cierre mediterráneo y sin excesos, con el Torelló 225 Brut Nature"
-          data-ca="Mató, pera confitada, ametlla Marcona i mel de romaní — un tancament mediterrani i sense excessos, amb el Torelló 225 Brut Nature">Mató, pera confitada, almendra Marcona y miel de romero — el cierre perfecto de la noche</figcaption>
-      </figure>
-    </section>
-
-    <!-- ─── Section 7: El maridaje ────────────────────────────────── -->
-    <section class="e-section e-section-vins">
-      <span class="e-section-label t" data-es="El maridaje · Siete referencias, siete territorios" data-ca="El maridatge · Set referències, set territoris">El maridaje · Siete referencias, siete territorios</span>
-      <h2 class="t" data-es="Cataluña, su gastronomía y sus vinos" data-ca="Catalunya, la seva gastronomia i els seus vins">Cataluña, su gastronomía y sus vinos</h2>
-      <p class="e-vins-subtitol t" data-es="Un recorrido por el mapa vinícola catalán, de norte a sur, de blanco a espumoso, construido plato a plato" data-ca="Un recorregut pel mapa vinícola català, de nord a sud, de blanc a escumós, construït plat a plat">Un recorrido por el mapa vinícola catalán, de norte a sur, de blanco a espumoso, construido plato a plato</p>
-
-      <div class="e-maridatge">
-
-        <div class="e-maridatge-item">
-          <div class="e-maridatge-vi">
-            <span class="e-do">D.O. Tarragona · De Muller</span>
-            <strong>Muller Chardonnay</strong>
-            <span class="e-cep">100% Chardonnay</span>
-          </div>
-          <div class="e-maridatge-plat t"
-               data-es="Tosta de berenjena al Josper con sardina ahumada y naranja"
-               data-ca="Tosta d'albergínia al Josper amb sardina fumada i taronja">
-            Tosta de berenjena al Josper con sardina ahumada y naranja
-          </div>
-        </div>
-
-        <div class="e-maridatge-item">
-          <div class="e-maridatge-vi">
-            <span class="e-do">D.O. Penedès · Juvé &amp; Camps</span>
-            <strong>Gregal d'Espiells</strong>
-            <span class="e-cep">Moscatel de Alejandría y Gewürztraminer</span>
-          </div>
-          <div class="e-maridatge-plat t"
-               data-es="Ensalada de tomates con nectarina y burrata con vinagreta de pistachos"
-               data-ca="Amanida de tomàquets amb nectarina i burrata amb vinagreta de festucs">
-            Ensalada de tomates con nectarina y burrata con vinagreta de pistachos
-          </div>
-        </div>
-
-        <div class="e-maridatge-item">
-          <div class="e-maridatge-vi">
-            <span class="e-do">D.O. Terra Alta · Celler Piñol</span>
-            <strong>Ànima de l'avi Arrufi</strong>
-            <span class="e-cep">100% Garnacha Blanca</span>
-          </div>
-          <div class="e-maridatge-plat t"
-               data-es="Volandeiras a la brasa con papada ibérica braseada y fondo de jamón ibérico"
-               data-ca="Volanderes a la brasa amb papada ibèrica braseada i fons de pernil ibèric">
-            Volandeiras a la brasa con papada ibérica braseada y fondo de jamón ibérico
-          </div>
-        </div>
-
-        <div class="e-maridatge-item e-maridatge-item--destacat">
-          <div class="e-maridatge-vi">
-            <span class="e-do">D.O. Montsant · Celler de Capçanes</span>
-            <strong>Mas Collet</strong>
-            <span class="e-cep">Garnacha, Cariñena y Cabernet Sauvignon</span>
-          </div>
-          <div class="e-maridatge-plat t"
-               data-es="Arroz de lágrima ibérica, shitakes y huevo de codorniz ★"
-               data-ca="Arròs de llàgrima ibèrica, xitakes i ou de guàtlla ★">
-            Arroz de lágrima ibérica, shitakes y huevo de codorniz ★
-          </div>
-        </div>
-
-        <div class="e-maridatge-item">
-          <div class="e-maridatge-vi">
-            <span class="e-do">D.O.Q. Priorat · Cellers Scala Dei</span>
-            <strong>Prior Scala Dei</strong>
-            <span class="e-cep">Garnacha, Cariñena, Cabernet Sauvignon y Syrah</span>
-          </div>
-          <div class="e-maridatge-plat t"
-               data-es="Tataki de chuletón de vaca madurado sobre escalivada"
-               data-ca="Tataki de chuletó de vaca madurat sobre escalivada">
-            Tataki de chuletón de vaca madurado sobre escalivada
-          </div>
-        </div>
-
-        <div class="e-maridatge-item">
-          <div class="e-maridatge-vi">
-            <span class="e-do">D.O. Costers del Segre · Castell d'Encús</span>
-            <strong>Ekam</strong>
-            <span class="e-cep">Riesling y Albariño</span>
-          </div>
-          <div class="e-maridatge-plat t"
-               data-es="Ceviche de corvina con crujiente de puerro"
-               data-ca="Ceviche de corbina amb cruixent de porro">
-            Ceviche de corvina con crujiente de puerro
-          </div>
-        </div>
-
-        <div class="e-maridatge-item">
-          <div class="e-maridatge-vi">
-            <span class="e-do">Corpinnat · Torelló Viticultors</span>
-            <strong>Torelló 225 Brut Nature</strong>
-            <span class="e-cep">Xarel·lo, Macabeo y Parellada</span>
-          </div>
-          <div class="e-maridatge-plat t"
-               data-es="Mató, pera confitada, almendra Marcona tostada y miel de romero"
-               data-ca="Mató, pera confitada, ametlla Marcona torrada i mel de romaní">
-            Mató, pera confitada, almendra Marcona tostada y miel de romero
-          </div>
-        </div>
-
-      </div><!-- /e-maridatge -->
-    </section>
-
-    <!-- ─── Section 8: El Festival ────────────────────────────────── -->
-    <section class="e-section">
-      <span class="e-section-label t" data-es="La noche en sala" data-ca="La nit a sala">La noche en sala</span>
-      <h2 class="t" data-es="¡Festival! El grito que convierte una cena en una celebración" data-ca="Festival! El crit que converteix un sopar en una celebració">¡Festival! El grito que convierte una cena en una celebración</h2>
-
-      <p class="e-p">
-        Suqui no dejó pasar la noche sin dar vida a la sala de la manera que solo los Casacas Rojas saben hacerlo. El grito de guerra —<strong>«¡Festival!»</strong>— resonó en más de una ocasión durante la velada, ese agradecimiento coral que la asociación gastronómica barcelonesa ha convertido en un ritual desde 2003, y que en Brumma encontró una sala receptiva y con ganas. Sesenta personas que no se conocían todas entre sí y que, al final de la noche, compartían algo: el recuerdo de una cena que estuvo a la altura del escenario.
-      </p>
-      <p class="e-p">
-        El ritmo de la cena fue, como debe ser, adecuado: los platos llegaron con la cadencia justa, el servicio no se precipitó ni se detuvo, y la temperatura de la sala —acondicionada para recibir a más de sesenta personas sin que nadie lo notara— fue perfecta durante toda la velada. Cuando todo funciona así de bien, es porque alguien lo ha pensado antes.
-      </p>
-    </section>
-
-    <!-- ─── Section 9: El diploma ─────────────────────────────────── -->
-    <section class="e-section">
-      <span class="e-section-label t" data-es="El reconocimiento" data-ca="El reconeixement">El reconocimiento</span>
-      <h2 class="t" data-es="El diploma de los Gourmets, la firma de una noche" data-ca="El diploma dels Gourmets, la firma d'una nit">El diploma de los Gourmets, la firma de una noche</h2>
-
-      <p class="e-p">
-        Al cierre de la velada, el <strong>presidente Juan Manuel Rodríguez Yarritu</strong> y el ponente invitado <strong>Diego García González</strong> hicieron entrega del diploma recordatorio de los Gourmets de Tarragona al restaurante. Un gesto que la casa recibió con la misma hospitalidad con la que había acogido a los socios y sus invitados: con sencillez y agradecimiento genuino. El diploma certifica el paso de los Gourmets de Tarragona por Brumma, pero también es el reconocimiento a una noche que estuvo a la altura de todo lo que prometía.
-      </p>
-
-      <figure>
-        <img src="../assets/img/brumma/cronica/diploma.jpg"
-             alt="Entrega del diploma de los Gourmets de Tarragona al restaurante Brumma — presidente Yarritu y Diego García González — 2 de julio 2026" />
-        <figcaption class="t"
-          data-es="Juan Manuel Rodríguez Yarritu (presidente) y Diego García González entregan el diploma de los Gourmets de Tarragona al restaurante Brumma · Julio 2026"
-          data-ca="Juan Manuel Rodríguez Yarritu (president) i Diego García González lliuren el diploma dels Gourmets de Tarragona al restaurant Brumma · Juliol 2026">Juan Manuel Rodríguez Yarritu (presidente) y Diego García González entregan el diploma de los Gourmets de Tarragona a Brumma · Julio 2026</figcaption>
-      </figure>
-    </section>
-
-    <!-- ─── Section 10: Nuestra mirada ───────────────────────────── -->
-    <section class="e-section">
-      <span class="e-section-label t" data-es="Nuestra mirada" data-ca="La nostra mirada">Nuestra mirada</span>
-      <h2 class="t" data-es="Brumma tiene ganas de que vuelvas. Y tú también" data-ca="Brumma té ganes que tornis. I tu també">Brumma tiene ganas de que vuelvas. Y tú también</h2>
-
-      <p class="e-p">
-        Brumma tiene algo que no se puede comprar ni decorar: aquella sala acristalada con el Mediterráneo al fondo que transforma cualquier cena en algo más grande que la suma de sus platos. Pero a diferencia de otros espacios que descansan demasiado en el escenario, aquí la cocina y el servicio sostienen el peso por sus propios méritos. El concepto de los vinos como hilo conductor del menú fue una elección inteligente que dio coherencia y un argumento propio a una noche larga y muy concurrida. No fue solo un maridaje: fue una propuesta.
-      </p>
-      <p class="e-p">
-        Los platos respondieron en su conjunto. El <strong>arroz de lágrima ibérica</strong> fue la cima indiscutible, y las <strong>volandeiras</strong> la segunda mención que nadie discute. El <strong>ceviche</strong> dividió —como siempre lo hace cuando aparece en estas circunstancias—, pero lo hizo con nivel. La sala estuvo atenta de principio a fin, Guillem explicó sus elaboraciones con la confianza de quien no tiene nada que ocultar, y Esteban Puga demostró que un buen director de F&amp;B puede elevar la percepción de una cena sin añadir ni un solo ingrediente a los platos. Aroa Ruiz coordinó sesenta comensales sin que ninguno lo notara.
-      </p>
-      <p class="e-p">
-        La valoración definitiva llegará en la Gala de finales de año. Pero el veredicto de la noche fue claro cuando llegó la medianoche y nadie tenía prisa por marcharse. Hay rumores fundados de que la próxima cena de verano podría repetirse en esta misma sala. Si es así, ya saben dónde estaremos.
-      </p>
-    </section>
-
-    <!-- ─── Fitxa resum ────────────────────────────────────────────── -->
-    <aside class="e-fitxa">
-      <dl class="e-fitxa-list">
-        <div class="e-fitxa-row">
-          <dt class="t" data-es="Restaurante" data-ca="Restaurant">Restaurante</dt>
-          <dd>Brumma · Flamma Beach Foodhouse · Infinitum Resort</dd>
-        </div>
-        <div class="e-fitxa-row">
-          <dt class="t" data-es="Ubicación" data-ca="Ubicació">Ubicación</dt>
-          <dd class="t" data-es="Salou, Costa Daurada" data-ca="Salou, Costa Daurada">Salou, Costa Daurada</dd>
-        </div>
-        <div class="e-fitxa-row">
-          <dt class="t" data-es="Chef" data-ca="Cap de cuina">Chef</dt>
-          <dd>Guillem Martínez Batiste</dd>
-        </div>
-        <div class="e-fitxa-row">
-          <dt class="t" data-es="Director F&amp;B" data-ca="Director F&amp;B">Director F&amp;B</dt>
-          <dd>Esteban Puga Claver</dd>
-        </div>
-        <div class="e-fitxa-row">
-          <dt class="t" data-es="Restaurant Manager" data-ca="Restaurant Manager">Restaurant Manager</dt>
-          <dd>Aroa Ruiz Ait</dd>
-        </div>
-        <div class="e-fitxa-row">
-          <dt class="t" data-es="Visita" data-ca="Visita">Visita</dt>
-          <dd class="t" data-es="5ª · 2 Julio 2026" data-ca="5a · 2 Juliol 2026">5ª · 2 Julio 2026</dd>
-        </div>
-        <div class="e-fitxa-row">
-          <dt class="t" data-es="Web" data-ca="Web">Web</dt>
-          <dd><a href="https://www.infinitumliving.com/es/restaurantes/flamma-beach-foodhouse" target="_blank" rel="noopener">infinitumliving.com/flamma</a></dd>
-        </div>
-      </dl>
-    </aside>
-
-    <!-- ─── Compartir ─────────────────────────────────────────────── -->
-    <div class="e-share">
-      <p class="e-share-intro t"
-         data-es="Comparte esta crónica · Si te ha hecho pensar, merece llegar más lejos."
-         data-ca="Comparteix aquesta crònica · Si t'ha fet pensar, mereix arribar més lluny.">
-        Comparte esta crónica · Si te ha hecho pensar, <strong>merece llegar más lejos.</strong>
-      </p>
-      <div class="e-share-btns">
-        <a href="https://wa.me/?text=https://gourmetsdetarragona.com/entrades/brumma-cronica-2026.html"
-           target="_blank" rel="noopener" class="e-share-btn e-share-btn--wa t"
-           data-es="WhatsApp" data-ca="WhatsApp">WhatsApp</a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://gourmetsdetarragona.com/entrades/brumma-cronica-2026.html"
-           target="_blank" rel="noopener" class="e-share-btn e-share-btn--fb t"
-           data-es="Facebook" data-ca="Facebook">Facebook</a>
-        <a href="https://twitter.com/intent/tweet?url=https://gourmetsdetarragona.com/entrades/brumma-cronica-2026.html&text=Brumma%20%C2%B7%20Cr%C3%B3nica%20%C2%B7%20Gourmets%20de%20Tarragona"
-           target="_blank" rel="noopener" class="e-share-btn e-share-btn--x t"
-           data-es="X / Twitter" data-ca="X / Twitter">X / Twitter</a>
-        <button class="e-share-btn e-share-btn--copy t"
-                data-es="Copiar enlace" data-ca="Copiar enllaç"
-                onclick="navigator.clipboard.writeText('https://gourmetsdetarragona.com/entrades/brumma-cronica-2026.html').then(()=>{this.textContent='¡Copiado!';setTimeout(()=>{this.classList.contains('lang-ca')?this.textContent='Copiat!':this.textContent='Copiar enlace'},2000})">Copiar enlace</button>
+      <div class="e-vi">
+        <p class="e-vi-num t" data-es="Volandeiras · D.O. Terra Alta" data-ca="Volanderes · D.O. Terra Alta">Volandeiras · D.O. Terra Alta</p>
+        <p class="e-vi-nom">Ànima de l'avi Arrufi</p>
+        <p class="e-vi-do t" data-es="100% Garnacha Blanca · Celler Piñol" data-ca="100% Garnatxa Blanca · Celler Piñol">100% Garnacha Blanca · Celler Piñol</p>
+      </div>
+      <div class="e-vi">
+        <p class="e-vi-num t" data-es="Arroz ★ · D.O. Montsant" data-ca="Arròs ★ · D.O. Montsant">Arroz ★ · D.O. Montsant</p>
+        <p class="e-vi-nom">Mas Collet</p>
+        <p class="e-vi-do t" data-es="Garnacha, Cariñena y Cabernet · Celler de Capçanes" data-ca="Garnatxa, Carinyena i Cabernet · Celler de Capçanes">Garnacha, Cariñena y Cabernet · Celler de Capçanes</p>
+      </div>
+      <div class="e-vi">
+        <p class="e-vi-num t" data-es="Tataki · D.O.Q. Priorat" data-ca="Tataki · D.O.Q. Priorat">Tataki · D.O.Q. Priorat</p>
+        <p class="e-vi-nom">Prior Scala Dei</p>
+        <p class="e-vi-do t" data-es="Garnacha, Cariñena, Cab. Sauvignon y Syrah · Cellers Scala Dei" data-ca="Garnatxa, Carinyena, Cab. Sauvignon i Syrah · Cellers Scala Dei">Garnacha, Cariñena, Cab. Sauvignon y Syrah · Cellers Scala Dei</p>
+      </div>
+      <div class="e-vi">
+        <p class="e-vi-num t" data-es="Ceviche · D.O. Costers del Segre" data-ca="Ceviche · D.O. Costers del Segre">Ceviche · D.O. Costers del Segre</p>
+        <p class="e-vi-nom">Ekam</p>
+        <p class="e-vi-do t" data-es="Riesling y Albariño · Castell d'Encús" data-ca="Riesling i Albariño · Castell d'Encús">Riesling y Albariño · Castell d'Encús</p>
+      </div>
+      <div class="e-vi">
+        <p class="e-vi-num t" data-es="Postre · Corpinnat" data-ca="Postre · Corpinnat">Postre · Corpinnat</p>
+        <p class="e-vi-nom">Torelló 225 Brut Nature</p>
+        <p class="e-vi-do t" data-es="Xarel·lo, Macabeo y Parellada · Torelló Viticultors" data-ca="Xarel·lo, Macabeu i Parellada · Torelló Viticultors">Xarel·lo, Macabeo y Parellada · Torelló Viticultors</p>
       </div>
     </div>
+  </div>
 
-    <!-- ─── También te puede interesar ───────────────────────────── -->
-    <section class="e-tambe">
-      <h3 class="t" data-es="También te puede interesar" data-ca="També et pot interessar">También te puede interesar</h3>
-      <h4 class="t" data-es="Más crónicas de restaurante" data-ca="Més cròniques de restaurant">Más crónicas de restaurante</h4>
-      <div class="e-tambe-grid">
-        <a href="brumma-previa-2026.html" class="e-tambe-card">
-          <span class="e-tambe-cat t" data-es="Previa" data-ca="Prèvia">Previa</span>
-          <strong class="t" data-es="Brumma · Previa" data-ca="Brumma · Prèvia">Brumma · Previa</strong>
-          <p class="t"
-             data-es="La previa de nuestra visita a Brumma (Infinitum Resort, Salou). Siete DOs catalanas y la cocina de Guillem Martínez Batiste."
-             data-ca="La prèvia de la nostra visita a Brumma (Infinitum Resort, Salou). Set DOs catalanes i la cuina de Guillem Martínez Batiste.">
-            La previa de nuestra visita a Brumma (Infinitum Resort, Salou). Siete DOs catalanas y la cocina de Guillem Martínez Batiste.
+  <!-- B11: LA NOCHE EN SALA -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="La noche en sala" data-ca="La nit a sala">La noche en sala</span>
+  <h2 class="e-title t" data-es="«¡Festival!» El grito que convierte una cena en una celebración" data-ca="«Festival!» El crit que converteix un sopar en una celebració">«¡Festival!» El grito que convierte una cena en una celebración</h2>
+  <p class="e-p t"
+     data-es="Suqui no dejó pasar la noche sin dar vida a la sala de la manera que solo los Casacas Rojas saben hacerlo. El grito de guerra —<strong>«¡Festival!»</strong>— resonó en más de una ocasión durante la velada, ese agradecimiento coral que la asociación gastronómica barcelonesa ha convertido en ritual desde 2003, y que en Brumma encontró una sala receptiva y con ganas. Sesenta personas que no se conocían todas entre sí y que, al final de la noche, compartían algo: el recuerdo de una cena que estuvo a la altura del escenario."
+     data-ca="Suqui no va deixar passar la nit sense donar vida a la sala de la manera que només les Casacas Rojas saben fer-ho. El crit de guerra —<strong>«Festival!»</strong>— va ressonar en més d'una ocasió durant la vetllada, aquell agraïment coral que l'associació gastronòmica barcelonina ha convertit en ritual des del 2003, i que a Brumma va trobar una sala receptiva i amb ganes. Seixanta persones que no es coneixien totes entre elles i que, al final de la nit, compartien alguna cosa: el record d'un sopar que va estar a l'alçada de l'escenari.">
+    Suqui no dejó pasar la noche sin dar vida a la sala de la manera que solo los Casacas Rojas saben hacerlo. El grito de guerra —<strong>«¡Festival!»</strong>— resonó en más de una ocasión durante la velada, ese agradecimiento coral que la asociación gastronómica barcelonesa ha convertido en ritual desde 2003, y que en Brumma encontró una sala receptiva y con ganas. Sesenta personas que no se conocían todas entre sí y que, al final de la noche, compartían algo: el recuerdo de una cena que estuvo a la altura del escenario.
+  </p>
+  <p class="e-p t"
+     data-es="El ritmo de la cena fue, como debe ser, adecuado: los platos llegaron con la cadencia justa, el servicio no se precipitó ni se detuvo, y la <strong>temperatura de la sala</strong> —acondicionada para recibir a más de sesenta personas sin que nadie lo notara— fue perfecta durante toda la velada. Cuando todo funciona así de bien, es porque alguien lo ha pensado antes."
+     data-ca="El ritme del sopar va ser, com ha de ser, adequat: els plats van arribar amb la cadència justa, el servei no es va precipitar ni es va aturar, i la <strong>temperatura de la sala</strong> —condicionada per rebre més de seixanta persones sense que ningú ho notés— va ser perfecta durant tota la vetllada. Quan tot funciona tan bé, és perquè algú ho ha pensat abans.">
+    El ritmo de la cena fue, como debe ser, adecuado: los platos llegaron con la cadencia justa, el servicio no se precipitó ni se detuvo, y la <strong>temperatura de la sala</strong> —acondicionada para recibir a más de sesenta personas sin que nadie lo notara— fue perfecta durante toda la velada. Cuando todo funciona así de bien, es porque alguien lo ha pensado antes.
+  </p>
+
+  <!-- B12: EL DIPLOMA -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="El reconocimiento" data-ca="El reconeixement">El reconocimiento</span>
+  <h2 class="e-title t" data-es="El diploma de los Gourmets, la firma de una noche" data-ca="El diploma dels Gourmets, la firma d'una nit">El diploma de los Gourmets, la firma de una noche</h2>
+  <p class="e-p t"
+     data-es="Al cierre de la velada, el <strong>presidente Juan Manuel Rodríguez Yarritu</strong> y el ponente invitado <strong>Diego García González</strong> hicieron entrega del diploma recordatorio de los Gourmets de Tarragona al restaurante. Un gesto que la casa recibió con la misma hospitalidad con la que había acogido a los socios y sus invitados: con sencillez y agradecimiento genuino. El diploma certifica el paso de los Gourmets de Tarragona por Brumma, pero también es el reconocimiento a una noche que estuvo a la altura de todo lo que prometía."
+     data-ca="Al tancament de la vetllada, el <strong>president Juan Manuel Rodríguez Yarritu</strong> i el ponent convidat <strong>Diego García González</strong> van lliurar el diploma commemoratiu dels Gourmets de Tarragona al restaurant. Un gest que la casa va rebre amb la mateixa hospitalitat amb la qual havia acollit els socis i els seus convidats: amb senzillesa i agraïment genuí. El diploma certifica el pas dels Gourmets de Tarragona per Brumma, però també és el reconeixement d'una nit que va estar a l'alçada de tot el que prometia.">
+    Al cierre de la velada, el <strong>presidente Juan Manuel Rodríguez Yarritu</strong> y el ponente invitado <strong>Diego García González</strong> hicieron entrega del diploma recordatorio de los Gourmets de Tarragona al restaurante. Un gesto que la casa recibió con la misma hospitalidad con la que había acogido a los socios y sus invitados: con sencillez y agradecimiento genuino. El diploma certifica el paso de los Gourmets de Tarragona por Brumma, pero también es el reconocimiento a una noche que estuvo a la altura de todo lo que prometía.
+  </p>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/brumma/cronica/diploma.jpg" alt="Entrega del diploma de los Gourmets de Tarragona al restaurante Brumma — presidente Yarritu y Diego García González — julio 2026" style="object-position:center 30%;">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="Juan Manuel Rodríguez Yarritu (presidente) y Diego García González entregan el diploma de los Gourmets de Tarragona a Brumma · Julio 2026"
+     data-ca="Juan Manuel Rodríguez Yarritu (president) i Diego García González lliuren el diploma dels Gourmets de Tarragona a Brumma · Juliol 2026">
+    Juan Manuel Rodríguez Yarritu (presidente) y Diego García González entregan el diploma de los Gourmets de Tarragona a Brumma · Julio 2026
+  </p>
+
+  <!-- B13: NUESTRA MIRADA -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Nuestra mirada" data-ca="La nostra mirada">Nuestra mirada</span>
+  <h2 class="e-title t" data-es="Brumma tiene ganas de que vuelvas. Y tú también" data-ca="Brumma té ganes que tornis. I tu també">Brumma tiene ganas de que vuelvas. Y tú también</h2>
+  <p class="e-p t"
+     data-es="Brumma tiene algo que no se puede comprar ni decorar: aquella sala acristalada con el Mediterráneo al fondo que transforma cualquier cena en algo más grande que la suma de sus platos. Pero a diferencia de otros espacios que descansan demasiado en el escenario, aquí la cocina y el servicio sostienen el peso por sus propios méritos. El concepto de los <strong>vinos como hilo conductor del menú</strong> fue una elección inteligente que dio coherencia y un argumento propio a una noche larga y muy concurrida. No fue solo un maridaje: fue una propuesta."
+     data-ca="Brumma té alguna cosa que no es pot comprar ni decorar: aquella sala envidrada amb el Mediterrani al fons que transforma qualsevol sopar en alguna cosa més gran que la suma dels seus plats. Però a diferència d'altres espais que descansen massa en l'escenari, aquí la cuina i el servei sostenen el pes pels seus propis mèrits. El concepte dels <strong>vins com a fil conductor del menú</strong> va ser una elecció intel·ligent que va donar coherència i un argument propi a una nit llarga i molt concorreguda. No va ser només un maridatge: va ser una proposta.">
+    Brumma tiene algo que no se puede comprar ni decorar: aquella sala acristalada con el Mediterráneo al fondo que transforma cualquier cena en algo más grande que la suma de sus platos. Pero a diferencia de otros espacios que descansan demasiado en el escenario, aquí la cocina y el servicio sostienen el peso por sus propios méritos. El concepto de los <strong>vinos como hilo conductor del menú</strong> fue una elección inteligente que dio coherencia y un argumento propio a una noche larga y muy concurrida. No fue solo un maridaje: fue una propuesta.
+  </p>
+  <p class="e-p t"
+     data-es="Los platos respondieron en su conjunto. El <strong>arroz de lágrima ibérica</strong> fue la cima indiscutible, y las <strong>volandeiras</strong> la segunda mención que nadie discute. El <strong>ceviche</strong> dividió —como siempre lo hace cuando aparece en estas circunstancias—, pero lo hizo con nivel. La sala estuvo atenta de principio a fin, Guillem explicó sus elaboraciones con la confianza de quien no tiene nada que ocultar, y <strong>Esteban Puga</strong> demostró que un buen director de F&amp;B puede elevar la percepción de una cena sin añadir ni un solo ingrediente a los platos. <strong>Aroa Ruiz</strong> coordinó sesenta comensales sin que ninguno lo notara."
+     data-ca="Els plats van respondre en el seu conjunt. L'<strong>arròs de llàgrima ibèrica</strong> va ser el cim indiscutible, i les <strong>volanderes</strong> la segona menció que ningú discuteix. El <strong>ceviche</strong> va dividir —com sempre ho fa quan apareix en aquestes circumstàncies—, però ho va fer amb nivell. La sala va estar atenta de principi a fi, Guillem va explicar les seves elaboracions amb la confiança de qui no té res a amagar, i <strong>Esteban Puga</strong> va demostrar que un bon director de F&amp;B pot elevar la percepció d'un sopar sense afegir ni un sol ingredient als plats. <strong>Aroa Ruiz</strong> va coordinar seixanta comensals sense que cap ho notés.">
+    Los platos respondieron en su conjunto. El <strong>arroz de lágrima ibérica</strong> fue la cima indiscutible, y las <strong>volandeiras</strong> la segunda mención que nadie discute. El <strong>ceviche</strong> dividió —como siempre lo hace cuando aparece en estas circunstancias—, pero lo hizo con nivel. La sala estuvo atenta de principio a fin, Guillem explicó sus elaboraciones con la confianza de quien no tiene nada que ocultar, y <strong>Esteban Puga</strong> demostró que un buen director de F&amp;B puede elevar la percepción de una cena sin añadir ni un solo ingrediente a los platos. <strong>Aroa Ruiz</strong> coordinó sesenta comensales sin que ninguno lo notara.
+  </p>
+  <p class="e-p t"
+     data-es="La valoración definitiva llegará en la Gala de finales de año. Pero el veredicto de la noche fue claro cuando llegó la medianoche y nadie tenía prisa por marcharse. Hay rumores fundados de que la <strong>próxima cena de verano</strong> podría repetirse en esta misma sala. Si es así, ya saben dónde estaremos."
+     data-ca="La valoració definitiva arribarà a la Gala de finals d'any. Però el veredicte de la nit va ser clar quan va arribar la mitjanit i ningú tenia pressa per marxar. Hi ha rumors fonamentats que el <strong>proper sopar d'estiu</strong> podria repetir-se en aquesta mateixa sala. Si és així, ja saben on serem.">
+    La valoración definitiva llegará en la Gala de finales de año. Pero el veredicto de la noche fue claro cuando llegó la medianoche y nadie tenía prisa por marcharse. Hay rumores fundados de que la <strong>próxima cena de verano</strong> podría repetirse en esta misma sala. Si es así, ya saben dónde estaremos.
+  </p>
+
+  <!-- FITXA -->
+  <div class="e-fitxa">
+    <div class="e-fitxa-item">
+      <span class="e-fitxa-label t" data-es="Restaurante" data-ca="Restaurant">Restaurante</span>
+      <span class="e-fitxa-valor">Brumma · Flamma Beach Foodhouse · Infinitum Resort</span>
+    </div>
+    <div class="e-fitxa-item">
+      <span class="e-fitxa-label t" data-es="Chef" data-ca="Cap de cuina">Chef</span>
+      <span class="e-fitxa-valor">Guillem Martínez Batiste</span>
+    </div>
+    <div class="e-fitxa-item">
+      <span class="e-fitxa-label t" data-es="Visita" data-ca="Visita">Visita</span>
+      <span class="e-fitxa-valor t" data-es="5ª · 2 Julio 2026" data-ca="5a · 2 Juliol 2026">5ª · 2 Julio 2026</span>
+    </div>
+  </div>
+
+  <!-- COMPARTIR -->
+  <div class="e-compartir">
+    <div class="e-compartir-inner">
+      <div class="e-compartir-deco">
+        <div class="e-compartir-deco-line"></div>
+        <span class="t" data-es="Compartir esta crónica" data-ca="Compartir aquesta crònica">Compartir esta crónica</span>
+        <div class="e-compartir-deco-line r"></div>
+      </div>
+      <p class="e-compartir-frase t"
+         data-es="<em>El Mediterráneo, siete DOs y el grito de «¡Festival!»</em><br><strong>Brumma · Infinitum Resort · Guillem Martínez Batiste · 2026</strong>"
+         data-ca="<em>El Mediterrani, set DOs i el crit de «Festival!»</em><br><strong>Brumma · Infinitum Resort · Guillem Martínez Batiste · 2026</strong>">
+        <em>El Mediterráneo, siete DOs y el grito de «¡Festival!»</em><br><strong>Brumma · Infinitum Resort · Guillem Martínez Batiste · 2026</strong>
+      </p>
+      <div class="e-compartir-btns">
+        <a id="btn-wa" href="#" class="e-compartir-btn wa" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
+        <a id="btn-fb" href="#" class="e-compartir-btn fb" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a>
+        <a id="btn-x" href="#" class="e-compartir-btn" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>X</a>
+        <button class="e-compartir-btn copy" onclick="copiarEnllac(this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg><span class="t" data-es="Copiar enlace" data-ca="Copiar enllaç">Copiar enlace</span><span class="e-compartir-copied t" data-es="¡Copiado!" data-ca="Copiat!">¡Copiado!</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAMBÉ ET POT INTERESSAR -->
+  <div class="e-tambe">
+    <span class="e-tambe-label t" data-es="También te puede interesar" data-ca="També et pot interessar">También te puede interesar</span>
+    <h2 class="e-tambe-title t" data-es="Más crónicas de restaurante" data-ca="Més cròniques de restaurant">Más crónicas de restaurante</h2>
+    <div class="e-tambe-grid">
+      <a href="brumma-previa-2026.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/brumma/05_brumma_vistas_mar.jpg" alt="Brumma · Prèvia" onerror="this.parentElement.style.background='#1c2e3e'">
+          <span class="e-tambe-card-cat t" style="background:var(--navy);" data-es="Previa" data-ca="Prèvia">Previa</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <h3 class="e-tambe-card-title t" data-es="Brumma · Previa" data-ca="Brumma · Prèvia">Brumma · Previa</h3>
+          <p class="e-tambe-card-exc t"
+             data-es="El mejor beach club de Europa, seis puntos de restauración y un chef que lleva nueve años creciendo en la casa. Todo lo que había que saber antes de la visita."
+             data-ca="El millor beach club d'Europa, sis punts de restauració i un xef que porta nou anys creixent a la casa. Tot el que calia saber abans de la visita.">
+            El mejor beach club de Europa, seis puntos de restauración y un chef que lleva nueve años creciendo en la casa.
           </p>
-          <span class="e-tambe-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
-        </a>
-        <a href="cervus-cronica-2026.html" class="e-tambe-card">
-          <span class="e-tambe-cat t" data-es="Crónica" data-ca="Crònica">Crónica</span>
-          <strong class="t" data-es="Cervus · Crónica" data-ca="Cervus · Crònica">Cervus · Crónica</strong>
-          <p class="t"
-             data-es="Nil Bono y Lucía Fernández en Reus. Una cocina sin imposturas que sitúa el territorio en el centro."
-             data-ca="Nil Bono i Lucía Fernández a Reus. Una cuina sense impostures que situa el territori al centre.">
+          <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+      <a href="cervus-cronica-2026.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/cervus/cronica/sala-taula.jpg" alt="Cervus · Crònica" onerror="this.parentElement.style.background='#1c2e3e'">
+          <span class="e-tambe-card-cat t" style="background:var(--gold);" data-es="Crónica" data-ca="Crònica">Crónica</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <h3 class="e-tambe-card-title t" data-es="Cervus · Crónica" data-ca="Cervus · Crònica">Cervus · Crónica</h3>
+          <p class="e-tambe-card-exc t"
+             data-es="Nil Bono y Lucía Fernández en Reus. Una cocina sin imposturas, con el rebujito de vermut y oloroso como bienvenida y el fricandó de carrilleras como argumento."
+             data-ca="Nil Bono i Lucía Fernández a Reus. Una cuina sense impostures, amb el rebujito de vermut i oloroso com a benvinguda i el fricandó de galtes com a argument.">
             Nil Bono y Lucía Fernández en Reus. Una cocina sin imposturas que sitúa el territorio en el centro.
           </p>
-          <span class="e-tambe-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- Volver al Blog (final) -->
-    <div class="e-back-bottom">
-      <a href="../pages/blog.html" class="e-back-link t" data-es="← Volver al Blog" data-ca="← Tornar al Blog">← Volver al Blog</a>
-    </div>
-
-  </article><!-- /e-article-body -->
-</main>
-<!-- /ARTICLE ════════════════════════════════════════════════════════ -->
-
-
-<!-- ═══════════════════════════════════════════════════════ FOOTER -->
-<footer>
-  <div class="footer-main">
-
-    <div class="footer-brand">
-      <a href="../index.html">
-        <img src="../assets/img/logo.png"
-             onerror="this.src='https://gourmetsdetarragona.com/wp-content/uploads/2025/05/cropped-logo_gourmets_blau_sin_fondo-3-300x296.png'"
-             alt="Gourmets de Tarragona" />
+          <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
       </a>
-      <p class="t"
-         data-es="Asociación gastronómica sin ánimo de lucro. Camp de Tarragona."
-         data-ca="Associació gastronòmica sense ànim de lucre. Camp de Tarragona.">
-        Asociación gastronómica sin ánimo de lucro.<br />Camp de Tarragona.
-      </p>
+    </div>
+  </div>
+
+</main>
+
+<!-- NAV RETORN -->
+<div class="e-nav-retorn">
+  <div class="e-nav-retorn-links">
+    <a href="../pages/blog.html" class="btn-outline t" data-es="Volver al Blog" data-ca="Tornar al Blog">Volver al Blog</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona" onerror="this.style.display='none'">
+      <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
       <div class="footer-social">
-        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
-        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
+        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       </div>
     </div>
-
-    <div class="footer-col">
-      <h4 class="t" data-es="Navegación" data-ca="Navegació">Navegación</h4>
-      <ul>
-        <li><a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a></li>
-        <li><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li>
-        <li><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li>
-        <li><a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></li>
-        <li><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4 class="t" data-es="Legal" data-ca="Legal">Legal</h4>
-      <ul>
-        <li><a href="../pages/avis-legal.html" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li>
-        <li><a href="../pages/privacitat.html" class="t" data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a></li>
-        <li><a href="../pages/cookies.html" class="t" data-es="Política de Cookies" data-ca="Política de Cookies">Política de Cookies</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4 class="t" data-es="Contacto" data-ca="Contacte">Contacto</h4>
-      <ul>
-        <li><a href="mailto:gourmetsdetarragona@gourmetsdetarragona.com">gourmetsdetarragona<br />@gourmetsdetarragona.com</a></li>
-        <li class="t" data-es="Tarragona, Catalunya" data-ca="Tarragona, Catalunya">Tarragona, Catalunya</li>
-      </ul>
-    </div>
-
-  </div><!-- /footer-main -->
-
-  <div class="footer-bottom">
-    <p class="t"
-       data-es="© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados"
-       data-ca="© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats">
-      © 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados
-    </p>
+    <div class="footer-col"><h4 class="t" data-es="Navegación" data-ca="Navegació">Navegación</h4><ul><li><a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a></li><li><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li><li><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li><li><a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></li><li><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li></ul></div>
+    <div class="footer-col"><h4 class="t" data-es="Legal" data-ca="Legal">Legal</h4><ul><li><a href="../pages/avis-legal.html" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li><li><a href="../pages/privacitat.html" class="t" data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a></li><li><a href="../pages/cookies.html" class="t" data-es="Política de Cookies" data-ca="Política de Cookies">Política de Cookies</a></li></ul></div>
+    <div class="footer-col"><h4 class="t" data-es="Contacto" data-ca="Contacte">Contacto</h4><p><a href="mailto:gourmetsdetarragona@gourmetsdetarragona.com">gourmetsdetarragona@gourmetsdetarragona.com</a></p><p>Tarragona, Catalunya</p></div>
   </div>
+  <div class="footer-bottom"><p class="t" data-es="© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados" data-ca="© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats">© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados</p></div>
 </footer>
-<!-- /FOOTER ══════════════════════════════════════════════════════════ -->
 
-
-<!-- setLang inline (antes del main.js) -->
 <script>
-  function setLang(lang) {
-    if (lang) localStorage.setItem('gdt-lang', lang);
-    const current = localStorage.getItem('gdt-lang') || 'es';
-    document.querySelectorAll('.t').forEach(el => {
-      const text = el.getAttribute('data-' + current);
-      if (text) el.textContent = text;
-    });
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('lang-ca', current === 'ca');
-    });
-  }
-  function toggleLang() {
-    const current = localStorage.getItem('gdt-lang') || 'es';
-    setLang(current === 'es' ? 'ca' : 'es');
-  }
-  function toggleMobileMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
-  setLang();
+var currentLang = localStorage.getItem('gdt-lang') || 'es';
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('gdt-lang', lang);
+  document.querySelectorAll('.t').forEach(function(el) {
+    var val = el.getAttribute('data-' + lang);
+    if (val !== null) el.innerHTML = val;
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+  document.getElementById('html-root').setAttribute('lang', lang);
+}
+document.addEventListener('DOMContentLoaded', function() {
+  if (currentLang === 'ca') setLang('ca');
+});
 </script>
 <script src="../assets/js/main.js"></script>
-
+<script>
+(function(){
+  var url=encodeURIComponent(window.location.href);
+  var titol=encodeURIComponent(document.title);
+  var wa=document.getElementById('btn-wa');
+  var fb=document.getElementById('btn-fb');
+  var x=document.getElementById('btn-x');
+  if(wa)wa.href='https://wa.me/?text='+titol+'%20'+url;
+  if(fb)fb.href='https://www.facebook.com/sharer/sharer.php?u='+url;
+  if(x)x.href='https://x.com/intent/tweet?url='+url+'&text='+titol;
+})();
+function copiarEnllac(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var msg=btn.querySelector('.e-compartir-copied');
+    if(msg){msg.classList.add('vis');setTimeout(function(){msg.classList.remove('vis');},2200);}
+  });
+}
+</script>
 </body>
 </html>
