@@ -313,12 +313,12 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- FILTRES — Tots:30 · Previes:5 · Cròniques:4 · Notícies:3 · Cultura:2 · Vins:6 · Events:1 · Curiositats:9 -->
+<!-- FILTRES — Tots:31 · Previes:5 · Cròniques:5 · Notícies:3 · Cultura:2 · Vins:6 · Events:1 · Curiositats:9 -->
 <div class="blog-filtres">
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span class="t" data-es="Todos" data-ca="Tots">Todos</span>
-      <span class="filtre-n">30</span>
+      <span class="filtre-n">31</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot" style="background:var(--navy);"></span>
@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <button class="filtre-btn" data-cat="cronica" onclick="filterEntrades('cronica')">
       <span class="filtre-dot" style="background:var(--gold);"></span>
       <span class="t" data-es="Crónicas" data-ca="Cròniques">Crónicas</span>
-      <span class="filtre-n">4</span>
+      <span class="filtre-n">5</span>
     </button>
     <button class="filtre-btn" data-cat="noticia" onclick="filterEntrades('noticia')">
       <span class="filtre-dot" style="background:#555;"></span>
@@ -360,19 +360,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- DESTACAT -->
 <div class="blog-destacat">
-  <div class="destacat-card" data-cat="previa">
+  <div class="destacat-card" data-cat="cronica">
     <div class="destacat-img">
-      <img src="../assets/img/brumma/05_brumma_vistas_mar.jpg" alt="Brumma · Flamma Beach Foodhouse · Infinitum Resort · Salou">
-      <span class="destacat-cat cat-previa t" data-es="5ª Visita 2026 · Previa" data-ca="5a Visita 2026 · Prèvia">5ª Visita 2026 · Previa</span>
+      <img src="../assets/img/brumma/05_brumma_vistas_mar.jpg" alt="Brumma · Flamma Beach Foodhouse · Infinitum Resort · Salou · Crónica 5ª visita 2026">
+      <span class="destacat-cat cat-cronica t" data-es="5ª Visita 2026 · Crónica" data-ca="5a Visita 2026 · Crònica">5ª Visita 2026 · Crónica</span>
     </div>
     <div class="destacat-body">
       <div class="destacat-meta">
-        <span class="destacat-badge cat-previa destacat-cat t" style="position:static;font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;color:#fff;" data-es="Previa" data-ca="Prèvia">Previa</span>
+        <span class="destacat-badge cat-cronica destacat-cat t" style="position:static;font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;color:#fff;" data-es="Crónica" data-ca="Crònica">Crónica</span>
         <span class="destacat-data t" data-es="Julio 2026" data-ca="Juliol 2026">Julio 2026</span>
       </div>
       <h2 class="destacat-title t" data-es="Brumma · Infinitum Resort<br><em style=&quot;font-style:italic;color:var(--gold);font-size:.8em;&quot;>Flamma Beach Foodhouse, Salou</em>" data-ca="Brumma · Infinitum Resort<br><em style=&quot;font-style:italic;color:var(--gold);font-size:.8em;&quot;>Flamma Beach Foodhouse, Salou</em>">Brumma · Infinitum Resort<br><em style="font-style:italic;color:var(--gold);font-size:.8em;">Flamma Beach Foodhouse, Salou</em></h2>
-      <p class="destacat-exc t" data-es="El antiguo Lumine resurge como Infinitum Resort. La sala Brumma, en el corazón del Flamma Beach Foodhouse, acoge la 5ª visita del año: siete denominaciones catalanas maridadas frente al Mediterráneo." data-ca="L'antic Lumine ressorgeix com Infinitum Resort. La sala Brumma, al cor del Flamma Beach Foodhouse, acull la 5a visita de l'any: set denominacions catalanes maridades davant el Mediterrani.">El antiguo Lumine resurge como Infinitum Resort. La sala Brumma, en el corazón del Flamma Beach Foodhouse, acoge la 5ª visita del año: siete denominaciones catalanas maridadas frente al Mediterráneo.</p>
-      <a href="../entrades/brumma-previa-2026.html" class="destacat-link t" data-es="Leer la previa →" data-ca="Llegir la prèvia →">Leer la previa →</a>
+      <p class="destacat-exc t" data-es="Sala acristalada frente al Mediterráneo, siete DOs catalanas en el centro de la mesa y más de sesenta comensales. El arroz de lágrima ibérica, el grito de «¡Festival!» y el diploma de los Gourmets." data-ca="Sala envidrada davant el Mediterrani, set DOs catalanes al centre de la taula i més de seixanta comensals. L'arròs de llàgrima ibèrica, el crit de «Festival!» i el diploma dels Gourmets.">Sala acristalada frente al Mediterráneo, siete DOs catalanas en el centro de la mesa y más de sesenta comensales. El arroz de lágrima ibérica, el grito de «¡Festival!» y el diploma de los Gourmets.</p>
+      <a href="../entrades/brumma-cronica-2026.html" class="destacat-link t" data-es="Leer la crónica →" data-ca="Llegir la crònica →">Leer la crónica →</a>
     </div>
   </div>
 </div>
@@ -392,6 +392,28 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
   <div class="car-track">
   <div class="carrusel" id="car-visites">
+
+    <!-- Brumma Crònica -->
+    <article class="blog-card" data-cat="cronica">
+      <div class="blog-card-img">
+        <img src="../assets/img/brumma/cronica/arroz.jpg" alt="Arroz de lágrima ibérica, shitakes y huevo de codorniz — Brumma, Infinitum Resort Salou" onerror="this.parentElement.style.background='var(--cream)'">
+        <span class="blog-card-cat cat-cronica t" data-es="Crónica" data-ca="Crònica">Crónica</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Julio 2026" data-ca="Juliol 2026">Julio 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es='Brumma · Salou<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica de la 5ª visita</small>'
+            data-ca='Brumma · Salou<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crònica de la 5a visita</small>'>
+          Brumma · Salou<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Crónica de la 5ª visita</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Siete DOs catalanas, el arroz de lágrima ibérica y el grito de «¡Festival!» en la sala acristalada de Infinitum Resort frente al Mediterráneo."
+           data-ca="Set DOs catalanes, l'arròs de llàgrima ibèrica i el crit de «Festival!» a la sala envidrada d'Infinitum Resort davant el Mediterrani.">
+          Siete DOs catalanas, el arroz de lágrima ibérica y el grito de «¡Festival!» en la sala acristalada de Infinitum Resort.
+        </p>
+        <a href="../entrades/brumma-cronica-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
 
     <!-- Brumma Prèvia -->
     <article class="blog-card" data-cat="previa">
