@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ca" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon-180.png">
+<link rel="shortcut icon" href="../favicon.ico">
+
+<title>Newsletter · Gourmets de Tarragona — Gastronomia al teu correu</title>
+<meta name="description" content="Subscriu-te a la newsletter de Gourmets de Tarragona. Crònica de restaurants, vins i novetats gastronòmiques del Camp de Tarragona. Quinzenal i gratuïta.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.gourmetsdetarragona.com/pages/newsletter.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gourmetsdetarragona.com/pages/newsletter.html">
+<meta property="og:title" content="Newsletter · Gourmets de Tarragona">
+<meta property="og:description" content="Crònica de restaurants, vins i novetats gastronòmiques del Camp de Tarragona. Quinzenal i gratuïta.">
+<meta property="og:image" content="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg">
+<meta property="og:site_name" content="Gourmets de Tarragona">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/seccions.css">
+<style>
+/* ── Hero ── */
+.nl-hero{position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0b1626;}
+.nl-hero-bg{position:absolute;inset:0;background-image:url('../assets/img/hero.jpg');background-size:cover;background-position:center 35%;opacity:.55;filter:brightness(1.05) contrast(1.08);}
+.nl-hero-grad{position:absolute;inset:0;background:linear-gradient(160deg,rgba(11,22,38,.82) 0%,rgba(11,22,38,.55) 50%,rgba(184,146,74,.12) 100%);}
+.nl-hero-inner{position:relative;z-index:2;max-width:720px;padding:0 6%;text-align:center;}
+.nl-deco{font-size:1.1rem;color:var(--gold);opacity:.5;letter-spacing:.3em;margin-bottom:20px;}
+.nl-kicker{font-size:.6rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.nl-hero h1{font-family:var(--font-title);font-size:clamp(2.4rem,5.5vw,4rem);color:#fff;font-weight:400;line-height:1.15;margin-bottom:22px;}
+.nl-hero h1 em{font-style:italic;color:rgba(246,242,236,.75);}
+.nl-hero-sub{font-size:1rem;color:rgba(255,255,255,.6);font-weight:300;line-height:1.85;max-width:520px;margin:0 auto 44px;}
+.nl-form-hero{display:flex;gap:0;max-width:460px;margin:0 auto 18px;flex-wrap:wrap;gap:10px;}
+.nl-form-hero input[type="email"]{flex:1;min-width:220px;padding:16px 20px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#fff;font-family:var(--font-body);font-size:.9rem;outline:none;transition:border-color .2s;}
+.nl-form-hero input[type="email"]:focus{border-color:rgba(184,146,74,.7);}
+.nl-form-hero input::placeholder{color:rgba(255,255,255,.35);}
+.nl-form-hero button{padding:16px 28px;background:var(--gold);color:#fff;border:none;font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-family:var(--font-body);cursor:pointer;transition:background .2s;white-space:nowrap;}
+.nl-form-hero button:hover{background:#c9a05a;}
+.nl-legal{font-size:.7rem;color:rgba(255,255,255,.25);margin-top:4px;}
+
+/* ── Features strip ── */
+.nl-features{background:var(--cream);padding:72px 6%;}
+.nl-features-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:48px;}
+.nl-feat{text-align:center;}
+.nl-feat-ico{width:52px;height:52px;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;}
+.nl-feat-ico i{color:var(--gold);font-size:.95rem;}
+.nl-feat-title{font-family:var(--font-title);font-size:1.15rem;color:var(--navy-dark);margin-bottom:10px;font-weight:600;}
+.nl-feat-text{font-size:.88rem;color:var(--muted);line-height:1.8;font-weight:300;}
+
+/* ── Preview (últimas entradas) ── */
+.nl-preview{background:#fff;padding:80px 6%;}
+.nl-preview-inner{max-width:960px;margin:0 auto;}
+.nl-section-label{font-size:.6rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.nl-section-label::after{content:'';flex:1;height:1px;background:rgba(184,146,74,.25);}
+.nl-section-title{font-family:var(--font-title);font-size:clamp(1.6rem,3vw,2.2rem);color:var(--navy-dark);margin-bottom:48px;font-weight:400;}
+.nl-posts{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+.nl-post{border:1px solid var(--border);}
+.nl-post-img{aspect-ratio:3/2;overflow:hidden;}
+.nl-post-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.nl-post:hover .nl-post-img img{transform:scale(1.05);}
+.nl-post-body{padding:24px 22px 22px;}
+.nl-post-date{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.nl-post-title{font-family:var(--font-title);font-size:1.05rem;color:var(--navy-dark);line-height:1.35;margin-bottom:12px;font-weight:600;}
+.nl-post-excerpt{font-size:.83rem;color:var(--muted);line-height:1.75;font-weight:300;}
+.nl-posts-cta{text-align:center;margin-top:44px;}
+.nl-posts-cta a{display:inline-block;border:1px solid var(--navy);color:var(--navy);padding:12px 36px;font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;transition:.2s;}
+.nl-posts-cta a:hover{background:var(--navy);color:#fff;}
+
+/* ── CTA final ── */
+.nl-cta{background:var(--navy);padding:96px 6%;}
+.nl-cta-inner{max-width:640px;margin:0 auto;text-align:center;}
+.nl-cta-deco{font-size:1.2rem;color:var(--gold);opacity:.35;margin-bottom:18px;}
+.nl-cta h2{font-family:var(--font-title);font-size:clamp(1.8rem,3.5vw,2.6rem);color:#fff;font-weight:400;margin-bottom:16px;line-height:1.25;}
+.nl-cta p{font-size:.9rem;color:rgba(246,242,236,.55);line-height:1.9;font-weight:300;margin-bottom:40px;}
+.nl-form-cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.nl-form-cta input[type="email"]{width:280px;padding:15px 18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);color:#fff;font-family:var(--font-body);font-size:.88rem;outline:none;transition:border-color .2s;}
+.nl-form-cta input[type="email"]:focus{border-color:rgba(184,146,74,.6);}
+.nl-form-cta input::placeholder{color:rgba(255,255,255,.3);}
+.nl-form-cta button{padding:15px 28px;background:var(--gold);color:#fff;border:none;font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-family:var(--font-body);cursor:pointer;transition:background .2s;}
+.nl-form-cta button:hover{background:#c9a05a;}
+.nl-cta-note{font-size:.68rem;color:rgba(255,255,255,.2);margin-top:16px;}
+
+@media(max-width:768px){
+  .nl-features-inner{grid-template-columns:1fr;gap:36px;}
+  .nl-posts{grid-template-columns:1fr;gap:24px;}
+  .nl-form-hero{flex-direction:column;}
+  .nl-form-hero input[type="email"],.nl-form-hero button{width:100%;}
+  .nl-form-cta{flex-direction:column;align-items:center;}
+  .nl-form-cta input[type="email"],.nl-form-cta button{width:100%;max-width:340px;}
+}
+</style>
+
+<script>
+const t = {
+  es:{
+    nav_inicio:'Inicio',nav_asoc:'La Asociación',nav_rest:'Restaurantes',
+    nav_premios:'Premios',nav_eventos:'Eventos',nav_blog:'Blog Gourmet',nav_contacto:'Contacto',
+    nav_quienes:'Quiénes somos',nav_como:'Cómo funcionamos',nav_sistema:'El sistema de valoración',
+    nav_visites:'Visitas 2025–26',nav_historic:'Histórico de visitas',
+    nav_gastronia:'Trofeo Gastronia',nav_bacus:'Premio Bacus',nav_palmares:'Palmarés histórico',
+    nav_cenes:'Cenas especiales',nav_cates:'Catas & Visitas',nav_calendari:'Calendario',
+    nav_rest_short:'Restaurantes',nav_premios_short:'Premios',
+    footer_desc:'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',
+    footer_nav:'Navegación',footer_legal:'Legal',footer_contacte:'Contacto',
+    footer_avis:'Aviso Legal',footer_privacitat:'Política de Privacidad',footer_cookies:'Política de Cookies',
+    footer_copy:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',
+    nl_kicker:'Newsletter',
+    nl_h1:'La gastronomía del Camp de Tarragona, <em>en tu correo</em>',
+    nl_sub:'Crónicas de restaurante, vinos y novedades gastronómicas cada quince días. Sin spam. Sin ruido. Solo lo bueno.',
+    nl_ph:'hola@tucorreo.com',
+    nl_btn:'Apuntarme',
+    nl_legal:'Sin spam · Baja cuando quieras · Gratis',
+    f1_t:'Quincenal',f1_p:'Solo cuando hay algo interesante que contar. Cada quince días, no más.',
+    f2_t:'Solo lo bueno',f2_p:'Crónicas detalladas de restaurantes visitados, catas de vino y eventos gastronómicos.',
+    f3_t:'Sin spam',f3_p:'Tu correo no se comparte con nadie. Baja cuando quieras con un clic.',
+    prev_label:'Últimas entregas',prev_title:'Esto es lo que recibirás',
+    blog_cta:'Ver todas las crónicas',
+    cta_h2:'¿Todavía dudas?',
+    cta_p:'Únete a los lectores de Gourmets de Tarragona. La próxima crónica llega pronto.',
+    cta_note:'Sin spam · Gratis · Baja cuando quieras',
+  },
+  ca:{
+    nav_inicio:'Inici',nav_asoc:'L\'Associació',nav_rest:'Restaurants',
+    nav_premios:'Premis',nav_eventos:'Esdeveniments',nav_blog:'Blog Gourmet',nav_contacto:'Contacte',
+    nav_quienes:'Qui som',nav_como:'Com funcionem',nav_sistema:'El sistema de valoració',
+    nav_visites:'Visites 2025–26',nav_historic:'Històric de visites',
+    nav_gastronia:'Trofeu Gastronia',nav_bacus:'Premi Bacus',nav_palmares:'Palmarès històric',
+    nav_cenes:'Sopars especials',nav_cates:'Tasts & Visites',nav_calendari:'Calendari',
+    nav_rest_short:'Restaurants',nav_premios_short:'Premis',
+    footer_desc:'Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.',
+    footer_nav:'Navegació',footer_legal:'Legal',footer_contacte:'Contacte',
+    footer_avis:'Avís Legal',footer_privacitat:'Política de Privacitat',footer_cookies:'Política de Cookies',
+    footer_copy:'© 2026 Gourmets de Tarragona · Tots els drets reservats',
+    nl_kicker:'Newsletter',
+    nl_h1:'La gastronomia del Camp de Tarragona, <em>al teu correu</em>',
+    nl_sub:'Cròniques de restaurant, vins i novetats gastronòmiques cada quinze dies. Sense spam. Sense soroll. Només el bo.',
+    nl_ph:'hola@elteucorreu.com',
+    nl_btn:'Apuntar-me',
+    nl_legal:'Sense spam · Baixa quan vulguis · Gratuït',
+    f1_t:'Quinzenal',f1_p:'Només quan hi ha alguna cosa interessant a explicar. Cada quinze dies, no més.',
+    f2_t:'Només el bo',f2_p:'Cròniques detallades de restaurants visitats, tasts de vi i esdeveniments gastronòmics.',
+    f3_t:'Sense spam',f3_p:'El teu correu no es comparteix amb ningú. Baixa quan vulguis amb un clic.',
+    prev_label:'Últimes entregues',prev_title:'Això és el que rebràs',
+    blog_cta:'Veure totes les cròniques',
+    cta_h2:'Encara dubtes?',
+    cta_p:'Uneix-te als lectors de Gourmets de Tarragona. La pròxima crònica arriba aviat.',
+    cta_note:'Sense spam · Gratuït · Baixa quan vulguis',
+  }
+};
+function getLang(){return localStorage.getItem('gdt-lang')||'es';}
+function setLang(l){
+  document.querySelectorAll('.t').forEach(el=>{
+    const k=el.dataset[l];
+    if(k!==undefined) el.innerHTML=k;
+  });
+  document.getElementById('html-root').lang=l;
+}
+document.addEventListener('DOMContentLoaded',()=>{setLang(getLang());});
+</script>
+</head>
+<body>
+
+<!-- NAV (idèntica a la resta del web) -->
+<nav class="nav" id="main-nav" role="navigation" aria-label="Navegació principal">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo" aria-label="Gourmets de Tarragona — Inici">
+      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona" class="nav-logo-img" width="180" height="48" loading="eager">
+    </a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Obrir menú" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-menu" id="nav-menu" role="menubar">
+      <div class="nav-item nav-dropdown" role="none">
+        <button class="nav-link nav-dropbtn t" data-es="La Asociación" data-ca="L'Associació" role="menuitem" aria-haspopup="true" aria-expanded="false">La Asociación</button>
+        <div class="nav-dropdown-content" role="menu">
+          <a href="associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som" role="menuitem">Quiénes somos</a>
+        </div>
+      </div>
+      <div class="nav-item" role="none"><a href="restaurants.html" class="nav-link t" data-es="Restaurantes" data-ca="Restaurants" role="menuitem">Restaurantes</a></div>
+      <div class="nav-item nav-dropdown" role="none">
+        <button class="nav-link nav-dropbtn t" data-es="Premios" data-ca="Premis" role="menuitem" aria-haspopup="true" aria-expanded="false">Premios</button>
+        <div class="nav-dropdown-content" role="menu">
+          <a href="premis.html#gastronia" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia" role="menuitem">Trofeo Gastronia</a>
+          <a href="premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus" role="menuitem">Premio Bacus</a>
+        </div>
+      </div>
+      <div class="nav-item" role="none"><a href="esdeveniments.html" class="nav-link t" data-es="Eventos" data-ca="Esdeveniments" role="menuitem">Eventos</a></div>
+      <div class="nav-item" role="none"><a href="blog.html" class="nav-link t" data-es="Blog Gourmet" data-ca="Blog Gourmet" role="menuitem">Blog Gourmet</a></div>
+      <div class="nav-item" role="none"><a href="contacte.html" class="nav-link t" data-es="Contacto" data-ca="Contacte" role="menuitem">Contacto</a></div>
+      <div class="nav-lang" role="none">
+        <button class="lang-btn" id="btn-es" onclick="localStorage.setItem('gdt-lang','es');setLang('es');document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active')">ES</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" id="btn-ca" onclick="localStorage.setItem('gdt-lang','ca');setLang('ca');document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active')">CA</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="nl-hero">
+  <div class="nl-hero-bg"></div>
+  <div class="nl-hero-grad"></div>
+  <div class="nl-hero-inner">
+    <div class="nl-deco" aria-hidden="true">✦ ✦ ✦</div>
+    <p class="nl-kicker t" data-es="Newsletter" data-ca="Newsletter">Newsletter</p>
+    <h1 class="t" data-es="La gastronomía del Camp de Tarragona, <em>en tu correo</em>" data-ca="La gastronomia del Camp de Tarragona, <em>al teu correu</em>">
+      La gastronomía del Camp de Tarragona, <em>en tu correo</em>
+    </h1>
+    <p class="nl-hero-sub t" data-es="Crónicas de restaurante, vinos y novedades gastronómicas cada quince días. Sin spam. Sin ruido. Solo lo bueno." data-ca="Cròniques de restaurant, vins i novetats gastronòmiques cada quinze dies. Sense spam. Sense soroll. Només el bo.">
+      Crónicas de restaurante, vinos y novedades gastronómicas cada quince días. Sin spam. Sin ruido. Solo lo bueno.
+    </p>
+    <form class="nl-form-hero" action="https://fe0daaff.sibforms.com/serve/MUIFAMSYb3h5hzjCYPN-GiItYcbChszEiV-2Ci_yU_3sfesrzldVY_nwtUN7RfIi41NyXnMu3sl9-ob6jEY1i8D_lfWkjTx2BPx-DdkMBNRhY_UX6RYT8Q6OtL_RSXdw1Nxw1cQMI50KFEuV5agn87hBqKVShQPjzSVyuaqjxyjEXiMI4ec7wdY55xdTRqGDyO937oVLzoaKi6MUtQ==" method="post">
+      <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" style="display:none;position:absolute;left:-9999px">
+      <input type="hidden" name="locale" id="form-locale" value="es">
+      <input type="email" name="EMAIL" required
+             class="t" data-es="hola@tucorreo.com" data-ca="hola@elteucorreu.com"
+             placeholder="hola@tucorreo.com" autocomplete="email">
+      <button type="submit" class="t" data-es="Apuntarme" data-ca="Apuntar-me">Apuntarme</button>
+    </form>
+    <p class="nl-legal t" data-es="Sin spam · Baja cuando quieras · Gratis" data-ca="Sense spam · Baixa quan vulguis · Gratuït">Sin spam · Baja cuando quieras · Gratis</p>
+  </div>
+</section>
+
+<!-- ══ FEATURES ══ -->
+<section class="nl-features">
+  <div class="nl-features-inner">
+    <div class="nl-feat">
+      <div class="nl-feat-ico" aria-hidden="true"><i class="fa-regular fa-calendar"></i></div>
+      <h3 class="nl-feat-title t" data-es="Quincenal" data-ca="Quinzenal">Quincenal</h3>
+      <p class="nl-feat-text t" data-es="Solo cuando hay algo interesante que contar. Cada quince días, no más." data-ca="Només quan hi ha alguna cosa interessant a explicar. Cada quinze dies, no més.">Solo cuando hay algo interesante que contar. Cada quince días, no más.</p>
+    </div>
+    <div class="nl-feat">
+      <div class="nl-feat-ico" aria-hidden="true"><i class="fa-regular fa-star"></i></div>
+      <h3 class="nl-feat-title t" data-es="Solo lo bueno" data-ca="Només el bo">Solo lo bueno</h3>
+      <p class="nl-feat-text t" data-es="Crónicas detalladas de restaurantes visitados, catas de vino y eventos gastronómicos." data-ca="Cròniques detallades de restaurants visitats, tasts de vi i esdeveniments gastronòmics.">Crónicas detalladas de restaurantes visitados, catas de vino y eventos gastronómicos.</p>
+    </div>
+    <div class="nl-feat">
+      <div class="nl-feat-ico" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
+      <h3 class="nl-feat-title t" data-es="Sin spam" data-ca="Sense spam">Sin spam</h3>
+      <p class="nl-feat-text t" data-es="Tu correo no se comparte con nadie. Baja cuando quieras con un clic." data-ca="El teu correu no es comparteix amb ningú. Baixa quan vulguis amb un clic.">Tu correo no se comparte con nadie. Baja cuando quieras con un clic.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PREVIEW DE POSTS ══ -->
+<section class="nl-preview">
+  <div class="nl-preview-inner">
+    <p class="nl-section-label t" data-es="Últimas entregas" data-ca="Últimes entregues">Últimas entregas</p>
+    <h2 class="nl-section-title t" data-es="Esto es lo que recibirás" data-ca="Això és el que rebràs">Esto es lo que recibirás</h2>
+    <div class="nl-posts">
+
+      <article class="nl-post">
+        <div class="nl-post-img">
+          <img src="https://gourmetsdetarragona.com/wp-content/uploads/2025/06/brumma-resort-infinitum.jpg"
+               alt="Brumma 2026 — Infinitum Resort"
+               loading="lazy" width="600" height="400"
+               onerror="this.src='../assets/img/hero.jpg'">
+        </div>
+        <div class="nl-post-body">
+          <p class="nl-post-date">Juliol 2026</p>
+          <h3 class="nl-post-title"><a href="../entrades/brumma-cronica-2026.html" style="color:inherit;text-decoration:none">Brumma 2026 — la cocina del mar en el Infinitum Resort</a></h3>
+          <p class="nl-post-excerpt">El restaurante de Costa Daurada que está redefiniendo los sabores del mediterráneo con una propuesta de cocina de autor...</p>
+        </div>
+      </article>
+
+      <article class="nl-post">
+        <div class="nl-post-img">
+          <img src="https://gourmetsdetarragona.com/wp-content/uploads/2025/06/el-celleret-priorat.jpg"
+               alt="El Celleret — Priorat"
+               loading="lazy" width="600" height="400"
+               onerror="this.src='../assets/img/hero.jpg'">
+        </div>
+        <div class="nl-post-body">
+          <p class="nl-post-date">Juny 2026</p>
+          <h3 class="nl-post-title"><a href="../entrades/el-celleret-priorat.html" style="color:inherit;text-decoration:none">El Celleret — tradició i innovació al Priorat</a></h3>
+          <p class="nl-post-excerpt">Una experiència gastronòmica única en el cor de la denominació d'origen més prestigiosa de Catalunya...</p>
+        </div>
+      </article>
+
+      <article class="nl-post">
+        <div class="nl-post-img">
+          <img src="https://gourmetsdetarragona.com/wp-content/uploads/2025/05/chunks-wreak-menu-gastronomy-39826.jpeg"
+               alt="Gastronomia al Camp de Tarragona"
+               loading="lazy" width="600" height="400"
+               onerror="this.src='../assets/img/hero.jpg'">
+        </div>
+        <div class="nl-post-body">
+          <p class="nl-post-date">Maig 2026</p>
+          <h3 class="nl-post-title"><a href="blog.html" style="color:inherit;text-decoration:none">Cates i vins del Camp de Tarragona 2026</a></h3>
+          <p class="nl-post-excerpt">Selecció dels millors vins de la temporada, visitats i valorats pels membres de l'associació...</p>
+        </div>
+      </article>
+
+    </div>
+    <div class="nl-posts-cta">
+      <a href="blog.html" class="t" data-es="Ver todas las crónicas" data-ca="Veure totes les cròniques">Ver todas las crónicas</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA FINAL ══ -->
+<section class="nl-cta">
+  <div class="nl-cta-inner">
+    <div class="nl-cta-deco" aria-hidden="true">✦</div>
+    <h2 class="t" data-es="¿Todavía dudas?" data-ca="Encara dubtes?">¿Todavía dudas?</h2>
+    <p class="t" data-es="Únete a los lectores de Gourmets de Tarragona. La próxima crónica llega pronto." data-ca="Uneix-te als lectors de Gourmets de Tarragona. La pròxima crònica arriba aviat.">Únete a los lectores de Gourmets de Tarragona. La próxima crónica llega pronto.</p>
+    <form class="nl-form-cta" action="https://fe0daaff.sibforms.com/serve/MUIFAMSYb3h5hzjCYPN-GiItYcbChszEiV-2Ci_yU_3sfesrzldVY_nwtUN7RfIi41NyXnMu3sl9-ob6jEY1i8D_lfWkjTx2BPx-DdkMBNRhY_UX6RYT8Q6OtL_RSXdw1Nxw1cQMI50KFEuV5agn87hBqKVShQPjzSVyuaqjxyjEXiMI4ec7wdY55xdTRqGDyO937oVLzoaKi6MUtQ==" method="post">
+      <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" style="display:none;position:absolute;left:-9999px">
+      <input type="hidden" name="locale" value="es">
+      <input type="email" name="EMAIL" required
+             class="t" data-es="hola@tucorreo.com" data-ca="hola@elteucorreu.com"
+             placeholder="hola@tucorreo.com" autocomplete="email">
+      <button type="submit" class="t" data-es="Apuntarme" data-ca="Apuntar-me">Apuntarme</button>
+    </form>
+    <p class="nl-cta-note t" data-es="Sin spam · Gratis · Baja cuando quieras" data-ca="Sense spam · Gratuït · Baixa quan vulguis">Sin spam · Gratis · Baja cuando quieras</p>
+  </div>
+</section>
+
+<!-- FOOTER (idèntic als altres pàgines) -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="../index.html" aria-label="Gourmets de Tarragona — Inici">
+        <img src="../assets/img/logo.png" alt="Gourmets de Tarragona" class="footer-logo" width="160" height="42" loading="lazy">
+      </a>
+      <p class="footer-desc t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
+    </div>
+    <nav class="footer-nav-col" aria-label="Navegació peu de pàgina">
+      <h4 class="footer-col-title t" data-es="Navegación" data-ca="Navegació">Navegación</h4>
+      <ul>
+        <li><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></li>
+        <li><a href="blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li>
+        <li><a href="restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li>
+        <li><a href="premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li>
+        <li><a href="newsletter.html" class="t" data-es="Newsletter" data-ca="Newsletter">Newsletter</a></li>
+      </ul>
+    </nav>
+    <div class="footer-nav-col">
+      <h4 class="footer-col-title t" data-es="Legal" data-ca="Legal">Legal</h4>
+      <ul>
+        <li><a href="avis-legal.html" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li>
+        <li><a href="privacitat.html" class="t" data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a></li>
+        <li><a href="cookies.html" class="t" data-es="Política de Cookies" data-ca="Política de Cookies">Política de Cookies</a></li>
+      </ul>
+    </div>
+    <div class="footer-nav-col">
+      <h4 class="footer-col-title t" data-es="Contacto" data-ca="Contacte">Contacto</h4>
+      <ul>
+        <li><a href="contacte.html">gourmetsdetarragona@gourmetsdetarragona.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="t" data-es="© 2026 Gourmets de Tarragona · Todos los derechos reservados" data-ca="© 2026 Gourmets de Tarragona · Tots els drets reservats">© 2026 Gourmets de Tarragona · Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<script src="../assets/js/nav.js"></script>
+<script>
+// Sync lang buttons
+document.addEventListener('DOMContentLoaded',()=>{
+  const l=getLang();
+  document.getElementById('btn-'+l)?.classList.add('active');
+  // Sync form locale hidden fields
+  document.querySelectorAll('input[name="locale"]').forEach(i=>i.value=l);
+});
+</script>
+</body>
+</html>
