@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Gourmets de Tarragona — Blog Gourmet</title>
+    <link>https://www.gourmetsdetarragona.com/pages/blog.html</link>
+    <description>Cróniques de restaurant, vins i gastronomia del Camp de Tarragona.</description>
+    <language>es-ES</language>
+    <atom:link href="https://www.gourmetsdetarragona.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Brumma 2026 — la cocina del mar en el Infinitum Resort</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/brumma-cronica-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/brumma-cronica-2026.html</guid>
+      <pubDate>Sat, 05 Jul 2026 10:00:00 +0200</pubDate>
+      <description>La quinta visita del recorrido cierra con una cocina de mar elegante y sin artificios en el resort de Salou.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/brumma/01_brumma_sala_interior.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>Brumma, nueva parada del recorrido — Infinitum Resort Salou</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/brumma-previa-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/brumma-previa-2026.html</guid>
+      <pubDate>Sun, 28 Jun 2026 10:00:00 +0200</pubDate>
+      <description>El restaurante del resort cinco estrellas de Salou se incorpora al recorrido Gourmet 2026.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/brumma/02_brumma_sala_vistas.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>Cine y gastronomía — las mejores películas para comer mejor</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/cine-gastronomia-peliculas.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/cine-gastronomia-peliculas.html</guid>
+      <pubDate>Thu, 25 Jun 2026 10:00:00 +0200</pubDate>
+      <description>Una selección de films que han puesto la mesa en el centro de la narración y han cambiado cómo miramos la comida.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/cine/cine-gastronomia-mesa.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>La gamba de Tarragona — producto, memoria e identidad</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/gamba-tarragona-producte.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/gamba-tarragona-producte.html</guid>
+      <pubDate>Sun, 22 Jun 2026 10:00:00 +0200</pubDate>
+      <description>El crustáceo que define la cocina del puerto de Tarragona: temporada, pesca, cocina y dónde encontrarla en su mejor punto.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/gamba/gamba-roja-crua-plat.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>Tokaji Aszú — el vino de los reyes, ahora en el Priorat</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/tokaji-aszu-vi-dels-reis.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/tokaji-aszu-vi-dels-reis.html</guid>
+      <pubDate>Sat, 20 Jun 2026 10:00:00 +0200</pubDate>
+      <description>Vega Sicilia y Oremus traen la tradición húngara a un territorio que ya entiende el vino como legado.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/tokaj/tokaj-bodega-moho-botelles.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>El calçot de Valls — historia de una tradición que se come de pie</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/calcot-valls-historia.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/calcot-valls-historia.html</guid>
+      <pubDate>Thu, 18 Jun 2026 10:00:00 +0200</pubDate>
+      <description>El origen, la calçotada, la salsa romesco y por qué el calçot es mucho más que una cebolla.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/calcot/calcot-servits-romesco.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>Reus, capital mundial del vermut</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/vermut-reus-capital.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/vermut-reus-capital.html</guid>
+      <pubDate>Mon, 15 Jun 2026 10:00:00 +0200</pubDate>
+      <description>Cómo Reus se convirtió en el centro productor del vermut europeo en el siglo XIX y qué legado queda.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/vermut/vermut-copas-elaboradores.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>Cervus, Reus — la cocina del equilibrio</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/cervus-cronica-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/cervus-cronica-2026.html</guid>
+      <pubDate>Wed, 10 Jun 2026 10:00:00 +0200</pubDate>
+      <description>Nil Bono y Lucía Fernández ofrecen una cuarta visita que confirma Cervus como uno de los grandes del recorrido.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/cervus/hero.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>A mitad de camino — balance de una temporada intensa</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/ecuador-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/ecuador-2026.html</guid>
+      <pubDate>Mon, 08 Jun 2026 10:00:00 +0200</pubDate>
+      <description>Cinco restaurantes visitados, dos previsiones abiertas y una reflexión sobre lo que la temporada 2026 ya nos ha enseñado.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/cervus/cuina.jpeg" medium="image"/>
+    </item>
+
+    <item>
+      <title>La coca con cerezas de Corpus — dulce de fiesta y de memoria</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/coca-amb-cireres-corpus-reus.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/coca-amb-cireres-corpus-reus.html</guid>
+      <pubDate>Fri, 05 Jun 2026 10:00:00 +0200</pubDate>
+      <description>Una tradición reusenca que une la fiesta del Corpus, la fruta de temporada y la pastelería popular del Camp.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/coca-cireres/coca-cireres-forn-gourmet.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>Cervus, Reus — Nil Bono y el menú de temporada</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/cervus-previa-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/cervus-previa-2026.html</guid>
+      <pubDate>Mon, 01 Jun 2026 10:00:00 +0200</pubDate>
+      <description>Preview de la cuarta visita al restaurante de Reus, donde Nil Bono y Lucía Fernández hacen cocina de mercado con precisión.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/cervus/exterior.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>Vinos brisat — el orange wine de la Terra Alta</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/vins-brisats-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/vins-brisats-2026.html</guid>
+      <pubDate>Wed, 28 May 2026 10:00:00 +0200</pubDate>
+      <description>La maceración con pieles vuelve a la Terra Alta: crianza, textura y con qué platos funcionan mejor.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/brisats/brisat-del-coster.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>El menjablanc — postre medieval de Reus que resiste</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/menjablanc-reus-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/menjablanc-reus-2026.html</guid>
+      <pubDate>Sun, 25 May 2026 10:00:00 +0200</pubDate>
+      <description>El origen árabe, la receta original y cómo los chefs del Camp han recuperado este dulce de almidón y almendra.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/menjablanc/hero-menjablanc.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>Tendencias gastronómicas 2026 — lo que viene y lo que se va</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/tendencias-gastronomiques-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/tendencias-gastronomiques-2026.html</guid>
+      <pubDate>Wed, 20 May 2026 10:00:00 +0200</pubDate>
+      <description>Fermentación, cocina de fuego, zero waste y el retorno a la sencillez: panorama de los movimientos que marcan el año.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/tendencias/fermentados.jpeg" medium="image"/>
+    </item>
+
+    <item>
+      <title>Pét-nat y método ancestral — el vino sin filtro del Camp</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/vins-ancestrals-metode.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/vins-ancestrals-metode.html</guid>
+      <pubDate>Sun, 18 May 2026 10:00:00 +0200</pubDate>
+      <description>Cómo funciona la segunda fermentación en botella y por qué los productores del Camp se han apuntado con fuerza.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/img-ancestrals/ampolles-tap-corona.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>El Terrat, Tarragona — Moha Quach y el Sol Repsol confirmado</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/terrat-cronica-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/terrat-cronica-2026.html</guid>
+      <pubDate>Fri, 15 May 2026 10:00:00 +0200</pubDate>
+      <description>Tercera visita al restaurante del puerto. La cocina de Moha ha ganado en profundidad e identidad territorial.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/terrat/moha-cuina.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>Jean Leon y Ceferino Carrión — el Penedès con denominación de origen personal</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/jean-leon-ceferino-carrion.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/jean-leon-ceferino-carrion.html</guid>
+      <pubDate>Tue, 12 May 2026 10:00:00 +0200</pubDate>
+      <description>La bodega fundada por un emigrante español en Hollywood y su legado de Chardonnay y Cabernet en el Penedès.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/jeanleon/jean-leon-central-park.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>Los Cinco Magníficos del Priorat — cinco bodegas que lo cambiaron todo</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/los-5-magnificos-priorat.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/los-5-magnificos-priorat.html</guid>
+      <pubDate>Fri, 08 May 2026 10:00:00 +0200</pubDate>
+      <description>Álvaro Palacios, Clos Mogador, Clos de l'Obac, Vall Llach y Clos Martinet: la revolución que puso el Priorat en el mapa.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/priorat/loscincomagnificos.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>8 libros de gastronomía para Sant Jordi 2026</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/santjordi-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/santjordi-2026.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:00:00 +0200</pubDate>
+      <description>Receta, ensayo, memoria y viaje: una selección de títulos para regalar o regalarse este 23 de abril.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/santjordi/santjordi-calcotada.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>El Terrat — Moha Quach y el Sol Repsol frente al puerto</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/terrat-previa-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/terrat-previa-2026.html</guid>
+      <pubDate>Tue, 28 Apr 2026 10:00:00 +0200</pubDate>
+      <description>Preview de la tercera visita al restaurante de Moha Quach, galardonado con Sol Repsol y con vistas al Mediterráneo.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/terrat/exterior.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>El vino en la provincia de Tarragona — tierra, DO y productores</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/vino-tarragona.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/vino-tarragona.html</guid>
+      <pubDate>Wed, 15 Apr 2026 10:00:00 +0200</pubDate>
+      <description>Una guía de las denominaciones de origen de la demarcación: Priorat, Terra Alta, Conca de Barberà, Tarragona y Penedès.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/vins/paisatge-tarragona.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>La Goleta, Salou — 40 años de cocina de mar en pie</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/la-goleta-cronica-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/la-goleta-cronica-2026.html</guid>
+      <pubDate>Sun, 12 Apr 2026 10:00:00 +0200</pubDate>
+      <description>La crónica de la cena de los 40 años: un menú conmemorativo que hace honor a la trayectoria de un clásico de la Costa Daurada.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/goleta/aniversari-40.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>La Goleta, Salou — 40 aniversario junto al mar</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/la-goleta-previa-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/la-goleta-previa-2026.html</guid>
+      <pubDate>Sun, 05 Apr 2026 10:00:00 +0200</pubDate>
+      <description>Preview de la visita al restaurante familiar de Salou que celebra cuatro décadas con un menú conmemorativo.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/goleta/capellans-beach.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>El romesco — la salsa que nació en el Camp de Tarragona</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/el-romesco.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/el-romesco.html</guid>
+      <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
+      <description>Origen, ingredientes, variantes y por qué el romesco es el ADN culinario del Camp: una salsa con historia de siglos.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/romesco/romesco-guisat.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>Kema, Cambrils — la primera visita del recorrido 2026</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/kema-cronica-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/kema-cronica-2026.html</guid>
+      <pubDate>Tue, 10 Mar 2026 10:00:00 +0100</pubDate>
+      <description>La crónica de la apertura de temporada en el restaurante de Cambrils: una cocina de proximidad con proyección clara.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/kema/aries-1.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>El moretum — la pasta de hierbas de los romanos de Tarraco</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/el-moretum.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/el-moretum.html</guid>
+      <pubDate>Thu, 05 Mar 2026 10:00:00 +0100</pubDate>
+      <description>Un precursor del pesto descrito por Virgilio y que los romanos fabricaban en Tarraco: ingredientes, receta y legado.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/moretum/moretum-hero.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>El garum de Tarraco — salsa de Roma en el Camp</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/el-garum.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/el-garum.html</guid>
+      <pubDate>Sat, 28 Feb 2026 10:00:00 +0100</pubDate>
+      <description>La salsa fermentada que los romanos hacían en Tarraco y que aún sobrevive en la memoria del territorio.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/garum/garum-hero.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>Kema, Cambrils — primera parada del recorrido 2026</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/kema-previa-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/kema-previa-2026.html</guid>
+      <pubDate>Fri, 20 Feb 2026 10:00:00 +0100</pubDate>
+      <description>Preview de la visita inaugural de la temporada al restaurante de cocina de proximidad de Cambrils.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/kema/aries-2.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>Gala de Premios 2025 — Vermuts Rofes, Reus</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/gala-premis-2025.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/gala-premis-2025.html</guid>
+      <pubDate>Thu, 10 Dec 2025 10:00:00 +0100</pubDate>
+      <description>Crónica de la gala de entrega del Trofeo Gastronia y el Premio Bacus en Vermuts Rofes de Reus.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/gala2025/gastronia1-buidasacs.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>¿Qué es la Gastronia? El premio que reconoce la excelencia local</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/que-es-la-gastronia.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/que-es-la-gastronia.html</guid>
+      <pubDate>Sat, 15 Nov 2025 10:00:00 +0100</pubDate>
+      <description>El origen, el sistema de valoración y el significado del Trofeo Gastronia, el premio de cocina del Camp de Tarragona.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/gala2025/bacus-cirerets.jpg" medium="image"/>
+    </item>
+
+  </channel>
+</rss>
