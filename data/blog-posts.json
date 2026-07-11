@@ -8,7 +8,8 @@
     "categoria": "cronica",
     "data": "2026-07-05",
     "min_lectura": 6,
-    "color_bg": "#0D1E2F"
+    "color_bg": "#0D1E2F",
+    "img": "assets/img/brumma/01_brumma_sala_interior.jpg"
   },
   {
     "slug": "brumma-previa-2026",
@@ -19,7 +20,8 @@
     "categoria": "previa",
     "data": "2026-06-28",
     "min_lectura": 4,
-    "color_bg": "#1C2E3E"
+    "color_bg": "#1C2E3E",
+    "img": "assets/img/brumma/02_brumma_sala_vistas.jpg"
   },
   {
     "slug": "cine-gastronomia-peliculas",
@@ -30,7 +32,8 @@
     "categoria": "cultura",
     "data": "2026-06-25",
     "min_lectura": 5,
-    "color_bg": "#1A1006"
+    "color_bg": "#1A1006",
+    "img": "assets/img/cine/cine-gastronomia-mesa.jpg"
   },
   {
     "slug": "gamba-tarragona-producte",
@@ -41,7 +44,8 @@
     "categoria": "curiositats",
     "data": "2026-06-22",
     "min_lectura": 5,
-    "color_bg": "#2E1A0D"
+    "color_bg": "#2E1A0D",
+    "img": "assets/img/gamba/gamba-roja-crua-plat.jpg"
   },
   {
     "slug": "tokaji-aszu-vi-dels-reis",
@@ -52,7 +56,8 @@
     "categoria": "vi",
     "data": "2026-06-20",
     "min_lectura": 5,
-    "color_bg": "#1A0D2E"
+    "color_bg": "#1A0D2E",
+    "img": "assets/img/tokaj/tokaj-bodega-moho-botelles.jpg"
   },
   {
     "slug": "calcot-valls-historia",
@@ -63,7 +68,8 @@
     "categoria": "curiositats",
     "data": "2026-06-18",
     "min_lectura": 4,
-    "color_bg": "#1C1806"
+    "color_bg": "#1C1806",
+    "img": "assets/img/calcot/calcot-servits-romesco.jpg"
   },
   {
     "slug": "vermut-reus-capital",
@@ -74,7 +80,8 @@
     "categoria": "curiositats",
     "data": "2026-06-15",
     "min_lectura": 4,
-    "color_bg": "#1A0A0D"
+    "color_bg": "#1A0A0D",
+    "img": "assets/img/vermut/vermut-copas-elaboradores.jpg"
   },
   {
     "slug": "cervus-cronica-2026",
@@ -85,7 +92,8 @@
     "categoria": "cronica",
     "data": "2026-06-10",
     "min_lectura": 6,
-    "color_bg": "#1C2210"
+    "color_bg": "#1C2210",
+    "img": "assets/img/cervus/hero.jpg"
   },
   {
     "slug": "ecuador-2026",
@@ -96,7 +104,8 @@
     "categoria": "noticia",
     "data": "2026-06-08",
     "min_lectura": 4,
-    "color_bg": "#0D1E2F"
+    "color_bg": "#0D1E2F",
+    "img": "assets/img/cervus/cuina.jpeg"
   },
   {
     "slug": "coca-amb-cireres-corpus-reus",
@@ -107,7 +116,8 @@
     "categoria": "curiositats",
     "data": "2026-06-05",
     "min_lectura": 3,
-    "color_bg": "#2E1010"
+    "color_bg": "#2E1010",
+    "img": "assets/img/coca-cireres/coca-cireres-forn-gourmet.jpg"
   },
   {
     "slug": "cervus-previa-2026",
@@ -118,7 +128,8 @@
     "categoria": "previa",
     "data": "2026-06-01",
     "min_lectura": 3,
-    "color_bg": "#1C2210"
+    "color_bg": "#1C2210",
+    "img": "assets/img/cervus/exterior.jpg"
   },
   {
     "slug": "vins-brisats-2026",
@@ -129,7 +140,8 @@
     "categoria": "vi",
     "data": "2026-05-28",
     "min_lectura": 4,
-    "color_bg": "#1A1206"
+    "color_bg": "#1A1206",
+    "img": "assets/img/brisats/brisat-del-coster.jpg"
   },
   {
     "slug": "menjablanc-reus-2026",
@@ -140,7 +152,8 @@
     "categoria": "curiositats",
     "data": "2026-05-25",
     "min_lectura": 4,
-    "color_bg": "#1C1810"
+    "color_bg": "#1C1810",
+    "img": "assets/img/menjablanc/hero-menjablanc.jpg"
   },
   {
     "slug": "tendencias-gastronomiques-2026",
@@ -151,7 +164,8 @@
     "categoria": "noticia",
     "data": "2026-05-20",
     "min_lectura": 5,
-    "color_bg": "#0D1E2F"
+    "color_bg": "#0D1E2F",
+    "img": "assets/img/tendencias/fermentados.jpeg"
   },
   {
     "slug": "vins-ancestrals-metode",
@@ -162,7 +176,8 @@
     "categoria": "vi",
     "data": "2026-05-18",
     "min_lectura": 4,
-    "color_bg": "#1A1206"
+    "color_bg": "#1A1206",
+    "img": "assets/img/img-ancestrals/ampolles-tap-corona.jpg"
   },
   {
     "slug": "terrat-cronica-2026",
@@ -173,7 +188,8 @@
     "categoria": "cronica",
     "data": "2026-05-15",
     "min_lectura": 7,
-    "color_bg": "#0D1E2F"
+    "color_bg": "#0D1E2F",
+    "img": "assets/img/terrat/moha-cuina.jpg"
   },
   {
     "slug": "jean-leon-ceferino-carrion",
@@ -184,7 +200,8 @@
     "categoria": "vi",
     "data": "2026-05-12",
     "min_lectura": 5,
-    "color_bg": "#1A0D2E"
+    "color_bg": "#1A0D2E",
+    "img": "assets/img/jeanleon/jean-leon-central-park.jpg"
   },
   {
     "slug": "los-5-magnificos-priorat",
@@ -195,7 +212,8 @@
     "categoria": "vi",
     "data": "2026-05-08",
     "min_lectura": 6,
-    "color_bg": "#2E0D1A"
+    "color_bg": "#2E0D1A",
+    "img": "assets/img/priorat/loscincomagnificos.jpg"
   },
   {
     "slug": "santjordi-2026",
@@ -206,7 +224,8 @@
     "categoria": "cultura",
     "data": "2026-04-20",
     "min_lectura": 4,
-    "color_bg": "#1C1010"
+    "color_bg": "#1C1010",
+    "img": "assets/img/santjordi/santjordi-calcotada.jpg"
   },
   {
     "slug": "terrat-previa-2026",
@@ -217,7 +236,8 @@
     "categoria": "previa",
     "data": "2026-04-28",
     "min_lectura": 3,
-    "color_bg": "#0D1E2F"
+    "color_bg": "#0D1E2F",
+    "img": "assets/img/terrat/exterior.jpg"
   },
   {
     "slug": "vino-tarragona",
@@ -228,7 +248,8 @@
     "categoria": "vi",
     "data": "2026-04-15",
     "min_lectura": 6,
-    "color_bg": "#1A0D2E"
+    "color_bg": "#1A0D2E",
+    "img": "assets/img/vins/paisatge-tarragona.jpg"
   },
   {
     "slug": "la-goleta-cronica-2026",
@@ -239,7 +260,8 @@
     "categoria": "cronica",
     "data": "2026-04-12",
     "min_lectura": 6,
-    "color_bg": "#0A1A2E"
+    "color_bg": "#0A1A2E",
+    "img": "assets/img/goleta/aniversari-40.jpg"
   },
   {
     "slug": "la-goleta-previa-2026",
@@ -250,7 +272,8 @@
     "categoria": "previa",
     "data": "2026-04-05",
     "min_lectura": 3,
-    "color_bg": "#0A1A2E"
+    "color_bg": "#0A1A2E",
+    "img": "assets/img/goleta/capellans-beach.jpg"
   },
   {
     "slug": "el-romesco",
@@ -261,7 +284,8 @@
     "categoria": "curiositats",
     "data": "2026-03-20",
     "min_lectura": 5,
-    "color_bg": "#2E1006"
+    "color_bg": "#2E1006",
+    "img": "assets/img/romesco/romesco-guisat.jpg"
   },
   {
     "slug": "kema-cronica-2026",
@@ -272,7 +296,8 @@
     "categoria": "cronica",
     "data": "2026-03-10",
     "min_lectura": 6,
-    "color_bg": "#1C2E3E"
+    "color_bg": "#1C2E3E",
+    "img": "assets/img/kema/aries-1.jpg"
   },
   {
     "slug": "el-moretum",
@@ -283,7 +308,8 @@
     "categoria": "curiositats",
     "data": "2026-03-05",
     "min_lectura": 4,
-    "color_bg": "#1C1A0A"
+    "color_bg": "#1C1A0A",
+    "img": "assets/img/moretum/moretum-hero.jpg"
   },
   {
     "slug": "el-garum",
@@ -294,7 +320,8 @@
     "categoria": "curiositats",
     "data": "2026-02-28",
     "min_lectura": 4,
-    "color_bg": "#1C1A0A"
+    "color_bg": "#1C1A0A",
+    "img": "assets/img/garum/garum-hero.jpg"
   },
   {
     "slug": "kema-previa-2026",
@@ -305,7 +332,8 @@
     "categoria": "previa",
     "data": "2026-02-20",
     "min_lectura": 3,
-    "color_bg": "#1C2E3E"
+    "color_bg": "#1C2E3E",
+    "img": "assets/img/kema/aries-2.jpg"
   },
   {
     "slug": "gala-premis-2025",
@@ -316,7 +344,8 @@
     "categoria": "event",
     "data": "2025-12-10",
     "min_lectura": 4,
-    "color_bg": "#1A0D2E"
+    "color_bg": "#1A0D2E",
+    "img": "assets/img/gala2025/gastronia1-buidasacs.jpg"
   },
   {
     "slug": "que-es-la-gastronia",
@@ -327,6 +356,7 @@
     "categoria": "noticia",
     "data": "2025-11-15",
     "min_lectura": 3,
-    "color_bg": "#0D1E2F"
+    "color_bg": "#0D1E2F",
+    "img": "assets/img/gala2025/bacus-cirerets.jpg"
   }
 ]

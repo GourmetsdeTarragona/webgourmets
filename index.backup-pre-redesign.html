@@ -93,124 +93,97 @@
 <link rel="stylesheet" href="assets/css/hero.css">
 <link rel="stylesheet" href="assets/css/seccions.css">
 <style>
-/* ── Tokens extra ── */
-:root{--navy-deep:#0D1E2F;--darkest:#080F18;--gold-rule:rgba(184,146,74,.18);}
+/* ════════════════════════════════════════
+   MEJORAS UI — Emil Kowalski philosophy
+════════════════════════════════════════ */
 
-/* ── Reduced motion ── */
+/* prefers-reduced-motion */
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;}}
 
-/* ── Keyframes ── */
+/* Keyframes */
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 @keyframes scrollBounce{0%,100%{transform:translateY(0);opacity:.6;}50%{transform:translateY(5px);opacity:1;}}
-@keyframes glowPulse{0%,100%{opacity:.7;transform:scale(1);}50%{opacity:1;transform:scale(1.05);}}
 
-/* ── Hero animations ── */
+/* ── Mobile menu — transición en lugar de display toggle ── */
+#mobileMenu{
+  position:fixed;left:0;right:0;z-index:999;
+  background:rgba(245,240,232,.97);
+  backdrop-filter:blur(8px);
+  box-shadow:0 8px 32px rgba(28,46,62,.15);
+  opacity:0;
+  transform:translateY(-8px);
+  pointer-events:none;
+  transition:opacity 180ms ease-out,transform 180ms ease-out;
+}
+#mobileMenu.open{opacity:1;transform:translateY(0);pointer-events:auto;}
+
+/* ── Hero — entrada animada escalonada ── */
 .hero-label{animation:fadeUp 600ms ease both;animation-delay:100ms;}
-.hero-title{animation:fadeUp 600ms ease both;animation-delay:200ms;text-shadow:0 2px 0 rgba(0,0,0,.3),0 6px 40px rgba(0,0,0,.7);}
-.hero-title em{text-shadow:0 0 60px rgba(184,146,74,.5),0 0 120px rgba(184,146,74,.2);}
-.hero-sub{animation:fadeUp 600ms ease both;animation-delay:320ms;}
-.hero-btns{animation:fadeUp 600ms ease both;animation-delay:430ms;}
+.hero-title{animation:fadeUp 600ms ease both;animation-delay:200ms;}
+.hero-sub  {animation:fadeUp 600ms ease both;animation-delay:320ms;}
+.hero-btns {animation:fadeUp 600ms ease both;animation-delay:430ms;}
 .hero-scroll{animation:fadeIn 800ms ease both;animation-delay:700ms;}
+
+/* ── Scroll indicator — bounce animado ── */
 .hero-scroll-line{animation:scrollBounce 1.8s ease-in-out infinite;}
 
-/* ── Hero meta bar — 3 columnas ── */
-.hero-meta{display:grid!important;grid-template-columns:repeat(3,1fr)!important;border-top:1px solid rgba(184,146,74,.14);}
-.hero-meta-item{padding:16px 5%;border-left:1px solid rgba(184,146,74,.08);font-size:.72rem;}
-.hero-meta-item:first-child{border-left:none;}
-@media(max-width:640px){.hero-meta{grid-template-columns:1fr!important;}.hero-meta-item{border-left:none;border-top:1px solid rgba(184,146,74,.08);padding:12px 5%;}.hero-meta-item:first-child{border-top:none;}}
-
-/* ── Button active feedback ── */
+/* ── Botones — feedback :active ── */
 .btn-hero-primary,.btn-hero-ghost,.btn-primary,.btn-outline{transition:background 200ms ease,border-color 200ms ease,color 200ms ease,transform 120ms ease;}
 .btn-hero-primary:active,.btn-hero-ghost:active,.btn-primary:active,.btn-outline:active{transform:scale(0.97);}
 
-/* ── STATS STRIP ── */
-.stats-strip{background:var(--navy-deep);border-top:1px solid var(--gold-rule);border-bottom:1px solid var(--gold-rule);}
-.stats-inner{max-width:1280px;margin:0 auto;display:flex;align-items:stretch;}
-.stat-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px 16px;border-left:1px solid rgba(184,146,74,.1);gap:5px;transition:background .3s;}
-.stat-item:first-child{border-left:none;}
-.stat-item:hover{background:rgba(184,146,74,.04);}
-.stat-num{font-family:var(--font-serif,'Playfair Display',Georgia,serif);font-size:1.8rem;color:var(--gold,#B8924A);line-height:1;font-variant-numeric:tabular-nums;text-shadow:0 0 30px rgba(184,146,74,.3);transition:transform .2s;}
-.stat-item:hover .stat-num{transform:scale(1.08) translateY(-2px);}
-.stat-lbl{font-size:.52rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);text-align:center;}
-@media(max-width:640px){.stats-inner{flex-wrap:wrap;}.stat-item{min-width:50%;border-left:none;border-top:1px solid rgba(184,146,74,.1);}.stat-item:nth-child(2){border-left:1px solid rgba(184,146,74,.1);}.stat-item:first-child,.stat-item:nth-child(2){border-top:none;}}
-
-/* ── RECORRIDO two-column ── */
-.recorrido-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:240px 1fr;gap:64px;align-items:start;}
-.recorrido-aside{position:sticky;top:96px;}
-.rec-progress{display:flex;align-items:center;gap:14px;margin-bottom:24px;}
-.rec-progress-track{flex:1;height:2px;background:rgba(0,0,0,.09);}
-.rec-progress-fill{height:100%;background:var(--gold,#B8924A);}
-.rec-progress-label{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted,#7a6e65);white-space:nowrap;}
-.rec-row{display:grid;grid-template-columns:44px 1fr auto auto auto;align-items:center;gap:0 18px;padding:18px 0;border-bottom:1px solid rgba(0,0,0,.07);transition:transform .2s ease,background .2s;opacity:0;animation:fadeUp 400ms ease both;}
+/* ════════════════════════════════════════
+   RECORRIDO — LISTA EDITORIAL
+════════════════════════════════════════ */
+.rec-progress{display:flex;align-items:center;gap:14px;margin-bottom:32px;}
+.rec-progress-track{flex:1;height:2px;background:var(--border);}
+.rec-progress-fill{height:100%;background:var(--gold);}
+.rec-progress-label{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
+.rec-list{width:100%;border-collapse:collapse;}
+/* transición solo en background, no transition:all */
+.rec-row{display:grid;grid-template-columns:32px 1fr 90px 90px auto auto;align-items:center;gap:0 20px;padding:14px 0;border-bottom:1px solid var(--border);transition:background 200ms ease;opacity:0;animation:fadeUp 400ms ease both;}
 .rec-row:last-child{border-bottom:none;}
-.rec-row.done:hover{background:rgba(184,146,74,.03);transform:translateX(4px);}
-.rec-row.pend{opacity:.3!important;pointer-events:none;}
-.rec-row:nth-child(1){animation-delay:50ms;}.rec-row:nth-child(2){animation-delay:130ms;}.rec-row:nth-child(3){animation-delay:210ms;}.rec-row:nth-child(4){animation-delay:290ms;}.rec-row:nth-child(5){animation-delay:350ms;}.rec-row:nth-child(6){animation-delay:390ms;}.rec-row:nth-child(7){animation-delay:420ms;}.rec-row:nth-child(8){animation-delay:445ms;}
-.rec-num{font-family:var(--font-serif,'Playfair Display',Georgia,serif);font-size:2rem;font-weight:normal;color:var(--gold,#B8924A);opacity:.22;line-height:1;font-variant-numeric:tabular-nums;transition:opacity .2s;}
-.rec-row.done .rec-num{opacity:1;}
-.rec-name{font-family:var(--font-serif,'Playfair Display',Georgia,serif);font-size:1.05rem;font-weight:normal;color:var(--navy-dark,#1C2E3E);}
-.rec-city{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted,#7a6e65);}
-.rec-date{font-size:.7rem;color:var(--muted,#7a6e65);}
+.rec-row.done:hover{background:rgba(184,146,74,.04);}
+.rec-row.pend{pointer-events:none;}
+/* delays escalonados */
+.rec-row:nth-child(1){animation-delay:50ms;}
+.rec-row:nth-child(2){animation-delay:130ms;}
+.rec-row:nth-child(3){animation-delay:210ms;}
+.rec-row:nth-child(4){animation-delay:290ms;}
+.rec-row:nth-child(5){animation-delay:350ms;}
+.rec-row:nth-child(6){animation-delay:400ms;}
+.rec-row:nth-child(7){animation-delay:440ms;}
+.rec-row:nth-child(8){animation-delay:470ms;}
+.rec-row.pend.anim-done{opacity:.35;}
+.rec-num{font-family:var(--font-serif);font-size:1rem;color:var(--muted);font-weight:600;line-height:1;}
+.rec-name{font-family:var(--font-serif);font-size:1rem;color:var(--navy-dark);font-weight:600;}
+.rec-row.next .rec-name{color:var(--navy-dark);}
+.rec-city{font-size:.72rem;color:var(--muted);}
+.rec-date{font-size:.72rem;color:var(--muted);}
 .rec-badge{display:inline-block;font-size:.52rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;white-space:nowrap;}
-.rec-badge-done{background:var(--gold,#B8924A);color:#fff;}
-.rec-badge-pend{border:1px solid rgba(0,0,0,.12);color:var(--muted,#7a6e65);}
+.rec-badge-done{background:var(--gold);color:#fff;}
+.rec-badge-next{background:var(--navy-dark);color:var(--gold);}
+.rec-badge-pend{border:1px solid var(--border);color:var(--muted);}
 .rec-links{display:flex;gap:10px;justify-content:flex-end;}
-.rec-link{font-size:.58rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy-dark,#1C2E3E);border-bottom:1px solid var(--gold,#B8924A);padding-bottom:1px;text-decoration:none;white-space:nowrap;transition:color 150ms ease;min-height:28px;display:inline-flex;align-items:center;}
-.rec-link:hover{color:var(--gold,#B8924A);}
-@media(max-width:900px){.recorrido-grid{grid-template-columns:1fr;gap:36px;}.recorrido-aside{position:static;}}
-@media(max-width:680px){.rec-row{grid-template-columns:36px 1fr auto auto;gap:0 12px;padding:14px 0;}.rec-date{display:none;}.rec-num{font-size:1.5rem;}}
+/* transición explícita en rec-link */
+.rec-link{font-size:.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy-dark);border-bottom:1px solid var(--gold);padding-bottom:1px;text-decoration:none;white-space:nowrap;transition:color 150ms ease;}
+.rec-link:hover{color:var(--gold);}
+@media(max-width:860px){.rec-row{grid-template-columns:28px 1fr 80px auto auto;}.rec-date{display:none;}}
+@media(max-width:680px){.rec-row{grid-template-columns:24px 1fr auto auto;gap:0 12px;padding:12px 0;}.rec-city{display:none;}.rec-num{font-size:.85rem;}.rec-name{font-size:.9rem;}}
 
-/* ── PREMIOS 3D ── */
-.premios-home{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(184,146,74,.16);margin-top:40px;}
-.premio-box{padding:44px 36px;position:relative;overflow:hidden;border-right:1px solid rgba(184,146,74,.16);transition:transform .25s ease,box-shadow .25s ease;transform-style:preserve-3d;will-change:transform;cursor:default;}
-.premio-box:last-child{border-right:none;}
-.premio-box::before{content:'';position:absolute;top:0;left:0;width:2px;height:0;background:var(--gold,#B8924A);transition:height .4s ease;}
-.premio-box:hover::before{height:100%;}
-.premio-box:hover:not(.js-tilt){transform:perspective(900px) rotateY(-4deg) rotateX(2deg) translateZ(10px);box-shadow:18px 18px 50px rgba(0,0,0,.1);}
-.premio-box .premio-icon{width:56px;height:56px;border:1px solid rgba(184,146,74,.2);display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:transform .2s,box-shadow .2s;}
-.premio-box:hover .premio-icon{transform:translateZ(18px) scale(1.04);box-shadow:0 6px 18px rgba(184,146,74,.12);}
-@media(max-width:680px){.premios-home{grid-template-columns:1fr;}.premio-box{border-right:none;border-bottom:1px solid rgba(184,146,74,.16);padding:32px 24px;}.premio-box:last-child{border-bottom:none;}}
-
-/* ── EVENTS dark cards ── */
-#events.sec-gray{background:var(--navy-dark,#1C2E3E)!important;}
-#events .stitle,#events .slabel{color:rgba(255,255,255,.88);}
-#events .slabel{color:rgba(184,146,74,.7)!important;}
-#events .sdiv{background:var(--gold,#B8924A);}
-.cards-grid-dark{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.06);margin-top:40px;}
-.card-dark{background:var(--navy-dark,#1C2E3E);display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease;transform-style:preserve-3d;will-change:transform;}
-.card-dark:hover:not(.js-tilt){transform:perspective(900px) rotateX(-3deg) translateY(-6px) translateZ(8px);box-shadow:0 24px 60px rgba(0,0,0,.5);z-index:1;position:relative;}
-.card-dark .card-img{aspect-ratio:16/9;object-fit:cover;width:100%;display:block;}
-.card-dark .card-img-placeholder{aspect-ratio:16/9;background:linear-gradient(140deg,#1A2D42 0%,#0A1825 100%);}
-.card-dark .card-badge{position:absolute;top:14px;left:14px;font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;background:var(--gold,#B8924A);color:#fff;}
-.card-dark .card-img-wrap{position:relative;}
-.card-dark .card-body{padding:22px;flex:1;display:flex;flex-direction:column;gap:8px;}
-.card-dark .card-date{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold,#B8924A);}
-.card-dark .card-title{font-family:var(--font-serif,'Playfair Display',Georgia,serif);font-size:1rem;color:rgba(255,255,255,.88);font-weight:normal;line-height:1.35;}
-.card-dark .card-desc{font-size:.8rem;color:rgba(255,255,255,.38);line-height:1.75;}
-.card-dark .card-foot{margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.06);font-size:.58rem;color:rgba(255,255,255,.25);}
-@media(max-width:860px){.cards-grid-dark{grid-template-columns:1fr 1fr;}}
-@media(max-width:560px){
-  .cards-grid-dark{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;background:none;border:none;padding-bottom:16px;margin-left:-5%;margin-right:-5%;padding-left:5%;padding-right:5%;}
-  .cards-grid-dark::-webkit-scrollbar{height:2px;}
-  .cards-grid-dark::-webkit-scrollbar-thumb{background:var(--gold,#B8924A);}
-  .card-dark{flex:0 0 82%;scroll-snap-align:start;border:1px solid rgba(255,255,255,.06);margin-right:12px;}
-}
-
-/* ── ABOUT pull quote ── */
-.about-pull-quote{font-family:var(--font-serif,'Playfair Display',Georgia,serif);font-size:1.15rem;font-style:italic;color:var(--gold,#B8924A);line-height:1.5;border-left:2px solid rgba(184,146,74,.3);padding-left:16px;margin:20px 0 24px;}
-
-/* ── MANIFESTO ── */
-.sec-manifesto{background:#080F18;padding:100px 5%;text-align:center;position:relative;overflow:hidden;}
-.sec-manifesto::before{content:'';position:absolute;top:0;left:5%;right:5%;height:1px;background:linear-gradient(90deg,transparent,rgba(184,146,74,.22) 30%,rgba(184,146,74,.22) 70%,transparent);}
-.sec-manifesto::after{content:'';position:absolute;bottom:0;left:5%;right:5%;height:1px;background:linear-gradient(90deg,transparent,rgba(184,146,74,.22) 30%,rgba(184,146,74,.22) 70%,transparent);}
-.sec-manifesto-bg-deco{position:absolute;font-family:var(--font-serif,'Playfair Display',Georgia,serif);font-size:32vw;font-weight:700;color:rgba(255,255,255,.012);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;user-select:none;line-height:1;}
-.manifesto-deco{display:flex;align-items:center;gap:16px;justify-content:center;margin-bottom:44px;position:relative;}
-.manifesto-deco-line{width:48px;height:1px;background:rgba(184,146,74,.28);}
-.manifesto-deco-label{font-size:.54rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(184,146,74,.5);}
-.manifesto-quote{font-family:var(--font-serif,'Playfair Display',Georgia,serif);font-size:clamp(1.7rem,4.2vw,3.2rem);font-style:italic;color:rgba(255,255,255,.82);line-height:1.38;max-width:880px;margin:0 auto 32px;font-weight:normal;text-shadow:0 4px 60px rgba(0,0,0,.5);}
-.manifesto-quote em{font-style:normal;color:var(--gold,#B8924A);text-shadow:0 0 50px rgba(184,146,74,.55),0 0 100px rgba(184,146,74,.2);}
-.manifesto-attr{font-size:.52rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.16);}
+/* ════════════════════════════════════════
+   MANIFIESTO
+════════════════════════════════════════ */
+.sec-manifesto{background:#0b1626;padding:100px 5%;text-align:center;position:relative;overflow:hidden;}
+.sec-manifesto::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(184,146,74,.28) 25%,rgba(184,146,74,.28) 75%,transparent);}
+.sec-manifesto::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(184,146,74,.28) 25%,rgba(184,146,74,.28) 75%,transparent);}
+.sec-manifesto-bg-deco{position:absolute;inset:0;font-family:var(--font-serif);font-size:28vw;font-weight:700;color:rgba(255,255,255,.018);display:flex;align-items:center;justify-content:center;pointer-events:none;user-select:none;line-height:1;}
+.manifesto-deco{display:flex;align-items:center;gap:18px;justify-content:center;margin-bottom:38px;position:relative;}
+.manifesto-deco-line{width:44px;height:1px;background:rgba(184,146,74,.35);}
+.manifesto-deco-label{font-size:.57rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(184,146,74,.55);}
+.manifesto-quote{font-family:var(--font-serif);font-size:clamp(1.55rem,3.2vw,2.7rem);font-style:italic;color:rgba(255,255,255,.88);line-height:1.4;max-width:860px;margin:0 auto 30px;font-weight:400;position:relative;}
+.manifesto-quote em{font-style:normal;color:var(--gold);}
+.manifesto-attr{font-size:.6rem;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:rgba(255,255,255,.2);}
 </style>
 </head>
 <body>
@@ -313,9 +286,8 @@
   </div>
 
   <div class="hero-meta">
-    <div class="hero-meta-item"><span style="font-size:.5rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(184,146,74,.5);display:block;margin-bottom:3px;" class="t" data-es="Temporada" data-ca="Temporada">Temporada</span><span class="t" data-es="2026" data-ca="2026">2026</span></div>
-    <div class="hero-meta-item"><span style="font-size:.5rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(184,146,74,.5);display:block;margin-bottom:3px;" class="t" data-es="Recorrido" data-ca="Recorregut">Recorrido</span><span class="t" data-es="5 de 8 visitas" data-ca="5 de 8 visites">5 de 8 visitas</span></div>
-    <div class="hero-meta-item"><span style="font-size:.5rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(184,146,74,.5);display:block;margin-bottom:3px;" class="t" data-es="Próxima gala" data-ca="Propera gala">Próxima gala</span><span class="t" data-es="Febrero 2027" data-ca="Febrer 2027">Febrero 2027</span></div>
+    <div class="t hero-meta-item" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</div>
+    <div class="t hero-meta-item" data-es="Recorrido Gourmet" data-ca="Recorregut Gourmet">Recorrido Gourmet</div>
   </div>
 
   <div class="hero-scroll">
@@ -324,30 +296,31 @@
   </div>
 </section>
 
-<!-- STATS STRIP -->
-<div class="stats-strip">
-  <div class="stats-inner">
-    <div class="stat-item"><span class="stat-num">2001</span><span class="stat-lbl t" data-es="Año de fundación" data-ca="Any de fundació">Año de fundación</span></div>
-    <div class="stat-item"><span class="stat-num">8</span><span class="stat-lbl t" data-es="Restaurants / temporada" data-ca="Restaurants / temporada">Restaurants / temporada</span></div>
-    <div class="stat-item"><span class="stat-num">25</span><span class="stat-lbl t" data-es="Temporadas de excelencia" data-ca="Temporades d'excel·lència">Temporadas de excelencia</span></div>
-    <div class="stat-item"><span class="stat-num">2</span><span class="stat-lbl t" data-es="Premios de referencia" data-ca="Premis de referència">Premios de referencia</span></div>
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-inner">
+    <div class="t strip-item" data-es="8 Restaurantes al año" data-ca="8 Restaurants a l'any">8 Restaurantes al año</div>
+    <div class="t strip-item" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</div>
+    <div class="t strip-item" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</div>
+    <div class="t strip-item" data-es="Tarragona, Catalunya" data-ca="Tarragona, Catalunya">Tarragona, Catalunya</div>
   </div>
 </div>
 
 <!-- RECORREGUT 2026 -->
 <section class="sec" id="recorregut">
-  <div class="recorrido-grid">
-    <aside class="recorrido-aside">
+  <div class="sec-inner">
+    <div style="margin-bottom:48px;">
       <p class="slabel t reveal" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</p>
-      <div class="sdiv reveal reveal-delay-1" style="margin:14px 0 18px;"></div>
-      <h2 class="stitle t reveal reveal-delay-1" style="font-size:clamp(1.6rem,2.8vw,2.2rem);line-height:1.15;margin-bottom:18px;" data-es="Recorrido Gourmet" data-ca="Recorregut Gourmet">Recorrido Gourmet</h2>
-      <div class="rec-progress reveal">
-        <div class="rec-progress-track"><div class="rec-progress-fill" data-width="62.5" style="width:0%;transition:width .9s ease .3s;"></div></div>
-        <span class="rec-progress-label t" data-es="5 de 8 visitas" data-ca="5 de 8 visites">5 de 8 visitas</span>
-      </div>
-      <p class="sec-desc t reveal reveal-delay-2" style="margin-top:14px;" data-es="Ocho restaurantes, una temporada, un territorio. Evaluamos con criterio y compartimos con honestidad." data-ca="Vuit restaurants, una temporada, un territori. Avaluem amb criteri i compartim amb honestedat.">Ocho restaurantes, una temporada, un territorio. Evaluamos con criterio y compartimos con honestidad.</p>
-    </aside>
-    <div>
+      <h2 class="stitle t reveal reveal-delay-1" data-es="Recorrido Gourmet" data-ca="Recorregut Gourmet">Recorrido Gourmet</h2>
+      <div class="sdiv reveal reveal-delay-2"></div>
+      <p class="sec-desc t reveal reveal-delay-3" data-es="Ocho restaurantes, una temporada, un territorio. Evaluamos con criterio y compartimos con honestidad." data-ca="Vuit restaurants, una temporada, un territori. Avaluem amb criteri i compartim amb honestedat.">Ocho restaurantes, una temporada, un territorio. Evaluamos con criterio y compartimos con honestidad.</p>
+    </div>
+    <!-- Barra progrés temporada -->
+    <div class="rec-progress reveal">
+      <div class="rec-progress-track"><div class="rec-progress-fill" data-width="62.5" style="width:0%;transition:width .9s ease .3s;"></div></div>
+      <span class="rec-progress-label t" data-es="5 de 8 visitas" data-ca="5 de 8 visites">5 de 8 visitas</span>
+    </div>
+
     <!-- Lista editorial -->
     <div role="list">
 
@@ -445,10 +418,9 @@
     </div>
 
     <div style="text-align:center;margin-top:36px;">
-      <a href="pages/restaurants.html" class="btn-outline t" data-es="Ver todas las visitas" data-ca="Veure totes les visites">Ver todas las visites</a>
+      <a href="pages/restaurants.html" class="btn-outline t" data-es="Ver todas las visitas" data-ca="Veure totes les visites">Ver todas las visitas</a>
     </div>
-    </div><!-- /list col -->
-  </div><!-- /recorrido-grid -->
+  </div>
 </section>
 
 <!-- QUI SOM -->
@@ -462,7 +434,6 @@
         <p class="t slabel reveal" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</p>
         <h2 class="t stitle reveal reveal-delay-1" data-es="La excelencia culinaria del Camp de Tarragona" data-ca="L'excel·lència culinària del Camp de Tarragona">La excelencia culinaria del Camp de Tarragona</h2>
         <div class="sdiv reveal reveal-delay-2"></div>
-        <p class="about-pull-quote t reveal reveal-delay-2" data-es="&ldquo;Descubrir y dar a conocer la cocina del territorio.&rdquo;" data-ca="&ldquo;Descobrir i donar a conèixer la cuina del territori.&rdquo;">&ldquo;Descubrir y dar a conocer la cocina del territorio.&rdquo;</p>
         <p class="t about-p reveal reveal-delay-2" data-es="Gourmets de Tarragona es una asociación formada por amantes de la gastronomía, chefs, productores locales y entusiastas del buen comer que comparten la misma pasión: descubrir y dar a conocer la cocina del territorio." data-ca="Gourmets de Tarragona és una associació formada per amants de la gastronomia, cuiners, productors locals i entusiastes del bon menjar que comparteixen la mateixa passió: descobrir i donar a conèixer la cuina del territori.">Gourmets de Tarragona es una asociación formada por amantes de la gastronomía, chefs, productores locales y entusiastas del buen comer que comparten la misma pasión: descubrir y dar a conocer la cocina del territorio.</p>
         <p class="t about-p reveal reveal-delay-3" data-es="A lo largo del año visitamos cerca de ocho restaurantes, los socios valoran cada experiencia y al final del año los mejores reciben sus galardones." data-ca="Al llarg de l'any visitem prop de vuit restaurants, els socis valoren cada experiència i a final d'any els millors reben els seus guardons.">A lo largo del año visitamos cerca de ocho restaurantes, los socios valoran cada experiencia y al final del año los mejores reciben sus galardones.</p>
         <div class="vals">
@@ -500,7 +471,7 @@
     <h2 class="t stitle reveal reveal-delay-1" data-es="Los premios de referencia de la gastronomía tarraconense" data-ca="Els premis de referència de la gastronomia tarragonina">Los premios de referencia de la gastronomía tarraconense</h2>
     <div class="sdiv reveal reveal-delay-2"></div>
     <div class="premios-home">
-      <div class="premio-box reveal reveal-delay-2" data-tilt>
+      <div class="premio-box reveal reveal-delay-2">
         <div class="premio-icon">
           <img src="assets/img/gastronia.png"
                alt="Trofeu Gastronia"
@@ -510,7 +481,7 @@
         <h3 class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</h3>
         <p class="t" data-es="El máximo reconocimiento al mejor restaurante del año según la valoración acumulada de todos los socios a lo largo de las visitas." data-ca="El màxim reconeixement al millor restaurant de l'any segons la valoració acumulada de tots els socis al llarg de les visites.">El máximo reconocimiento al mejor restaurante del año según la valoración acumulada de todos los socios a lo largo de las visitas.</p>
       </div>
-      <div class="premio-box reveal reveal-delay-3" data-tilt>
+      <div class="premio-box reveal reveal-delay-3">
         <div class="premio-icon">
           <img src="assets/img/bacus.png"
                alt="Premi Bacus"
@@ -533,44 +504,44 @@
     <p class="t slabel reveal" data-es="Próximos Eventos" data-ca="Propers Esdeveniments">Próximos Eventos</p>
     <h2 class="t stitle reveal reveal-delay-1" data-es="La agenda de los Gourmets" data-ca="L'agenda dels Gourmets">La agenda de los Gourmets</h2>
     <div class="sdiv reveal reveal-delay-2"></div>
-    <div class="cards-grid-dark">
+    <div class="cards-grid">
 
-      <div class="card-dark reveal reveal-delay-2" data-tilt>
-        <div class="card-img-wrap">
-          <div class="card-img-placeholder" style="background:linear-gradient(140deg,#162844 0%,#0A1825 100%);"></div>
-          <span class="t card-badge" data-es="Cata" data-ca="Tast">Cata</span>
-        </div>
+      <div class="card reveal reveal-delay-2">
+        <img class="card-img" src="assets/img/event-cata.jpg" alt="Cata de vinos DO Tarragona">
+        <span class="t card-badge" data-es="Cata" data-ca="Tast">Cata</span>
         <div class="card-body">
           <p class="t card-date" data-es="Fecha por determinar" data-ca="Data per determinar">Fecha por determinar</p>
           <h3 class="t card-title" data-es="Cata de Vinos DO Tarragona" data-ca="Tast de Vins DO Tarragona">Cata de Vinos DO Tarragona</h3>
           <p class="t card-desc" data-es="Una noche de descubrimiento a través de los mejores caldos de la DO Tarragona. Fecha y lugar por confirmar." data-ca="Una nit de descoberta a través dels millors vins de la DO Tarragona. Data i lloc per confirmar.">Una noche de descubrimiento a través de los mejores caldos de la DO Tarragona. Fecha y lugar por confirmar.</p>
-          <div class="card-foot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> <span class="t" data-es="Camp de Tarragona" data-ca="Camp de Tarragona">Camp de Tarragona</span></div>
+        </div>
+        <div class="card-foot">
+          <span class="card-loc"><i class="fa fa-map-marker-alt"></i> <span class="t" data-es="Camp de Tarragona" data-ca="Camp de Tarragona">Camp de Tarragona</span></span>
         </div>
       </div>
 
-      <div class="card-dark reveal reveal-delay-3" data-tilt>
-        <div class="card-img-wrap">
-          <div class="card-img-placeholder" style="background:linear-gradient(140deg,#1E2A3A 0%,#0D1A26 100%);"></div>
-          <span class="t card-badge" data-es="Cena" data-ca="Sopar">Cena</span>
-        </div>
+      <div class="card reveal reveal-delay-3">
+        <img class="card-img" src="assets/img/event-sopar.jpg" alt="Cena de verano de los Gourmets">
+        <span class="t card-badge" data-es="Cena" data-ca="Sopar">Cena</span>
         <div class="card-body">
           <p class="t card-date" data-es="Julio 2026" data-ca="Juliol 2026">Julio 2026</p>
           <h3 class="t card-title" data-es="Cena de Verano 2026" data-ca="Sopar d'Estiu 2026">Cena de Verano 2026</h3>
           <p class="t card-desc" data-es="Encuentro estival de los Gourmets de Tarragona. Fecha y lugar por confirmar." data-ca="Trobada estival dels Gourmets de Tarragona. Data i lloc per confirmar.">Encuentro estival de los Gourmets de Tarragona. Fecha y lugar por confirmar.</p>
-          <div class="card-foot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> <span class="t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span></div>
+        </div>
+        <div class="card-foot">
+          <span class="card-loc"><i class="fa fa-map-marker-alt"></i> <span class="t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span></span>
         </div>
       </div>
 
-      <div class="card-dark reveal reveal-delay-4" data-tilt>
-        <div class="card-img-wrap">
-          <img class="card-img" src="assets/img/gala2025/gastronia1-buidasacs.jpg" alt="Gala de premios 2026" style="aspect-ratio:16/9;object-fit:cover;width:100%;display:block;">
-          <span class="t card-badge" data-es="Gala" data-ca="Gala">Gala</span>
-        </div>
+      <div class="card reveal reveal-delay-4">
+        <img class="card-img" src="assets/img/gala2025/sala-gala.jpg" alt="Gala de entrega de premios 2025">
+        <span class="t card-badge" data-es="Gala" data-ca="Gala">Gala</span>
         <div class="card-body">
           <p class="t card-date" data-es="Diciembre 2026" data-ca="Desembre 2026">Diciembre 2026</p>
           <h3 class="t card-title" data-es="Cena de Navidad 2026" data-ca="Sopar de Nadal 2026">Cena de Navidad 2026</h3>
           <p class="t card-desc" data-es="Cena de cierre de la temporada 2026. La entrega del Trofeo Gastronia y el Premio Bacus se celebrará en febrero de 2027." data-ca="Sopar de tancament de la temporada 2026. El lliurament del Trofeu Gastronia i el Premi Bacus es celebrarà el febrer de 2027.">Cena de cierre de la temporada 2026. La entrega del Trofeo Gastronia y el Premio Bacus se celebrará en febrero de 2027.</p>
-          <div class="card-foot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> <span class="t" data-es="Por determinar" data-ca="Per determinar">Por determinar</span></div>
+        </div>
+        <div class="card-foot">
+          <span class="card-loc"><i class="fa fa-map-marker-alt"></i> <span class="t" data-es="Por determinar" data-ca="Per determinar">Por determinar</span></span>
         </div>
       </div>
 
@@ -747,15 +718,9 @@
       var title=lang==='ca'?(p.titol_ca||p.titol_es):p.titol_es;
       var desc=lang==='ca'?(p.resum_ca||p.resum_es):p.resum_es;
       var minLbl=lang==='ca'?'min':'min';
-      var imgHtml = p.img
-        ? '<img src="'+p.img+'" alt="'+title+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">'
-        : '';
       return '<a href="entrades/'+p.slug+'.html" class="bp-card">'+
-        '<div class="bp-card-img" style="background:'+p.color_bg+';position:relative;">'+
-          imgHtml+
-          '<div style="position:relative;z-index:1;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,transparent 60%);position:absolute;inset:0;display:flex;align-items:flex-end;padding:14px 16px;">'+
-            '<div><span class="bp-cat">'+cat+'</span><p class="bp-card-title">'+title+'</p></div>'+
-          '</div>'+
+        '<div class="bp-card-img" style="background:'+p.color_bg+';">'+
+          '<div><span class="bp-cat">'+cat+'</span><p class="bp-card-title">'+title+'</p></div>'+
         '</div>'+
         '<div class="bp-card-body">'+
           '<p class="bp-meta">'+fmtDate(p.data,lang)+' · '+p.min_lectura+' '+minLbl+'</p>'+
@@ -1099,33 +1064,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(function(){
           btn.disabled = false; btn.style.opacity = '1';
         });
-    });
-  }
-})();
-</script>
-<script>
-(function(){
-  var isFine = window.matchMedia('(pointer:fine)').matches;
-  var prefersReduced = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-  if (isFine && !prefersReduced) {
-    document.querySelectorAll('[data-tilt]').forEach(function(el){
-      el.classList.add('js-tilt');
-      var raf = null;
-      el.addEventListener('mousemove', function(e){
-        if (raf) cancelAnimationFrame(raf);
-        raf = requestAnimationFrame(function(){
-          var r = el.getBoundingClientRect();
-          var x = (e.clientX - r.left) / r.width  - 0.5;
-          var y = (e.clientY - r.top)  / r.height - 0.5;
-          el.style.transform = 'perspective(900px) rotateY('+( x*12)+'deg) rotateX('+(-y*9)+'deg) translateZ(14px)';
-          el.style.boxShadow = (-x*18)+'px '+(-y*14+12)+'px 40px rgba(0,0,0,.28), 0 0 0 1px rgba(184,146,74,.08)';
-        });
-      });
-      el.addEventListener('mouseleave', function(){
-        if (raf) cancelAnimationFrame(raf);
-        el.style.transform = '';
-        el.style.boxShadow = '';
-      });
     });
   }
 })();
