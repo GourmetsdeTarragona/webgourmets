@@ -259,6 +259,26 @@
 @media(max-width:480px){.e-nl-cta-form{flex-direction:column;}.e-nl-cta-input{border-right:1px solid rgba(255,255,255,.14);border-bottom:none;}.e-nl-cta-btn{padding:13px;}}
 
 </style>
+<style>
+#nl-popup{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 300ms ease;}
+#nl-popup.nl-visible{opacity:1;}
+#nl-popup-overlay{position:absolute;inset:0;background:rgba(8,15,24,.72);backdrop-filter:blur(3px);}
+#nl-popup-box{position:relative;z-index:1;background:#0D1E2F;border:1px solid rgba(184,146,74,.2);max-width:420px;width:90%;padding:48px 40px 40px;text-align:center;transform:translateY(18px);transition:transform 300ms ease;box-shadow:0 32px 80px rgba(0,0,0,.5);}
+#nl-popup.nl-visible #nl-popup-box{transform:translateY(0);}
+#nl-popup-close{position:absolute;top:14px;right:18px;background:none;border:none;color:rgba(255,255,255,.3);font-size:1.4rem;cursor:pointer;line-height:1;padding:4px;transition:color .2s;}
+#nl-popup-close:hover{color:rgba(255,255,255,.8);}
+#nl-popup-deco{font-size:1.2rem;color:#B8924A;opacity:.45;margin-bottom:14px;}
+#nl-popup-kicker{font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#B8924A;margin-bottom:12px;}
+#nl-popup-title{font-family:'Playfair Display',Georgia,serif;font-size:1.55rem;color:#F6F2EC;line-height:1.22;margin-bottom:12px;font-weight:600;}
+#nl-popup-sub{font-size:.85rem;color:rgba(246,242,236,.55);line-height:1.75;margin-bottom:26px;font-weight:300;}
+#nl-popup-form{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+#nl-popup-email{padding:13px 16px;font-size:.88rem;font-family:inherit;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#fff;outline:none;transition:border-color .2s;width:100%;box-sizing:border-box;}
+#nl-popup-email:focus{border-color:rgba(184,146,74,.55);}
+#nl-popup-btn{padding:14px;background:#B8924A;color:#fff;font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-family:inherit;border:none;cursor:pointer;transition:background .2s;}
+#nl-popup-btn:hover{background:#c9a05a;}
+#nl-popup-legal{font-size:.65rem;color:rgba(255,255,255,.18);}
+
+</style>
 </head>
 <body>
 
@@ -875,6 +895,121 @@ function copiarEnllac(btn){
     if(msg){ msg.classList.add('vis'); setTimeout(function(){ msg.classList.remove('vis'); }, 2200); }
   });
 }
+</script>
+
+<!-- ═══════ POPUP NEWSLETTER ═══════ -->
+<div id="nl-popup" role="dialog" aria-modal="true" aria-labelledby="nl-popup-title" style="display:none;">
+  <div id="nl-popup-overlay"></div>
+  <div id="nl-popup-box">
+    <button id="nl-popup-close" aria-label="Cerrar">&times;</button>
+    <div id="nl-popup-deco" aria-hidden="true">✦</div>
+    <p id="nl-popup-kicker" class="t" data-es="Newsletter" data-ca="Newsletter">Newsletter</p>
+    <h2 id="nl-popup-title" class="t"
+        data-es="¿Te ha gustado esta crónica?"
+        data-ca="T'ha agradat aquesta crònica?">
+      ¿Te ha gustado esta crónica?
+    </h2>
+    <p id="nl-popup-sub" class="t"
+       data-es="Recibe la próxima en tu correo. Crónicas de restaurante, vinos y novedades del Camp de Tarragona. Una vez al mes."
+       data-ca="Rep la propera al teu correu. Cròniques de restaurant, vins i novetats del Camp de Tarragona. Un cop al mes.">
+      Recibe la próxima en tu correo. Crónicas de restaurante, vinos y novedades del Camp de Tarragona. Una vez al mes.
+    </p>
+    <form id="nl-popup-form"
+          action="https://fe0daaff.sibforms.com/serve/MUIFAMSYb3h5hzjCYPN-GiItYcbChszEiV-2Ci_yU_3sfesrzldVY_nwtUN7RfIi41NyXnMu3sl9-ob6jEY1i8D_lfWkjTx2BPx-DdkMBNRhY_UX6RYT8Q6OtL_RSXdw1Nxw1cQMI50KFEuV5agn87hBqKVShQPjzSVyuaqjxyjEXiMI4ec7wdY55xdTRqGDyO937oVLzoaKi6MUtQ=="
+          method="post">
+      <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off"
+             style="display:none;position:absolute;left:-9999px;">
+      <input type="hidden" name="locale" value="es">
+      <input type="email" name="EMAIL" required
+             id="nl-popup-email"
+             class="t"
+             data-placeholder-es="hola@tucorreo.com"
+             data-placeholder-ca="hola@elteucorreu.com"
+             placeholder="hola@tucorreo.com">
+      <button type="submit" id="nl-popup-btn" class="t"
+              data-es="APUNTARME" data-ca="APUNTAR-ME">APUNTARME</button>
+    </form>
+    <p id="nl-popup-legal" class="t"
+       data-es="Sin spam · Baja cuando quieras."
+       data-ca="Sense spam · Baixa quan vulguis.">Sin spam · Baja cuando quieras.</p>
+  </div>
+</div>
+<!-- ═══════ /POPUP NEWSLETTER ═══════ -->
+
+<script>
+(function(){
+  var STORAGE_KEY = 'gdt-nl-dismissed';
+  var DAYS_HIDE   = 7;
+
+  // No mostrar si ya suscrito o descartado recientemente
+  var dismissed = localStorage.getItem(STORAGE_KEY);
+  if (dismissed && Date.now() < parseInt(dismissed, 10)) return;
+
+  var popup   = document.getElementById('nl-popup');
+  var overlay = document.getElementById('nl-popup-overlay');
+  var closeBtn= document.getElementById('nl-popup-close');
+  var form    = document.getElementById('nl-popup-form');
+  if (!popup) return;
+
+  var shown = false;
+
+  function showPopup() {
+    if (shown) return;
+    shown = true;
+    popup.style.display = 'flex';
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){
+        popup.classList.add('nl-visible');
+      });
+    });
+    document.body.style.overflow = 'hidden';
+    // Actualizar placeholder segun idioma
+    var lang = localStorage.getItem('gdt-lang') || 'es';
+    var emailInput = document.getElementById('nl-popup-email');
+    if (emailInput) {
+      emailInput.placeholder = emailInput.getAttribute('data-placeholder-' + lang) || emailInput.placeholder;
+    }
+    // Actualizar textos bilingues del popup
+    if (typeof setLang === 'function') setLang(lang);
+  }
+
+  function closePopup() {
+    popup.classList.remove('nl-visible');
+    setTimeout(function(){
+      popup.style.display = 'none';
+    }, 300);
+    document.body.style.overflow = '';
+    // Guardar que fue descartado por X dias
+    localStorage.setItem(STORAGE_KEY, Date.now() + DAYS_HIDE * 86400000);
+  }
+
+  closeBtn.addEventListener('click', closePopup);
+  overlay.addEventListener('click', closePopup);
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closePopup();
+  });
+
+  // Al enviar el formulario, marcar como suscrito para no volver a mostrar
+  form.addEventListener('submit', function(){
+    localStorage.setItem(STORAGE_KEY, Date.now() + 365 * 86400000);
+  });
+
+  // Trigger: aparece al llegar al 75% del scroll
+  var triggered = false;
+  function onScroll() {
+    if (triggered) return;
+    var scrolled  = window.scrollY + window.innerHeight;
+    var total     = document.documentElement.scrollHeight;
+    if (scrolled / total >= 0.75) {
+      triggered = true;
+      window.removeEventListener('scroll', onScroll);
+      setTimeout(showPopup, 400);
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
 </script>
 </body>
 </html>

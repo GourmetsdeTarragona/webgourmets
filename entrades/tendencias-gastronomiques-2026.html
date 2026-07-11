@@ -178,6 +178,26 @@
 @media(max-width:480px){.e-nl-cta-form{flex-direction:column;}.e-nl-cta-input{border-right:1px solid rgba(255,255,255,.14);border-bottom:none;}.e-nl-cta-btn{padding:13px;}}
 
 </style>
+<style>
+#nl-popup{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 300ms ease;}
+#nl-popup.nl-visible{opacity:1;}
+#nl-popup-overlay{position:absolute;inset:0;background:rgba(8,15,24,.72);backdrop-filter:blur(3px);}
+#nl-popup-box{position:relative;z-index:1;background:#0D1E2F;border:1px solid rgba(184,146,74,.2);max-width:420px;width:90%;padding:48px 40px 40px;text-align:center;transform:translateY(18px);transition:transform 300ms ease;box-shadow:0 32px 80px rgba(0,0,0,.5);}
+#nl-popup.nl-visible #nl-popup-box{transform:translateY(0);}
+#nl-popup-close{position:absolute;top:14px;right:18px;background:none;border:none;color:rgba(255,255,255,.3);font-size:1.4rem;cursor:pointer;line-height:1;padding:4px;transition:color .2s;}
+#nl-popup-close:hover{color:rgba(255,255,255,.8);}
+#nl-popup-deco{font-size:1.2rem;color:#B8924A;opacity:.45;margin-bottom:14px;}
+#nl-popup-kicker{font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#B8924A;margin-bottom:12px;}
+#nl-popup-title{font-family:'Playfair Display',Georgia,serif;font-size:1.55rem;color:#F6F2EC;line-height:1.22;margin-bottom:12px;font-weight:600;}
+#nl-popup-sub{font-size:.85rem;color:rgba(246,242,236,.55);line-height:1.75;margin-bottom:26px;font-weight:300;}
+#nl-popup-form{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+#nl-popup-email{padding:13px 16px;font-size:.88rem;font-family:inherit;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#fff;outline:none;transition:border-color .2s;width:100%;box-sizing:border-box;}
+#nl-popup-email:focus{border-color:rgba(184,146,74,.55);}
+#nl-popup-btn{padding:14px;background:#B8924A;color:#fff;font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-family:inherit;border:none;cursor:pointer;transition:background .2s;}
+#nl-popup-btn:hover{background:#c9a05a;}
+#nl-popup-legal{font-size:.65rem;color:rgba(255,255,255,.18);}
+
+</style>
 </head>
 <body>
 
