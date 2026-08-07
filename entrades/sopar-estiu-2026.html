@@ -155,6 +155,21 @@ a{color:inherit;text-decoration:none}
 .e-tambe-card:hover .e-tambe-card-link{color:var(--gold);}
 @media(max-width:680px){.e-tambe-grid{grid-template-columns:1fr;}}
 </style>
+<script>
+var currentLang = localStorage.getItem('gdt-lang') || 'es';
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('gdt-lang', lang);
+  document.querySelectorAll('.t').forEach(function(el) {
+    var val = el.getAttribute('data-' + lang);
+    if (val !== null) el.innerHTML = val;
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+  document.getElementById('html-root').setAttribute('lang', lang);
+}
+</script>
 </head>
 <body>
 
