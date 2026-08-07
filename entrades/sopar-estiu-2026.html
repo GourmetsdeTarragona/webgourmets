@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cena de Verano 2026 · Club Nàutic Salou · Gourmets de Tarragona</title>
+<meta name="description" content="Crónica de la Cena de Verano 2026 de los Gourmets de Tarragona en el Club Nàutic de Salou. Una noche de cóctel frente al mar, buena mesa y mejor compañía.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── VARIABLES ── */
+:root {
+  --marino: #1c2e3e;
+  --marino2: #243547;
+  --dorado: #b8924a;
+  --dorado-claro: #d4a96a;
+  --crema: #f5f0e8;
+  --crema2: #ede7da;
+  --blanco: #ffffff;
+  --gris: #6b6b6b;
+  --gris-claro: #e8e2d8;
+  --azul-mar: #1a4a6b;
+  --font-titulo: 'Playfair Display', Georgia, serif;
+  --font-ui: 'Jost', system-ui, sans-serif;
+  --sombra: 0 4px 24px rgba(28,46,62,0.10);
+  --sombra2: 0 12px 48px rgba(28,46,62,0.18);
+}
+
+/* ── RESET ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-ui);color:var(--marino);background:var(--crema);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ── HERO ── */
+.cronica-hero{
+  position:relative;min-height:75vh;display:flex;align-items:flex-end;overflow:hidden;
+  background:linear-gradient(150deg,#0b1e30 0%,#1a3a52 45%,#1c3040 100%);
+}
+.cronica-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.35;}
+.cronica-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,18,30,.97) 0%,rgba(8,18,30,.45) 60%,rgba(8,18,30,.05) 100%);}
+.cronica-hero-content{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:0 5% 68px 5.5%;}
+.cronica-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
+.cronica-back:hover{color:var(--dorado);}
+.cronica-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--azul-mar);color:#fff;padding:6px 14px;display:inline-block;margin-bottom:18px;}
+.cronica-meta{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
+.cronica-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);}
+.cronica-titol{font-family:var(--font-titulo);font-size:clamp(2.4rem,5.5vw,4rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
+.cronica-titol em{font-style:italic;color:rgba(212,169,106,.9);}
+.cronica-subtitol{font-size:.98rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.85;max-width:560px;}
+
+/* ── COS ── */
+.cronica-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
+.c-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dorado);margin-bottom:10px;display:block;}
+.c-title{font-family:var(--font-titulo);font-size:1.75rem;color:var(--marino);line-height:1.2;margin-bottom:22px;}
+.c-p{font-size:1rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:20px;}
+.c-p strong{font-weight:700;color:var(--marino);}
+.c-divider{width:48px;height:3px;background:var(--dorado);opacity:.35;margin:48px 0;}
+
+/* ── FOTOS ── */
+.c-foto{margin:52px 0;position:relative;overflow:hidden;}
+.c-foto img{width:100%;height:auto;object-fit:cover;max-height:520px;object-position:center;}
+.c-foto-peu{position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top,rgba(8,18,30,.75),transparent);font-size:.7rem;color:rgba(255,255,255,.6);font-style:italic;}
+
+/* ── FOTO DOBLE ── */
+.c-fotos-duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:52px 0;}
+.c-fotos-duo .c-foto{margin:0;}
+.c-fotos-duo img{height:320px;object-fit:cover;}
+
+/* ── MENU ── */
+.c-menu{background:var(--crema2);border:1px solid var(--gris-claro);padding:48px;margin:52px 0;}
+.c-menu-title{font-family:var(--font-titulo);font-size:1.4rem;color:var(--marino);margin-bottom:8px;text-align:center;}
+.c-menu-sub{font-size:.75rem;color:var(--gris);text-align:center;letter-spacing:.1em;text-transform:uppercase;margin-bottom:36px;}
+.c-menu-bloque{margin-bottom:32px;}
+.c-menu-bloque:last-child{margin-bottom:0;}
+.c-menu-bloque-titulo{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--azul-mar);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--gris-claro);}
+.c-menu-item{margin-bottom:10px;padding-bottom:10px;border-bottom:1px dashed rgba(107,107,107,.15);}
+.c-menu-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.c-menu-nom{font-family:var(--font-titulo);font-size:1rem;font-weight:600;color:var(--marino);margin-bottom:3px;}
+.c-menu-desc{font-size:.88rem;color:var(--gris);line-height:1.5;}
+
+/* ── MOMENTOS ── */
+.c-momento{background:#fff;padding:36px;border-left:4px solid var(--dorado);margin:28px 0;box-shadow:var(--sombra);}
+.c-momento-titulo{font-family:var(--font-titulo);font-size:1.1rem;font-weight:600;color:var(--marino);margin-bottom:12px;}
+.c-momento-texto{font-size:.95rem;color:var(--gris);line-height:1.75;}
+
+/* ── DATOS RÁPIDOS ── */
+.c-datos{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--gris-claro);margin:52px 0;background:#fff;}
+.c-dato{padding:32px 20px;text-align:center;border-right:1px solid var(--gris-claro);}
+.c-dato:last-child{border-right:none;}
+.c-dato-num{font-family:var(--font-titulo);font-size:2.8rem;color:var(--azul-mar);font-weight:700;line-height:1;}
+.c-dato-label{font-size:.65rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gris);margin-top:8px;}
+
+/* ── NAV RETORN ── */
+.c-nav-retorn{border-top:1px solid var(--gris-claro);padding:40px;text-align:center;margin-top:52px;}
+.btn-retorn{display:inline-block;font-family:var(--font-ui);font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:14px 30px;border:2px solid var(--marino);color:var(--marino);transition:all .25s;}
+.btn-retorn:hover{background:var(--marino);color:#fff;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .cronica-hero-content{padding:0 5% 52px;}
+  .cronica-cos{padding:52px 5%;}
+  .c-menu{padding:32px 20px;}
+  .c-momento{padding:24px;}
+  .c-fotos-duo{grid-template-columns:1fr;}
+  .c-datos{grid-template-columns:1fr;}
+  .c-dato{border-right:none;border-bottom:1px solid var(--gris-claro);}
+  .c-dato:last-child{border-bottom:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="cronica-hero">
+  <div class="cronica-hero-bg" style="background-image:url('../assets/img/nautic/foto3.jpeg');"></div>
+  <div class="cronica-hero-grad"></div>
+  <div class="cronica-hero-content">
+    <a href="../index.html" class="cronica-back">← Volver al inicio</a>
+    <span class="cronica-badge">Cena de Verano · 31 Julio 2026</span>
+    <div class="cronica-meta">
+      <span class="cronica-meta-item">⚓ Club Nàutic de Salou</span>
+      <span class="cronica-meta-item">👥 54 asistentes</span>
+      <span class="cronica-meta-item">🌊 Terraza frente al mar</span>
+    </div>
+    <h1 class="cronica-titol">Cena de Verano<br><em>La mejor mesa es la que se comparte</em></h1>
+    <p class="cronica-subtitol">Una noche de cóctel frente a la playa de Salou, buena mesa en compañía y la convicción renovada de que esta asociación se construye cena a cena, conversación a conversación.</p>
+  </div>
+</header>
+
+<!-- COS -->
+<main class="cronica-cos">
+
+  <!-- DATOS RÁPIDOS -->
+  <div class="c-datos">
+    <div class="c-dato">
+      <div class="c-dato-num">54</div>
+      <div class="c-dato-label">Socios y acompañantes</div>
+    </div>
+    <div class="c-dato">
+      <div class="c-dato-num">2</div>
+      <div class="c-dato-label">Ambientes de la noche</div>
+    </div>
+    <div class="c-dato">
+      <div class="c-dato-num">8</div>
+      <div class="c-dato-label">Meses de temporada compartidos</div>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section>
+    <span class="c-label">31 de julio de 2026</span>
+    <h2 class="c-title">Una noche para hacer asociación</h2>
+    <div class="c-divider"></div>
+
+    <p class="c-p">
+      Hay cenas de valoración, de criterio, de análisis gastronómico. Y luego están las cenas como la del jueves 31 de julio en el <strong>Club Nàutic de Salou</strong>: las de hacer comunidad. Las de poner nombre y cara a los que hasta ahora solo eran una voz en el grupo de WhatsApp. Las de recordar por qué nos juntamos.
+    </p>
+
+    <p class="c-p">
+      Éramos <strong>54 personas</strong> entre socios, parejas y familiares. Una noche de verano calurosa, con el Mediterráneo al fondo y las ganas de cerrar bien la primera mitad de la temporada antes de la pausa de agosto. Sin invitado especial esta vez — y no hacía falta. <strong>La asociación fue su propio protagonista.</strong>
+    </p>
+  </section>
+
+  <!-- FOTO HERO TERRAZA -->
+  <div class="c-foto">
+    <img src="../assets/img/nautic/foto2.jpeg" alt="Cóctel en la terraza del Club Nàutic de Salou">
+    <div class="c-foto-peu">Terraza del Club Nàutic · Vista a la playa de Salou · 20:30 h</div>
+  </div>
+
+  <!-- PRIMERA PARTE: TERRAZA -->
+  <section style="margin-top:48px;">
+    <span class="c-label">Primer pase · Terraza</span>
+    <h2 class="c-title">Cóctel frente al mar, con los pies en el aire</h2>
+    <div class="c-divider"></div>
+
+    <p class="c-p">
+      La noche arrancó de pie en la terraza del Nàutic. Y pocas introducciones mejores podría haber tenido: <strong>vistas directas a la playa de Salou</strong>, brisa marinera de las que justifican vivir en el Camp de Tarragona y un desfile de aperitivos que no dejaron a nadie quieto.
+    </p>
+
+    <p class="c-p">
+      El cóctel fue generoso y variado: desde la elegancia del <strong>jamón ibérico Marcial D.O. Guijuelo sobre coca de aceite y tomate</strong> hasta el guiño más canalla de la <strong>gamba roja rebozada en kikos</strong>. En el medio, todo lo que hace que un aperitivo de pie funcione — la <strong>gilda de anchoa de l'Escala</strong>, los <strong>blinis de salmón y crème fraîche de estragón</strong>, la <strong>tartaleta de brandada de bacalao</strong>, el <strong>papadum de tartar de atún rojo Balfegó</strong>. Y ese momento de sorpresa colectiva que siempre provoca el <strong>cóctel nitro</strong> y la <strong>mamadeta nitro</strong>.
+    </p>
+
+    <p class="c-p">
+      La degustación de <strong>arroz negro</strong> cerró el primer pase como se merece: con contundencia mediterránea y algún que otro comentario de "¿y si nos quedamos aquí toda la noche?". La respuesta, por suerte, fue que lo mejor todavía estaba por llegar.
+    </p>
+  </section>
+
+  <!-- FOTOS DUO TERRAZA -->
+  <div class="c-fotos-duo">
+    <div class="c-foto">
+      <img src="../assets/img/nautic/foto5.jpeg" alt="Ambiente en la terraza del Club Nàutic">
+    </div>
+    <div class="c-foto">
+      <img src="../assets/img/nautic/foto7.jpeg" alt="Asistentes durante el cóctel de bienvenida">
+    </div>
+  </div>
+
+  <!-- PRESIDENTE Y NUEVOS SOCIOS -->
+  <section style="margin-top:48px;">
+    <span class="c-label">El discurso del presidente</span>
+    <h2 class="c-title">La hoja de ruta del otoño, y bienvenidos los nuevos</h2>
+    <div class="c-divider"></div>
+
+    <p class="c-p">
+      Antes de pasar al salón, el presidente tomó la palabra. Sin alargar, sin protocolos vacíos — el tono fue el de siempre en esta asociación: <strong>cercano, directo y con algo de humor</strong>. Presentó las próximas cenas de la temporada, recordó que septiembre llega antes de lo que parece y deseó a todos un feliz verano bien merecido.
+    </p>
+
+    <p class="c-p">
+      Hubo también un momento especial: la <strong>presentación de los socios que se han incorporado estos últimos meses</strong>. Caras nuevas que ya no lo son tanto — llevan semanas en el grupo, en los hilos de conversación, en los debates sobre si el arròs de peix del último restaurante estaba en su punto o no. Ahora, con nombre y apellidos en sala, pasan a ser parte del tejido. <strong>Bienvenidos a la tribu.</strong>
+    </p>
+  </section>
+
+  <div class="c-momento">
+    <p class="c-momento-titulo">🎤 La frase de la noche</p>
+    <p class="c-momento-texto">El presidente cerró su intervención con lo que, en el fondo, resume la razón de existir de esta asociación: <strong>"Hacemos gastronomía, sí. Pero sobre todo hacemos compañía."</strong> Aplausos. Y al salón.</p>
+  </div>
+
+  <!-- FOTO GRUPO -->
+  <div class="c-foto">
+    <img src="../assets/img/nautic/WhatsApp Image 2026-08-01 at 08.17.53.jpeg" alt="Socios de los Gourmets de Tarragona en la Cena de Verano 2026">
+    <div class="c-foto-peu">Los Gourmets de Tarragona · Cena de Verano 2026 · Club Nàutic de Salou</div>
+  </div>
+
+  <!-- SEGUNDA PARTE: SALON -->
+  <section style="margin-top:48px;">
+    <span class="c-label">Segundo pase · Salón</span>
+    <h2 class="c-title">Al fresco y con mantel — la cena propiamente dicha</h2>
+    <div class="c-divider"></div>
+
+    <p class="c-p">
+      El paso de la terraza al salón fue agradecido. Fuera quedó el calor de julio; dentro, el aire acondicionado, las mesas bien vestidas y la sensación de que la noche iba a ser larga en el buen sentido. El Nàutic demostró que sabe manejar grupos grandes sin perder la atención al detalle.
+    </p>
+
+    <p class="c-p">
+      El plato principal fue un <strong>canelón crujiente de royal de ternera con foie mi-cuit en su jugo</strong> — un plato de esos que no hacen ruido al llegar pero convencen desde el primer bocado. Técnica sin estridencias, ingrediente de calidad y una combinación que gustó de manera casi unánime. Exactamente lo que se le pide a una cena de estas características: que el plato principal no eclipse la conversación, sino que la acompañe.
+    </p>
+
+    <p class="c-p">
+      El cierre fue refrescante y bien pensado: <strong>sorbete de manzana Granny Smith con yogur, granizado de apio i lima y cremoso de aguacate</strong>. Un postre que llega a los socios en pleno julio como agua fresca: ligero, cítrico, con ese punto de sorpresa que deja buena memoria.
+    </p>
+  </section>
+
+  <!-- MENÚ COMPLETO -->
+  <div class="c-menu">
+    <h3 class="c-menu-title">La noche en el plato</h3>
+    <p class="c-menu-sub">Club Nàutic de Salou · 31 de julio de 2026</p>
+
+    <div class="c-menu-bloque">
+      <p class="c-menu-bloque-titulo">Cóctel de bienvenida · Terraza</p>
+
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Jamón ibérico Marcial D.O. Guijuelo</p>
+        <p class="c-menu-desc">Con coca de aceite y tomate</p>
+      </div>
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Gilda de anchoa de l'Escala</p>
+      </div>
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Blinis de salmón y crème fraîche de estragón</p>
+      </div>
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Tartaleta de brandada de bacalao</p>
+      </div>
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Mini taco de pastor</p>
+      </div>
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Papadum de tartar de atún rojo Balfegó</p>
+      </div>
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Milhojas de patatas bravas</p>
+      </div>
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Croquetas cremosas de jamón ibérico</p>
+      </div>
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Salabre de calamar a la andaluza</p>
+      </div>
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Gamba roja rebozada en kikos</p>
+      </div>
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Crema de almendras</p>
+      </div>
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Degustación de arroz negro</p>
+      </div>
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Cóctel nitro · Mamadeta nitro</p>
+      </div>
+    </div>
+
+    <div class="c-menu-bloque">
+      <p class="c-menu-bloque-titulo">Plato principal · Salón</p>
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Canelón crujiente de royal de ternera con foie mi-cuit en su jugo</p>
+      </div>
+    </div>
+
+    <div class="c-menu-bloque">
+      <p class="c-menu-bloque-titulo">Postre</p>
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Sorbete de manzana Granny Smith</p>
+        <p class="c-menu-desc">Con yogur, granizado de apio i lima y cremoso de aguacate</p>
+      </div>
+    </div>
+
+    <div class="c-menu-bloque">
+      <p class="c-menu-bloque-titulo">Bodega & Barra libre</p>
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Via Terra · Blanco DO Terra Alta</p>
+      </div>
+      <div class="c-menu-item">
+        <p class="c-menu-nom">Brunus · Tinto DO Montsant</p>
+      </div>
+      <div class="c-menu-item">
+        <p class="c-menu-desc">Cava seleccionado · Cerveza Heineken · Refrescos · Vermut · Aguas minerales · Cafés</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOTOS CENA -->
+  <div class="c-fotos-duo">
+    <div class="c-foto">
+      <img src="../assets/img/nautic/foto8.jpeg" alt="Momentos de la cena en el salón del Club Nàutic">
+    </div>
+    <div class="c-foto">
+      <img src="../assets/img/nautic/foto9.jpeg" alt="Socios durante la cena de verano">
+    </div>
+  </div>
+
+  <!-- MÚSICA Y BAILE -->
+  <section style="margin-top:48px;">
+    <span class="c-label">El cierre de la noche</span>
+    <h2 class="c-title">Música, baile y hasta septiembre</h2>
+    <div class="c-divider"></div>
+
+    <p class="c-p">
+      Cuando los últimos cafés se habían enfriado a medias, llegó lo que muchos estaban esperando: <strong>música y pista de baile</strong>. Porque si algo define bien una cena de verano de esta asociación es que el sobremesa no se termina cuando se retiran los manteles. En el Club Nàutic, la noche se alargó con ganas, con risas y con esa energía que solo da el baile en buena compañía.
+    </p>
+
+    <p class="c-p">
+      Era el cierre perfecto para la primera parte del recorrido 2026. <strong>Kema en marzo, La Goleta en abril, El Terrat en mayo</strong> — tres visitas intensas, tres experiencias muy distintas, muchos debates y el medidor de criterio bien afinado. Agosto llega como merece: <strong>con el depósito lleno y el paladar bien ejercitado.</strong>
+    </p>
+  </section>
+
+  <div class="c-momento">
+    <p class="c-momento-titulo">💃 El momento de la noche</p>
+    <p class="c-momento-texto">La pista de baile se animó antes de lo esperado. Hubo quien ya venía con las zapatillas cambiadas —metafóricamente hablando— y no tardó en arrastrar al resto. La cena de verano de los Gourmets tiene esa virtud: <strong>empieza siendo una cena y acaba siendo una fiesta</strong>. Y eso, en pleno 31 de julio, es exactamente lo que toca.</p>
+  </div>
+
+  <!-- FOTO FINAL -->
+  <div class="c-foto">
+    <img src="../assets/img/nautic/foto10.jpeg" alt="La noche avanza en la Cena de Verano 2026">
+    <div class="c-foto-peu">La noche, larga y en buena compañía · Club Nàutic de Salou</div>
+  </div>
+
+  <!-- CIERRE -->
+  <section style="margin-top:48px;">
+    <span class="c-label">Hasta septiembre</span>
+    <h2 class="c-title">Una asociación que se hace en la mesa</h2>
+    <div class="c-divider"></div>
+
+    <p class="c-p">
+      Las cenas de verano no se valoran con puntuaciones. No hay ficha técnica, no hay comparativa de cocinas, no hay debate sobre si el punto de sal era el justo. <strong>Lo que hay es tiempo compartido</strong>, y eso tiene un valor que no cabe en ningún formulario de valoración.
+    </p>
+
+    <p class="c-p">
+      Cincuenta y cuatro personas en una terraza frente al mar, luego en un salón bien acondicionado, luego en una pista de baile que nadie quería abandonar. Nuevos socios que ya son parte del grupo. Caras conocidas que siguen construyendo algo juntas. <strong>Eso es lo que somos los Gourmets de Tarragona cuando no estamos valorando restaurantes: una asociación de verdad.</strong>
+    </p>
+
+    <p class="c-p">
+      Nos vemos en septiembre. Con hambre y con ganas.
+    </p>
+
+    <p class="c-p" style="margin-top:32px;font-style:italic;color:var(--dorado);">
+      Cena de Verano 2026 · Gourmets de Tarragona · 31 de julio · Club Nàutic de Salou.
+    </p>
+  </section>
+
+</main>
+
+<!-- NAV RETORN -->
+<div class="c-nav-retorn">
+  <a href="../index.html" class="btn-retorn">← Volver al inicio</a>
+</div>
+
+</body>
+</html>
