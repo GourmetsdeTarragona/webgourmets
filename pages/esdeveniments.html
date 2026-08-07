@@ -113,11 +113,11 @@ const t = {
     ev1_title:'Cata de Vinos DO Tarragona',
     ev1_desc:'Una noche de descubrimiento a través de los mejores vinos de la DO Tarragona. Fecha y lugar por confirmar.',
     ev1_loc:'Camp de Tarragona',
-    ev2_badge:'Cena',
-    ev2_date:'Julio 2026',
+    ev2_badge:'Crónica',
+    ev2_date:'31 de julio de 2026',
     ev2_title:'Cena de Verano 2026',
-    ev2_desc:'Encuentro estival de los Gourmets de Tarragona. Una de las citas más especiales de la temporada. Fecha y lugar por confirmar.',
-    ev2_loc:'Por confirmar',
+    ev2_desc:'52 comensales en el Club Nàutic de Salou. Cóctel en la terraza frente al mar, cena en el salón y pista de baile. La temporada 2026 cerró su primera mitad con una noche memorable.',
+    ev2_loc:'Club Nàutic de Salou',
     ev3_badge:'Gala',
     ev3_date:'Diciembre 2026',
     ev3_title:'Cena de Navidad 2026',
@@ -143,11 +143,11 @@ const t = {
     ev1_title:'Tast de Vins DO Tarragona',
     ev1_desc:"Una nit de descoberta a través dels millors vins de la DO Tarragona. Data i lloc per confirmar.",
     ev1_loc:'Camp de Tarragona',
-    ev2_badge:'Sopar',
-    ev2_date:'Juliol 2026',
+    ev2_badge:'Crònica',
+    ev2_date:'31 de juliol de 2026',
     ev2_title:"Sopar d'Estiu 2026",
-    ev2_desc:"Trobada estival dels Gourmets de Tarragona. Una de les cites més especials de la temporada. Data i lloc per confirmar.",
-    ev2_loc:'Per confirmar',
+    ev2_desc:"52 comensals al Club Nàutic de Salou. Còctel a la terrassa davant del mar, sopar al saló i pista de ball. La temporada 2026 va tancar la seva primera meitat amb una nit memorable.",
+    ev2_loc:'Club Nàutic de Salou',
     ev3_badge:'Gala',
     ev3_date:'Desembre 2026',
     ev3_title:'Sopar de Nadal 2026',
@@ -290,11 +290,12 @@ function setLang(lang) {
 
       <!-- Sopar d'Estiu -->
       <div class="ev-card">
-        <div class="ev-card-img">
-          <img src="../assets/img/event-sopar.jpg" alt="Sopar d'Estiu"
+        <a href="../entrades/sopar-estiu-2026.html" class="ev-card-img" style="display:block;text-decoration:none;">
+          <img src="../assets/img/nautic/p204059.jpg" alt="Cena de Verano 2026 · Club Nàutic de Salou"
+               style="object-position:center top;"
                onerror="this.parentElement.style.background='var(--cream)'">
           <span class="ev-badge" data-i18n="ev2_badge"></span>
-        </div>
+        </a>
         <div class="ev-body">
           <p class="ev-date" data-i18n="ev2_date"></p>
           <h2 class="ev-title" data-i18n="ev2_title"></h2>
@@ -303,6 +304,8 @@ function setLang(lang) {
             <i class="fa fa-map-marker-alt"></i>
             <span data-i18n="ev2_loc"></span>
           </div>
+          <a href="../entrades/sopar-estiu-2026.html" class="btn-outline t" style="display:inline-block;margin-top:16px;font-size:.85rem;"
+             data-es="Leer la crónica →" data-ca="Llegir la crònica →">Leer la crónica →</a>
         </div>
       </div>
 
