@@ -283,7 +283,7 @@ a{color:inherit;text-decoration:none}
 
   <!-- FOTO GRUPO -->
   <div class="c-foto">
-    <img src="../assets/img/nautic/p210110.jpg" alt="Socios de los Gourmets de Tarragona en la Cena de Verano 2026">
+    <img src="../assets/img/nautic/p210110.jpg" alt="Socios de los Gourmets de Tarragona en la Cena de Verano 2026" style="object-position:top;">
     <div class="c-foto-peu">Los Gourmets de Tarragona · Cena de Verano 2026 · Club Nàutic de Salou</div>
   </div>
 
@@ -395,7 +395,7 @@ a{color:inherit;text-decoration:none}
       <img src="../assets/img/nautic/foto8.jpeg" alt="Momentos de la cena en el salón del Club Nàutic">
     </div>
     <div class="c-foto">
-      <img src="../assets/img/nautic/foto9.jpeg" alt="Socios durante la cena de verano">
+      <img src="../assets/img/nautic/foto10.jpeg" alt="El postre de la Cena de Verano 2026 · Club Nàutic de Salou">
     </div>
   </div>
 
@@ -416,7 +416,7 @@ a{color:inherit;text-decoration:none}
 
   <!-- FOTO FINAL -->
   <div class="c-foto">
-    <img src="../assets/img/nautic/foto10.jpeg" alt="La noche avanza en la Cena de Verano 2026">
+    <img src="../assets/img/nautic/p204106.jpg" alt="La noche avanza en la Cena de Verano 2026">
     <div class="c-foto-peu">La noche, larga y en buena compañía · Club Nàutic de Salou</div>
   </div>
 
@@ -572,22 +572,132 @@ a{color:inherit;text-decoration:none}
 </footer>
 
 
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/main.js"></script>
+
 <script>
-var currentLang = localStorage.getItem('gdt-lang') || 'es';
-function applyTranslations(lang) {
-  var r = document.getElementById('html-root');
-  if (r) r.setAttribute('lang', lang);
-  document.querySelectorAll('.lang-btn').forEach(function(b) {
-    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+(function(){
+  var url   = encodeURIComponent(window.location.href);
+  var titol = encodeURIComponent(document.title);
+  var wa = document.getElementById('btn-wa');
+  var fb = document.getElementById('btn-fb');
+  var x  = document.getElementById('btn-x');
+  if(wa) wa.href = 'https://wa.me/?text=' + titol + '%20' + url;
+  if(fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if(x)  x.href  = 'https://twitter.com/intent/tweet?text=' + titol + '&url=' + url;
+
+  // Aplicar lang al compartir
+  function applyShareLang(){
+    var lang = localStorage.getItem('gdt-lang') || 'es';
+    document.querySelectorAll('.e-compartir [data-es]').forEach(function(el){
+      var v = el.getAttribute('data-' + lang);
+      if(v) el.innerHTML = v;
+    });
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', applyShareLang);
+  } else { applyShareLang(); }
+  document.addEventListener('click', function(e){
+    var t = e.target && e.target.closest && e.target.closest('.lang-btn');
+    if(t) setTimeout(applyShareLang, 60);
   });
-  document.querySelectorAll('[data-es]').forEach(function(el){
-    var v = el.getAttribute('data-' + lang);
-    if (v !== null) el.innerHTML = v;
+})();
+function copiarEnllac(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var msg = btn.querySelector('.e-compartir-copied');
+    if(msg){ msg.classList.add('vis'); setTimeout(function(){ msg.classList.remove('vis'); }, 2200); }
   });
 }
-function setLang(lang) { currentLang = lang; localStorage.setItem('gdt-lang', lang); applyTranslations(lang); }
-applyTranslations(currentLang);
 </script>
-<script src="../assets/js/main.js"></script>
+
+<!-- ═══════ POPUP NEWSLETTER ═══════ -->
+<div id="nl-popup" role="dialog" aria-modal="true" aria-labelledby="nl-popup-title" style="display:none;">
+  <div id="nl-popup-overlay"></div>
+  <div id="nl-popup-box">
+    <button id="nl-popup-close" aria-label="Cerrar">&times;</button>
+    <div id="nl-popup-deco" aria-hidden="true">✦</div>
+    <p id="nl-popup-kicker" class="t" data-es="Newsletter" data-ca="Newsletter">Newsletter</p>
+    <h2 id="nl-popup-title" class="t"
+        data-es="¿Te ha gustado esta crónica?"
+        data-ca="T'ha agradat aquesta crònica?">
+      ¿Te ha gustado esta crónica?
+    </h2>
+    <p id="nl-popup-sub" class="t"
+       data-es="Recibe la próxima en tu correo. Crónicas de restaurante, vinos y novedades del Camp de Tarragona. Una vez al mes."
+       data-ca="Rep la propera al teu correu. Cròniques de restaurant, vins i novetats del Camp de Tarragona. Un cop al mes.">
+      Recibe la próxima en tu correo. Crónicas de restaurante, vinos y novedades del Camp de Tarragona. Una vez al mes.
+    </p>
+    <form id="nl-popup-form"
+          action="https://fe0daaff.sibforms.com/serve/MUIFAMSYb3h5hzjCYPN-GiItYcbChszEiV-2Ci_yU_3sfesrzldVY_nwtUN7RfIi41NyXnMu3sl9-ob6jEY1i8D_lfWkjTx2BPx-DdkMBNRhY_UX6RYT8Q6OtL_RSXdw1Nxw1cQMI50KFEuV5agn87hBqKVShQPjzSVyuaqjxyjEXiMI4ec7wdY55xdTRqGDyO937oVLzoaKi6MUtQ=="
+          method="post">
+      <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off"
+             style="display:none;position:absolute;left:-9999px;">
+      <input type="hidden" name="locale" value="es">
+      <input type="email" name="EMAIL" required
+             id="nl-popup-email"
+             class="t"
+             data-placeholder-es="hola@tucorreo.com"
+             data-placeholder-ca="hola@elteucorreu.com"
+             placeholder="hola@tucorreo.com">
+      <button type="submit" id="nl-popup-btn" class="t"
+              data-es="APUNTARME" data-ca="APUNTAR-ME">APUNTARME</button>
+    </form>
+    <p id="nl-popup-legal" class="t"
+       data-es="Sin spam · Baja cuando quieras."
+       data-ca="Sense spam · Baixa quan vulguis.">Sin spam · Baja cuando quieras.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  var STORAGE_KEY = 'gdt-nl-dismissed';
+  var DAYS_HIDE   = 7;
+  var dismissed = localStorage.getItem(STORAGE_KEY);
+  if (dismissed && Date.now() < parseInt(dismissed, 10)) return;
+  var popup   = document.getElementById('nl-popup');
+  var overlay = document.getElementById('nl-popup-overlay');
+  var closeBtn= document.getElementById('nl-popup-close');
+  var form    = document.getElementById('nl-popup-form');
+  if (!popup) return;
+  var shown = false;
+  function showPopup() {
+    if (shown) return;
+    shown = true;
+    popup.style.display = 'flex';
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){ popup.classList.add('nl-visible'); });
+    });
+    document.body.style.overflow = 'hidden';
+    var lang = localStorage.getItem('gdt-lang') || 'es';
+    var emailInput = document.getElementById('nl-popup-email');
+    if (emailInput) {
+      emailInput.placeholder = emailInput.getAttribute('data-placeholder-' + lang) || emailInput.placeholder;
+    }
+    if (typeof setLang === 'function') setLang(lang);
+  }
+  function closePopup() {
+    popup.classList.remove('nl-visible');
+    setTimeout(function(){ popup.style.display = 'none'; }, 300);
+    document.body.style.overflow = '';
+    localStorage.setItem(STORAGE_KEY, Date.now() + DAYS_HIDE * 86400000);
+  }
+  closeBtn.addEventListener('click', closePopup);
+  overlay.addEventListener('click', closePopup);
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closePopup(); });
+  form.addEventListener('submit', function(){ localStorage.setItem(STORAGE_KEY, Date.now() + 365 * 86400000); });
+  var triggered = false;
+  function onScroll() {
+    if (triggered) return;
+    var scrolled = window.scrollY + window.innerHeight;
+    var total    = document.documentElement.scrollHeight;
+    if (scrolled / total >= 0.75) {
+      triggered = true;
+      window.removeEventListener('scroll', onScroll);
+      setTimeout(showPopup, 400);
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script>
 </body>
 </html>
