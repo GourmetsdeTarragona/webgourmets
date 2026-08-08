@@ -75,6 +75,9 @@ a{color:inherit;text-decoration:none}
 
 /* ── FOTO DOBLE ── */
 .c-fotos-duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:52px 0;}
+.c-videos-baile{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:52px 0;}
+.c-video-clip{width:100%;aspect-ratio:16/9;object-fit:cover;cursor:pointer;background:#0b1626;display:block;border-radius:2px;}
+.c-video-clip:hover{opacity:.88;}
 .c-fotos-duo .c-foto{margin:0;}
 .c-fotos-duo img{height:320px;object-fit:cover;}
 
@@ -114,6 +117,7 @@ a{color:inherit;text-decoration:none}
   .c-menu{padding:32px 20px;}
   .c-momento{padding:24px;}
   .c-fotos-duo{grid-template-columns:1fr;}
+  .c-videos-baile{grid-template-columns:1fr;}
   .c-datos{grid-template-columns:1fr;}
   .c-dato{border-right:none;border-bottom:1px solid var(--gris-claro);}
   .c-dato:last-child{border-bottom:none;}
@@ -277,9 +281,9 @@ function setLang(lang) {
     <div class="c-divider"></div>
 
     <p class="c-p t"
-      data-es="Hay cenas de valoración, de criterio, de análisis gastronómico. Y luego están las cenas como la del jueves 31 de julio en el <strong>Club Nàutic de Salou</strong>: las de hacer comunidad. Las de poner nombre y cara a los que hasta ahora solo eran una voz en el grupo de WhatsApp. Las de recordar por qué nos juntamos."
-      data-ca="Hi ha sopars de valoració, de criteri, d'anàlisi gastronòmica. I després hi ha sopars com el del dijous 31 de juliol al <strong>Club Nàutic de Salou</strong>: els de fer comunitat. Els de posar nom i cara als que fins ara només eren una veu al grup de WhatsApp. Els de recordar per què ens ajuntem.">
-      Hay cenas de valoración, de criterio, de análisis gastronómico. Y luego están las cenas como la del jueves 31 de julio en el <strong>Club Nàutic de Salou</strong>: las de hacer comunidad. Las de poner nombre y cara a los que hasta ahora solo eran una voz en el grupo de WhatsApp. Las de recordar por qué nos juntamos.
+      data-es="Hay cenas donde lo que se analiza es el restaurante. Y luego están las otras — las del <strong>Club Nàutic de Salou</strong>, un 31 de julio de verano pleno — donde lo que se cocina es la asociación en sí. Conversaciones que se alargan, presentaciones que se convierten en amistad, caras nuevas que al terminar la noche ya son parte del grupo."
+      data-ca="Hi ha sopars on el que s'analitza és el restaurant. I després hi ha els altres — els del <strong>Club Nàutic de Salou</strong>, un 31 de juliol d'estiu ple — on el que es cuina és l'associació en si mateixa. Converses que s'allarguen, presentacions que es converteixen en amistat, cares noves que en acabar la nit ja en formen part.">
+      Hay cenas donde lo que se analiza es el restaurante. Y luego están las otras — las del <strong>Club Nàutic de Salou</strong>, un 31 de julio de verano pleno — donde lo que se cocina es la asociación en sí. Conversaciones que se alargan, presentaciones que se convierten en amistad, caras nuevas que al terminar la noche ya son parte del grupo.
     </p>
 
     <p class="c-p t"
@@ -351,8 +355,8 @@ function setLang(lang) {
 
   <!-- FOTO GRUPO -->
   <div class="c-foto">
-    <img src="../assets/img/nautic/p210110.jpg" alt="Socios de los Gourmets de Tarragona en la Cena de Verano 2026" style="object-position:top;">
-    <div class="c-foto-peu t" data-es="Los Gourmets de Tarragona · Cena de Verano 2026 · Club Nàutic de Salou" data-ca="Els Gourmets de Tarragona · Sopar d'Estiu 2026 · Club Nàutic de Salou">Los Gourmets de Tarragona · Cena de Verano 2026 · Club Nàutic de Salou</div>
+    <img src="../assets/img/nautic/p204106.jpg" alt="La noche avanza en la Cena de Verano 2026">
+    <div class="c-foto-peu t" data-es="La noche, larga y en buena compañía · Club Nàutic de Salou" data-ca="La nit, llarga i en bona companyia · Club Nàutic de Salou">La noche, larga y en buena compañía · Club Nàutic de Salou</div>
   </div>
 
   <!-- SEGUNDA PARTE: SALON -->
@@ -492,10 +496,16 @@ function setLang(lang) {
     </p>
   </section>
 
-  <!-- FOTO FINAL -->
-  <div class="c-foto">
-    <img src="../assets/img/nautic/p204106.jpg" alt="La noche avanza en la Cena de Verano 2026">
-    <div class="c-foto-peu t" data-es="La noche, larga y en buena compañía · Club Nàutic de Salou" data-ca="La nit, llarga i en bona companyia · Club Nàutic de Salou">La noche, larga y en buena compañía · Club Nàutic de Salou</div>
+  <!-- VÍDEOS BAILE -->
+  <div class="c-videos-baile">
+    <video class="c-video-clip" src="../assets/img/nautic/baile_01.mp4"
+      muted playsinline loop preload="metadata"
+      poster="../assets/img/nautic/baile_01_thumb.jpg"
+      onclick="this.paused?this.play():this.pause()"></video>
+    <video class="c-video-clip" src="../assets/img/nautic/baile_02.mp4"
+      muted playsinline loop preload="metadata"
+      poster="../assets/img/nautic/baile_02_thumb.jpg"
+      onclick="this.paused?this.play():this.pause()"></video>
   </div>
 
   <!-- CIERRE -->
