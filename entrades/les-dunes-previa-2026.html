@@ -480,16 +480,25 @@
   <h2 class="e-title" data-i18n="dunes_prev_equip_title"></h2>
   <div class="e-equip-grid">
     <div class="e-equip-card">
-      <div class="e-equip-avatar">SP</div>
+      <div class="e-equip-avatar" style="background-image:url('../assets/img/lesdunes/sergi-pinol.jpg');background-size:cover;background-position:center 20%;"></div>
       <p class="e-equip-nom"><strong>Sergi Piñol</strong></p>
       <p class="e-equip-rol" data-i18n="dunes_prev_eq1_rol"></p>
       <p class="e-equip-desc" data-i18n="dunes_prev_eq1_desc"></p>
     </div>
     <div class="e-equip-card">
-      <div class="e-equip-avatar">NR</div>
+      <div class="e-equip-avatar" style="background-image:url('../assets/img/lesdunes/noemi-ribes.jpg');background-size:cover;background-position:center 15%;"></div>
       <p class="e-equip-nom"><strong>Noemi Ribes</strong></p>
       <p class="e-equip-rol" data-i18n="dunes_prev_eq2_rol"></p>
       <p class="e-equip-desc" data-i18n="dunes_prev_eq2_desc"></p>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:52px;">
+    <div class="e-foto-gran" style="height:240px;margin:0;">
+      <img src="../assets/img/lesdunes/croquetes.jpg" alt="Croquetes de sípia amb petazeta — Les Dunes">
+    </div>
+    <div class="e-foto-gran" style="height:240px;margin:0;">
+      <img src="../assets/img/lesdunes/amanida-tonyina.jpg" alt="Amanida de tonyina i remolatxa — Les Dunes">
     </div>
   </div>
 
@@ -499,11 +508,12 @@
       <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-map-marker-alt"></i></div><span class="e-fitxa-text">Carrer del Coll Verd, 5-3 · 43580 Riumar, Tarragona</span></div>
       <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-water"></i></div><span class="e-fitxa-text" data-i18n="dunes_prev_fitxa_cuina"></span></div>
       <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-phone"></i></div><span class="e-fitxa-text">639 02 97 41</span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-globe"></i></div><span class="e-fitxa-text"><a href="https://lesdunesrestaurant.com" target="_blank" rel="noopener" style="color:var(--navy);font-weight:700;">lesdunesrestaurant.com</a></span></div>
       <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-calendar"></i></div><span class="e-fitxa-text" data-i18n="dunes_prev_fitxa_data"></span></div>
     </div>
     <div class="e-fitxa-cta">
       <p data-i18n="dunes_prev_cta_desc"></p>
-      <a href="les-dunes-cronica-2026.html" class="btn-primary" style="display:inline-block;" data-i18n="dunes_prev_cta_btn"></a>
+      <span class="btn-primary" style="display:inline-block;opacity:.35;cursor:default;pointer-events:none;" title="Disponible en cuanto se publique la crónica" data-i18n="dunes_prev_cta_btn"></span>
     </div>
   </div>
 
@@ -755,7 +765,7 @@ var T = {
   dunes_prev_fitxa_cuina:{es:'Cocina del Delta del Ebro · Menú degustación',ca:'Cuina del Delta de l\'Ebre · Menú degustació'},
   dunes_prev_fitxa_data:{es:'Visita: 4 de septiembre 2026',ca:'Visita: 4 de setembre 2026'},
   dunes_prev_cta_desc:{es:'Durante la cena compartiremos algunos momentos en stories. La crónica completa llegará días después.',ca:'Durant el sopar compartirem alguns moments a les stories. La crònica completa arribarà dies després.'},
-  dunes_prev_cta_btn:{es:'Leer la crónica completa →',ca:'Llegir la crònica completa →'}
+  dunes_prev_cta_btn:{es:'Crónica disponible próximamente',ca:'Crònica disponible properament'}
 };
 var currentLang = localStorage.getItem('gdt-lang') || 'es';
 function applyTranslations(lang) {
