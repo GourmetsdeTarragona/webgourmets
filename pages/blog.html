@@ -318,12 +318,12 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span class="t" data-es="Todos" data-ca="Tots">Todos</span>
-      <span class="filtre-n">31</span>
+      <span class="filtre-n">32</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot" style="background:var(--navy);"></span>
       <span class="t" data-es="Previas" data-ca="Prèvies">Previas</span>
-      <span class="filtre-n">5</span>
+      <span class="filtre-n">6</span>
     </button>
     <button class="filtre-btn" data-cat="cronica" onclick="filterEntrades('cronica')">
       <span class="filtre-dot" style="background:var(--gold);"></span>
@@ -657,11 +657,33 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </article>
 
+    <!-- Les Dunes Prèvia -->
+    <article class="blog-card" data-cat="previa">
+      <div class="blog-card-img">
+        <img src="../assets/img/lesdunes/sensacions-espai.jpg" alt="Les Dunes · Riumar" onerror="this.parentElement.style.background='var(--cream)'">
+        <span class="blog-card-cat cat-previa t" data-es="Previa" data-ca="Prèvia">Previa</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Agosto 2026" data-ca="Agost 2026">Agosto 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es='Les Dunes · Riumar<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa · 6ª visita 2026</small>'
+            data-ca='Les Dunes · Riumar<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Prèvia · 6a visita 2026</small>'>
+          Les Dunes · Riumar<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa · 6ª visita 2026</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Once años de menú degustación en el Delta del Ebro. Sergi Piñol y Noemi Ribes nos reciben el 4 de septiembre junto al alcalde de Deltebre, Lluís Soler."
+           data-ca="Onze anys de menú degustació al Delta de l'Ebre. Sergi Piñol i Noemi Ribes ens reben el 4 de setembre juntament amb l'alcalde de Deltebre, Lluís Soler.">
+          Once años de menú degustación en el Delta del Ebro. Sergi Piñol y Noemi Ribes nos reciben el 4 de septiembre junto al alcalde de Deltebre.
+        </p>
+        <a href="../entrades/les-dunes-previa-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
     <!-- Propera Visita -->
     <div class="blog-card blog-card-proxima" data-cat="tots">
       <div class="proxima-ico">🗓</div>
       <div class="proxima-label t" data-es="Próxima visita" data-ca="Propera visita">Próxima visita</div>
-      <div class="proxima-rest t" data-es="6ª Visita · Por confirmar" data-ca="6a Visita · Per confirmar">6ª Visita · Por confirmar</div>
+      <div class="proxima-rest t" data-es="7ª Visita · Por confirmar" data-ca="7a Visita · Per confirmar">7ª Visita · Por confirmar</div>
       <div class="proxima-data t" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</div>
     </div>
 
