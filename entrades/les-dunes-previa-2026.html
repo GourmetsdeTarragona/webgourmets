@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ═══════ FAVICON ═══════ -->
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon-180.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../assets/img/favicon-512.png">
+<link rel="shortcut icon" href="../favicon.ico">
+
+<title>Les Dunes · Prèvia · Gourmets de Tarragona</title>
+<meta name="description" content="Previa de la visita de Gourmets de Tarragona al restaurante Les Dunes de Riumar, Delta del Ebro. Cena mensual del 4 de septiembre de 2026 con el alcalde de Deltebre, Lluís Soler, como invitado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/seccions.css">
+<style>
+.entrada-hero{position:relative;min-height:70vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.65;filter:brightness(1.08) contrast(1.05);}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.92) 0%,rgba(11,22,38,.38) 50%,rgba(11,22,38,.05) 100%);}
+.entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
+.entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
+.entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
+.entrada-back:hover{color:var(--gold);}
+.entrada-meta-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
+.entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;}
+.entrada-badge-previa{background:var(--navy);}
+.entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
+.entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
+.entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.82);font-weight:300;line-height:1.85;max-width:540px;}
+.entrada-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
+.e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-title{font-family:var(--font-serif);font-size:1.75rem;color:var(--navy-dark);line-height:1.2;margin-bottom:22px;}
+.e-p{font-size:1rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:20px;}
+.e-p strong{font-weight:700;color:var(--navy-dark);}
+.e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin:48px 0;}
+.e-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:60px;}
+.e-img{position:relative;}
+.e-img img{width:100%;height:420px;object-fit:cover;position:relative;z-index:1;}
+.e-img::after{content:'';position:absolute;bottom:-14px;right:-14px;width:50%;height:50%;border:2px solid var(--gold);opacity:.2;z-index:0;}
+.e-vals{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px;}
+.e-val{display:flex;gap:10px;padding:12px 14px;background:#fff;border-left:3px solid var(--navy);align-items:center;}
+.e-val i{color:var(--navy);opacity:.6;font-size:.9rem;width:16px;text-align:center;}
+.e-val span{font-size:.87rem;line-height:1.4;}
+.e-convidat{background:var(--navy-dark);padding:36px;margin:40px 0;display:flex;gap:28px;align-items:flex-start;}
+.e-convidat-avatar{width:56px;height:56px;border-radius:50%;background:rgba(184,146,74,.2);border:1px solid rgba(184,146,74,.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.3rem;color:var(--gold);}
+.e-convidat-label{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(184,146,74,.7);margin-bottom:6px;}
+.e-convidat-nom{font-family:var(--font-serif);font-size:1.1rem;color:#fff;margin-bottom:4px;}
+.e-convidat-desc{font-size:.85rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.6;}
+.e-programa{background:var(--cream);border:1px solid var(--border);padding:36px;margin:32px 0;}
+.e-programa-title{font-family:var(--font-serif);font-size:1.1rem;color:var(--navy-dark);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+.e-programa-title i{color:var(--gold);}
+.e-programa-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:12px;}
+.e-programa-hora{font-size:.75rem;font-weight:700;color:var(--gold);letter-spacing:1px;white-space:nowrap;padding-top:2px;min-width:52px;}
+.e-programa-desc{font-size:.88rem;color:var(--muted);line-height:1.5;}
+
+/* ── MENÚ MARIDATGE ── */
+.e-menu{background:var(--cream);border:1px solid var(--border);padding:48px;margin:52px 0;}
+.e-menu-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);margin-bottom:6px;text-align:center;}
+.e-menu-sub{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:32px;}
+.e-maridatge{display:flex;flex-direction:column;gap:0;}
+.e-maridatge-row{display:grid;grid-template-columns:160px 1fr 220px;gap:0;border-bottom:1px solid var(--border);padding:16px 0;align-items:center;}
+.e-maridatge-row:last-child{border-bottom:none;}
+.e-maridatge-do{display:flex;flex-direction:column;gap:3px;}
+.e-maridatge-do-badge{font-size:.55rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;background:var(--navy-dark);color:var(--gold);padding:3px 8px;width:fit-content;}
+.e-maridatge-do-name{font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;}
+.e-maridatge-plat{font-size:.92rem;font-weight:300;color:var(--navy-dark);line-height:1.45;padding:0 24px;}
+.e-maridatge-vi{font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.45;text-align:right;}
+.e-maridatge-vi strong{font-weight:600;color:var(--navy);display:block;font-size:.82rem;}
+.e-maridatge-header{display:grid;grid-template-columns:160px 1fr 220px;gap:0;padding:0 0 12px;margin-bottom:4px;border-bottom:2px solid var(--gold);}
+.e-maridatge-header span{font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);}
+.e-maridatge-header span:last-child{text-align:right;}
+.e-maridatge-header span:nth-child(2){padding:0 24px;}
+
+.e-foto-gran{margin:52px 0;position:relative;height:420px;overflow:hidden;}
+.e-foto-gran img{width:100%;height:100%;object-fit:cover;}
+.e-foto-gran-peu{font-size:.72rem;color:var(--muted);font-style:italic;margin-top:10px;padding-left:8px;border-left:2px solid var(--gold);opacity:.8;line-height:1.5;}
+.e-fitxa{background:var(--cream);border:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:0;margin:52px 0;}
+.e-fitxa-info{padding:36px 40px;}
+.e-fitxa-info h3{font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:20px;}
+.e-fitxa-row{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;}
+.e-fitxa-ico{width:32px;height:32px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.e-fitxa-ico i{color:var(--navy);opacity:.6;font-size:.8rem;}
+.e-fitxa-text{font-size:.87rem;color:var(--muted);line-height:1.5;}
+.e-fitxa-cta{background:var(--navy-dark);padding:36px 40px;display:flex;flex-direction:column;justify-content:center;text-align:center;}
+.e-fitxa-cta p{font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:20px;font-weight:300;}
+.e-equip-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:8px;margin-bottom:52px;}
+.e-equip-card{background:#fff;border:1px solid var(--border);padding:26px 18px;text-align:center;}
+.e-equip-avatar{width:56px;height:56px;border-radius:50%;background:var(--navy);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.2rem;color:#fff;}
+.e-equip-nom{font-family:var(--font-serif);font-size:.95rem;color:var(--navy-dark);margin-bottom:4px;line-height:1.3;}
+.e-equip-rol{font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);}
+.e-equip-desc{font-size:.8rem;color:var(--muted);line-height:1.5;margin-top:8px;font-weight:300;}
+.e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;}
+@media(max-width:768px){
+  .entrada-hero-content{padding:0 5% 52px;}
+  .e-grid-2{grid-template-columns:1fr;gap:36px;}
+  .e-menu{padding:32px 20px;}
+  .e-maridatge-row{grid-template-columns:1fr;gap:8px;padding:14px 0;}
+  .e-maridatge-plat{padding:0;}
+  .e-maridatge-vi{text-align:left;}
+  .e-maridatge-header{display:none;}
+  .e-vals{grid-template-columns:1fr;}
+  .e-fitxa{grid-template-columns:1fr;}
+  .e-foto-gran{height:260px;}
+  .entrada-cos{padding:52px 5%;}
+  .e-convidat{flex-direction:column;gap:16px;}
+  .e-equip-grid{grid-template-columns:1fr 1fr;}
+}
+
+/* ── COMPARTIR ── */
+.e-compartir{
+  position:relative;margin:64px 0 0;padding:56px 40px 52px;
+  background:linear-gradient(135deg,#0b1626 0%,#1c2e3e 100%);
+  overflow:hidden;
+}
+.e-compartir::before{
+  content:'';position:absolute;top:-1px;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);
+}
+.e-compartir::after{
+  content:'"';position:absolute;right:5%;top:50%;transform:translateY(-50%);
+  font-family:'Playfair Display',serif;font-size:14rem;font-weight:700;
+  color:rgba(184,146,74,.06);line-height:1;pointer-events:none;
+  user-select:none;
+}
+.e-compartir-inner{position:relative;z-index:1;max-width:600px;margin:0 auto;text-align:center;}
+.e-compartir-deco{display:flex;align-items:center;gap:16px;justify-content:center;margin-bottom:20px;}
+.e-compartir-deco-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,146,74,.3));}
+.e-compartir-deco-line.r{background:linear-gradient(90deg,rgba(184,146,74,.3),transparent);}
+.e-compartir-deco span{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(184,146,74,.6);font-weight:600;white-space:nowrap;}
+.e-compartir-frase{font-family:'Playfair Display',serif;font-size:1.45rem;font-style:italic;color:rgba(255,255,255,.88);line-height:1.5;margin-bottom:32px;font-weight:400;}
+.e-compartir-frase strong{font-style:normal;font-weight:700;color:#d4a96a;}
+.e-compartir-btns{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;}
+.e-compartir-btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;font-family:'Lato','Montserrat',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:rgba(255,255,255,.65);transition:all .25s;cursor:pointer;text-decoration:none;backdrop-filter:blur(4px);}
+.e-compartir-btn svg{flex-shrink:0;transition:transform .25s;}
+.e-compartir-btn:hover{border-color:rgba(184,146,74,.6);background:rgba(184,146,74,.1);color:#d4a96a;transform:translateY(-2px);}
+.e-compartir-btn:hover svg{transform:scale(1.15);}
+.e-compartir-btn.wa:hover{border-color:#25d366;background:rgba(37,211,102,.1);color:#25d366;}
+.e-compartir-btn.fb:hover{border-color:#1877f2;background:rgba(24,119,242,.1);color:#6fa8ff;}
+.e-compartir-btn.copy:hover{border-color:#d4a96a;background:rgba(212,169,106,.15);color:#d4a96a;}
+.e-compartir-copied{font-size:.65rem;color:#d4a96a;letter-spacing:.08em;opacity:0;transition:opacity .3s;margin-left:4px;}
+.e-compartir-copied.vis{opacity:1;}
+@media(max-width:768px){
+  .e-compartir{padding:40px 24px 36px;}
+  .e-compartir::after{font-size:8rem;right:2%;}
+  .e-compartir-frase{font-size:1.2rem;}
+  .e-compartir-btns{gap:8px;}
+  .e-compartir-btn{padding:10px 16px;font-size:.62rem;}
+}
+
+/* ── TAMBÉ ET POT INTERESSAR ── */
+.e-tambe{margin:64px 0 0;padding-top:48px;border-top:1px solid var(--border);}
+.e-tambe-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-tambe-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);margin-bottom:32px;}
+.e-tambe-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.e-tambe-card{background:#fff;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;text-decoration:none;}
+.e-tambe-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(28,46,62,.12);}
+.e-tambe-card-img{height:172px;overflow:hidden;position:relative;}
+.e-tambe-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.e-tambe-card:hover .e-tambe-card-img img{transform:scale(1.05);}
+.e-tambe-card-cat{position:absolute;top:12px;left:12px;font-size:.57rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 10px;color:#fff;}
+.e-tambe-card-body{padding:20px;flex:1;display:flex;flex-direction:column;}
+.e-tambe-card-title{font-family:var(--font-serif);font-size:1rem;color:var(--navy-dark);line-height:1.3;margin-bottom:8px;font-weight:600;}
+.e-tambe-card-exc{font-size:.83rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:14px;flex:1;}
+.e-tambe-card-link{font-size:.63rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy-dark);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;width:fit-content;margin-top:auto;}
+.e-tambe-card:hover .e-tambe-card-link{color:var(--gold);}
+@media(max-width:680px){.e-tambe-grid{grid-template-columns:1fr;}}
+</style>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.gourmetsdetarragona.com/entrades/les-dunes-previa-2026.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.gourmetsdetarragona.com/entrades/les-dunes-previa-2026.html">
+<meta property="og:title" content="Les Dunes · Prèvia · Gourmets de Tarragona">
+<meta property="og:description" content="Previa de la visita de Gourmets de Tarragona al restaurante Les Dunes de Riumar, Delta del Ebro. Cena mensual del 4 de septiembre de 2026 con el alcalde de Deltebre, Lluís Soler, como invitado.">
+<meta property="og:image" content="https://www.gourmetsdetarragona.com/assets/img/lesdunes/sensacions-espai.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Les Dunes · Riumar · Delta de l'Ebre">
+<meta property="og:site_name" content="Gourmets de Tarragona">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="ca_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Les Dunes · Prèvia · Gourmets de Tarragona">
+<meta name="twitter:description" content="Previa de la visita de Gourmets de Tarragona al restaurante Les Dunes de Riumar, Delta del Ebro. Cena mensual del 4 de septiembre de 2026 con el alcalde de Deltebre, Lluís Soler, como invitado.">
+<meta name="twitter:image" content="https://www.gourmetsdetarragona.com/assets/img/lesdunes/sensacions-espai.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Les Dunes · Prèvia · Gourmets de Tarragona",
+  "description": "Previa de la visita de Gourmets de Tarragona al restaurante Les Dunes de Riumar, Delta del Ebro. Cena mensual del 4 de septiembre de 2026 con el alcalde de Deltebre, Lluís Soler, como invitado.",
+  "image": "https://www.gourmetsdetarragona.com/assets/img/lesdunes/sensacions-espai.jpg",
+  "url": "https://www.gourmetsdetarragona.com/entrades/les-dunes-previa-2026.html",
+  "datePublished": "2026-08-22",
+  "inLanguage": ["es", "ca"],
+  "author": {
+    "@type": "Organization",
+    "name": "Gourmets de Tarragona",
+    "url": "https://www.gourmetsdetarragona.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Gourmets de Tarragona",
+    "url": "https://www.gourmetsdetarragona.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gourmetsdetarragona.com/assets/img/logo.png"
+    }
+  }
+}
+</script>
+<style>
+.e-nl-cta{background:var(--navy-dark,#1C2E3E);padding:64px 5%;text-align:center;margin:0;}
+.e-nl-cta-inner{max-width:540px;margin:0 auto;}
+.e-nl-cta-deco{font-size:1.4rem;color:var(--gold,#B8924A);opacity:.5;margin-bottom:16px;line-height:1;}
+.e-nl-cta-kicker{font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold,#B8924A);margin-bottom:14px;}
+.e-nl-cta-title{font-family:var(--font-serif,'Playfair Display',Georgia,serif);font-size:clamp(1.4rem,3.5vw,2rem);color:#F6F2EC;line-height:1.2;margin-bottom:14px;font-weight:600;}
+.e-nl-cta-sub{font-size:.88rem;color:rgba(246,242,236,.6);line-height:1.75;margin-bottom:28px;font-weight:300;}
+.e-nl-cta-form{display:flex;max-width:420px;margin:0 auto 12px;}
+.e-nl-cta-input{flex:1;min-width:0;padding:13px 16px;font-size:.85rem;font-family:inherit;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-right:none;color:#fff;outline:none;transition:border-color .2s;}
+.e-nl-cta-input:focus{border-color:rgba(184,146,74,.55);}
+.e-nl-cta-btn{padding:13px 20px;background:var(--gold,#B8924A);color:#fff;font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-family:inherit;border:none;cursor:pointer;white-space:nowrap;transition:background .2s;}
+.e-nl-cta-btn:hover{background:#c9a05a;}
+.e-nl-cta-legal{font-size:.68rem;color:rgba(255,255,255,.2);}
+@media(max-width:480px){.e-nl-cta-form{flex-direction:column;}.e-nl-cta-input{border-right:1px solid rgba(255,255,255,.14);border-bottom:none;}.e-nl-cta-btn{padding:13px;}}
+
+</style>
+<style>
+#nl-popup{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 300ms ease;}
+#nl-popup.nl-visible{opacity:1;}
+#nl-popup-overlay{position:absolute;inset:0;background:rgba(8,15,24,.72);backdrop-filter:blur(3px);}
+#nl-popup-box{position:relative;z-index:1;background:#0D1E2F;border:1px solid rgba(184,146,74,.2);max-width:420px;width:90%;padding:48px 40px 40px;text-align:center;transform:translateY(18px);transition:transform 300ms ease;box-shadow:0 32px 80px rgba(0,0,0,.5);}
+#nl-popup.nl-visible #nl-popup-box{transform:translateY(0);}
+#nl-popup-close{position:absolute;top:14px;right:18px;background:none;border:none;color:rgba(255,255,255,.3);font-size:1.4rem;cursor:pointer;line-height:1;padding:4px;transition:color .2s;}
+#nl-popup-close:hover{color:rgba(255,255,255,.8);}
+#nl-popup-deco{font-size:1.2rem;color:#B8924A;opacity:.45;margin-bottom:14px;}
+#nl-popup-kicker{font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#B8924A;margin-bottom:12px;}
+#nl-popup-title{font-family:'Playfair Display',Georgia,serif;font-size:1.55rem;color:#F6F2EC;line-height:1.22;margin-bottom:12px;font-weight:600;}
+#nl-popup-sub{font-size:.85rem;color:rgba(246,242,236,.55);line-height:1.75;margin-bottom:26px;font-weight:300;}
+#nl-popup-form{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+#nl-popup-email{padding:13px 16px;font-size:.88rem;font-family:inherit;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#fff;outline:none;transition:border-color .2s;width:100%;box-sizing:border-box;}
+#nl-popup-email:focus{border-color:rgba(184,146,74,.55);}
+#nl-popup-btn{padding:14px;background:#B8924A;color:#fff;font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-family:inherit;border:none;cursor:pointer;transition:background .2s;}
+#nl-popup-btn:hover{background:#c9a05a;}
+#nl-popup-legal{font-size:.65rem;color:rgba(255,255,255,.18);}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/img/logo.png"
+           alt="Gourmets de Tarragona"
+           onerror="this.src='https://gourmetsdetarragona.com/wp-content/uploads/2025/05/cropped-logo_gourmets_blau_sin_fondo-3-300x296.png'">
+    </a>
+    <div class="nav-menu">
+      <div class="nav-item">
+        <a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</span>
+        <div class="dropdown">
+          <a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a>
+          <a href="../pages/associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a>
+          <a href="../pages/associacio.html#valoracio" class="t" data-es="El sistema de valoración" data-ca="El sistema de valoració">El sistema de valoración</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span>
+        <div class="dropdown">
+          <a href="../pages/restaurants.html" class="t" data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visitas 2025–26</a>
+          <a href="../pages/restaurants.html#historic" class="t" data-es="Histórico de visitas" data-ca="Històric de visites">Histórico de visitas</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="Premios" data-ca="Premis">Premios</span>
+        <div class="dropdown">
+          <a href="../pages/premis.html" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</a>
+          <a href="../pages/premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a>
+          <a href="../pages/premis.html#palmares" class="t" data-es="Palmarés histórico" data-ca="Palmarès històric">Palmarés histórico</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</span>
+        <div class="dropdown">
+          <a href="../pages/esdeveniments.html" class="t" data-es="Cenas especiales" data-ca="Sopars especials">Cenas especiales</a>
+          <a href="../pages/esdeveniments.html#cates" class="t" data-es="Catas &amp; Visitas" data-ca="Tasts &amp; Visites">Catas &amp; Visitas</a>
+          <a href="../pages/esdeveniments.html#calendari" class="t" data-es="Calendario" data-ca="Calendari">Calendario</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a>
+      </div>
+      <div class="nav-item">
+        <a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a>
+      </div>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
+    <div class="mobile-item"><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
+    <div class="mobile-item"><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
+    <div class="mobile-item"><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></div>
+    <div class="mobile-item"><a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></div>
+    <div class="mobile-item"><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+    <div class="mobile-item"><a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="entrada-hero">
+  <div class="entrada-hero-bg" style="background-image:url('../assets/img/lesdunes/sensacions-espai.jpg');"></div>
+  <div class="entrada-hero-grad"></div>
+  <div class="entrada-hero-line"></div>
+  <div class="entrada-hero-content">
+    <a href="../pages/blog.html" class="entrada-back"><i class="fa fa-arrow-left"></i> <span data-i18n="back_blog"></span></a>
+    <div class="entrada-meta-top">
+      <span class="entrada-badge entrada-badge-previa" data-i18n="dunes_prev_badge"></span>
+      <div class="entrada-meta-info">
+        <span class="entrada-meta-item"><i class="fa fa-map-marker-alt"></i> Riumar</span>
+        <span class="entrada-meta-item"><i class="fa fa-water"></i> <span data-i18n="dunes_prev_cuina"></span></span>
+        <span class="entrada-meta-item"><i class="fa fa-calendar"></i> 4 Septiembre 2026</span>
+      </div>
+    </div>
+    <h1 class="entrada-titol">Les Dunes <em>(Riumar)</em><br><span data-i18n="dunes_prev_titol_sub"></span></h1>
+    <p class="entrada-subtitol" data-i18n="dunes_prev_subtitol"></p>
+  </div>
+</header>
+
+<!-- COS -->
+<main class="entrada-cos">
+
+  <div class="e-grid-2">
+    <div>
+      <span class="e-label" data-i18n="dunes_prev_l1"></span>
+      <h2 class="e-title" data-i18n="dunes_prev_t1"></h2>
+      <div class="e-divider"></div>
+      <p class="e-p" data-i18n="dunes_prev_p1"></p>
+      <p class="e-p" data-i18n="dunes_prev_p2"></p>
+      <div class="e-vals">
+        <div class="e-val"><i class="fa fa-map-marker-alt"></i><span>Riumar, Delta de l'Ebre</span></div>
+        <div class="e-val"><i class="fa fa-calendar"></i><span data-i18n="dunes_prev_val2"></span></div>
+        <div class="e-val"><i class="fa fa-water"></i><span data-i18n="dunes_prev_val3"></span></div>
+        <div class="e-val"><i class="fa fa-landmark"></i><span data-i18n="dunes_prev_val4"></span></div>
+      </div>
+    </div>
+    <div class="e-img">
+      <img src="../assets/img/lesdunes/ostres-musclos.jpg" alt="Les Dunes — ostres i musclos">
+    </div>
+  </div>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/lesdunes/sensacions-espai.jpg" alt="Les Dunes Sensacions — l'espai a mitja llum de Les Dunes, Riumar">
+    <div class="e-foto-gran-peu" data-i18n="dunes_prev_foto1_peu"></div>
+  </div>
+
+  <span class="e-label" data-i18n="dunes_prev_hist_label"></span>
+  <h2 class="e-title" data-i18n="dunes_prev_hist_title"></h2>
+  <div class="e-divider"></div>
+  <p class="e-p" data-i18n="dunes_prev_hist_p1"></p>
+  <p class="e-p" data-i18n="dunes_prev_hist_p2"></p>
+
+  <div class="e-foto-gran" style="height:340px;margin:40px 0;">
+    <img src="../assets/img/lesdunes/terrassa.jpg" alt="Terrassa de Les Dunes, a tocar de la platja de Riumar">
+    <div class="e-foto-gran-peu" data-i18n="dunes_prev_foto2_peu"></div>
+  </div>
+
+  <div class="e-divider"></div>
+  <span class="e-label" data-i18n="dunes_prev_conv_section_label"></span>
+  <h2 class="e-title" data-i18n="dunes_prev_conv_section_title"></h2>
+
+  <div class="e-convidat">
+    <div class="e-convidat-avatar">LS</div>
+    <div>
+      <div class="e-convidat-label" data-i18n="dunes_prev_conv_label"></div>
+      <div class="e-convidat-nom">Sr. Lluís Soler</div>
+      <div class="e-convidat-desc" data-i18n="dunes_prev_conv_desc"></div>
+    </div>
+  </div>
+
+  <div class="e-programa">
+    <p class="e-programa-title"><i class="fa fa-clock"></i> <span data-i18n="dunes_prev_prog_title"></span></p>
+    <div class="e-programa-item"><span class="e-programa-hora">20:30 h</span><span class="e-programa-desc" data-i18n="dunes_prev_prog1"></span></div>
+    <div class="e-programa-item"><span class="e-programa-hora">20:45 h</span><span class="e-programa-desc" data-i18n="dunes_prev_prog2"></span></div>
+    <div class="e-programa-item"><span class="e-programa-hora">20:50 h</span><span class="e-programa-desc" data-i18n="dunes_prev_prog3"></span></div>
+    <div class="e-programa-item"><span class="e-programa-hora">21:00 h</span><span class="e-programa-desc" data-i18n="dunes_prev_prog4"></span></div>
+    <div class="e-programa-item"><span class="e-programa-hora">00:00 h</span><span class="e-programa-desc" data-i18n="dunes_prev_prog5"></span></div>
+  </div>
+
+  <div class="e-menu">
+    <p class="e-menu-title" data-i18n="dunes_prev_menu_title"></p>
+    <p class="e-menu-sub">Menú Gourmets de Tarragona · Les Dunes</p>
+    <div class="e-maridatge">
+      <div class="e-maridatge-header">
+        <span data-i18n="dunes_prev_col_do"></span>
+        <span data-i18n="dunes_prev_col_plat"></span>
+        <span data-i18n="dunes_prev_col_vi"></span>
+      </div>
+      <div class="e-maridatge-row">
+        <div class="e-maridatge-do">
+          <span class="e-maridatge-do-badge">D.O. Penedès</span>
+          <span class="e-maridatge-do-name">Juvé &amp; Camps</span>
+        </div>
+        <div class="e-maridatge-plat" data-i18n="dunes_prev_plat1"></div>
+        <div class="e-maridatge-vi"><strong>Gran Tribut Joan Juvé 2018</strong> Xarel·lo · Macabeu · Chardonnay · Parellada</div>
+      </div>
+      <div class="e-maridatge-row">
+        <div class="e-maridatge-do">
+          <span class="e-maridatge-do-badge">D.O.Ca. Rioja</span>
+          <span class="e-maridatge-do-name">R. López de Heredia</span>
+        </div>
+        <div class="e-maridatge-plat" data-i18n="dunes_prev_plat2"></div>
+        <div class="e-maridatge-vi"><strong>Viña Gravonia Crianza 2017</strong> Viura</div>
+      </div>
+      <div class="e-maridatge-row">
+        <div class="e-maridatge-do">
+          <span class="e-maridatge-do-badge">A.O.C. Chablis</span>
+          <span class="e-maridatge-do-name">Régnard</span>
+        </div>
+        <div class="e-maridatge-plat" data-i18n="dunes_prev_plat3"></div>
+        <div class="e-maridatge-vi"><strong>Grand Régnard 2024</strong> Chardonnay</div>
+      </div>
+      <div class="e-maridatge-row">
+        <div class="e-maridatge-do">
+          <span class="e-maridatge-do-badge">D.O. Terra Alta</span>
+          <span class="e-maridatge-do-name">Edetària</span>
+        </div>
+        <div class="e-maridatge-plat" data-i18n="dunes_prev_plat4"></div>
+        <div class="e-maridatge-vi"><strong>Lassot 2024</strong> Garnatxa Peluda</div>
+      </div>
+      <div class="e-maridatge-row">
+        <div class="e-maridatge-do">
+          <span class="e-maridatge-do-badge">D.O. Terra Alta</span>
+          <span class="e-maridatge-do-name">Edetària</span>
+        </div>
+        <div class="e-maridatge-plat" data-i18n="dunes_prev_plat5"></div>
+        <div class="e-maridatge-vi"><strong>Edetària Selecció Blanc 2023</strong> Garnatxa Blanca</div>
+      </div>
+      <div class="e-maridatge-row">
+        <div class="e-maridatge-do">
+          <span class="e-maridatge-do-badge">D.O. Terra Alta</span>
+          <span class="e-maridatge-do-name">Edetària</span>
+        </div>
+        <div class="e-maridatge-plat" data-i18n="dunes_prev_plat6"></div>
+        <div class="e-maridatge-vi"><strong>Edetària Dolç 2022</strong> Garnatxa Fina · Syrah</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="e-foto-gran" style="height:360px;">
+    <img src="../assets/img/lesdunes/gamba-guacamole.jpg" alt="Panipuri de gamba amb guacamole a la brasa — Les Dunes, Riumar">
+    <div class="e-foto-gran-peu" data-i18n="dunes_prev_foto3_peu"></div>
+  </div>
+
+  <div class="e-divider"></div>
+  <span class="e-label" data-i18n="dunes_prev_equip_label"></span>
+  <h2 class="e-title" data-i18n="dunes_prev_equip_title"></h2>
+  <div class="e-equip-grid">
+    <div class="e-equip-card">
+      <div class="e-equip-avatar">SP</div>
+      <p class="e-equip-nom"><strong>Sergi Piñol</strong></p>
+      <p class="e-equip-rol" data-i18n="dunes_prev_eq1_rol"></p>
+      <p class="e-equip-desc" data-i18n="dunes_prev_eq1_desc"></p>
+    </div>
+    <div class="e-equip-card">
+      <div class="e-equip-avatar">NR</div>
+      <p class="e-equip-nom"><strong>Noemi Ribes</strong></p>
+      <p class="e-equip-rol" data-i18n="dunes_prev_eq2_rol"></p>
+      <p class="e-equip-desc" data-i18n="dunes_prev_eq2_desc"></p>
+    </div>
+  </div>
+
+  <div class="e-fitxa">
+    <div class="e-fitxa-info">
+      <h3 data-i18n="dunes_prev_fitxa_title"></h3>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-map-marker-alt"></i></div><span class="e-fitxa-text">Carrer del Coll Verd, 5-3 · 43580 Riumar, Tarragona</span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-water"></i></div><span class="e-fitxa-text" data-i18n="dunes_prev_fitxa_cuina"></span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-phone"></i></div><span class="e-fitxa-text">639 02 97 41</span></div>
+      <div class="e-fitxa-row"><div class="e-fitxa-ico"><i class="fa fa-calendar"></i></div><span class="e-fitxa-text" data-i18n="dunes_prev_fitxa_data"></span></div>
+    </div>
+    <div class="e-fitxa-cta">
+      <p data-i18n="dunes_prev_cta_desc"></p>
+      <a href="les-dunes-cronica-2026.html" class="btn-primary" style="display:inline-block;" data-i18n="dunes_prev_cta_btn"></a>
+    </div>
+  </div>
+
+
+
+<!-- ═══════ CTA NEWSLETTER ═══════ -->
+<section class="e-nl-cta">
+  <div class="e-nl-cta-inner">
+    <div class="e-nl-cta-deco" aria-hidden="true">✦</div>
+    <p class="e-nl-cta-kicker t" data-es="Newsletter" data-ca="Newsletter">Newsletter</p>
+    <h2 class="e-nl-cta-title t"
+        data-es="¿Quieres recibir la próxima crónica antes que nadie?"
+        data-ca="Vols rebre la propera crònica abans que ningú?">
+      ¿Quieres recibir la próxima crónica antes que nadie?
+    </h2>
+    <p class="e-nl-cta-sub t"
+       data-es="Crónicas de los restaurantes visitados, vinos recomendados y novedades del Camp de Tarragona. Una vez al mes, sin ruido."
+       data-ca="Cròniques dels restaurants visitats, vins recomanats i novetats del Camp de Tarragona. Un cop al mes, sense soroll.">
+      Crónicas de los restaurantes visitados, vinos recomendados y novedades del Camp de Tarragona. Una vez al mes, sin ruido.
+    </p>
+    <form class="e-nl-cta-form"
+          action="https://fe0daaff.sibforms.com/serve/MUIFAMSYb3h5hzjCYPN-GiItYcbChszEiV-2Ci_yU_3sfesrzldVY_nwtUN7RfIi41NyXnMu3sl9-ob6jEY1i8D_lfWkjTx2BPx-DdkMBNRhY_UX6RYT8Q6OtL_RSXdw1Nxw1cQMI50KFEuV5agn87hBqKVShQPjzSVyuaqjxyjEXiMI4ec7wdY55xdTRqGDyO937oVLzoaKi6MUtQ=="
+          method="post">
+      <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off"
+             style="display:none;position:absolute;left:-9999px;">
+      <input type="hidden" name="locale" value="es">
+      <input type="email" name="EMAIL" required
+             class="e-nl-cta-input t"
+             data-placeholder-es="hola@tucorreo.com"
+             data-placeholder-ca="hola@elteucorreu.com"
+             placeholder="hola@tucorreo.com">
+      <button type="submit" class="e-nl-cta-btn t"
+              data-es="APUNTARME" data-ca="APUNTAR-ME">APUNTARME</button>
+    </form>
+    <p class="e-nl-cta-legal t"
+       data-es="Sin spam · Baja cuando quieras."
+       data-ca="Sense spam · Baixa quan vulguis.">Sin spam · Baja cuando quieras.</p>
+  </div>
+</section>
+<!-- ═══════ /CTA NEWSLETTER ═══════ -->
+
+<div class="e-tambe">
+    <span class="e-tambe-label t" data-es="También te puede interesar" data-ca="També et pot interessar">También te puede interesar</span>
+    <h2 class="e-tambe-title t"
+        data-es="Más crónicas de restaurante"
+        data-ca="Més cròniques de restaurant">Más crónicas de restaurante</h2>
+    <div class="e-tambe-grid">
+
+      <a href="brumma-cronica-2026.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/brumma/cronica/arroz.jpg"
+               alt="Brumma · Crónica"
+               onerror="this.parentElement.style.background='#1c2e3e'">
+          <span class="e-tambe-card-cat t" data-es="Crónica" data-ca="Crònica">Crónica</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <h3 class="e-tambe-card-title t"
+              data-es="Brumma · Crónica"
+              data-ca="Brumma · Crònica">Brumma · Crónica</h3>
+          <p class="e-tambe-card-exc t"
+             data-es="Siete DOs catalanas y el arroz de lágrima ibérica en la sala acristalada de Infinitum Resort, frente al Mediterráneo."
+             data-ca="Set DOs catalanes i l'arròs de llàgrima ibèrica a la sala envidrada d'Infinitum Resort, davant el Mediterrani.">
+            Siete DOs catalanas y el arroz de lágrima ibérica en la sala acristalada de Infinitum Resort, frente al Mediterráneo.
+          </p>
+          <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+
+      <a href="sopar-estiu-2026.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/nautic/p204059.jpg"
+               alt="Cena de Verano 2026"
+               onerror="this.parentElement.style.background='#1c2e3e'">
+          <span class="e-tambe-card-cat t" data-es="Crónica" data-ca="Crònica">Crónica</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <h3 class="e-tambe-card-title t"
+              data-es="Cena de Verano 2026"
+              data-ca="Sopar d'Estiu 2026">Cena de Verano 2026</h3>
+          <p class="e-tambe-card-exc t"
+             data-es="52 comensales en la terraza del Club Nàutic de Salou. La primera mitad de la temporada 2026, en una sola noche."
+             data-ca="52 comensals a la terrassa del Club Nàutic de Salou. La primera meitat de la temporada 2026, en una sola nit.">
+            52 comensales en la terraza del Club Nàutic de Salou. La primera mitad de la temporada 2026, en una sola noche.
+          </p>
+          <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>
+
+
+<!-- COMPARTIR -->
+<div class="e-compartir">
+  <div class="e-compartir-inner">
+    <div class="e-compartir-deco">
+      <span class="e-compartir-deco-line"></span>
+      <span class="t" data-es="Comparte este artículo" data-ca="Comparteix aquest article">Comparte este artículo</span>
+      <span class="e-compartir-deco-line r"></span>
+    </div>
+    <p class="e-compartir-frase t"
+      data-es="Si te ha hecho pensar, <strong>merece llegar más lejos.</strong>"
+      data-ca="Si t'ha fet pensar, <strong>mereix arribar més lluny.</strong>">
+      Si te ha hecho pensar, <strong>merece llegar más lejos.</strong>
+    </p>
+    <div class="e-compartir-btns">
+      <a class="e-compartir-btn wa" id="btn-wa" href="#" target="_blank" rel="noopener" aria-label="Compartir per WhatsApp">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.862L.057 23.57a.75.75 0 0 0 .924.924l5.701-1.476A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.694 9.694 0 0 1-4.964-1.366l-.355-.212-3.685.954.975-3.564-.232-.368A9.696 9.696 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+        <span class="t" data-es="WhatsApp" data-ca="WhatsApp">WhatsApp</span>
+      </a>
+      <a class="e-compartir-btn fb" id="btn-fb" href="#" target="_blank" rel="noopener" aria-label="Compartir a Facebook">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        <span class="t" data-es="Facebook" data-ca="Facebook">Facebook</span>
+      </a>
+      <a class="e-compartir-btn x" id="btn-x" href="#" target="_blank" rel="noopener" aria-label="Compartir a X">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        <span class="t" data-es="X / Twitter" data-ca="X / Twitter">X / Twitter</span>
+      </a>
+      <button class="e-compartir-btn copy" onclick="copiarEnllac(this)" aria-label="Copiar enlace">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span class="t" data-es="Copiar enlace" data-ca="Copiar enllaç">Copiar enlace</span>
+        <span class="e-compartir-copied">
+          <span class="t" data-es="¡Copiado!" data-ca="Copiat!">¡Copiado!</span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="e-nav-retorn">
+  <a href="../pages/blog.html" class="btn-outline" data-i18n="back_blog_btn"></a>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="../assets/img/logo.png"
+           alt="Gourmets de Tarragona"
+           onerror="this.style.display='none'">
+      <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucre.<br>Camp de Tarragona.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Navegación" data-ca="Navegació">Navegación</h4>
+      <ul>
+        <li><a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a></li>
+        <li><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li>
+        <li><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li>
+        <li><a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></li>
+        <li><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Legal" data-ca="Legal">Legal</h4>
+      <ul>
+        <li><a href="../pages/avis-legal.html" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li>
+        <li><a href="../pages/privacitat.html" class="t" data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a></li>
+        <li><a href="../pages/cookies.html" class="t" data-es="Política de Cookies" data-ca="Política de Cookies">Política de Cookies</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="t" data-es="Contacto" data-ca="Contacte">Contacto</h4>
+      <p><a href="mailto:gourmetsdetarragona@gourmetsdetarragona.com">gourmetsdetarragona@gourmetsdetarragona.com</a></p>
+      <p>Tarragona, Catalunya</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="t" data-es="© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados" data-ca="© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats">© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<script>
+var T = {
+  nav_inicio:{es:'Inicio',ca:'Inici'},
+  nav_asoc:{es:'La Asociación',ca:"L'Associació"},
+  nav_quienes:{es:'Quiénes somos',ca:'Qui som'},
+  nav_como:{es:'Cómo funcionamos',ca:'Com funcionem'},
+  nav_rest:{es:'Restaurantes',ca:'Restaurants'},
+  nav_visites:{es:'Visitas 2025–26',ca:'Visites 2025–26'},
+  nav_premios:{es:'Premios',ca:'Premis'},
+  nav_gastronia:{es:'Trofeo Gastronía',ca:'Trofeu Gastronía'},
+  nav_bacus:{es:'Premio Bacus',ca:'Premi Bacus'},
+  nav_blog:{es:'Blog Gourmet',ca:'Blog Gourmet'},
+  nav_contacto:{es:'Contacto',ca:'Contacte'},
+  nav_rest_short:{es:'Restaurantes',ca:'Restaurants'},
+  nav_premios_short:{es:'Premios',ca:'Premis'},
+  back_blog:{es:'Volver al Blog',ca:'Tornar al Blog'},
+  back_blog_btn:{es:'← Volver al Blog',ca:'← Tornar al Blog'},
+  footer_desc:{es:'Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.',ca:'Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.'},
+  footer_nav:{es:'Navegación',ca:'Navegació'},
+  footer_legal:{es:'Legal',ca:'Legal'},
+  footer_contacte:{es:'Contacto',ca:'Contacte'},
+  footer_avis:{es:'Aviso Legal',ca:'Avís Legal'},
+  footer_privacitat:{es:'Política de Privacidad',ca:'Política de Privacitat'},
+  footer_copy:{es:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',ca:'© 2026 Gourmets de Tarragona · Tots els drets reservats'},
+  dunes_prev_badge:{es:'Previa · 4 Septiembre 2026',ca:'Prèvia · 4 Setembre 2026'},
+  dunes_prev_cuina:{es:'Cocina del Delta',ca:'Cuina del Delta'},
+  dunes_prev_titol_sub:{es:'6º Recorrido Gourmet 2026',ca:'6è Recorregut Gourmet 2026'},
+  dunes_prev_subtitol:{es:'En Riumar, a un paso del mar y de los arrozales, un menú degustación que ha convertido el producto del Delta en alta cocina. Sergi Piñol y Noemi Ribes nos reciben el 4 de septiembre junto al alcalde de Deltebre, Lluís Soler.',ca:'A Riumar, a tocar del mar i dels arrossars, un menú degustació que ha convertit el producte del Delta en alta cuina. Sergi Piñol i Noemi Ribes ens reben el 4 de setembre juntament amb l\'alcalde de Deltebre, Lluís Soler.'},
+  dunes_prev_l1:{es:'Por qué vamos al Delta',ca:'Per què anem al Delta'},
+  dunes_prev_t1:{es:'Once años de menú degustación frente al Mediterráneo',ca:'Onze anys de menú degustació davant el Mediterrani'},
+  dunes_prev_p1:{es:'El camino de Sergi Piñol hasta los fogones no fue el habitual. Locutor de radio en la Cadena Ser hasta 1998, aceptó en el año 2000 hacerse cargo de un restaurante casi sin saber abrir una botella de vino, junto a quien entonces era su novia, Noemi Ribes. Una pausa familiar en 2010, tras el nacimiento de su hija Ruth, le dio la perspectiva que en 2015 tomaría forma definitiva: <strong>Les Dunes</strong>, un proyecto pensado para dar a conocer la cocina del Delta del Ebro desde otro ángulo, con toques modernos y un cuidado especial en cada presentación.',ca:'El camí de Sergi Piñol fins als fogons no va ser l\'habitual. Locutor de ràdio a la Cadena Ser fins al 1998, va acceptar l\'any 2000 fer-se càrrec d\'un restaurant gairebé sense saber obrir una ampolla de vi, juntament amb qui llavors era la seva núvia, Noemi Ribes. Una pausa familiar el 2010, després del naixement de la seva filla Ruth, li va donar la perspectiva que el 2015 prendria forma definitiva: <strong>Les Dunes</strong>, un projecte pensat per donar a conèixer la cuina del Delta de l\'Ebre des d\'un altre angle, amb tocs moderns i una cura especial en cada presentació.'},
+  dunes_prev_p2:{es:'Once años después, Les Dunes se ha consolidado como una de las citas gastronómicas de referencia del Delta, con un menú degustación que evoluciona con las estaciones y un servicio que Sergi define sin rodeos: <strong>si algo no gusta, se cambia en el momento</strong>. Noemi Ribes, cap de cuina desde el primer día, es quien traduce cada idea en plato con precisión y constancia.',ca:'Onze anys després, Les Dunes s\'ha consolidat com una de les cites gastronòmiques de referència del Delta, amb un menú degustació que evoluciona amb les estacions i un servei que Sergi defineix sense embuts: <strong>si alguna cosa no agrada, es canvia al moment</strong>. Noemi Ribes, cap de cuina des del primer dia, és qui tradueix cada idea en plat amb precisió i constància.'},
+  dunes_prev_val2:{es:'4 de septiembre 2026',ca:'4 de setembre 2026'},
+  dunes_prev_val3:{es:'Producto del Delta del Ebro',ca:'Producte del Delta de l\'Ebre'},
+  dunes_prev_val4:{es:'Invitado: alcalde de Deltebre',ca:'Convidat: alcalde de Deltebre'},
+  dunes_prev_foto1_peu:{es:'Les Dunes Sensacions — el espacio de la casa reservado para las veladas más íntimas',ca:'Les Dunes Sensacions — l\'espai de la casa reservat per a les vetllades més íntimes'},
+  dunes_prev_hist_label:{es:'El restaurante',ca:'El restaurant'},
+  dunes_prev_hist_title:{es:'De la radio a los fogones del Delta',ca:'De la ràdio als fogons del Delta'},
+  dunes_prev_hist_p1:{es:'Riumar es el último núcleo habitado antes de que el Ebro se abra al Mediterráneo, en el corazón de un Delta de arrozales, marismas y aves. Ahí, entre casas de veraneo y el rumor del río, Les Dunes lleva once años defendiendo una cocina que no reniega de su territorio: anguila ahumada, arroces de proximidad, pescado de marisma y ostras que llegan de las bateas cercanas conviven en un menú que cambia con las estaciones y que siempre termina en arroz.',ca:'Riumar és el darrer nucli habitat abans que l\'Ebre s\'obri al Mediterrani, al cor d\'un Delta d\'arrossars, maresmes i ocells. Allà, entre cases d\'estiueig i el remor del riu, Les Dunes porta onze anys defensant una cuina que no reneguen del seu territori: anguila fumada, arrossos de proximitat, peix de maresma i ostres que arriben de les bateres properes conviuen en un menú que canvia amb les estacions i que sempre acaba en arròs.'},
+  dunes_prev_hist_p2:{es:'La casa ha sumado además <strong>Les Dunes Sensacions</strong>, un segundo menú nacido de la idea de llevar la experiencia gastronómica un paso más allá: la sala a media luz, un candil sobre cada mesa y media hora de música elegida por el propio comensal. "Buscábamos la perfección en la mesa", resume Sergi Piñol. Un restaurante pequeño, familiar, que ha decidido no dejar nada al azar.',ca:'La casa ha sumat a més <strong>Les Dunes Sensacions</strong>, un segon menú nascut de la idea de portar l\'experiència gastronòmica un pas més enllà: la sala a mitja llum, un llum d\'oli damunt cada taula i mitja hora de música escollida pel mateix comensal. "Buscàvem la perfecció a la taula", resumeix Sergi Piñol. Un restaurant petit, familiar, que ha decidit no deixar res a l\'atzar.'},
+  dunes_prev_foto2_peu:{es:'La terraza de Les Dunes, a un paso de la playa de Riumar',ca:'La terrassa de Les Dunes, a tocar de la platja de Riumar'},
+  dunes_prev_conv_section_label:{es:'El invitado de la velada',ca:'El convidat de la vetllada'},
+  dunes_prev_conv_section_title:{es:'Un alcalde en la mesa de los Gourmets',ca:'Un alcalde a la taula dels Gourmets'},
+  dunes_prev_conv_label:{es:'Invitado especial de la velada',ca:'Convidat especial de la vetllada'},
+  dunes_prev_conv_desc:{es:'Licenciado en Administración y Dirección de Empresas por la UPF, con másters en Ciencias Políticas, Fiscalidad, Gobierno Local y Dirección Pública. Regidor de Deltebre desde 2007 y alcalde desde 2015, revalidado en 2019 y 2023. Fue presidente del Consell Comarcal del Baix Ebre (2011-2015), de la Associació Catalana de Municipis (2019-2023) y diputado de Hacienda en la Diputació de Tarragona (2015-2019).',ca:'Llicenciat en Administració i Direcció d\'Empreses per la UPF, amb màsters en Ciències Polítiques, Fiscalitat, Govern Local i Direcció Pública. Regidor de Deltebre des del 2007 i alcalde des del 2015, revalidat el 2019 i el 2023. Va ser president del Consell Comarcal del Baix Ebre (2011-2015), de l\'Associació Catalana de Municipis (2019-2023) i diputat d\'Hisenda a la Diputació de Tarragona (2015-2019).'},
+  dunes_prev_prog_title:{es:'Programa de la velada',ca:'Programa de la vetllada'},
+  dunes_prev_prog1:{es:'Recepción de los asistentes',ca:'Recepció dels assistents'},
+  dunes_prev_prog2:{es:'Presentación del restaurante',ca:'Presentació del restaurant'},
+  dunes_prev_prog3:{es:'Presentación del ponente invitado',ca:'Presentació del ponent convidat'},
+  dunes_prev_prog4:{es:'Inicio de la cena',ca:'Inici del sopar'},
+  dunes_prev_prog5:{es:'Clausura de la velada y entrega de premios',ca:'Clausura de la vetllada i lliurament de premis'},
+  dunes_prev_menu_title:{es:'Qué encontraremos en la mesa',ca:'Què trobarem a la taula'},
+  dunes_prev_col_do:{es:'Bodega',ca:'Celler'},
+  dunes_prev_col_plat:{es:'Plato',ca:'Plat'},
+  dunes_prev_col_vi:{es:'Vino',ca:'Vi'},
+  dunes_prev_plat1:{es:'El Garxal — Ostras y navajas, con vermut y helado de mejillones en escabeche',ca:'El Garxal — Ostres i navalles, amb vermut i gelat de musclos en escabetx'},
+  dunes_prev_plat2:{es:'Homenaje a los abuelos — Huevo con tomate y llisa, farinetas de maíz con col y sopa de tomillo',ca:'Homenatge als avis — Ou amb tomata i llissa, farinetes de panís amb col i sopa de farigola'},
+  dunes_prev_plat3:{es:'Un paseo por Les Dunes — Panipuri de tonyina y mayonesa de wasabi, brandada de bacalao y croqueta de sepia',ca:'Un passeig per Les Dunes — Panipuri de tonyina i maionesa de wasabi, brandada de bacallà i croqueta de sípia'},
+  dunes_prev_plat4:{es:'La tradición reinventada — Anguila ahumada, canelón crujiente de pato con trufa de verano y suquet de ranas con caviar del Delta',ca:'La tradició reinventada — Anguila fumada, caneló cruixent d\'ànec amb tòfona d\'estiu i suquet de granotes amb caviar del Delta'},
+  dunes_prev_plat5:{es:'Arroz con llisa, carpaccio de langostinos y su picada',ca:'Arròs amb llissa, carpaccio de llagostins i la seva picada'},
+  dunes_prev_plat6:{es:'Pastel de cerveza negra, chocolate Creo y queso fresco',ca:'Pastís de cervesa negra, xocolata Creo i formatge fresc'},
+  dunes_prev_foto3_peu:{es:'Cocina de autor con la firma del Delta — presentaciones cuidadas sin perder la raíz del territorio',ca:'Cuina d\'autor amb la signatura del Delta — presentacions curades sense perdre l\'arrel del territori'},
+  dunes_prev_equip_label:{es:'El equipo',ca:'L\'equip'},
+  dunes_prev_equip_title:{es:'Las personas detrás de Les Dunes',ca:'Les persones darrere de Les Dunes'},
+  dunes_prev_eq1_rol:{es:'Chef y director',ca:'Xef i director'},
+  dunes_prev_eq1_desc:{es:'De la radio a los fogones. Impulsor del menú degustación de Les Dunes desde 2015 y profesor de cocina en sus ratos libres.',ca:'De la ràdio als fogons. Impulsor del menú degustació de Les Dunes des del 2015 i professor de cuina en els seus estones lliures.'},
+  dunes_prev_eq2_rol:{es:'Cap de cuina',ca:'Cap de cuina'},
+  dunes_prev_eq2_desc:{es:'El verdadero pulmón de la casa. Ejecuta cada plato creado por Sergi con precisión y un detalle que se nota en cada mesa.',ca:'El veritable pulmó de la casa. Executa cada plat creat per Sergi amb precisió i un detall que es nota a cada taula.'},
+  dunes_prev_fitxa_title:{es:'Ficha del restaurante',ca:'Fitxa del restaurant'},
+  dunes_prev_fitxa_cuina:{es:'Cocina del Delta del Ebro · Menú degustación',ca:'Cuina del Delta de l\'Ebre · Menú degustació'},
+  dunes_prev_fitxa_data:{es:'Visita: 4 de septiembre 2026',ca:'Visita: 4 de setembre 2026'},
+  dunes_prev_cta_desc:{es:'Durante la cena compartiremos algunos momentos en stories. La crónica completa llegará días después.',ca:'Durant el sopar compartirem alguns moments a les stories. La crònica completa arribarà dies després.'},
+  dunes_prev_cta_btn:{es:'Leer la crónica completa →',ca:'Llegir la crònica completa →'}
+};
+var currentLang = localStorage.getItem('gdt-lang') || 'es';
+function applyTranslations(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var k = el.getAttribute('data-i18n');
+    if (T[k] && T[k][lang] !== undefined) el.innerHTML = T[k][lang];
+  });
+  var r = document.getElementById('html-root');
+  if (r) r.setAttribute('lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+  document.querySelectorAll('[data-es]').forEach(function(el){ var v=el.getAttribute('data-'+lang); if(v!==null)el.innerHTML=v; });
+}
+function setLang(lang) { currentLang = lang; localStorage.setItem('gdt-lang', lang); applyTranslations(lang); }
+applyTranslations(currentLang);
+</script>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var url = encodeURIComponent(window.location.href);
+  var titol = encodeURIComponent(document.title);
+  var wa = document.getElementById('btn-wa');
+  var fb = document.getElementById('btn-fb');
+  var x  = document.getElementById('btn-x');
+  if(wa) wa.href = 'https://wa.me/?text=' + titol + '%20' + url;
+  if(fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if(x)  x.href  = 'https://x.com/intent/tweet?url=' + url + '&text=' + titol;
+  function applyShareLang(){
+    var lang = localStorage.getItem('gdt-lang') || 'es';
+    document.querySelectorAll('.e-compartir [data-es]').forEach(function(el){
+      var v = el.getAttribute('data-' + lang);
+      if(v) el.innerHTML = v;
+    });
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', applyShareLang);
+  } else { applyShareLang(); }
+  document.addEventListener('click', function(e){
+    var t = e.target && e.target.closest && e.target.closest('.lang-btn');
+    if(t) setTimeout(applyShareLang, 60);
+  });
+})();
+function copiarEnllac(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var msg = btn.querySelector('.e-compartir-copied');
+    if(msg){ msg.classList.add('vis'); setTimeout(function(){ msg.classList.remove('vis'); }, 2200); }
+  });
+}
+</script>
+
+<!-- ═══════ POPUP NEWSLETTER ═══════ -->
+<div id="nl-popup" role="dialog" aria-modal="true" aria-labelledby="nl-popup-title" style="display:none;">
+  <div id="nl-popup-overlay"></div>
+  <div id="nl-popup-box">
+    <button id="nl-popup-close" aria-label="Cerrar">&times;</button>
+    <div id="nl-popup-deco" aria-hidden="true">✦</div>
+    <p id="nl-popup-kicker" class="t" data-es="Newsletter" data-ca="Newsletter">Newsletter</p>
+    <h2 id="nl-popup-title" class="t"
+        data-es="¿Te ha gustado esta crónica?"
+        data-ca="T'ha agradat aquesta crònica?">
+      ¿Te ha gustado esta crónica?
+    </h2>
+    <p id="nl-popup-sub" class="t"
+       data-es="Recibe la próxima en tu correo. Crónicas de restaurante, vinos y novedades del Camp de Tarragona. Una vez al mes."
+       data-ca="Rep la propera al teu correu. Cròniques de restaurant, vins i novetats del Camp de Tarragona. Un cop al mes.">
+      Recibe la próxima en tu correo. Crónicas de restaurante, vinos y novedades del Camp de Tarragona. Una vez al mes.
+    </p>
+    <form id="nl-popup-form"
+          action="https://fe0daaff.sibforms.com/serve/MUIFAMSYb3h5hzjCYPN-GiItYcbChszEiV-2Ci_yU_3sfesrzldVY_nwtUN7RfIi41NyXnMu3sl9-ob6jEY1i8D_lfWkjTx2BPx-DdkMBNRhY_UX6RYT8Q6OtL_RSXdw1Nxw1cQMI50KFEuV5agn87hBqKVShQPjzSVyuaqjxyjEXiMI4ec7wdY55xdTRqGDyO937oVLzoaKi6MUtQ=="
+          method="post">
+      <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off"
+             style="display:none;position:absolute;left:-9999px;">
+      <input type="hidden" name="locale" value="es">
+      <input type="email" name="EMAIL" required
+             id="nl-popup-email"
+             class="t"
+             data-placeholder-es="hola@tucorreo.com"
+             data-placeholder-ca="hola@elteucorreu.com"
+             placeholder="hola@tucorreo.com">
+      <button type="submit" id="nl-popup-btn" class="t"
+              data-es="APUNTARME" data-ca="APUNTAR-ME">APUNTARME</button>
+    </form>
+    <p id="nl-popup-legal" class="t"
+       data-es="Sin spam · Baja cuando quieras."
+       data-ca="Sense spam · Baixa quan vulguis.">Sin spam · Baja cuando quieras.</p>
+  </div>
+</div>
+<!-- ═══════ /POPUP NEWSLETTER ═══════ -->
+
+<script>
+(function(){
+  var STORAGE_KEY = 'gdt-nl-dismissed';
+  var DAYS_HIDE   = 7;
+  var dismissed = localStorage.getItem(STORAGE_KEY);
+  if (dismissed && Date.now() < parseInt(dismissed, 10)) return;
+  var popup   = document.getElementById('nl-popup');
+  var overlay = document.getElementById('nl-popup-overlay');
+  var closeBtn= document.getElementById('nl-popup-close');
+  var form    = document.getElementById('nl-popup-form');
+  if (!popup) return;
+  var shown = false;
+  function showPopup() {
+    if (shown) return;
+    shown = true;
+    popup.style.display = 'flex';
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){
+        popup.classList.add('nl-visible');
+      });
+    });
+    document.body.style.overflow = 'hidden';
+    var lang = localStorage.getItem('gdt-lang') || 'es';
+    var emailInput = document.getElementById('nl-popup-email');
+    if (emailInput) {
+      emailInput.placeholder = emailInput.getAttribute('data-placeholder-' + lang) || emailInput.placeholder;
+    }
+    if (typeof setLang === 'function') setLang(lang);
+  }
+  function closePopup() {
+    popup.classList.remove('nl-visible');
+    setTimeout(function(){
+      popup.style.display = 'none';
+    }, 300);
+    document.body.style.overflow = '';
+    localStorage.setItem(STORAGE_KEY, Date.now() + DAYS_HIDE * 86400000);
+  }
+  closeBtn.addEventListener('click', closePopup);
+  overlay.addEventListener('click', closePopup);
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closePopup();
+  });
+  form.addEventListener('submit', function(){
+    localStorage.setItem(STORAGE_KEY, Date.now() + 365 * 86400000);
+  });
+  var triggered = false;
+  function onScroll() {
+    if (triggered) return;
+    var scrolled  = window.scrollY + window.innerHeight;
+    var total     = document.documentElement.scrollHeight;
+    if (scrolled / total >= 0.75) {
+      triggered = true;
+      window.removeEventListener('scroll', onScroll);
+      setTimeout(showPopup, 400);
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script>
+</body>
+</html>
