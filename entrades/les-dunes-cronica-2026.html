@@ -49,6 +49,7 @@
 .e-fotos-3-peu span{font-size:.7rem;color:var(--muted);font-style:italic;padding-left:8px;border-left:2px solid var(--gold);opacity:.8;line-height:1.5;display:block;}
 .e-foto-md{margin:36px 0;}
 .e-foto-md img{width:100%;height:380px;object-fit:cover;display:block;}
+.e-foto-md video{width:100%;height:380px;object-fit:cover;display:block;background:#000;}
 .e-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-bottom:52px;}
 .e-img img{width:100%;height:420px;object-fit:cover;}
 .e-vins{background:var(--navy-dark);padding:52px;margin:52px 0;position:relative;}
@@ -107,6 +108,7 @@
   .e-img img{height:280px;}
   .e-foto-gran img{height:300px;}
   .e-foto-md img{height:260px;}
+  .e-foto-md video{height:260px;}
   .e-fotos-2{grid-template-columns:1fr;}
   .e-fotos-2 img{height:260px;}
   .e-fotos-2-peu{grid-template-columns:1fr;}
@@ -273,9 +275,9 @@ function setLang(lang) {
     </div>
     <h1 class="entrada-titol">Les Dunes · <em class="t" data-es="Riumar" data-ca="Riumar">Riumar</em></h1>
     <p class="entrada-subtitol t"
-       data-es="Un mismo autobús desde Reus y Tarragona hasta Riumar, el alcalde de Deltebre como ponente invitado y un adelanto de la Experiència Garxal que nadie se esperaba. Sergi Piñol demostró, otra vez, que a la cocina se puede llegar sin pasar por la escuela."
-       data-ca="Un mateix autobús des de Reus i Tarragona fins a Riumar, l'alcalde de Deltebre com a ponent convidat i un tast de l'Experiència Garxal que ningú s'esperava. Sergi Piñol va demostrar, un altre cop, que a la cuina s'hi pot arribar sense passar per l'escola.">
-      Un mismo autobús desde Reus y Tarragona hasta Riumar, el alcalde de Deltebre como ponente invitado y un adelanto de la Experiència Garxal que nadie se esperaba. Sergi Piñol demostró, otra vez, que a la cocina se puede llegar sin pasar por la escuela.
+       data-es="El alcalde de Deltebre, Lluís Soler, como ponente invitado, y un adelanto de la Experiència Garxal que nadie se esperaba: así fue la 6ª visita de los Gourmets de Tarragona a Les Dunes. Sergi Piñol demostró, otra vez, que a la cocina se puede llegar sin pasar por la escuela."
+       data-ca="L'alcalde de Deltebre, Lluís Soler, com a ponent convidat, i un tast de l'Experiència Garxal que ningú s'esperava: així va ser la 6a visita dels Gourmets de Tarragona a Les Dunes. Sergi Piñol va demostrar, un altre cop, que a la cuina s'hi pot arribar sense passar per l'escola.">
+      El alcalde de Deltebre, Lluís Soler, como ponente invitado, y un adelanto de la Experiència Garxal que nadie se esperaba: así fue la 6ª visita de los Gourmets de Tarragona a Les Dunes. Sergi Piñol demostró, otra vez, que a la cocina se puede llegar sin pasar por la escuela.
     </p>
   </div>
 </header>
@@ -310,7 +312,16 @@ function setLang(lang) {
   </div>
   <div class="e-fotos-2-peu">
     <span class="t" data-es="El Delta como decoración y como argumento: la sala de Les Dunes rinde homenaje a su territorio en cada rincón" data-ca="El Delta com a decoració i com a argument: la sala de Les Dunes retia homenatge al seu territori a cada racó">El Delta como decoración y como argumento: la sala de Les Dunes rinde homenaje a su territorio en cada rincón</span>
-    <span class="t" data-es="La minuta de la velada: «El Garxal», seis pases y un cierre de cafès i paracotes" data-ca="La minuta de la vetllada: «El Garxal», sis passos i un tancament de cafès i paracotes">La minuta de la velada: «El Garxal», seis pases y un cierre de cafès i paracotes</span>
+    <span class="t" data-es="La minuta de la velada: seis pases, del Garxal al arròs amb llissa, con un cierre de cafès i paracotes" data-ca="La minuta de la vetllada: sis passos, del Garxal a l'arròs amb llissa, amb un tancament de cafès i paracotes">La minuta de la velada: seis pases, del Garxal al arròs amb llissa, con un cierre de cafès i paracotes</span>
+  </div>
+
+  <div class="e-fotos-2">
+    <img src="../assets/img/lesdunes/cronica/raco-sala-passadis.jpg" alt="Pasillo de entrada de Les Dunes con fotografías del Delta de l'Ebre y ramas de madera flotada — Riumar">
+    <img src="../assets/img/lesdunes/cronica/raco-sala-arbre.jpg" alt="Detalle decorativo de Les Dunes: árbol de madera flotada con farolillos, junto a la fotografía histórica de la siega del arroz — Riumar">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="El pasillo de entrada, flanqueado por grandes fotografías del Delta y ramas de madera flotada con farolillos" data-ca="El passadís d'entrada, flanquejat per grans fotografies del Delta i branques de fusta flotada amb fanalets">El pasillo de entrada, flanqueado por grandes fotografías del Delta y ramas de madera flotada con farolillos</span>
+    <span class="t" data-es="Detalle del árbol decorativo, entre copas y la imagen histórica de la siega del arroz" data-ca="Detall de l'arbre decoratiu, entre copes i la imatge històrica de la sega de l'arròs">Detalle del árbol decorativo, entre copas y la imagen histórica de la siega del arroz</span>
   </div>
 
   <!-- B2: LOS PARLAMENTOS -->
@@ -327,6 +338,15 @@ function setLang(lang) {
      data-ca="Yarritu va presentar després el ponent convidat de la nit: el <strong>Sr. Lluís Soler</strong>, alcalde de Deltebre, que va oferir un discurs amè en què —com no podia ser d'altra manera— va elogiar el territori i la seva gastronomia. A mitja vetllada, se li va fer entrega del <strong>Trofeu Gastronia</strong> de mans del seu propi autor, el joier <strong>Joan Blázquez</strong>, que va explicar breument a la sala el significat de la figura. Un incís més, i dels bons: <strong>Emili Mateu</strong>, soci i expresident de l'associació, va regalar a tots els assistents un exemplar dedicat d'<em>«El romesco. Plats de romesco i romesquets de les comarques tarragonines»</em>, amb la intenció de posar en valor una salsa única i exclusiva del barri del Serrallo.">
     Yarritu presentó después al ponente invitado de la noche: el <strong>Sr. Lluís Soler</strong>, alcalde de Deltebre, que ofreció un discurso ameno en el que —como no podía ser de otra manera— elogió el territorio y su gastronomía. A media velada, se le hizo entrega del <strong>Trofeo Gastronia</strong> de manos de su propio autor, el joyero <strong>Joan Blázquez</strong>, que explicó brevemente a la sala el significado de la figura. Un inciso más, y de los buenos: <strong>Emili Mateu</strong>, socio y expresidente de la asociación, regaló a todos los asistentes un ejemplar dedicado de <em>«El romesco. Plats de romesco i romesquets de les comarques tarragonines»</em>, con la intención de poner en valor una salsa única y exclusiva del barrio del Serrallo.
   </p>
+
+  <div class="e-fotos-2">
+    <img src="../assets/img/lesdunes/cronica/sergi-pinol-parla.jpg" alt="Sergi Piñol durante su intervención, relatando su trayectoria — Les Dunes, Riumar" style="object-position:center 25%;">
+    <img src="../assets/img/lesdunes/cronica/alcalde-lluis-soler-parla.jpg" alt="Lluís Soler, alcalde de Deltebre, durante su discurso como ponente invitado — Les Dunes, Riumar" style="object-position:center 25%;">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="Sergi Piñol relatando, con la sencillez de siempre, su camino de la radio a los fogones" data-ca="Sergi Piñol relatant, amb la senzillesa de sempre, el seu camí de la ràdio als fogons">Sergi Piñol relatando, con la sencillez de siempre, su camino de la radio a los fogones</span>
+    <span class="t" data-es="Lluís Soler, alcalde de Deltebre, durante su discurso como ponente invitado de la velada" data-ca="Lluís Soler, alcalde de Deltebre, durant el seu discurs com a ponent convidat de la vetllada">Lluís Soler, alcalde de Deltebre, durante su discurso como ponente invitado de la velada</span>
+  </div>
 
   <div class="e-foto-gran">
     <img src="../assets/img/lesdunes/cronica/entrega-trofeu-gastronia.jpg" alt="Entrega del Trofeo Gastronia al alcalde de Deltebre, Lluís Soler, de manos de su autor Joan Blázquez — Les Dunes, septiembre 2026" style="object-position:center 25%;">
@@ -377,6 +397,15 @@ function setLang(lang) {
      data-es="Navajas frescas con un golpe de lima — sencillez y producto, sin artificios"
      data-ca="Navalles fresques amb un toc de llima — senzillesa i producte, sense artificis">
     Navajas frescas con un golpe de lima — sencillez y producto, sin artificios
+  </p>
+
+  <div class="e-foto-md">
+    <video src="../assets/img/lesdunes/cronica/experiencia-garxal-clip.mp4" poster="../assets/img/lesdunes/cronica/experiencia-garxal-clip-poster.jpg" autoplay loop muted playsinline preload="metadata" aria-label="La mesa de la Experiència Garxal en movimiento, con la proyección de olas bajo los platos"></video>
+  </div>
+  <p class="e-foto-peu t"
+     data-es="La mesa de la «Experiència Garxal» en movimiento: la proyección de olas cambia bajo los platos durante todo el pase"
+     data-ca="La taula de l'«Experiència Garxal» en moviment: la projecció d'onades canvia sota els plats durant tot el pas">
+    La mesa de la «Experiència Garxal» en movimiento: la proyección de olas cambia bajo los platos durante todo el pase
   </p>
 
   <!-- B4: HOMENATGE ALS AVIS -->
@@ -550,11 +579,11 @@ function setLang(lang) {
   <!-- B10: LA NOCHE EN SALA -->
   <div class="e-divider"></div>
   <span class="e-label t" data-es="La noche en sala" data-ca="La nit a sala">La noche en sala</span>
-  <h2 class="e-title t" data-es="«Puede vender hielo en la Antártida»" data-ca="«Pot vendre gel a l'Antàrtida»">«Puede vender hielo en la Antártida»</h2>
+  <h2 class="e-title t" data-es="«Podría vender arena en el desierto»" data-ca="«Podria vendre sorra al desert»">«Podría vender arena en el desierto»</h2>
   <p class="e-p t"
-     data-es="Fue una noche sorprendente y destacable de principio a fin. Sergi sabe lo que hace, y no hace falta que haya pasado por la academia: tiene ese don de convicción y de contar historias que hace que cualquier plato suene mejor de lo que ya es —de esos que, como se comentó entre risas en la sobremesa, <strong>te venderían hielo en la Antártida</strong>—. El equipo de sala respondió a la altura, y la <strong>bodega de la casa</strong>, visible tras un cristal en la entrada, ya avisaba de que aquí el vino se toma en serio."
-     data-ca="Va ser una nit sorprenent i destacable de principi a fi. Sergi sap el que fa, i no cal que hagi passat per l'acadèmia: té aquell do de convicció i de saber explicar històries que fa que qualsevol plat soni millor del que ja és —d'aquells que, com es va comentar entre rialles a la sobretaula, <strong>et vendrien gel a l'Antàrtida</strong>—. L'equip de sala va respondre a l'alçada, i el <strong>celler de la casa</strong>, visible rere un vidre a l'entrada, ja avisava que aquí el vi es pren seriosament.">
-    Fue una noche sorprendente y destacable de principio a fin. Sergi sabe lo que hace, y no hace falta que haya pasado por la academia: tiene ese don de convicción y de contar historias que hace que cualquier plato suene mejor de lo que ya es —de esos que, como se comentó entre risas en la sobremesa, <strong>te venderían hielo en la Antártida</strong>—. El equipo de sala respondió a la altura, y la <strong>bodega de la casa</strong>, visible tras un cristal en la entrada, ya avisaba de que aquí el vino se toma en serio.
+     data-es="Fue una noche sorprendente y destacable de principio a fin. Sergi sabe lo que hace, y no hace falta que haya pasado por la academia: tiene ese don de convicción y de contar historias que hace que cualquier plato suene mejor de lo que ya es —de esos que, como se comentó entre risas en la sobremesa, <strong>te venderían arena en el desierto</strong>—. El equipo de sala respondió a la altura, y la <strong>bodega de la casa</strong>, visible tras un cristal en la entrada, ya avisaba de que aquí el vino se toma en serio."
+     data-ca="Va ser una nit sorprenent i destacable de principi a fi. Sergi sap el que fa, i no cal que hagi passat per l'acadèmia: té aquell do de convicció i de saber explicar històries que fa que qualsevol plat soni millor del que ja és —d'aquells que, com es va comentar entre rialles a la sobretaula, <strong>et vendrien sorra al desert</strong>—. L'equip de sala va respondre a l'alçada, i el <strong>celler de la casa</strong>, visible rere un vidre a l'entrada, ja avisava que aquí el vi es pren seriosament.">
+    Fue una noche sorprendente y destacable de principio a fin. Sergi sabe lo que hace, y no hace falta que haya pasado por la academia: tiene ese don de convicción y de contar historias que hace que cualquier plato suene mejor de lo que ya es —de esos que, como se comentó entre risas en la sobremesa, <strong>te venderían arena en el desierto</strong>—. El equipo de sala respondió a la altura, y la <strong>bodega de la casa</strong>, visible tras un cristal en la entrada, ya avisaba de que aquí el vino se toma en serio.
   </p>
 
   <div class="e-fotos-2">
@@ -607,6 +636,11 @@ function setLang(lang) {
      data-es="Al terminar, los socios votaron como en cada visita. Con esta, los Gourmets de Tarragona están ya a <strong>dos visitas</strong> de cerrar la temporada y conocer al mejor restaurante de 2026. Les Dunes ha puesto el listón muy alto para lo que queda por delante."
      data-ca="En acabar, els socis van votar com a cada visita. Amb aquesta, els Gourmets de Tarragona estan ja a <strong>dues visites</strong> de tancar la temporada i conèixer el millor restaurant de 2026. Les Dunes ha posat el llistó molt alt per al que queda per davant.">
     Al terminar, los socios votaron como en cada visita. Con esta, los Gourmets de Tarragona están ya a <strong>dos visitas</strong> de cerrar la temporada y conocer al mejor restaurante de 2026. Les Dunes ha puesto el listón muy alto para lo que queda por delante.
+  </p>
+  <p class="e-p t"
+     data-es="Pocas veces una visita deja tan clara la personalidad de una casa. Les Dunes no imita a nadie: sabe exactamente quién es, y esa autenticidad —entre el Delta, el producto y un chef que se atreve a sorprender— es lo que la hace, sencillamente, inolvidable."
+     data-ca="Poques vegades una visita deixa tan clara la personalitat d'una casa. Les Dunes no imita ningú: sap exactament qui és, i aquesta autenticitat —entre el Delta, el producte i un xef que s'atreveix a sorprendre— és el que la fa, senzillament, inoblidable.">
+    Pocas veces una visita deja tan clara la personalidad de una casa. Les Dunes no imita a nadie: sabe exactamente quién es, y esa autenticidad —entre el Delta, el producto y un chef que se atreve a sorprender— es lo que la hace, sencillamente, inolvidable.
   </p>
 
   <!-- FITXA -->
