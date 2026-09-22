@@ -1,5 +1,17 @@
 [
   {
+    "slug": "avellana-reus-llotja",
+    "titol_ca": "L'avellana de Reus — la llotja que encara li posa preu",
+    "titol_es": "La avellana de Reus — la lonja que aún le pone precio",
+    "resum_ca": "Un mercat concedit el 1309, cinc varietats protegides i una superfície que ha caigut de 35.000 a menys de 8.000 hectàrees.",
+    "resum_es": "Un mercado concedido en 1309, cinco variedades protegidas y una superficie que ha caído de 35.000 a menos de 8.000 hectáreas.",
+    "categoria": "curiositats",
+    "data": "2026-09-23",
+    "min_lectura": 7,
+    "color_bg": "#2E1A0D",
+    "img": "assets/img/avellana/avellanes-gra.jpg"
+  },
+  {
     "slug": "chartreuse-tarragona",
     "titol_ca": "Chartreuse de Tarragona — 86 anys destil·lant un secret",
     "titol_es": "Chartreuse de Tarragona — 86 años destilando un secreto",
