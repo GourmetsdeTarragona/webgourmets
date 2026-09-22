@@ -1,5 +1,17 @@
 [
   {
+    "slug": "chartreuse-tarragona",
+    "titol_ca": "Chartreuse de Tarragona — 86 anys destil·lant un secret",
+    "titol_es": "Chartreuse de Tarragona — 86 años destilando un secreto",
+    "resum_ca": "Darrere de la mamadeta de Santa Tecla hi ha una fórmula del 1605 i uns monjos francesos que van destil·lar al Barri del Port entre 1903 i 1989.",
+    "resum_es": "Detrás de la mamadeta de Santa Tecla hay una fórmula de 1605 y unos monjes franceses que destilaron en el Barri del Port entre 1903 y 1989.",
+    "categoria": "curiositats",
+    "data": "2026-09-22",
+    "min_lectura": 8,
+    "color_bg": "#14301F",
+    "img": "assets/img/chartreuse/fabrica-facana.jpg"
+  },
+  {
     "slug": "galliner-previa-2026",
     "titol_ca": "El Galliner de l'Antiquari — sopar damunt el fòrum romà",
     "titol_es": "El Galliner de l'Antiquari — cena sobre el foro romano",
