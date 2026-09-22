@@ -1,5 +1,17 @@
 [
   {
+    "slug": "masclet-reus-misericordia",
+    "titol_ca": "El masclet — la beguda que Reus es va inventar per a la seva festa",
+    "titol_es": "El masclet — la bebida que Reus se inventó para su fiesta",
+    "resum_ca": "Vermut negre i Plim a parts iguals, un nom sortit dels morters de la Tronada i una cercavila nascuda el 2001. Guia per a Misericòrdia.",
+    "resum_es": "Vermut negro y Plim a partes iguales, un nombre salido de los morteros de la Tronada y una cercavila nacida en 2001. Guía para Misericòrdia.",
+    "categoria": "cultura",
+    "data": "2026-09-23",
+    "min_lectura": 7,
+    "color_bg": "#1A0A0D",
+    "img": "assets/img/masclet/tronada-1.jpg"
+  },
+  {
     "slug": "avellana-reus-llotja",
     "titol_ca": "L'avellana de Reus — la llotja que encara li posa preu",
     "titol_es": "La avellana de Reus — la lonja que aún le pone precio",
