@@ -1,5 +1,17 @@
 [
   {
+    "slug": "galliner-previa-2026",
+    "titol_ca": "El Galliner de l'Antiquari — sopar damunt el fòrum romà",
+    "titol_es": "El Galliner de l'Antiquari — cena sobre el foro romano",
+    "resum_ca": "La setena visita del recorregut ens porta a la Part Alta de Tarragona, a un local que ha estat antiquari, escenari i taverna.",
+    "resum_es": "La séptima visita del recorrido nos lleva a la Part Alta de Tarragona, a un local que ha sido anticuario, escenario y taberna.",
+    "categoria": "previa",
+    "data": "2026-09-22",
+    "min_lectura": 4,
+    "color_bg": "#1C2E3E",
+    "img": "assets/img/galliner/facana.jpg"
+  },
+  {
     "slug": "brumma-cronica-2026",
     "titol_ca": "Brumma 2026 — la cuina del mar a l'Infinitum Resort",
     "titol_es": "Brumma 2026 — la cocina del mar en el Infinitum Resort",
