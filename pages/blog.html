@@ -313,17 +313,17 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- FILTRES — Tots:31 · Previes:5 · Cròniques:5 · Notícies:3 · Cultura:2 · Vins:6 · Events:1 · Curiositats:9 -->
+<!-- FILTRES — Tots:34 · Previes:7 · Cròniques:5 · Notícies:3 · Cultura:2 · Vins:6 · Events:1 · Curiositats:9 -->
 <div class="blog-filtres">
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span class="t" data-es="Todos" data-ca="Tots">Todos</span>
-      <span class="filtre-n">33</span>
+      <span class="filtre-n">34</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot" style="background:var(--navy);"></span>
       <span class="t" data-es="Previas" data-ca="Prèvies">Previas</span>
-      <span class="filtre-n">6</span>
+      <span class="filtre-n">7</span>
     </button>
     <button class="filtre-btn" data-cat="cronica" onclick="filterEntrades('cronica')">
       <span class="filtre-dot" style="background:var(--gold);"></span>
@@ -392,6 +392,28 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
   <div class="car-track">
   <div class="carrusel" id="car-visites">
+
+    <!-- El Galliner de l'Antiquari Prèvia -->
+    <article class="blog-card" data-cat="previa">
+      <div class="blog-card-img">
+        <img src="../assets/img/galliner/facana.jpg" alt="El Galliner de l'Antiquari · Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
+        <span class="blog-card-cat cat-previa t" data-es="Previa" data-ca="Prèvia">Previa</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="Septiembre 2026" data-ca="Setembre 2026">Septiembre 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es='El Galliner de l&#39;Antiquari · Tarragona<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa · 7ª visita 2026</small>'
+            data-ca='El Galliner de l&#39;Antiquari · Tarragona<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Prèvia · 7a visita 2026</small>'>
+          El Galliner de l'Antiquari · Tarragona<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Previa · 7ª visita 2026</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Cenar sobre el muro del foro romano, en un local que fue anticuario, escenario y taberna. Tymur Duka y Arnau González nos reciben el 1 de octubre."
+           data-ca="Sopar damunt el mur del fòrum romà, en un local que ha estat antiquari, escenari i taverna. Tymur Duka i Arnau González ens reben l'1 d'octubre.">
+          Cenar sobre el muro del foro romano, en un local que fue anticuario, escenario y taberna. Tymur Duka y Arnau González nos reciben el 1 de octubre.
+        </p>
+        <a href="../entrades/galliner-previa-2026.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
 
     <!-- Les Dunes Crònica -->
     <article class="blog-card" data-cat="cronica">
