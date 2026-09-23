@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ca"><head><meta charset="utf-8">
+<title>Bona Santa Tecla</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b1626;--navy2:#1c2e3e;--gold:#d4a96a;--gold2:#B8924A;--cream:#F6F2EC;--wine:#8e2a3a;}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;background:var(--navy)}
+.story{position:relative;width:1080px;height:1920px;overflow:hidden;
+  background:radial-gradient(ellipse 900px 700px at 50% 38%,#1f3550 0%,#12223a 45%,var(--navy) 100%);
+  color:var(--cream);font-family:Lato,sans-serif;text-align:center}
+svg.bg{position:absolute;inset:0}
+.frame{position:absolute;inset:44px;border:2px solid rgba(212,169,106,.55);border-radius:28px}
+.frame::after{content:"";position:absolute;inset:12px;border:1px solid rgba(212,169,106,.25);border-radius:20px}
+.logo{position:absolute;top:250px;left:50%;transform:translateX(-50%);width:230px;height:227px;
+  background:var(--gold);-webkit-mask:url(../logo.png) center/contain no-repeat;mask:url(../logo.png) center/contain no-repeat}
+.kicker{position:absolute;top:530px;width:100%;font-weight:700;letter-spacing:.42em;font-size:26px;color:var(--gold);text-transform:uppercase}
+.bona{position:absolute;top:575px;width:100%;font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:120px;color:var(--cream)}
+.st{position:absolute;top:705px;width:100%;font-family:'Playfair Display',serif;font-weight:900;font-size:168px;line-height:.92;
+  background:linear-gradient(180deg,#f3d9a6 0%,#d4a96a 55%,#a97f3c 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 18px rgba(0,0,0,.45))}
+.orn{position:absolute;top:1060px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:22px}
+.orn i{display:block;width:150px;height:2px;background:linear-gradient(90deg,transparent,var(--gold))}
+.orn i:last-child{transform:scaleX(-1)}
+.orn b{width:16px;height:16px;background:var(--gold);transform:rotate(45deg)}
+.msg{position:absolute;top:1100px;left:130px;right:130px;font-family:'Playfair Display',serif;font-size:44px;line-height:1.35;color:var(--cream)}
+.msg em{color:var(--gold);font-style:italic}
+.visca{position:absolute;top:1255px;width:100%;font-weight:700;letter-spacing:.3em;font-size:30px;color:var(--gold);text-transform:uppercase}
+.sign{position:absolute;top:1320px;width:100%;font-size:26px;letter-spacing:.14em;color:rgba(246,242,236,.85)}
+.sign{color:rgba(246,242,236,.8)}.sign strong{display:block;font-family:'Playfair Display',serif;letter-spacing:.06em;font-size:36px;color:var(--cream);margin-bottom:6px;font-weight:700}
+</style></head><body>
+<div class="story">
+<svg class="bg" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="spark"><stop offset="0" stop-color="#fff3d6"/><stop offset=".4" stop-color="#d4a96a"/><stop offset="1" stop-color="#d4a96a" stop-opacity="0"/></radialGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1626" stop-opacity="0"/><stop offset="1" stop-color="#0b1626"/></linearGradient>
+  </defs>
+  <!-- focs artificials -->
+  <g id="fw" stroke-linecap="round">
+    <g transform="translate(180,300)" stroke="#d4a96a" stroke-width="3" opacity=".75"></g>
+  </g>
+  <!-- castell -->
+  <g id="castell" fill="#d4a96a" opacity=".4"></g>
+  <rect x="0" y="1780" width="1080" height="140" fill="url(#fade)"/>
+</svg>
+<div class="frame"></div>
+<div class="logo"></div>
+<div class="kicker">Tarragona · Festa Major</div>
+<div class="bona">Bona</div>
+<div class="st">Santa<br>Tecla</div>
+<div class="orn"><i></i><b></b><i></i></div>
+<p class="msg">Us desitgem unes festes plenes de <em>castells</em>, <em>gralles</em>, foc i bona taula.</p>
+<div class="visca">Visca Santa Tecla!</div>
+<div class="sign"><strong>Gourmets de Tarragona</strong>@gourmetsdetarragona</div>
+</div>
+<script>
+const NS='http://www.w3.org/2000/svg';
+function el(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e}
+// fireworks
+const fw=document.getElementById('fw');
+function burst(cx,cy,r,n,col,op){
+  const g=el('g',{opacity:op},fw);
+  for(let i=0;i<n;i++){const a=i/n*Math.PI*2, r1=r*.28, r2=r*(.85+(i%3)*.08);
+    el('line',{x1:cx+Math.cos(a)*r1,y1:cy+Math.sin(a)*r1,x2:cx+Math.cos(a)*r2,y2:cy+Math.sin(a)*r2,stroke:col,'stroke-width':3,'stroke-linecap':'round'},g);
+    el('circle',{cx:cx+Math.cos(a)*(r2+12),cy:cy+Math.sin(a)*(r2+12),r:4,fill:col},g);}
+  el('circle',{cx,cy,r:r*.18,fill:'url(#spark)'},g);
+}
+burst(170,330,105,22,'#d4a96a',.7);
+burst(920,250,95,18,'#e8c98f',.55);
+burst(930,560,70,14,'#c0485a',.6);
+burst(120,640,60,12,'#c0485a',.5);
+burst(890,900,45,12,'#d4a96a',.35);
+burst(180,960,40,10,'#d4a96a',.3);
+// sparkles
+let s=7;function rnd(){s=(s*9301+49297)%233280;return s/233280}
+for(let i=0;i<70;i++){el('circle',{cx:60+rnd()*960,cy:80+rnd()*1150,r:1+rnd()*2.4,fill:'#f3d9a6',opacity:.25+rnd()*.5},fw)}
+// castell: rows of stylised figures (pinya -> enxaneta)
+const c=document.getElementById('castell');
+function fig(x,y,s,arm){const g=el('g',{transform:`translate(${x},${y}) scale(${s})`},c);
+  el('circle',{cx:0,cy:-58,r:13},g);
+  el('path',{d:'M-22,-42 Q0,-48 22,-42 L18,0 L-18,0 Z'},g);
+  el('rect',{x:-16,y:0,width:13,height:40,rx:5},g);el('rect',{x:3,y:0,width:13,height:40,rx:5},g);
+  if(arm) el('path',{d:'M14,-40 L34,-78 L40,-74 L22,-36 Z'},g);}
+const base=1905, rows=[[9,.92],[7,.85],[5,.78],[4,.71],[3,.64],[2,.57],[1,.5]];
+let y=base;
+rows.forEach(([n,sc],ri)=>{const w=62*sc;for(let i=0;i<n;i++)fig(540+(i-(n-1)/2)*w,y,sc,ri===rows.length-1);y-=90*sc;});
+</script>
+</body></html>
