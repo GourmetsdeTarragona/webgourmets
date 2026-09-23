@@ -1,88 +1,171 @@
 <!doctype html>
 <html lang="ca"><head><meta charset="utf-8">
 <title>Bona Santa Tecla</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0b1626;--navy2:#1c2e3e;--gold:#d4a96a;--gold2:#B8924A;--cream:#F6F2EC;--wine:#8e2a3a;}
+:root{--navy:#0b1626;--gold:#e0b877;--gold2:#B8924A;--cream:#F6F2EC;}
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1920px;background:var(--navy)}
-.story{position:relative;width:1080px;height:1920px;overflow:hidden;
-  background:radial-gradient(ellipse 900px 700px at 50% 38%,#1f3550 0%,#12223a 45%,var(--navy) 100%);
-  color:var(--cream);font-family:Lato,sans-serif;text-align:center}
-svg.bg{position:absolute;inset:0}
-.frame{position:absolute;inset:44px;border:2px solid rgba(212,169,106,.55);border-radius:28px}
-.frame::after{content:"";position:absolute;inset:12px;border:1px solid rgba(212,169,106,.25);border-radius:20px}
-.logo{position:absolute;top:250px;left:50%;transform:translateX(-50%);width:230px;height:227px;
+.story{position:relative;width:1080px;height:1920px;overflow:hidden;color:var(--cream);font-family:Lato,sans-serif;text-align:center}
+svg.scene{position:absolute;inset:0}
+.logo{position:absolute;top:196px;left:50%;transform:translateX(-50%);width:132px;height:130px;
   background:var(--gold);-webkit-mask:url(../logo.png) center/contain no-repeat;mask:url(../logo.png) center/contain no-repeat}
-.kicker{position:absolute;top:530px;width:100%;font-weight:700;letter-spacing:.42em;font-size:26px;color:var(--gold);text-transform:uppercase}
-.bona{position:absolute;top:575px;width:100%;font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:120px;color:var(--cream)}
-.st{position:absolute;top:705px;width:100%;font-family:'Playfair Display',serif;font-weight:900;font-size:168px;line-height:.92;
-  background:linear-gradient(180deg,#f3d9a6 0%,#d4a96a 55%,#a97f3c 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
-  filter:drop-shadow(0 6px 18px rgba(0,0,0,.45))}
-.orn{position:absolute;top:1060px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:22px}
-.orn i{display:block;width:150px;height:2px;background:linear-gradient(90deg,transparent,var(--gold))}
-.orn i:last-child{transform:scaleX(-1)}
-.orn b{width:16px;height:16px;background:var(--gold);transform:rotate(45deg)}
-.msg{position:absolute;top:1100px;left:130px;right:130px;font-family:'Playfair Display',serif;font-size:44px;line-height:1.35;color:var(--cream)}
-.msg em{color:var(--gold);font-style:italic}
-.visca{position:absolute;top:1255px;width:100%;font-weight:700;letter-spacing:.3em;font-size:30px;color:var(--gold);text-transform:uppercase}
-.sign{position:absolute;top:1320px;width:100%;font-size:26px;letter-spacing:.14em;color:rgba(246,242,236,.85)}
-.sign{color:rgba(246,242,236,.8)}.sign strong{display:block;font-family:'Playfair Display',serif;letter-spacing:.06em;font-size:36px;color:var(--cream);margin-bottom:6px;font-weight:700}
+.kicker{position:absolute;top:356px;width:100%;display:flex;justify-content:center;align-items:center;gap:22px;
+  font-weight:900;letter-spacing:.38em;font-size:22px;color:var(--gold);text-transform:uppercase}
+.kicker i{display:block;width:70px;height:2px;background:var(--gold);opacity:.7}
+.bona{position:absolute;top:388px;width:100%;font-family:'Playfair Display',serif;font-style:italic;font-weight:400;font-size:150px;
+  color:var(--gold);line-height:1;text-shadow:0 0 40px rgba(255,150,60,.35)}
+.st{position:absolute;top:520px;width:100%;font-family:'Playfair Display',serif;font-weight:900;font-size:222px;line-height:.86;
+  letter-spacing:-.01em;text-transform:uppercase;color:var(--cream);
+  text-shadow:0 2px 0 rgba(0,0,0,.25),0 0 60px rgba(255,120,40,.35),0 0 120px rgba(255,90,30,.25)}
+.msg{position:absolute;top:925px;left:0;right:0;font-family:'Playfair Display',serif;font-style:italic;font-size:40px;line-height:1.3;color:var(--cream);opacity:.95}
+.msg b{font-style:normal;font-weight:700;color:var(--gold)}
+.sign{position:absolute;top:1712px;width:100%;font-weight:700;font-size:25px;letter-spacing:.24em;text-transform:uppercase;color:var(--cream)}
+.sign span{color:var(--gold);font-size:30px}.sign small{font-size:22px;letter-spacing:.2em;font-weight:400;opacity:.9}.sign{line-height:1.7}
 </style></head><body>
 <div class="story">
-<svg class="bg" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+<svg class="scene" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <radialGradient id="spark"><stop offset="0" stop-color="#fff3d6"/><stop offset=".4" stop-color="#d4a96a"/><stop offset="1" stop-color="#d4a96a" stop-opacity="0"/></radialGradient>
-    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1626" stop-opacity="0"/><stop offset="1" stop-color="#0b1626"/></linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#070f1c"/><stop offset=".38" stop-color="#0f1c33"/>
+      <stop offset=".62" stop-color="#3a1428"/><stop offset=".82" stop-color="#8a2314"/><stop offset="1" stop-color="#c2410f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="540" cy="1560" r="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffd27a" stop-opacity=".95"/><stop offset=".22" stop-color="#ff8a2e" stop-opacity=".8"/>
+      <stop offset=".55" stop-color="#d9361a" stop-opacity=".35"/><stop offset="1" stop-color="#d9361a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="540" cy="780" r="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2a3f63" stop-opacity=".55"/><stop offset="1" stop-color="#2a3f63" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="spk"><stop offset="0" stop-color="#fff6dc"/><stop offset=".35" stop-color="#ffc561"/><stop offset="1" stop-color="#ff6a1f" stop-opacity="0"/></radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="rim" x="-10%" y="-10%" width="120%" height="120%">
+      <feMorphology in="SourceAlpha" operator="dilate" radius="2.5" result="d"/>
+      <feFlood flood-color="#ffa04a"/><feComposite in2="d" operator="in" result="edge"/>
+      <feGaussianBlur in="edge" stdDeviation="3.5" result="eb"/>
+      <feMerge><feMergeNode in="eb"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05080f" stop-opacity="0"/><stop offset=".35" stop-color="#05080f"/></linearGradient>
   </defs>
-  <!-- focs artificials -->
-  <g id="fw" stroke-linecap="round">
-    <g transform="translate(180,300)" stroke="#d4a96a" stroke-width="3" opacity=".75"></g>
-  </g>
-  <!-- castell -->
-  <g id="castell" fill="#d4a96a" opacity=".4"></g>
-  <rect x="0" y="1780" width="1080" height="140" fill="url(#fade)"/>
+  <rect width="1080" height="1920" fill="url(#sky)"/>
+  <rect width="1080" height="1920" fill="url(#halo)"/>
+  <rect width="1080" height="1920" fill="url(#glow)"/>
+  <g id="smoke" opacity=".22"></g>
+  <g id="sparksBack" filter="url(#soft)"></g>
+  <g id="castell" fill="#060a13" filter="url(#rim)"></g>
+  <g id="fountains" filter="url(#soft)"></g>
+  <g id="devils" fill="#04070d" filter="url(#rim)"></g>
+  <rect x="0" y="1690" width="1080" height="230" fill="url(#ground)"/>
+  <g id="sparksFront" filter="url(#soft)"></g>
+  <rect width="1080" height="1920" filter="url(#grain)" opacity=".09" style="mix-blend-mode:overlay"/>
 </svg>
-<div class="frame"></div>
 <div class="logo"></div>
-<div class="kicker">Tarragona · Festa Major</div>
+<div class="kicker"><i></i>Festa Major · Tarragona<i></i></div>
 <div class="bona">Bona</div>
 <div class="st">Santa<br>Tecla</div>
-<div class="orn"><i></i><b></b><i></i></div>
-<p class="msg">Us desitgem unes festes plenes de <em>castells</em>, <em>gralles</em>, foc i bona taula.</p>
-<div class="visca">Visca Santa Tecla!</div>
-<div class="sign"><strong>Gourmets de Tarragona</strong>@gourmetsdetarragona</div>
+<p class="msg">Castells, gralles, foc… <b>i bona taula.</b></p>
+<div class="sign"><span>Visca Santa Tecla!</span><br><small>@gourmetsdetarragona</small></div>
 </div>
 <script>
 const NS='http://www.w3.org/2000/svg';
 function el(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e}
-// fireworks
-const fw=document.getElementById('fw');
-function burst(cx,cy,r,n,col,op){
-  const g=el('g',{opacity:op},fw);
-  for(let i=0;i<n;i++){const a=i/n*Math.PI*2, r1=r*.28, r2=r*(.85+(i%3)*.08);
-    el('line',{x1:cx+Math.cos(a)*r1,y1:cy+Math.sin(a)*r1,x2:cx+Math.cos(a)*r2,y2:cy+Math.sin(a)*r2,stroke:col,'stroke-width':3,'stroke-linecap':'round'},g);
-    el('circle',{cx:cx+Math.cos(a)*(r2+12),cy:cy+Math.sin(a)*(r2+12),r:4,fill:col},g);}
-  el('circle',{cx,cy,r:r*.18,fill:'url(#spark)'},g);
+let seed=11;const R=()=>{seed=(seed*16807)%2147483647;return (seed-1)/2147483646};
+const $=id=>document.getElementById(id);
+
+/* ---------- CASTELL (3 de 7 amb pinya) ---------- */
+const C=$('castell'), CX=540, s=1.18, STEP=80*s, SP=51*s;
+function person(x,y,sc,opt={}){ // feet at (x,y)
+  const g=el('g',{transform:`translate(${x},${y}) scale(${sc})`},C);
+  el('circle',{cx:0,cy:-99,r:11.5},g);
+  el('path',{d:'M-5,-89 L5,-89 L6,-83 L24,-80 Q27,-78 26,-72 L17,-44 L19,-38 L-19,-38 L-17,-44 L-26,-72 Q-27,-78 -24,-80 L-6,-83 Z'},g);
+  el('path',{d:'M-18,-40 L-2,-40 L-4,0 L-14,0 Z M2,-40 L18,-40 L14,0 L4,0 Z'},g);
+  el('rect',{x:-19,y:-46,width:38,height:8,rx:2,fill:'#9b2a1c'},g); // faixa
+  if(opt.aleta) el('path',{d:'M16,-80 L30,-128 L38,-126 L26,-76 Z'},g);
+  return g;
 }
-burst(170,330,105,22,'#d4a96a',.7);
-burst(920,250,95,18,'#e8c98f',.55);
-burst(930,560,70,14,'#c0485a',.6);
-burst(120,640,60,12,'#c0485a',.5);
-burst(890,900,45,12,'#d4a96a',.35);
-burst(180,960,40,10,'#d4a96a',.3);
-// sparkles
-let s=7;function rnd(){s=(s*9301+49297)%233280;return s/233280}
-for(let i=0;i<70;i++){el('circle',{cx:60+rnd()*960,cy:80+rnd()*1150,r:1+rnd()*2.4,fill:'#f3d9a6',opacity:.25+rnd()*.5},fw)}
-// castell: rows of stylised figures (pinya -> enxaneta)
-const c=document.getElementById('castell');
-function fig(x,y,s,arm){const g=el('g',{transform:`translate(${x},${y}) scale(${s})`},c);
-  el('circle',{cx:0,cy:-58,r:13},g);
-  el('path',{d:'M-22,-42 Q0,-48 22,-42 L18,0 L-18,0 Z'},g);
-  el('rect',{x:-16,y:0,width:13,height:40,rx:5},g);el('rect',{x:3,y:0,width:13,height:40,rx:5},g);
-  if(arm) el('path',{d:'M14,-40 L34,-78 L40,-74 L22,-36 Z'},g);}
-const base=1905, rows=[[9,.92],[7,.85],[5,.78],[4,.71],[3,.64],[2,.57],[1,.5]];
+const base=1650, rowsTronc=4;
 let y=base;
-rows.forEach(([n,sc],ri)=>{const w=62*sc;for(let i=0;i<n;i++)fig(540+(i-(n-1)/2)*w,y,sc,ri===rows.length-1);y-=90*sc;});
+for(let r=0;r<rowsTronc;r++){
+  for(let i=-1;i<=1;i++) person(CX+i*SP,y,s);
+  el('rect',{x:CX-SP-26*s,y:y-80*s,width:2*SP+52*s,height:11*s,rx:5*s},C); // braços enllaçats
+  y-=STEP;
+}
+person(CX-SP/2,y,s*.9); person(CX+SP/2,y,s*.9);                 // dosos
+el('rect',{x:CX-SP/2-24*s,y:y-80*s*.9,width:SP+48*s,height:10*s,rx:5},C);
+y-=STEP*.9;
+const ac=el('g',{transform:`translate(${CX},${y}) scale(${s*.8})`},C);    // acotxador ajupit
+el('circle',{cx:0,cy:-58,r:11},ac);el('path',{d:'M-24,-46 Q0,-56 24,-46 L20,0 L-20,0 Z'},ac);
+y-=50*s*.8;
+person(CX,y,s*.72,{aleta:true});                                    // enxaneta fent l'aleta
+
+// pinya: multitud de caps i espatlles amb braços amunt
+for(let row=0;row<5;row++){
+  const n=6+row*4, spread=110+row*95, yy=base-40+row*38;
+  for(let k=0;k<n;k++){
+    const x=CX+(k/(n-1)-.5)*2*spread+(R()-.5)*18; const sc=.95+row*.08+R()*.08;
+    const g=el('g',{transform:`translate(${x},${yy}) scale(${sc})`},C);
+    el('circle',{cx:0,cy:-30,r:12},g);
+    el('path',{d:'M-30,40 Q-30,-14 0,-16 Q30,-14 30,40 Z'},g);
+    const dir=x<CX?1:-1;
+    if(row<3) el('path',{d:`M${-8*dir},-12 L${(22+row*6)*dir},${-58-row*6} L${(30+row*6)*dir},${-52-row*6} L${6*dir},-6 Z`},g);
+  }
+}
+el('rect',{x:0,y:base+150,width:1080,height:400},C);
+
+/* ---------- DIABLES amb forques ---------- */
+const D=$('devils');
+function devil(x,y,sc,flip){
+  const g=el('g',{transform:`translate(${x},${y}) scale(${flip?-sc:sc},${sc})`},D);
+  el('path',{d:'M-74,0 L-52,-196 Q-46,-236 -12,-246 L14,-246 Q46,-238 52,-200 L80,0 L66,-14 L52,0 L38,-14 L24,0 L10,-14 L-4,0 L-18,-14 L-32,0 L-46,-14 L-60,0 Z'},g); // vestit amb serrells
+  el('path',{d:'M-30,-262 Q-32,-306 0,-310 Q32,-306 30,-262 Q26,-244 0,-242 Q-26,-244 -30,-262 Z'},g); // caputxa
+  el('path',{d:'M-26,-290 C-44,-298 -52,-316 -44,-338 C-38,-322 -26,-312 -10,-306 Z M26,-290 C44,-298 52,-316 44,-338 C38,-322 26,-312 10,-306 Z'},g); // banyes
+  const st={fill:'none',stroke:'#04070d','stroke-linecap':'round'};
+  el('path',{...st,d:'M28,-226 L70,-262 L112,-292','stroke-width':19},g);   // braç alt
+  el('path',{...st,d:'M-14,-206 L34,-196 L70,-214','stroke-width':18},g);   // braç baix
+  el('path',{...st,d:'M40,-170 L232,-430','stroke-width':9},g);             // pal
+  el('path',{...st,d:'M214,-448 L252,-418 M222,-440 L242,-470 M236,-428 L262,-452','stroke-width':6},g); // forca
+
+  return {x:x+(flip?-246:246)*sc, y:y-452*sc};
+}
+const tips=[devil(78,1960,1.12,false),devil(1002,1960,1.12,true)];
+
+/* ---------- FONTS DE FOC (carretilles) ---------- */
+const F=$('fountains');
+function fountain(t,dirX){
+  const g=el('g',{},F);
+  for(let i=0;i<120;i++){
+    const a=(-Math.PI/2)+(R()-.5)*2.3+dirX*.35, v=120+R()*300, L=.35+R()*.65;
+    const ex=t.x+Math.cos(a)*v, ey=t.y+Math.sin(a)*v;
+    const qx=t.x+Math.cos(a)*v*.55, qy=t.y+Math.sin(a)*v*.55-20;
+    const fall=40+R()*120;
+    el('path',{d:`M${t.x},${t.y} Q${qx},${qy} ${ex},${ey+fall*L}`,fill:'none',
+      stroke:R()<.5?'#ffd27a':'#ff9a3c','stroke-width':.8+R()*2,'stroke-linecap':'round',
+      'stroke-dasharray':`${6+R()*30} ${4+R()*20}`,opacity:.35+R()*.6},g);
+    if(R()<.5) el('circle',{cx:ex,cy:ey+fall*L,r:1.2+R()*2.6,fill:'#fff0c2',opacity:.9},g);
+  }
+  el('circle',{cx:t.x,cy:t.y,r:46,fill:'url(#spk)'},g);
+  el('circle',{cx:t.x,cy:t.y,r:9,fill:'#fffbe8'},g);
+}
+fountain(tips[0],-1); fountain(tips[1],1);
+
+/* ---------- ESPURNES ---------- */
+function sparks(group,n,ymin,ymax,bias){
+  const g=$(group);
+  for(let i=0;i<n;i++){
+    const yy=ymin+(ymax-ymin)*Math.pow(R(),bias), x=R()*1080;
+    const hot=R(); const col=hot<.25?'#fff4d6':hot<.7?'#ffc15a':'#ff7a2a';
+    if(R()<.35){const len=6+R()*22, a=-Math.PI/2+(R()-.5)*1.2;
+      el('line',{x1:x,y1:yy,x2:x+Math.cos(a)*len,y2:yy+Math.sin(a)*len,stroke:col,'stroke-width':1+R()*1.6,'stroke-linecap':'round',opacity:.5+R()*.5},g);}
+    else el('circle',{cx:x,cy:yy,r:.8+R()*2.8,fill:col,opacity:.35+R()*.65},g);
+  }
+}
+sparks('sparksBack',260,700,1750,.55);
+sparks('sparksBack',60,120,900,1);
+sparks('sparksFront',70,1350,1900,.8);
+
+// fum suau
+const S=$('smoke');
+for(let i=0;i<0;i++) el('ellipse',{cx:R()*1080,cy:1150+R()*450,rx:160+R()*200,ry:50+R()*60,fill:'#ffb36b',opacity:.15+R()*.2,filter:'url(#soft)'},S);
 </script>
 </body></html>
