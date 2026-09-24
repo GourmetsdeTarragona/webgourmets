@@ -1,5 +1,17 @@
 [
   {
+    "slug": "serrallo-subhasta-peix",
+    "titol_ca": "El Serrallo i la subhasta de les quatre",
+    "titol_es": "El Serrallo y la subasta de las cuatro",
+    "resum_ca": "Com es posa preu al peix a la llotja, per què el barri va néixer el segle XIX i quina cuina va sortir del que no es venia.",
+    "resum_es": "Cómo se pone precio al pescado en la lonja, por qué el barrio nació en el siglo XIX y qué cocina salió de lo que no se vendía.",
+    "categoria": "curiositats",
+    "data": "2026-09-24",
+    "min_lectura": 8,
+    "color_bg": "#0D1E2F",
+    "img": "assets/img/serrallo/serrallo-moll.jpg"
+  },
+  {
     "slug": "masclet-reus-misericordia",
     "titol_ca": "El masclet — la beguda que Reus es va inventar per a la seva festa",
     "titol_es": "El masclet — la bebida que Reus se inventó para su fiesta",
