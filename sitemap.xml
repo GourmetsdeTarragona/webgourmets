@@ -92,6 +92,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gourmetsdetarragona.com/pages/cookies.html"/>
   </url>
   <url>
+    <loc>https://www.gourmetsdetarragona.com/entrades/panellets-castanyada.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.gourmetsdetarragona.com/entrades/panellets-castanyada.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.gourmetsdetarragona.com/entrades/panellets-castanyada.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gourmetsdetarragona.com/entrades/panellets-castanyada.html"/>
+  </url>
+  <url>
     <loc>https://www.gourmetsdetarragona.com/entrades/serrallo-subhasta-peix.html</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
