@@ -188,10 +188,11 @@ const t = {
     g_l3:'El proceso',g_t3:'Ocho criterios, muchos paladares',
     g_p5:'La Gastronia no se otorga por intuición ni por votación popular. Cada socio evalúa de forma independiente cada restaurante visitado durante el recorrido anual, puntuando del 1 al 5 ocho criterios específicos:',
     g_criteris_nota:'Cada socio puntúa de forma independiente. La puntuación final es la media acumulada de todas las visitas de la temporada.',
-    g_p6:'Al final del recorrido anual, se suman todas las puntuaciones y se calculan las medias. El restaurante con la puntuación más alta recibe el <strong>1er Trofeo Gastronia</strong>. El segundo clasificado recibe el <strong>2º Trofeo</strong>.',
-    g_l4:'Palmarès',g_t4:'Los galardonados',
+    g_p6:'Al final del recorrido anual, se suman todas las puntuaciones y se calculan las medias. El restaurante con la puntuación más alta recibe el <strong>1.er Trofeo Gastronia</strong>. El segundo clasificado recibe el <strong>2.º Trofeo</strong>.',
+    g_l4:'Palmarés',g_t4:'Los galardonados',
     g_wip:'En proceso de recuperación',
     btn_premis:'Ver todos los premios →',
+    c1_nom:'Presentación de la mesa',c2_nom:'Ambiente y decoración',c3_nom:'Servicio',c4_nom:'Materia prima',c5_nom:'Maridaje',c6_nom:'Elaboración',c7_nom:'Postres',c8_nom:'Explicaciones del cocinero',
   },
   ca:{
     nav_inicio:'Inici',nav_asoc:"L'Associació",nav_rest:'Restaurants',
@@ -203,6 +204,7 @@ const t = {
     footer_nav:'Navegació',footer_legal:'Legal',footer_contacte:'Contacte',
     footer_avis:'Avís Legal',footer_privacitat:'Política de Privacitat',
     footer_copy:'© 2026 Gourmets de Tarragona · Tots els drets reservats',
+    back_blog:'Tornar al Blog',
     g_badge:'Editorial',
     g_hero_prefix:"Qui és...",
     g_subtitol:"El màxim reconeixement dels Gourmets de Tarragona a l'excel·lència culinària del Camp de Tarragona. Un trofeu, un procés, una història.",
@@ -210,8 +212,8 @@ const t = {
     g_p1:"En algun racó de la mitologia mediterrània, entre els banquets de l'Olimp i els festins dels herois, hauria d'existir una figura com <strong>Gastronia</strong>. Una presència femenina que presidís la taula, que vetllés pel producte, la tècnica i el plaer de menjar bé. Si els antics grecs i romans tenien deïtats per al vi, la collita i el foc de la llar, no seria descabellat imaginar que també en tinguessin una per a l'art de la bona taula.",
     g_p2:"El nom <strong>Gastronia</strong> evoca aquesta figura. Neix de les arrels del Mediterrani clàssic, amb una sonoritat que recorda les grans deesses de l'Antiguitat. Si existeix o no en algun text oblidat de la mitologia antiga, és una qüestió que preferim deixar oberta — i que convidem a investigar.",
     g_l2:'El trofeu',g_t2:'Una peça dissenyada per Joan Blázquez',
-    g_p3:"El trofeu és obra de <strong>Joan Blázquez</strong>, joier i escultor tarragoní, <strong>Mestre Artesà de la Generalitat de Catalunya</strong> des del 2016 i membre de la pròpia associació. Amb dècades de trajectòria a les espatlles, Blázquez és un dels artesans més reconeguts del Camp de Tarragona: ha exposat en galeries internacionals, ha estat guardonat a Brussel·les i ha creat peces per a institucions de tota la regió. La seva implicació amb els Gourmets de Tarragona va molt més enllà d'un encàrrec puntual — és part del projecte.",
-    g_p4:"Cada peça és única i artesanal. La base de cristall porta gravada la inscripció amb el nom del restaurant guardonat i l'any de concessió, convertint-la en un document permanent de la història gastronòmica del Camp de Tarragona. Una joia, en tots els sentits.",
+    g_p3:"El trofeu és obra de <strong>Joan Blázquez</strong>, joier i escultor tarragoní, <strong>Mestre Artesà de la Generalitat de Catalunya</strong> des del 2016 i membre de la mateixa associació. Amb dècades de trajectòria a les espatlles, Blázquez és un dels artesans més reconeguts del Camp de Tarragona: ha exposat en galeries internacionals, ha estat guardonat a Brussel·les i ha creat peces per a institucions de tota la regió. La seva implicació amb els Gourmets de Tarragona va molt més enllà d'un encàrrec puntual — forma part del projecte.",
+    g_p4:"Cada peça és única i artesanal. La base de cristall porta gravada la inscripció amb el nom del restaurant guardonat i l'any de concessió, i això la converteix en un document permanent de la història gastronòmica del Camp de Tarragona. Una joia, en tots els sentits.",
     g_l3:'El procés',g_t3:'Vuit criteris, molts paladars',
     g_p5:"La Gastronia no s'atorga per intuïció ni per votació popular. Cada soci avalua de forma independent cada restaurant visitat durant el recorregut anual, puntuant de l'1 al 5 vuit criteris específics:",
     g_criteris_nota:"Cada soci puntua de forma independent. La puntuació final és la mitjana acumulada de totes les visites de la temporada.",
@@ -219,6 +221,7 @@ const t = {
     g_l4:'Palmarès',g_t4:'Els guardonats',
     g_wip:'En procés de recuperació',
     btn_premis:'Veure tots els premis →',
+    c1_nom:'Presentació de la taula',c2_nom:'Ambient i decoració',c3_nom:'Servei',c4_nom:'Matèria primera',c5_nom:'Maridatge',c6_nom:'Elaboració',c7_nom:'Postres',c8_nom:'Explicacions del cuiner',
   }
 };
 let currentLang = localStorage.getItem('gdt-lang') || 'es';
@@ -412,7 +415,7 @@ function setLang(lang) {
     <div class="entrada-meta-top">
       <span class="entrada-badge entrada-badge-noticia" data-i18n="g_badge"></span>
       <div class="entrada-meta-info">
-        <span class="entrada-meta-item"><i class="fa fa-trophy"></i> Trofeu Gastronia</span>
+        <span class="entrada-meta-item"><i class="fa fa-trophy"></i> <span class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</span></span>
         <span class="entrada-meta-item"><i class="fa fa-map-marker-alt"></i> Camp de Tarragona</span>
       </div>
     </div>
@@ -454,14 +457,14 @@ function setLang(lang) {
   <p class="e-p" data-i18n="g_p5"></p>
 
   <div class="e-criteris">
-    <div class="e-criteri"><span class="e-criteri-num">01</span><span class="e-criteri-nom" data-i18n="c1_nom">Presentació de la taula</span></div>
-    <div class="e-criteri"><span class="e-criteri-num">02</span><span class="e-criteri-nom" data-i18n="c2_nom">Ambient i decoració</span></div>
-    <div class="e-criteri"><span class="e-criteri-num">03</span><span class="e-criteri-nom" data-i18n="c3_nom">Servei</span></div>
-    <div class="e-criteri"><span class="e-criteri-num">04</span><span class="e-criteri-nom" data-i18n="c4_nom">Matèria primera</span></div>
-    <div class="e-criteri"><span class="e-criteri-num">05</span><span class="e-criteri-nom" data-i18n="c5_nom">Maridatge</span></div>
-    <div class="e-criteri"><span class="e-criteri-num">06</span><span class="e-criteri-nom" data-i18n="c6_nom">Elaboració</span></div>
+    <div class="e-criteri"><span class="e-criteri-num">01</span><span class="e-criteri-nom" data-i18n="c1_nom">Presentación de la mesa</span></div>
+    <div class="e-criteri"><span class="e-criteri-num">02</span><span class="e-criteri-nom" data-i18n="c2_nom">Ambiente y decoración</span></div>
+    <div class="e-criteri"><span class="e-criteri-num">03</span><span class="e-criteri-nom" data-i18n="c3_nom">Servicio</span></div>
+    <div class="e-criteri"><span class="e-criteri-num">04</span><span class="e-criteri-nom" data-i18n="c4_nom">Materia prima</span></div>
+    <div class="e-criteri"><span class="e-criteri-num">05</span><span class="e-criteri-nom" data-i18n="c5_nom">Maridaje</span></div>
+    <div class="e-criteri"><span class="e-criteri-num">06</span><span class="e-criteri-nom" data-i18n="c6_nom">Elaboración</span></div>
     <div class="e-criteri"><span class="e-criteri-num">07</span><span class="e-criteri-nom" data-i18n="c7_nom">Postres</span></div>
-    <div class="e-criteri"><span class="e-criteri-num">08</span><span class="e-criteri-nom" data-i18n="c8_nom">Explicacions del cuiner</span></div>
+    <div class="e-criteri"><span class="e-criteri-num">08</span><span class="e-criteri-nom" data-i18n="c8_nom">Explicaciones del cocinero</span></div>
   </div>
   <p class="e-criteris-nota" data-i18n="g_criteris_nota"></p>
   <p class="e-p" data-i18n="g_p6"></p>
@@ -474,31 +477,31 @@ function setLang(lang) {
   <div class="e-palmares">
     <div class="e-palmares-row">
       <span class="e-palmares-any">2025</span>
-      <span class="e-palmares-premi">1r Gastronia</span>
+      <span class="e-palmares-premi t" data-es="1.er Gastronia" data-ca="1r Gastronia">1.er Gastronia</span>
       <span class="e-palmares-rest">Buidasacs</span>
       <span class="e-palmares-lloc">Reus</span>
     </div>
     <div class="e-palmares-row">
       <span class="e-palmares-any">2025</span>
-      <span class="e-palmares-premi">2n Gastronia</span>
+      <span class="e-palmares-premi t" data-es="2.º Gastronia" data-ca="2n Gastronia">2.º Gastronia</span>
       <span class="e-palmares-rest">Cambium</span>
       <span class="e-palmares-lloc">Cambrils</span>
     </div>
     <div class="e-palmares-row">
       <span class="e-palmares-any">2024</span>
-      <span class="e-palmares-premi">1r Gastronia</span>
+      <span class="e-palmares-premi t" data-es="1.er Gastronia" data-ca="1r Gastronia">1.er Gastronia</span>
       <span class="e-palmares-rest" style="font-style:italic;opacity:.5;" data-i18n="g_wip"></span>
       <span class="e-palmares-lloc"></span>
     </div>
     <div class="e-palmares-row">
       <span class="e-palmares-any">2023</span>
-      <span class="e-palmares-premi">1r Gastronia</span>
+      <span class="e-palmares-premi t" data-es="1.er Gastronia" data-ca="1r Gastronia">1.er Gastronia</span>
       <span class="e-palmares-rest" style="font-style:italic;opacity:.5;" data-i18n="g_wip"></span>
       <span class="e-palmares-lloc"></span>
     </div>
     <div class="e-palmares-row">
       <span class="e-palmares-any">2022</span>
-      <span class="e-palmares-premi">1r Gastronia</span>
+      <span class="e-palmares-premi t" data-es="1.er Gastronia" data-ca="1r Gastronia">1.er Gastronia</span>
       <span class="e-palmares-rest" style="font-style:italic;opacity:.5;" data-i18n="g_wip"></span>
       <span class="e-palmares-lloc"></span>
     </div>
@@ -517,9 +520,9 @@ function setLang(lang) {
       ¿Quieres recibir la próxima crónica antes que nadie?
     </h2>
     <p class="e-nl-cta-sub t"
-       data-es="Crónicas de los restaurantes visitados, vinos recomendados y novedades del Camp de Tarragona. Una vez al mes, sin ruido."
-       data-ca="Cròniques dels restaurants visitats, vins recomanats i novetats del Camp de Tarragona. Un cop al mes, sense soroll.">
-      Crónicas de los restaurantes visitados, vinos recomendados y novedades del Camp de Tarragona. Una vez al mes, sin ruido.
+       data-es="Crónicas de los restaurantes visitados, vinos recomendados y novedades del Camp de Tarragona. Cada quince días, sin ruido."
+       data-ca="Cròniques dels restaurants visitats, vins recomanats i novetats del Camp de Tarragona. Cada quinze dies, sense soroll.">
+      Crónicas de los restaurantes visitados, vinos recomendados y novedades del Camp de Tarragona. Cada quince días, sin ruido.
     </p>
     <form class="e-nl-cta-form"
           action="https://fe0daaff.sibforms.com/serve/MUIFAMSYb3h5hzjCYPN-GiItYcbChszEiV-2Ci_yU_3sfesrzldVY_nwtUN7RfIi41NyXnMu3sl9-ob6jEY1i8D_lfWkjTx2BPx-DdkMBNRhY_UX6RYT8Q6OtL_RSXdw1Nxw1cQMI50KFEuV5agn87hBqKVShQPjzSVyuaqjxyjEXiMI4ec7wdY55xdTRqGDyO937oVLzoaKi6MUtQ=="
@@ -536,8 +539,8 @@ function setLang(lang) {
               data-es="APUNTARME" data-ca="APUNTAR-ME">APUNTARME</button>
     </form>
     <p class="e-nl-cta-legal t"
-       data-es="Sin spam · Baja cuando quieras."
-       data-ca="Sense spam · Baixa quan vulguis.">Sin spam · Baja cuando quieras.</p>
+       data-es="Sin spam · Date de baja cuando quieras."
+       data-ca="Sense spam · Dona't de baixa quan vulguis.">Sin spam · Date de baja cuando quieras.</p>
   </div>
 </section>
 <!-- ═══════ /CTA NEWSLETTER ═══════ -->
@@ -558,12 +561,12 @@ function setLang(lang) {
         </div>
         <div class="e-tambe-card-body">
           <h3 class="e-tambe-card-title t"
-              data-es="Gala de Premis 2025"
-              data-ca="Gala de Premis 2025">Gala de Premis 2025</h3>
+              data-es="Gala de Premios 2025"
+              data-ca="Gala de Premis 2025">Gala de Premios 2025</h3>
           <p class="e-tambe-card-exc t"
-             data-es="La noche en que la gastronomía del Camp de Tarragona celebra a los mejores. Crónica de la Gala de Premis 2025."
+             data-es="La noche en que la gastronomía del Camp de Tarragona celebra a los mejores. Crónica de la Gala de Premios 2025."
              data-ca="La nit en què la gastronomia del Camp de Tarragona celebra els millors. Crònica de la Gala de Premis 2025.">
-            La noche en que la gastronomía del Camp de Tarragona celebra a los mejores. Crónica de la Gala de Premis 2025.
+            La noche en que la gastronomía del Camp de Tarragona celebra a los mejores. Crónica de la Gala de Premios 2025.
           </p>
           <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
         </div>
@@ -572,7 +575,7 @@ function setLang(lang) {
       <a href="tendencias-gastronomiques-2026.html" class="e-tambe-card">
         <div class="e-tambe-card-img">
           <img src="../assets/img/tendencias/hero%20para%20tendencias.jpg"
-               alt="Tendencias 2026"
+               alt="Tendències 2026"
                onerror="this.parentElement.style.background='#4a6741'">
           <span class="e-tambe-card-cat t" data-es="Tendencias" data-ca="Tendències">Tendencias</span>
         </div>
@@ -641,7 +644,7 @@ function setLang(lang) {
       <img src="../assets/img/logo.png"
            alt="Gourmets de Tarragona"
            onerror="this.style.display='none'">
-      <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucre.<br>Camp de Tarragona.</p>
+      <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
       <div class="footer-social">
         <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener" aria-label="Instagram">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
@@ -729,9 +732,9 @@ function copiarEnllac(btn){
       ¿Te ha gustado esta crónica?
     </h2>
     <p id="nl-popup-sub" class="t"
-       data-es="Recibe la próxima en tu correo. Crónicas de restaurante, vinos y novedades del Camp de Tarragona. Una vez al mes."
-       data-ca="Rep la propera al teu correu. Cròniques de restaurant, vins i novetats del Camp de Tarragona. Un cop al mes.">
-      Recibe la próxima en tu correo. Crónicas de restaurante, vinos y novedades del Camp de Tarragona. Una vez al mes.
+       data-es="Recibe la próxima en tu correo. Crónicas de restaurante, vinos y novedades del Camp de Tarragona. Cada quince días."
+       data-ca="Rep la propera al teu correu. Cròniques de restaurant, vins i novetats del Camp de Tarragona. Cada quinze dies.">
+      Recibe la próxima en tu correo. Crónicas de restaurante, vinos y novedades del Camp de Tarragona. Cada quince días.
     </p>
     <form id="nl-popup-form"
           action="https://fe0daaff.sibforms.com/serve/MUIFAMSYb3h5hzjCYPN-GiItYcbChszEiV-2Ci_yU_3sfesrzldVY_nwtUN7RfIi41NyXnMu3sl9-ob6jEY1i8D_lfWkjTx2BPx-DdkMBNRhY_UX6RYT8Q6OtL_RSXdw1Nxw1cQMI50KFEuV5agn87hBqKVShQPjzSVyuaqjxyjEXiMI4ec7wdY55xdTRqGDyO937oVLzoaKi6MUtQ=="
@@ -749,8 +752,8 @@ function copiarEnllac(btn){
               data-es="APUNTARME" data-ca="APUNTAR-ME">APUNTARME</button>
     </form>
     <p id="nl-popup-legal" class="t"
-       data-es="Sin spam · Baja cuando quieras."
-       data-ca="Sense spam · Baixa quan vulguis.">Sin spam · Baja cuando quieras.</p>
+       data-es="Sin spam · Date de baja cuando quieras."
+       data-ca="Sense spam · Dona't de baixa quan vulguis.">Sin spam · Date de baja cuando quieras.</p>
   </div>
 </div>
 <!-- ═══════ /POPUP NEWSLETTER ═══════ -->
