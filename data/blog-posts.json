@@ -1,5 +1,17 @@
 [
   {
+    "slug": "panellets-castanyada",
+    "titol_ca": "La rifa de panellets que només sobreviu a Reus",
+    "titol_es": "La rifa de panellets que solo sobrevive en Reus",
+    "resum_ca": "Panellets, castanyada i Tots Sants: l'origen del massapà, el compte del pinyó i una rifa del segle XIX que només es manté a Reus.",
+    "resum_es": "Panellets, castanyada y Tots Sants: el origen del mazapán, la cuenta del piñón y una rifa del siglo XIX que solo se mantiene en Reus.",
+    "categoria": "curiositats",
+    "data": "2026-10-20",
+    "min_lectura": 8,
+    "color_bg": "#2E1A0D",
+    "img": "assets/img/panellets/p-hero.jpg"
+  },
+  {
     "slug": "serrallo-subhasta-peix",
     "titol_ca": "El Serrallo i la subhasta de les quatre",
     "titol_es": "El Serrallo y la subasta de las cuatro",
