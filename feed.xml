@@ -8,6 +8,15 @@
     <atom:link href="https://www.gourmetsdetarragona.com/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>El Serrallo y la subasta de las cuatro</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/serrallo-subhasta-peix.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/serrallo-subhasta-peix.html</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 +0200</pubDate>
+      <description>La subasta a la baja de la lonja del Serrallo, el origen del barrio en el siglo XIX y la cocina que nació de lo que no se vendía.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/serrallo/serrallo-moll.jpg" medium="image"/>
+    </item>
+
+    <item>
       <title>El masclet — la bebida que Reus se inventó para su fiesta</title>
       <link>https://www.gourmetsdetarragona.com/entrades/masclet-reus-misericordia.html</link>
       <guid>https://www.gourmetsdetarragona.com/entrades/masclet-reus-misericordia.html</guid>
