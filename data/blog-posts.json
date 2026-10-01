@@ -1,5 +1,17 @@
 [
   {
+    "slug": "de-muller-vi-de-missa",
+    "titol_ca": "De Muller — el vi de missa de Tarragona que va arribar al Vaticà",
+    "titol_es": "De Muller — el vino de misa de Tarragona que llegó al Vaticano",
+    "resum_ca": "Fundada el 1851 al carrer Reial, proveïdora oficial del Vaticà durant sis pontificats. Avui envia vi de missa a mig món des d'un mas de Reus.",
+    "resum_es": "Fundada en 1851 en el carrer Reial, proveedora oficial del Vaticano durante seis pontificados. Hoy envía vino de misa a medio mundo desde una masía de Reus.",
+    "categoria": "vi",
+    "data": "2026-10-01",
+    "min_lectura": 8,
+    "color_bg": "#1A0D2E",
+    "img": "assets/img/demuller/portal-reial.jpg"
+  },
+  {
     "slug": "panellets-castanyada",
     "titol_ca": "La rifa de panellets que només sobreviu a Reus",
     "titol_es": "La rifa de panellets que solo sobrevive en Reus",
