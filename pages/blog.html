@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span class="t" data-es="Todos" data-ca="Tots">Todos</span>
-      <span class="filtre-n">40</span>
+      <span class="filtre-n">41</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot" style="background:var(--navy);"></span>
@@ -343,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <button class="filtre-btn" data-cat="vi" onclick="filterEntrades('vi')">
       <span class="filtre-dot" style="background:#6b2737;"></span>
       <span class="t" data-es="Vinos" data-ca="Vins">Vinos</span>
-      <span class="filtre-n">6</span>
+      <span class="filtre-n">7</span>
     </button>
     <button class="filtre-btn" data-cat="event" onclick="filterEntrades('event')">
       <span class="filtre-dot" style="background:#2a7a4b;"></span>
@@ -910,6 +910,27 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
   <div class="car-track">
   <div class="carrusel" id="car-vins">
+    <article class="blog-card" data-cat="vi">
+      <div class="blog-card-img">
+        <img src="../assets/img/demuller/portal-reial.jpg" alt="Portal de la antigua bodega De Muller en el carrer Reial de Tarragona" onerror="this.parentElement.style.background='var(--navy-dark)'">
+        <span class="blog-card-cat cat-vi t" data-es="Vinos" data-ca="Vins">Vinos</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="octubre de 2026" data-ca="octubre de 2026">octubre de 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es="De Muller<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>El vino de misa que llegó al Vaticano</small>"
+            data-ca="De Muller<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>El vi de missa que va arribar al Vaticà</small>">
+          De Muller<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">El vino de misa que llegó al Vaticano</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Fundada en 1851 en el carrer Reial, proveedora oficial del Vaticano durante seis pontificados. Hoy exporta desde una masía de Reus."
+           data-ca="Fundada el 1851 al carrer Reial, proveïdora oficial del Vaticà durant sis pontificats. Avui exporta des d'un mas de Reus.">
+          Fundada en 1851 en el carrer Reial, proveedora oficial del Vaticano durante seis pontificados. Hoy exporta desde una masía de Reus.
+        </p>
+        <a href="../entrades/de-muller-vi-de-missa.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
     <article class="blog-card" data-cat="vi">
       <div class="blog-card-img">
         <img src="../assets/img/tokaj/tokaj-galeria-barriques-oremus.jpg" alt="Galeria de barriques de les caves Oremus a Tokaj, Hongria" onerror="this.parentElement.style.background='var(--navy-dark)'">
