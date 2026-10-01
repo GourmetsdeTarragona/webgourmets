@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span class="t" data-es="Todos" data-ca="Tots">Todos</span>
-      <span class="filtre-n">41</span>
+      <span class="filtre-n">42</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot" style="background:var(--navy);"></span>
@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <button class="filtre-btn" data-cat="curiositats" onclick="filterEntrades('curiositats')">
       <span class="filtre-dot" style="background:#8b5e3c;"></span>
       <span class="t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
-      <span class="filtre-n">13</span>
+      <span class="filtre-n">14</span>
     </button>
   </div>
 </div>
@@ -1085,6 +1085,27 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
   <div class="car-track">
   <div class="carrusel" id="car-curiositats">
+    <article class="blog-card" data-cat="curiositats">
+      <div class="blog-card-img">
+        <img src="../assets/img/bolets/rovello-bosc.jpg" alt="Rovellons en el bosque de las Muntanyes de Prades" onerror="this.parentElement.style.background='var(--navy-dark)'">
+        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="octubre de 2026" data-ca="octubre de 2026">octubre de 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es="Bolets a Prades<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>Seis kilos y una navaja</small>"
+            data-ca="Bolets a Prades<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>Sis quilos i una navalla</small>">
+          Bolets a Prades<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Seis kilos y una navaja</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="El carnet de boletaire de Poblet, las 983 especies inventariadas y el parque natural de 38.900 hectáreas que está en camino."
+           data-ca="El carnet de boletaire de Poblet, les 983 espècies inventariades i el parc natural de 38.900 hectàrees que està en camí.">
+          El carnet de boletaire de Poblet, las 983 especies inventariadas y el parque natural de 38.900 hectáreas que está en camino.
+        </p>
+        <a href="../entrades/bolets-muntanyes-prades.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
         <img src="../assets/img/panellets/p-hero.jpg" alt="Bandeja de panellets de Tots Sants" onerror="this.parentElement.style.background='var(--navy-dark)'">

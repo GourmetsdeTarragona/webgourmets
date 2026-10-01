@@ -92,6 +92,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gourmetsdetarragona.com/pages/cookies.html"/>
   </url>
   <url>
+    <loc>https://www.gourmetsdetarragona.com/entrades/bolets-muntanyes-prades.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.gourmetsdetarragona.com/entrades/bolets-muntanyes-prades.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.gourmetsdetarragona.com/entrades/bolets-muntanyes-prades.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gourmetsdetarragona.com/entrades/bolets-muntanyes-prades.html"/>
+  </url>
+  <url>
     <loc>https://www.gourmetsdetarragona.com/entrades/de-muller-vi-de-missa.html</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>

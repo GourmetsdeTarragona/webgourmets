@@ -1,5 +1,17 @@
 [
   {
+    "slug": "bolets-muntanyes-prades",
+    "titol_ca": "Bolets a les Muntanyes de Prades — sis quilos i una navalla",
+    "titol_es": "Bolets en las Muntanyes de Prades — seis kilos y una navaja",
+    "resum_ca": "El carnet de boletaire de Poblet, les 983 espècies inventariades i el parc natural de 38.900 hectàrees que està a punt de declarar-se.",
+    "resum_es": "El carnet de boletaire de Poblet, las 983 especies inventariadas y el parque natural de 38.900 hectáreas que está a punto de declararse.",
+    "categoria": "curiositats",
+    "data": "2026-10-02",
+    "min_lectura": 7,
+    "color_bg": "#1C2210",
+    "img": "assets/img/bolets/rovello-bosc.jpg"
+  },
+  {
     "slug": "de-muller-vi-de-missa",
     "titol_ca": "De Muller — el vi de missa de Tarragona que va arribar al Vaticà",
     "titol_es": "De Muller — el vino de misa de Tarragona que llegó al Vaticano",
