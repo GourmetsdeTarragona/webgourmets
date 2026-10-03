@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="shortcut icon" href="../favicon.ico">
+<title>El Galliner de l'Antiquari · Crònica · Gourmets de Tarragona</title>
+<meta name="description" content="Crónica de la 7ª visita de Gourmets de Tarragona a El Galliner de l'Antiquari, en la Part Alta. 32 comensales, el menú de Tymur Duka y una asociación hermana en Palencia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/seccions.css">
+<style>
+.entrada-hero{position:relative;min-height:75vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b1626;}
+.entrada-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.65;filter:brightness(1.05) contrast(1.05);}
+.entrada-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.95) 0%,rgba(11,22,38,.4) 55%,rgba(11,22,38,.05) 100%);}
+.entrada-hero-line{position:absolute;left:3.5%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.35) 20%,rgba(184,146,74,.35) 80%,transparent);}
+.entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
+.entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
+.entrada-back:hover{color:var(--gold);}
+.entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;}
+.entrada-meta-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
+.entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:18px;}
+.entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;}
+.entrada-meta-item i{color:rgba(184,146,74,.6);font-size:.7rem;}
+.entrada-titol{font-family:var(--font-serif);font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.06;font-weight:700;margin-bottom:14px;}
+.entrada-titol em{font-style:italic;color:rgba(212,169,106,.9);}
+.entrada-subtitol{font-size:.98rem;color:rgba(255,255,255,.82);font-weight:300;line-height:1.85;max-width:540px;}
+.entrada-cos{max-width:900px;margin:0 auto;padding:72px 4%;}
+.e-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-title{font-family:var(--font-serif);font-size:1.75rem;color:var(--navy-dark);line-height:1.2;margin-bottom:22px;}
+.e-p{font-size:1rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:20px;}
+.e-p strong{font-weight:700;color:var(--navy-dark);}
+.e-p em{font-style:italic;color:var(--navy-dark);}
+.e-divider{width:48px;height:3px;background:var(--gold);opacity:.35;margin:52px 0;}
+.e-foto-gran{margin:48px 0;position:relative;overflow:hidden;}
+.e-foto-gran img{width:100%;height:500px;object-fit:cover;display:block;}
+.e-foto-peu{font-size:.72rem;color:var(--muted);font-style:italic;margin-top:10px;padding-left:8px;border-left:2px solid var(--gold);opacity:.8;line-height:1.5;}
+.e-fotos-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:36px 0 8px;}
+.e-fotos-2 img{width:100%;height:320px;object-fit:cover;}
+.e-fotos-2-peu{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:36px;}
+.e-fotos-2-peu span{font-size:.72rem;color:var(--muted);font-style:italic;padding-left:8px;border-left:2px solid var(--gold);opacity:.8;line-height:1.5;display:block;}
+.e-fotos-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:36px 0 8px;}
+.e-fotos-3 img{width:100%;height:240px;object-fit:cover;}
+.e-fotos-3-peu{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:36px;}
+.e-fotos-3-peu span{font-size:.7rem;color:var(--muted);font-style:italic;padding-left:8px;border-left:2px solid var(--gold);opacity:.8;line-height:1.5;display:block;}
+.e-foto-md{margin:36px 0;}
+.e-foto-md img{width:100%;height:380px;object-fit:cover;display:block;}
+.e-foto-md video{width:100%;height:380px;object-fit:cover;display:block;background:#000;}
+.e-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-bottom:52px;}
+.e-img img{width:100%;height:420px;object-fit:cover;}
+.e-vins{background:var(--navy-dark);padding:52px;margin:52px 0;position:relative;}
+.e-vins::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);}
+.e-vins-label{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(184,146,74,.7);margin-bottom:10px;display:block;}
+.e-vins-title{font-family:var(--font-serif);font-size:1.5rem;color:#fff;margin-bottom:8px;}
+.e-vins-desc{font-size:.9rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.8;margin-bottom:32px;}
+.e-vins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.e-vi{background:rgba(255,255,255,.06);padding:18px 16px;border-left:3px solid rgba(184,146,74,.4);}
+.e-vi-num{font-size:.58rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(184,146,74,.65);margin-bottom:6px;}
+.e-vi-nom{font-size:.9rem;color:#fff;font-weight:600;line-height:1.4;margin-bottom:4px;}
+.e-vi-do{font-size:.75rem;color:rgba(255,255,255,.38);}
+.e-fitxa{background:var(--cream);border:1px solid var(--border);display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:52px 0;text-align:center;}
+.e-fitxa-item{padding:32px 20px;border-right:1px solid var(--border);}
+.e-fitxa-item:last-child{border-right:none;}
+.e-fitxa-label{font-size:.62rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block;}
+.e-fitxa-valor{font-family:var(--font-serif);font-size:1rem;color:var(--navy-dark);}
+.e-compartir{position:relative;margin:64px 0 0;padding:56px 40px 52px;background:linear-gradient(135deg,#0b1626 0%,#1c2e3e 100%);overflow:hidden;}
+.e-compartir::before{content:'';position:absolute;top:-1px;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);}
+.e-compartir::after{content:'"';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:14rem;font-weight:700;color:rgba(184,146,74,.06);line-height:1;pointer-events:none;user-select:none;}
+.e-compartir-inner{position:relative;z-index:1;max-width:600px;margin:0 auto;text-align:center;}
+.e-compartir-deco{display:flex;align-items:center;gap:16px;justify-content:center;margin-bottom:20px;}
+.e-compartir-deco-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,146,74,.3));}
+.e-compartir-deco-line.r{background:linear-gradient(90deg,rgba(184,146,74,.3),transparent);}
+.e-compartir-deco span{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(184,146,74,.6);font-weight:600;white-space:nowrap;}
+.e-compartir-frase{font-family:'Playfair Display',serif;font-size:1.45rem;font-style:italic;color:rgba(255,255,255,.88);line-height:1.5;margin-bottom:32px;font-weight:400;}
+.e-compartir-frase strong{font-style:normal;font-weight:700;color:#d4a96a;}
+.e-compartir-btns{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;}
+.e-compartir-btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;font-family:'Lato',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:rgba(255,255,255,.65);transition:all .25s;cursor:pointer;text-decoration:none;}
+.e-compartir-btn:hover{border-color:rgba(184,146,74,.6);background:rgba(184,146,74,.1);color:#d4a96a;transform:translateY(-2px);}
+.e-compartir-btn.wa:hover{border-color:#25d366;background:rgba(37,211,102,.1);color:#25d366;}
+.e-compartir-btn.fb:hover{border-color:#1877f2;background:rgba(24,119,242,.1);color:#6fa8ff;}
+.e-compartir-copied{font-size:.65rem;color:#d4a96a;letter-spacing:.08em;opacity:0;transition:opacity .3s;margin-left:4px;}
+.e-compartir-copied.vis{opacity:1;}
+.e-nav-retorn{border-top:1px solid var(--border);padding:40px;text-align:center;}
+.e-nav-retorn-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.e-tambe{margin:64px 0 0;padding-top:48px;border-top:1px solid var(--border);}
+.e-tambe-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.e-tambe-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);margin-bottom:32px;}
+.e-tambe-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.e-tambe-card{background:#fff;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;text-decoration:none;}
+.e-tambe-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(28,46,62,.12);}
+.e-tambe-card-img{height:172px;overflow:hidden;position:relative;}
+.e-tambe-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.e-tambe-card:hover .e-tambe-card-img img{transform:scale(1.05);}
+.e-tambe-card-cat{position:absolute;top:12px;left:12px;font-size:.57rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 10px;color:#fff;}
+.e-tambe-card-body{padding:20px;flex:1;display:flex;flex-direction:column;}
+.e-tambe-card-title{font-family:var(--font-serif);font-size:1rem;color:var(--navy-dark);line-height:1.3;margin-bottom:8px;font-weight:600;}
+.e-tambe-card-exc{font-size:.83rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:14px;flex:1;}
+.e-tambe-card-link{font-size:.63rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy-dark);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;width:fit-content;margin-top:auto;}
+.e-tambe-card:hover .e-tambe-card-link{color:var(--gold);}
+@media(max-width:768px){
+  .entrada-hero-content{padding:0 5% 52px;}
+  .entrada-cos{padding:52px 5%;}
+  .e-grid-2{grid-template-columns:1fr;gap:32px;}
+  .e-img img{height:280px;}
+  .e-foto-gran img{height:300px;}
+  .e-foto-md img{height:260px;}
+  .e-foto-md video{height:260px;}
+  .e-fotos-2{grid-template-columns:1fr;}
+  .e-fotos-2 img{height:260px;}
+  .e-fotos-2-peu{grid-template-columns:1fr;}
+  .e-fotos-3{grid-template-columns:1fr 1fr;}
+  .e-fotos-3-peu{grid-template-columns:1fr 1fr;}
+  .e-vins{padding:32px 20px;}
+  .e-vins-grid{grid-template-columns:1fr;}
+  .e-fitxa{grid-template-columns:1fr;}
+  .e-fitxa-item{border-right:none;border-bottom:1px solid var(--border);}
+  .e-fitxa-item:last-child{border-bottom:none;}
+  .e-compartir{padding:40px 24px 36px;}
+  .e-compartir::after{font-size:8rem;}
+  .e-compartir-frase{font-size:1.2rem;}
+}
+@media(max-width:680px){.e-tambe-grid{grid-template-columns:1fr;}}
+</style>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.gourmetsdetarragona.com/entrades/galliner-cronica-2026.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.gourmetsdetarragona.com/entrades/galliner-cronica-2026.html">
+<meta property="og:title" content="El Galliner de l'Antiquari · Crònica · Gourmets de Tarragona">
+<meta property="og:description" content="Crónica de la 7ª visita de Gourmets de Tarragona a El Galliner de l'Antiquari, en la Part Alta. 32 comensales, el menú de Tymur Duka y una asociación hermana en Palencia.">
+<meta property="og:image" content="https://www.gourmetsdetarragona.com/assets/img/galliner/cronica/foto-grup.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gourmets de Tarragona a El Galliner de l'Antiquari · Tarragona">
+<meta property="og:site_name" content="Gourmets de Tarragona">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="ca_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="El Galliner de l'Antiquari · Crònica · Gourmets de Tarragona">
+<meta name="twitter:description" content="Crónica de la 7ª visita de Gourmets de Tarragona a El Galliner de l'Antiquari, en la Part Alta. 32 comensales, el menú de Tymur Duka y una asociación hermana en Palencia.">
+<meta name="twitter:image" content="https://www.gourmetsdetarragona.com/assets/img/galliner/cronica/foto-grup.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "El Galliner de l'Antiquari · Crònica · Gourmets de Tarragona",
+  "description": "Crónica de la 7ª visita de Gourmets de Tarragona a El Galliner de l'Antiquari, en la Part Alta. 32 comensales, el menú de Tymur Duka y una asociación hermana en Palencia.",
+  "image": "https://www.gourmetsdetarragona.com/assets/img/galliner/cronica/foto-grup.jpg",
+  "url": "https://www.gourmetsdetarragona.com/entrades/galliner-cronica-2026.html",
+  "datePublished": "2026-10-03",
+  "inLanguage": ["es","ca"],
+  "author": {
+    "@type": "Organization",
+    "name": "Gourmets de Tarragona",
+    "url": "https://www.gourmetsdetarragona.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Gourmets de Tarragona",
+    "url": "https://www.gourmetsdetarragona.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gourmetsdetarragona.com/assets/img/logo.png"
+    }
+  }
+}
+</script>
+<script>
+var currentLang = localStorage.getItem('gdt-lang') || 'es';
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('gdt-lang', lang);
+  document.querySelectorAll('.t').forEach(function(el) {
+    var val = el.getAttribute('data-' + lang);
+    if (val !== null) el.innerHTML = val;
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+  document.getElementById('html-root').setAttribute('lang', lang);
+}
+</script>
+<style>
+.e-nl-cta{background:var(--navy-dark,#1C2E3E);padding:64px 5%;text-align:center;margin:0;}
+.e-nl-cta-inner{max-width:540px;margin:0 auto;}
+.e-nl-cta-deco{font-size:1.4rem;color:var(--gold,#B8924A);opacity:.5;margin-bottom:16px;line-height:1;}
+.e-nl-cta-kicker{font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold,#B8924A);margin-bottom:14px;}
+.e-nl-cta-title{font-family:var(--font-serif,'Playfair Display',Georgia,serif);font-size:clamp(1.4rem,3.5vw,2rem);color:#F6F2EC;line-height:1.2;margin-bottom:14px;font-weight:600;}
+.e-nl-cta-sub{font-size:.88rem;color:rgba(246,242,236,.6);line-height:1.75;margin-bottom:28px;font-weight:300;}
+.e-nl-cta-form{display:flex;max-width:420px;margin:0 auto 12px;}
+.e-nl-cta-input{flex:1;min-width:0;padding:13px 16px;font-size:.85rem;font-family:inherit;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-right:none;color:#fff;outline:none;transition:border-color .2s;}
+.e-nl-cta-input:focus{border-color:rgba(184,146,74,.55);}
+.e-nl-cta-btn{padding:13px 20px;background:var(--gold,#B8924A);color:#fff;font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-family:inherit;border:none;cursor:pointer;white-space:nowrap;transition:background .2s;}
+.e-nl-cta-btn:hover{background:#c9a05a;}
+.e-nl-cta-legal{font-size:.68rem;color:rgba(255,255,255,.2);}
+@media(max-width:480px){.e-nl-cta-form{flex-direction:column;}.e-nl-cta-input{border-right:1px solid rgba(255,255,255,.14);border-bottom:none;}.e-nl-cta-btn{padding:13px;}}
+
+</style>
+<style>
+#nl-popup{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 300ms ease;}
+#nl-popup.nl-visible{opacity:1;}
+#nl-popup-overlay{position:absolute;inset:0;background:rgba(8,15,24,.72);backdrop-filter:blur(3px);}
+#nl-popup-box{position:relative;z-index:1;background:#0D1E2F;border:1px solid rgba(184,146,74,.2);max-width:420px;width:90%;padding:48px 40px 40px;text-align:center;transform:translateY(18px);transition:transform 300ms ease;box-shadow:0 32px 80px rgba(0,0,0,.5);}
+#nl-popup.nl-visible #nl-popup-box{transform:translateY(0);}
+#nl-popup-close{position:absolute;top:14px;right:18px;background:none;border:none;color:rgba(255,255,255,.3);font-size:1.4rem;cursor:pointer;line-height:1;padding:4px;transition:color .2s;}
+#nl-popup-close:hover{color:rgba(255,255,255,.8);}
+#nl-popup-deco{font-size:1.2rem;color:#B8924A;opacity:.45;margin-bottom:14px;}
+#nl-popup-kicker{font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#B8924A;margin-bottom:12px;}
+#nl-popup-title{font-family:'Playfair Display',Georgia,serif;font-size:1.55rem;color:#F6F2EC;line-height:1.22;margin-bottom:12px;font-weight:600;}
+#nl-popup-sub{font-size:.85rem;color:rgba(246,242,236,.55);line-height:1.75;margin-bottom:26px;font-weight:300;}
+#nl-popup-form{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+#nl-popup-email{padding:13px 16px;font-size:.88rem;font-family:inherit;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#fff;outline:none;transition:border-color .2s;width:100%;box-sizing:border-box;}
+#nl-popup-email:focus{border-color:rgba(184,146,74,.55);}
+#nl-popup-btn{padding:14px;background:#B8924A;color:#fff;font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-family:inherit;border:none;cursor:pointer;transition:background .2s;}
+#nl-popup-btn:hover{background:#c9a05a;}
+#nl-popup-legal{font-size:.65rem;color:rgba(255,255,255,.18);}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona" onerror="this.src='https://gourmetsdetarragona.com/wp-content/uploads/2025/05/cropped-logo_gourmets_blau_sin_fondo-3-300x296.png'"></a>
+    <div class="nav-menu">
+      <div class="nav-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
+      <div class="nav-item"><span class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</span><div class="dropdown"><a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a><a href="../pages/associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a><a href="../pages/associacio.html#valoracio" class="t" data-es="El sistema de valoración" data-ca="El sistema de valoració">El sistema de valoración</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span><div class="dropdown"><a href="../pages/restaurants.html" class="t" data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visitas 2025–26</a><a href="../pages/restaurants.html#historic" class="t" data-es="Histórico de visitas" data-ca="Històric de visites">Histórico de visitas</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Premios" data-ca="Premis">Premios</span><div class="dropdown"><a href="../pages/premis.html" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</a><a href="../pages/premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a><a href="../pages/premis.html#palmares" class="t" data-es="Palmarés histórico" data-ca="Palmarès històric">Palmarés histórico</a></div></div>
+      <div class="nav-item"><span class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</span><div class="dropdown"><a href="../pages/esdeveniments.html" class="t" data-es="Cenas especiales" data-ca="Sopars especials">Cenas especiales</a><a href="../pages/esdeveniments.html#cates" class="t" data-es="Catas &amp; Visitas" data-ca="Tasts &amp; Visites">Catas &amp; Visitas</a><a href="../pages/esdeveniments.html#calendari" class="t" data-es="Calendario" data-ca="Calendari">Calendario</a></div></div>
+      <div class="nav-item"><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+      <div class="nav-item"><a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-item"><a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a></div>
+    <div class="mobile-item"><a href="../pages/associacio.html" class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</a></div>
+    <div class="mobile-item"><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></div>
+    <div class="mobile-item"><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></div>
+    <div class="mobile-item"><a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></div>
+    <div class="mobile-item"><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
+    <div class="mobile-item"><a href="../pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="entrada-hero">
+  <div class="entrada-hero-bg" style="background-image:url('../assets/img/galliner/cronica/sala-parada.jpg');"></div>
+  <div class="entrada-hero-grad"></div>
+  <div class="entrada-hero-line"></div>
+  <div class="entrada-hero-content">
+    <a href="../pages/blog.html" class="entrada-back"><i class="fa fa-arrow-left"></i> <span class="t" data-es="Volver al Blog" data-ca="Tornar al Blog">Volver al Blog</span></a>
+    <div class="entrada-meta-top">
+      <span class="entrada-badge t" data-es="Crónica · 7ª Visita · Temporada 2026" data-ca="Crònica · 7a Visita · Temporada 2026">Crónica · 7ª Visita · Temporada 2026</span>
+    </div>
+    <div class="entrada-meta-info">
+      <span class="entrada-meta-item"><i class="fa fa-map-marker-alt"></i> Tarragona, Part Alta</span>
+      <span class="entrada-meta-item"><i class="fa fa-fire"></i> <span class="t" data-es="Brasa y cocina catalana" data-ca="Brasa i cuina catalana">Brasa y cocina catalana</span></span>
+      <span class="entrada-meta-item"><i class="fa fa-calendar"></i> <span class="t" data-es="1 de octubre de 2026" data-ca="1 d'octubre de 2026">1 de octubre de 2026</span></span>
+    </div>
+    <h1 class="entrada-titol">El Galliner de l'Antiquari · <em class="t" data-es="Tarragona" data-ca="Tarragona">Tarragona</em></h1>
+    <p class="entrada-subtitol t"
+       data-es="Treinta y dos comensales en la Part Alta, cenando junto al muro del antiguo foro romano. Un parlamento del presidente que acabó hablando de Palencia, y en la cocina un chef joven con mucho por delante."
+       data-ca="Trenta-dos comensals a la Part Alta, sopant al costat del mur de l'antic fòrum romà. Un parlament del president que va acabar parlant de Palència, i a la cuina un xef jove amb molt per endavant.">
+      Treinta y dos comensales en la Part Alta, cenando junto al muro del antiguo foro romano. Un parlamento del presidente que acabó hablando de Palencia, y en la cocina un chef joven con mucho por delante.
+    </p>
+  </div>
+</header>
+
+<main class="entrada-cos">
+
+  <!-- B1: LA LLEGADA -->
+  <span class="e-label t" data-es="La llegada" data-ca="L'arribada">La llegada</span>
+  <h2 class="e-title t" data-es="Esta vez, la cena era en casa" data-ca="Aquest cop, el sopar era a casa">Esta vez, la cena era en casa</h2>
+  <div class="e-divider"></div>
+  <div class="e-grid-2">
+    <div>
+      <p class="e-p t"
+         data-es="Después de Cambrils, Salou, Reus y el Delta, la séptima visita de la temporada no pedía coche ni carretera: el carrer de Santa Anna está a cuatro pasos de la plaça del Fòrum, en plena Part Alta. En la puerta, el legionario de madera que sostiene la carta; dentro, el suelo ajedrezado, las lámparas blancas y, al fondo, lo que convierte este local en algo distinto: <strong>el muro de sillares del antiguo foro provincial de Tarraco</strong>, con dos mil años encima, a un palmo de las sillas."
+         data-ca="Després de Cambrils, Salou, Reus i el Delta, la setena visita de la temporada no demanava cotxe ni carretera: el carrer de Santa Anna és a quatre passes de la plaça del Fòrum, en plena Part Alta. A la porta, el legionari de fusta que sosté la carta; a dins, el terra escacat, els llums blancs i, al fons, allò que converteix aquest local en una cosa diferent: <strong>el mur de carreus de l'antic fòrum provincial de Tàrraco</strong>, amb dos mil anys a sobre, a un pam de les cadires.">
+        Después de Cambrils, Salou, Reus y el Delta, la séptima visita de la temporada no pedía coche ni carretera: el carrer de Santa Anna está a cuatro pasos de la plaça del Fòrum, en plena Part Alta. En la puerta, el legionario de madera que sostiene la carta; dentro, el suelo ajedrezado, las lámparas blancas y, al fondo, lo que convierte este local en algo distinto: <strong>el muro de sillares del antiguo foro provincial de Tarraco</strong>, con dos mil años encima, a un palmo de las sillas.
+      </p>
+      <p class="e-p t"
+         data-es="Éramos <strong>32 comensales</strong>, repartidos en una mesa larga con la minuta en cada sitio y una planta pequeña cada pocos cubiertos. La casa había vestido la sala sin estridencias: mantel blanco, lámpara dorada y, apoyado en la pared de piedra, el rollup de los Gourmets."
+         data-ca="Érem <strong>32 comensals</strong>, repartits en una taula llarga amb la minuta a cada lloc i una planta petita cada pocs coberts. La casa havia vestit la sala sense estridències: estovalles blanques, llum daurat i, recolzat a la paret de pedra, el rollup dels Gourmets.">
+        Éramos <strong>32 comensales</strong>, repartidos en una mesa larga con la minuta en cada sitio y una planta pequeña cada pocos cubiertos. La casa había vestido la sala sin estridencias: mantel blanco, lámpara dorada y, apoyado en la pared de piedra, el rollup de los Gourmets.
+      </p>
+    </div>
+    <div class="e-img">
+      <img src="../assets/img/galliner/cronica/minuta.jpg" alt="Minuta del sopar dels Gourmets de Tarragona a El Galliner de l'Antiquari — 1 d'octubre de 2026">
+    </div>
+  </div>
+
+  <div class="e-fotos-2">
+    <img src="../assets/img/galliner/cronica/sala-parada.jpg" alt="La sala d'El Galliner de l'Antiquari parada per al sopar dels Gourmets, amb el mur romà al fons">
+    <img src="../assets/img/galliner/cronica/sala-taules.jpg" alt="Taula llarga parada sota els llums, amb el terra escacat d'El Galliner de l'Antiquari">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="La sala preparada antes de que llegara nadie: mesa larga, suelo ajedrezado y el muro romano de fondo" data-ca="La sala preparada abans que arribés ningú: taula llarga, terra escacat i el mur romà de fons">La sala preparada antes de que llegara nadie: mesa larga, suelo ajedrezado y el muro romano de fondo</span>
+    <span class="t" data-es="Treinta y dos cubiertos, la minuta en cada sitio y una planta cada pocos comensales" data-ca="Trenta-dos coberts, la minuta a cada lloc i una planta cada pocs comensals">Treinta y dos cubiertos, la minuta en cada sitio y una planta cada pocos comensales</span>
+  </div>
+
+  <!-- B2: EL PARLAMENTO -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Antes de sentarse" data-ca="Abans de seure">Antes de sentarse</span>
+  <h2 class="e-title t" data-es="Un parlamento que empezó en la Part Alta y acabó en Palencia" data-ca="Un parlament que va començar a la Part Alta i va acabar a Palència">Un parlamento que empezó en la Part Alta y acabó en Palencia</h2>
+  <p class="e-p t"
+     data-es="Antes de sentarse, la palabra fue para <strong>Juan Manuel Rodríguez Yarritu</strong>, presidente de la asociación, que hizo una disertación sobre el origen de la casa: el anticuario que dio nombre al local, la Sala d'Art L'Antiquari, los años de poesía, teatro y música en el pequeño escenario, y la etapa actual de Tymur Duka y Arnau González."
+     data-ca="Abans de seure, la paraula va ser per a <strong>Juan Manuel Rodríguez Yarritu</strong>, president de l'associació, que va fer una dissertació sobre l'origen de la casa: l'antiquari que va donar nom al local, la Sala d'Art L'Antiquari, els anys de poesia, teatre i música al petit escenari, i l'etapa actual de Tymur Duka i Arnau González.">
+    Antes de sentarse, la palabra fue para <strong>Juan Manuel Rodríguez Yarritu</strong>, presidente de la asociación, que hizo una disertación sobre el origen de la casa: el anticuario que dio nombre al local, la Sala d'Art L'Antiquari, los años de poesía, teatro y música en el pequeño escenario, y la etapa actual de Tymur Duka y Arnau González.
+  </p>
+  <p class="e-p t"
+     data-es="Y entonces llegó la anécdota de la noche. Yarritu contó un viaje reciente a <strong>Palencia</strong>, donde se encontró con una asociación calcada a la nuestra: la <strong>Asociación de Gourmets de Palencia</strong>, nacida en 1999, que también sale a cenar una vez al mes y también deja escrito lo que encuentra. La coincidencia no es casual: según relató, las dos las puso en marcha la misma persona, <strong>Ángel Pérez</strong>. La nuestra arrancó de manera oficiosa en el 98; la suya, un año después. Los palentinos tuvieron buenas palabras para el trabajo hecho aquí, y quedó la idea de conocerse algún día. Veintisiete años después, resulta que teníamos un hermano a seiscientos kilómetros."
+     data-ca="I llavors va arribar l'anècdota de la nit. Yarritu va explicar un viatge recent a <strong>Palència</strong>, on es va trobar amb una associació calcada a la nostra: l'<strong>Asociación de Gourmets de Palencia</strong>, nascuda el 1999, que també surt a sopar un cop al mes i també deixa escrit el que troba. La coincidència no és casual: segons va relatar, les dues les va posar en marxa la mateixa persona, <strong>Ángel Pérez</strong>. La nostra va arrencar de manera oficiosa el 98; la seva, un any després. Els palentins van tenir bones paraules per a la feina feta aquí, i va quedar la idea de conèixer-se algun dia. Vint-i-set anys després, resulta que teníem un germà a sis-cents quilòmetres.">
+    Y entonces llegó la anécdota de la noche. Yarritu contó un viaje reciente a <strong>Palencia</strong>, donde se encontró con una asociación calcada a la nuestra: la <strong>Asociación de Gourmets de Palencia</strong>, nacida en 1999, que también sale a cenar una vez al mes y también deja escrito lo que encuentra. La coincidencia no es casual: según relató, las dos las puso en marcha la misma persona, <strong>Ángel Pérez</strong>. La nuestra arrancó de manera oficiosa en el 98; la suya, un año después. Los palentinos tuvieron buenas palabras para el trabajo hecho aquí, y quedó la idea de conocerse algún día. Veintisiete años después, resulta que teníamos un hermano a seiscientos kilómetros.
+  </p>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/galliner/cronica/yarritu-parlament.jpg" alt="Juan Manuel Rodríguez Yarritu, president dels Gourmets de Tarragona, durant el seu parlament a El Galliner de l'Antiquari" style="object-position:center 35%;">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="Juan Manuel Rodríguez Yarritu, presidente de la asociación, durante su intervención · El Galliner de l'Antiquari · octubre de 2026"
+     data-ca="Juan Manuel Rodríguez Yarritu, president de l'associació, durant la seva intervenció · El Galliner de l'Antiquari · octubre de 2026">
+    Juan Manuel Rodríguez Yarritu, presidente de la asociación, durante su intervención · El Galliner de l'Antiquari · octubre de 2026
+  </p>
+
+  <!-- B3: EL PREMIO -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Recién llegado" data-ca="Acabat d'arribar">Recién llegado</span>
+  <h2 class="e-title t" data-es="Un premio de hace unos días, y otra vez el Delta" data-ca="Un premi de fa pocs dies, i un altre cop el Delta">Un premio de hace unos días, y otra vez el Delta</h2>
+  <p class="e-p t"
+     data-es="En una repisa de la sala, junto a la piedra, descansa un trofeo de madera con la hache de la Federació d'Hostaleria y el logo de Makro. Es reciente: el <strong>tercer premio del III Concurs de Tapes, Pintxos i Tastets de la província de Tarragona – Joan Pedrell</strong>, fallado hace unos días en la 49ª Cena Anual de la AEHT ante más de cuatrocientas sesenta personas. El primero fue para MRKT Gastrobar, de Salou, que irá a Madrid Fusión; el segundo, para la Hostatgeria de Poblet."
+     data-ca="En una lleixa de la sala, al costat de la pedra, descansa un trofeu de fusta amb la hac de la Federació d'Hostaleria i el logotip de Makro. És recent: el <strong>tercer premi del III Concurs de Tapes, Pintxos i Tastets de la província de Tarragona – Joan Pedrell</strong>, fallat fa pocs dies al 49è Sopar Anual de l'AEHT davant més de quatre-centes seixanta persones. El primer va ser per a MRKT Gastrobar, de Salou, que anirà a Madrid Fusión; el segon, per a l'Hostatgeria de Poblet.">
+    En una repisa de la sala, junto a la piedra, descansa un trofeo de madera con la hache de la Federació d'Hostaleria y el logo de Makro. Es reciente: el <strong>tercer premio del III Concurs de Tapes, Pintxos i Tastets de la província de Tarragona – Joan Pedrell</strong>, fallado hace unos días en la 49ª Cena Anual de la AEHT ante más de cuatrocientas sesenta personas. El primero fue para MRKT Gastrobar, de Salou, que irá a Madrid Fusión; el segundo, para la Hostatgeria de Poblet.
+  </p>
+  <p class="e-p t"
+     data-es="La tapa con la que Tymur Duka se llevó ese tercer puesto se llama <strong>«Brisa del Delta sobre coca d'avellana»</strong>. Tiene gracia: en la previa contábamos que esta visita nos traía del Delta a la Part Alta, y resulta que la casa ya había hecho el mismo viaje por su cuenta, y antes que nosotros."
+     data-ca="La tapa amb què Tymur Duka es va endur aquest tercer lloc es diu <strong>«Brisa del Delta sobre coca d'avellana»</strong>. Té gràcia: a la prèvia explicàvem que aquesta visita ens portava del Delta a la Part Alta, i resulta que la casa ja havia fet el mateix viatge pel seu compte, i abans que nosaltres.">
+    La tapa con la que Tymur Duka se llevó ese tercer puesto se llama <strong>«Brisa del Delta sobre coca d'avellana»</strong>. Tiene gracia: en la previa contábamos que esta visita nos traía del Delta a la Part Alta, y resulta que la casa ya había hecho el mismo viaje por su cuenta, y antes que nosotros.
+  </p>
+
+  <div class="e-foto-md">
+    <img src="../assets/img/galliner/cronica/premi-joan-pedrell.jpg" alt="Trofeu del III Concurs de Tapes, Pintxos i Tastets Joan Pedrell a la sala d'El Galliner de l'Antiquari">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="El trofeo del III Concurs Joan Pedrell, con la hache de la Federació d'Hostaleria, en una repisa de la sala"
+     data-ca="El trofeu del III Concurs Joan Pedrell, amb la hac de la Federació d'Hostaleria, en una lleixa de la sala">
+    El trofeo del III Concurs Joan Pedrell, con la hache de la Federació d'Hostaleria, en una repisa de la sala
+  </p>
+
+  <!-- B4: LOS APERITIVOS -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Los aperitivos" data-ca="Els aperitius">Los aperitivos</span>
+  <h2 class="e-title t" data-es="Dos bocados que pusieron el listón arriba" data-ca="Dues queixalades que van posar el llistó amunt">Dos bocados que pusieron el listón arriba</h2>
+  <p class="e-p t"
+     data-es="Abrió la <strong>ostra francesa Gillardeau</strong>, servida en su concha sobre virutas de madera, con un bloody mary ligero, cebollino y huevas que aportaban el punto salino. Fresca, equilibrada y sin estridencias: de lo mejor de la noche. Detrás llegó la <strong>croqueta de chuletón madurado con mayo-kimchi</strong>, en plato dorado y con brotes, crujiente por fuera y con una carne que se reconocía sin tener que buscarla. Dos aciertos de salida."
+     data-ca="Va obrir l'<strong>ostra francesa Gillardeau</strong>, servida a la closca sobre encenalls de fusta, amb un bloody mary lleuger, cibulet i ous que aportaven el punt salí. Fresca, equilibrada i sense estridències: de les millors coses de la nit. Darrere va arribar la <strong>croqueta de txuletó madurat amb maio-kimchi</strong>, en plat daurat i amb brots, cruixent per fora i amb una carn que es reconeixia sense haver-la de buscar. Dos encerts de sortida.">
+    Abrió la <strong>ostra francesa Gillardeau</strong>, servida en su concha sobre virutas de madera, con un bloody mary ligero, cebollino y huevas que aportaban el punto salino. Fresca, equilibrada y sin estridencias: de lo mejor de la noche. Detrás llegó la <strong>croqueta de chuletón madurado con mayo-kimchi</strong>, en plato dorado y con brotes, crujiente por fuera y con una carne que se reconocía sin tener que buscarla. Dos aciertos de salida.
+  </p>
+
+  <div class="e-fotos-2">
+    <img src="../assets/img/galliner/cronica/ostres.jpg" alt="Ostres franceses Gillardeau al bloody mary amb ous, servides en safata — El Galliner de l'Antiquari">
+    <img src="../assets/img/galliner/cronica/ostra-detall.jpg" alt="Detall de l'ostra Gillardeau amb bloody mary, cibulet i ous">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="Las ostras Gillardeau, servidas sobre virutas de madera y con una cuña de lima" data-ca="Les ostres Gillardeau, servides sobre encenalls de fusta i amb un tall de llima">Las ostras Gillardeau, servidas sobre virutas de madera y con una cuña de lima</span>
+    <span class="t" data-es="El detalle: bloody mary ligero, cebollino y huevas sobre la ostra" data-ca="El detall: bloody mary lleuger, cibulet i ous damunt l'ostra">El detalle: bloody mary ligero, cebollino y huevas sobre la ostra</span>
+  </div>
+
+  <div class="e-fotos-2">
+    <img src="../assets/img/galliner/cronica/croquetes.jpg" alt="Croquetes de txuletó madurat amb maio-kimchi en plat daurat — El Galliner de l'Antiquari">
+    <img src="../assets/img/galliner/cronica/croqueta-detall.jpg" alt="Detall de la croqueta de txuletó madurat amb maio-kimchi i brots">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="Las croquetas de chuletón madurado, con un punto de mayo-kimchi en la coronilla" data-ca="Les croquetes de txuletó madurat, amb un punt de maio-kimchi al capdamunt">Las croquetas de chuletón madurado, con un punto de mayo-kimchi en la coronilla</span>
+    <span class="t" data-es="De cerca: fritura limpia y relleno que sabe a lo que dice el menú" data-ca="De prop: fregida neta i farcit que sap al que diu el menú">De cerca: fritura limpia y relleno que sabe a lo que dice el menú</span>
+  </div>
+
+  <!-- B5: LOS ENTRANTES -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Para compartir" data-ca="Per compartir">Para compartir</span>
+  <h2 class="e-title t" data-es="Jamón, focaccia, vieira y una mini burger que sorprendió" data-ca="Pernil, focaccia, vieira i una mini burger que va sorprendre">Jamón, focaccia, vieira y una mini burger que sorprendió</h2>
+  <p class="e-p t"
+     data-es="La parte central del menú llegó a la mesa para repartir. <strong>Jamón ibérico cortado a mano</strong>, en platos preparados en la barra uno detrás de otro, y <strong>pan de focaccia con aceite y flor de sal</strong> para acompañarlo. Después, la <strong>vieira en salsa belga gratinada con Gruyère</strong>, servida en su concha, y la <strong>mini burger de pan savarin con vaca gallega</strong>, que fue la tercera cosa que de verdad nos gustó: el pan, hueco y relleno de salsa por arriba, resolvía un bocado que podría haber sido convencional."
+     data-ca="La part central del menú va arribar a taula per repartir. <strong>Pernil ibèric tallat a mà</strong>, en plats preparats a la barra un darrere l'altre, i <strong>pa de focaccia amb oli i flor de sal</strong> per acompanyar-lo. Després, la <strong>vieira en salsa belga gratinada amb Gruyère</strong>, servida a la closca, i la <strong>mini burger de pa savarin amb vaca gallega</strong>, que va ser la tercera cosa que de debò ens va agradar: el pa, buit i farcit de salsa per dalt, resolia una queixalada que hauria pogut ser convencional.">
+    La parte central del menú llegó a la mesa para repartir. <strong>Jamón ibérico cortado a mano</strong>, en platos preparados en la barra uno detrás de otro, y <strong>pan de focaccia con aceite y flor de sal</strong> para acompañarlo. Después, la <strong>vieira en salsa belga gratinada con Gruyère</strong>, servida en su concha, y la <strong>mini burger de pan savarin con vaca gallega</strong>, que fue la tercera cosa que de verdad nos gustó: el pan, hueco y relleno de salsa por arriba, resolvía un bocado que podría haber sido convencional.
+  </p>
+
+  <div class="e-fotos-2">
+    <img src="../assets/img/galliner/cronica/pernil.jpg" alt="Plats de pernil ibèric tallat a mà preparats a la barra d'El Galliner de l'Antiquari">
+    <img src="../assets/img/galliner/cronica/focaccia.jpg" alt="Pa de focaccia amb oli d'oliva verge extra i flor de sal">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="El jamón, cortado a mano y emplatado en la barra para toda la mesa" data-ca="El pernil, tallat a mà i emplatat a la barra per a tota la taula">El jamón, cortado a mano y emplatado en la barra para toda la mesa</span>
+    <span class="t" data-es="La focaccia de la casa, con aceite y flor de sal" data-ca="La focaccia de la casa, amb oli i flor de sal">La focaccia de la casa, con aceite y flor de sal</span>
+  </div>
+
+  <div class="e-fotos-2">
+    <img src="../assets/img/galliner/cronica/vieires.jpg" alt="Vieires en salsa belga gratinades al forn amb formatge Gruyère, servides a la closca">
+    <img src="../assets/img/galliner/cronica/miniburger.jpg" alt="Mini burger de pa savarin amb vaca gallega — El Galliner de l'Antiquari">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="La vieira gratinada con Gruyère, en su concha" data-ca="La vieira gratinada amb Gruyère, a la seva closca">La vieira gratinada con Gruyère, en su concha</span>
+    <span class="t" data-es="La mini burger de vaca gallega sobre pan savarin, uno de los bocados de la noche" data-ca="La mini burger de vaca gallega sobre pa savarin, una de les queixalades de la nit">La mini burger de vaca gallega sobre pan savarin, uno de los bocados de la noche</span>
+  </div>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/galliner/cronica/bacalla-romesco.jpg" alt="Tempura de bacallà de Sant Sebastià amb salsa romesco i cruixent de pistatxo — El Galliner de l'Antiquari">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="La tempura de bacalao con romesco y pistacho: el romesco, en su ciudad, siempre juega en casa"
+     data-ca="La tempura de bacallà amb romesco i pistatxo: el romesco, a la seva ciutat, sempre juga a casa">
+    La tempura de bacalao con romesco y pistacho: el romesco, en su ciudad, siempre juega en casa
+  </p>
+
+  <!-- B6: MAR Y MONTAÑA -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Mar y montaña" data-ca="Mar i muntanya">Mar y montaña</span>
+  <h2 class="e-title t" data-es="El arroz, el rabo de toro y una flor de ajo que no esperábamos" data-ca="L'arròs, la cua de bou i una flor d'all que no esperàvem">El arroz, el rabo de toro y una flor de ajo que no esperábamos</h2>
+  <p class="e-p t"
+     data-es="Llegaron juntos en el mismo plato: el <strong>arroz negro con sepia y gamba</strong>, gratinado al horno, con muselina de ajo y un tartar de gamba roja cítrica de Tarragona encima, y el <strong>medallón de rabo de toro</strong> con reducción de Pedro Ximénez y cremoso de patata. Ambos estaban bien ejecutados y bien presentados, pero no acabaron de entusiasmar: correctos más que memorables."
+     data-ca="Van arribar junts al mateix plat: l'<strong>arròs negre amb sípia i gamba</strong>, gratinat al forn, amb mussolina d'all i un tàrtar de gamba vermella cítrica de Tarragona a sobre, i el <strong>medalló de cua de bou</strong> amb reducció de Pedro Ximénez i cremós de patata. Tots dos estaven ben executats i ben presentats, però no van acabar d'entusiasmar: correctes més que memorables.">
+    Llegaron juntos en el mismo plato: el <strong>arroz negro con sepia y gamba</strong>, gratinado al horno, con muselina de ajo y un tartar de gamba roja cítrica de Tarragona encima, y el <strong>medallón de rabo de toro</strong> con reducción de Pedro Ximénez y cremoso de patata. Ambos estaban bien ejecutados y bien presentados, pero no acabaron de entusiasmar: correctos más que memorables.
+  </p>
+  <p class="e-p t"
+     data-es="Lo que sí dejó huella fue un detalle pequeño: la presencia de <strong>flor de ajo</strong>, en el arroz y también en el bacalao. Un matiz suave, nada agresivo, que varios de los que estábamos en la mesa no habíamos probado nunca. De toda la noche, fue el hallazgo más inesperado."
+     data-ca="El que sí que va deixar empremta va ser un detall petit: la presència de <strong>flor d'all</strong>, a l'arròs i també al bacallà. Un matís suau, gens agressiu, que uns quants dels que érem a taula no havíem tastat mai. De tota la nit, va ser la troballa més inesperada.">
+    Lo que sí dejó huella fue un detalle pequeño: la presencia de <strong>flor de ajo</strong>, en el arroz y también en el bacalao. Un matiz suave, nada agresivo, que varios de los que estábamos en la mesa no habíamos probado nunca. De toda la noche, fue el hallazgo más inesperado.
+  </p>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/galliner/cronica/arros-negre-cua-bou.jpg" alt="Arròs negre amb sípia i gamba amb mussolina d'all i medalló de cua de bou amb cremós de patata">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="Mar y montaña en el mismo plato: arroz negro con tartar de gamba roja y medallón de rabo de toro"
+     data-ca="Mar i muntanya al mateix plat: arròs negre amb tàrtar de gamba vermella i medalló de cua de bou">
+    Mar y montaña en el mismo plato: arroz negro con tartar de gamba roja y medallón de rabo de toro
+  </p>
+
+  <!-- B7: EL POSTRE -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="El postre" data-ca="Les postres">El postre</span>
+  <h2 class="e-title t" data-es="Tarta de queso en su papel" data-ca="Pastís de formatge en el seu paper">Tarta de queso en su papel</h2>
+  <p class="e-p t"
+     data-es="Cerró la <strong>tarta de queso cremoso de l'Antiquari con pistacho</strong>, horneada en su papel y servida con una crema, una fresa y un crumble. Suave, poco dulce y bien de punto: un final correcto para un menú largo."
+     data-ca="Va tancar el <strong>pastís de formatge cremós de l'Antiquari amb pistatxo</strong>, cuit al seu paper i servit amb una crema, una maduixa i un crumble. Suau, poc dolç i ben de punt: un final correcte per a un menú llarg.">
+    Cerró la <strong>tarta de queso cremoso de l'Antiquari con pistacho</strong>, horneada en su papel y servida con una crema, una fresa y un crumble. Suave, poco dulce y bien de punto: un final correcto para un menú largo.
+  </p>
+
+  <div class="e-foto-md">
+    <img src="../assets/img/galliner/cronica/pastis-formatge.jpg" alt="Pastís de formatge cremós de l'Antiquari amb pistatxo, servit al seu paper">
+  </div>
+
+  <!-- VINS -->
+  <div class="e-vins">
+    <p class="e-vins-title t" data-es="Los vinos de la velada" data-ca="Els vins de la vetllada">Los vinos de la velada</p>
+    <p class="e-vins-sub t" data-es="Selección de la casa · cuatro referencias, en este orden" data-ca="Selecció de la casa · quatre referències, en aquest ordre">Selección de la casa · cuatro referencias, en este orden</p>
+    <div class="e-vins-grid">
+      <div class="e-vi">
+        <span class="e-vi-do">D.O. Alella</span>
+        <p class="e-vi-nom">Titiana de Can Matons 2017</p>
+        <p class="e-vi-var t" data-es="Pansa Blanca · Brut Nature · abrió la noche" data-ca="Pansa Blanca · Brut Nature · va obrir la nit">Pansa Blanca · Brut Nature · abrió la noche</p>
+      </div>
+      <div class="e-vi">
+        <span class="e-vi-do">Vinos del Paseante</span>
+        <p class="e-vi-nom">La Duda</p>
+        <p class="e-vi-var t" data-es="Godello · con los entrantes" data-ca="Godello · amb els entrants">Godello · con los entrantes</p>
+      </div>
+      <div class="e-vi">
+        <span class="e-vi-do">D.O. Montsant</span>
+        <p class="e-vi-nom">Santes Negre</p>
+        <p class="e-vi-var t" data-es="Tinto · con el arroz y el rabo de toro" data-ca="Negre · amb l'arròs i la cua de bou">Tinto · con el arroz y el rabo de toro</p>
+      </div>
+      <div class="e-vi">
+        <span class="e-vi-do">Cava</span>
+        <p class="e-vi-nom">Ars Collecta Grand Rosé Reserva 2022</p>
+        <p class="e-vi-var t" data-es="Codorníu · rosado · para el postre" data-ca="Codorníu · rosat · per a les postres">Codorníu · rosado · para el postre</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="e-foto-md">
+    <img src="../assets/img/galliner/cronica/vins.jpg" alt="Les quatre ampolles de la vetllada: Titiana de Can Matons, La Duda, Ars Collecta Codorníu i Santes">
+  </div>
+
+  <!-- B8: LA SALA -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="La sala" data-ca="La sala">La sala</span>
+  <h2 class="e-title t" data-es="Servicio fluido y sin prisas" data-ca="Servei fluid i sense presses">Servicio fluido y sin prisas</h2>
+  <p class="e-p t"
+     data-es="Con treinta y dos comensales, una mesa larga y media docena de platos para compartir, el servicio tenía todas las papeletas para atascarse. No ocurrió. <strong>Arnau González</strong> llevó la sala con un ritmo fluido pero sin prisas, con los platos saliendo cuando tocaba y las copas atendidas sin que nadie tuviera que levantar la mano. Más que correcto."
+     data-ca="Amb trenta-dos comensals, una taula llarga i mitja dotzena de plats per compartir, el servei tenia totes les paperetes per encallar-se. No va passar. <strong>Arnau González</strong> va portar la sala amb un ritme fluid però sense presses, amb els plats sortint quan tocava i les copes ateses sense que ningú hagués d'aixecar la mà. Més que correcte.">
+    Con treinta y dos comensales, una mesa larga y media docena de platos para compartir, el servicio tenía todas las papeletas para atascarse. No ocurrió. <strong>Arnau González</strong> llevó la sala con un ritmo fluido pero sin prisas, con los platos saliendo cuando tocaba y las copas atendidas sin que nadie tuviera que levantar la mano. Más que correcto.
+  </p>
+
+  <!-- B9: EL DIPLOMA -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="El reconocimiento" data-ca="El reconeixement">El reconocimiento</span>
+  <h2 class="e-title t" data-es="El diploma, y la foto en el carrer de Santa Anna" data-ca="El diploma, i la foto al carrer de Santa Anna">El diploma, y la foto en el carrer de Santa Anna</h2>
+  <p class="e-p t"
+     data-es="Como en cada visita, la velada se cerró con la entrega del diploma de los Gourmets de Tarragona a la casa. Posaron <strong>Jacob Folch</strong>, vicepresidente, <strong>Arnau González</strong>, <strong>Tymur Duka</strong> y <strong>Juan Manuel Yarritu</strong>; en la segunda foto se sumó el resto del equipo de sala y cocina, que es quien había sostenido la noche. Y después, todos a la calle: la foto de grupo bajo el rótulo del Galliner, con el legionario de madera en medio, haciendo de maestro de ceremonias."
+     data-ca="Com a cada visita, la vetllada es va tancar amb el lliurament del diploma dels Gourmets de Tarragona a la casa. Hi van posar <strong>Jacob Folch</strong>, vicepresident, <strong>Arnau González</strong>, <strong>Tymur Duka</strong> i <strong>Juan Manuel Yarritu</strong>; a la segona foto s'hi va sumar la resta de l'equip de sala i cuina, que és qui havia sostingut la nit. I després, tots al carrer: la foto de grup sota el rètol del Galliner, amb el legionari de fusta al mig, fent de mestre de cerimònies.">
+    Como en cada visita, la velada se cerró con la entrega del diploma de los Gourmets de Tarragona a la casa. Posaron <strong>Jacob Folch</strong>, vicepresidente, <strong>Arnau González</strong>, <strong>Tymur Duka</strong> y <strong>Juan Manuel Yarritu</strong>; en la segunda foto se sumó el resto del equipo de sala y cocina, que es quien había sostenido la noche. Y después, todos a la calle: la foto de grupo bajo el rótulo del Galliner, con el legionario de madera en medio, haciendo de maestro de ceremonias.
+  </p>
+
+  <div class="e-fotos-2">
+    <img src="../assets/img/galliner/cronica/lliurament-diploma.jpg" alt="Lliurament del diploma dels Gourmets de Tarragona: Jacob Folch, Arnau González, Tymur Duka i Juan Manuel Yarritu">
+    <img src="../assets/img/galliner/cronica/diploma-equip.jpg" alt="L'equip d'El Galliner de l'Antiquari amb el diploma dels Gourmets de Tarragona">
+  </div>
+  <div class="e-fotos-2-peu">
+    <span class="t" data-es="Jacob Folch, Arnau González, Tymur Duka y Juan Manuel Yarritu, con el diploma" data-ca="Jacob Folch, Arnau González, Tymur Duka i Juan Manuel Yarritu, amb el diploma">Jacob Folch, Arnau González, Tymur Duka y Juan Manuel Yarritu, con el diploma</span>
+    <span class="t" data-es="Con el equipo de sala y cocina al completo" data-ca="Amb l'equip de sala i cuina al complet">Con el equipo de sala y cocina al completo</span>
+  </div>
+
+  <div class="e-foto-gran">
+    <img src="../assets/img/galliner/cronica/foto-grup.jpg" alt="Foto de grup dels Gourmets de Tarragona davant d'El Galliner de l'Antiquari, al carrer de Santa Anna">
+  </div>
+  <p class="e-foto-peu t"
+     data-es="La foto de grupo en el carrer de Santa Anna, con el legionario de madera y el rótulo del Galliner de fondo · 1 de octubre de 2026"
+     data-ca="La foto de grup al carrer de Santa Anna, amb el legionari de fusta i el rètol del Galliner de fons · 1 d'octubre de 2026">
+    La foto de grupo en el carrer de Santa Anna, con el legionario de madera y el rótulo del Galliner de fondo · 1 de octubre de 2026
+  </p>
+
+  <!-- B10: NUESTRA MIRADA -->
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Nuestra mirada" data-ca="La nostra mirada">Nuestra mirada</span>
+  <h2 class="e-title t" data-es="Talento joven y un camino por delante" data-ca="Talent jove i un camí per endavant">Talento joven y un camino por delante</h2>
+  <p class="e-p t"
+     data-es="De la noche nos quedamos, sobre todo, con tres cosas: <strong>la ostra, la croqueta de chuletón y la mini burger</strong>. El resto del menú llegó bien resuelto y bien presentado, con un nivel sostenido de principio a fin. Y hubo un hallazgo, la flor de ajo, que demuestra que en esa cocina hay curiosidad."
+     data-ca="De la nit ens quedem, sobretot, amb tres coses: <strong>l'ostra, la croqueta de txuletó i la mini burger</strong>. La resta del menú va arribar ben resolta i ben presentada, amb un nivell sostingut de principi a fi. I hi va haver una troballa, la flor d'all, que demostra que en aquella cuina hi ha curiositat.">
+    De la noche nos quedamos, sobre todo, con tres cosas: <strong>la ostra, la croqueta de chuletón y la mini burger</strong>. El resto del menú llegó bien resuelto y bien presentado, con un nivel sostenido de principio a fin. Y hubo un hallazgo, la flor de ajo, que demuestra que en esa cocina hay curiosidad.
+  </p>
+  <p class="e-p t"
+     data-es="La impresión que dejó Tymur Duka es la de un cocinero con <strong>mucho potencial</strong>. Un menú que va de la ostra francesa al kimchi, de la vaca gallega al rabo de toro y del Gruyère al romesco enseña oficio, recursos y ganas de probar cosas. Cuando acabe de perfilar el camino propio que ya se le intuye, será un nombre importante en la plaza de Tarragona."
+     data-ca="La impressió que va deixar Tymur Duka és la d'un cuiner amb <strong>molt potencial</strong>. Un menú que va de l'ostra francesa al kimchi, de la vaca gallega a la cua de bou i del Gruyère al romesco ensenya ofici, recursos i ganes de provar coses. Quan acabi de perfilar el camí propi que ja se li intueix, serà un nom important a la plaça de Tarragona.">
+    La impresión que dejó Tymur Duka es la de un cocinero con <strong>mucho potencial</strong>. Un menú que va de la ostra francesa al kimchi, de la vaca gallega al rabo de toro y del Gruyère al romesco enseña oficio, recursos y ganas de probar cosas. Cuando acabe de perfilar el camino propio que ya se le intuye, será un nombre importante en la plaza de Tarragona.
+  </p>
+  <p class="e-p t"
+     data-es="Queda <strong>una sola cena</strong> para cerrar la temporada y conocer el palmarés de 2026. Y, de paso, nos llevamos algo que nadie esperaba el 1 de octubre: unos parientes gastronómicos en Palencia."
+     data-ca="Queda <strong>un sol sopar</strong> per tancar la temporada i conèixer el palmarès del 2026. I, de passada, ens enduem una cosa que ningú esperava l'1 d'octubre: uns parents gastronòmics a Palència.">
+    Queda <strong>una sola cena</strong> para cerrar la temporada y conocer el palmarés de 2026. Y, de paso, nos llevamos algo que nadie esperaba el 1 de octubre: unos parientes gastronómicos en Palencia.
+  </p>
+
+  <!-- FITXA -->
+  <div class="e-fitxa">
+    <div class="e-fitxa-item">
+      <span class="e-fitxa-label t" data-es="Restaurante" data-ca="Restaurant">Restaurante</span>
+      <a href="https://elgallinerdelantiquari.net" target="_blank" rel="noopener" class="e-fitxa-valor" style="color:var(--navy-dark);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;">El Galliner de l'Antiquari</a>
+    </div>
+    <div class="e-fitxa-item">
+      <span class="e-fitxa-label t" data-es="Chef" data-ca="Xef">Chef</span>
+      <span class="e-fitxa-valor">Tymur Duka</span>
+    </div>
+    <div class="e-fitxa-item">
+      <span class="e-fitxa-label t" data-es="Sala" data-ca="Sala">Sala</span>
+      <span class="e-fitxa-valor">Arnau González</span>
+    </div>
+    <div class="e-fitxa-item" style="border-right:none;">
+      <span class="e-fitxa-label t" data-es="Visita" data-ca="Visita">Visita</span>
+      <span class="e-fitxa-valor t" data-es="7ª · 1 de octubre de 2026" data-ca="7a · 1 d'octubre de 2026">7ª · 1 de octubre de 2026</span>
+    </div>
+  </div>
+
+
+  <!-- COMPARTIR -->
+  <div class="e-compartir">
+    <div class="e-compartir-inner">
+      <div class="e-compartir-deco">
+        <div class="e-compartir-deco-line"></div>
+        <span class="t" data-es="Compartir esta crónica" data-ca="Compartir aquesta crònica">Compartir esta crónica</span>
+        <div class="e-compartir-deco-line r"></div>
+      </div>
+      <p class="e-compartir-frase t"
+         data-es="<em>Una ostra, una croqueta y un parlamento que acabó en Palencia</em><br><strong>El Galliner de l'Antiquari · Tarragona · 2026</strong>"
+         data-ca="<em>Una ostra, una croqueta i un parlament que va acabar a Palència</em><br><strong>El Galliner de l'Antiquari · Tarragona · 2026</strong>">
+        <em>Una ostra, una croqueta y un parlamento que acabó en Palencia</em><br><strong>El Galliner de l'Antiquari · Tarragona · 2026</strong>
+      </p>
+      <div class="e-compartir-btns">
+        <a id="btn-wa" href="#" class="e-compartir-btn wa" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
+        <a id="btn-fb" href="#" class="e-compartir-btn fb" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a>
+        <a id="btn-x" href="#" class="e-compartir-btn" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>X</a>
+        <button class="e-compartir-btn copy" onclick="copiarEnllac(this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg><span class="t" data-es="Copiar enlace" data-ca="Copiar enllaç">Copiar enlace</span><span class="e-compartir-copied t" data-es="¡Copiado!" data-ca="Copiat!">¡Copiado!</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAMBÉ ET POT INTERESSAR -->
+
+<!-- ═══════ CTA NEWSLETTER ═══════ -->
+<section class="e-nl-cta">
+  <div class="e-nl-cta-inner">
+    <div class="e-nl-cta-deco" aria-hidden="true">✦</div>
+    <p class="e-nl-cta-kicker t" data-es="Newsletter" data-ca="Newsletter">Newsletter</p>
+    <h2 class="e-nl-cta-title t"
+        data-es="¿Quieres recibir la próxima crónica antes que nadie?"
+        data-ca="Vols rebre la propera crònica abans que ningú?">
+      ¿Quieres recibir la próxima crónica antes que nadie?
+    </h2>
+    <p class="e-nl-cta-sub t"
+       data-es="Crónicas de los restaurantes visitados, vinos recomendados y novedades del Camp de Tarragona. Cada quince días, sin ruido."
+       data-ca="Cròniques dels restaurants visitats, vins recomanats i novetats del Camp de Tarragona. Cada quinze dies, sense soroll.">
+      Crónicas de los restaurantes visitados, vinos recomendados y novedades del Camp de Tarragona. Cada quince días, sin ruido.
+    </p>
+    <form class="e-nl-cta-form"
+          action="https://fe0daaff.sibforms.com/serve/MUIFAMSYb3h5hzjCYPN-GiItYcbChszEiV-2Ci_yU_3sfesrzldVY_nwtUN7RfIi41NyXnMu3sl9-ob6jEY1i8D_lfWkjTx2BPx-DdkMBNRhY_UX6RYT8Q6OtL_RSXdw1Nxw1cQMI50KFEuV5agn87hBqKVShQPjzSVyuaqjxyjEXiMI4ec7wdY55xdTRqGDyO937oVLzoaKi6MUtQ=="
+          method="post">
+      <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off"
+             style="display:none;position:absolute;left:-9999px;">
+      <input type="hidden" name="locale" value="es">
+      <input type="email" name="EMAIL" required
+             class="e-nl-cta-input t"
+             data-placeholder-es="hola@tucorreo.com"
+             data-placeholder-ca="hola@elteucorreu.com"
+             placeholder="hola@tucorreo.com">
+      <button type="submit" class="e-nl-cta-btn t"
+              data-es="APUNTARME" data-ca="APUNTAR-ME">APUNTARME</button>
+    </form>
+    <p class="e-nl-cta-legal t"
+       data-es="Sin spam · Date de baja cuando quieras."
+       data-ca="Sense spam · Dona't de baixa quan vulguis.">Sin spam · Date de baja cuando quieras.</p>
+  </div>
+</section>
+<!-- ═══════ /CTA NEWSLETTER ═══════ -->
+
+<div class="e-tambe">
+    <span class="e-tambe-label t" data-es="También te puede interesar" data-ca="També et pot interessar">También te puede interesar</span>
+    <h2 class="e-tambe-title t" data-es="Más crónicas de restaurante" data-ca="Més cròniques de restaurant">Más crónicas de restaurante</h2>
+    <div class="e-tambe-grid">
+
+      <a href="galliner-previa-2026.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/galliner/facana.jpg" alt="El Galliner de l'Antiquari · Prèvia" onerror="this.parentElement.style.background='#1c2e3e'">
+          <span class="e-tambe-card-cat t" data-es="Previa" data-ca="Prèvia">Previa</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <h3 class="e-tambe-card-title t" data-es="El Galliner de l'Antiquari · Previa" data-ca="El Galliner de l'Antiquari · Prèvia">El Galliner de l'Antiquari · Previa</h3>
+          <p class="e-tambe-card-exc t" data-es="De anticuario a escenario y de escenario a mesa: lo que contamos antes de sentarnos a la mesa." data-ca="D'antiquari a escenari i d'escenari a taula: el que explicàvem abans de seure a taula.">De anticuario a escenario y de escenario a mesa: lo que contamos antes de sentarnos a la mesa.</p>
+          <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+
+      <a href="les-dunes-cronica-2026.html" class="e-tambe-card">
+        <div class="e-tambe-card-img">
+          <img src="../assets/img/lesdunes/cronica/arros-llisa-llumins.jpg" alt="Les Dunes · Crònica" onerror="this.parentElement.style.background='#1c2e3e'">
+          <span class="e-tambe-card-cat t" data-es="Crónica" data-ca="Crònica">Crónica</span>
+        </div>
+        <div class="e-tambe-card-body">
+          <h3 class="e-tambe-card-title t" data-es="Les Dunes · Crónica" data-ca="Les Dunes · Crònica">Les Dunes · Crónica</h3>
+          <p class="e-tambe-card-exc t" data-es="Lluís Soler, alcalde de Deltebre, como ponente invitado, y un arròs amb llissa servido entre chispas." data-ca="Lluís Soler, alcalde de Deltebre, com a ponent convidat, i un arròs amb llissa servit entre espurnes.">Lluís Soler, alcalde de Deltebre, como ponente invitado, y un arròs amb llissa servido entre chispas.</p>
+          <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- NAV RETORN -->
+<div class="e-nav-retorn">
+  <div class="e-nav-retorn-links">
+    <a href="../pages/blog.html" class="btn-outline t" data-es="Volver al Blog" data-ca="Tornar al Blog">Volver al Blog</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona" onerror="this.style.display='none'">
+      <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.facebook.com/GourmetsdetaRRagona" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4 class="t" data-es="Navegación" data-ca="Navegació">Navegación</h4><ul><li><a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a></li><li><a href="../pages/restaurants.html" class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a></li><li><a href="../pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li><li><a href="../pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></li><li><a href="../pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li></ul></div>
+    <div class="footer-col"><h4 class="t" data-es="Legal" data-ca="Legal">Legal</h4><ul><li><a href="../pages/avis-legal.html" class="t" data-es="Aviso Legal" data-ca="Avís Legal">Aviso Legal</a></li><li><a href="../pages/privacitat.html" class="t" data-es="Política de Privacidad" data-ca="Política de Privacitat">Política de Privacidad</a></li><li><a href="../pages/cookies.html" class="t" data-es="Política de Cookies" data-ca="Política de Cookies">Política de Cookies</a></li></ul></div>
+    <div class="footer-col"><h4 class="t" data-es="Contacto" data-ca="Contacte">Contacto</h4><p><a href="mailto:gourmetsdetarragona@gourmetsdetarragona.com">gourmetsdetarragona@gourmetsdetarragona.com</a></p><p>Tarragona, Catalunya</p></div>
+  </div>
+  <div class="footer-bottom"><p class="t" data-es="© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados" data-ca="© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats">© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados</p></div>
+</footer>
+
+<script>
+var currentLang = localStorage.getItem('gdt-lang') || 'es';
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('gdt-lang', lang);
+  document.querySelectorAll('.t').forEach(function(el) {
+    var val = el.getAttribute('data-' + lang);
+    if (val !== null) el.innerHTML = val;
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+  document.getElementById('html-root').setAttribute('lang', lang);
+}
+document.addEventListener('DOMContentLoaded', function() {
+  if (currentLang === 'ca') setLang('ca');
+});
+</script>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var url=encodeURIComponent(window.location.href);
+  var titol=encodeURIComponent(document.title);
+  var wa=document.getElementById('btn-wa');
+  var fb=document.getElementById('btn-fb');
+  var x=document.getElementById('btn-x');
+  if(wa)wa.href='https://wa.me/?text='+titol+'%20'+url;
+  if(fb)fb.href='https://www.facebook.com/sharer/sharer.php?u='+url;
+  if(x)x.href='https://x.com/intent/tweet?url='+url+'&text='+titol;
+})();
+function copiarEnllac(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var msg=btn.querySelector('.e-compartir-copied');
+    if(msg){msg.classList.add('vis');setTimeout(function(){msg.classList.remove('vis');},2200);}
+  });
+}
+</script>
+
+<!-- ═══════ POPUP NEWSLETTER ═══════ -->
+<div id="nl-popup" role="dialog" aria-modal="true" aria-labelledby="nl-popup-title" style="display:none;">
+  <div id="nl-popup-overlay"></div>
+  <div id="nl-popup-box">
+    <button id="nl-popup-close" aria-label="Cerrar">&times;</button>
+    <div id="nl-popup-deco" aria-hidden="true">✦</div>
+    <p id="nl-popup-kicker" class="t" data-es="Newsletter" data-ca="Newsletter">Newsletter</p>
+    <h2 id="nl-popup-title" class="t"
+        data-es="¿Te ha gustado esta crónica?"
+        data-ca="T'ha agradat aquesta crònica?">
+      ¿Te ha gustado esta crónica?
+    </h2>
+    <p id="nl-popup-sub" class="t"
+       data-es="Recibe la próxima en tu correo. Crónicas de restaurante, vinos y novedades del Camp de Tarragona. Cada quince días."
+       data-ca="Rep la propera al teu correu. Cròniques de restaurant, vins i novetats del Camp de Tarragona. Cada quinze dies.">
+      Recibe la próxima en tu correo. Crónicas de restaurante, vinos y novedades del Camp de Tarragona. Cada quince días.
+    </p>
+    <form id="nl-popup-form"
+          action="https://fe0daaff.sibforms.com/serve/MUIFAMSYb3h5hzjCYPN-GiItYcbChszEiV-2Ci_yU_3sfesrzldVY_nwtUN7RfIi41NyXnMu3sl9-ob6jEY1i8D_lfWkjTx2BPx-DdkMBNRhY_UX6RYT8Q6OtL_RSXdw1Nxw1cQMI50KFEuV5agn87hBqKVShQPjzSVyuaqjxyjEXiMI4ec7wdY55xdTRqGDyO937oVLzoaKi6MUtQ=="
+          method="post">
+      <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off"
+             style="display:none;position:absolute;left:-9999px;">
+      <input type="hidden" name="locale" value="es">
+      <input type="email" name="EMAIL" required
+             id="nl-popup-email"
+             class="t"
+             data-placeholder-es="hola@tucorreo.com"
+             data-placeholder-ca="hola@elteucorreu.com"
+             placeholder="hola@tucorreo.com">
+      <button type="submit" id="nl-popup-btn" class="t"
+              data-es="APUNTARME" data-ca="APUNTAR-ME">APUNTARME</button>
+    </form>
+    <p id="nl-popup-legal" class="t"
+       data-es="Sin spam · Date de baja cuando quieras."
+       data-ca="Sense spam · Dona't de baixa quan vulguis.">Sin spam · Date de baja cuando quieras.</p>
+  </div>
+</div>
+<!-- ═══════ /POPUP NEWSLETTER ═══════ -->
+
+<script>
+(function(){
+  var STORAGE_KEY = 'gdt-nl-dismissed';
+  var DAYS_HIDE   = 7;
+
+  // No mostrar si ya suscrito o descartado recientemente
+  var dismissed = localStorage.getItem(STORAGE_KEY);
+  if (dismissed && Date.now() < parseInt(dismissed, 10)) return;
+
+  var popup   = document.getElementById('nl-popup');
+  var overlay = document.getElementById('nl-popup-overlay');
+  var closeBtn= document.getElementById('nl-popup-close');
+  var form    = document.getElementById('nl-popup-form');
+  if (!popup) return;
+
+  var shown = false;
+
+  function showPopup() {
+    if (shown) return;
+    shown = true;
+    popup.style.display = 'flex';
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){
+        popup.classList.add('nl-visible');
+      });
+    });
+    document.body.style.overflow = 'hidden';
+    // Actualizar placeholder segun idioma
+    var lang = localStorage.getItem('gdt-lang') || 'es';
+    var emailInput = document.getElementById('nl-popup-email');
+    if (emailInput) {
+      emailInput.placeholder = emailInput.getAttribute('data-placeholder-' + lang) || emailInput.placeholder;
+    }
+    // Actualizar textos bilingues del popup
+    if (typeof setLang === 'function') setLang(lang);
+  }
+
+  function closePopup() {
+    popup.classList.remove('nl-visible');
+    setTimeout(function(){
+      popup.style.display = 'none';
+    }, 300);
+    document.body.style.overflow = '';
+    // Guardar que fue descartado por X dias
+    localStorage.setItem(STORAGE_KEY, Date.now() + DAYS_HIDE * 86400000);
+  }
+
+  closeBtn.addEventListener('click', closePopup);
+  overlay.addEventListener('click', closePopup);
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closePopup();
+  });
+
+  // Al enviar el formulario, marcar como suscrito para no volver a mostrar
+  form.addEventListener('submit', function(){
+    localStorage.setItem(STORAGE_KEY, Date.now() + 365 * 86400000);
+  });
+
+  // Trigger: aparece al llegar al 75% del scroll
+  var triggered = false;
+  function onScroll() {
+    if (triggered) return;
+    var scrolled  = window.scrollY + window.innerHeight;
+    var total     = document.documentElement.scrollHeight;
+    if (scrolled / total >= 0.75) {
+      triggered = true;
+      window.removeEventListener('scroll', onScroll);
+      setTimeout(showPopup, 400);
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
+</script>
+</body>
+</html>
