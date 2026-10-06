@@ -120,3 +120,7 @@ textarea:focus-visible, [tabindex]:focus-visible, summary:focus-visible {
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Botó daurat per a fons foscos (navy) */
+.btn-primary.btn-gold { background: var(--gold); border-color: var(--gold); color: var(--navy-dark); }
+.btn-primary.btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); color: var(--navy-dark); }

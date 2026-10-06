@@ -1,10 +1,10 @@
 (function(){
   var STORAGE_KEY = 'gdt-nl-dismissed';
-  var DAYS_HIDE   = 7;
+  var DAYS_HIDE   = 30;
 
   // No mostrar si ya suscrito o descartado recientemente
   var dismissed = localStorage.getItem(STORAGE_KEY);
-  if (dismissed && Date.now() < parseInt(dismissed, 10)) return;
+  if (localStorage.getItem('gdt-nl-done') || (dismissed && Date.now() < parseInt(dismissed, 10))) return;
 
   var popup   = document.getElementById('nl-popup');
   var overlay = document.getElementById('nl-popup-overlay');

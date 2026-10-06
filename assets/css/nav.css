@@ -19,6 +19,7 @@
 }
 
 /* Logo */
+.nav-logo { flex-shrink: 0; }
 .nav-logo img { height: 50px; width: auto; display: block; transition: filter .3s; }
 /* Hero: logo transparent */
 #nav:not(.solid) .nav-logo img { filter: brightness(0) invert(1) !important; }
@@ -182,7 +183,7 @@
 .mobile-lang .lang-sep { color: var(--border); }
 
 /* ---- Responsive ---- */
-@media (max-width: 900px) {
+@media (max-width: 1060px) {
   .nav-menu  { display: none; }
   .hamburger { display: flex; }
 }
@@ -190,4 +191,20 @@
   .nav-inner { padding: 10px 5%; }
   .nav-logo img { height: 40px; }
   .mobile-menu { top: 64px; }
+}
+
+/* CTA Newsletter al menú */
+.nav-item > a.nav-cta {
+  margin-left: 8px; padding: 8px 16px;
+  border: 1px solid var(--gold); color: #fff;
+}
+.nav-item > a.nav-cta:hover { background: var(--gold); color: var(--navy-dark); }
+#nav.solid .nav-item > a.nav-cta { background: var(--gold); border-color: var(--gold); color: var(--navy-dark); }
+#nav.solid .nav-item > a.nav-cta:hover { background: var(--navy-dark); border-color: var(--navy-dark); color: #fff; }
+
+/* Pantalles mitjanes: el menú ha de cabre amb el CTA abans del pas a hamburguesa (1060px) */
+@media (max-width: 1200px) {
+  .nav-item > a, .nav-item > span { padding: 10px 8px; font-size: .7rem; letter-spacing: 1.1px; }
+  .nav-item > a.nav-cta { margin-left: 4px; padding: 7px 11px; }
+  .nav-logo img { height: 42px; }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ca" id="html-root">
+<html lang="es" id="html-root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -239,6 +239,7 @@
       <div class="nav-item">
         <a href="pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a>
       </div>
+      <div class="nav-item"><a href="pages/newsletter.html" class="nav-cta t" data-es="Newsletter" data-ca="Newsletter">Newsletter</a></div>
     </div>
 
     <div class="nav-right">
@@ -259,6 +260,7 @@
     <div class="mobile-item"><a href="pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></div>
     <div class="mobile-item"><a href="pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></div>
     <div class="mobile-item"><a href="pages/contacte.html" class="t" data-es="Contacto" data-ca="Contacte">Contacto</a></div>
+    <div class="mobile-item"><a href="pages/newsletter.html" class="t" data-es="Newsletter" data-ca="Newsletter">Newsletter</a></div>
     <div class="mobile-lang">
       <button type="button" class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
       <span class="lang-sep">|</span>
@@ -278,10 +280,10 @@
     <h1 class="hero-title">
       Gourmets<br>de <em>Tarragona</em>
     </h1>
-    <p class="t hero-sub" data-es="Una comunidad apasionada por la gastronomía mediterránea, la alta cocina y el arte de compartir la mesa." data-ca="Una comunitat apassionada per la gastronomia mediterrània, l'alta cuina i l'art de compartir la taula.">Una comunidad apasionada por la gastronomía mediterránea, la alta cocina y el arte de compartir la mesa.</p>
+    <p class="t hero-sub" data-es="Una mesa abierta a quien quiera conocer la cocina del Camp de Tarragona." data-ca="Una taula oberta a qui vulgui conèixer la cuina del Camp de Tarragona.">Una mesa abierta a quien quiera conocer la cocina del Camp de Tarragona.</p>
     <div class="hero-btns">
-      <a href="pages/associacio.html" class="t btn-hero-primary" data-es="Descúbrenos" data-ca="Descobreix-nos">Descúbrenos</a>
-      <a href="pages/contacte.html"   class="t btn-hero-ghost" data-es="Hazte socio" data-ca="Fes-te soci">Hazte socio</a>
+      <a href="pages/associacio.html#fes-te-soci" class="t btn-hero-primary" data-es="Cómo formar parte" data-ca="Com formar-ne part">Cómo formar parte</a>
+      <a href="pages/blog.html" class="t btn-hero-ghost" data-es="Leer las crónicas" data-ca="Llegeix les cròniques">Leer las crónicas</a>
     </div>
   </div>
 
@@ -800,6 +802,7 @@
         <li><a href="pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li>
         <li><a href="pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></li>
         <li><a href="pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li>
+        <li><a href="pages/newsletter.html" class="t" data-es="Newsletter" data-ca="Newsletter">Newsletter</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1033,7 +1036,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var okMsg   = document.getElementById('nl-toast-ok');
   var shown   = false;
 
-  if(localStorage.getItem('gdt-nl-done')) return;
+  var nlUntil=parseInt(localStorage.getItem('gdt-nl-dismissed')||'0',10);
+  if(localStorage.getItem('gdt-nl-done') || Date.now()<nlUntil) return;
 
   function showToast(){
     if(shown) return;
@@ -1049,11 +1053,14 @@ document.addEventListener('DOMContentLoaded', function() {
     toast.style.pointerEvents = 'none';
   }
 
-  setTimeout(showToast, 8000);
+  window.addEventListener('scroll', function onNlScroll(){
+    var h=document.documentElement;
+    if((h.scrollTop+innerHeight)/h.scrollHeight>=0.5){ showToast(); window.removeEventListener('scroll', onNlScroll); }
+  }, {passive:true});
 
   closeBtn.addEventListener('click', function(){
     hideToast();
-    localStorage.setItem('gdt-nl-done','closed');
+    localStorage.setItem('gdt-nl-dismissed', String(Date.now()+30*86400000));
   });
 
   if(form){
@@ -1071,8 +1078,8 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(function(){
           wrap.style.display = 'none';
           okMsg.style.display = 'block';
-          localStorage.setItem('gdt-nl-done','subscribed');
-          if(typeof setLang==='function') setLang(localStorage.getItem('gdt-lang')||'ca');
+          localStorage.setItem('gdt-nl-dismissed', String(Date.now()+365*86400000));
+          if(typeof setLang==='function') setLang(localStorage.getItem('gdt-lang')||'es');
           setTimeout(hideToast, 3000);
           var mainWrap = document.getElementById('nl-wrap');
           var mainOk   = document.getElementById('nl-ok');
