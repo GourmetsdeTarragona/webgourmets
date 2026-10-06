@@ -14,13 +14,13 @@ Options -Indexes
   RewriteRule ^(.*)$ https://www.gourmetsdetarragona.com/$1 [R=301,L]
 
   # ---- 2. HTTP -> HTTPS ----
-  # Desactivat fins a provar-lo: si el servidor és darrere d'un proxy
-  # que no envia X-Forwarded-Proto, podria crear un bucle de redireccions.
-  # Millor activar "Forçar HTTPS" al panell de Dinahosting. Si no hi és,
-  # treure els # de les tres línies i comprovar http://www.gourmetsdetarragona.com
-  # RewriteCond %{HTTPS} off
-  # RewriteCond %{HTTP:X-Forwarded-Proto} !https
-  # RewriteRule ^(.*)$ https://www.gourmetsdetarragona.com/$1 [R=301,L]
+  # Aquest servidor té Varnish al davant. Comprovat (2026-10-06):
+  #   petició http  -> HTTPS buit, X-Forwarded-Proto=http
+  #   petició https -> HTTPS=on,   X-Forwarded-Proto=https
+  # Només redirigeix quan cap de les dues diu https, així no hi ha bucle.
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://www.gourmetsdetarragona.com%{REQUEST_URI} [L,R=301,NE]
 </IfModule>
 
 # ---- 3. Fitxers de treball que no han de ser públics ----

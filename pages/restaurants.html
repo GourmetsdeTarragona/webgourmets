@@ -58,12 +58,12 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="../assets/css/variables.css?v=20261006">
 <link rel="stylesheet" href="../assets/css/nav.css?v=20261006">
 <link rel="stylesheet" href="../assets/css/seccions.css?v=20261006">
 <style>
-#mobileMenu{position:fixed;left:0;right:0;z-index:999;display:none;background:var(--cream,#f5f0e8);box-shadow:0 8px 32px rgba(28,46,62,.15);}
+#mobileMenu{position:fixed;left:0;right:0;z-index:999;display:none;background:var(--cream,#f5f0e8);box-shadow:0 8px 32px rgba(18,40,80,.15);}
 #mobileMenu.open{display:block;}
 </style>
 <style>
@@ -195,11 +195,11 @@ document.addEventListener('DOMContentLoaded', function() {
   if (currentLang === 'ca') setLang('ca');
 });
 </script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="../assets/css/leaflet.css?v=1.9.4">
 <style>#gdt-mapa{width:100%!important;height:480px!important;display:block!important;z-index:1;}
-.mapa-filtre{display:inline-flex;align-items:center;padding:8px 16px;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--border,#ddd);background:#fff;color:var(--navy-dark,#1c2e3e);cursor:pointer;transition:all .2s;}
+.mapa-filtre{display:inline-flex;align-items:center;padding:8px 16px;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--border,#ddd);background:#fff;color:var(--navy-dark,#122850);cursor:pointer;transition:all .2s;}
 .mapa-filtre:hover{border-color:var(--gold,#b8924a);color:var(--gold,#b8924a);}
-.mapa-filtre.actiu{background:var(--navy-dark,#1c2e3e);color:#fff;border-color:var(--navy-dark,#1c2e3e);}
+.mapa-filtre.actiu{background:var(--navy-dark,#122850);color:#fff;border-color:var(--navy-dark,#122850);}
 </style>
 </head>
 <body>
@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <!-- 2. La Goleta — visitada -->
       <div class="rest-card">
         <div class="rest-card-img">
-          <img src="../assets/img/goleta/goleta-hero.jpg" alt="La Goleta · Salou">
+          <img loading="lazy" decoding="async" src="../assets/img/goleta/goleta-hero.jpg" alt="La Goleta · Salou">
           <div class="rest-card-badges">
             <span class="rest-badge badge-visitada t" data-es="Visitado" data-ca="Visitat">Visitado</span>
             <span class="rest-num">2</span>
@@ -360,7 +360,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <!-- 3. El Terrat — visitat -->
       <div class="rest-card">
         <div class="rest-card-img">
-          <img src="../assets/img/terrat/sala.jpg" alt="El Terrat · Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
+          <img loading="lazy" decoding="async" src="../assets/img/terrat/sala.jpg" alt="El Terrat · Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
           <div class="rest-card-badges">
             <span class="rest-badge badge-visitada t" data-es="Visitado" data-ca="Visitat">Visitado</span>
             <span class="rest-num">3</span>
@@ -384,7 +384,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <!-- Cervus — 4a visita 2026 -->
       <div class="rest-card">
         <div class="rest-card-img">
-          <img src="../assets/img/cervus/exterior.jpg" alt="Cervus · Reus" onerror="this.parentElement.style.background='var(--cream)'">
+          <img loading="lazy" decoding="async" src="../assets/img/cervus/exterior.jpg" alt="Cervus · Reus" onerror="this.parentElement.style.background='var(--cream)'">
           <div class="rest-card-badges">
             <span class="rest-badge badge-visitada t" data-es="Visitado" data-ca="Visitat">Visitado</span>
             <span class="rest-num">4</span>
@@ -408,7 +408,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <!-- 5. Brumma — Visitada -->
       <div class="rest-card">
         <div class="rest-card-img">
-          <img src="../assets/img/brumma/05_brumma_vistas_mar.jpg" alt="Brumma · Infinitum Resort · Salou" onerror="this.parentElement.style.background='var(--cream)'">
+          <img loading="lazy" decoding="async" src="../assets/img/brumma/05_brumma_vistas_mar.jpg" alt="Brumma · Infinitum Resort · Salou" onerror="this.parentElement.style.background='var(--cream)'">
           <div class="rest-card-badges">
             <span class="rest-badge badge-visitada t" data-es="Visitado" data-ca="Visitat">Visitado</span>
             <span class="rest-num">5</span>
@@ -432,7 +432,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <!-- 6. Les Dunes — Visitada -->
       <div class="rest-card">
         <div class="rest-card-img">
-          <img src="../assets/img/lesdunes/sensacions-espai.jpg" alt="Les Dunes · Riumar" onerror="this.parentElement.style.background='var(--cream)'">
+          <img loading="lazy" decoding="async" src="../assets/img/lesdunes/sensacions-espai.jpg" alt="Les Dunes · Riumar" onerror="this.parentElement.style.background='var(--cream)'">
           <div class="rest-card-badges">
             <span class="rest-badge badge-visitada t" data-es="Visitado" data-ca="Visitat">Visitado</span>
             <span class="rest-num">6</span>
@@ -456,7 +456,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <!-- 7. El Galliner de l'Antiquari — Pròxima -->
       <div class="rest-card">
         <div class="rest-card-img">
-          <img src="../assets/img/galliner/facana.jpg" alt="El Galliner de l'Antiquari · Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
+          <img loading="lazy" decoding="async" src="../assets/img/galliner/facana.jpg" alt="El Galliner de l'Antiquari · Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
           <div class="rest-card-badges">
             <span class="rest-badge badge-visitada t" data-es="Visitada" data-ca="Visitada">Visitada</span>
             <span class="rest-num">7</span>
@@ -503,7 +503,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
       <button class="mapa-filtre actiu" data-f="tots" onclick="filtraMapa('tots',this)"><span class="t" data-es="Todos" data-ca="Tots">Todos</span></button>
       <button class="mapa-filtre" data-f="2026" onclick="filtraMapa('2026',this)"><span style="width:8px;height:8px;border-radius:50%;background:#b8924a;display:inline-block;margin-right:6px;"></span>2026</button>
-      <button class="mapa-filtre" data-f="2025" onclick="filtraMapa('2025',this)"><span style="width:8px;height:8px;border-radius:50%;background:#1c2e3e;border:1px solid #aaa;display:inline-block;margin-right:6px;"></span>2025</button>
+      <button class="mapa-filtre" data-f="2025" onclick="filtraMapa('2025',this)"><span style="width:8px;height:8px;border-radius:50%;background:#122850;border:1px solid #aaa;display:inline-block;margin-right:6px;"></span>2025</button>
       <button class="mapa-filtre" data-f="gastronia" onclick="filtraMapa('gastronia',this)"><span style="font-size:.7rem;margin-right:4px;">&#11088;</span><span class="t" data-es="Gastronia" data-ca="Gastronia">Gastronia</span></button>
     </div>
 
@@ -516,7 +516,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <!-- Llegenda -->
         <div style="position:absolute;bottom:16px;left:16px;z-index:1000;background:rgba(11,22,38,.88);backdrop-filter:blur(6px);padding:14px 18px;display:flex;flex-direction:column;gap:8px;pointer-events:none;">
           <div style="display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;border-radius:50%;background:#b8924a;display:inline-block;"></span><span class="t" style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</span></div>
-          <div style="display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;border-radius:50%;background:#1c2e3e;display:inline-block;border:1px solid rgba(255,255,255,.3);"></span><span class="t" style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);" data-es="Temporada 2025" data-ca="Temporada 2025">Temporada 2025</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;border-radius:50%;background:#122850;display:inline-block;border:1px solid rgba(255,255,255,.3);"></span><span class="t" style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);" data-es="Temporada 2025" data-ca="Temporada 2025">Temporada 2025</span></div>
           <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:.75rem;color:#b8924a;">&#11088;</span><span class="t" style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);" data-es="Premio Gastronia" data-ca="Premi Gastronia">Premio Gastronia</span></div>
         </div>
       </div>
@@ -565,7 +565,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="../assets/js/leaflet.js?v=1.9.4"></script>
 <script>
 function gdtImgErr(el){el.style.display='none';if(el.parentNode)el.parentNode.style.background='#e8e0d4';}
 (function(){
@@ -584,7 +584,7 @@ function gdtImgErr(el){el.style.display='none';if(el.parentNode)el.parentNode.st
     return L.divIcon({html:"<svg xmlns='http://www.w3.org/2000/svg' width='36' height='48' viewBox='0 0 36 48'><path d='M18 0C8.06 0 0 8.06 0 18c0 12 18 30 18 30s18-18 18-30C36 8.06 27.94 0 18 0z' fill='"+color+"'/><circle cx='18' cy='18' r='8' fill='rgba(255,255,255,0.95)'/>"+s+"</svg>",className:"",iconSize:[36,48],iconAnchor:[18,48],popupAnchor:[0,-48]});
   }
 
-  var g="#b8924a",n="#1c2e3e";
+  var g="#b8924a",n="#122850";
   var d=[
     {lat:41.0668837,lng:1.0617647,nom:"Kema",lloc:"Cambrils",any:"2026",adr:"C. Pau Casals, 37",c:g,s:false,tel:"977 364 054",web:"https://kemacambrils.com",img:"../assets/img/kema/hero-cronica.jpg"},
     {lat:41.0681635,lng:1.1493959,nom:"La Goleta",lloc:"Salou",any:"2026",adr:"C. de la Gavina, 2",c:g,s:false,tel:"977 383 566",web:"https://lagoletasalou.com",img:"../assets/img/goleta/goleta-hero.jpg"},
@@ -616,7 +616,7 @@ function gdtImgErr(el){el.style.display='none';if(el.parentNode)el.parentNode.st
       div.style.cssText="border-bottom:1px solid #e8e0d4;cursor:pointer;transition:background .2s;";
       var imgHtml=r.img
         ? "<div style='width:100%;height:110px;overflow:hidden;background:#e8e0d4;'><img src='"+r.img+"' alt='"+r.nom+"' style='width:100%;height:100%;object-fit:cover;' onerror='gdtImgErr(this)'></div>"
-        : "<div style='width:100%;height:80px;background:linear-gradient(135deg,#1c2e3e,#2d4a66);display:flex;align-items:center;justify-content:center;'><span style='color:rgba(255,255,255,.2);font-size:2rem;'>&#xb7;</span></div>";
+        : "<div style='width:100%;height:80px;background:linear-gradient(135deg,#122850,#2d4a66);display:flex;align-items:center;justify-content:center;'><span style='color:rgba(255,255,255,.2);font-size:2rem;'>&#xb7;</span></div>";
       var starHtml=r.s?"<span style='color:#b8924a;font-size:.7rem;'> &#9733;</span>":"";
       var telHtml=r.tel?"<span style='display:block;font-size:.7rem;color:#888;margin-top:2px;'>&#128222; "+r.tel+"</span>":"";
       var webHtml=r.web?"<a href='"+r.web+"' target='_blank' rel='noopener' style='display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:"+r.c+";margin-top:6px;text-decoration:none;border-bottom:1px solid "+r.c+";'>Web &rarr;</a>":"";
@@ -768,7 +768,7 @@ function gdtImgErr(el){el.style.display='none';if(el.parentNode)el.parentNode.st
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
-      <img src="../assets/img/logo.png"
+      <img loading="lazy" decoding="async" src="../assets/img/logo.png"
            alt="Gourmets de Tarragona"
            onerror="this.style.display='none'">
       <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>

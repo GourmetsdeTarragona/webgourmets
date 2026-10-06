@@ -87,7 +87,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="assets/css/variables.css?v=20261006">
 <link rel="stylesheet" href="assets/css/nav.css?v=20261006">
 <link rel="stylesheet" href="assets/css/hero.css?v=20261006">
@@ -110,7 +110,7 @@
   position:fixed;left:0;right:0;z-index:999;
   background:rgba(245,240,232,.97);
   backdrop-filter:blur(8px);
-  box-shadow:0 8px 32px rgba(28,46,62,.15);
+  box-shadow:0 8px 32px rgba(18,40,80,.15);
   opacity:0;
   transform:translateY(-8px);
   pointer-events:none;
@@ -488,7 +488,7 @@
     <div class="premios-home">
       <div class="premio-box reveal reveal-delay-2">
         <div class="premio-icon">
-          <img src="assets/img/gastronia.png"
+          <img loading="lazy" decoding="async" src="assets/img/gastronia.png"
                alt="Trofeu Gastronia"
                onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
           <span style="display:none;font-size:2.8rem;">🏆</span>
@@ -498,7 +498,7 @@
       </div>
       <div class="premio-box reveal reveal-delay-3">
         <div class="premio-icon">
-          <img src="assets/img/bacus.png"
+          <img loading="lazy" decoding="async" src="assets/img/bacus.png"
                alt="Premi Bacus"
                onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
           <span style="display:none;font-size:2.8rem;">🍷</span>
@@ -522,7 +522,7 @@
     <div class="cards-grid">
 
       <div class="card reveal reveal-delay-2">
-        <img class="card-img" src="assets/img/event-cata.jpg" alt="Tast de vins DO Tarragona">
+        <img loading="lazy" decoding="async" class="card-img" src="assets/img/event-cata.jpg" alt="Tast de vins DO Tarragona">
         <span class="t card-badge" data-es="Cata" data-ca="Tast">Cata</span>
         <div class="card-body">
           <p class="t card-date" data-es="Fecha por determinar" data-ca="Data per determinar">Fecha por determinar</p>
@@ -536,7 +536,7 @@
 
       <div class="card reveal reveal-delay-3">
         <a href="entrades/sopar-estiu-2026.html" style="text-decoration:none;color:inherit;display:block;">
-        <img class="card-img" src="assets/img/nautic/foto3.jpeg" alt="Sopar d'estiu 2026 · Club Nàutic de Salou">
+        <img loading="lazy" decoding="async" class="card-img" src="assets/img/nautic/foto3.jpeg" alt="Sopar d'estiu 2026 · Club Nàutic de Salou">
         <span class="t card-badge" data-es="Cena" data-ca="Sopar">Cena</span>
         <div class="card-body">
           <p class="t card-date" data-es="31 de julio de 2026" data-ca="31 de juliol de 2026">31 de julio de 2026</p>
@@ -550,7 +550,7 @@
       </div>
 
       <div class="card reveal reveal-delay-4">
-        <img class="card-img" src="assets/img/gala2025/sala-gala.jpg" alt="Gala de lliurament de premis 2025">
+        <img loading="lazy" decoding="async" class="card-img" src="assets/img/gala2025/sala-gala.jpg" alt="Gala de lliurament de premis 2025">
         <span class="t card-badge" data-es="Gala" data-ca="Gala">Gala</span>
         <div class="card-body">
           <p class="t card-date" data-es="diciembre de 2026" data-ca="desembre de 2026">diciembre de 2026</p>
@@ -691,13 +691,13 @@
 .blog-preview-inner{max-width:1140px;margin:0 auto;padding:0 24px;}
 .blog-preview-header{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap;}
 .blog-preview-eyebrow{font-family:var(--font-sans,Lato,sans-serif);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text,#8A6A2E);margin:0 0 8px;}
-.blog-preview-title{font-family:var(--font-serif,'Playfair Display',Georgia,serif);font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:600;color:var(--navy-dark,#1C2E3E);margin:0 0 8px;line-height:1.15;}
+.blog-preview-title{font-family:var(--font-serif,'Playfair Display',Georgia,serif);font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:600;color:var(--navy-dark,#122850);margin:0 0 8px;line-height:1.15;}
 .blog-preview-sub{font-family:var(--font-sans,Lato,sans-serif);font-size:.875rem;color:var(--muted,#7a6e65);margin:0;line-height:1.5;}
 .blog-preview-cta{font-family:var(--font-sans,Lato,sans-serif);font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-text,#8A6A2E);text-decoration:none;display:flex;align-items:center;gap:8px;white-space:nowrap;border-bottom:1px solid transparent;transition:border-color 200ms ease;}
 .blog-preview-cta:hover{border-bottom-color:var(--gold,#B8924A);}
 .blog-preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:28px;}
 .bp-card{background:#fff;border-radius:4px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:transform 240ms ease,box-shadow 240ms ease;}
-.bp-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(28,46,62,.12);}
+.bp-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(18,40,80,.12);}
 .bp-card-img{height:160px;display:flex;align-items:flex-end;padding:14px 16px;position:relative;}
 .bp-cat{font-family:var(--font-sans,Lato,sans-serif);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;background:rgba(184,146,74,.22);color:#E8C98A;display:inline-block;margin-bottom:8px;border-radius:2px;}
 .bp-card-title{font-family:var(--font-serif,'Playfair Display',Georgia,serif);font-size:1rem;font-weight:600;color:#F6F2EC;line-height:1.35;margin:0;}
@@ -786,7 +786,7 @@
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
-      <img src="assets/img/logo.png"
+      <img loading="lazy" decoding="async" src="assets/img/logo.png"
            alt="Gourmets de Tarragona"
            onerror="this.style.display='none'">
       <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
@@ -893,42 +893,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var nav = document.getElementById('nav');
   var menu = document.getElementById('mobileMenu');
 
-  // ── Moure el mobileMenu a body per evitar clipping del nav ──
-  if (menu && menu.parentNode !== document.body) {
-    document.body.appendChild(menu);
-  }
-
-  // ── Funció per posicionar el menú just sota el nav ──
-  function positionMenu() {
-    if (!nav || !menu) return;
-    var rect = nav.getBoundingClientRect();
-    menu.style.top = rect.bottom + 'px';
-  }
-
-  // ── Scroll: solid nav + reposicionar menú si és obert ──
-  window.addEventListener('scroll', function() {
-    if (nav) nav.classList.toggle('solid', window.scrollY > 50);
-    if (menu && menu.classList.contains('open')) positionMenu();
-  });
-
-  // ── Hamburger ──
-  var burger = document.getElementById('hamburger');
-  if (burger) {
-    burger.addEventListener('click', function() {
-      if (nav) nav.classList.add('solid');
-      positionMenu();
-      menu.classList.toggle('open');
-    });
-  }
-
-  // ── Tancar el menú en clicar un enllaç ──
-  if (menu) {
-    menu.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() {
-        menu.classList.remove('open');
-      });
-    });
-  }
+  // Menú, hamburguesa i nav sòlid: assets/js/main.js (comú a tot el web)
 
   // ── Rec-rows: afegir classe anim-done a pend quan acaba l'animació ──
   document.querySelectorAll('.rec-row.pend').forEach(function(row) {
@@ -1098,5 +1063,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
+<script src="assets/js/main.js?v=20261007"></script>
 </body>
 </html>

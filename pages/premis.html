@@ -60,7 +60,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="../assets/css/variables.css?v=20261006">
 <link rel="stylesheet" href="../assets/css/nav.css?v=20261006">
 <link rel="stylesheet" href="../assets/css/seccions.css?v=20261006">
@@ -147,14 +147,14 @@
 .recorregut-header p{font-size:.95rem;color:var(--muted);font-weight:300;line-height:1.8;margin-top:8px;max-width:560px;}
 .recorregut-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
 .recorregut-card{background:#fff;padding:32px 28px;border:1px solid var(--border);position:relative;display:flex;flex-direction:column;gap:8px;transition:box-shadow .25s;}
-.recorregut-card:hover{box-shadow:0 8px 32px rgba(28,46,62,.10);}
-.recorregut-card-num{font-family:var(--font-serif);font-size:3rem;font-weight:700;color:rgba(28,46,62,.06);line-height:1;position:absolute;top:16px;right:20px;}
+.recorregut-card:hover{box-shadow:0 8px 32px rgba(18,40,80,.10);}
+.recorregut-card-num{font-family:var(--font-serif);font-size:3rem;font-weight:700;color:rgba(18,40,80,.06);line-height:1;position:absolute;top:16px;right:20px;}
 .recorregut-card-nom{font-family:var(--font-serif);font-size:1.35rem;font-weight:700;color:var(--navy-dark);line-height:1.15;}
 .recorregut-card-lloc{font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);}
 .recorregut-card-link{margin-top:auto;padding-top:16px;}
 .recorregut-card-link a{font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;}
 .recorregut-card-link a:hover{color:var(--gold);}
-.recorregut-card-pendent{font-size:.65rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:rgba(28,46,62,.25);margin-top:auto;padding-top:16px;font-style:italic;}
+.recorregut-card-pendent{font-size:.65rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:rgba(18,40,80,.25);margin-top:auto;padding-top:16px;font-style:italic;}
 
 @media(max-width:1024px){
   .premis-presentacio{grid-template-columns:1fr;}
@@ -408,7 +408,7 @@ function setLang(lang) {
   <!-- Bacus -->
   <div class="premi-bloc premi-bloc-dark" id="bacus">
     <div class="premi-ico" style="width:220px;height:220px;">
-      <img src="../assets/img/bacus.png" alt="Premi Bacus"
+      <img loading="lazy" decoding="async" src="../assets/img/bacus.png" alt="Premi Bacus"
            onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
       <div class="premi-ico-placeholder" style="display:none">🍷</div>
     </div>
@@ -433,7 +433,7 @@ function setLang(lang) {
       <!-- 1r Gastronia: Buidasacs -->
       <div class="palmares-card" style="padding:0;overflow:hidden;">
         <div style="height:340px;overflow:hidden;position:relative;">
-          <img src="../assets/img/gala2025/gastronia1-buidasacs.jpg" alt="Lliurament 1r Gastronia — Buidasacs" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;" onerror="this.parentElement.style.background='rgba(255,255,255,0.05)'">
+          <img loading="lazy" decoding="async" src="../assets/img/gala2025/gastronia1-buidasacs.jpg" alt="Lliurament 1r Gastronia — Buidasacs" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;" onerror="this.parentElement.style.background='rgba(255,255,255,0.05)'">
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.85) 0%,transparent 60%);"></div>
           <div class="palmares-premi-label" style="position:absolute;bottom:16px;left:24px;margin:0;" data-i18n="p_1gastronia">1.er Trofeo Gastronia</div>
         </div>
@@ -449,7 +449,7 @@ function setLang(lang) {
       <!-- 2n Gastronia: Cambium -->
       <div class="palmares-card" style="padding:0;overflow:hidden;">
         <div style="height:340px;overflow:hidden;position:relative;">
-          <img src="../assets/img/gala2025/gastronia2-cambium.jpg" alt="Lliurament 2n Gastronia — Cambium" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;" onerror="this.parentElement.style.background='rgba(255,255,255,0.05)'">
+          <img loading="lazy" decoding="async" src="../assets/img/gala2025/gastronia2-cambium.jpg" alt="Lliurament 2n Gastronia — Cambium" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;" onerror="this.parentElement.style.background='rgba(255,255,255,0.05)'">
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.85) 0%,transparent 60%);"></div>
           <div class="palmares-premi-label" style="position:absolute;bottom:16px;left:24px;margin:0;" data-i18n="p_2gastronia">2.º Trofeo Gastronia</div>
         </div>
@@ -466,11 +466,11 @@ function setLang(lang) {
       <div class="palmares-card palmares-card-bacus" style="grid-column:1/-1;padding:0;overflow:hidden;">
         <div style="display:grid;grid-template-columns:1fr 1fr;">
           <div style="height:340px;overflow:hidden;position:relative;">
-            <img src="../assets/img/gala2025/bacus-cirerets.jpg" alt="Lliurament Bacus — Cirerets de Mas Alta" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;" onerror="this.parentElement.style.background='rgba(107,39,55,0.3)'">
+            <img loading="lazy" decoding="async" src="../assets/img/gala2025/bacus-cirerets.jpg" alt="Lliurament Bacus — Cirerets de Mas Alta" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;" onerror="this.parentElement.style.background='rgba(107,39,55,0.3)'">
             <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(11,22,38,.5),transparent 60%);"></div>
           </div>
           <div style="height:340px;overflow:hidden;">
-            <img src="../assets/img/gala2025/trofeus.jpg" alt="Trofeus Gastronia i Bacus 2025" style="width:100%;height:100%;object-fit:cover;">
+            <img loading="lazy" decoding="async" src="../assets/img/gala2025/trofeus.jpg" alt="Trofeus Gastronia i Bacus 2025" style="width:100%;height:100%;object-fit:cover;">
           </div>
         </div>
         <div style="padding:28px 32px;">
@@ -489,13 +489,13 @@ function setLang(lang) {
   <div style="max-width:1100px;margin:32px auto 0;padding:0 4%;">
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;">
       <div style="height:240px;overflow:hidden;">
-        <img src="../assets/img/gala2025/sala-gala.jpg" alt="Sala de la Gala 2025 — Vermuts Rofes" style="width:100%;height:100%;object-fit:cover;">
+        <img loading="lazy" decoding="async" src="../assets/img/gala2025/sala-gala.jpg" alt="Sala de la Gala 2025 — Vermuts Rofes" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div style="height:240px;overflow:hidden;">
-        <img src="../assets/img/gala2025/vermuts-rofes.jpg" alt="Vermuts Rofes — espai de la gala" style="width:100%;height:100%;object-fit:cover;">
+        <img loading="lazy" decoding="async" src="../assets/img/gala2025/vermuts-rofes.jpg" alt="Vermuts Rofes — espai de la gala" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div style="height:240px;overflow:hidden;">
-        <img src="../assets/img/gala2025/trofeus.jpg" alt="Els tres trofeus de la temporada 2025" style="width:100%;height:100%;object-fit:cover;">
+        <img loading="lazy" decoding="async" src="../assets/img/gala2025/trofeus.jpg" alt="Els tres trofeus de la temporada 2025" style="width:100%;height:100%;object-fit:cover;">
       </div>
     </div>
     <p style="font-size:.72rem;color:rgba(255,255,255,.3);text-align:center;margin-top:10px;font-style:italic;" data-i18n="p_gala_peu">Gala de entrega de premios 2025 · Vermuts Rofes · Reus</p>
@@ -663,7 +663,7 @@ function setLang(lang) {
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
-      <img src="../assets/img/logo.png"
+      <img loading="lazy" decoding="async" src="../assets/img/logo.png"
            alt="Gourmets de Tarragona"
            onerror="this.style.display='none'">
       <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
@@ -706,7 +706,7 @@ function setLang(lang) {
   </div>
 </footer>
 
-<script src="../assets/js/main.js?v=20261006"></script>
+<script src="../assets/js/main.js?v=20261007"></script>
 <script>applyTranslations(currentLang);</script>
 </body>
 </html>

@@ -25,7 +25,7 @@
 <meta property="article:section" content="Cultura">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="../assets/css/variables.css?v=20261006">
 <link rel="stylesheet" href="../assets/css/nav.css?v=20261006">
 <link rel="stylesheet" href="../assets/css/seccions.css?v=20261006">
@@ -61,8 +61,8 @@
 .llibre-portada{position:relative;}
 .llibre-img-link{display:block;position:relative;z-index:1;}
 .llibre-img-link img{transition:transform .3s,box-shadow .3s;}
-.llibre-img-link:hover img{transform:scale(1.03);box-shadow:0 12px 36px rgba(28,46,62,.28);}
-.llibre-portada img{width:100%;height:auto;box-shadow:0 8px 28px rgba(28,46,62,.18);display:block;}
+.llibre-img-link:hover img{transform:scale(1.03);box-shadow:0 12px 36px rgba(18,40,80,.28);}
+.llibre-portada img{width:100%;height:auto;box-shadow:0 8px 28px rgba(18,40,80,.18);display:block;}
 .llibre-num{position:absolute;top:-10px;left:-10px;width:28px;height:28px;background:var(--gold);color:#fff;font-family:var(--font-serif);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;}
 .llibre-bloc:nth-child(even) .llibre-num{background:var(--navy);}
 .llibre-editorial{font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block;}
@@ -74,10 +74,10 @@
 .llibre-desc{font-size:.92rem;font-weight:300;color:#444;line-height:1.85;}
 .llibre-desc strong{font-weight:600;color:var(--navy-dark);}
 .llibre-tag{display:inline-block;margin-top:12px;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:rgba(184,146,74,.12);color:var(--gold);padding:4px 10px;border:1px solid rgba(184,146,74,.3);}
-.llibre-bloc:nth-child(even) .llibre-tag{background:rgba(28,46,62,.06);color:var(--navy);border-color:rgba(28,46,62,.2);}
+.llibre-bloc:nth-child(even) .llibre-tag{background:rgba(18,40,80,.06);color:var(--navy);border-color:rgba(18,40,80,.2);}
 
 /* ── TANCAMENT ── */
-.e-tancament{background:linear-gradient(180deg,var(--navy-dark) 0%,#1c2e3e 100%);padding:56px 44px;margin:0;text-align:center;position:relative;overflow:hidden;}
+.e-tancament{background:linear-gradient(180deg,var(--navy-dark) 0%,#122850 100%);padding:56px 44px;margin:0;text-align:center;position:relative;overflow:hidden;}
 .e-tancament::before{content:'🌹';position:absolute;font-size:8rem;opacity:.06;top:-10px;left:-20px;line-height:1;}
 .e-tancament::after{content:'🌹';position:absolute;font-size:8rem;opacity:.06;bottom:-10px;right:-20px;line-height:1;}
 .e-tancament-rosa{font-size:2.5rem;margin-bottom:16px;display:block;}
@@ -104,7 +104,7 @@
 /* ── COMPARTIR ── */
 .e-compartir{
   position:relative;margin:64px 0 0;padding:56px 40px 52px;
-  background:linear-gradient(135deg,#0b1626 0%,#1c2e3e 100%);
+  background:linear-gradient(135deg,#0b1626 0%,#122850 100%);
   overflow:hidden;
 }
 .e-compartir::before{
@@ -177,7 +177,7 @@
 .e-tambe-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);margin-bottom:32px;}
 .e-tambe-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
 .e-tambe-card{background:#fff;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;text-decoration:none;}
-.e-tambe-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(28,46,62,.12);}
+.e-tambe-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(18,40,80,.12);}
 .e-tambe-card-img{height:172px;overflow:hidden;position:relative;}
 .e-tambe-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
 .e-tambe-card:hover .e-tambe-card-img img{transform:scale(1.05);}
@@ -206,37 +206,10 @@
 <meta name="twitter:title" content="8 llibres per a un Sant Jordi Gourmet 2026 · Gourmets de Tarragona">
 <meta name="twitter:description" content="La nostra selecció de 8 llibres gastronòmics per a Sant Jordi 2026. Tres títols de Cossetània Edicions (Valls) i un autor de Reus. Calçotada, Paisatge a la cassola, Fricandó Nation, Jordi Roca i més.">
 <meta name="twitter:image" content="https://www.gourmetsdetarragona.com/assets/img/hero.jpg">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "8 llibres per a un Sant Jordi Gourmet 2026 · Gourmets de Tarragona",
-  "description": "La nostra selecció de 8 llibres gastronòmics per a Sant Jordi 2026. Tres títols de Cossetània Edicions (Valls) i un autor de Reus. Calçotada, Paisatge a la cassola, Fricandó Nation, Jordi Roca i més.",
-  "image": "https://www.gourmetsdetarragona.com/assets/img/hero.jpg",
-  "url": "https://www.gourmetsdetarragona.com/entrades/santjordi-2026.html",
-  "datePublished": "2026-04-23",
-  "inLanguage": [
-    "es",
-    "ca"
-  ],
-  "author": {
-    "@type": "Organization",
-    "name": "Gourmets de Tarragona",
-    "url": "https://www.gourmetsdetarragona.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Gourmets de Tarragona",
-    "url": "https://www.gourmetsdetarragona.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.gourmetsdetarragona.com/assets/img/logo.png"
-    }
-  }
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"8 llibres per a un Sant Jordi Gourmet 2026 · Gourmets de Tarragona","description":"La nostra selecció de 8 llibres gastronòmics per a Sant Jordi 2026. Tres títols de Cossetània Edicions (Valls) i un autor de Reus. Calçotada, Paisatge a la cassola, Fricandó Nation, Jordi Roca i més.","image":"https://www.gourmetsdetarragona.com/assets/img/hero.jpg","url":"https://www.gourmetsdetarragona.com/entrades/santjordi-2026.html","datePublished":"2026-04-23","inLanguage":["es","ca"],"author":{"@type":"Organization","name":"Gourmets de Tarragona","url":"https://www.gourmetsdetarragona.com"},"publisher":{"@type":"Organization","name":"Gourmets de Tarragona","url":"https://www.gourmetsdetarragona.com/","logo":{"@type":"ImageObject","url":"https://www.gourmetsdetarragona.com/assets/img/logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gourmetsdetarragona.com/entrades/santjordi-2026.html"},"dateModified":"2026-04-23"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.gourmetsdetarragona.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.gourmetsdetarragona.com/pages/blog.html"},{"@type":"ListItem","position":3,"name":"8 llibres per a un Sant Jordi Gourmet 2026","item":"https://www.gourmetsdetarragona.com/entrades/santjordi-2026.html"}]}</script>
 <style>
-.e-nl-cta{background:var(--navy-dark,#1C2E3E);padding:64px 5%;text-align:center;margin:0;}
+.e-nl-cta{background:var(--navy-dark,#122850);padding:64px 5%;text-align:center;margin:0;}
 .e-nl-cta-inner{max-width:540px;margin:0 auto;}
 .e-nl-cta-deco{font-size:1.4rem;color:var(--gold,#B8924A);opacity:.5;margin-bottom:16px;line-height:1;}
 .e-nl-cta-kicker{font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold,#B8924A);margin-bottom:14px;}
@@ -419,7 +392,7 @@
   <div class="llibre-bloc">
     <div class="llibre-portada">
       <span class="llibre-num">02</span>
-      <a href="https://lafinestralectora.cat/paisatge-a-la-cassola/" target="_blank" rel="noopener" class="llibre-img-link"><img src="../assets/img/santjordi/santjordi-paisatge.webp" alt="Paisatge a la cassola"></a>
+      <a href="https://lafinestralectora.cat/paisatge-a-la-cassola/" target="_blank" rel="noopener" class="llibre-img-link"><img loading="lazy" decoding="async" src="../assets/img/santjordi/santjordi-paisatge.webp" alt="Paisatge a la cassola"></a>
     </div>
     <div class="llibre-info">
       <span class="llibre-editorial">Cossetània Edicions</span>
@@ -435,7 +408,7 @@
   <div class="llibre-bloc">
     <div class="llibre-portada">
       <span class="llibre-num">03</span>
-      <a href="https://lafinestralectora.cat/catalunya-a-la-copa-i-al-plat/" target="_blank" rel="noopener" class="llibre-img-link"><img src="../assets/img/santjordi/santjordi-catalunyacopa.webp" alt="Catalunya a la copa i al plat"></a>
+      <a href="https://lafinestralectora.cat/catalunya-a-la-copa-i-al-plat/" target="_blank" rel="noopener" class="llibre-img-link"><img loading="lazy" decoding="async" src="../assets/img/santjordi/santjordi-catalunyacopa.webp" alt="Catalunya a la copa i al plat"></a>
     </div>
     <div class="llibre-info">
       <span class="llibre-editorial">Cossetània Edicions</span>
@@ -452,7 +425,7 @@
   <div class="llibre-bloc">
     <div class="llibre-portada">
       <span class="llibre-num">04</span>
-      <a href="https://www.grup62.cat/llibre-fricandonation/442210" target="_blank" rel="noopener" class="llibre-img-link"><img src="../assets/img/santjordi/santjordi-fricando.jpg" alt="Fricandó Nation"></a>
+      <a href="https://www.grup62.cat/llibre-fricandonation/442210" target="_blank" rel="noopener" class="llibre-img-link"><img loading="lazy" decoding="async" src="../assets/img/santjordi/santjordi-fricando.jpg" alt="Fricandó Nation"></a>
     </div>
     <div class="llibre-info">
       <span class="llibre-editorial">Destino · Segell Fosc</span>
@@ -471,7 +444,7 @@
   <div class="llibre-bloc">
     <div class="llibre-portada">
       <span class="llibre-num">05</span>
-      <a href="https://arallibres.cat/cataleg/natura-viva-les-cols-restaurant/" target="_blank" rel="noopener" class="llibre-img-link"><img src="../assets/img/santjordi/santjordi-naturaviva.webp" alt="Natura Viva. Les Cols restaurant"></a>
+      <a href="https://arallibres.cat/cataleg/natura-viva-les-cols-restaurant/" target="_blank" rel="noopener" class="llibre-img-link"><img loading="lazy" decoding="async" src="../assets/img/santjordi/santjordi-naturaviva.webp" alt="Natura Viva. Les Cols restaurant"></a>
     </div>
     <div class="llibre-info">
       <span class="llibre-editorial">Ara Llibres</span>
@@ -487,7 +460,7 @@
   <div class="llibre-bloc">
     <div class="llibre-portada">
       <span class="llibre-num">06</span>
-      <a href="https://arpaeditores.com/products/corpus-de-la-cuina-catalana" target="_blank" rel="noopener" class="llibre-img-link"><img src="../assets/img/santjordi/santjordi-corpus.webp" alt="Corpus de la Cuina Catalana"></a>
+      <a href="https://arpaeditores.com/products/corpus-de-la-cuina-catalana" target="_blank" rel="noopener" class="llibre-img-link"><img loading="lazy" decoding="async" src="../assets/img/santjordi/santjordi-corpus.webp" alt="Corpus de la Cuina Catalana"></a>
     </div>
     <div class="llibre-info">
       <span class="llibre-editorial">Arpa Editores</span>
@@ -503,7 +476,7 @@
   <div class="llibre-bloc">
     <div class="llibre-portada">
       <span class="llibre-num">07</span>
-      <a href="https://www.planetadelibros.com/libro-coses-de-casa/445266" target="_blank" rel="noopener" class="llibre-img-link"><img src="../assets/img/santjordi/santjordi-cosesdecasa.jpg" alt="Coses de Casa · Jordi Roca"></a>
+      <a href="https://www.planetadelibros.com/libro-coses-de-casa/445266" target="_blank" rel="noopener" class="llibre-img-link"><img loading="lazy" decoding="async" src="../assets/img/santjordi/santjordi-cosesdecasa.jpg" alt="Coses de Casa · Jordi Roca"></a>
     </div>
     <div class="llibre-info">
       <span class="llibre-editorial">Planeta Gastro</span>
@@ -519,7 +492,7 @@
   <div class="llibre-bloc">
     <div class="llibre-portada">
       <span class="llibre-num">08</span>
-      <a href="https://www.penguinllibres.com/tematiques/487150-libro-cuinem-9791387653590" target="_blank" rel="noopener" class="llibre-img-link"><img src="../assets/img/santjordi/santjordi-cuinem.jpg" alt="Cuinem! · Pep Salsetes"></a>
+      <a href="https://www.penguinllibres.com/tematiques/487150-libro-cuinem-9791387653590" target="_blank" rel="noopener" class="llibre-img-link"><img loading="lazy" decoding="async" src="../assets/img/santjordi/santjordi-cuinem.jpg" alt="Cuinem! · Pep Salsetes"></a>
     </div>
     <div class="llibre-info">
       <span class="llibre-editorial">Rosa dels Vents</span>
@@ -597,7 +570,7 @@
 
       <a href="tendencias-gastronomiques-2026.html" class="e-tambe-card">
         <div class="e-tambe-card-img">
-          <img src="../assets/img/tendencias/hero%20para%20tendencias.jpg"
+          <img loading="lazy" decoding="async" src="../assets/img/tendencias/hero%20para%20tendencias.jpg"
                alt="Tendències 2026"
                onerror="this.parentElement.style.background='#4a6741'">
           <span class="e-tambe-card-cat t" data-es="Tendencias" data-ca="Tendències">Tendencias</span>
@@ -617,7 +590,7 @@
 
       <a href="el-romesco.html" class="e-tambe-card">
         <div class="e-tambe-card-img">
-          <img src="../assets/img/romesco/romesco-guisat.jpg"
+          <img loading="lazy" decoding="async" src="../assets/img/romesco/romesco-guisat.jpg"
                alt="El Romesco de Tarragona"
                onerror="this.parentElement.style.background='#8b5e3c'">
           <span class="e-tambe-card-cat t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
@@ -684,7 +657,7 @@
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
-      <img src="../assets/img/logo.png"
+      <img loading="lazy" decoding="async" src="../assets/img/logo.png"
            alt="Gourmets de Tarragona"
            onerror="this.style.display='none'">
       <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
@@ -749,7 +722,7 @@ document.addEventListener('DOMContentLoaded', function() {
   applyTranslations(currentLang);
 });
 </script>
-<script src="../assets/js/main.js?v=20261006"></script>
+<script src="../assets/js/main.js?v=20261007"></script>
 <script>
 (function(){
   var url = encodeURIComponent(window.location.href);

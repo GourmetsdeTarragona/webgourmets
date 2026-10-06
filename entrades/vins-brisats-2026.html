@@ -13,7 +13,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="../assets/css/variables.css?v=20261006">
 <link rel="stylesheet" href="../assets/css/nav.css?v=20261006">
 <link rel="stylesheet" href="../assets/css/seccions.css?v=20261006">
@@ -43,7 +43,7 @@
 .e-foto img{width:100%;height:380px;object-fit:cover;display:block;}
 .e-foto-peu{display:block;padding:10px 4px;font-size:.72rem;color:#888;font-style:italic;border-bottom:1px solid #e8e2d8;margin-bottom:48px;}
 .e-foto-inline-wrap{margin:16px 0 48px;}
-.e-foto-inline{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;box-shadow:0 2px 16px rgba(28,46,62,.08);overflow:hidden;}
+.e-foto-inline{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;box-shadow:0 2px 16px rgba(18,40,80,.08);overflow:hidden;}
 .e-foto-inline img{width:100%;height:300px;object-fit:contain;object-position:center center;background:#f5f0e8;}
 .e-foto-inline-text{padding:28px 32px;display:flex;flex-direction:column;justify-content:center;}
 .e-foto-inline.rev{direction:rtl;}
@@ -58,7 +58,7 @@
 .e-tambe-title{font-family:var(--font-serif);font-size:1.4rem;color:var(--navy-dark);margin-bottom:32px;}
 .e-tambe-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
 .e-tambe-card{background:#fff;border:1px solid #e8e2d8;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s;}
-.e-tambe-card:hover{box-shadow:0 8px 32px rgba(28,46,62,.12);transform:translateY(-3px);}
+.e-tambe-card:hover{box-shadow:0 8px 32px rgba(18,40,80,.12);transform:translateY(-3px);}
 .e-tambe-card-img{height:160px;overflow:hidden;position:relative;}
 .e-tambe-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
 .e-tambe-card:hover .e-tambe-card-img img{transform:scale(1.04);}
@@ -78,7 +78,7 @@
 .e-celler-desc{font-size:.9rem;font-weight:300;color:#444;line-height:1.7;}
 .e-celler-desc strong{font-weight:700;color:var(--navy-dark);}
 .e-celler-desc em{font-style:italic;color:#888;font-size:.88em;}
-.e-compartir{position:relative;margin:64px 0 0;padding:56px 40px 52px;background:linear-gradient(135deg,#0b1626 0%,#1c2e3e 100%);overflow:hidden;}
+.e-compartir{position:relative;margin:64px 0 0;padding:56px 40px 52px;background:linear-gradient(135deg,#0b1626 0%,#122850 100%);overflow:hidden;}
 .e-compartir::before{content:'';position:absolute;top:-1px;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);}
 .e-compartir::after{content:'"';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:14rem;font-weight:700;color:rgba(184,146,74,.06);line-height:1;pointer-events:none;user-select:none;}
 .e-compartir-inner{position:relative;z-index:1;max-width:600px;margin:0 auto;text-align:center;}
@@ -143,37 +143,10 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
 <meta name="twitter:title" content="Vinos brisados: el orange wine de toda la vida que Tarragona ya conocía · Gourmets de Tarragona">
 <meta name="twitter:description" content="Los vinos brisados son blancos elaborados como tintos: fermentados con sus pieles. Una técnica milenaria con raíces profundas en la Terra Alta y el Camp de Tarragona.">
 <meta name="twitter:image" content="https://www.gourmetsdetarragona.com/assets/img/brisats/hero-ampolles-brisat.jpg">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Vinos brisados: el orange wine de toda la vida que Tarragona ya conocía · Gourmets de Tarragona",
-  "description": "Los vinos brisados son blancos elaborados como tintos: fermentados con sus pieles. Una técnica milenaria con raíces profundas en la Terra Alta y el Camp de Tarragona.",
-  "image": "https://www.gourmetsdetarragona.com/assets/img/brisats/hero-ampolles-brisat.jpg",
-  "url": "https://www.gourmetsdetarragona.com/entrades/vins-brisats-2026.html",
-  "datePublished": "2026-05-01",
-  "inLanguage": [
-    "es",
-    "ca"
-  ],
-  "author": {
-    "@type": "Organization",
-    "name": "Gourmets de Tarragona",
-    "url": "https://www.gourmetsdetarragona.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Gourmets de Tarragona",
-    "url": "https://www.gourmetsdetarragona.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.gourmetsdetarragona.com/assets/img/logo.png"
-    }
-  }
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Vinos brisados: el orange wine de toda la vida que Tarragona ya conocía · Gourmets de Tarragona","description":"Los vinos brisados son blancos elaborados como tintos: fermentados con sus pieles. Una técnica milenaria con raíces profundas en la Terra Alta y el Camp de Tarragona.","image":"https://www.gourmetsdetarragona.com/assets/img/brisats/hero-ampolles-brisat.jpg","url":"https://www.gourmetsdetarragona.com/entrades/vins-brisats-2026.html","datePublished":"2026-05-01","inLanguage":["es","ca"],"author":{"@type":"Organization","name":"Gourmets de Tarragona","url":"https://www.gourmetsdetarragona.com"},"publisher":{"@type":"Organization","name":"Gourmets de Tarragona","url":"https://www.gourmetsdetarragona.com/","logo":{"@type":"ImageObject","url":"https://www.gourmetsdetarragona.com/assets/img/logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gourmetsdetarragona.com/entrades/vins-brisats-2026.html"},"dateModified":"2026-05-01"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.gourmetsdetarragona.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.gourmetsdetarragona.com/pages/blog.html"},{"@type":"ListItem","position":3,"name":"Vinos brisados: el orange wine de toda la vida que Tarragona ya conocía","item":"https://www.gourmetsdetarragona.com/entrades/vins-brisats-2026.html"}]}</script>
 <style>
-.e-nl-cta{background:var(--navy-dark,#1C2E3E);padding:64px 5%;text-align:center;margin:0;}
+.e-nl-cta{background:var(--navy-dark,#122850);padding:64px 5%;text-align:center;margin:0;}
 .e-nl-cta-inner{max-width:540px;margin:0 auto;}
 .e-nl-cta-deco{font-size:1.4rem;color:var(--gold,#B8924A);opacity:.5;margin-bottom:16px;line-height:1;}
 .e-nl-cta-kicker{font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold,#B8924A);margin-bottom:14px;}
@@ -363,7 +336,7 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
 
   <!-- FOTO MACERACIÓN · assets/img/brisats/maceracio-pells.jpg -->
   <div class="e-foto">
-    <img src="../assets/img/brisats/maceracio-pells.jpg" alt="Mans treballant les pells del raïm blanc durant la maceració en contacte — elaboració de vi brisat orange wine">
+    <img loading="lazy" decoding="async" src="../assets/img/brisats/maceracio-pells.jpg" alt="Mans treballant les pells del raïm blanc durant la maceració en contacte — elaboració de vi brisat orange wine">
   </div>
   <span class="e-foto-peu t"
         data-es="La maceración en contacto con las pieles: el momento en que el blanco empieza a dejar de serlo."
@@ -393,7 +366,7 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
 
   <!-- FOTO TINA · assets/img/brisats/tina-maceracio.jpg -->
   <div class="e-foto">
-    <img src="../assets/img/brisats/tina-maceracio.jpg" alt="Remuntatge en tina de fusta durant la maceració de vi brisat — elaboració artesanal de vi blanc amb pells">
+    <img loading="lazy" decoding="async" src="../assets/img/brisats/tina-maceracio.jpg" alt="Remuntatge en tina de fusta durant la maceració de vi brisat — elaboració artesanal de vi blanc amb pells">
   </div>
   <span class="e-foto-peu t"
         data-es="La maceración en tina: el tiempo de contacto entre el mosto y las pieles define el carácter final del vino."
@@ -452,7 +425,7 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
 
   <!-- FOTO SELECCIÓ AMPOLLES · assets/img/brisats/seleccio-ampolles.jpg -->
   <div class="e-foto" style="margin-top:24px;">
-    <img src="../assets/img/brisats/seleccio-ampolles.jpg" alt="Selecció de vins brisats i orange wines de la demarcació de Tarragona sobre fons blanc">
+    <img loading="lazy" decoding="async" src="../assets/img/brisats/seleccio-ampolles.jpg" alt="Selecció de vins brisats i orange wines de la demarcació de Tarragona sobre fons blanc">
   </div>
   <span class="e-foto-peu t"
         data-es="Una misma técnica, muchos caracteres distintos. Cada brisado es el resultado de una decisión: cuánto tiempo, qué variedad, qué suelo."
@@ -519,7 +492,7 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
   <!-- FOTO INLINE L'INCORRECTE -->
   <div class="e-foto-inline-wrap" style="margin-top:32px;">
     <div class="e-foto-inline">
-      <img src="../assets/img/brisats/incorrecte-sanroma.jpg" alt="L'Incorrecte de Cellers Sanromà — vi brisat de parellada de Vila-rodona, Alt Camp">
+      <img loading="lazy" decoding="async" src="../assets/img/brisats/incorrecte-sanroma.jpg" alt="L'Incorrecte de Cellers Sanromà — vi brisat de parellada de Vila-rodona, Alt Camp">
       <div class="e-foto-inline-text">
         <span class="e-label t" data-es="Alt Camp · Vila-rodona" data-ca="Alt Camp · Vila-rodona">Alt Camp · Vila-rodona</span>
         <h3 class="e-title t" data-es="L'Incorrecte" data-ca="L'Incorrecte">L'Incorrecte</h3>
@@ -540,7 +513,7 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
   <!-- FOTO INLINE BRISAT DEL COSTER -->
   <div class="e-foto-inline-wrap">
     <div class="e-foto-inline rev">
-      <img src="../assets/img/brisats/brisat-del-coster.jpg" alt="Brisat del Coster 2018 de Josep Foraster — macabeu brisat D.O. Conca de Barberà, Montblanc">
+      <img loading="lazy" decoding="async" src="../assets/img/brisats/brisat-del-coster.jpg" alt="Brisat del Coster 2018 de Josep Foraster — macabeu brisat D.O. Conca de Barberà, Montblanc">
       <div class="e-foto-inline-text">
         <span class="e-label t" data-es="Conca de Barberà · Montblanc" data-ca="Conca de Barberà · Montblanc">Conca de Barberà · Montblanc</span>
         <h3 class="e-title t" data-es="Brisat del Coster" data-ca="Brisat del Coster">Brisat del Coster</h3>
@@ -630,7 +603,7 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
 
       <a href="../entrades/vins-ancestrals-metode.html" class="e-tambe-card">
         <div class="e-tambe-card-img">
-          <img src="../assets/img/img-ancestrals/ampolles-tap-corona.jpg"
+          <img loading="lazy" decoding="async" src="../assets/img/img-ancestrals/ampolles-tap-corona.jpg"
                alt="Vins ancestrals i pét-nat de la demarcació de Tarragona"
                onerror="this.parentElement.style.background='#6b2737'">
           <span class="e-tambe-card-cat t" data-es="Vinos" data-ca="Vins">Vinos</span>
@@ -652,7 +625,7 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
 
       <a href="../entrades/vino-tarragona.html" class="e-tambe-card">
         <div class="e-tambe-card-img">
-          <img src="../assets/img/vins/paisatge-tarragona.jpg"
+          <img loading="lazy" decoding="async" src="../assets/img/vins/paisatge-tarragona.jpg"
                alt="El vi a la província de Tarragona"
                onerror="this.parentElement.style.background='#6b2737'">
           <span class="e-tambe-card-cat t" data-es="Vinos" data-ca="Vins">Vinos</span>
@@ -719,7 +692,7 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
-      <img src="../assets/img/logo.png" alt="Gourmets de Tarragona" onerror="this.style.display='none'">
+      <img loading="lazy" decoding="async" src="../assets/img/logo.png" alt="Gourmets de Tarragona" onerror="this.style.display='none'">
       <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.&lt;br&gt;Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.&lt;br&gt;Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
       <div class="footer-social">
         <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener" aria-label="Instagram">
@@ -763,7 +736,7 @@ document.addEventListener('DOMContentLoaded',function(){if(currentLang==='ca')se
   </div>
 </footer>
 
-<script src="../assets/js/main.js?v=20261006"></script>
+<script src="../assets/js/main.js?v=20261007"></script>
 <script>
 (function(){
   var url=encodeURIComponent(window.location.href);

@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return nav ? nav.getBoundingClientRect().height : 68;
   }
 
-  function openMobileMenu() {
+  function openMobileMenu(byKeyboard) {
     if (!mobileMenu || !hamburger) return;
     nav.classList.add('solid');
     nav.classList.add('menu-open');
@@ -37,8 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu.classList.add('open');
     hamburger.classList.add('open');
     hamburger.setAttribute('aria-expanded', 'true');
-    const firstLink = mobileMenu.querySelector('a, button');
-    if (firstLink) firstLink.focus({ preventScroll: true });
+    /* Només amb teclat: amb el dit o el ratolí no cal moure el focus */
+    if (byKeyboard) {
+      const firstLink = mobileMenu.querySelector('a, button');
+      if (firstLink) firstLink.focus({ preventScroll: true });
+    }
     /* Recalcular top si la nav canvia de mida (p.ex. en resize) */
     mobileMenu._resizeHandler = () => {
       mobileMenu.style.top = getNavHeight() + 'px';
@@ -67,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hamburger && mobileMenu) {
     hamburger.addEventListener('click', e => {
       e.stopPropagation();
-      mobileMenu.classList.contains('open') ? closeMobileMenu(true) : openMobileMenu();
+      mobileMenu.classList.contains('open') ? closeMobileMenu(e.detail === 0) : openMobileMenu(e.detail === 0);
     });
 
     /* Tanca en fer clic fora — un sol listener, no s'acumula */
