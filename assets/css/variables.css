@@ -8,6 +8,7 @@
   --navy-dark:   #122850;
   --gold:        #b8924a;
   --gold-light:  #d4a96a;
+  --gold-text:   #8A6A2E; /* dorat per a text sobre fons clar (5:1 sobre blanc) */
   --cream:       #F8F4EC;
   --white:       #fff;
   --text:        #2C2C2C;
@@ -99,4 +100,23 @@ button { font-family: var(--font-body); cursor: pointer; }
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Focus visible (teclat) ----
+   !important perquè diversos inputs tenen outline:none als estils de pàgina. */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible,
+textarea:focus-visible, [tabindex]:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--gold) !important;
+  outline-offset: 2px;
+}
+
+/* ---- Moviment reduït ---- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
 }

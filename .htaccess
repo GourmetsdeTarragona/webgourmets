@@ -1,0 +1,70 @@
+# ============================================================
+# .htaccess — Gourmets de Tarragona
+# Redireccions, memòria cau i fitxers de treball no públics.
+# Cada bloc va dins <IfModule>: si el servidor no té el mòdul,
+# el bloc s'ignora en lloc de donar error.
+# ============================================================
+
+Options -Indexes
+
+# ---- 1. Domini sense www -> www (sempre per HTTPS) ----
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^gourmetsdetarragona\.com$ [NC]
+  RewriteRule ^(.*)$ https://www.gourmetsdetarragona.com/$1 [R=301,L]
+
+  # ---- 2. HTTP -> HTTPS ----
+  # Desactivat fins a provar-lo: si el servidor és darrere d'un proxy
+  # que no envia X-Forwarded-Proto, podria crear un bucle de redireccions.
+  # Millor activar "Forçar HTTPS" al panell de Dinahosting. Si no hi és,
+  # treure els # de les tres línies i comprovar http://www.gourmetsdetarragona.com
+  # RewriteCond %{HTTPS} off
+  # RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  # RewriteRule ^(.*)$ https://www.gourmetsdetarragona.com/$1 [R=301,L]
+</IfModule>
+
+# ---- 3. Fitxers de treball que no han de ser públics ----
+<IfModule mod_rewrite.c>
+  RewriteRule ^newsletter/borradores/ - [F,L]
+  RewriteRule (^|/)_[^/]+\.(html|css|js)$ - [F,L]
+  RewriteRule \.(md|ps1|bat|zip|bak)$ - [F,L,NC]
+  RewriteRule \.backup[^/]*$ - [F,L,NC]
+  RewriteRule (^|/)\.(git|claude)(/|$) - [F,L]
+</IfModule>
+
+# ---- 4. Memòria cau ----
+# Les imatges i tipografies no canvien de nom: 30 dies.
+# CSS i JS sí que es retoquen: 7 dies.
+# L'HTML sempre es revalida perquè les entrades noves surtin a l'acte.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/xml "access plus 1 hour"
+  ExpiresByType text/xml "access plus 1 hour"
+  ExpiresByType application/rss+xml "access plus 1 hour"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/javascript "access plus 7 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/avif "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/x-icon "access plus 30 days"
+  ExpiresByType video/mp4 "access plus 30 days"
+  ExpiresByType font/woff2 "access plus 30 days"
+  ExpiresByType font/ttf "access plus 30 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ---- 5. Pàgina 404 ----
+# (pendent: crear una 404.html pròpia i descomentar)
+# ErrorDocument 404 /404.html

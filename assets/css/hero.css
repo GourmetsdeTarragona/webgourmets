@@ -140,7 +140,7 @@
 }
 .strip-item {
   font-size: .72rem; letter-spacing: 3px; text-transform: uppercase;
-  color: rgba(255,255,255,.45);
+  color: rgba(255,255,255,.8);
   display: flex; align-items: center; gap: 10px;
 }
 .strip-item::before {
