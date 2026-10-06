@@ -13,6 +13,7 @@
   if (!popup) return;
 
   var shown = false;
+  var lastFocus = null;
 
   function showPopup() {
     if (shown) return;
@@ -32,6 +33,8 @@
     }
     // Actualizar textos bilingues del popup
     if (typeof setLang === 'function') setLang(lang);
+    lastFocus = document.activeElement;
+    if (emailInput) emailInput.focus({ preventScroll: true });
   }
 
   function closePopup() {
@@ -40,6 +43,7 @@
       popup.style.display = 'none';
     }, 300);
     document.body.style.overflow = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
     // Guardar que fue descartado por X dias
     localStorage.setItem(STORAGE_KEY, Date.now() + DAYS_HIDE * 86400000);
   }
@@ -47,7 +51,15 @@
   closeBtn.addEventListener('click', closePopup);
   overlay.addEventListener('click', closePopup);
   document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape') closePopup();
+    if (!popup.classList.contains('nl-visible')) return;
+    if (e.key === 'Escape') { closePopup(); return; }
+    if (e.key !== 'Tab') return;
+    // Manté el focus dins del diàleg
+    var f = popup.querySelectorAll('button, input:not([type=hidden]):not([tabindex="-1"]), a[href]');
+    if (!f.length) return;
+    var first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   });
 
   // Al enviar el formulario, marcar como suscrito para no volver a mostrar

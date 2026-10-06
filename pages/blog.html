@@ -226,9 +226,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </head>
 <body>
+<a class="skip-link t" href="#main" data-es="Saltar al contenido" data-ca="Salta al contingut">Saltar al contenido</a>
 
 <!-- NAV -->
-<nav id="nav">
+<nav id="nav" aria-label="Menú principal">
   <div class="nav-inner">
     <a href="../index.html" class="nav-logo">
       <img src="../assets/img/logo.png"
@@ -304,6 +305,8 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </nav>
 
+<main id="main">
+
 <!-- HERO -->
 <div class="blog-hero">
   <div class="blog-hero-bg"></div>
@@ -369,10 +372,10 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
     <div class="destacat-body">
       <div class="destacat-meta">
-        <span class="destacat-badge cat-cronica destacat-cat t" style="position:static;font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;color:#fff;" data-es="Crónica" data-ca="Crònica">Crónica</span>
+        <span class="destacat-badge cat-cronica destacat-cat t" style="position:static;font-size:.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;color:var(--navy-dark);" data-es="Crónica" data-ca="Crònica">Crónica</span>
         <span class="destacat-data t" data-es="7ª visita · 1 de octubre de 2026" data-ca="7a visita · 1 d'octubre de 2026">7ª visita · 1 de octubre de 2026</span>
       </div>
-      <h2 class="destacat-title t" data-es="El Galliner de l'Antiquari · Tarragona<br><em style=&quot;font-style:italic;color:var(--gold);font-size:.8em;&quot;>Un parlamento que acabó en Palencia</em>" data-ca="El Galliner de l'Antiquari · Tarragona<br><em style=&quot;font-style:italic;color:var(--gold);font-size:.8em;&quot;>Un parlament que va acabar a Palència</em>">El Galliner de l'Antiquari · Tarragona<br><em style="font-style:italic;color:var(--gold);font-size:.8em;">Un parlamento que acabó en Palencia</em></h2>
+      <h2 class="destacat-title t" data-es="El Galliner de l'Antiquari · Tarragona<br><em style=&quot;font-style:italic;color:var(--gold);font-size:.8em;&quot;>Un parlamento que acabó en Palencia</em>" data-ca="El Galliner de l'Antiquari · Tarragona<br><em style=&quot;font-style:italic;color:var(--gold);font-size:.8em;&quot;>Un parlament que va acabar a Palència</em>">El Galliner de l'Antiquari · Tarragona<br><em style="font-style:italic;color:var(--gold-text);font-size:.8em;">Un parlamento que acabó en Palencia</em></h2>
       <p class="destacat-exc t" data-es="Treinta y dos comensales junto al muro del foro romano, el menú de Tymur Duka y un parlamento del presidente que acabó en Palencia. Y, en la cocina, un chef joven con mucho por delante." data-ca="Trenta-dos comensals al costat del mur del fòrum romà, el menú de Tymur Duka i un parlament del president que va acabar a Palència. I, a la cuina, un xef jove amb molt per endavant.">Treinta y dos comensales junto al muro del foro romano, el menú de Tymur Duka y un parlamento del presidente que acabó en Palencia. Y, en la cocina, un chef joven con mucho por delante.</p>
       <a href="../entrades/galliner-cronica-2026.html" class="destacat-link t" data-es="Leer la crónica →" data-ca="Llegir la crònica →">Leer la crónica →</a>
     </div>
@@ -1447,7 +1450,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 data-es="APUNTARME" data-ca="APUNTAR-ME"
                 style="padding:13px 20px;background:var(--gold);color:var(--navy-dark);font-size:.6rem;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;font-family:inherit;border:none;cursor:pointer;white-space:nowrap;transition:opacity .2s;">APUNTARME</button>
       </form>
-      <p class="t" style="color:rgba(255,255,255,.28);font-size:.73rem;"
+      <p class="t" style="color:rgba(255,255,255,.7);font-size:.73rem;"
          data-es="Sin spam. Date de baja cuando quieras."
          data-ca="Sense spam. Dona't de baixa quan vulguis.">Sin spam. Date de baja cuando quieras.</p>
     </div>
@@ -1497,6 +1500,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 
 <!-- FOOTER -->
+</main>
+
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">

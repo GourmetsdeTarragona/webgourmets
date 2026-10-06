@@ -203,9 +203,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </style>
 </head>
 <body>
+<a class="skip-link t" href="#main" data-es="Saltar al contenido" data-ca="Salta al contingut">Saltar al contenido</a>
 
 <!-- NAV -->
-<nav id="nav">
+<nav id="nav" aria-label="Menú principal">
   <div class="nav-inner">
 
     <a href="../index.html" class="nav-logo">
@@ -284,6 +285,8 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </div>
 </nav>
+
+<main id="main">
 
 <!-- HERO -->
 <div class="page-hero">
@@ -509,7 +512,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       <!-- Mapa -->
       <div style="position:relative;">
-        <div id="gdt-mapa" style="width:100%;height:540px;"></div>
+        <div id="gdt-mapa" role="region" aria-label="Mapa de los restaurantes visitados. La misma lista está en las fichas de al lado." style="width:100%;height:540px;"></div>
         <!-- Llegenda -->
         <div style="position:absolute;bottom:16px;left:16px;z-index:1000;background:rgba(11,22,38,.88);backdrop-filter:blur(6px);padding:14px 18px;display:flex;flex-direction:column;gap:8px;pointer-events:none;">
           <div style="display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;border-radius:50%;background:#b8924a;display:inline-block;"></span><span class="t" style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</span></div>
@@ -672,7 +675,7 @@ function gdtImgErr(el){el.style.display='none';if(el.parentNode)el.parentNode.st
       +"<div style='font-size:1.05rem;font-weight:700;color:#0b1626;margin-bottom:3px;'>"+r.nom+(r.s?" &#9733;":"")+"</div>"
       +"<div style='font-size:.75rem;color:#666;'>"+r.adr+"</div>"
       +telHtml+webHtml+"</div></div>";
-    var m=L.marker([r.lat,r.lng],{icon:icon(r.c,r.s)}).addTo(map).bindPopup(pop,{maxWidth:220});
+    var m=L.marker([r.lat,r.lng],{icon:icon(r.c,r.s),title:r.nom+" · "+r.lloc,alt:r.nom,keyboard:true}).addTo(map).bindPopup(pop,{maxWidth:220});
     m.on("mouseover",function(){ activaRestaurant(i,true); });
     m.on("mouseout",function(){ if(!m.isPopupOpen()) desactivaRestaurant(i); });
     m.on("popupopen",function(){ activaRestaurant(i,true); });
@@ -760,6 +763,8 @@ function gdtImgErr(el){el.style.display='none';if(el.parentNode)el.parentNode.st
 </section>
 
 <!-- FOOTER -->
+</main>
+
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">

@@ -169,9 +169,10 @@ document.addEventListener('DOMContentLoaded',()=>{setLang(getLang());});
 </script>
 </head>
 <body>
+<a class="skip-link t" href="#main" data-es="Saltar al contenido" data-ca="Salta al contingut">Saltar al contenido</a>
 
 <!-- NAV (idèntica a la resta del web) -->
-<nav id="nav">
+<nav id="nav" aria-label="Menú principal">
   <div class="nav-inner">
     <a href="../index.html" class="nav-logo">
       <img src="../assets/img/logo.png"
@@ -246,6 +247,8 @@ document.addEventListener('DOMContentLoaded',()=>{setLang(getLang());});
     </div>
   </div>
 </nav>
+
+<main id="main">
 
 <!-- ══ HERO ══ -->
 <section class="nl-hero">
@@ -368,6 +371,8 @@ document.addEventListener('DOMContentLoaded',()=>{setLang(getLang());});
 </section>
 
 <!-- FOOTER (idèntic als altres pàgines) -->
+</main>
+
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">

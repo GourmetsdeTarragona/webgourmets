@@ -124,3 +124,57 @@ textarea:focus-visible, [tabindex]:focus-visible, summary:focus-visible {
 /* Botó daurat per a fons foscos (navy) */
 .btn-primary.btn-gold { background: var(--gold); border-color: var(--gold); color: var(--navy-dark); }
 .btn-primary.btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); color: var(--navy-dark); }
+
+/* ---- Saltar al contingut (visible només amb teclat) ---- */
+.skip-link {
+  position: absolute; left: 12px; top: -60px; z-index: 10001;
+  background: var(--navy-dark); color: #fff; padding: 12px 18px;
+  font-size: .85rem; font-weight: 700; letter-spacing: 1px;
+}
+.skip-link:focus { top: 12px; }
+main:focus { outline: none; }
+
+/* ============================================================
+   Contrast AA a les entrades (estils de pàgina antics).
+   "body ..." guanya als <style> de cada pàgina sense !important.
+   ============================================================ */
+
+/* Daurat sobre fons clar -> daurat fosc */
+body .e-label, body .e-tambe-label, body .e-fitxa-label, body .e-programa-hora,
+body .e-menu-bloc-label, body .e-menu-bloc-title, body .e-celler-do-s, body .e-celler-vi-s,
+body .e-varietat-bloc-label, body .e-do-dato-label, body .e-equip-rol, body .e-cita-font,
+body .e-cita-autor, body .e-peli-meta, body .e-rec-lloc, body .c-label,
+body .recorregut-card-lloc, body .vtl-meta { color: var(--gold-text); }
+
+/* ...excepte on l'etiqueta va sobre navy */
+body .e-vins .e-label, body .e-trofeu-bloc .e-label { color: var(--gold-light); }
+
+/* Daurat translúcid sobre navy -> daurat clar */
+body .e-vi-num, body .e-vi-acte, body .e-vi-rest-acte, body .e-convidat-label,
+body .e-vins-label { color: var(--gold-light); }
+
+/* Blanc molt translúcid sobre navy -> llegible */
+body .e-dada-label, body .e-nl-cta-legal, body .e-vi-do, body .e-vi-rest-do,
+body .e-vins-nota, body .entrada-back, body .e-menu-desc { color: rgba(255,255,255,.78); }
+
+/* Text blanc sobre etiqueta daurada -> navy */
+body .e-nl-cta-btn, body .blog-card-cat.cat-cronica, body .e-do-bloc-tag,
+body .rest-badge.badge-visitada { color: var(--navy-dark); }
+/* Variants d'etiqueta amb fons fosc: text blanc */
+body .entrada-badge-previa, body .entrada-badge-noticia, body .entrada-badge-cultura,
+body .entrada-badge-vi { color: #fff; }
+
+/* Peus de foto grisos */
+body .e-foto-peu, body .e-foto-peu-inline { color: #5f5f5f; }
+
+/* Segona tanda (casos d'una o dues pàgines) */
+body .rest-card-lloc, body .e-palmares-premi, body .e-rest-lloc, body .e-fitxa-resum-label,
+body .e-plats-tit, body .llibre-editorial, body .contacte-info-label, body .ev-date,
+body .nl-post-date { color: var(--gold-text); }
+body .e-vins-rest-label, body .palmares-premi-label { color: var(--gold-light); }
+body .e-putt-desc, body .palmares-lloc { color: rgba(255,255,255,.78); }
+body .e-recepta-pas-num { color: var(--navy-dark); }
+
+/* Peus de foto: sense opacitat afegida */
+body .e-foto-peu, body .e-fotos-2-peu, body .e-fotos-2-peu span { color: #5f5f5f; opacity: 1; }
+body .destacat-cat.cat-cronica { color: var(--navy-dark); }

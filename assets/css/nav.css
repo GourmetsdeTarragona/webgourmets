@@ -208,3 +208,6 @@
   .nav-item > a.nav-cta { margin-left: 4px; padding: 7px 11px; }
   .nav-logo img { height: 42px; }
 }
+
+/* Desplegables també amb teclat (en tabular als enllaços interns) */
+.nav-item:focus-within .dropdown { opacity: 1; transform: translateY(0); pointer-events: auto; }

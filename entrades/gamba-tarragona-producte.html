@@ -39,7 +39,7 @@
 .entrada-hero-content{position:relative;z-index:2;padding:0 5% 64px 5.5%;max-width:800px;}
 .entrada-back{display:inline-flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:44px;transition:color .2s;}
 .entrada-back:hover{color:var(--gold);}
-.entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 14px;}
+.entrada-badge{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:var(--navy-dark);padding:6px 14px;}
 .entrada-meta-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
 .entrada-meta-info{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:18px;}
 .entrada-meta-item{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;}
@@ -141,7 +141,7 @@
 #nl-popup-overlay{position:absolute;inset:0;background:rgba(8,15,24,.72);backdrop-filter:blur(3px);}
 #nl-popup-box{position:relative;z-index:1;background:#0D1E2F;border:1px solid rgba(184,146,74,.2);max-width:420px;width:90%;padding:48px 40px 40px;text-align:center;transform:translateY(18px);transition:transform 300ms ease;box-shadow:0 32px 80px rgba(0,0,0,.5);}
 #nl-popup.nl-visible #nl-popup-box{transform:translateY(0);}
-#nl-popup-close{position:absolute;top:14px;right:18px;background:none;border:none;color:rgba(255,255,255,.3);font-size:1.4rem;cursor:pointer;line-height:1;padding:4px;transition:color .2s;}
+#nl-popup-close{position:absolute;top:8px;right:10px;background:none;border:none;color:rgba(255,255,255,.75);font-size:1.6rem;cursor:pointer;line-height:1;padding:4px;min-width:44px;min-height:44px;transition:color .2s;}
 #nl-popup-close:hover{color:rgba(255,255,255,.8);}
 #nl-popup-deco{font-size:1.2rem;color:#B8924A;opacity:.45;margin-bottom:14px;}
 #nl-popup-kicker{font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#B8924A;margin-bottom:12px;}
@@ -150,16 +150,17 @@
 #nl-popup-form{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
 #nl-popup-email{padding:13px 16px;font-size:.88rem;font-family:inherit;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#fff;outline:none;transition:border-color .2s;width:100%;box-sizing:border-box;}
 #nl-popup-email:focus{border-color:rgba(184,146,74,.55);}
-#nl-popup-btn{padding:14px;background:#B8924A;color:#fff;font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-family:inherit;border:none;cursor:pointer;transition:background .2s;}
+#nl-popup-btn{padding:14px;background:#B8924A;color:#122850;font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-family:inherit;border:none;cursor:pointer;transition:background .2s;}
 #nl-popup-btn:hover{background:#c9a05a;}
 #nl-popup-legal{font-size:.65rem;color:rgba(255,255,255,.18);}
 
 </style>
 </head>
 <body>
+<a class="skip-link t" href="#main" data-es="Saltar al contenido" data-ca="Salta al contingut">Saltar al contenido</a>
 
 <!-- NAV -->
-<nav id="nav">
+<nav id="nav" aria-label="Menú principal">
   <div class="nav-inner">
     <a href="../index.html" class="nav-logo"><img src="../assets/img/logo.png" alt="Gourmets de Tarragona" onerror="this.style.display='none'"></a>
     <div class="nav-menu">
@@ -223,7 +224,7 @@
   </div>
 </header>
 
-<main class="entrada-cos">
+<main id="main" class="entrada-cos">
 
   <!-- INTRODUCCIÓ -->
   <span class="e-label t" data-es="Producto y territorio" data-ca="Producte i territori">Producto y territorio</span>
@@ -627,6 +628,7 @@ function copiarEnllac(btn) {
   if (!popup) return;
 
   var shown = false;
+  var lastFocus = null;
 
   function showPopup() {
     if (shown) return;
@@ -646,6 +648,8 @@ function copiarEnllac(btn) {
     }
     // Actualizar textos bilingues del popup
     if (typeof setLang === 'function') setLang(lang);
+    lastFocus = document.activeElement;
+    if (emailInput) emailInput.focus({ preventScroll: true });
   }
 
   function closePopup() {
@@ -654,6 +658,7 @@ function copiarEnllac(btn) {
       popup.style.display = 'none';
     }, 300);
     document.body.style.overflow = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
     // Guardar que fue descartado por X dias
     localStorage.setItem(STORAGE_KEY, Date.now() + DAYS_HIDE * 86400000);
   }
@@ -661,7 +666,15 @@ function copiarEnllac(btn) {
   closeBtn.addEventListener('click', closePopup);
   overlay.addEventListener('click', closePopup);
   document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape') closePopup();
+    if (!popup.classList.contains('nl-visible')) return;
+    if (e.key === 'Escape') { closePopup(); return; }
+    if (e.key !== 'Tab') return;
+    // Manté el focus dins del diàleg
+    var f = popup.querySelectorAll('button, input:not([type=hidden]):not([tabindex="-1"]), a[href]');
+    if (!f.length) return;
+    var first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   });
 
   // Al enviar el formulario, marcar como suscrito para no volver a mostrar

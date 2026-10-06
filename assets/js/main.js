@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---- Hamburger ---- */
   const hamburger = document.getElementById('hamburger');
+  if (hamburger && mobileMenu) {
+    hamburger.setAttribute('aria-controls', 'mobileMenu');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
 
   function getNavHeight() {
     return nav ? nav.getBoundingClientRect().height : 68;
@@ -32,6 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu.style.top = getNavHeight() + 'px';
     mobileMenu.classList.add('open');
     hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    const firstLink = mobileMenu.querySelector('a, button');
+    if (firstLink) firstLink.focus({ preventScroll: true });
     /* Recalcular top si la nav canvia de mida (p.ex. en resize) */
     mobileMenu._resizeHandler = () => {
       mobileMenu.style.top = getNavHeight() + 'px';
@@ -39,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', mobileMenu._resizeHandler, { passive: true });
   }
 
-  function closeMobileMenu() {
+  function closeMobileMenu(returnFocus) {
     if (mobileMenu) {
       mobileMenu.classList.remove('open');
       if (mobileMenu._resizeHandler) {
@@ -47,7 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu._resizeHandler = null;
       }
     }
-    if (hamburger) hamburger.classList.remove('open');
+    if (hamburger) {
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      if (returnFocus === true) hamburger.focus();
+    }
     if (nav)       nav.classList.remove('menu-open');
     document.querySelectorAll('.mobile-sub.open').forEach(s => s.classList.remove('open'));
     document.querySelectorAll('.mobile-item.expanded').forEach(s => s.classList.remove('expanded'));
@@ -56,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hamburger && mobileMenu) {
     hamburger.addEventListener('click', e => {
       e.stopPropagation();
-      mobileMenu.classList.contains('open') ? closeMobileMenu() : openMobileMenu();
+      mobileMenu.classList.contains('open') ? closeMobileMenu(true) : openMobileMenu();
     });
 
     /* Tanca en fer clic fora — un sol listener, no s'acumula */
@@ -67,11 +78,36 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!clickDinsNav && !clickDinsMenu) closeMobileMenu();
     });
 
+    /* Esc tanca el menú i torna el focus al botó */
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMobileMenu(true);
+    });
+
     /* Tanca en clicar un link del menú mòbil */
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => setTimeout(closeMobileMenu, 80));
     });
   }
+
+  /* ---- Botons d'idioma: estat per a lectors de pantalla ---- */
+  const syncLangButtons = () => {
+    document.querySelectorAll('.lang-btn').forEach(b => {
+      const l = b.getAttribute('data-lang') || (b.id === 'btn-ca' ? 'ca' : b.id === 'btn-es' ? 'es' : null);
+      if (l) b.setAttribute('lang', l);
+      b.setAttribute('aria-pressed', b.classList.contains('active') ? 'true' : 'false');
+    });
+  };
+  syncLangButtons();
+  document.addEventListener('click', e => {
+    if (e.target.closest && e.target.closest('.lang-btn')) setTimeout(syncLangButtons, 0);
+  });
+
+  /* ---- Toggles dels submenús mòbils ---- */
+  document.querySelectorAll('.mobile-item-toggle').forEach(btn => {
+    const label = btn.closest('.mobile-item-row')?.querySelector('a, span')?.textContent.trim();
+    btn.setAttribute('aria-label', label ? 'Submenú: ' + label : 'Submenú');
+    btn.setAttribute('aria-expanded', 'false');
+  });
 
   /* ---- Scroll reveal ---- */
   const io = new IntersectionObserver(entries => {
@@ -123,5 +159,6 @@ function toggleMobileSub(btn) {
   });
 
   sub.classList.toggle('open', !isOpen);
+  btn.setAttribute('aria-expanded', String(!isOpen));
   if (item) item.classList.toggle('expanded', !isOpen);
 }
