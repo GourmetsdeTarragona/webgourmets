@@ -1,5 +1,17 @@
 [
   {
+    "slug": "oli-nou-siurana",
+    "titol_ca": "Si l'oli nou et raspa la gola — no està dolent, està acabat de fer",
+    "titol_es": "Si el aceite nuevo te raspa la garganta — no está malo, está recién hecho",
+    "resum_ca": "La picor de l'oli acabat de moldre no és un defecte: és oleocantal, el polifenol que a la gola es comporta com l'ibuprofè. Guia de l'oli novell de la DOP Siurana.",
+    "resum_es": "El picor del aceite recién molido no es un defecto: es oleocanthal, el polifenol que en la garganta se comporta como el ibuprofeno. Guía del oli novell de la DOP Siurana.",
+    "categoria": "curiositats",
+    "data": "2026-11-06",
+    "min_lectura": 6,
+    "color_bg": "#3d4a1f",
+    "img": "assets/img/oli/oliveres-cabaces.jpg"
+  },
+  {
     "slug": "que-som-gourmets-tarragona",
     "titol_ca": "Vint-i-vuit anys sopant junts — què és Gourmets de Tarragona",
     "titol_es": "Veintiocho años cenando juntos — qué es Gourmets de Tarragona",
