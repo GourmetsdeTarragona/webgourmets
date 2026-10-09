@@ -14,16 +14,16 @@
 <meta property="og:url" content="https://www.gourmetsdetarragona.com/entrades/estrelles-michelin-tarragona.html">
 <meta property="og:title" content="Las ocho estrellas Michelin de la provincia · Gourmets de Tarragona">
 <meta property="og:description" content="Dos en Cambrils, cuatro en las Terres de l'Ebre y ninguna en la capital. El mapa de las estrellas del territorio.">
-<meta property="og:image" content="https://gourmetsdetarragona.com/assets/img/vins/paisatge-tarragona.jpg">
+<meta property="og:image" content="https://gourmetsdetarragona.com/assets/img/michelin/canbosch.jpg">
 <meta property="og:site_name" content="Gourmets de Tarragona">
 <meta property="og:locale" content="es_ES">
 <meta property="og:locale:alternate" content="ca_ES">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Las ocho estrellas Michelin de la provincia">
 <meta name="twitter:description" content="Dos en Cambrils, cuatro en las Terres de l'Ebre y ninguna en la capital.">
-<meta name="twitter:image" content="https://gourmetsdetarragona.com/assets/img/vins/paisatge-tarragona.jpg">
+<meta name="twitter:image" content="https://gourmetsdetarragona.com/assets/img/michelin/canbosch.jpg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Las ocho estrellas Michelin de la provincia de Tarragona","description":"El mapa de las ocho estrellas de la guia 2026, los dieciseis recomendados y la que se marcha: Deliranto cierra en Salou y se traslada a Andorra.","image":"https://gourmetsdetarragona.com/assets/img/vins/paisatge-tarragona.jpg","datePublished":"2026-10-09","author":{"@type":"Organization","name":"Gourmets de Tarragona"},"publisher":{"@type":"Organization","name":"Associació Gourmets de Tarragona","url":"https://gourmetsdetarragona.com"},"keywords":"estrellas Michelin Tarragona, Can Bosch, Rincon de Diego, Quatre Molins, Villa Retiro, Les Moles, Antic Moli, Citrus del Tancat, Deliranto"}
+{"@context":"https://schema.org","@type":"Article","headline":"Las ocho estrellas Michelin de la provincia de Tarragona","description":"El mapa de las ocho estrellas de la guia 2026, los dieciseis recomendados y la que se marcha: Deliranto cierra en Salou y se traslada a Andorra.","image":"https://gourmetsdetarragona.com/assets/img/michelin/canbosch.jpg","datePublished":"2026-10-09","author":{"@type":"Organization","name":"Gourmets de Tarragona"},"publisher":{"@type":"Organization","name":"Associació Gourmets de Tarragona","url":"https://gourmetsdetarragona.com"},"keywords":"estrellas Michelin Tarragona, Can Bosch, Rincon de Diego, Quatre Molins, Villa Retiro, Les Moles, Antic Moli, Citrus del Tancat, Deliranto"}
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.gourmetsdetarragona.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.gourmetsdetarragona.com/pages/blog.html"},{"@type":"ListItem","position":3,"name":"Las ocho estrellas Michelin de la provincia","item":"https://www.gourmetsdetarragona.com/entrades/estrelles-michelin-tarragona.html"}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,6 +75,13 @@
 .e-foto-2col figure{margin:0;}
 .e-foto-2col img{width:100%;height:280px;object-fit:cover;display:block;}
 .e-foto-2col figcaption{font-size:.72rem;color:var(--muted);font-style:italic;margin-top:8px;padding-left:8px;border-left:2px solid var(--gold);opacity:.8;line-height:1.5;}
+.e-foto-graella{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:48px 0;}
+.e-foto-graella figure{margin:0;}
+.e-foto-graella img{width:100%;height:210px;object-fit:cover;display:block;}
+.e-foto-graella figcaption{font-size:.68rem;color:var(--muted);font-style:italic;margin-top:7px;padding-left:7px;border-left:2px solid var(--gold);opacity:.8;line-height:1.45;}
+.e-foto-mitja{margin:48px auto;max-width:560px;}
+.e-foto-mitja img{width:100%;height:auto;display:block;}
+.e-foto-mitja figcaption{font-size:.72rem;color:var(--muted);font-style:italic;margin-top:8px;padding-left:8px;border-left:2px solid var(--gold);opacity:.8;line-height:1.5;}
 .e-compartir{position:relative;margin:64px 0 0;padding:56px 40px 52px;background:linear-gradient(135deg,#0b1626 0%,#122850 100%);overflow:hidden;}
 .e-compartir::before{content:'';position:absolute;top:-1px;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);}
 .e-compartir::after{content:'"';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:14rem;font-weight:700;color:rgba(184,146,74,.06);line-height:1;pointer-events:none;user-select:none;}
@@ -117,6 +124,8 @@
   .e-dada{border-right:none;border-bottom:1px solid rgba(255,255,255,.08);padding:20px 8px;}
   .e-cita{padding:32px 24px;}
   .e-foto-2col{grid-template-columns:1fr;}
+  .e-foto-graella{grid-template-columns:1fr 1fr;}
+  .e-foto-graella img{height:170px;}
   .e-compartir{padding:40px 24px 36px;}
   .e-compartir::after{font-size:8rem;}
   .e-compartir-frase{font-size:1.15rem;}
@@ -223,7 +232,7 @@
 
 <!-- HERO -->
 <header class="entrada-hero">
-  <div class="entrada-hero-bg" style="background-image:url('../assets/img/vins/paisatge-tarragona.jpg');"></div>
+  <div class="entrada-hero-bg" style="background-image:url('../assets/img/michelin/canbosch.jpg');"></div>
   <div class="entrada-hero-grad"></div>
   <div class="entrada-hero-line"></div>
   <div class="entrada-hero-content">
@@ -272,6 +281,33 @@
     </p>
   </div>
 
+
+  <div class="e-foto-graella">
+    <figure>
+      <img loading="lazy" decoding="async" src="../assets/img/michelin/rincondediego.jpg" alt="Aperitius del Rincón de Diego" onerror="this.parentElement.style.display='none'">
+      <figcaption class="t" data-es="Rincón de Diego · Cambrils" data-ca="Rincón de Diego · Cambrils">Rincón de Diego · Cambrils</figcaption>
+    </figure>
+    <figure>
+      <img loading="lazy" decoding="async" src="../assets/img/michelin/quatremolins.jpg" alt="Rafel Muria emplatant a Quatre Molins" onerror="this.parentElement.style.display='none'">
+      <figcaption class="t" data-es="Rafel Muria · Quatre Molins, Cornudella de Montsant" data-ca="Rafel Muria · Quatre Molins, Cornudella de Montsant">Rafel Muria · Quatre Molins, Cornudella de Montsant</figcaption>
+    </figure>
+    <figure>
+      <img loading="lazy" decoding="async" src="../assets/img/michelin/villaretiro.jpg" alt="Fran López a la cuina de Villa Retiro" onerror="this.parentElement.style.display='none'">
+      <figcaption class="t" data-es="Fran López · Villa Retiro, Xerta" data-ca="Fran López · Villa Retiro, Xerta">Fran López · Villa Retiro, Xerta</figcaption>
+    </figure>
+    <figure>
+      <img loading="lazy" decoding="async" src="../assets/img/michelin/lesmoles.jpg" alt="L'equip de Les Moles" onerror="this.parentElement.style.display='none'">
+      <figcaption class="t" data-es="El equipo de Les Moles · Ulldecona" data-ca="L'equip de Les Moles · Ulldecona">El equipo de Les Moles · Ulldecona</figcaption>
+    </figure>
+    <figure>
+      <img loading="lazy" decoding="async" src="../assets/img/michelin/anticmoli.jpg" alt="Vicent Guimerà i Andrea Ferrater a L'Antic Molí" onerror="this.parentElement.style.display='none'">
+      <figcaption class="t" data-es="Vicent Guimerà y Andrea Ferrater · L'Antic Molí, Ulldecona" data-ca="Vicent Guimerà i Andrea Ferrater · L'Antic Molí, Ulldecona">Vicent Guimerà y Andrea Ferrater · L'Antic Molí, Ulldecona</figcaption>
+    </figure>
+    <figure>
+      <img loading="lazy" decoding="async" src="../assets/img/michelin/citrus.jpg" alt="Aitor López a Citrus del Tancat" onerror="this.parentElement.style.display='none'">
+      <figcaption class="t" data-es="Aitor López · Citrus del Tancat, Alcanar" data-ca="Aitor López · Citrus del Tancat, Alcanar">Aitor López · Citrus del Tancat, Alcanar</figcaption>
+    </figure>
+  </div>
   <div class="e-divider"></div>
   <span class="e-label t" data-es="La que se va" data-ca="La que se'n va">La que se va</span>
   <h2 class="e-title t" data-es="Deliranto cierra el 31 de octubre y se lleva la estrella a Andorra" data-ca="Deliranto tanca el 31 d'octubre i s'endú l'estrella a Andorra">Deliranto cierra el 31 de octubre y se lleva la estrella a Andorra</h2>
@@ -285,6 +321,11 @@
      data-ca="El motiu que ha explicat el cuiner és que es va acabar el vincle amb la propietat del local i va haver de buscar lloc. I aquí hi ha la dada que ens hauria de fer pensar: <strong>volia quedar-se al Camp de Tarragona i no va trobar inversor</strong>. Una estrella no se'n va d'un territori per caprici; se'n va quan ningú de casa no hi posa els diners perquè es quedi.">
     El motivo que ha explicado el cocinero es que se acabó el vínculo con la propiedad del local y tuvo que buscar sitio. Y ahí está el dato que debería hacernos pensar: <strong>quiso quedarse en el Camp de Tarragona y no encontró inversor</strong>. Una estrella no se va de un territorio por capricho; se va cuando nadie de casa pone el dinero para que se quede.
   </p>
+
+  <figure class="e-foto-mitja">
+    <img loading="lazy" decoding="async" src="../assets/img/michelin/deliranto.jpg" alt="Pep Moreno, de Deliranto" onerror="this.parentElement.style.display='none'">
+    <figcaption class="t" data-es="Pep Moreno, en el comedor de Deliranto. El 31 de octubre, el último servicio en Salou." data-ca="Pep Moreno, al menjador del Deliranto. El 31 d'octubre, el darrer servei a Salou.">Pep Moreno, en el comedor de Deliranto. El 31 de octubre, el último servicio en Salou.</figcaption>
+  </figure>
   <div class="e-divider"></div>
   <span class="e-label t" data-es="Lo que dice el mapa" data-ca="El que diu el mapa">Lo que dice el mapa</span>
   <h2 class="e-title t" data-es="Dos pueblos de pescadores y una capital sin estrella" data-ca="Dos pobles de pescadors i una capital sense estrella">Dos pueblos de pescadores y una capital sin estrella</h2>
@@ -298,6 +339,17 @@
      data-ca="I queda la pregunta incòmoda: <strong>la ciutat de Tarragona no té cap estrella.</strong> Té producte —la llotja del <a href='serrallo-subhasta-peix.html' style='color:var(--gold);border-bottom:1px solid rgba(184,146,74,.4);'>Serrallo</a> a deu minuts—, té història i té cuiners. El que no ha tingut encara és una casa que converteixi tot això en el tipus de proposta que la guia reconeix.">
     Y queda la pregunta incómoda: <strong>la ciudad de Tarragona no tiene ninguna estrella.</strong> Tiene producto —la lonja del <a href="serrallo-subhasta-peix.html" style="color:var(--gold);border-bottom:1px solid rgba(184,146,74,.4);">Serrallo</a> a diez minutos—, tiene historia y tiene cocineros. Lo que no ha tenido todavía es una casa que convierta todo eso en el tipo de propuesta que la guía reconoce.
   </p>
+
+  <div class="e-foto-2col">
+    <figure>
+      <img loading="lazy" decoding="async" src="../assets/img/michelin/cambrils-nit.jpg" alt="El port de Cambrils de nit" onerror="this.parentElement.style.display='none'">
+      <figcaption class="t" data-es="Cambrils de noche: dos estrellas en un pueblo de pescadores." data-ca="Cambrils de nit: dues estrelles en un poble de pescadors.">Cambrils de noche: dos estrellas en un pueblo de pescadores.</figcaption>
+    </figure>
+    <figure>
+      <img loading="lazy" decoding="async" src="../assets/img/serrallo/serrallo-moll.jpg" alt="El moll del Serrallo, a Tarragona" onerror="this.parentElement.style.display='none'">
+      <figcaption class="t" data-es="El Serrallo, a diez minutos de una capital que no tiene ninguna." data-ca="El Serrallo, a deu minuts d'una capital que no en té cap.">El Serrallo, a diez minutos de una capital que no tiene ninguna.</figcaption>
+    </figure>
+  </div>
   <div class="e-divider"></div>
   <span class="e-label t" data-es="Los otros dieciséis" data-ca="Els altres setze">Los otros dieciséis</span>
   <h2 class="e-title t" data-es="La lista que casi nadie mira" data-ca="La llista que gairebé ningú mira">La lista que casi nadie mira</h2>
@@ -315,8 +367,8 @@
     Las ocho visitas anuales de la asociación no se eligen por guía, se eligen por criterio propio: por eso en el recorrido hay desde casas de mantel largo hasta cocinas de barrio. <strong>Una estrella es una información útil, no un veredicto.</strong> Dicho esto, saber dónde están y de quién son ayuda a entender el territorio, y este año ayuda también a entender lo que se nos va.
   </p>
   <p style="font-size:.72rem;color:var(--muted);opacity:.6;font-style:italic;margin-top:32px;padding-top:16px;border-top:1px solid var(--border);" class="t"
-     data-es="Fuentes consultadas: Guía Michelin España 2026, Diari de Tarragona, Diari Més, Canal 21 Ebre, La Ciutat, Patronat de Turisme de Salou. Imagen: archivo propio."
-     data-ca="Fonts consultades: Guia Michelin Espanya 2026, Diari de Tarragona, Diari Més, Canal 21 Ebre, La Ciutat, Patronat de Turisme de Salou. Imatge: arxiu propi.">Fuentes consultadas: Guía Michelin España 2026, Diari de Tarragona, Diari Més, Canal 21 Ebre, La Ciutat, Patronat de Turisme de Salou. Imagen: archivo propio.</p>
+     data-es="Fuentes consultadas: Guía Michelin España 2026, Diari de Tarragona, Diari Més, Canal 21 Ebre, La Ciutat, Patronat de Turisme de Salou. Imágenes: material de prensa y webs de los propios restaurantes (Can Bosch, Rincón de Diego, Quatre Molins, Villa Retiro, Les Moles, L&#39;Antic Molí, Citrus del Tancat) y medios locales. El Serrallo, archivo propio."
+     data-ca="Fonts consultades: Guia Michelin Espanya 2026, Diari de Tarragona, Diari Més, Canal 21 Ebre, La Ciutat, Patronat de Turisme de Salou. Imatges: material de premsa i webs dels mateixos restaurants (Can Bosch, Rincón de Diego, Quatre Molins, Villa Retiro, Les Moles, L&#39;Antic Molí, Citrus del Tancat) i mitjans locals. El Serrallo, arxiu propi.">Fuentes consultadas: Guía Michelin España 2026, Diari de Tarragona, Diari Més, Canal 21 Ebre, La Ciutat, Patronat de Turisme de Salou. Imágenes: material de prensa y webs de los propios restaurantes (Can Bosch, Rincón de Diego, Quatre Molins, Villa Retiro, Les Moles, L&#39;Antic Molí, Citrus del Tancat) y medios locales. El Serrallo, archivo propio.</p>
 
   <!-- TAMBÉ ET POT INTERESSAR -->
   
