@@ -8,21 +8,21 @@
     <atom:link href="https://www.gourmetsdetarragona.com/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>Qué es Gourmets de Tarragona — veintiocho años cenando juntos</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/que-som-gourmets-tarragona.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/que-som-gourmets-tarragona.html</guid>
+      <pubDate>Fri, 09 Oct 2026 18:00:00 +0200</pubDate>
+      <description>Los estatutos se firmaron el 25 de mayo de 2001, pero las cenas venían de 1998. Ocho restaurantes por temporada, ocho criterios de voto anónimo y dos premios. No vivimos de esto: lo hacemos por afición.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/about/hero-associacio.jpg" medium="image"/>
+    </item>
+
+    <item>
       <title>Las ocho estrellas Michelin de la provincia de Tarragona</title>
       <link>https://www.gourmetsdetarragona.com/entrades/estrelles-michelin-tarragona.html</link>
       <guid>https://www.gourmetsdetarragona.com/entrades/estrelles-michelin-tarragona.html</guid>
       <pubDate>Fri, 09 Oct 2026 12:00:00 +0200</pubDate>
       <description>El mapa de las ocho estrellas de la guía 2026, los dieciséis recomendados y la que se marcha: Deliranto cierra en Salou y se traslada a Andorra.</description>
       <media:content url="https://www.gourmetsdetarragona.com/assets/img/michelin/canbosch.jpg" medium="image"/>
-    </item>
-
-    <item>
-      <title>Cambrils — de bar de pescadores a dos estrellas Michelin</title>
-      <link>https://www.gourmetsdetarragona.com/entrades/cambrils-cuina-marinera.html</link>
-      <guid>https://www.gourmetsdetarragona.com/entrades/cambrils-cuina-marinera.html</guid>
-      <pubDate>Fri, 09 Oct 2026 12:00:00 +0200</pubDate>
-      <description>Can Bosch abrió en 1969 como bar de pescadores y tiene estrella desde 1984. Rincón de Diego, desde 2005. Más de 150 restaurantes en un pueblo de pescadores.</description>
-      <media:content url="https://www.gourmetsdetarragona.com/assets/img/cambrils/port-1.jpg" medium="image"/>
     </item>
 
     <item>

@@ -1,27 +1,27 @@
 [
   {
+    "slug": "que-som-gourmets-tarragona",
+    "titol_ca": "Vint-i-vuit anys sopant junts — què és Gourmets de Tarragona",
+    "titol_es": "Veintiocho años cenando juntos — qué es Gourmets de Tarragona",
+    "resum_ca": "Sopem junts des del 1998. Vuit restaurants per temporada, vuit criteris de vot anònim i dos premis. No en vivim: ho fem per afició.",
+    "resum_es": "Salimos a cenar juntos desde 1998. Ocho restaurantes por temporada, ocho criterios de voto anónimo y dos premios. No vivimos de esto: lo hacemos por afición.",
+    "categoria": "cultura",
+    "data": "2026-10-09",
+    "min_lectura": 6,
+    "color_bg": "#122850",
+    "img": "assets/img/about/hero-associacio.jpg"
+  },
+  {
     "slug": "estrelles-michelin-tarragona",
     "titol_ca": "Les vuit estrelles Michelin de la província",
     "titol_es": "Las ocho estrellas Michelin de la provincia",
-    "resum_ca": "On són, de qui són i per què la capital no en té cap. Dues a Cambrils, els setze recomanats i el Deliranto, que tanca a Salou i se'n va a Andorra.",
-    "resum_es": "Dónde están, de quién son y por qué la capital no tiene ninguna. Dos en Cambrils, los dieciséis recomendados y el Deliranto, que cierra en Salou y se marcha a Andorra.",
+    "resum_ca": "On són, de qui són i per què la capital no en té cap. Els setze recomanats i el Deliranto, que tanca a Salou i se'n va a Andorra.",
+    "resum_es": "Dónde están, de quién son y por qué la capital no tiene ninguna. Los dieciséis recomendados y el Deliranto, que cierra en Salou y se marcha a Andorra.",
     "categoria": "noticia",
     "data": "2026-10-09",
     "min_lectura": 8,
     "color_bg": "#0b1626",
     "img": "assets/img/michelin/canbosch.jpg"
-  },
-  {
-    "slug": "cambrils-cuina-marinera",
-    "titol_ca": "Cambrils — de bar de pescadors a dues estrelles",
-    "titol_es": "Cambrils — de bar de pescadores a dos estrellas",
-    "resum_ca": "Can Bosch va obrir el 1969 com a bar de pescadors i té estrella des del 1984. Com un poble del Baix Camp va acabar amb dues de les vuit estrelles de la província.",
-    "resum_es": "Can Bosch abrió en 1969 como bar de pescadores y tiene estrella desde 1984. Cómo un pueblo del Baix Camp acabó con dos de las ocho estrellas de la provincia.",
-    "categoria": "curiositats",
-    "data": "2026-10-09",
-    "min_lectura": 7,
-    "color_bg": "#13283c",
-    "img": "assets/img/cambrils/port-1.jpg"
   },
   {
     "slug": "el-romesco",

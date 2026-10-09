@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- FILTRES — Tots:45 · Previes:7 · Cròniques:8 · Notícies:4 · Cultura:3 · Vins:7 · Events:1 · Curiositats:15 -->
+<!-- FILTRES — Tots:45 · Previes:7 · Cròniques:8 · Notícies:4 · Cultura:4 · Vins:7 · Events:1 · Curiositats:14 -->
 <div class="blog-filtres">
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <button class="filtre-btn" data-cat="cultura" onclick="filterEntrades('cultura')">
       <span class="filtre-dot" style="background:#5c6e3f;"></span>
       <span class="t" data-es="Cultura" data-ca="Cultura">Cultura</span>
-      <span class="filtre-n">3</span>
+      <span class="filtre-n">4</span>
     </button>
     <button class="filtre-btn" data-cat="vi" onclick="filterEntrades('vi')">
       <span class="filtre-dot" style="background:#6b2737;"></span>
@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <button class="filtre-btn" data-cat="curiositats" onclick="filterEntrades('curiositats')">
       <span class="filtre-dot" style="background:#8b5e3c;"></span>
       <span class="t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
-      <span class="filtre-n">15</span>
+      <span class="filtre-n">14</span>
     </button>
   </div>
 </div>
@@ -802,7 +802,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
   <div class="car-track">
   <div class="carrusel" id="car-noticies">
-    <!-- Estrelles Michelin de la província -->
+    <!-- Estrelles Michelin de la provincia -->
     <article class="blog-card" data-cat="noticia">
       <div class="blog-card-img">
         <img loading="lazy" decoding="async" src="../assets/img/michelin/canbosch.jpg" alt="Joan i Arnau Bosch a la cuina de Can Bosch" onerror="this.parentElement.style.background='#1a3a52'">
@@ -823,6 +823,29 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="../entrades/estrelles-michelin-tarragona.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
       </div>
     </article>
+
+    <!-- Qui som · l'associacio -->
+    <article class="blog-card" data-cat="cultura">
+      <div class="blog-card-img">
+        <img loading="lazy" decoding="async" src="../assets/img/about/hero-associacio.jpg" alt="Taula llarga d'un sopar dels Gourmets de Tarragona" onerror="this.parentElement.style.background='#1a3a52'">
+        <span class="blog-card-cat cat-cultura t" data-es="Cultura" data-ca="Cultura">Cultura</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="octubre de 2026" data-ca="octubre de 2026">octubre de 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es="Veintiocho años cenando juntos<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>Qué es Gourmets de Tarragona</small>"
+            data-ca="Vint-i-vuit anys sopant junts<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>Què és Gourmets de Tarragona</small>">
+          Veintiocho años cenando juntos<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">Qué es Gourmets de Tarragona</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Cenando juntos desde 1998. Ocho restaurantes al año, ocho criterios de voto anónimo y una asociación que no vive de esto: lo hace por afición."
+           data-ca="Sopant junts des del 1998. Vuit restaurants l'any, vuit criteris de vot anònim i una associació que no en viu: ho fa per afició.">
+          Cenando juntos desde 1998. Ocho restaurantes al año, ocho criterios de voto anónimo y una asociación que no vive de esto: lo hace por afición.
+        </p>
+        <a href="../entrades/que-som-gourmets-tarragona.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
 
 
     <!-- El masclet · Misericòrdia -->
@@ -1155,27 +1178,6 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
   <div class="car-track">
   <div class="carrusel" id="car-curiositats">
-    <!-- Cambrils · cuina marinera -->
-    <article class="blog-card" data-cat="curiositats">
-      <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/cambrils/port-1.jpg" alt="Port pesquer de Cambrils" onerror="this.parentElement.style.background='#1a3a52'">
-        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-meta"><span class="blog-card-data t" data-es="octubre de 2026" data-ca="octubre de 2026">octubre de 2026</span></div>
-        <h3 class="blog-card-title t"
-            data-es="Cambrils<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>De bar de pescadores a dos estrellas</small>"
-            data-ca="Cambrils<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>De bar de pescadors a dues estrelles</small>">
-          Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">De bar de pescadores a dos estrellas</small>
-        </h3>
-        <p class="blog-card-exc t"
-           data-es="Can Bosch abrió en 1969 como bar de pescadores y tiene estrella desde 1984. Hoy la lleva la tercera generación."
-           data-ca="Can Bosch va obrir el 1969 com a bar de pescadors i té estrella des del 1984. Avui la porta la tercera generació.">
-          Can Bosch abrió en 1969 como bar de pescadores y tiene estrella desde 1984. Hoy la lleva la tercera generación.
-        </p>
-        <a href="../entrades/cambrils-cuina-marinera.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
-      </div>
-    </article>
 
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
