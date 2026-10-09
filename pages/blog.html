@@ -339,12 +339,12 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- FILTRES — Tots:43 · Previes:7 · Cròniques:8 · Notícies:3 · Cultura:2 · Vins:6 · Events:1 · Curiositats:9 -->
+<!-- FILTRES — Tots:45 · Previes:7 · Cròniques:8 · Notícies:4 · Cultura:3 · Vins:7 · Events:1 · Curiositats:15 -->
 <div class="blog-filtres">
   <div class="blog-filtres-inner">
     <button class="filtre-btn actiu" data-cat="tots" onclick="filterEntrades('tots')">
       <span class="t" data-es="Todos" data-ca="Tots">Todos</span>
-      <span class="filtre-n">43</span>
+      <span class="filtre-n">45</span>
     </button>
     <button class="filtre-btn" data-cat="previa" onclick="filterEntrades('previa')">
       <span class="filtre-dot" style="background:var(--navy);"></span>
@@ -359,7 +359,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <button class="filtre-btn" data-cat="noticia" onclick="filterEntrades('noticia')">
       <span class="filtre-dot" style="background:#555;"></span>
       <span class="t" data-es="Noticias" data-ca="Notícies">Noticias</span>
-      <span class="filtre-n">3</span>
+      <span class="filtre-n">4</span>
     </button>
     <button class="filtre-btn" data-cat="cultura" onclick="filterEntrades('cultura')">
       <span class="filtre-dot" style="background:#5c6e3f;"></span>
@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <button class="filtre-btn" data-cat="curiositats" onclick="filterEntrades('curiositats')">
       <span class="filtre-dot" style="background:#8b5e3c;"></span>
       <span class="t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
-      <span class="filtre-n">14</span>
+      <span class="filtre-n">15</span>
     </button>
   </div>
 </div>
@@ -802,6 +802,28 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
   <div class="car-track">
   <div class="carrusel" id="car-noticies">
+    <!-- Estrelles Michelin de la província -->
+    <article class="blog-card" data-cat="noticia">
+      <div class="blog-card-img">
+        <img loading="lazy" decoding="async" src="../assets/img/vins/paisatge-tarragona.jpg" alt="Paisatge de la província de Tarragona" onerror="this.parentElement.style.background='#1a3a52'">
+        <span class="blog-card-cat cat-noticia t" data-es="Noticias" data-ca="Notícies">Noticias</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="octubre de 2026" data-ca="octubre de 2026">octubre de 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es="Las ocho estrellas Michelin<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>El mapa de la provincia</small>"
+            data-ca="Les vuit estrelles Michelin<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>El mapa de la província</small>">
+          Las ocho estrellas Michelin<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">El mapa de la provincia</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Dónde están, de quién son y por qué la capital no tiene ninguna. Más la que cierra en Salou y se marcha a Andorra."
+           data-ca="On són, de qui són i per què la capital no en té cap. Més la que tanca a Salou i se'n va a Andorra.">
+          Dónde están, de quién son y por qué la capital no tiene ninguna. Más la que cierra en Salou y se marcha a Andorra.
+        </p>
+        <a href="../entrades/estrelles-michelin-tarragona.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
 
     <!-- El masclet · Misericòrdia -->
     <article class="blog-card" data-cat="cultura">
@@ -1133,6 +1155,28 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
   <div class="car-track">
   <div class="carrusel" id="car-curiositats">
+    <!-- Cambrils · cuina marinera -->
+    <article class="blog-card" data-cat="curiositats">
+      <div class="blog-card-img">
+        <img loading="lazy" decoding="async" src="../assets/img/cambrils/port-1.jpg" alt="Port pesquer de Cambrils" onerror="this.parentElement.style.background='#1a3a52'">
+        <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta"><span class="blog-card-data t" data-es="octubre de 2026" data-ca="octubre de 2026">octubre de 2026</span></div>
+        <h3 class="blog-card-title t"
+            data-es="Cambrils<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>De bar de pescadores a dos estrellas</small>"
+            data-ca="Cambrils<br><small style=&quot;font-family:inherit;font-size:.78rem;color:#888;font-weight:300;&quot;>De bar de pescadors a dues estrelles</small>">
+          Cambrils<br><small style="font-family:inherit;font-size:.78rem;color:#888;font-weight:300;">De bar de pescadores a dos estrellas</small>
+        </h3>
+        <p class="blog-card-exc t"
+           data-es="Can Bosch abrió en 1969 como bar de pescadores y tiene estrella desde 1984. Hoy la lleva la tercera generación."
+           data-ca="Can Bosch va obrir el 1969 com a bar de pescadors i té estrella des del 1984. Avui la porta la tercera generació.">
+          Can Bosch abrió en 1969 como bar de pescadores y tiene estrella desde 1984. Hoy la lleva la tercera generación.
+        </p>
+        <a href="../entrades/cambrils-cuina-marinera.html" class="blog-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</a>
+      </div>
+    </article>
+
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
         <img loading="lazy" decoding="async" src="../assets/img/romesco/romesco-guisat.jpg" alt="El Romesco de Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
