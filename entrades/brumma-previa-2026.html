@@ -228,6 +228,26 @@
 #nl-popup-legal{font-size:.65rem;color:rgba(255,255,255,.18);}
 
 </style>
+<script>
+/* idioma: resol abans de pintar (parametre ?lang=, preferencia guardada o idioma del navegador) */
+(function(){try{
+  var p = new URLSearchParams(location.search).get('lang');
+  var saved = localStorage.getItem('gdt-lang');
+  var l = (p === 'ca' || p === 'es') ? p
+        : (saved || ((navigator.language || 'es').toLowerCase().indexOf('ca') === 0 ? 'ca' : 'es'));
+  localStorage.setItem('gdt-lang', l);
+  document.documentElement.setAttribute('lang', l);
+  if (l !== 'es') {
+    var st = document.createElement('style');
+    st.id = 'gdt-lang-hold';
+    st.textContent = 'body{visibility:hidden}';
+    document.head.appendChild(st);
+    var drop = function(){ var s = document.getElementById('gdt-lang-hold'); if (s) s.remove(); };
+    document.addEventListener('DOMContentLoaded', drop);
+    setTimeout(drop, 1200);
+  }
+}catch(e){}})();
+</script>
 </head>
 <body>
 <a class="skip-link t" href="#main" data-es="Saltar al contenido" data-ca="Salta al contingut">Saltar al contenido</a>
@@ -774,7 +794,7 @@ var T = {
   brumma_prev_cta_btn_prox:{es:'Crónica · Próximamente',ca:'Crònica · Properament'}
 };
 
-var currentLang = localStorage.getItem('gdt-lang') || 'es';
+var currentLang = (function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ca'||p==='es'){localStorage.setItem('gdt-lang',p);return p;}return localStorage.getItem('gdt-lang')||((navigator.language||'es').toLowerCase().indexOf('ca')===0?'ca':'es');}catch(e){return 'es';}})();
 function applyTranslations(lang) {
   document.querySelectorAll('[data-i18n]').forEach(function(el) {
     var k = el.getAttribute('data-i18n');
@@ -787,7 +807,8 @@ function applyTranslations(lang) {
   });
   document.querySelectorAll('[data-es]').forEach(function(el){ var v=el.getAttribute('data-'+lang); if(v!==null)el.innerHTML=v; });
 }
-function setLang(lang) { currentLang = lang; localStorage.setItem('gdt-lang', lang); applyTranslations(lang); }
+function setLang(lang) { currentLang = lang; localStorage.setItem('gdt-lang', lang);
+  try{var _u=new URL(location.href);if(lang==='es'){_u.searchParams.delete('lang');}else{_u.searchParams.set('lang',lang);}history.replaceState(null,'',_u);}catch(e){} applyTranslations(lang); }
 applyTranslations(currentLang);
 </script>
 <script src="../assets/js/main.js?v=20261007"></script>
@@ -802,7 +823,7 @@ applyTranslations(currentLang);
   if(fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
   if(x)  x.href  = 'https://x.com/intent/tweet?url=' + url + '&text=' + titol;
   function applyShareLang(){
-    var lang = localStorage.getItem('gdt-lang') || 'es';
+    var lang = (function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ca'||p==='es'){localStorage.setItem('gdt-lang',p);return p;}return localStorage.getItem('gdt-lang')||((navigator.language||'es').toLowerCase().indexOf('ca')===0?'ca':'es');}catch(e){return 'es';}})();
     document.querySelectorAll('.e-compartir [data-es]').forEach(function(el){
       var v = el.getAttribute('data-' + lang);
       if(v) el.innerHTML = v;
@@ -892,7 +913,7 @@ function copiarEnllac(btn){
     });
     document.body.style.overflow = 'hidden';
     // Actualizar placeholder segun idioma
-    var lang = localStorage.getItem('gdt-lang') || 'es';
+    var lang = (function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ca'||p==='es'){localStorage.setItem('gdt-lang',p);return p;}return localStorage.getItem('gdt-lang')||((navigator.language||'es').toLowerCase().indexOf('ca')===0?'ca':'es');}catch(e){return 'es';}})();
     var emailInput = document.getElementById('nl-popup-email');
     if (emailInput) {
       emailInput.placeholder = emailInput.getAttribute('data-placeholder-' + lang) || emailInput.placeholder;

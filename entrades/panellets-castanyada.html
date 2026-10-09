@@ -157,6 +157,26 @@
 #nl-popup-legal{font-size:.65rem;color:rgba(255,255,255,.18);}
 
 </style>
+<script>
+/* idioma: resol abans de pintar (parametre ?lang=, preferencia guardada o idioma del navegador) */
+(function(){try{
+  var p = new URLSearchParams(location.search).get('lang');
+  var saved = localStorage.getItem('gdt-lang');
+  var l = (p === 'ca' || p === 'es') ? p
+        : (saved || ((navigator.language || 'es').toLowerCase().indexOf('ca') === 0 ? 'ca' : 'es'));
+  localStorage.setItem('gdt-lang', l);
+  document.documentElement.setAttribute('lang', l);
+  if (l !== 'es') {
+    var st = document.createElement('style');
+    st.id = 'gdt-lang-hold';
+    st.textContent = 'body{visibility:hidden}';
+    document.head.appendChild(st);
+    var drop = function(){ var s = document.getElementById('gdt-lang-hold'); if (s) s.remove(); };
+    document.addEventListener('DOMContentLoaded', drop);
+    setTimeout(drop, 1200);
+  }
+}catch(e){}})();
+</script>
 </head>
 <body>
 <a class="skip-link t" href="#main" data-es="Saltar al contenido" data-ca="Salta al contingut">Saltar al contenido</a>
@@ -356,7 +376,7 @@
   <span class="e-label t" data-es="El vino" data-ca="El vi">El vino</span>
   <h2 class="e-title t" data-es="El moscatel no es un añadido: es parte del premio" data-ca="El moscatell no és un afegit: és part del premi">El moscatel no es un añadido: es parte del premio</h2>
   <div class="e-moment">
-    <p class="e-moment-title">Qué beber · <em>Y por qué estaba ahí desde el principio</em></p>
+    <p class="e-moment-title t" data-es="Qué beber · <em>Y por qué estaba ahí desde el principio</em>" data-ca="Què beure · <em>I per què hi era des del principi</em>">Qué beber · <em>Y por qué estaba ahí desde el principio</em></p>
     <p class="e-moment-p t"
        data-es="Fíjate en lo que reparte la rifa: confitura, panellets y <strong>moscatel</strong>. El vino dulce no es un maridaje inventado por un sumiller; está dentro de la tradición desde que los vecinos subían al campanario con una botella. Y aquí tenemos con qué: los <a href=&quot;vino-tarragona.html&quot; style=&quot;color:var(--gold);border-bottom:1px solid rgba(184,146,74,.4);&quot;>vinos licorosos de la DO Tarragona</a>, el Tarragona Clàssic entre ellos, son históricos y siguen siendo de los grandes olvidados fuera del territorio. Un panellet de piñones con un dulce de garnacha es una combinación local de arriba abajo."
        data-ca="Fixa't en el que reparteix la rifa: confitura, panellets i <strong>moscatell</strong>. El vi dolç no és un maridatge inventat per cap sommelier; és dins la tradició des que els veïns pujaven al campanar amb una ampolla. I aquí en tenim: els <a href=&quot;vino-tarragona.html&quot; style=&quot;color:var(--gold);border-bottom:1px solid rgba(184,146,74,.4);&quot;>vins licorosos de la DO Tarragona</a>, el Tarragona Clàssic entre ells, són històrics i continuen sent dels grans oblidats fora del territori. Un panellet de pinyons amb un dolç de garnatxa és una combinació local de dalt a baix.">
@@ -507,10 +527,11 @@
 </footer>
 
 <script>
-var currentLang = localStorage.getItem('gdt-lang') || 'es';
+var currentLang = (function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ca'||p==='es'){localStorage.setItem('gdt-lang',p);return p;}return localStorage.getItem('gdt-lang')||((navigator.language||'es').toLowerCase().indexOf('ca')===0?'ca':'es');}catch(e){return 'es';}})();
 function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('gdt-lang', lang);
+  try{var _u=new URL(location.href);if(lang==='es'){_u.searchParams.delete('lang');}else{_u.searchParams.set('lang',lang);}history.replaceState(null,'',_u);}catch(e){}
   document.querySelectorAll('.t').forEach(function(el) {
     var val = el.getAttribute('data-' + lang);
     if (val !== null) el.innerHTML = val;
@@ -612,7 +633,7 @@ function copiarEnllac(btn) {
     });
     document.body.style.overflow = 'hidden';
     // Actualizar placeholder segun idioma
-    var lang = localStorage.getItem('gdt-lang') || 'es';
+    var lang = (function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ca'||p==='es'){localStorage.setItem('gdt-lang',p);return p;}return localStorage.getItem('gdt-lang')||((navigator.language||'es').toLowerCase().indexOf('ca')===0?'ca':'es');}catch(e){return 'es';}})();
     var emailInput = document.getElementById('nl-popup-email');
     if (emailInput) {
       emailInput.placeholder = emailInput.getAttribute('data-placeholder-' + lang) || emailInput.placeholder;

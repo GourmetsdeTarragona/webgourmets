@@ -145,10 +145,11 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Les Dunes · Crònica · Gourmets de Tarragona","description":"Crónica de la 6ª visita de los Gourmets de Tarragona al restaurante Les Dunes, Riumar, Delta del Ebro. Septiembre de 2026.","image":"https://www.gourmetsdetarragona.com/assets/img/lesdunes/cronica/sala-taula-imperial.jpg","url":"https://www.gourmetsdetarragona.com/entrades/les-dunes-cronica-2026.html","datePublished":"2026-09-08","inLanguage":["es","ca"],"author":{"@type":"Organization","name":"Gourmets de Tarragona","url":"https://www.gourmetsdetarragona.com"},"publisher":{"@type":"Organization","name":"Gourmets de Tarragona","url":"https://www.gourmetsdetarragona.com/","logo":{"@type":"ImageObject","url":"https://www.gourmetsdetarragona.com/assets/img/logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gourmetsdetarragona.com/entrades/les-dunes-cronica-2026.html"},"dateModified":"2026-09-08"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.gourmetsdetarragona.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.gourmetsdetarragona.com/pages/blog.html"},{"@type":"ListItem","position":3,"name":"Les Dunes","item":"https://www.gourmetsdetarragona.com/entrades/les-dunes-cronica-2026.html"}]}</script>
 <script>
-var currentLang = localStorage.getItem('gdt-lang') || 'es';
+var currentLang = (function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ca'||p==='es'){localStorage.setItem('gdt-lang',p);return p;}return localStorage.getItem('gdt-lang')||((navigator.language||'es').toLowerCase().indexOf('ca')===0?'ca':'es');}catch(e){return 'es';}})();
 function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('gdt-lang', lang);
+  try{var _u=new URL(location.href);if(lang==='es'){_u.searchParams.delete('lang');}else{_u.searchParams.set('lang',lang);}history.replaceState(null,'',_u);}catch(e){}
   document.querySelectorAll('.t').forEach(function(el) {
     var val = el.getAttribute('data-' + lang);
     if (val !== null) el.innerHTML = val;
@@ -195,6 +196,26 @@ function setLang(lang) {
 #nl-popup-legal{font-size:.65rem;color:rgba(255,255,255,.18);}
 
 </style>
+<script>
+/* idioma: resol abans de pintar (parametre ?lang=, preferencia guardada o idioma del navegador) */
+(function(){try{
+  var p = new URLSearchParams(location.search).get('lang');
+  var saved = localStorage.getItem('gdt-lang');
+  var l = (p === 'ca' || p === 'es') ? p
+        : (saved || ((navigator.language || 'es').toLowerCase().indexOf('ca') === 0 ? 'ca' : 'es'));
+  localStorage.setItem('gdt-lang', l);
+  document.documentElement.setAttribute('lang', l);
+  if (l !== 'es') {
+    var st = document.createElement('style');
+    st.id = 'gdt-lang-hold';
+    st.textContent = 'body{visibility:hidden}';
+    document.head.appendChild(st);
+    var drop = function(){ var s = document.getElementById('gdt-lang-hold'); if (s) s.remove(); };
+    document.addEventListener('DOMContentLoaded', drop);
+    setTimeout(drop, 1200);
+  }
+}catch(e){}})();
+</script>
 </head>
 <body>
 <a class="skip-link t" href="#main" data-es="Saltar al contenido" data-ca="Salta al contingut">Saltar al contenido</a>
@@ -768,7 +789,7 @@ function setLang(lang) {
 </footer>
 
 <script>
-var currentLang = localStorage.getItem('gdt-lang') || 'es';
+var currentLang = (function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ca'||p==='es'){localStorage.setItem('gdt-lang',p);return p;}return localStorage.getItem('gdt-lang')||((navigator.language||'es').toLowerCase().indexOf('ca')===0?'ca':'es');}catch(e){return 'es';}})();
 function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('gdt-lang', lang);
@@ -873,7 +894,7 @@ function copiarEnllac(btn){
     });
     document.body.style.overflow = 'hidden';
     // Actualizar placeholder segun idioma
-    var lang = localStorage.getItem('gdt-lang') || 'es';
+    var lang = (function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ca'||p==='es'){localStorage.setItem('gdt-lang',p);return p;}return localStorage.getItem('gdt-lang')||((navigator.language||'es').toLowerCase().indexOf('ca')===0?'ca':'es');}catch(e){return 'es';}})();
     var emailInput = document.getElementById('nl-popup-email');
     if (emailInput) {
       emailInput.placeholder = emailInput.getAttribute('data-placeholder-' + lang) || emailInput.placeholder;

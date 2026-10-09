@@ -157,6 +157,7 @@ const t = {
 function getLang(){return localStorage.getItem('gdt-lang')||'es';}
 function setLang(l){
   localStorage.setItem('gdt-lang',l);
+  try{var _u=new URL(location.href);if(l==='es'){_u.searchParams.delete('lang');}else{_u.searchParams.set('lang',l);}history.replaceState(null,'',_u);}catch(e){}
   document.querySelectorAll('.t').forEach(el=>{
     const k=el.dataset[l];
     if(k!==undefined) el.innerHTML=k;
@@ -166,6 +167,26 @@ function setLang(l){
   const loc=document.getElementById('nl-locale'); if(loc) loc.value=l;
 }
 document.addEventListener('DOMContentLoaded',()=>{setLang(getLang());});
+</script>
+<script>
+/* idioma: resol abans de pintar (parametre ?lang=, preferencia guardada o idioma del navegador) */
+(function(){try{
+  var p = new URLSearchParams(location.search).get('lang');
+  var saved = localStorage.getItem('gdt-lang');
+  var l = (p === 'ca' || p === 'es') ? p
+        : (saved || ((navigator.language || 'es').toLowerCase().indexOf('ca') === 0 ? 'ca' : 'es'));
+  localStorage.setItem('gdt-lang', l);
+  document.documentElement.setAttribute('lang', l);
+  if (l !== 'es') {
+    var st = document.createElement('style');
+    st.id = 'gdt-lang-hold';
+    st.textContent = 'body{visibility:hidden}';
+    document.head.appendChild(st);
+    var drop = function(){ var s = document.getElementById('gdt-lang-hold'); if (s) s.remove(); };
+    document.addEventListener('DOMContentLoaded', drop);
+    setTimeout(drop, 1200);
+  }
+}catch(e){}})();
 </script>
 </head>
 <body>

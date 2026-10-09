@@ -177,7 +177,7 @@ const t = {
     c_note:"Responem en un termini de 48 hores. No compartirem la teva informació amb tercers.",
   }
 };
-let currentLang = localStorage.getItem('gdt-lang') || 'es';
+let currentLang = (function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ca'||p==='es'){localStorage.setItem('gdt-lang',p);return p;}return localStorage.getItem('gdt-lang')||((navigator.language||'es').toLowerCase().indexOf('ca')===0?'ca':'es');}catch(e){return 'es';}})();
 function applyTranslations(lang) {
   document.querySelectorAll('.t').forEach(el => {
     const v = el.getAttribute('data-' + lang);
@@ -199,8 +199,29 @@ function applyTranslations(lang) {
 function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('gdt-lang', lang);
+  try{var _u=new URL(location.href);if(lang==='es'){_u.searchParams.delete('lang');}else{_u.searchParams.set('lang',lang);}history.replaceState(null,'',_u);}catch(e){}
   applyTranslations(lang);
 }
+</script>
+<script>
+/* idioma: resol abans de pintar (parametre ?lang=, preferencia guardada o idioma del navegador) */
+(function(){try{
+  var p = new URLSearchParams(location.search).get('lang');
+  var saved = localStorage.getItem('gdt-lang');
+  var l = (p === 'ca' || p === 'es') ? p
+        : (saved || ((navigator.language || 'es').toLowerCase().indexOf('ca') === 0 ? 'ca' : 'es'));
+  localStorage.setItem('gdt-lang', l);
+  document.documentElement.setAttribute('lang', l);
+  if (l !== 'es') {
+    var st = document.createElement('style');
+    st.id = 'gdt-lang-hold';
+    st.textContent = 'body{visibility:hidden}';
+    document.head.appendChild(st);
+    var drop = function(){ var s = document.getElementById('gdt-lang-hold'); if (s) s.remove(); };
+    document.addEventListener('DOMContentLoaded', drop);
+    setTimeout(drop, 1200);
+  }
+}catch(e){}})();
 </script>
 </head>
 <body>
@@ -441,7 +462,7 @@ function enviarMissatge() {
   if (new URLSearchParams(location.search).get('assumpte') !== 'soci') return;
   var field = document.getElementById('c-assumpte');
   if (!field || field.value) return;
-  var lang = localStorage.getItem('gdt-lang') || 'es';
+  var lang = (function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ca'||p==='es'){localStorage.setItem('gdt-lang',p);return p;}return localStorage.getItem('gdt-lang')||((navigator.language||'es').toLowerCase().indexOf('ca')===0?'ca':'es');}catch(e){return 'es';}})();
   field.value = lang === 'ca' ? 'Vull fer-me soci' : 'Quiero hacerme socio';
 })();
 </script>

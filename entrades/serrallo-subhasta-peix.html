@@ -157,6 +157,26 @@
 #nl-popup-legal{font-size:.65rem;color:rgba(255,255,255,.18);}
 
 </style>
+<script>
+/* idioma: resol abans de pintar (parametre ?lang=, preferencia guardada o idioma del navegador) */
+(function(){try{
+  var p = new URLSearchParams(location.search).get('lang');
+  var saved = localStorage.getItem('gdt-lang');
+  var l = (p === 'ca' || p === 'es') ? p
+        : (saved || ((navigator.language || 'es').toLowerCase().indexOf('ca') === 0 ? 'ca' : 'es'));
+  localStorage.setItem('gdt-lang', l);
+  document.documentElement.setAttribute('lang', l);
+  if (l !== 'es') {
+    var st = document.createElement('style');
+    st.id = 'gdt-lang-hold';
+    st.textContent = 'body{visibility:hidden}';
+    document.head.appendChild(st);
+    var drop = function(){ var s = document.getElementById('gdt-lang-hold'); if (s) s.remove(); };
+    document.addEventListener('DOMContentLoaded', drop);
+    setTimeout(drop, 1200);
+  }
+}catch(e){}})();
+</script>
 </head>
 <body>
 <a class="skip-link t" href="#main" data-es="Saltar al contenido" data-ca="Salta al contingut">Saltar al contenido</a>
@@ -330,7 +350,7 @@
     Cuando quedaba caldo en la olla, se tostaban unos puñados de fideos o de arroz y se les echaba por encima. De ahí sale el <strong>rossejat</strong> —o arrossejat—, que hoy se sirve en manteles del Baix Camp, el Tarragonès, el Baix Ebre y el Montsià como si siempre hubiera sido un plato de restaurante. La lógica es la misma que la de <a href="el-romesco.html" style="color:var(--gold);border-bottom:1px solid rgba(184,146,74,.4);">el romesco</a>, nacido entre estos mismos pescadores, o la del suquet: pan, ñora, ajo, avellana y el pescado que había.
   </p>
   <div class="e-moment">
-    <p class="e-moment-title">La subasta explica el menú · <em>Una idea para llevarse</em></p>
+    <p class="e-moment-title t" data-es="La subasta explica el menú · <em>Una idea para llevarse</em>" data-ca="La subhasta explica el menú · <em>Una idea per endur-se</em>">La subasta explica el menú · <em>Una idea para llevarse</em></p>
     <p class="e-moment-p t"
        data-es="Si se mira con calma, la carta clásica del Serrallo es la contabilidad de la lonja puesta en platos. Lo que se vendía bien salía del barrio en cajas: la gamba, el lenguado, la merluza. Lo que no encontraba comprador se quedaba y se cocinaba. <strong>El romesco, el rossejat y el suquet no son recetas humildes por estética: son recetas humildes porque las hizo el excedente.</strong> Y hoy, con la flota a la baja, buena parte de ese pescado modesto vale más que entonces."
        data-ca="Si s'hi mira amb calma, la carta clàssica del Serrallo és la comptabilitat de la llotja posada en plats. El que es venia bé sortia del barri en caixes: la gamba, el llenguado, el lluç. El que no trobava comprador es quedava i es cuinava. <strong>El romesco, el rossejat i el suquet no són receptes humils per estètica: són receptes humils perquè les va fer l'excedent.</strong> I avui, amb la flota a la baixa, bona part d'aquell peix modest val més que llavors.">
@@ -517,10 +537,11 @@
 </footer>
 
 <script>
-var currentLang = localStorage.getItem('gdt-lang') || 'es';
+var currentLang = (function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ca'||p==='es'){localStorage.setItem('gdt-lang',p);return p;}return localStorage.getItem('gdt-lang')||((navigator.language||'es').toLowerCase().indexOf('ca')===0?'ca':'es');}catch(e){return 'es';}})();
 function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('gdt-lang', lang);
+  try{var _u=new URL(location.href);if(lang==='es'){_u.searchParams.delete('lang');}else{_u.searchParams.set('lang',lang);}history.replaceState(null,'',_u);}catch(e){}
   document.querySelectorAll('.t').forEach(function(el) {
     var val = el.getAttribute('data-' + lang);
     if (val !== null) el.innerHTML = val;
@@ -622,7 +643,7 @@ function copiarEnllac(btn) {
     });
     document.body.style.overflow = 'hidden';
     // Actualizar placeholder segun idioma
-    var lang = localStorage.getItem('gdt-lang') || 'es';
+    var lang = (function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ca'||p==='es'){localStorage.setItem('gdt-lang',p);return p;}return localStorage.getItem('gdt-lang')||((navigator.language||'es').toLowerCase().indexOf('ca')===0?'ca':'es');}catch(e){return 'es';}})();
     var emailInput = document.getElementById('nl-popup-email');
     if (emailInput) {
       emailInput.placeholder = emailInput.getAttribute('data-placeholder-' + lang) || emailInput.placeholder;
