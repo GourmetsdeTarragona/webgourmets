@@ -50,17 +50,20 @@ Si apareix l'original de més qualitat (no WhatsApp), regenerar amb sharp i mant
 
 ---
 
-## Imatges d'Unsplash (pots descarregar-les manualment)
+## Capçaleres i imatges generals (totes pròpies, oct. 2026)
 
-| Fitxer destí | URL Unsplash | On s'usa |
+Ja no hi ha cap imatge d'Unsplash a la web. Les antigues (`hero.jpg`, `about.jpg`, `event-*.jpg`) s'han eliminat; es poden recuperar de l'historial de git.
+
+| Fitxer | Origen | On s'usa |
 |---|---|---|
-| `assets/img/hero.jpg` | `https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=85` | Fons de capçalera a contacte, restaurants, newsletter i santjordi (ja NO és el hero de la home) |
-| `assets/img/about.jpg` | `https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=85` | Secció "Qui som" |
-| `assets/img/event-cata.jpg` | `https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=85` | Card cata de vins |
-| `assets/img/event-visita.jpg` | `https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=85` | Card visita gastronòmica |
-| `assets/img/event-sopar.jpg` | `https://images.unsplash.com/photo-1567521464027-f127ff144326?w=600&q=85` | Card sopar especial |
-
-> **Tip per descarregar ràpid:** obre cada URL al navegador, clic dret → "Desa la imatge com a..." i posa el nom exacte de la columna "Fitxer destí".
+| `assets/img/og-gourmets.jpg` | Retall 1200×630 de la gala Premis 2025 (Vermuts Rofes) | Imatge en compartir: home, blog, restaurants, esdeveniments… |
+| `assets/img/about/hero-associacio.jpg` | Retall horitzontal de `lesdunes/cronica/sala-taula-imperial.jpg` (socis a la taula llarga) | Capçalera de l'Associació, article "Qué som", targetes del blog |
+| `assets/img/pages/contacte-nautic.jpg` | Saló del Club Nàutic, sopar d'estiu 2026 (amb el roll-up GT) | Capçalera de Contacte |
+| `assets/img/galliner/cronica/sala-parada.jpg` | Crònica El Galliner | Capçalera de Restaurants |
+| `assets/img/lesdunes/cronica/vinos-maridatge.jpg` | Crònica Les Dunes | Capçalera de Newsletter |
+| `assets/img/brumma/cronica/sala-cena.jpg` | Crònica Brumma | Home, secció "Qui som" |
+| `assets/img/brumma/cronica/vinos.jpg` | Crònica Brumma (De Muller, DO Tarragona) | Targeta "Tast de vins DO Tarragona" (home, esdeveniments, newsletter) |
+| `assets/img/santjordi/santjordi-cuinem.jpg` | Portada de llibre de l'article | Capçalera i imatge per compartir de Sant Jordi 2026 |
 
 ---
 
@@ -72,11 +75,9 @@ assets/img/
 ├── logo-blanc.png        (opcional)
 ├── gastronia.png
 ├── bacus.png
-├── hero.jpg
-├── about.jpg
-├── event-cata.jpg
-├── event-visita.jpg
-├── event-sopar.jpg
+├── hero.webp / hero-mobile.webp
+├── og-gourmets.jpg
+├── pages/
 └── kema/
     ├── hero.jpg
     ├── exterior.jpg
