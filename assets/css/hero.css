@@ -19,8 +19,8 @@
 .hero-bg {
   position: absolute; inset: 0;
   background-image: url('../img/hero.webp');
-  background-size: cover; background-position: center;
-  opacity: .62;
+  background-size: cover; background-position: center 70%;
+  opacity: .82;
   animation: heroSettle 2.8s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
@@ -31,22 +31,30 @@
   opacity: .07; mix-blend-mode: overlay;
 }
 
-/* Gradient fosc cap a baix + enfosquit lateral on va el text */
+/* Velo càlid molt suau: escalfa la llum de la foto */
+.hero-gradient::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse at 70% 35%, rgba(212,150,70,.22), rgba(212,150,70,0) 65%);
+  mix-blend-mode: soft-light;
+}
+
+/* Enfosquit només on va el text: lateral esquerre i franja inferior */
 .hero-gradient {
   position: absolute; inset: 0;
   background:
     linear-gradient(
       to right,
-      rgba(11,22,38,.55) 0%,
-      rgba(11,22,38,.25) 45%,
-      rgba(11,22,38,0) 70%
+      rgba(11,22,38,.62) 0%,
+      rgba(11,22,38,.3) 40%,
+      rgba(11,22,38,0) 65%
     ),
     linear-gradient(
       to top,
-      rgba(11,22,38,.98) 0%,
-      rgba(11,22,38,.75) 40%,
-      rgba(11,22,38,.35) 70%,
-      rgba(11,22,38,.15) 100%
+      rgba(11,22,38,.96) 0%,
+      rgba(11,22,38,.7) 28%,
+      rgba(11,22,38,.28) 52%,
+      rgba(11,22,38,.08) 78%,
+      rgba(11,22,38,.2) 100%
     );
 }
 
@@ -75,8 +83,8 @@
 }
 
 .hero-label {
-  font-size: .72rem; letter-spacing: 5px; text-transform: uppercase;
-  color: rgba(184,146,74,.9); margin-bottom: 22px;
+  font-size: .8rem; letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(212,169,106,.95); margin-bottom: 22px;
   display: flex; align-items: center; gap: 14px;
   animation: fadeUp .7s var(--ease-out, ease) .1s both;
 }
@@ -173,7 +181,7 @@
   animation: fadeUp .7s var(--ease-out, ease) .6s both;
 }
 .hero-meta-label {
-  font-size: .66rem; letter-spacing: 3px; text-transform: uppercase;
+  font-size: .74rem; letter-spacing: 2.5px; text-transform: uppercase;
   color: rgba(212,169,106,.9);
 }
 .hero-meta-title {
@@ -189,28 +197,6 @@
 .hero-meta-link::after { content: '→'; letter-spacing: 0; }
 .hero-meta:hover .hero-meta-link { color: #fff; gap: 12px; }
 .hero-meta:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 6px; }
-
-/* Scroll hint — la línia es dibuixa d'esquerra a dreta en bucle */
-@keyframes scrollDraw {
-  0%   { transform: scaleX(0); transform-origin: left; }
-  45%  { transform: scaleX(1); transform-origin: left; }
-  55%  { transform: scaleX(1); transform-origin: right; }
-  100% { transform: scaleX(0); transform-origin: right; }
-}
-.hero-scroll {
-  position: absolute; bottom: 28px; left: 5.5%; z-index: 2;
-  display: flex; align-items: center; gap: 12px;
-  animation: fadeIn .8s ease .7s both;
-}
-.hero-scroll span {
-  font-size: .68rem; letter-spacing: 4px; text-transform: uppercase;
-  color: rgba(255,255,255,.5);
-}
-.hero-scroll-line {
-  width: 48px; height: 1px;
-  background: rgba(184,146,74,.7);
-  animation: scrollDraw 2.4s cubic-bezier(0.65, 0, 0.35, 1) 1.5s infinite both;
-}
 
 /* Parallax en fer scroll: la foto va més lenta i el text s'esvaeix.
    CSS natiu (scroll-driven animations); si el navegador no ho suporta, no passa res. */
@@ -250,9 +236,11 @@
 }
 .strip-item {
   font-size: .72rem; letter-spacing: 3px; text-transform: uppercase;
-  color: rgba(255,255,255,.8);
+  color: rgba(255,255,255,.8); text-decoration: none;
   display: flex; align-items: center; gap: 10px;
 }
+a.strip-item { transition: color .2s; }
+a.strip-item:hover { color: var(--gold-light); }
 .strip-item::before {
   content: ''; width: 4px; height: 4px; border-radius: 50%;
   background: rgba(184,146,74,.7); flex-shrink: 0;
@@ -265,7 +253,18 @@
     flex-direction: column; justify-content: flex-end; align-items: stretch;
   }
   .hero-bg { background-image: url('../img/hero-mobile.webp'); background-position: center; }
-  .hero-label { letter-spacing: 3px; font-size: .68rem; }
+  /* En mòbil el text ocupa més alçada: l'enfosquit puja més */
+  .hero-gradient {
+    background: linear-gradient(
+      to top,
+      rgba(11,22,38,.97) 0%,
+      rgba(11,22,38,.8) 35%,
+      rgba(11,22,38,.5) 58%,
+      rgba(11,22,38,.12) 80%,
+      rgba(11,22,38,.25) 100%
+    );
+  }
+  .hero-label { letter-spacing: 3px; font-size: .74rem; }
   .hero-label-long { display: none; }
   .hero-content { padding: 0 5% 32px; padding-top: 88px; }
   /* En mòbil la cita va a sota dels botons, alineada a l'esquerra */
@@ -275,7 +274,6 @@
     margin: 0 5% 36px; padding: 14px 0 0;
   }
   .hero-meta-title { font-size: 1.05rem; }
-  .hero-scroll  { display: none; }
   .hero-left-line { display: none; }
   .hero-title   { font-size: clamp(2.2rem, 11vw, 3rem); }
   .hero-sub     { font-size: .95rem; }
@@ -288,6 +286,7 @@
     text-align: center;
     display: block;
   }
-  .strip-inner  { gap: 16px; padding: 0 5%; }
-  .strip-item   { font-size: .68rem; letter-spacing: 2px; }
+  /* Franja en 2×2 ordenat en lloc de 3 línies desordenades */
+  .strip-inner  { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; padding: 0 5%; }
+  .strip-item   { font-size: .66rem; letter-spacing: 1.5px; }
 }

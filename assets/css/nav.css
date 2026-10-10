@@ -68,7 +68,7 @@
 .nav-right { display: flex; align-items: center; gap: 4px; }
 .lang-btn {
   background: none; border: 1px solid transparent;
-  color: rgba(255,255,255,.55); font-family: var(--font-body);
+  color: rgba(255,255,255,.75); font-family: var(--font-body);
   font-size: .72rem; letter-spacing: 1.5px; font-weight: 700;
   cursor: pointer; padding: 4px 8px; text-transform: uppercase;
   border-radius: 4px;
