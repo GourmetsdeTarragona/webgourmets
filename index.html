@@ -734,8 +734,10 @@
       var title=lang==='ca'?(p.titol_ca||p.titol_es):p.titol_es;
       var desc=lang==='ca'?(p.resum_ca||p.resum_es):p.resum_es;
       var minLbl=lang==='ca'?'min':'min';
+      // Miniatura de 640 px generada per tools/optimiza-imatges.js (assets/img/_thumbs/)
+      var thumb = p.img ? 'assets/img/_thumbs/'+decodeURIComponent(p.img).replace(/^assets\/img\//,'').replace(/\s+/g,'-').replace(/\.[a-z]+$/i,'.webp') : '';
       var imgHtml = p.img
-        ? '<img loading="lazy" decoding="async" src="'+p.img+'" alt="'+title+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">'
+        ? '<img loading="lazy" decoding="async" src="'+thumb+'" onerror="this.onerror=null;this.src=\''+p.img+'\'" alt="'+title+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">'
         : '';
       return '<a href="entrades/'+p.slug+'.html" class="bp-card">'+
         '<div class="bp-card-img" style="background:'+p.color_bg+';position:relative;">'+

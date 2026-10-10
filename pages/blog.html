@@ -54,6 +54,7 @@
 <link rel="preload" href="../assets/fonts/playfair-display-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/fonts.css?v=20261010">
+<link rel="preload" as="image" href="../assets/img/brumma/cronica/detalle-vinos-1600.webp" type="image/webp" fetchpriority="high">
 <link rel="stylesheet" href="../assets/css/icons.css?v=20261010">
 <link rel="stylesheet" href="../assets/css/variables.css?v=20261006">
 <link rel="stylesheet" href="../assets/css/nav.css?v=20261006">
@@ -62,7 +63,7 @@
 <style>
 /* ── HERO ── */
 .blog-hero{position:relative;min-height:52vh;display:flex;align-items:flex-end;overflow:hidden;padding:0;background:#0b1626;}
-.blog-hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80');background-size:cover;background-position:center 40%;opacity:.65;filter:brightness(1.08) contrast(1.05);transform:scale(1.02);transition:transform 8s ease;}
+.blog-hero-bg{position:absolute;inset:0;background-image:url('../assets/img/brumma/cronica/detalle-vinos-1600.webp');background-size:cover;background-position:center 40%;opacity:.65;filter:brightness(1.08) contrast(1.05);transform:scale(1.02);transition:transform 8s ease;}
 .blog-hero:hover .blog-hero-bg{transform:scale(1);}
 .blog-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.92) 0%,rgba(11,22,38,.38) 50%,rgba(11,22,38,.05) 100%);}
 .blog-hero-inner{position:relative;z-index:2;max-width:640px;margin:0 auto;padding:0 5% 64px;width:100%;text-align:center;}
@@ -254,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <nav id="nav" aria-label="Menú principal">
   <div class="nav-inner">
     <a href="../index.html" class="nav-logo">
-      <img src="../assets/img/logo.png"
+      <img src="../assets/img/logo-160.webp"
            alt="Gourmets de Tarragona"
           >
     </a>
@@ -389,7 +390,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="blog-destacat">
   <div class="destacat-card" data-cat="cronica">
     <div class="destacat-img">
-      <img src="../assets/img/galliner/cronica/foto-grup.jpg" alt="Gourmets de Tarragona a El Galliner de l'Antiquari · Part Alta" style="object-position:center 35%;">
+      <img loading="lazy" decoding="async" src="../assets/img/_thumbs/galliner/cronica/foto-grup.webp" alt="Gourmets de Tarragona a El Galliner de l'Antiquari · Part Alta" style="object-position:center 35%;">
       <span class="destacat-cat cat-cronica t" data-es="El Galliner · Crónica" data-ca="El Galliner · Crònica">El Galliner · Crónica</span>
     </div>
     <div class="destacat-body">
@@ -423,7 +424,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- El Galliner de l'Antiquari Crònica -->
     <article class="blog-card" data-cat="cronica">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/galliner/cronica/arros-negre-cua-bou.jpg" alt="Arròs negre i cua de bou a El Galliner de l'Antiquari" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/galliner/cronica/arros-negre-cua-bou.webp" alt="Arròs negre i cua de bou a El Galliner de l'Antiquari" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-cronica t" data-es="Crónica" data-ca="Crònica">Crónica</span>
       </div>
       <div class="blog-card-body">
@@ -445,7 +446,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- El Galliner de l'Antiquari Prèvia -->
     <article class="blog-card" data-cat="previa">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/galliner/facana.jpg" alt="El Galliner de l'Antiquari · Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/galliner/facana.webp" alt="El Galliner de l'Antiquari · Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-previa t" data-es="Previa" data-ca="Prèvia">Previa</span>
       </div>
       <div class="blog-card-body">
@@ -467,7 +468,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Les Dunes Crònica -->
     <article class="blog-card" data-cat="cronica">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/lesdunes/cronica/arros-llisa-llumins.jpg" alt="Les Dunes · Riumar" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/lesdunes/cronica/arros-llisa-llumins.webp" alt="Les Dunes · Riumar" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-cronica t" data-es="Crónica" data-ca="Crònica">Crónica</span>
       </div>
       <div class="blog-card-body">
@@ -489,7 +490,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Les Dunes Prèvia -->
     <article class="blog-card" data-cat="previa">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/lesdunes/sensacions-espai.jpg" alt="Les Dunes · Riumar" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/lesdunes/sensacions-espai.webp" alt="Les Dunes · Riumar" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-previa t" data-es="Previa" data-ca="Prèvia">Previa</span>
       </div>
       <div class="blog-card-body">
@@ -511,7 +512,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Sopar d'Estiu 2026 -->
     <article class="blog-card" data-cat="cronica">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/nautic/p204059.jpg" alt="Sopar d'Estiu 2026 · Club Nàutic de Salou" style="object-position:center top;" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/nautic/p204059.webp" alt="Sopar d'Estiu 2026 · Club Nàutic de Salou" style="object-position:center top;" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-cronica t" data-es="Crónica" data-ca="Crònica">Crónica</span>
       </div>
       <div class="blog-card-body">
@@ -532,7 +533,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Brumma Crònica -->
     <article class="blog-card" data-cat="cronica">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/brumma/cronica/arroz.jpg" alt="Arròs de llàgrima ibèrica, xiitakes i ou de guatlla — Brumma, Infinitum Resort Salou" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/brumma/cronica/arroz.webp" alt="Arròs de llàgrima ibèrica, xiitakes i ou de guatlla — Brumma, Infinitum Resort Salou" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-cronica t" data-es="Crónica" data-ca="Crònica">Crónica</span>
       </div>
       <div class="blog-card-body">
@@ -554,7 +555,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Brumma Prèvia -->
     <article class="blog-card" data-cat="previa">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/brumma/05_brumma_vistas_mar.jpg" alt="Brumma · Infinitum Resort · Salou" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/brumma/05_brumma_vistas_mar.webp" alt="Brumma · Infinitum Resort · Salou" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-previa t" data-es="Previa" data-ca="Prèvia">Previa</span>
       </div>
       <div class="blog-card-body">
@@ -576,7 +577,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Ecuador 2026 — Notícia -->
     <article class="blog-card" data-cat="noticia">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/terrat/cronica/sala-taula.jpg" alt="A mig camí · Balanç Temporada 2026 · Gourmets de Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/terrat/cronica/sala-taula.webp" alt="A mig camí · Balanç Temporada 2026 · Gourmets de Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-noticia t" data-es="Noticia" data-ca="Notícia">Noticia</span>
       </div>
       <div class="blog-card-body">
@@ -599,7 +600,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Cervus Crònica -->
     <article class="blog-card" data-cat="cronica">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/cervus/cronica/arros.jpg" alt="Cervus · Arrós melós amb galta i fricandó · Crònica 4a visita Gourmets de Tarragona 2026" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/cervus/cronica/arros.webp" alt="Cervus · Arrós melós amb galta i fricandó · Crònica 4a visita Gourmets de Tarragona 2026" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-cronica t" data-es="Crónica" data-ca="Crònica">Crónica</span>
       </div>
       <div class="blog-card-body">
@@ -621,7 +622,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Cervus Prèvia -->
     <article class="blog-card" data-cat="previa">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/cervus/hero.jpg" alt="Cervus · Reus" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/cervus/hero.webp" alt="Cervus · Reus" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-previa t" data-es="Previa" data-ca="Prèvia">Previa</span>
       </div>
       <div class="blog-card-body">
@@ -643,7 +644,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- El Terrat Crònica -->
     <article class="blog-card" data-cat="cronica">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/terrat/cronica/romesco-01.jpg" alt="El Terrat · Crònica" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/terrat/cronica/romesco-01.webp" alt="El Terrat · Crònica" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-cronica t" data-es="Crónica" data-ca="Crònica">Crónica</span>
       </div>
       <div class="blog-card-body">
@@ -665,7 +666,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- El Terrat Prèvia -->
     <article class="blog-card" data-cat="previa">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/terrat/exterior.jpg" alt="El Terrat · Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/terrat/exterior.webp" alt="El Terrat · Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-previa t" data-es="Previa" data-ca="Prèvia">Previa</span>
       </div>
       <div class="blog-card-body">
@@ -687,7 +688,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- La Goleta Crònica -->
     <article class="blog-card" data-cat="cronica">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/goleta/goleta-hero.jpg" alt="La Goleta · Salou">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/goleta/goleta-hero.webp" alt="La Goleta · Salou">
         <span class="blog-card-cat cat-cronica t" data-es="Crónica" data-ca="Crònica">Crónica</span>
       </div>
       <div class="blog-card-body">
@@ -709,7 +710,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- La Goleta Prèvia -->
     <article class="blog-card" data-cat="previa">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/goleta/goleta-hero.jpg" alt="La Goleta · Prèvia">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/goleta/goleta-hero.webp" alt="La Goleta · Prèvia">
         <span class="blog-card-cat cat-previa t" data-es="Previa" data-ca="Prèvia">Previa</span>
       </div>
       <div class="blog-card-body">
@@ -731,7 +732,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Kema Crònica -->
     <article class="blog-card" data-cat="cronica">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/kema/hero.jpg" alt="Kema · Cambrils">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/kema/hero.webp" alt="Kema · Cambrils">
         <span class="blog-card-cat cat-cronica t" data-es="Crónica" data-ca="Crònica">Crónica</span>
       </div>
       <div class="blog-card-body">
@@ -753,7 +754,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Kema Prèvia -->
     <article class="blog-card" data-cat="previa">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/kema/brasa-carn.jpg" alt="Kema · Prèvia">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/kema/brasa-carn.webp" alt="Kema · Prèvia">
         <span class="blog-card-cat cat-previa t" data-es="Previa" data-ca="Prèvia">Previa</span>
       </div>
       <div class="blog-card-body">
@@ -806,7 +807,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Estrelles Michelin de la provincia -->
     <article class="blog-card" data-cat="noticia">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/michelin/canbosch.jpg" alt="Joan i Arnau Bosch a la cuina de Can Bosch" onerror="this.parentElement.style.background='#1a3a52'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/michelin/canbosch.webp" alt="Joan i Arnau Bosch a la cuina de Can Bosch" onerror="this.parentElement.style.background='#1a3a52'">
         <span class="blog-card-cat cat-noticia t" data-es="Noticias" data-ca="Notícies">Noticias</span>
       </div>
       <div class="blog-card-body">
@@ -828,7 +829,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Qui som · l'associacio -->
     <article class="blog-card" data-cat="cultura">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/about/hero-associacio.jpg" alt="Taula llarga d'un sopar dels Gourmets de Tarragona" onerror="this.parentElement.style.background='#1a3a52'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/about/hero-associacio.webp" alt="Taula llarga d'un sopar dels Gourmets de Tarragona" onerror="this.parentElement.style.background='#1a3a52'">
         <span class="blog-card-cat cat-cultura t" data-es="Cultura" data-ca="Cultura">Cultura</span>
       </div>
       <div class="blog-card-body">
@@ -852,7 +853,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- El masclet · Misericòrdia -->
     <article class="blog-card" data-cat="cultura">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/masclet/tronada-1.jpg" alt="La Tronada en la plaça del Mercadal de Reus" onerror="this.parentElement.style.background='#1a3a52'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/masclet/tronada-1.webp" alt="La Tronada en la plaça del Mercadal de Reus" onerror="this.parentElement.style.background='#1a3a52'">
         <span class="blog-card-cat cat-cultura t" data-es="Cultura" data-ca="Cultura">Cultura</span>
       </div>
       <div class="blog-card-body">
@@ -874,7 +875,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Tendencias 2026 -->
     <article class="blog-card" data-cat="noticia">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/tendencias/hero%20para%20tendencias.jpg" alt="Tendències Gastronòmiques 2026" onerror="this.parentElement.style.background='#1a3a52'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/tendencias/hero-para-tendencias.webp" alt="Tendències Gastronòmiques 2026" onerror="this.parentElement.style.background='#1a3a52'">
         <span class="blog-card-cat cat-noticia t" data-es="Tendencias" data-ca="Tendències">Tendencias</span>
       </div>
       <div class="blog-card-body">
@@ -896,7 +897,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- La Goleta 40 anys -->
     <article class="blog-card" data-cat="noticia">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/goleta/aniversari-40.jpg" alt="La Goleta 40 anys">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/goleta/aniversari-40.webp" alt="La Goleta 40 anys">
         <span class="blog-card-cat cat-noticia t" data-es="Noticia" data-ca="Notícia">Noticia</span>
       </div>
       <div class="blog-card-body">
@@ -918,7 +919,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Gala Premis 2025 -->
     <article class="blog-card" data-cat="event">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/gala2025/trofeus.jpg" alt="Gala de Premis 2025">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/gala2025/trofeus.webp" alt="Gala de Premis 2025">
         <span class="blog-card-cat cat-event t" data-es="Evento" data-ca="Esdeveniment">Evento</span>
       </div>
       <div class="blog-card-body">
@@ -941,7 +942,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Sant Jordi 2026 -->
     <article class="blog-card" data-cat="cultura">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/cine/cine-gastronomia-portada.jpg" alt="La taula i la pantalla: cinema i gastronomia, pel·lícules imprescindibles per a gourmets" onerror="this.parentElement.style.background='var(--navy-dark)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/cine/cine-gastronomia-portada.webp" alt="La taula i la pantalla: cinema i gastronomia, pel·lícules imprescindibles per a gourmets" onerror="this.parentElement.style.background='var(--navy-dark)'">
         <span class="blog-card-cat cat-cultura t" data-es="Cultura" data-ca="Cultura">Cultura</span>
       </div>
       <div class="blog-card-body">
@@ -962,7 +963,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <article class="blog-card" data-cat="cultura">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/santjordi/santjordi-calcotada.jpg" alt="8 llibres per a un Sant Jordi Gourmet 2026">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/santjordi/santjordi-calcotada.webp" alt="8 llibres per a un Sant Jordi Gourmet 2026">
         <span class="blog-card-cat cat-cultura t" data-es="Cultura" data-ca="Cultura">Cultura</span>
       </div>
       <div class="blog-card-body">
@@ -1006,7 +1007,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="carrusel" id="car-vins">
     <article class="blog-card" data-cat="vi">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/demuller/portal-reial.jpg" alt="Portal de la antigua bodega De Muller en el carrer Reial de Tarragona" onerror="this.parentElement.style.background='var(--navy-dark)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/demuller/portal-reial.webp" alt="Portal de la antigua bodega De Muller en el carrer Reial de Tarragona" onerror="this.parentElement.style.background='var(--navy-dark)'">
         <span class="blog-card-cat cat-vi t" data-es="Vinos" data-ca="Vins">Vinos</span>
       </div>
       <div class="blog-card-body">
@@ -1027,7 +1028,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <article class="blog-card" data-cat="vi">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/tokaj/tokaj-galeria-barriques-oremus.jpg" alt="Galeria de barriques de les caves Oremus a Tokaj, Hongria" onerror="this.parentElement.style.background='var(--navy-dark)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/tokaj/tokaj-galeria-barriques-oremus.webp" alt="Galeria de barriques de les caves Oremus a Tokaj, Hongria" onerror="this.parentElement.style.background='var(--navy-dark)'">
         <span class="blog-card-cat cat-vi t" data-es="Vinos" data-ca="Vins">Vinos</span>
       </div>
       <div class="blog-card-body">
@@ -1049,7 +1050,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Vins Brisats -->
     <article class="blog-card" data-cat="vi">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/brisats/hero-ampolles-brisat.jpg" alt="Vins brisats i orange wines de la demarcació de Tarragona" onerror="this.parentElement.style.background='#6b2737'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/brisats/hero-ampolles-brisat.webp" alt="Vins brisats i orange wines de la demarcació de Tarragona" onerror="this.parentElement.style.background='#6b2737'">
         <span class="blog-card-cat cat-vi t" data-es="Vinos" data-ca="Vins">Vinos</span>
       </div>
       <div class="blog-card-body">
@@ -1071,7 +1072,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Vins Ancestrals -->
     <article class="blog-card" data-cat="vi">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/img-ancestrals/ampolles-tap-corona.jpg" alt="Vins ancestrals i pét-nat de la demarcació de Tarragona" onerror="this.parentElement.style.background='#6b2737'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/img-ancestrals/ampolles-tap-corona.webp" alt="Vins ancestrals i pét-nat de la demarcació de Tarragona" onerror="this.parentElement.style.background='#6b2737'">
         <span class="blog-card-cat cat-vi t" data-es="Vinos" data-ca="Vins">Vinos</span>
       </div>
       <div class="blog-card-body">
@@ -1093,7 +1094,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Jean Leon -->
     <article class="blog-card" data-cat="vi">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/jeanleon/jean-leon-copa-la-scala.jpg" alt="Jean Leon · Ceferino Carrión" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/jeanleon/jean-leon-copa-la-scala.webp" alt="Jean Leon · Ceferino Carrión" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-vi t" data-es="Vinos" data-ca="Vins">Vinos</span>
       </div>
       <div class="blog-card-body">
@@ -1115,7 +1116,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Els Cinc Magnífics -->
     <article class="blog-card" data-cat="vi">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/priorat/loscincomagnificos.jpg" alt="Els Cinc Magnífics del Priorat" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/priorat/loscincomagnificos.webp" alt="Els Cinc Magnífics del Priorat" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-vi t" data-es="Vinos" data-ca="Vins">Vinos</span>
       </div>
       <div class="blog-card-body">
@@ -1137,7 +1138,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Vi Tarragona -->
     <article class="blog-card" data-cat="vi">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/vins/paisatge-tarragona.jpg" alt="El vi a la província de Tarragona" onerror="this.parentElement.style.background='#6b2737'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/vins/paisatge-tarragona.webp" alt="El vi a la província de Tarragona" onerror="this.parentElement.style.background='#6b2737'">
         <span class="blog-card-cat cat-vi t" data-es="Vinos" data-ca="Vins">Vinos</span>
       </div>
       <div class="blog-card-body">
@@ -1182,7 +1183,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Oli nou DOP Siurana -->
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/oli/oliveres-cabaces.jpg" alt="Oliveres a Cabacés, al Priorat" onerror="this.parentElement.style.background='#1a3a52'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/oli/oliveres-cabaces.webp" alt="Oliveres a Cabacés, al Priorat" onerror="this.parentElement.style.background='#1a3a52'">
         <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
@@ -1204,7 +1205,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/romesco/romesco-guisat.jpg" alt="El Romesco de Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/romesco/romesco-guisat.webp" alt="El Romesco de Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
@@ -1225,7 +1226,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/bolets/rovello-bosc.jpg" alt="Rovellons en el bosque de las Muntanyes de Prades" onerror="this.parentElement.style.background='var(--navy-dark)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/bolets/rovello-bosc.webp" alt="Rovellons en el bosque de las Muntanyes de Prades" onerror="this.parentElement.style.background='var(--navy-dark)'">
         <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
@@ -1246,7 +1247,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/panellets/p-hero.jpg" alt="Bandeja de panellets de Tots Sants" onerror="this.parentElement.style.background='var(--navy-dark)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/panellets/p-hero.webp" alt="Bandeja de panellets de Tots Sants" onerror="this.parentElement.style.background='var(--navy-dark)'">
         <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
@@ -1267,7 +1268,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/serrallo/serrallo-moll.jpg" alt="Pescadores y barcas en el muelle del Serrallo de Tarragona" onerror="this.parentElement.style.background='var(--navy-dark)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/serrallo/serrallo-moll.webp" alt="Pescadores y barcas en el muelle del Serrallo de Tarragona" onerror="this.parentElement.style.background='var(--navy-dark)'">
         <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
@@ -1288,7 +1289,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/avellana/avellanes-gra.jpg" alt="Avellanes senceres i en gra, DOP Avellana de Reus" onerror="this.parentElement.style.background='var(--navy-dark)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/avellana/avellanes-gra.webp" alt="Avellanes senceres i en gra, DOP Avellana de Reus" onerror="this.parentElement.style.background='var(--navy-dark)'">
         <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
@@ -1309,7 +1310,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/chartreuse/fabrica-facana.jpg" alt="Antiga fàbrica de la Chartreuse al Barri del Port de Tarragona" onerror="this.parentElement.style.background='var(--navy-dark)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/chartreuse/fabrica-facana.webp" alt="Antiga fàbrica de la Chartreuse al Barri del Port de Tarragona" onerror="this.parentElement.style.background='var(--navy-dark)'">
         <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
@@ -1330,7 +1331,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/gamba/gamba-roja-fresca-plat.jpg" alt="Gamba vermella de Tarragona fresca, Aristeus antennatus" onerror="this.parentElement.style.background='var(--navy-dark)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/gamba/gamba-roja-fresca-plat.webp" alt="Gamba vermella de Tarragona fresca, Aristeus antennatus" onerror="this.parentElement.style.background='var(--navy-dark)'">
         <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
@@ -1351,7 +1352,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/calcot/calcot-valls-brasa-festa.jpg" alt="Calçots a la brasa a la Gran Festa de la Calçotada de Valls" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/calcot/calcot-valls-brasa-festa.webp" alt="Calçots a la brasa a la Gran Festa de la Calçotada de Valls" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
@@ -1374,7 +1375,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Vermut Reus -->
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/vermut/vermut-reus-aperitivo.jpg" alt="Vermut de Reus" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/vermut/vermut-reus-aperitivo.webp" alt="Vermut de Reus" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
@@ -1396,7 +1397,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Coca amb Cireres -->
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/coca-cireres/coca-cireres-corpus-gegants.jpg" alt="Coca amb cireres per Corpus" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/coca-cireres/coca-cireres-corpus-gegants.webp" alt="Coca amb cireres per Corpus" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
@@ -1418,7 +1419,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Menjablanc -->
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/menjablanc/hero-menjablanc.jpg" alt="Menjablanc de Reus" onerror="this.parentElement.style.background='#8b5e3c'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/menjablanc/hero-menjablanc.webp" alt="Menjablanc de Reus" onerror="this.parentElement.style.background='#8b5e3c'">
         <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
@@ -1441,7 +1442,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <!-- El Moretum -->
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/moretum/moretum-hero.jpg" alt="El Moretum — la salsa romana de Tàrraco" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/moretum/moretum-hero.webp" alt="El Moretum — la salsa romana de Tàrraco" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
@@ -1463,7 +1464,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- El Garum -->
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/garum/garum-hero.jpg" alt="El Garum — la salsa universal de Roma" onerror="this.parentElement.style.background='var(--cream)'">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/garum/garum-hero.webp" alt="El Garum — la salsa universal de Roma" onerror="this.parentElement.style.background='var(--cream)'">
         <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
@@ -1485,7 +1486,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Gastronia -->
     <article class="blog-card" data-cat="curiositats">
       <div class="blog-card-img">
-        <img loading="lazy" decoding="async" src="../assets/img/gala2025/trofeus.jpg" alt="Trofeu Gastronia">
+        <img loading="lazy" decoding="async" src="../assets/img/_thumbs/gala2025/trofeus.webp" alt="Trofeu Gastronia">
         <span class="blog-card-cat cat-curiositats t" data-es="Curiosidades" data-ca="Curiositats">Curiosidades</span>
       </div>
       <div class="blog-card-body">
@@ -1595,7 +1596,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
-      <img loading="lazy" decoding="async" src="../assets/img/logo.png" alt="Gourmets de Tarragona" onerror="this.style.display='none'">
+      <img loading="lazy" decoding="async" src="../assets/img/logo-160.webp" alt="Gourmets de Tarragona" onerror="this.style.display='none'">
       <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
       <div class="footer-social">
         <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener" aria-label="Instagram">

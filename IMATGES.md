@@ -1,5 +1,21 @@
 # Guia d'imatges — Gourmets de Tarragona
 
+## ⚠️ Abans de cada pujada amb fotos o pàgines noves
+
+```
+node tools/optimiza-imatges.js --dry   # mira què faria
+node tools/optimiza-imatges.js         # ho aplica
+```
+
+- Comprimeix les fotos noves (màx. 1600 px). No recomprimeix mai les que ja ha fet (registre a `tools/imatges-optimitzades.json`).
+- Crea les miniatures de les targetes a `assets/img/_thumbs/` (640 px, WebP): blog, "També et pot interessar" i blog de la home.
+- Posa `loading="lazy"` a les imatges noves i canvia `logo.png` per `logo-160.webp`.
+- Requereix sharp: `npm i -g sharp-cli`.
+- Noms de fitxer **sense espais** (fes servir guions): `sala-taula.jpg`, no `sala taula.jpg`.
+- Comprova que la foto és de veritat una imatge: `cine-gastronomia-mesa.jpg` era una pàgina web desada amb extensió .jpg.
+- Si s'afegeix una icona Font Awesome nova (`<i class="fa fa-...">`), regenerar `assets/css/icons.css` amb `tools/make-icons.js`.
+- No enllaçar mai Google Fonts, Font Awesome CDN ni imatges d'Unsplash: tot es serveix des del propi web.
+
 Totes les imatges van a la carpeta `assets/img/`.
 Els noms han de ser **exactament** els que apareixen aquí.
 
