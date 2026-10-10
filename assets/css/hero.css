@@ -24,6 +24,13 @@
   animation: heroSettle 2.8s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
+/* Gra fotogràfic molt subtil (acabat de revista) */
+.hero-gradient::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: .07; mix-blend-mode: overlay;
+}
+
 /* Gradient fosc cap a baix + enfosquit lateral on va el text */
 .hero-gradient {
   position: absolute; inset: 0;
@@ -78,14 +85,44 @@
   width: 28px; height: 1px; background: rgba(184,146,74,.6); flex-shrink: 0;
 }
 
+/* Títol: cada línia puja des d'una màscara invisible */
+@keyframes lineUp {
+  from { transform: translateY(105%); }
+  to   { transform: translateY(0); }
+}
+/* Una sola passada de brillantor daurada sobre "Tarragona" */
+@keyframes goldSheen {
+  from { background-position: 100% 0; }
+  to   { background-position: 0 0; }
+}
 .hero-title {
   font-family: var(--font-serif);
   font-size: clamp(2.8rem, 6vw, 4.5rem);
   color: #fff; line-height: 1.06; font-weight: 700;
   margin-bottom: 20px;
-  animation: fadeUp .7s var(--ease-out, ease) .2s both;
 }
-.hero-title em { font-style: italic; color: rgba(212,169,106,.92); }
+.hero-line {
+  display: block; overflow: hidden;
+  /* marge perquè no es retallin els descendents (g) de la cursiva */
+  padding-bottom: .14em; margin-bottom: -.14em;
+}
+.hero-line > span {
+  display: block;
+  animation: lineUp 1s cubic-bezier(0.22, 1, 0.36, 1) .2s both;
+}
+.hero-line + .hero-line > span { animation-delay: .32s; }
+.hero-title em {
+  font-style: italic; padding-right: .06em;
+  color: rgba(212,169,106,.92);
+  background: linear-gradient(100deg,
+    rgba(212,169,106,.92) 0%, rgba(212,169,106,.92) 42%,
+    #f6e3bd 50%,
+    rgba(212,169,106,.92) 58%, rgba(212,169,106,.92) 100%);
+  background-size: 260% 100%; background-position: 0 0;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldSheen 1.6s cubic-bezier(0.45, 0, 0.25, 1) 1.15s both;
+}
 
 .hero-sub {
   font-size: 1.05rem; color: rgba(255,255,255,.78);
@@ -99,13 +136,25 @@
   display: flex; gap: 14px; flex-wrap: wrap;
   animation: fadeUp .7s var(--ease-out, ease) .43s both;
 }
+/* Botó principal: farciment daurat d'esquerra a dreta en passar el ratolí */
 .btn-hero-primary {
+  position: relative; z-index: 0; overflow: hidden;
   display: inline-block; padding: 14px 32px;
   background: #fff; color: var(--navy-dark);
   font-size: .78rem; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700;
   transition: .2s;
 }
-.btn-hero-primary:hover { background: var(--cream); }
+.btn-hero-primary::before {
+  content: ''; position: absolute; inset: 0; z-index: -1;
+  background: var(--gold-light);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .5s var(--ease-out, ease);
+}
+@media (hover: hover) {
+  .btn-hero-primary:hover::before { transform: scaleX(1); }
+}
+.btn-hero-primary:focus-visible,
+.btn-hero-ghost:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
 .btn-hero-ghost {
   display: inline-block; padding: 13px 32px;
   border: 1.5px solid rgba(255,255,255,.38); color: rgba(255,255,255,.82);
@@ -114,16 +163,32 @@
 }
 .btn-hero-ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); color: #fff; }
 
-/* Meta dret */
+/* Cita destacada (dreta): última visita o propera cita */
 .hero-meta {
   position: absolute; right: 4%; bottom: 72px; z-index: 2;
-  text-align: right;
-  animation: fadeUp .7s var(--ease-out, ease) .55s both;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 6px;
+  text-align: right; text-decoration: none;
+  padding: 14px 0 0 24px;
+  border-top: 1px solid rgba(184,146,74,.45);
+  animation: fadeUp .7s var(--ease-out, ease) .6s both;
 }
-.hero-meta-item {
-  font-size: .68rem; letter-spacing: 3.5px; text-transform: uppercase;
-  color: rgba(255,255,255,.55); margin-bottom: 6px;
+.hero-meta-label {
+  font-size: .66rem; letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(212,169,106,.9);
 }
+.hero-meta-title {
+  font-family: var(--font-serif); font-style: italic;
+  font-size: 1.15rem; color: #fff; line-height: 1.25;
+}
+.hero-meta-link {
+  font-size: .68rem; letter-spacing: 2.5px; text-transform: uppercase;
+  color: rgba(255,255,255,.7);
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: color .2s, gap .3s var(--ease-out, ease);
+}
+.hero-meta-link::after { content: '→'; letter-spacing: 0; }
+.hero-meta:hover .hero-meta-link { color: #fff; gap: 12px; }
+.hero-meta:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 6px; }
 
 /* Scroll hint — la línia es dibuixa d'esquerra a dreta en bucle */
 @keyframes scrollDraw {
@@ -147,6 +212,34 @@
   animation: scrollDraw 2.4s cubic-bezier(0.65, 0, 0.35, 1) 1.5s infinite both;
 }
 
+/* Parallax en fer scroll: la foto va més lenta i el text s'esvaeix.
+   CSS natiu (scroll-driven animations); si el navegador no ho suporta, no passa res. */
+@keyframes heroParallax { to { translate: 0 22vh; } }
+@keyframes heroContentOut { to { opacity: 0; translate: 0 -48px; } }
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-bg {
+      animation:
+        heroSettle 2.8s cubic-bezier(0.23, 1, 0.32, 1) both,
+        heroParallax linear both;
+      animation-timeline: auto, scroll(root);
+      animation-range: normal, 0 100vh;
+    }
+    .hero-content {
+      animation: heroContentOut linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 65vh;
+    }
+    .hero-meta {
+      animation:
+        fadeUp .7s var(--ease-out, ease) .6s both,
+        heroContentOut linear both;
+      animation-timeline: auto, scroll(root);
+      animation-range: normal, 0 65vh;
+    }
+  }
+}
+
 /* Strip sota el hero */
 .strip {
   background: var(--navy); padding: 18px 0;
@@ -167,11 +260,21 @@
 
 /* ---- Responsive ---- */
 @media (max-width: 680px) {
-  #hero { min-height: 88vh; min-height: 88svh; }
+  #hero {
+    min-height: 88vh; min-height: 88svh;
+    flex-direction: column; justify-content: flex-end; align-items: stretch;
+  }
   .hero-bg { background-image: url('../img/hero-mobile.webp'); background-position: center; }
   .hero-label { letter-spacing: 3px; font-size: .68rem; }
-  .hero-content { padding: 0 5% 60px; padding-top: 88px; }
-  .hero-meta    { display: none; }
+  .hero-label-long { display: none; }
+  .hero-content { padding: 0 5% 32px; padding-top: 88px; }
+  /* En mòbil la cita va a sota dels botons, alineada a l'esquerra */
+  .hero-meta {
+    position: relative; right: auto; bottom: auto;
+    align-items: flex-start; text-align: left;
+    margin: 0 5% 36px; padding: 14px 0 0;
+  }
+  .hero-meta-title { font-size: 1.05rem; }
   .hero-scroll  { display: none; }
   .hero-left-line { display: none; }
   .hero-title   { font-size: clamp(2.2rem, 11vw, 3rem); }

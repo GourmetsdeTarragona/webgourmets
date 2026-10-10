@@ -92,7 +92,7 @@
 <link rel="stylesheet" href="assets/css/nav.css?v=20261006">
 <link rel="preload" as="image" href="assets/img/hero.webp" type="image/webp" media="(min-width: 681px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/img/hero-mobile.webp" type="image/webp" media="(max-width: 680px)" fetchpriority="high">
-<link rel="stylesheet" href="assets/css/hero.css?v=20261010">
+<link rel="stylesheet" href="assets/css/hero.css?v=20261010b">
 <link rel="stylesheet" href="assets/css/seccions.css?v=20261006">
 <style>
 /* ════════════════════════════════════════
@@ -292,9 +292,10 @@
   <div class="hero-left-line"></div>
 
   <div class="hero-content">
-    <p class="t hero-label" data-es="Asociación Gastronómica · Camp de Tarragona" data-ca="Associació Gastronòmica · Camp de Tarragona">Asociación Gastronómica · Camp de Tarragona</p>
+    <p class="t hero-label" data-es="<span class='hero-label-long'>Asociación Gastronómica · </span>Camp de Tarragona" data-ca="<span class='hero-label-long'>Associació Gastronòmica · </span>Camp de Tarragona"><span class="hero-label-long">Asociación Gastronómica · </span>Camp de Tarragona</p>
     <h1 class="hero-title">
-      Gourmets<br>de <em>Tarragona</em>
+      <span class="hero-line"><span>Gourmets</span></span>
+      <span class="hero-line"><span>de <em>Tarragona</em></span></span>
     </h1>
     <p class="t hero-sub" data-es="Una mesa abierta a quien quiera conocer la cocina del Camp de Tarragona." data-ca="Una taula oberta a qui vulgui conèixer la cuina del Camp de Tarragona.">Una mesa abierta a quien quiera conocer la cocina del Camp de Tarragona.</p>
     <div class="hero-btns">
@@ -303,10 +304,13 @@
     </div>
   </div>
 
-  <div class="hero-meta">
-    <div class="t hero-meta-item" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</div>
-    <div class="t hero-meta-item" data-es="Recorrido Gourmet" data-ca="Recorregut Gourmet">Recorrido Gourmet</div>
-  </div>
+  <!-- Cita destacada del hero. Quan es confirmi la visita 08, canviar per:
+       etiqueta "Próxima cita / Propera cita", nom del restaurant, data i enllaç a la prèvia. -->
+  <a class="hero-meta" href="entrades/galliner-cronica-2026.html">
+    <span class="t hero-meta-label" data-es="Última visita · 1 oct. 2026" data-ca="Darrera visita · 1 oct. 2026">Última visita · 1 oct. 2026</span>
+    <span class="hero-meta-title">El Galliner de l'Antiquari</span>
+    <span class="t hero-meta-link" data-es="Leer la crónica" data-ca="Llegeix la crònica">Leer la crónica</span>
+  </a>
 
   <div class="hero-scroll">
     <span class="t" data-es="Desliza" data-ca="Llisca">Desliza</span>
