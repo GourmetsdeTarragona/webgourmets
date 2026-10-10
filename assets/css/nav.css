@@ -76,7 +76,7 @@
   min-height: 44px; min-width: 44px;
 }
 .lang-btn:hover { color: rgba(255,255,255,.9); }
-.lang-btn.active { color: var(--navy); background: #fff; border-color: #fff; }
+.lang-btn.active { color: #fff; background: transparent; border-color: rgba(184,146,74,.75); }
 #nav.solid .lang-btn { color: var(--muted); }
 #nav.solid .lang-btn:hover { color: var(--navy); }
 #nav.solid .lang-btn.active { color: #fff; background: var(--navy); border-color: var(--navy); }

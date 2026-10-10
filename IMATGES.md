@@ -39,11 +39,22 @@ Posa-les totes a la subcarpeta `assets/img/kema/`
 
 ---
 
+## Hero de la home (foto pròpia)
+
+| Fitxer | Origen | Notes |
+|---|---|---|
+| `assets/img/hero.webp` | Gala Premis 2025 a Vermuts Rofes (Reus) · `Desktop\Gourmets\Entrega Premis 2025\instagram todos\WhatsApp Image 2026-01-31 at 08.04.19 (5).jpeg` | 1920 px, ordinador |
+| `assets/img/hero-mobile.webp` | Mateixa foto, retall vertical central (920×1536 → 800 px) | Mòbil (≤ 680 px) |
+
+Si apareix l'original de més qualitat (no WhatsApp), regenerar amb sharp i mantenir els mateixos noms.
+
+---
+
 ## Imatges d'Unsplash (pots descarregar-les manualment)
 
 | Fitxer destí | URL Unsplash | On s'usa |
 |---|---|---|
-| `assets/img/hero.jpg` | `https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=85` | Hero principal |
+| `assets/img/hero.jpg` | `https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=85` | Fons de capçalera a contacte, restaurants, newsletter i santjordi (ja NO és el hero de la home) |
 | `assets/img/about.jpg` | `https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=85` | Secció "Qui som" |
 | `assets/img/event-cata.jpg` | `https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=85` | Card cata de vins |
 | `assets/img/event-visita.jpg` | `https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=85` | Card visita gastronòmica |

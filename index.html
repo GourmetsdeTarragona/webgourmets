@@ -90,7 +90,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="assets/css/variables.css?v=20261006">
 <link rel="stylesheet" href="assets/css/nav.css?v=20261006">
-<link rel="stylesheet" href="assets/css/hero.css?v=20261006">
+<link rel="preload" as="image" href="assets/img/hero.webp" type="image/webp" media="(min-width: 681px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img/hero-mobile.webp" type="image/webp" media="(max-width: 680px)" fetchpriority="high">
+<link rel="stylesheet" href="assets/css/hero.css?v=20261010">
 <link rel="stylesheet" href="assets/css/seccions.css?v=20261006">
 <style>
 /* ════════════════════════════════════════
@@ -103,7 +105,6 @@
 /* Keyframes */
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-@keyframes scrollBounce{0%,100%{transform:translateY(0);opacity:.6;}50%{transform:translateY(5px);opacity:1;}}
 
 /* ── Mobile menu — transición en lugar de display toggle ── */
 #mobileMenu{
@@ -118,15 +119,7 @@
 }
 #mobileMenu.open{opacity:1;transform:translateY(0);pointer-events:auto;}
 
-/* ── Hero — entrada animada escalonada ── */
-.hero-label{animation:fadeUp 600ms ease both;animation-delay:100ms;}
-.hero-title{animation:fadeUp 600ms ease both;animation-delay:200ms;}
-.hero-sub  {animation:fadeUp 600ms ease both;animation-delay:320ms;}
-.hero-btns {animation:fadeUp 600ms ease both;animation-delay:430ms;}
-.hero-scroll{animation:fadeIn 800ms ease both;animation-delay:700ms;}
-
-/* ── Scroll indicator — bounce animado ── */
-.hero-scroll-line{animation:scrollBounce 1.8s ease-in-out infinite;}
+/* Hero: animacions d'entrada a assets/css/hero.css */
 
 /* ── Botones — feedback :active ── */
 .btn-hero-primary,.btn-hero-ghost,.btn-primary,.btn-outline{transition:background 200ms ease,border-color 200ms ease,color 200ms ease,transform 120ms ease;}
