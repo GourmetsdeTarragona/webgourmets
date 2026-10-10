@@ -62,27 +62,32 @@
 <link rel="preload" href="../assets/fonts/playfair-display-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/fonts.css?v=20261010">
+<link rel="preload" as="image" href="../assets/img/about/hero-associacio.webp" type="image/webp" media="(min-width: 681px)" fetchpriority="high">
+<link rel="preload" as="image" href="../assets/img/about/hero-associacio-mobile.webp" type="image/webp" media="(max-width: 680px)" fetchpriority="high">
 <link rel="stylesheet" href="../assets/css/icons.css?v=20261010">
 <link rel="stylesheet" href="../assets/css/variables.css?v=20261006">
 <link rel="stylesheet" href="../assets/css/nav.css?v=20261006">
 <link rel="stylesheet" href="../assets/css/seccions.css?v=20261006">
 <style>
 .page-hero{position:relative;min-height:72vh;display:flex;align-items:flex-end;overflow:hidden;padding:0;background:#0b1626;}
-.page-hero-bg{position:absolute;inset:0;background-image:url('../assets/img/about/hero-associacio.jpg');background-size:cover;background-position:center 40%;opacity:.65;filter:brightness(1.08) contrast(1.05);transform:scale(1.02);transition:transform 8s cubic-bezier(0.23, 1, 0.32, 1);}
-@media(hover:hover) and (pointer:fine){.page-hero:hover .page-hero-bg{transform:scale(1);}}
-.page-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.95) 0%,rgba(11,22,38,.55) 50%,rgba(11,22,38,.25) 100%);}
+@keyframes asocSettle{from{transform:scale(1.08);}to{transform:scale(1);}}
+.page-hero-bg{position:absolute;inset:0;background-image:url('../assets/img/about/hero-associacio.webp');background-size:cover;background-position:center 40%;opacity:.7;filter:brightness(1.08) contrast(1.05);animation:asocSettle 2.8s cubic-bezier(0.23,1,0.32,1) both;}
+.page-hero .slabel{animation:fadeUp .7s var(--ease-out) .1s both;}
+.page-hero .stitle{animation:fadeUp .8s var(--ease-out) .22s both;}
+.page-hero-desc{animation:fadeUp .8s var(--ease-out) .36s both;}
+.page-hero-grad{position:absolute;inset:0;background:linear-gradient(to right,rgba(11,22,38,.55) 0%,rgba(11,22,38,.15) 55%,transparent 75%),linear-gradient(to top,rgba(11,22,38,.95) 0%,rgba(11,22,38,.55) 50%,rgba(11,22,38,.25) 100%);}
 .page-hero-line{position:absolute;left:4%;top:15%;bottom:15%;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.4),transparent);animation:clipReveal 1.2s cubic-bezier(0.23,1,0.32,1) 0.4s both;}
 @keyframes clipReveal{from{clip-path:inset(0 0 100% 0);}to{clip-path:inset(0 0 0% 0);}}
 .page-hero-inner{position:relative;z-index:2;max-width:860px;margin:0 auto;padding:0 5% 72px;width:100%;}
 .page-hero .slabel{color:var(--gold);letter-spacing:.24em;}
 .page-hero .stitle{color:#fff;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.08;margin-top:16px;}
-.page-hero .stitle em{font-style:italic;color:rgba(212,169,106,.9);font-weight:400;}
+.page-hero .stitle em{font-style:italic;color:rgba(212,169,106,.9);font-weight:400;white-space:nowrap;}
 .page-hero-desc{font-size:1.12rem;color:rgba(255,255,255,.88);font-weight:400;line-height:1.75;margin-top:20px;max-width:580px;}
 .page-hero-caption{position:absolute;bottom:18px;right:5%;font-size:.62rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);z-index:2;}
 @media(max-width:680px){
   .page-hero{min-height:80vh;}
   .page-hero-inner{padding-bottom:52px;}
-  .page-hero-bg{background-position:center 60%;}
+  .page-hero-bg{background-image:url('../assets/img/about/hero-associacio-mobile.webp');background-position:center;}
 }
 
 /* ════════════════ REDISSENY OCT. 2026 ════════════════
@@ -247,6 +252,8 @@ html{scroll-padding-top:132px;}
 .faq summary::-webkit-details-marker{display:none;}
 .faq summary::after{content:'+';position:absolute;right:24px;top:50%;transform:translateY(-50%);font-family:var(--font-body);font-size:1.6rem;line-height:1;color:var(--gold-text);}
 .faq details[open] summary::after{content:'–';}
+.faq summary:hover{color:var(--gold-text);}
+.faq details[open]{border-color:rgba(184,146,74,.45);box-shadow:0 8px 24px rgba(11,22,38,.06);}
 .faq summary:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
 .faq details p{padding:0 24px 20px;font-size:1.04rem;line-height:1.75;color:#3a3a3a;margin:0;}
 .faq-link{display:inline-flex;align-items:center;gap:8px;margin:0 24px 22px;font-size:.8rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:2px;}
@@ -351,7 +358,7 @@ const t = {
   footer_privacitat:{es:'Política de Privacidad',ca:'Política de Privacitat'},
   footer_copy:{es:'© 2026 Gourmets de Tarragona · Asociación Gastronómica · Todos los derechos reservados',ca:'© 2026 Gourmets de Tarragona · Associació Gastronòmica · Tots els drets reservats'},
   asoc_hero_label:{es:"La Asociación",ca:"L'Associació"},
-  asoc_hero_title:{es:"Cenamos juntos desde 1998",ca:"Sopem junts des del 1998"},
+  asoc_hero_title:{es:"Cenamos juntos <em>desde 1998</em>",ca:"Sopem junts <em>des del 1998</em>"},
   asoc_hero_desc:{es:"Una asociación de aficionados que cada temporada recorre ocho restaurantes del Camp de Tarragona, los valora de forma anónima entre todos y premia a los mejores.",ca:"Una associació d'aficionats que cada temporada recorre vuit restaurants del Camp de Tarragona, els valora de manera anònima entre tots i premia els millors."},
   xifra_1:{es:"Primeras cenas",ca:"Primers sopars"},
   xifra_2:{es:"Restaurantes por temporada",ca:"Restaurants per temporada"},
@@ -618,7 +625,7 @@ function setLang(lang) {
   <div class="page-hero-line"></div>
   <div class="page-hero-inner">
     <p class="slabel" data-i18n="asoc_hero_label">La Asociación</p>
-    <h1 class="stitle" data-i18n="asoc_hero_title">Cenamos juntos desde 1998</h1>
+    <h1 class="stitle" data-i18n="asoc_hero_title">Cenamos juntos <em>desde 1998</em></h1>
     <p class="page-hero-desc" data-i18n="asoc_hero_desc">Una asociación de aficionados que cada temporada recorre ocho restaurantes del Camp de Tarragona, los valora de forma anónima entre todos y premia a los mejores.</p>
   </div>
 </div>
@@ -647,7 +654,7 @@ function setLang(lang) {
 <section class="sec" id="identity">
   <div class="sec-inner">
     <div class="missio-grid">
-      <div>
+      <div class="reveal">
         <p class="slabel" data-i18n="identity_label">Quiénes somos</p>
         <h2 class="stitle" data-i18n="identity_title">Aficionados, independientes y de aquí</h2>
         <div class="sdiv"></div>
@@ -657,7 +664,7 @@ function setLang(lang) {
           <footer><span class="asoc-cita-nom">Juan Manuel Rodríguez Yarritu</span><span class="asoc-cita-carrec" data-i18n="salut_carrec">Presidente</span></footer>
         </blockquote>
       </div>
-      <div class="img-frame missio-video">
+      <div class="img-frame missio-video reveal reveal-delay-2">
         <!-- Vídeo optimitzat (276 KB, sense àudio). Només es reprodueix quan és visible i si l'usuari no ha demanat menys moviment. -->
         <video class="js-lazy-video" muted loop playsinline preload="none"
                poster="../assets/video/plat-tau-poster.webp" aria-hidden="true">
@@ -667,7 +674,7 @@ function setLang(lang) {
     </div>
 
     <div class="identity-grid">
-      <div class="identity-col">
+      <div class="identity-col reveal">
         <div class="identity-col-header">
           <div class="identity-col-icon"><i class="fa fa-check"></i></div>
           <div>
@@ -681,7 +688,7 @@ function setLang(lang) {
           <li class="identity-item"><span class="identity-item-mark identity-item-mark-si"><i class="fa fa-check"></i></span><span data-i18n="identity_si_4"><strong>Defensores del producto local.</strong> Ponemos en valor el territorio y la cocina del Camp de Tarragona.</span></li>
         </ul>
       </div>
-      <div class="identity-col">
+      <div class="identity-col reveal">
         <div class="identity-col-header identity-col-header-no">
           <div class="identity-col-icon identity-col-icon-no"><i class="fa fa-minus"></i></div>
           <div>
@@ -712,7 +719,7 @@ function setLang(lang) {
 <!-- PROCÉS -->
 <section class="sec sec-gray" id="funcionament">
   <div class="sec-inner">
-    <div class="asoc-sec-head">
+    <div class="asoc-sec-head reveal">
       <p class="slabel" data-i18n="proceso_label">Cómo funciona</p>
       <h2 class="stitle" data-i18n="proceso_title">Así es cada visita</h2>
       <div class="sdiv"></div>
@@ -720,42 +727,42 @@ function setLang(lang) {
     </div>
 
     <ol class="vtimeline">
-      <li class="vtl-step">
+      <li class="vtl-step reveal reveal-delay-1">
         <div class="vtl-circle"><i class="fa fa-search"></i></div>
         <div class="vtl-content">
           <div class="vtl-head"><h3 class="vtl-title" data-i18n="paso1_title">Selección</h3><span class="vtl-meta" data-i18n="paso1_meta">Cada temporada</span></div>
           <p class="vtl-text" data-i18n="paso1_desc">El comité elige <strong>ocho restaurantes del Camp de Tarragona</strong>: de la cocina de producto más clásica a las propuestas más creativas.</p>
         </div>
       </li>
-      <li class="vtl-step">
+      <li class="vtl-step reveal reveal-delay-2">
         <div class="vtl-circle"><i class="fa fa-pen-nib"></i></div>
         <div class="vtl-content">
           <div class="vtl-head"><h3 class="vtl-title" data-i18n="paso2_title">Previa</h3><span class="vtl-meta" data-i18n="paso2_meta">1 semana antes</span></div>
           <p class="vtl-text" data-i18n="paso2_desc">Publicamos una <strong>crónica previa</strong> en el blog: el restaurante, su equipo y el menú acordado, para llegar a la mesa con contexto.</p>
         </div>
       </li>
-      <li class="vtl-step">
+      <li class="vtl-step reveal reveal-delay-3">
         <div class="vtl-circle"><i class="fa fa-utensils"></i></div>
         <div class="vtl-content">
           <div class="vtl-head"><h3 class="vtl-title" data-i18n="paso3_title">La visita</h3><span class="vtl-meta" data-i18n="paso3_meta">Una noche</span></div>
           <p class="vtl-text" data-i18n="paso3_desc">Compartimos mesa y <strong>vivimos la experiencia completa</strong>, sin incógnito ni prisas. Es una cena, no una inspección.</p>
         </div>
       </li>
-      <li class="vtl-step">
+      <li class="vtl-step reveal reveal-delay-1">
         <div class="vtl-circle"><i class="fa fa-star"></i></div>
         <div class="vtl-content">
           <div class="vtl-head"><h3 class="vtl-title" data-i18n="paso4_title">Valoración</h3><span class="vtl-meta" data-i18n="paso4_meta">8 criterios · del 1 al 5</span></div>
           <p class="vtl-text" data-i18n="paso4_desc">Cada socio puntúa <strong>de forma independiente y anónima</strong>. La nota es la media de todas las fichas, sin descartes.</p>
         </div>
       </li>
-      <li class="vtl-step">
+      <li class="vtl-step reveal reveal-delay-2">
         <div class="vtl-circle"><i class="fa fa-newspaper"></i></div>
         <div class="vtl-content">
           <div class="vtl-head"><h3 class="vtl-title" data-i18n="paso5_title">Crónica</h3><span class="vtl-meta" data-i18n="paso5_meta">~2 semanas después</span></div>
           <p class="vtl-text" data-i18n="paso5_desc">Publicamos la <strong>crónica completa</strong> con fotos y la puntuación media. Honesta, no promocional: lo bueno se celebra y lo mejorable se comenta con respeto.</p>
         </div>
       </li>
-      <li class="vtl-step">
+      <li class="vtl-step reveal reveal-delay-3">
         <div class="vtl-circle"><i class="fa fa-trophy"></i></div>
         <div class="vtl-content">
           <div class="vtl-head"><h3 class="vtl-title" data-i18n="paso6_title">Premios</h3><span class="vtl-meta" data-i18n="paso6_meta">Gala anual · febrero</span></div>
@@ -769,13 +776,13 @@ function setLang(lang) {
 <!-- ELS PREMIS -->
 <section class="sec" id="valoracio">
   <div class="sec-inner">
-    <div class="asoc-sec-head">
+    <div class="asoc-sec-head reveal">
       <p class="slabel" data-i18n="val_label">Los premios</p>
       <h2 class="stitle" data-i18n="val_title">Lo que reconocemos cada temporada</h2>
       <div class="sdiv"></div>
     </div>
 
-    <div class="gastronia-bloc">
+    <div class="gastronia-bloc reveal">
       <div class="gastronia-img">
         <div class="gastronia-img-bg"></div>
         <div class="gastronia-img-grad"></div>
@@ -815,7 +822,7 @@ function setLang(lang) {
       </div>
     </div>
 
-    <div class="bacus-bloc">
+    <div class="bacus-bloc reveal">
       <div class="bacus-img">
         <div class="bacus-img-bg"></div>
         <div class="bacus-img-grad"></div>
@@ -850,12 +857,12 @@ function setLang(lang) {
 <!-- MOMENTS GALLERY -->
 <section class="sec sec-gray" id="moments">
   <div class="sec-inner">
-    <div class="asoc-sec-head">
+    <div class="asoc-sec-head reveal">
       <p class="slabel" data-i18n="moments_label">Galería</p>
       <h2 class="stitle" data-i18n="moments_title">Momentos</h2>
       <div class="sdiv"></div>
     </div>
-    <div class="moments-grid">
+    <div class="moments-grid reveal">
       <button type="button" class="moment-card" onclick="obreMoment(0)">
         <img loading="lazy" decoding="async" src="../assets/img/moments/moments-01-gala-rofes.jpg" alt="Gala Vermuts Rofes 2025">
         <span class="moment-card-overlay"></span>
@@ -913,12 +920,12 @@ function setLang(lang) {
 <!-- JUNTA -->
 <section class="sec" id="junta">
   <div class="sec-inner">
-    <div class="asoc-sec-head">
+    <div class="asoc-sec-head reveal">
       <p class="slabel" data-i18n="junta_label">La Junta</p>
       <h2 class="stitle" data-i18n="junta_title">Quienes llevan el timón</h2>
       <div class="sdiv"></div>
     </div>
-    <dl class="junta-llista">
+    <dl class="junta-llista reveal">
       <div><dt data-i18n="cargo_president">Presidente</dt><dd>Juan Manuel Rodríguez Yarritu</dd></div>
       <div><dt data-i18n="cargo_vicepresident">Vicepresidente</dt><dd>Jacob Folch Roma</dd></div>
       <div><dt data-i18n="cargo_secretari">Secretario y Tesorero</dt><dd>Vicente Guillén Mejías</dd></div>
@@ -933,12 +940,12 @@ function setLang(lang) {
 <!-- PREGUNTES FREQÜENTS -->
 <section class="sec sec-gray" id="preguntes">
   <div class="sec-inner">
-    <div class="asoc-sec-head">
+    <div class="asoc-sec-head reveal">
       <p class="slabel" data-i18n="faq_label">Preguntas frecuentes</p>
       <h2 class="stitle" data-i18n="faq_title">Lo que suelen preguntarnos</h2>
       <div class="sdiv"></div>
     </div>
-    <div class="faq">
+    <div class="faq reveal">
       <details>
         <summary data-i18n="faq_q1">¿Hay que saber de cocina o de vino para ser socio?</summary>
         <p data-i18n="faq_a1">No. Hace falta curiosidad y ganas de compartir mesa. Cada uno aporta lo que sabe y en cada visita aprendemos todos.</p>
@@ -979,7 +986,7 @@ function setLang(lang) {
     <p class="slabel soci-label" data-i18n="soci_label">Hazte socio</p>
     <h2 class="stitle soci-title" data-i18n="soci_title">Una mesa abierta</h2>
     <p class="soci-desc" data-i18n="soci_desc">Gourmets de Tarragona está abierta a quien quiera compartir mesa. La mejor manera de conocernos es venir a una cena.</p>
-    <div class="soci-steps">
+    <div class="soci-steps reveal">
       <div class="soci-step"><span class="soci-step-num">01</span><h3 class="soci-step-title" data-i18n="soci_s1_t">Escríbenos</h3><p class="soci-step-p" data-i18n="soci_s1_p">Cuéntanos quién eres desde el formulario de contacto o por correo a la asociación.</p></div>
       <div class="soci-step"><span class="soci-step-num">02</span><h3 class="soci-step-title" data-i18n="soci_s2_t">Ven a una cena con un socio</h3><p class="soci-step-p" data-i18n="soci_s2_p">Vienes a una de nuestras visitas acompañando a un socio, para ver desde dentro cómo funcionamos. No todas las cenas admiten acompañantes por el aforo del restaurante, pero a lo largo del año hay más ocasiones.</p></div>
       <div class="soci-step"><span class="soci-step-num">03</span><h3 class="soci-step-title" data-i18n="soci_s3_t">Después decidimos</h3><p class="soci-step-p" data-i18n="soci_s3_p">Si te encaja, lo hablamos con la junta y decidimos juntos tu incorporación.</p></div>
