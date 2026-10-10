@@ -87,7 +87,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<!-- Font Awesome no bloqueja el render: a la home les icones només surten per sota del hero -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 <link rel="stylesheet" href="assets/css/variables.css?v=20261006">
 <link rel="stylesheet" href="assets/css/nav.css?v=20261006">
 <link rel="preload" as="image" href="assets/img/hero.webp" type="image/webp" media="(min-width: 681px)" fetchpriority="high">
@@ -207,7 +209,7 @@
   <div class="nav-inner">
 
     <a href="index.html" class="nav-logo">
-      <img src="assets/img/logo.png"
+      <img src="assets/img/logo-160.webp" width="160" height="158"
            alt="Gourmets de Tarragona"
           >
     </a>
@@ -456,7 +458,7 @@
   <div class="sec-inner">
     <div class="home-about">
       <div class="img-frame reveal-left">
-        <img src="assets/img/brumma/cronica/sala-cena.jpg" alt="Taula parada per a un sopar dels Gourmets de Tarragona al Brumma, amb el maridatge i les cartes de l'associació">
+        <img loading="lazy" decoding="async" src="assets/img/brumma/cronica/sala-cena-1000.webp" width="1000" height="750" alt="Taula parada per a un sopar dels Gourmets de Tarragona al Brumma, amb el maridatge i les cartes de l'associació">
       </div>
       <div>
         <p class="t slabel reveal" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</p>
@@ -501,7 +503,7 @@
     <div class="premios-home">
       <div class="premio-box reveal reveal-delay-2">
         <div class="premio-icon">
-          <img loading="lazy" decoding="async" src="assets/img/gastronia.png"
+          <img loading="lazy" decoding="async" src="assets/img/gastronia-800.webp" width="800" height="1200"
                alt="Trofeu Gastronia"
                onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
           <span style="display:none;font-size:2.8rem;">🏆</span>
@@ -511,7 +513,7 @@
       </div>
       <div class="premio-box reveal reveal-delay-3">
         <div class="premio-icon">
-          <img loading="lazy" decoding="async" src="assets/img/bacus.png"
+          <img loading="lazy" decoding="async" src="assets/img/bacus-800.webp" width="800" height="1200"
                alt="Premi Bacus"
                onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
           <span style="display:none;font-size:2.8rem;">🍷</span>
@@ -535,7 +537,7 @@
     <div class="cards-grid">
 
       <div class="card reveal reveal-delay-2">
-        <img loading="lazy" decoding="async" class="card-img" src="assets/img/brumma/cronica/vinos.jpg" alt="Vins del territori servits en un sopar dels Gourmets de Tarragona">
+        <img loading="lazy" decoding="async" class="card-img" src="assets/img/brumma/cronica/vinos-800.webp" width="800" height="600" alt="Vins del territori servits en un sopar dels Gourmets de Tarragona">
         <span class="t card-badge" data-es="Cata" data-ca="Tast">Cata</span>
         <div class="card-body">
           <p class="t card-date" data-es="Fecha por determinar" data-ca="Data per determinar">Fecha por determinar</p>
@@ -548,7 +550,7 @@
       </div>
 
       <div class="card reveal reveal-delay-4">
-        <img loading="lazy" decoding="async" class="card-img" src="assets/img/gala2025/sala-gala.jpg" alt="Gala de lliurament de premis 2025">
+        <img loading="lazy" decoding="async" class="card-img" src="assets/img/gala2025/sala-gala-800.webp" width="800" height="602" alt="Gala de lliurament de premis 2025">
         <span class="t card-badge" data-es="Gala" data-ca="Gala">Gala</span>
         <div class="card-body">
           <p class="t card-date" data-es="diciembre de 2026" data-ca="desembre de 2026">diciembre de 2026</p>
@@ -675,6 +677,7 @@
         <p class="blog-preview-eyebrow t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</p>
         <h2 class="blog-preview-title t" data-es="Gastronomía con criterio" data-ca="Gastronomia amb criteri">Gastronomía con criterio</h2>
         <p class="blog-preview-sub t" data-es="Crónicas, vinos y patrimonio gastronómico del Camp de Tarragona" data-ca="Cròniques, vins i patrimoni gastronòmic del Camp de Tarragona">Crónicas, vinos y patrimonio gastronómico del Camp de Tarragona</p>
+        <p style="margin-top:10px;font-size:.85rem;"><a href="pages/gastronomia-tarragona.html" class="t" style="color:var(--gold-text);font-weight:700;border-bottom:1px solid currentColor;" data-es="Guía de gastronomía de Tarragona, por temas →" data-ca="Guia de gastronomia de Tarragona, per temes →">Guía de gastronomía de Tarragona, por temas →</a></p>
       </div>
       <a href="pages/blog.html" class="blog-preview-cta t" data-es="Ver todos los artículos" data-ca="Veure tots els articles">Ver todos los artículos <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
@@ -734,7 +737,7 @@
       var desc=lang==='ca'?(p.resum_ca||p.resum_es):p.resum_es;
       var minLbl=lang==='ca'?'min':'min';
       var imgHtml = p.img
-        ? '<img src="'+p.img+'" alt="'+title+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">'
+        ? '<img loading="lazy" decoding="async" src="'+p.img+'" alt="'+title+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">'
         : '';
       return '<a href="entrades/'+p.slug+'.html" class="bp-card">'+
         '<div class="bp-card-img" style="background:'+p.color_bg+';position:relative;">'+
@@ -784,7 +787,7 @@
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
-      <img loading="lazy" decoding="async" src="assets/img/logo.png"
+      <img loading="lazy" decoding="async" src="assets/img/logo-160.webp"
            alt="Gourmets de Tarragona"
            onerror="this.style.display='none'">
       <p class="t" data-es="Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona." data-ca="Associació gastronòmica sense ànim de lucre.<br>Camp de Tarragona.">Asociación gastronómica sin ánimo de lucro.<br>Camp de Tarragona.</p>
@@ -805,6 +808,7 @@
         <li><a href="pages/premis.html" class="t" data-es="Premios" data-ca="Premis">Premios</a></li>
         <li><a href="pages/esdeveniments.html" class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</a></li>
         <li><a href="pages/blog.html" class="t" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a></li>
+        <li><a href="pages/gastronomia-tarragona.html" class="t" data-es="Gastronomía de Tarragona" data-ca="Gastronomia de Tarragona">Gastronomía de Tarragona</a></li>
         <li><a href="pages/newsletter.html" class="t" data-es="Newsletter" data-ca="Newsletter">Newsletter</a></li>
       </ul>
     </div>

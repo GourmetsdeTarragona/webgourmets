@@ -49,6 +49,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.gourmetsdetarragona.com/pages/gastronomia-tarragona.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.gourmetsdetarragona.com/pages/restaurants.html</loc>
     <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
