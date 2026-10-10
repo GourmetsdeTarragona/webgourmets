@@ -506,9 +506,9 @@ const t = {
   est_cap5:{es:'Capítulos V–X · Régimen económico y disolución',ca:'Capítols V–X · Règim econòmic i dissolució'},
   est_cap5_desc:{es:'Los recursos provienen de cuotas, subvenciones y donaciones. La asociación puede disolverse por acuerdo extraordinario de la Asamblea General.',ca:"Els recursos provenen de quotes, subvencions i donacions. L'associació es pot dissoldre per acord extraordinari de l'Assemblea General."},
   est_doc_title:{es:'Documento oficial',ca:'Document oficial'},
-  est_doc_desc:{es:'Acta fundacional y estatutos completos firmados por los socios fundadores. Tarragona, 25 de mayo de 2001.',ca:"Acta fundacional i estatuts complets signats pels socis fundadors. Tarragona, 25 de maig de 2001."},
-  est_doc_btn:{es:'Descargar estatutos (PDF)',ca:'Descarregar estatuts (PDF)'},
-  est_doc_data:{es:'Firmado el 25 de mayo de 2001 · Tarragona',ca:'Signat el 25 de maig de 2001 · Tarragona'},
+  est_doc_desc:{es:'Los estatutos completos están a disposición de los socios y de quien quiera conocerlos. Pídenoslos por correo y te los enviamos.',ca:"Els estatuts complets estan a disposició dels socis i de qui els vulgui conèixer. Demana'ns-els per correu i te'ls enviem."},
+  est_doc_btn:{es:'Solicitar los estatutos',ca:'Sol·licitar els estatuts'},
+  est_doc_data:{es:'Firmados el 25 de mayo de 2001 · Tarragona',ca:'Signats el 25 de maig de 2001 · Tarragona'},
   cta_label:{es:'¿Te unes?',ca:"T'hi apuntes?"},
   cta_title:{es:'Forma parte de nuestra mesa',ca:'Forma part de la nostra taula'},
   cta_desc:{es:'Si compartes nuestra pasión por la gastronomía y quieres formar parte de la asociación, escríbenos.',ca:"Si comparteixes la nostra passió per la gastronomia i vols formar part de l'associació, escriu-nos."},
@@ -1086,14 +1086,15 @@ function setLang(lang) {
         <h3 data-i18n="est_cap5">Capítulos V–X · Régimen económico y disolución</h3><p data-i18n="est_cap5_desc">Los recursos provienen de cuotas, subvenciones y donaciones. La asociación puede disolverse por acuerdo extraordinario de la Asamblea General.</p>
       </div>
       <div class="estatuts-doc">
+        <!-- Els estatuts escanejats contenen DNI, domicilis i signatures dels fundadors: NO es publiquen. Es faciliten per correu. -->
         <div class="estatuts-doc-ico"><i class="fa fa-file-pdf"></i></div>
         <h3 data-i18n="est_doc_title">Documento oficial</h3>
-        <p data-i18n="est_doc_desc">Acta fundacional y estatutos completos firmados por los socios fundadores. Tarragona, 25 de mayo de 2001.</p>
-        <a href="../assets/ESTATUTOS.pdf" target="_blank" class="btn-download">
-          <i class="fa fa-download" style="font-size:.85rem;"></i>
-          <span data-i18n="est_doc_btn">Descargar estatutos (PDF)</span>
+        <p data-i18n="est_doc_desc">Los estatutos completos están a disposición de los socios y de quien quiera conocerlos. Pídenoslos por correo y te los enviamos.</p>
+        <a href="mailto:gourmetsdetarragona@gourmetsdetarragona.com?subject=Estatutos%20de%20Gourmets%20de%20Tarragona" class="btn-download">
+          <i class="fa fa-envelope" style="font-size:.85rem;"></i>
+          <span data-i18n="est_doc_btn">Solicitar los estatutos</span>
         </a>
-        <p class="estatuts-data" data-i18n="est_doc_data">Firmado el 25 de mayo de 2001 · Tarragona</p>
+        <p class="estatuts-data" data-i18n="est_doc_data">Firmados el 25 de mayo de 2001 · Tarragona</p>
       </div>
     </div>
   </div>
