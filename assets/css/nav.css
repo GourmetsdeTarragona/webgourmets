@@ -18,6 +18,15 @@
   max-width: var(--max); margin: 0 auto; padding: 10px 4%;
 }
 
+/* Capçalera de les entrades del blog: la barra és fixa (70px), així que el contingut
+   del hero ha de deixar-li espai a dalt. Si no, quan el títol és llarg el contingut creix
+   cap amunt i "Tornar al blog" queda sota el logo. Selector més específic per guanyar
+   l'estil copiat a cada entrada. */
+.entrada-hero .entrada-hero-content { padding-top: 112px; }
+@media (max-width: 680px) {
+  .entrada-hero .entrada-hero-content { padding-top: 96px; }
+}
+
 /* Logo */
 .nav-logo { flex-shrink: 0; }
 .nav-logo img { height: 50px; width: auto; display: block; transition: filter .3s; }
