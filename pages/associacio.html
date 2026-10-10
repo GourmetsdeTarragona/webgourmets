@@ -138,9 +138,10 @@ html{scroll-padding-top:132px;}
 .identity-item strong{color:var(--navy-dark);font-weight:700;}
 
 /* ── Foto de grup ── */
-.socis-foto{position:relative;margin:0;overflow:hidden;}
-.socis-foto img{width:100%;height:520px;object-fit:cover;object-position:center 45%;display:block;}
-.socis-foto figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 5% 22px;background:linear-gradient(to top,rgba(11,22,38,.88),transparent);display:flex;flex-direction:column;gap:4px;}
+/* Foto sencera (retall horitzontal fet al fitxer, sense tornar a retallar) i peu a sota, no a sobre de les cares */
+.socis-foto{margin:0;background:var(--navy-dark);}
+.socis-foto img{width:100%;max-width:1200px;height:auto;aspect-ratio:1205/690;display:block;margin:0 auto;}
+.socis-foto figcaption{max-width:1200px;margin:0 auto;padding:18px 4% 20px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;}
 .socis-foto-label{font-size:.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold-light);}
 .socis-foto-peu{font-family:var(--font-serif);font-style:italic;font-size:1.02rem;color:rgba(255,255,255,.9);}
 
@@ -295,7 +296,7 @@ html{scroll-padding-top:132px;}
   .asoc-xifra-txt{font-size:.7rem;letter-spacing:1px;}
   .identity-grid{grid-template-columns:1fr;gap:36px;}
   .identity-grid::before{display:none;}
-  .socis-foto img{height:300px;}
+  .socis-foto figcaption{flex-direction:column;gap:4px;padding:14px 5% 16px;}
   .vtl-step{grid-template-columns:46px 1fr;gap:16px;padding-bottom:32px;}
   .vtl-step::before{left:22px;top:46px;}
   .vtl-circle{width:46px;height:46px;}
@@ -364,12 +365,12 @@ const t = {
   idx_6:{es:"Hazte socio",ca:"Fes-te soci"},
   identity_label:{es:"Quiénes somos",ca:"Qui som"},
   identity_title:{es:"Aficionados, independientes y de aquí",ca:"Aficionats, independents i d'aquí"},
-  missio_p:{es:"No vivimos de esto: somos aficionados que pagamos nuestra mesa. Por eso podemos mirar con honestidad la cocina del Camp de Tarragona y poner en valor a quienes la hacen posible: cocineros, sumilleres, sala y productores.",ca:"No vivim d'això: som aficionats que paguem la nostra taula. Per això podem mirar amb honestedat la cuina del Camp de Tarragona i posar en valor qui la fa possible: cuiners, sommeliers, sala i productors."},
+  missio_p:{es:"No vivimos de esto: somos aficionados. Por eso podemos mirar con honestidad la cocina del Camp de Tarragona y poner en valor a quienes la hacen posible: cocineros, sumilleres, sala y productores.",ca:"No vivim d'això: som aficionats. Per això podem mirar amb honestedat la cuina del Camp de Tarragona i posar en valor qui la fa possible: cuiners, sommeliers, sala i productors."},
   salut_text:{es:"«Nuestra asociación nació de una pasión compartida: la gastronomía como forma de conocer el territorio, sus gentes y su cultura.»",ca:"«La nostra associació va néixer d'una passió compartida: la gastronomia com a forma de conèixer el territori, la seva gent i la seva cultura.»"},
   salut_carrec:{es:"Presidente",ca:"President"},
   identity_si_title:{es:"Somos",ca:"Som"},
   identity_no_title:{es:"No somos",ca:"No som"},
-  identity_si_1:{es:"<strong>Una asociación independiente.</strong> Pagamos nuestras visitas y mantenemos la libertad de criterio.",ca:"<strong>Una associació independent.</strong> Assumim el cost de les visites i mantenim la llibertat de criteri."},
+  identity_si_1:{es:"<strong>Una asociación independiente.</strong> Mantenemos la libertad de criterio en cada visita.",ca:"<strong>Una associació independent.</strong> Mantenim la llibertat de criteri a cada visita."},
   identity_si_2:{es:"<strong>Sin ánimo de lucro.</strong> Así lo recogen nuestros estatutos y así lo vivimos en el día a día.",ca:"<strong>Sense ànim de lucre.</strong> Així ho recullen els nostres estatuts i així ho vivim en el dia a dia."},
   identity_si_3:{es:"<strong>Rigurosos y respetuosos.</strong> Valoramos con criterio, siempre desde el reconocimiento y la admiración por el oficio.",ca:"<strong>Rigorosos i respectuosos.</strong> Valorem amb criteri, sempre des del reconeixement i l'admiració per l'ofici."},
   identity_si_4:{es:"<strong>Defensores del producto local.</strong> Ponemos en valor el territorio y la cocina del Camp de Tarragona.",ca:"<strong>Defensors del producte local.</strong> Reivindiquem el territori i la cuina del Camp de Tarragona."},
@@ -463,8 +464,8 @@ const t = {
   faq_a3:{es:"No lo publicamos en la web: te lo explicamos encantados si nos escribes, sin ningún compromiso.",ca:"No ho publiquem al web: t'ho expliquem encantats si ens escrius, sense cap compromís."},
   faq_q4:{es:"¿Puedo venir acompañado?",ca:"Puc venir acompanyat?"},
   faq_a4:{es:"En algunas cenas sí; depende del aforo de cada restaurante.",ca:"En alguns sopars sí; depèn de l'aforament de cada restaurant."},
-  faq_q5:{es:"¿Los restaurantes saben que vais? ¿Quién paga la cena?",ca:"Els restaurants saben que hi aneu? Qui paga el sopar?"},
-  faq_a5:{es:"Sí, reservamos como grupo y no vamos de incógnito. Pagamos nuestras visitas: ningún restaurante nos invita ni paga por aparecer en las crónicas.",ca:"Sí, reservem com a grup i no hi anem d'incògnit. Paguem les nostres visites: cap restaurant ens convida ni paga per aparèixer a les cròniques."},
+  faq_q5:{es:"¿Los restaurantes saben que vais?",ca:"Els restaurants saben que hi aneu?"},
+  faq_a5:{es:"Sí, reservamos como grupo y no vamos de incógnito. Ningún restaurante paga por aparecer en nuestras crónicas.",ca:"Sí, reservem com a grup i no hi anem d'incògnit. Cap restaurant paga per aparèixer a les nostres cròniques."},
   faq_q6:{es:"¿Cómo elegís los restaurantes?",ca:"Com trieu els restaurants?"},
   faq_a6:{es:"Los propone y decide el comité cada temporada, buscando variedad de cocinas y de zonas del Camp de Tarragona.",ca:"Els proposa i decideix el comitè cada temporada, buscant varietat de cuines i de zones del Camp de Tarragona."},
   faq_q7:{es:"¿Puedo leer los estatutos?",ca:"Puc llegir els estatuts?"},
@@ -650,7 +651,7 @@ function setLang(lang) {
         <p class="slabel" data-i18n="identity_label">Quiénes somos</p>
         <h2 class="stitle" data-i18n="identity_title">Aficionados, independientes y de aquí</h2>
         <div class="sdiv"></div>
-        <p class="asoc-p" data-i18n="missio_p">No vivimos de esto: somos aficionados que pagamos nuestra mesa. Por eso podemos mirar con honestidad la cocina del Camp de Tarragona y poner en valor a quienes la hacen posible: cocineros, sumilleres, sala y productores.</p>
+        <p class="asoc-p" data-i18n="missio_p">No vivimos de esto: somos aficionados. Por eso podemos mirar con honestidad la cocina del Camp de Tarragona y poner en valor a quienes la hacen posible: cocineros, sumilleres, sala y productores.</p>
         <blockquote class="asoc-cita">
           <p data-i18n="salut_text">«Nuestra asociación nació de una pasión compartida: la gastronomía como forma de conocer el territorio, sus gentes y su cultura.»</p>
           <footer><span class="asoc-cita-nom">Juan Manuel Rodríguez Yarritu</span><span class="asoc-cita-carrec" data-i18n="salut_carrec">Presidente</span></footer>
@@ -674,7 +675,7 @@ function setLang(lang) {
           </div>
         </div>
         <ul class="identity-list">
-          <li class="identity-item"><span class="identity-item-mark identity-item-mark-si"><i class="fa fa-check"></i></span><span data-i18n="identity_si_1"><strong>Una asociación independiente.</strong> Pagamos nuestras visitas y mantenemos la libertad de criterio.</span></li>
+          <li class="identity-item"><span class="identity-item-mark identity-item-mark-si"><i class="fa fa-check"></i></span><span data-i18n="identity_si_1"><strong>Una asociación independiente.</strong> Mantenemos la libertad de criterio en cada visita.</span></li>
           <li class="identity-item"><span class="identity-item-mark identity-item-mark-si"><i class="fa fa-check"></i></span><span data-i18n="identity_si_2"><strong>Sin ánimo de lucro.</strong> Así lo recogen nuestros estatutos y así lo vivimos en el día a día.</span></li>
           <li class="identity-item"><span class="identity-item-mark identity-item-mark-si"><i class="fa fa-check"></i></span><span data-i18n="identity_si_3"><strong>Rigurosos y respetuosos.</strong> Valoramos con criterio, siempre desde el reconocimiento y la admiración por el oficio.</span></li>
           <li class="identity-item"><span class="identity-item-mark identity-item-mark-si"><i class="fa fa-check"></i></span><span data-i18n="identity_si_4"><strong>Defensores del producto local.</strong> Ponemos en valor el territorio y la cocina del Camp de Tarragona.</span></li>
@@ -700,7 +701,7 @@ function setLang(lang) {
 
 <!-- FOTO GRUP SOCIS -->
 <figure class="socis-foto">
-  <img loading="lazy" decoding="async" src="../assets/img/kema/grup.jpg"
+  <img loading="lazy" decoding="async" src="../assets/img/kema/grup-socis.jpg" width="1205" height="690"
        alt="Els socis de Gourmets de Tarragona · Visita Kema, Cambrils · març 2026">
   <figcaption>
     <span class="socis-foto-label" data-i18n="socis_foto_label">Nuestros socios</span>
@@ -955,8 +956,8 @@ function setLang(lang) {
         <p data-i18n="faq_a4">En algunas cenas sí; depende del aforo de cada restaurante.</p>
       </details>
       <details>
-        <summary data-i18n="faq_q5">¿Los restaurantes saben que vais? ¿Quién paga la cena?</summary>
-        <p data-i18n="faq_a5">Sí, reservamos como grupo y no vamos de incógnito. Pagamos nuestras visitas: ningún restaurante nos invita ni paga por aparecer en las crónicas.</p>
+        <summary data-i18n="faq_q5">¿Los restaurantes saben que vais?</summary>
+        <p data-i18n="faq_a5">Sí, reservamos como grupo y no vamos de incógnito. Ningún restaurante paga por aparecer en nuestras crónicas.</p>
       </details>
       <details>
         <summary data-i18n="faq_q6">¿Cómo elegís los restaurantes?</summary>
