@@ -8,6 +8,24 @@
     <atom:link href="https://www.gourmetsdetarragona.com/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>La clotxa — el pan que también es el plato</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/la-clotxa.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/la-clotxa.html</guid>
+      <pubDate>Mon, 09 Nov 2026 09:00:00 +0100</pubDate>
+      <description>Pan de payés vaciado, verduras al rescoldo y sardina de casco. Clotxa, crostó, canto de pa o clotxina según el pueblo. Con fiesta propia en Garcia el 15 de noviembre.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/clotxa/clotxa-hero.jpg" medium="image"/>
+    </item>
+
+    <item>
+      <title>Las catedrales del vino — Cèsar Martinell y los cellers modernistas</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/catedrals-del-vi.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/catedrals-del-vi.html</guid>
+      <pubDate>Fri, 16 Oct 2026 09:00:00 +0200</pubDate>
+      <description>Un discípulo de Gaudí nacido en Valls levantó cooperativas de vino con forma de catedral entre 1918 y 1923. Las siete declaradas Bien Cultural de Interés Nacional están en esta provincia.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/cellers/nulles-arcades.jpg" medium="image"/>
+    </item>
+
+    <item>
       <title>Por qué el aceite nuevo pica — el oli novell de la DOP Siurana</title>
       <link>https://www.gourmetsdetarragona.com/entrades/oli-nou-siurana.html</link>
       <guid>https://www.gourmetsdetarragona.com/entrades/oli-nou-siurana.html</guid>

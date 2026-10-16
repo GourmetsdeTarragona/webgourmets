@@ -1,5 +1,29 @@
 [
   {
+    "slug": "la-clotxa",
+    "titol_ca": "Aquí el plat també es menja — la clotxa de la Ribera d'Ebre",
+    "titol_es": "Aquí el plato también se come — la clotxa de la Ribera d'Ebre",
+    "resum_ca": "Pa de pagès buidat, verdures al caliu i sardina de casco. Clotxa a la Ribera d'Ebre, crostó a la Terra Alta, canto de pa a Camarles, clotxina a Ascó: quatre noms per al mateix plat.",
+    "resum_es": "Pan de payés vaciado, verduras al rescoldo y sardina de casco. Clotxa en la Ribera d'Ebre, crostó en la Terra Alta, canto de pa en Camarles, clotxina en Ascó: cuatro nombres para el mismo plato.",
+    "categoria": "curiositats",
+    "data": "2026-11-09",
+    "min_lectura": 8,
+    "color_bg": "#6b4423",
+    "img": "assets/img/clotxa/clotxa-hero.jpg"
+  },
+  {
+    "slug": "catedrals-del-vi",
+    "titol_ca": "Catedrals aixecades per pagesos — Cèsar Martinell i els cellers modernistes",
+    "titol_es": "Catedrales levantadas por payeses — Cèsar Martinell y los cellers modernistas",
+    "resum_ca": "Un deixeble de Gaudí nascut a Valls va omplir el territori de cellers amb arcs parabòlics. Els va batejar Àngel Guimerà, i les set protegides com a BCIN són totes en aquesta província.",
+    "resum_es": "Un discípulo de Gaudí nacido en Valls llenó el territorio de bodegas con arcos parabólicos. Las bautizó Àngel Guimerà, y las siete protegidas como BCIN están todas en esta provincia.",
+    "categoria": "cultura",
+    "data": "2026-10-16",
+    "min_lectura": 7,
+    "color_bg": "#6b2737",
+    "img": "assets/img/cellers/nulles-arcades.jpg"
+  },
+  {
     "slug": "oli-nou-siurana",
     "titol_ca": "Si l'oli nou et raspa la gola — no està dolent, està acabat de fer",
     "titol_es": "Si el aceite nuevo te raspa la garganta — no está malo, está recién hecho",
