@@ -117,7 +117,8 @@ async function thumbsAndHtml() {
       wanted.add(r); nThumbs++;
       return pre + P + thumbRel(r);
     };
-    if (isBlog) t = t.replace(/(<img\b[^>]*?\ssrc=")((?:\.\.\/)?assets\/img\/[^"]+)/g, toThumb);
+    // blog.html: les targetes ja surten amb miniatura de tools/publica-blog.js; la foto del destacat (fetchpriority) es manté gran
+    if (isBlog) t = t.replace(/(<img\b(?![^>]*fetchpriority)[^>]*?\ssrc=")((?:\.\.\/)?assets\/img\/[^"]+)/g, toThumb);
     t = t.replace(/(class="e-tambe-card-img"[^>]*>\s*<img\b[^>]*?\ssrc=")((?:\.\.\/)?assets\/img\/[^"]+)/g, toThumb);
     // Logo gran → logo petit (només dins <img>, no a les dades estructurades)
     t = t.replace(/(<img\b[^>]*?\ssrc=")((?:\.\.\/)?assets\/img\/)logo\.png"/g, (m, a, b) => { nLogo++; return a + b + 'logo-160.webp"'; });
@@ -125,7 +126,7 @@ async function thumbsAndHtml() {
     t = t.split(/(<script\b[\s\S]*?<\/script>)/i).map(part => /^<script\b/i.test(part) ? part :
       part.replace(/<img\b(?![^>]*\sloading=)([^>]*)>/g, (m, attrs) => {
         // logo i imatges "hero" es veuen d'entrada; lb-img és el visor de fotos (s'omple per JS)
-        if (/logo|hero|lb-img|data-no-lazy/i.test(attrs)) return m;
+        if (/logo|hero|lb-img|data-no-lazy|fetchpriority/i.test(attrs)) return m;
         nLazy++;
         return '<img loading="lazy" decoding="async"' + attrs + '>';
       })).join('');

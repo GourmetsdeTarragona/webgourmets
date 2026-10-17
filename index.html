@@ -680,7 +680,7 @@
       <a href="pages/blog.html" class="blog-preview-cta t" data-es="Ver todos los artículos" data-ca="Veure tots els articles">Ver todos los artículos <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
     <div class="blog-preview-grid" id="blog-preview-grid">
-      <!-- Renderitzat per JS des de data/blog-posts.json -->
+      <!-- Renderitzat per JS des de data/blog-publicats.json (el genera tools/publica-blog.js) -->
     </div>
     <p class="blog-preview-count t" id="blog-post-count" data-es="30 artículos publicados" data-ca="30 articles publicats">30 artículos publicados</p>
   </div>
@@ -761,8 +761,8 @@
   }
 
   function loadBlogPosts(){
-    var lang=localStorage.getItem('gdt-lang')||document.documentElement.lang||'ca';
-    fetch('data/blog-posts.json')
+    var lang=localStorage.getItem('gdt-lang')||document.documentElement.lang||'es';
+    fetch('data/blog-publicats.json')
       .then(function(r){return r.json();})
       .then(function(posts){
         renderCards(posts,lang);
@@ -890,6 +890,7 @@ function setLang(lang) {
     if (val) el.innerHTML = val;
   });
   document.getElementById('mobileMenu').classList.remove('open');
+  try{document.dispatchEvent(new CustomEvent('gdt-lang-change',{detail:lang}));}catch(e){}
 }
 
 document.addEventListener('DOMContentLoaded', function() {

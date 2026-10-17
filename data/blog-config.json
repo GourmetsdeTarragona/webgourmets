@@ -1,0 +1,11 @@
+{
+  "_ajuda": "Configuració del blog. 'destacat': slug de l'article gran de dalt (null = el més recent publicat). 'imprescindibles': fins a 5 slugs, en ordre, per a la llista numerada. Després de canviar-ho: node tools/publica-blog.js",
+  "destacat": null,
+  "imprescindibles": [
+    "que-som-gourmets-tarragona",
+    "vino-tarragona",
+    "estrelles-michelin-tarragona",
+    "el-romesco",
+    "gala-premis-2025"
+  ]
+}
