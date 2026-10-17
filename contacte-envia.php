@@ -6,7 +6,7 @@
    Es puja amb FileZilla a l'arrel del web, com qualsevol altre fitxer.
    ============================================================ */
 
-const DESTI        = 'gourmetsdetarragona@gourmetsdetarragona.com';
+const DESTI        = 'dmolina@gourmetsdetarragona.com'; // PROVA: tornar a gourmetsdetarragona@gourmetsdetarragona.com
 const REMITENT     = 'gourmetsdetarragona@gourmetsdetarragona.com';
 const DOMINIS      = ['www.gourmetsdetarragona.com', 'gourmetsdetarragona.com'];
 const MAX_NOM      = 120;
