@@ -59,11 +59,17 @@
   position: absolute; top: calc(100% + 4px); left: 0;
   background: #fff; border: 1px solid var(--border);
   min-width: 210px; box-shadow: 0 8px 24px rgba(0,0,0,.1); z-index: 300;
-  opacity: 0; transform: translateY(-6px); pointer-events: none;
-  transition: opacity 180ms ease, transform 180ms ease;
+  opacity: 0; transform: translateY(-6px); visibility: hidden;
+  /* en sortir, espera un moment abans de tancar: perdona els moviments de ratolí imprecisos */
+  transition: opacity 180ms ease 250ms, transform 180ms ease 250ms, visibility 0s linear 430ms;
+}
+/* pont invisible sobre l'espai entre el menú i el desplegable perquè no es perdi el hover */
+.dropdown::before {
+  content: ''; position: absolute; left: -12px; right: -12px; top: -14px; height: 14px;
 }
 .nav-item:hover .dropdown {
-  opacity: 1; transform: translateY(0); pointer-events: auto;
+  opacity: 1; transform: translateY(0); visibility: visible;
+  transition-delay: 0s;
 }
 .dropdown a {
   display: block; padding: 11px 18px;
@@ -220,4 +226,4 @@
 }
 
 /* Desplegables també amb teclat (en tabular als enllaços interns) */
-.nav-item:focus-within .dropdown { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.nav-item:focus-within .dropdown { opacity: 1; transform: translateY(0); visibility: visible; transition-delay: 0s; }
