@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Pàgina d'error 404. Totes les rutes són absolutes (/...) perquè el servidor
+     la mostra des de qualsevol adreça inexistent, sigui a l'arrel o a /pages/ o /entrades/. -->
+<title>Página no encontrada · Gourmets de Tarragona</title>
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon-180.png">
+<link rel="preload" href="/assets/fonts/playfair-display-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/fonts.css?v=20261010">
+<link rel="stylesheet" href="/assets/css/variables.css?v=20261006">
+<style>
+html,body{height:100%;}
+body{margin:0;background:#0b1626;color:#fff;font-family:var(--font-body);}
+.e404{position:relative;min-height:100%;display:flex;flex-direction:column;overflow:hidden;}
+.e404-bg{position:absolute;inset:0;background:url('/assets/img/hero.webp') center/cover no-repeat;opacity:.32;filter:saturate(.8);animation:e404Settle 3s var(--ease-out) both;}
+.e404-grad{position:absolute;inset:0;background:linear-gradient(to right,rgba(11,22,38,.92) 0%,rgba(11,22,38,.65) 60%,rgba(11,22,38,.45) 100%);}
+@keyframes e404Settle{from{transform:scale(1.08);}to{transform:scale(1);}}
+@keyframes e404Up{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
+.e404-top{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:22px 5%;}
+.e404-top img{width:58px;height:auto;filter:brightness(0) invert(1);}
+.e404-lang{display:flex;gap:6px;}
+.e404-lang button{background:none;border:1px solid transparent;color:rgba(255,255,255,.7);font:700 .7rem var(--font-body);letter-spacing:.14em;padding:7px 10px;cursor:pointer;}
+.e404-lang button.active{border-color:var(--gold);color:#fff;}
+.e404-cos{position:relative;z-index:2;flex:1;display:flex;align-items:center;padding:40px 5% 80px;}
+.e404-inner{max-width:640px;}
+.e404-num{font-family:var(--font-serif);font-style:italic;font-size:clamp(4.5rem,12vw,8rem);line-height:1;color:rgba(212,169,106,.85);animation:e404Up .8s var(--ease-out) .05s both;}
+.e404-label{font-size:.66rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin:18px 0 0;animation:e404Up .8s var(--ease-out) .15s both;}
+h1{font-family:var(--font-serif);font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.1;margin:12px 0 0;font-weight:700;animation:e404Up .8s var(--ease-out) .25s both;}
+h1 em{font-style:italic;font-weight:400;color:rgba(212,169,106,.9);}
+.e404-desc{font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,.82);margin:18px 0 32px;max-width:520px;animation:e404Up .8s var(--ease-out) .35s both;}
+.e404-btns{display:flex;flex-wrap:wrap;gap:14px;align-items:center;animation:e404Up .8s var(--ease-out) .45s both;}
+.e404-btn{display:inline-block;background:var(--gold);color:var(--navy-dark);font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:14px 26px;text-decoration:none;transition:background .2s;}
+.e404-btn:hover{background:#fff;}
+.e404-links{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);animation:e404Up .8s var(--ease-out) .55s both;}
+.e404-links a{color:rgba(255,255,255,.75);font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(212,169,106,.45);padding-bottom:2px;}
+.e404-links a:hover{color:#fff;}
+@media(prefers-reduced-motion:reduce){.e404-bg,.e404-num,.e404-label,h1,.e404-desc,.e404-btns,.e404-links{animation:none;}}
+</style>
+</head>
+<body>
+<div class="e404">
+  <div class="e404-bg" aria-hidden="true"></div>
+  <div class="e404-grad" aria-hidden="true"></div>
+
+  <header class="e404-top">
+    <a href="/index.html"><img src="/assets/img/logo-160.webp" alt="Gourmets de Tarragona" width="58" height="58"></a>
+    <div class="e404-lang">
+      <button type="button" data-lang="es" class="active">ES</button>
+      <button type="button" data-lang="ca">CA</button>
+    </div>
+  </header>
+
+  <main class="e404-cos">
+    <div class="e404-inner">
+      <div class="e404-num" aria-hidden="true">404</div>
+      <p class="e404-label t" data-es="Página no encontrada" data-ca="Pàgina no trobada">Página no encontrada</p>
+      <h1 class="t" data-es="Esta mesa <em>no está reservada</em>" data-ca="Aquesta taula <em>no està reservada</em>">Esta mesa <em>no está reservada</em></h1>
+      <p class="e404-desc t" data-es="La página que buscas no existe o ha cambiado de sitio. Te acompañamos a la sala principal." data-ca="La pàgina que busques no existeix o ha canviat de lloc. T'acompanyem a la sala principal.">La página que buscas no existe o ha cambiado de sitio. Te acompañamos a la sala principal.</p>
+      <div class="e404-btns">
+        <a class="e404-btn t" href="/index.html" data-es="Volver al inicio" data-ca="Tornar a l'inici">Volver al inicio</a>
+      </div>
+      <nav class="e404-links" aria-label="Secciones">
+        <a class="t" href="/pages/restaurants.html" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a>
+        <a class="t" href="/pages/blog.html" data-es="Blog Gourmet" data-ca="Blog Gourmet">Blog Gourmet</a>
+        <a class="t" href="/pages/premis.html" data-es="Premios" data-ca="Premis">Premios</a>
+        <a class="t" href="/pages/associacio.html" data-es="La Asociación" data-ca="L'Associació">La Asociación</a>
+        <a class="t" href="/pages/contacte.html" data-es="Contacto" data-ca="Contacte">Contacto</a>
+      </nav>
+    </div>
+  </main>
+</div>
+<script>
+/* Idioma: el mateix que la resta del web (localStorage gdt-lang) */
+(function () {
+  function aplica(l) {
+    document.documentElement.lang = l;
+    document.querySelectorAll('.t').forEach(function (el) { var v = el.getAttribute('data-' + l); if (v) el.innerHTML = v; });
+    document.querySelectorAll('.e404-lang button').forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-lang') === l); });
+    document.title = l === 'ca' ? 'Pàgina no trobada · Gourmets de Tarragona' : 'Página no encontrada · Gourmets de Tarragona';
+  }
+  var l = 'es';
+  try { l = localStorage.getItem('gdt-lang') || ((navigator.language || 'es').toLowerCase().indexOf('ca') === 0 ? 'ca' : 'es'); } catch (e) {}
+  if (l === 'ca') aplica('ca');
+  document.querySelectorAll('.e404-lang button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var n = b.getAttribute('data-lang');
+      try { localStorage.setItem('gdt-lang', n); } catch (e) {}
+      aplica(n);
+    });
+  });
+})();
+</script>
+</body>
+</html>

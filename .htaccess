@@ -66,5 +66,5 @@ Options -Indexes
 </IfModule>
 
 # ---- 5. Pàgina 404 ----
-# (pendent: crear una 404.html pròpia i descomentar)
-# ErrorDocument 404 /404.html
+# Pàgina pròpia (rutes absolutes, funciona des de qualsevol carpeta)
+ErrorDocument 404 /404.html
