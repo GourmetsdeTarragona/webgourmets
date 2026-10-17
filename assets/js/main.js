@@ -127,17 +127,19 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('.entrada-cos')) {
     var readBar = document.createElement('div');
     readBar.id = 'read-progress';
-    readBar.style.cssText = 'position:fixed;top:0;left:0;width:0%;height:3px;background:var(--gold,#b8924a);z-index:10000;transition:width .12s linear;pointer-events:none;';
+    readBar.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:3px;background:var(--gold,#b8924a);z-index:10000;transform:scaleX(0);transform-origin:0 50%;transition:transform .12s linear;pointer-events:none;';
     document.body.appendChild(readBar);
     function updateReadProgress() {
       var cos = document.querySelector('.entrada-cos');
       if (!cos) return;
       var cosTop = cos.getBoundingClientRect().top + window.scrollY;
-      var cosBottom = cosTop + cos.offsetHeight;
+      /* el final de la lectura és on comença el bloc comú (compartir, relacionats…) */
+      var fi = document.querySelector('.ef');
+      var cosBottom = fi ? fi.getBoundingClientRect().top + window.scrollY : cosTop + cos.offsetHeight;
       var wh = window.innerHeight;
       var total = cosBottom - cosTop - wh;
       var pct = Math.max(0, Math.min(100, ((window.scrollY - cosTop + wh * 0.15) / total) * 100));
-      readBar.style.width = pct + '%';
+      readBar.style.transform = 'scaleX(' + (pct / 100) + ')';
     }
     window.addEventListener('scroll', updateReadProgress, { passive: true });
     updateReadProgress();

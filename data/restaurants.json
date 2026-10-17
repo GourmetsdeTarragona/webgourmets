@@ -1,0 +1,66 @@
+{
+  "_ajuda": "Fitxa de cada restaurant del recorregut (crònica i prèvia). La clau és el camp restaurant de blog-posts.json. Es mostra al final de l'article i va a les dades estructurades.",
+  "kema-2026": {
+    "nom": "Kema",
+    "lloc": "Cambrils",
+    "adreca": "C. Pau Casals, 37",
+    "telefon": "977 364 054",
+    "web": "https://kemacambrils.com",
+    "lat": 41.0668837,
+    "lng": 1.0617647
+  },
+  "la-goleta-2026": {
+    "nom": "La Goleta",
+    "lloc": "Salou",
+    "adreca": "C. de la Gavina, 2",
+    "telefon": "977 383 566",
+    "web": "https://lagoletasalou.com",
+    "lat": 41.0681635,
+    "lng": 1.1493959
+  },
+  "terrat-2026": {
+    "nom": "El Terrat",
+    "lloc": "Tarragona",
+    "adreca": "C. Pons d'Icart, 19",
+    "telefon": "977 248 485",
+    "web": "https://elterratrestaurant.com",
+    "lat": 41.1138541,
+    "lng": 1.2524837
+  },
+  "cervus-2026": {
+    "nom": "Cervus",
+    "lloc": "Reus",
+    "adreca": "Raval de Jesús, Reus",
+    "telefon": "",
+    "web": "",
+    "lat": 41.1556,
+    "lng": 1.1047
+  },
+  "brumma-2026": {
+    "nom": "Brumma",
+    "lloc": "Salou",
+    "adreca": "Infinitum Resort, Salou",
+    "telefon": "",
+    "web": "https://www.infinitumliving.com/es/restaurantes/flamma-beach-foodhouse",
+    "lat": 41.0535,
+    "lng": 1.12
+  },
+  "les-dunes-2026": {
+    "nom": "Les Dunes",
+    "lloc": "Riumar",
+    "adreca": "C. del Coll Verd, 5-3",
+    "telefon": "639 02 97 41",
+    "web": "https://lesdunesrestaurant.com",
+    "lat": 40.7263805,
+    "lng": 0.8409715
+  },
+  "galliner-2026": {
+    "nom": "El Galliner de l'Antiquari",
+    "lloc": "Tarragona",
+    "adreca": "C. de Santa Anna, 3",
+    "telefon": "671 477 099",
+    "web": "https://elgallinerdelantiquari.net",
+    "lat": 41.1176,
+    "lng": 1.2575
+  }
+}

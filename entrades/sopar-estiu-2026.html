@@ -172,25 +172,6 @@ a{color:inherit;text-decoration:none}
 .e-tambe-card:hover .e-tambe-card-link{color:var(--gold);}
 @media(max-width:680px){.e-tambe-grid{grid-template-columns:1fr;}}
 </style>
-<style>
-#nl-popup{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 300ms ease;}
-#nl-popup.nl-visible{opacity:1;}
-#nl-popup-overlay{position:absolute;inset:0;background:rgba(8,15,24,.72);backdrop-filter:blur(3px);}
-#nl-popup-box{position:relative;z-index:1;background:#0D1E2F;border:1px solid rgba(184,146,74,.2);max-width:420px;width:90%;padding:48px 40px 40px;text-align:center;transform:translateY(18px);transition:transform 300ms ease;box-shadow:0 32px 80px rgba(0,0,0,.5);}
-#nl-popup.nl-visible #nl-popup-box{transform:translateY(0);}
-#nl-popup-close{position:absolute;top:8px;right:10px;background:none;border:none;color:rgba(255,255,255,.75);font-size:1.6rem;cursor:pointer;line-height:1;padding:4px;min-width:44px;min-height:44px;transition:color .2s;}
-#nl-popup-close:hover{color:rgba(255,255,255,.8);}
-#nl-popup-deco{font-size:1.2rem;color:#B8924A;opacity:.45;margin-bottom:14px;}
-#nl-popup-kicker{font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#B8924A;margin-bottom:12px;}
-#nl-popup-title{font-family:'Playfair Display',Georgia,serif;font-size:1.55rem;color:#F6F2EC;line-height:1.22;margin-bottom:12px;font-weight:600;}
-#nl-popup-sub{font-size:.85rem;color:rgba(246,242,236,.55);line-height:1.75;margin-bottom:26px;font-weight:300;}
-#nl-popup-form{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
-#nl-popup-email{padding:13px 16px;font-size:.88rem;font-family:inherit;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#fff;outline:none;transition:border-color .2s;width:100%;box-sizing:border-box;}
-#nl-popup-email:focus{border-color:rgba(184,146,74,.55);}
-#nl-popup-btn{padding:14px;background:#B8924A;color:#122850;font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-family:inherit;border:none;cursor:pointer;transition:background .2s;}
-#nl-popup-btn:hover{background:#c9a05a;}
-#nl-popup-legal{font-size:.65rem;color:rgba(255,255,255,.18);}
-</style>
 <script>
 var currentLang = (function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ca'||p==='es'){localStorage.setItem('gdt-lang',p);return p;}return localStorage.getItem('gdt-lang')||((navigator.language||'es').toLowerCase().indexOf('ca')===0?'ca':'es');}catch(e){return 'es';}})();
 function setLang(lang) {
@@ -227,6 +208,7 @@ function setLang(lang) {
   }
 }catch(e){}})();
 </script>
+<link rel="stylesheet" href="../assets/css/entrada-final.css?v=20261017">
 </head>
 <body>
 <a class="skip-link t" href="#main" data-es="Saltar al contenido" data-ca="Salta al contingut">Saltar al contenido</a>
@@ -325,6 +307,14 @@ function setLang(lang) {
     <p class="cronica-subtitol t" data-es="Una noche de cóctel frente a la playa de Salou, buena mesa en compañía y la convicción renovada de que esta asociación se construye cena a cena, conversación a conversación." data-ca="Una nit de còctel davant la platja de Salou, bona taula en companyia i la convicció renovada que aquesta associació es construeix sopar a sopar, conversa a conversa.">Una noche de cóctel frente a la playa de Salou, buena mesa en compañía y la convicción renovada de que esta asociación se construye cena a cena, conversación a conversación.</p>
   </div>
 </header>
+<!-- BLOG:AUTO:MIGES -->
+<nav class="e-migues" aria-label="Migas de pan"><ol>
+  <li><a class="t" href="../pages/blog.html" data-es="Blog" data-ca="Blog">Blog</a></li>
+  <li><a class="t" href="../pages/blog.html?cat=actualitat" data-es="Actualidad" data-ca="Actualitat">Actualidad</a></li>
+  <li aria-current="page" class="t" data-es="Cena de Verano 2026" data-ca="Sopar d'Estiu 2026">Cena de Verano 2026</li>
+  <li class="e-meta-linia"><time class="t" datetime="2026-08-07" data-es="7 ago 2026" data-ca="7 ag 2026">7 ago 2026</time><span aria-hidden="true">·</span><span>5 min</span></li>
+</ol></nav>
+<!-- /BLOG:AUTO:MIGES -->
 
 <!-- COS -->
 <main id="main" class="cronica-cos">
@@ -617,90 +607,70 @@ function setLang(lang) {
 
 
   <!-- TAMBIÉN TE PUEDE INTERESAR -->
-  <div class="e-tambe">
-    <span class="e-tambe-label t" data-es="También te puede interesar" data-ca="També et pot interessar">También te puede interesar</span>
-    <h2 class="e-tambe-title t"
-        data-es="Más sobre los Gourmets de Tarragona"
-        data-ca="Més sobre els Gourmets de Tarragona">Más sobre los Gourmets de Tarragona</h2>
-    <div class="e-tambe-grid">
-      <a href="la-goleta-cronica-2026.html" class="e-tambe-card">
-        <div class="e-tambe-card-img">
-          <img loading="lazy" decoding="async" src="../assets/img/_thumbs/goleta/goleta-sala.webp" alt="La Goleta · Crònica" onerror="this.parentElement.style.background='#122850'">
-          <span class="e-tambe-card-cat t" data-es="Crónica" data-ca="Crònica">Crónica</span>
-        </div>
-        <div class="e-tambe-card-body">
-          <h3 class="e-tambe-card-title t" data-es="La Goleta · Crónica" data-ca="La Goleta · Crònica">La Goleta · Crónica</h3>
-          <p class="e-tambe-card-exc t"
-             data-es="40 años de cocina mediterránea frente a la Platja dels Capellans de Salou. La segunda visita de la temporada."
-             data-ca="40 anys de cuina mediterrània davant la platja dels Capellans de Salou. La segona visita de la temporada.">
-            40 años de cocina mediterránea frente a la Platja dels Capellans de Salou. La segunda visita de la temporada.
-          </p>
-          <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
-        </div>
-      </a>
-      <a href="kema-cronica-2026.html" class="e-tambe-card">
-        <div class="e-tambe-card-img">
-          <img loading="lazy" decoding="async" src="../assets/img/_thumbs/kema/hero-cronica.webp" alt="Kema · Crònica" onerror="this.parentElement.style.background='#122850'">
-          <span class="e-tambe-card-cat t" data-es="Crónica" data-ca="Crònica">Crónica</span>
-        </div>
-        <div class="e-tambe-card-body">
-          <h3 class="e-tambe-card-title t" data-es="Kema · Crónica" data-ca="Kema · Crònica">Kema · Crónica</h3>
-          <p class="e-tambe-card-exc t"
-             data-es="La crónica completa de nuestra visita a Kema. Fuego, producto y cocina de raíz en el Camp de Tarragona."
-             data-ca="La crònica completa de la nostra visita a Kema. Foc, producte i cuina d'arrel al Camp de Tarragona.">
-            La crónica completa de nuestra visita a Kema. Fuego, producto y cocina de raíz en el Camp de Tarragona.
-          </p>
-          <span class="e-tambe-card-link t" data-es="Leer →" data-ca="Llegir →">Leer →</span>
-        </div>
-      </a>
-    </div>
-  </div>
 
 
   <p class="t" style="font-size:.78rem;color:var(--muted);font-style:italic;margin-top:40px;padding-top:18px;border-top:1px solid var(--border);" data-es="<strong style='font-style:normal;color:var(--navy-dark);'>Dami Molina</strong> es vocal cultural de Gourmets de Tarragona." data-ca="<strong style='font-style:normal;color:var(--navy-dark);'>Dami Molina</strong> és vocal cultural de Gourmets de Tarragona."><strong style="font-style:normal;color:var(--navy-dark);">Dami Molina</strong> es vocal cultural de Gourmets de Tarragona.</p>
 
+<!-- BLOG:AUTO:FINAL -->
+<aside class="ef" aria-label="Más sobre este artículo">
+  <div class="ef-sec ef-comp">
+    <p class="t ef-tit" data-es="Compártelo" data-ca="Comparteix-ho">Compártelo</p>
+    <a class="ef-btn ef-btn-wa" href="https://wa.me/?text=Cena%20de%20Verano%202026%20%E2%80%94%20Club%20N%C3%A0utic%20de%20Salou%20https%3A%2F%2Fwww.gourmetsdetarragona.com%2Fentrades%2Fsopar-estiu-2026.html" target="_blank" rel="noopener">WhatsApp</a>
+    <button type="button" class="ef-btn" data-copia><span class="t" data-es="Copiar enlace" data-ca="Copiar l'enllaç">Copiar enlace</span></button>
+    <a class="ef-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.gourmetsdetarragona.com%2Fentrades%2Fsopar-estiu-2026.html" target="_blank" rel="noopener">Facebook</a>
+    <a class="ef-btn" href="mailto:?subject=Cena%20de%20Verano%202026%20%E2%80%94%20Club%20N%C3%A0utic%20de%20Salou&amp;body=https%3A%2F%2Fwww.gourmetsdetarragona.com%2Fentrades%2Fsopar-estiu-2026.html">Email</a>
+    <button type="button" class="ef-btn" data-comparteix hidden><span class="t" data-es="Más…" data-ca="Més…">Más…</span></button>
+    <span class="t ef-copiat" role="status" data-es="Enlace copiado" data-ca="Enllaç copiat">Enlace copiado</span>
+  </div>
+  <nav class="ef-sec ef-nav" aria-label="Artículos anterior y siguiente">
+    <a class="ant" href="brumma-cronica-2026.html"><small class="t" data-es="← Anterior" data-ca="← Anterior">← Anterior</small><strong class="t" data-es="Brumma · Salou" data-ca="Brumma · Salou">Brumma · Salou</strong></a>
+    <a class="seg" href="les-dunes-previa-2026.html"><small class="t" data-es="Siguiente →" data-ca="Següent →">Siguiente →</small><strong class="t" data-es="Les Dunes · Riumar" data-ca="Les Dunes · Riumar">Les Dunes · Riumar</strong></a>
+  </nav>
+  <section class="ef-sec ef-nl" aria-label="Newsletter">
+    <div>
+      <h2 class="t" data-es="La próxima crónica, <em>en tu correo</em>" data-ca="La propera crònica, <em>al teu correu</em>">La próxima crónica, <em>en tu correo</em></h2>
+      <p class="t" data-es="Sin calendario fijo: solo cuando hay algo que contar." data-ca="Sense calendari fix: només quan hi ha alguna cosa a explicar.">Sin calendario fijo: solo cuando hay algo que contar.</p>
+    </div>
+    <form class="nl-form" action="https://fe0daaff.sibforms.com/serve/MUIFAMSYb3h5hzjCYPN-GiItYcbChszEiV-2Ci_yU_3sfesrzldVY_nwtUN7RfIi41NyXnMu3sl9-ob6jEY1i8D_lfWkjTx2BPx-DdkMBNRhY_UX6RYT8Q6OtL_RSXdw1Nxw1cQMI50KFEuV5agn87hBqKVShQPjzSVyuaqjxyjEXiMI4ec7wdY55xdTRqGDyO937oVLzoaKi6MUtQ==" method="post" novalidate>
+      <div class="nl-trampa" aria-hidden="true"><input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off"></div>
+      <input type="hidden" name="locale" value="es">
+      <div class="nl-form-fila">
+        <label class="sr-only" for="ef-nl-email">Email</label>
+        <input type="email" id="ef-nl-email" name="EMAIL" required autocomplete="email" placeholder="hola@tucorreo.com" data-ph-es="hola@tucorreo.com" data-ph-ca="hola@elteucorreu.com">
+        <button type="submit" class="t" data-es="Apuntarme" data-ca="Apuntar-me">Apuntarme</button>
+      </div>
+      <p class="nl-priv t" data-es="Gratis. Al apuntarte aceptas la &lt;a href=&quot;../pages/privacitat.html&quot;&gt;política de privacidad&lt;/a&gt;; los envíos los gestiona Brevo." data-ca="Gratuïta. En apuntar-te acceptes la &lt;a href=&quot;../pages/privacitat.html&quot;&gt;política de privacitat&lt;/a&gt;; els enviaments els gestiona Brevo.">Gratis. Al apuntarte aceptas la <a href="../pages/privacitat.html">política de privacidad</a>; los envíos los gestiona Brevo.</p>
+      <p class="nl-estat" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+  <section class="ef-sec" aria-labelledby="ef-rel-tit">
+    <h2 class="t ef-tit" id="ef-rel-tit" data-es="Sigue leyendo" data-ca="Continua llegint">Sigue leyendo</h2>
+    <div class="ef-rel">
+      <article>
+        <div class="ef-rel-img"><img src="../assets/img/_thumbs/michelin/canbosch.webp" alt="" loading="lazy" decoding="async" width="640" height="427"></div>
+        <p class="t ef-rel-cat" data-es="Actualidad" data-ca="Actualitat">Actualidad</p>
+        <h3><a class="t" href="estrelles-michelin-tarragona.html" data-es="Las ocho estrellas Michelin" data-ca="Les vuit estrelles Michelin">Las ocho estrellas Michelin</a></h3>
+      </article>
+      <article>
+        <div class="ef-rel-img"><img src="../assets/img/_thumbs/terrat/cronica/sala-taula.webp" alt="" loading="lazy" decoding="async" width="640" height="427"></div>
+        <p class="t ef-rel-cat" data-es="Actualidad" data-ca="Actualitat">Actualidad</p>
+        <h3><a class="t" href="ecuador-2026.html" data-es="A mitad de camino" data-ca="A mig camí">A mitad de camino</a></h3>
+      </article>
+      <article>
+        <div class="ef-rel-img"><img src="../assets/img/_thumbs/tendencias/hero-para-tendencias.webp" alt="" loading="lazy" decoding="async" width="640" height="427"></div>
+        <p class="t ef-rel-cat" data-es="Actualidad" data-ca="Actualitat">Actualidad</p>
+        <h3><a class="t" href="tendencias-gastronomiques-2026.html" data-es="Tendencias 2026: Comer con Sentido" data-ca="Tendències 2026: Menjar amb Sentit">Tendencias 2026: Comer con Sentido</a></h3>
+      </article>
+    </div>
+  </section>
+  <a class="ef-tornar t" href="../pages/blog.html" data-es="← Todos los artículos" data-ca="← Tots els articles">← Todos los artículos</a>
+</aside>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.gourmetsdetarragona.com/pages/blog.html"},{"@type":"ListItem","position":2,"name":"Actualidad","item":"https://www.gourmetsdetarragona.com/pages/blog.html?cat=actualitat"},{"@type":"ListItem","position":3,"name":"Cena de Verano 2026","item":"https://www.gourmetsdetarragona.com/entrades/sopar-estiu-2026.html"}]}</script>
+<!-- /BLOG:AUTO:FINAL -->
 </main>
 
 <!-- COMPARTIR -->
-<div class="e-compartir">
-  <div class="e-compartir-inner">
-    <div class="e-compartir-deco">
-      <span class="e-compartir-deco-line"></span>
-      <span class="t" data-es="Comparte este artículo" data-ca="Comparteix aquest article">Comparte este artículo</span>
-      <span class="e-compartir-deco-line r"></span>
-    </div>
-    <p class="e-compartir-frase t"
-      data-es="Si te ha hecho revivir la noche, <strong>compártelo con quien también estuvo.</strong>"
-      data-ca="Si t'ha fet reviure la nit, <strong>comparteix-ho amb qui també hi era.</strong>">
-      Si te ha hecho revivir la noche, <strong>compártelo con quien también estuvo.</strong>
-    </p>
-    <div class="e-compartir-btns">
-      <a class="e-compartir-btn wa" id="btn-wa" href="#" target="_blank" rel="noopener" aria-label="Compartir per WhatsApp">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.862L.057 23.57a.75.75 0 0 0 .924.924l5.701-1.476A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.694 9.694 0 0 1-4.964-1.366l-.355-.212-3.685.954.975-3.564-.232-.368A9.696 9.696 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
-        <span class="t" data-es="WhatsApp" data-ca="WhatsApp">WhatsApp</span>
-      </a>
-      <a class="e-compartir-btn fb" id="btn-fb" href="#" target="_blank" rel="noopener" aria-label="Compartir a Facebook">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        <span class="t" data-es="Facebook" data-ca="Facebook">Facebook</span>
-      </a>
-      <a class="e-compartir-btn x" id="btn-x" href="#" target="_blank" rel="noopener" aria-label="Compartir a X">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        <span class="t" data-es="X / Twitter" data-ca="X / Twitter">X / Twitter</span>
-      </a>
-      <button class="e-compartir-btn copy" onclick="copiarEnllac(this)" aria-label="Copiar enlace">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        <span class="t" data-es="Copiar enlace" data-ca="Copiar enllaç">Copiar enlace</span>
-        <span class="e-compartir-copied"><span class="t" data-es="¡Copiado!" data-ca="Copiat!">¡Copiado!</span></span>
-      </button>
-    </div>
-  </div>
-</div>
 
-<div class="e-nav-retorn">
-  <div class="e-nav-retorn-links">
-    <a href="../pages/blog.html" class="btn-outline t" data-es="← Volver al Blog" data-ca="← Tornar al Blog">← Volver al Blog</a>
-  </div>
-</div>
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -767,144 +737,12 @@ document.addEventListener('DOMContentLoaded', function() {
   if (currentLang === 'ca') setLang('ca');
 });
 </script>
-<script src="../assets/js/main.js?v=20261007"></script>
+<script src="../assets/js/main.js?v=20261017"></script>
 
-<script>
-(function(){
-  var url   = encodeURIComponent(window.location.href);
-  var titol = encodeURIComponent(document.title);
-  var wa = document.getElementById('btn-wa');
-  var fb = document.getElementById('btn-fb');
-  var x  = document.getElementById('btn-x');
-  if(wa) wa.href = 'https://wa.me/?text=' + titol + '%20' + url;
-  if(fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
-  if(x)  x.href  = 'https://twitter.com/intent/tweet?text=' + titol + '&url=' + url;
-
-  // Aplicar lang al compartir
-  function applyShareLang(){
-    var lang = (function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ca'||p==='es'){localStorage.setItem('gdt-lang',p);return p;}return localStorage.getItem('gdt-lang')||((navigator.language||'es').toLowerCase().indexOf('ca')===0?'ca':'es');}catch(e){return 'es';}})();
-    document.querySelectorAll('.e-compartir [data-es]').forEach(function(el){
-      var v = el.getAttribute('data-' + lang);
-      if(v) el.innerHTML = v;
-    });
-  }
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', applyShareLang);
-  } else { applyShareLang(); }
-  document.addEventListener('click', function(e){
-    var t = e.target && e.target.closest && e.target.closest('.lang-btn');
-    if(t) setTimeout(applyShareLang, 60);
-  });
-})();
-function copiarEnllac(btn){
-  navigator.clipboard.writeText(window.location.href).then(function(){
-    var msg = btn.querySelector('.e-compartir-copied');
-    if(msg){ msg.classList.add('vis'); setTimeout(function(){ msg.classList.remove('vis'); }, 2200); }
-  });
-}
-</script>
 
 <!-- ═══════ POPUP NEWSLETTER ═══════ -->
-<div id="nl-popup" role="dialog" aria-modal="true" aria-labelledby="nl-popup-title" style="display:none;">
-  <div id="nl-popup-overlay"></div>
-  <div id="nl-popup-box">
-    <button id="nl-popup-close" aria-label="Cerrar">&times;</button>
-    <div id="nl-popup-deco" aria-hidden="true">✦</div>
-    <p id="nl-popup-kicker" class="t" data-es="Newsletter" data-ca="Newsletter">Newsletter</p>
-    <h2 id="nl-popup-title" class="t"
-        data-es="¿Te ha gustado esta crónica?"
-        data-ca="T'ha agradat aquesta crònica?">
-      ¿Te ha gustado esta crónica?
-    </h2>
-    <p id="nl-popup-sub" class="t"
-       data-es="Recibe la próxima en tu correo. Crónicas de restaurante, vinos y novedades del Camp de Tarragona. Solo cuando hay algo que contar."
-       data-ca="Rep la propera al teu correu. Cròniques de restaurant, vins i novetats del Camp de Tarragona. Només quan hi ha alguna cosa a explicar.">
-      Recibe la próxima en tu correo. Crónicas de restaurante, vinos y novedades del Camp de Tarragona. Solo cuando hay algo que contar.
-    </p>
-    <form id="nl-popup-form"
-          action="https://fe0daaff.sibforms.com/serve/MUIFAMSYb3h5hzjCYPN-GiItYcbChszEiV-2Ci_yU_3sfesrzldVY_nwtUN7RfIi41NyXnMu3sl9-ob6jEY1i8D_lfWkjTx2BPx-DdkMBNRhY_UX6RYT8Q6OtL_RSXdw1Nxw1cQMI50KFEuV5agn87hBqKVShQPjzSVyuaqjxyjEXiMI4ec7wdY55xdTRqGDyO937oVLzoaKi6MUtQ=="
-          method="post">
-      <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off"
-             style="display:none;position:absolute;left:-9999px;">
-      <input type="hidden" name="locale" value="es">
-      <input type="email" name="EMAIL" required
-             id="nl-popup-email"
-             class="t"
-             data-placeholder-es="hola@tucorreo.com"
-             data-placeholder-ca="hola@elteucorreu.com"
-             placeholder="hola@tucorreo.com">
-      <button type="submit" id="nl-popup-btn" class="t"
-              data-es="APUNTARME" data-ca="APUNTAR-ME">APUNTARME</button>
-    </form>
-    <p id="nl-popup-legal" class="t"
-       data-es="Sin spam · Baja cuando quieras."
-       data-ca="Sense spam · Dona't de baixa quan vulguis.">Sin spam · Baja cuando quieras.</p>
-  </div>
-</div>
 
-<script>
-(function(){
-  var STORAGE_KEY = 'gdt-nl-dismissed';
-  var DAYS_HIDE   = 30;
-  var dismissed = localStorage.getItem(STORAGE_KEY);
-  if (localStorage.getItem('gdt-nl-done') || (dismissed && Date.now() < parseInt(dismissed, 10))) return;
-  var popup   = document.getElementById('nl-popup');
-  var overlay = document.getElementById('nl-popup-overlay');
-  var closeBtn= document.getElementById('nl-popup-close');
-  var form    = document.getElementById('nl-popup-form');
-  if (!popup) return;
-  var shown = false;
-  var lastFocus = null;
-  function showPopup() {
-    if (shown) return;
-    shown = true;
-    popup.style.display = 'flex';
-    requestAnimationFrame(function(){
-      requestAnimationFrame(function(){ popup.classList.add('nl-visible'); });
-    });
-    document.body.style.overflow = 'hidden';
-    var lang = (function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ca'||p==='es'){localStorage.setItem('gdt-lang',p);return p;}return localStorage.getItem('gdt-lang')||((navigator.language||'es').toLowerCase().indexOf('ca')===0?'ca':'es');}catch(e){return 'es';}})();
-    var emailInput = document.getElementById('nl-popup-email');
-    if (emailInput) {
-      emailInput.placeholder = emailInput.getAttribute('data-placeholder-' + lang) || emailInput.placeholder;
-    }
-    if (typeof setLang === 'function') setLang(lang);
-    lastFocus = document.activeElement;
-    if (emailInput) emailInput.focus({ preventScroll: true });
-  }
-  function closePopup() {
-    popup.classList.remove('nl-visible');
-    setTimeout(function(){ popup.style.display = 'none'; }, 300);
-    document.body.style.overflow = '';
-    if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
-    localStorage.setItem(STORAGE_KEY, Date.now() + DAYS_HIDE * 86400000);
-  }
-  closeBtn.addEventListener('click', closePopup);
-  overlay.addEventListener('click', closePopup);
-  document.addEventListener('keydown', function(e){
-    if (!popup.classList.contains('nl-visible')) return;
-    if (e.key === 'Escape') { closePopup(); return; }
-    if (e.key !== 'Tab') return;
-    var f = popup.querySelectorAll('button, input:not([type=hidden]):not([tabindex="-1"]), a[href]');
-    if (!f.length) return;
-    var first = f[0], last = f[f.length - 1];
-    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-  });
-  form.addEventListener('submit', function(){ localStorage.setItem(STORAGE_KEY, Date.now() + 365 * 86400000); });
-  var triggered = false;
-  function onScroll() {
-    if (triggered) return;
-    var scrolled = window.scrollY + window.innerHeight;
-    var total    = document.documentElement.scrollHeight;
-    if (scrolled / total >= 0.75) {
-      triggered = true;
-      window.removeEventListener('scroll', onScroll);
-      setTimeout(showPopup, 400);
-    }
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-})();
-</script>
+<script src="../assets/js/newsletter-form.js?v=20261017"></script>
+<script src="../assets/js/entrada.js?v=20261017"></script>
 </body>
 </html>

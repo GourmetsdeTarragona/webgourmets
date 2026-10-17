@@ -239,5 +239,193 @@ const entrades = publicats.map(p => `  <url>\n    <loc>${DOMINI}/entrades/${p.sl
 sm = sm.slice(0, sm.indexOf('  <url>')) + altres.join('') + entrades.join('') + '</urlset>\n';
 escriu('sitemap.xml', sm);
 
-console.log(`\nFet${DRY ? ' (simulació)' : ''}: blog.html (${UNITATS.length} targetes), blog-publicats.json, feed.xml (${publicats.length}), sitemap.xml (${altres.length} pàgines + ${entrades.length} entrades).`);
-if (!DRY) console.log('Puja per FileZilla: pages/blog.html, data/blog-posts.json, data/blog-publicats.json, feed.xml, sitemap.xml (i l\'article nou amb les seves imatges).');
+/* ── 11. Articles: molles de pa, bloc final comú i neteja de peces antigues ──
+   Tot va entre marcadors <!-- BLOG:AUTO:MIGES --> i <!-- BLOG:AUTO:FINAL -->: es pot tornar a executar
+   sempre. El text de cada article no es toca. */
+const RESTAURANTS = fs.existsSync(path.join(REPO, 'data/restaurants.json')) ? JSON.parse(llegeix('data/restaurants.json')) : {};
+const NL_ACTION = (llegeix('pages/blog.html').match(/action="(https:\/\/[a-z0-9]+\.sibforms\.com\/serve\/[^"]+)"/) || [])[1];
+const NOM_FILTRE = Object.fromEntries(FILTRES.map(f => [f.id, f]));
+
+function elementSencer(text, inici) {
+  const tag = (text.slice(inici + 1).match(/^[a-z0-9]+/i) || [])[0];
+  if (!tag) return null;
+  const re = new RegExp(`<${tag}\\b|</${tag}>`, 'gi');
+  re.lastIndex = inici;
+  let fondaria = 0, m;
+  while ((m = re.exec(text))) {
+    if (m[0][1] === '/') { fondaria--; if (fondaria === 0) return [inici, m.index + m[0].length]; }
+    else fondaria++;
+  }
+  return null;
+}
+function treuElement(text, atribut) {
+  for (let i = 0; i < 20; i++) {
+    const k = text.indexOf(atribut);
+    if (k < 0) break;
+    const r = elementSencer(text, text.lastIndexOf('<', k));
+    if (!r) break;
+    text = text.slice(0, r[0]).replace(/[ \t]*$/, '') + text.slice(r[1]).replace(/^\n/, '');
+  }
+  return text;
+}
+function posaBloc(text, nom, contingut, onInserir) {
+  const a = `<!-- BLOG:AUTO:${nom} -->`, b = `<!-- /BLOG:AUTO:${nom} -->`;
+  const bloc = `${a}\n${contingut}\n${b}`;
+  if (text.includes(a) && text.includes(b)) return text.slice(0, text.indexOf(a)) + bloc + text.slice(text.indexOf(b) + b.length);
+  return onInserir(text, bloc);
+}
+const urlArticle = p => `${DOMINI}/entrades/${p.slug}.html`;
+
+function migues(p) {
+  const f = NOM_FILTRE[filtreDe(p)];
+  return `<nav class="e-migues" aria-label="Migas de pan"><ol>
+  <li><a class="t" href="../pages/blog.html" data-es="Blog" data-ca="Blog">Blog</a></li>
+  <li><a class="t" href="../pages/blog.html?cat=${filtreDe(p)}" data-es="${esc(f.es)}" data-ca="${esc(f.ca)}">${esc(f.es)}</a></li>
+  <li aria-current="page" class="t" data-es="${esc(p.titol_es)}" data-ca="${esc(p.titol_ca)}">${esc(p.titol_es)}</li>
+  <li class="e-meta-linia">${t('', dataCurta(p.data, 'es'), dataCurta(p.data, 'ca'), 'time', ` datetime="${p.data}"`)}<span aria-hidden="true">·</span><span>${p.min_lectura} min</span></li>
+</ol></nav>`;
+}
+
+function blocFinal(p) {
+  const llista = POSTS.filter(x => x.data <= AVUI || x.slug === p.slug).sort((a, b) => a.data.localeCompare(b.data) || a.slug.localeCompare(b.slug));
+  const idx = llista.findIndex(x => x.slug === p.slug);
+  const ant = llista[idx - 1], seg = llista[idx + 1];
+  const parella = p.restaurant ? publicats.find(x => x.restaurant === p.restaurant && x.slug !== p.slug) : null;
+  const mateixTema = publicats.filter(x => x.slug !== p.slug && x !== parella && filtreDe(x) === filtreDe(p));
+  const altres = publicats.filter(x => x.slug !== p.slug && x !== parella && filtreDe(x) !== filtreDe(p));
+  /* 3 relacionats: primer la parella (prèvia↔crònica), després el mateix tema; mai dos del mateix restaurant */
+  const rel = [], restaurantsVistos = new Set([p.restaurant]);
+  for (const x of [parella, ...mateixTema, ...altres].filter(Boolean)) {
+    if (rel.length === 3) break;
+    if (x !== parella && x.restaurant && restaurantsVistos.has(x.restaurant)) continue;
+    if (x.restaurant) restaurantsVistos.add(x.restaurant);
+    rel.push(x);
+  }
+  const r = p.restaurant && RESTAURANTS[p.restaurant];
+  const titol = p.titol_es + (p.subtitol_es ? ' — ' + p.subtitol_es : '');
+  const url = urlArticle(p);
+  const maps = r ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(r.nom + ', ' + r.adreca + ', ' + r.lloc)}` : '';
+  const out = [];
+  out.push(`<aside class="ef" aria-label="Más sobre este artículo">`);
+  if (r) {
+    out.push(`  <section class="ef-sec ef-fitxa" aria-label="${esc(r.nom)}">
+    <div>
+      ${t('ef-tit', 'El restaurante', 'El restaurant', 'p')}
+      <p class="ef-fitxa-nom">${esc(r.nom)}</p>
+      <p class="ef-fitxa-dades">${esc(r.adreca)}${r.adreca.includes(r.lloc) ? '' : ' · ' + esc(r.lloc)}${r.telefon ? ` · <a href="tel:+34${r.telefon.replace(/\s/g, '')}">${esc(r.telefon)}</a>` : ''}</p>
+    </div>
+    <div class="ef-accions">
+      <a class="ef-btn ef-btn-prim" href="${esc(maps)}" target="_blank" rel="noopener"><i class="fa fa-map-marker-alt" aria-hidden="true"></i>${t('', 'Cómo llegar', 'Com arribar-hi')}</a>
+      ${r.web ? `<a class="ef-btn" href="${esc(r.web)}" target="_blank" rel="noopener"><i class="fa fa-globe" aria-hidden="true"></i>Web</a>` : ''}
+    </div>
+  </section>`);
+  }
+  out.push(`  <div class="ef-sec ef-comp">
+    ${t('ef-tit', 'Compártelo', 'Comparteix-ho', 'p')}
+    <a class="ef-btn ef-btn-wa" href="https://wa.me/?text=${encodeURIComponent(titol + ' ' + url)}" target="_blank" rel="noopener">WhatsApp</a>
+    <button type="button" class="ef-btn" data-copia>${t('', 'Copiar enlace', 'Copiar l\'enllaç')}</button>
+    <a class="ef-btn" href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}" target="_blank" rel="noopener">Facebook</a>
+    <a class="ef-btn" href="mailto:?subject=${encodeURIComponent(titol)}&amp;body=${encodeURIComponent(url)}">Email</a>
+    <button type="button" class="ef-btn" data-comparteix hidden>${t('', 'Más…', 'Més…')}</button>
+    ${t('ef-copiat', 'Enlace copiado', 'Enllaç copiat', 'span', ' role="status"')}
+  </div>`);
+  if (ant || seg) {
+    out.push(`  <nav class="ef-sec ef-nav" aria-label="Artículos anterior y siguiente">
+${ant ? `    <a class="ant" href="${ant.slug}.html"><small class="t" data-es="← Anterior" data-ca="← Anterior">← Anterior</small><strong class="t" data-es="${esc(ant.titol_es)}" data-ca="${esc(ant.titol_ca)}">${esc(ant.titol_es)}</strong></a>` : ''}
+${seg ? `    <a class="seg" href="${seg.slug}.html"><small class="t" data-es="Siguiente →" data-ca="Següent →">Siguiente →</small><strong class="t" data-es="${esc(seg.titol_es)}" data-ca="${esc(seg.titol_ca)}">${esc(seg.titol_es)}</strong></a>` : ''}
+  </nav>`);
+  }
+  if (NL_ACTION) {
+    out.push(`  <section class="ef-sec ef-nl" aria-label="Newsletter">
+    <div>
+      <h2 class="t" data-es="La próxima crónica, <em>en tu correo</em>" data-ca="La propera crònica, <em>al teu correu</em>">La próxima crónica, <em>en tu correo</em></h2>
+      ${t('', 'Sin calendario fijo: solo cuando hay algo que contar.', 'Sense calendari fix: només quan hi ha alguna cosa a explicar.', 'p')}
+    </div>
+    <form class="nl-form" action="${NL_ACTION}" method="post" novalidate>
+      <div class="nl-trampa" aria-hidden="true"><input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off"></div>
+      <input type="hidden" name="locale" value="es">
+      <div class="nl-form-fila">
+        <label class="sr-only" for="ef-nl-email">Email</label>
+        <input type="email" id="ef-nl-email" name="EMAIL" required autocomplete="email" placeholder="hola@tucorreo.com" data-ph-es="hola@tucorreo.com" data-ph-ca="hola@elteucorreu.com">
+        <button type="submit" class="t" data-es="Apuntarme" data-ca="Apuntar-me">Apuntarme</button>
+      </div>
+      <p class="nl-priv t" data-es="Gratis. Al apuntarte aceptas la &lt;a href=&quot;../pages/privacitat.html&quot;&gt;política de privacidad&lt;/a&gt;; los envíos los gestiona Brevo." data-ca="Gratuïta. En apuntar-te acceptes la &lt;a href=&quot;../pages/privacitat.html&quot;&gt;política de privacitat&lt;/a&gt;; els enviaments els gestiona Brevo.">Gratis. Al apuntarte aceptas la <a href="../pages/privacitat.html">política de privacidad</a>; los envíos los gestiona Brevo.</p>
+      <p class="nl-estat" role="status" aria-live="polite"></p>
+    </form>
+  </section>`);
+  }
+  if (rel.length) {
+    out.push(`  <section class="ef-sec" aria-labelledby="ef-rel-tit">
+    ${t('ef-tit', 'Sigue leyendo', 'Continua llegint', 'h2', ' id="ef-rel-tit"')}
+    <div class="ef-rel">
+${rel.map(x => `      <article>
+        <div class="ef-rel-img"><img src="../${esc(thumb(x.img))}" alt="" loading="lazy" decoding="async" width="640" height="427"></div>
+        ${t('ef-rel-cat', CAT[x.categoria].es, CAT[x.categoria].ca, 'p')}
+        <h3><a class="t" href="${x.slug}.html" data-es="${esc(x.titol_es)}" data-ca="${esc(x.titol_ca)}">${esc(x.titol_es)}</a></h3>
+      </article>`).join('\n')}
+    </div>
+  </section>`);
+  }
+  out.push(`  <a class="ef-tornar t" href="../pages/blog.html" data-es="← Todos los artículos" data-ca="← Tots els articles">← Todos los artículos</a>`);
+  out.push(`</aside>`);
+  if (r) {
+    out.push(`<div class="ef-barra" role="navigation" aria-label="${esc(r.nom)}">
+  <a href="${esc(maps)}" target="_blank" rel="noopener"><i class="fa fa-map-marker-alt" aria-hidden="true"></i>${t('', 'Cómo llegar', 'Com arribar-hi')}</a>
+  ${r.telefon ? `<a href="tel:+34${r.telefon.replace(/\s/g, '')}"><i class="fa fa-phone" aria-hidden="true"></i>${t('', 'Llamar', 'Trucar')}</a>` : ''}
+  ${r.web ? `<a href="${esc(r.web)}" target="_blank" rel="noopener"><i class="fa fa-globe" aria-hidden="true"></i>Web</a>` : ''}
+</div>`);
+  }
+  /* Dades estructurades: molles de pa i, si és un restaurant, la fitxa */
+  const ld = [{
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Blog', item: `${DOMINI}/pages/blog.html` },
+      { '@type': 'ListItem', position: 2, name: NOM_FILTRE[filtreDe(p)].es, item: `${DOMINI}/pages/blog.html?cat=${filtreDe(p)}` },
+      { '@type': 'ListItem', position: 3, name: p.titol_es, item: url },
+    ],
+  }];
+  if (r) ld.push({
+    '@context': 'https://schema.org', '@type': 'Restaurant', name: r.nom,
+    address: { '@type': 'PostalAddress', streetAddress: r.adreca, addressLocality: r.lloc, addressRegion: 'Tarragona', addressCountry: 'ES' },
+    ...(r.telefon ? { telephone: '+34 ' + r.telefon } : {}), ...(r.web ? { url: r.web } : {}),
+    geo: { '@type': 'GeoCoordinates', latitude: r.lat, longitude: r.lng },
+  });
+  out.push(`<script type="application/ld+json">${JSON.stringify(ld.length === 1 ? ld[0] : ld)}</script>`);
+  return out.join('\n');
+}
+
+let articlesCanviats = 0;
+for (const p of POSTS) {
+  const f = `entrades/${p.slug}.html`;
+  const original = llegeix(f);
+  const crlf = original.includes('\r\n');
+  let h = original.replace(/\r\n/g, '\n');
+  /* fora: compartir, newsletter, «també t'interessa», tornar al blog i finestra emergent antics */
+  for (const a of ['class="e-compartir"', 'class="e-nl-cta"', 'class="e-tambe"', 'class="e-nav-retorn"', 'id="nl-popup"']) h = treuElement(h, a);
+  h = h.replace(/<script>([\s\S]*?)<\/script>\n?/g, (m, js) =>
+    (js.includes('gdt-nl-dismissed') || (js.includes("getElementById('btn-wa')") && !js.includes('function setLang'))) ? '' : m);
+  h = h.replace(/<style>([\s\S]*?)<\/style>\n?/g, (m, css) =>
+    ((css.includes('#nl-popup') || css.includes('.e-nl-cta')) && !/\.(entrada|cronica)-hero/.test(css)) ? '' : m);
+  /* imatges per a xarxes sempre amb www */
+  h = h.replace(/(content=")https:\/\/gourmetsdetarragona\.com\//g, '$1https://www.gourmetsdetarragona.com/');
+  /* molles de pa just després de la capçalera */
+  h = posaBloc(h, 'MIGES', migues(p), (text, bloc) => {
+    const k = text.search(/class="(entrada|cronica)-hero"/);
+    const r = k >= 0 ? elementSencer(text, text.lastIndexOf('<', k)) : null;
+    if (r) return text.slice(0, r[1]) + '\n' + bloc + text.slice(r[1]);
+    return text.replace(/(<main\b[^>]*>)/, `$1\n${bloc}`);
+  });
+  /* bloc final abans de tancar el contingut */
+  h = posaBloc(h, 'FINAL', blocFinal(p), (text, bloc) => {
+    const k = text.lastIndexOf('</main>');
+    return k >= 0 ? text.slice(0, k) + bloc + '\n' + text.slice(k) : text;
+  });
+  if (!h.includes('entrada-final.css')) h = h.replace('</head>', '<link rel="stylesheet" href="../assets/css/entrada-final.css?v=20261017">\n</head>');
+  if (!/<\/body>/i.test(h)) h = h.replace(/\s*$/, '\n</body>\n</html>\n');   // algun article antic no tancava el document
+  if (!h.includes('entrada.js')) h = h.replace(/<\/body>(?![\s\S]*<\/body>)/, '<script src="../assets/js/newsletter-form.js?v=20261017"></script>\n<script src="../assets/js/entrada.js?v=20261017"></script>\n</body>');
+  if (crlf) h = h.replace(/\n/g, '\r\n');
+  if (h !== original) { articlesCanviats++; escriu(f, h); }
+}
+
+console.log(`\nFet${DRY ? ' (simulació)' : ''}: blog.html (${UNITATS.length} targetes), blog-publicats.json, feed.xml (${publicats.length}), sitemap.xml (${altres.length} pàgines + ${entrades.length} entrades), ${articlesCanviats} articles actualitzats.`);
+if (!DRY) console.log('Puja per FileZilla: pages/blog.html, data/blog-posts.json, data/blog-publicats.json, feed.xml, sitemap.xml, index.html (si ha canviat) i els articles actualitzats (entrades/).');
