@@ -123,7 +123,8 @@ async function thumbsAndHtml() {
     t = t.replace(/(<img\b[^>]*?\ssrc=")((?:\.\.\/)?assets\/img\/)logo\.png"/g, (m, a, b) => { nLogo++; return a + b + 'logo-160.webp"'; });
     // Càrrega diferida
     t = t.replace(/<img\b(?![^>]*\sloading=)([^>]*)>/g, (m, attrs) => {
-      if (/logo|hero/i.test(attrs)) return m;
+      // logo i imatges "hero" es veuen d'entrada; lb-img és el visor de fotos (s'omple per JS)
+      if (/logo|hero|lb-img|data-no-lazy/i.test(attrs)) return m;
       nLazy++;
       return '<img loading="lazy" decoding="async"' + attrs + '>';
     });
