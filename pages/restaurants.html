@@ -59,6 +59,8 @@
 <link rel="preload" href="../assets/fonts/playfair-display-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/fonts.css?v=20261010">
+<link rel="preload" as="image" href="../assets/img/pages/restaurants-hero.webp" type="image/webp" media="(min-width: 681px)" fetchpriority="high">
+<link rel="preload" as="image" href="../assets/img/pages/restaurants-hero-mobile.webp" type="image/webp" media="(max-width: 680px)" fetchpriority="high">
 <link rel="stylesheet" href="../assets/css/icons.css?v=20261010">
 <link rel="stylesheet" href="../assets/css/variables.css?v=20261006">
 <link rel="stylesheet" href="../assets/css/nav.css?v=20261006">
@@ -68,44 +70,68 @@
 #mobileMenu.open{display:block;}
 </style>
 <style>
-/* ── HERO ── */
-.page-hero{position:relative;min-height:52vh;display:flex;align-items:flex-end;overflow:hidden;padding:0;background:#0b1626;}
-.page-hero-bg{position:absolute;inset:0;background-image:url('../assets/img/galliner/cronica/sala-parada.jpg');background-size:cover;background-position:center 45%;opacity:.65;filter:brightness(1.08) contrast(1.05);transform:scale(1.02);transition:transform 8s ease;}
-.page-hero:hover .page-hero-bg{transform:scale(1);}
-.page-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.92) 0%,rgba(11,22,38,.38) 50%,rgba(11,22,38,.05) 100%);}
-.page-hero-inner{position:relative;z-index:2;max-width:640px;margin:0 auto;padding:0 5% 64px;width:100%;text-align:center;}
-.page-hero .slabel{color:var(--gold);justify-content:center;display:flex;}
-.page-hero .stitle{color:#fff;font-size:clamp(2rem,4vw,3rem);margin-top:10px;}
-.page-hero-desc{font-size:.95rem;color:rgba(255,255,255,.65);font-weight:300;line-height:1.8;margin-top:10px;}
+/* ── HERO (mateix sistema que La Asociación) ── */
+@keyframes restSettle{from{transform:scale(1.08);}to{transform:scale(1);}}
+@keyframes clipReveal{from{clip-path:inset(0 0 100% 0);}to{clip-path:inset(0 0 0% 0);}}
+.page-hero{position:relative;min-height:64vh;display:flex;align-items:flex-end;overflow:hidden;padding:120px 0 0;background:#0b1626;}
+.page-hero-bg{position:absolute;inset:0;background-image:url('../assets/img/pages/restaurants-hero.webp');background-size:cover;background-position:center 45%;opacity:.7;filter:brightness(1.05) contrast(1.05);animation:restSettle 2.8s var(--ease-out) both;}
+.page-hero-grad{position:absolute;inset:0;background:linear-gradient(to right,rgba(11,22,38,.6) 0%,rgba(11,22,38,.2) 55%,transparent 80%),linear-gradient(to top,rgba(11,22,38,.95) 0%,rgba(11,22,38,.55) 50%,rgba(11,22,38,.25) 100%);}
+.page-hero-line{position:absolute;left:4%;top:22%;bottom:15%;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.4),transparent);animation:clipReveal 1.2s var(--ease-out) .4s both;}
+.page-hero-inner{position:relative;z-index:2;max-width:860px;margin:0 auto;padding:0 5% 72px;width:100%;}
+.page-hero .slabel{color:var(--gold);letter-spacing:.24em;animation:fadeUp .7s var(--ease-out) .1s both;}
+.page-hero .stitle{color:#fff;font-size:clamp(2.1rem,4.6vw,3.6rem);line-height:1.08;margin-top:16px;animation:fadeUp .8s var(--ease-out) .22s both;}
+.page-hero .stitle em{font-style:italic;color:rgba(212,169,106,.9);font-weight:400;display:block;}
+.page-hero-desc{font-size:1.08rem;color:rgba(255,255,255,.88);font-weight:400;line-height:1.75;margin-top:20px;max-width:560px;animation:fadeUp .8s var(--ease-out) .36s both;}
+@media(prefers-reduced-motion:reduce){.page-hero-bg,.page-hero-line,.page-hero .slabel,.page-hero .stitle,.page-hero-desc{animation:none;}}
 
-/* ── CARDS TEMPORADA ACTUAL ── */
-.rest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.rest-card{background:#fff;border:1px solid var(--border);overflow:hidden;transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;}
+/* ── PROGRÉS DE LA TEMPORADA (com a la portada) ── */
+.rec-progress{display:flex;align-items:center;gap:14px;margin:-8px 0 32px;}
+.rec-progress-track{flex:1;height:2px;background:var(--border);}
+.rec-progress-fill{height:100%;width:0;background:var(--gold);transition:width .9s ease .3s;}
+.rec-progress.vis .rec-progress-fill{width:var(--p);}
+.rec-progress-label{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
+
+/* ── TARGETES DEL RECORREGUT: 4 columnes = 8 visites en 2 files ── */
+.rest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.rest-card{background:#fff;border:1px solid var(--border);overflow:hidden;transition:transform .3s var(--ease-out),box-shadow .3s;display:flex;flex-direction:column;}
 .rest-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
-.rest-card-img{height:220px;overflow:hidden;position:relative;background:var(--cream);}
-.rest-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.rest-card-img{height:190px;overflow:hidden;position:relative;background:var(--cream);}
+.rest-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out);}
 .rest-card:hover .rest-card-img img{transform:scale(1.05);}
-.rest-card-badges{position:absolute;top:12px;left:12px;display:flex;align-items:center;gap:8px;}
-.rest-badge{font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;color:#fff;}
+.rest-card-badges{position:absolute;top:12px;left:12px;display:flex;align-items:center;gap:6px;}
+.rest-badge{font-size:.56rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;color:#fff;}
 .badge-visitada{background:var(--gold);}
-.badge-proxima{background:#2a7a4b;}
-.badge-pendent{background:rgba(255,255,255,.2);backdrop-filter:blur(4px);color:rgba(255,255,255,.8);}
-.rest-num{background:var(--navy);color:#fff;font-size:.58rem;font-weight:700;letter-spacing:.1em;padding:5px 10px;}
-.rest-card-pending-inner{height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:var(--cream);}
-.rest-card-pending-inner i{font-size:2rem;opacity:.12;color:var(--navy);}
-.rest-card-pending-label{font-size:.65rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);opacity:.5;}
-.rest-card-body{padding:24px;flex:1;display:flex;flex-direction:column;}
-.rest-card-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
-.rest-card-lloc{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);}
-.rest-card-data{font-size:.62rem;color:var(--muted);}
-.rest-card-nom{font-family:var(--font-serif);font-size:1.35rem;font-weight:700;color:var(--navy-dark);margin-bottom:4px;line-height:1.2;}
-.rest-card-cuina{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
-.rest-card-desc{font-size:.87rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:16px;flex:1;}
-.rest-card-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;}
-.rest-link{font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;}
+.badge-proxima{background:transparent;border:1px solid rgba(212,169,106,.7);color:#d4a96a;}
+.rest-num{background:var(--navy);color:#fff;font-size:.56rem;font-weight:700;letter-spacing:.1em;padding:5px 9px;}
+.rest-card-body{padding:20px 20px 22px;flex:1;display:flex;flex-direction:column;}
+.rest-card-meta{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:8px;}
+.rest-card-lloc{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text,var(--gold));}
+.rest-card-data{font-size:.62rem;color:var(--muted);text-align:right;}
+.rest-card-nom{font-family:var(--font-serif);font-size:1.22rem;font-weight:700;color:var(--navy-dark);margin-bottom:4px;line-height:1.2;}
+.rest-card-cuina{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+.rest-card-desc{font-size:.86rem;font-weight:300;color:var(--muted);line-height:1.65;margin-bottom:18px;flex:1;}
+.rest-card-links{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:auto;}
+.rest-link{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;}
 .rest-link:hover{color:var(--gold);}
-.rest-link-primary{background:var(--navy);color:#fff;border:none;padding:6px 14px;border-bottom:none;}
+.rest-link-primary{background:var(--navy);color:#fff;border:none;padding:7px 14px;}
 .rest-link-primary:hover{background:var(--navy-dark);color:#fff;}
+/* targeta 8: propera cita */
+.rest-next-img{background:linear-gradient(135deg,#0b1626 0%,#1b3358 100%);display:flex;align-items:center;justify-content:center;}
+.rest-next-num{font-family:var(--font-serif);font-size:5.5rem;font-weight:400;font-style:italic;color:rgba(212,169,106,.55);line-height:1;}
+.rest-card-next{border-style:dashed;border-color:rgba(184,146,74,.5);}
+
+@media(max-width:1100px){.rest-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:680px){
+  .page-hero{min-height:78vh;}
+  .page-hero-inner{padding-bottom:48px;}
+  .page-hero-bg{background-image:url('../assets/img/pages/restaurants-hero-mobile.webp');background-position:center;}
+  .page-hero-line{display:none;}
+  .rest-grid{grid-template-columns:1fr;}
+  .rest-card-img{height:210px;}
+  .rest-card-links{flex-direction:row;gap:16px;}
+  .page-hero .stitle em{display:inline;}
+  .historic-taula td{padding:12px 8px;}
+}
 
 /* ── HISTORIAL ── */
 .historic-bloc{margin-bottom:48px;}
@@ -131,18 +157,32 @@
 }
 .historic-wip i{font-size:.6rem;}
 
-@media(max-width:1024px){.rest-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:680px){
-  .rest-grid{grid-template-columns:1fr;}
-  .page-hero-inner{padding:0 5% 44px;}
-  .historic-taula td{padding:12px 8px;}
+/* ── HISTORIAL 2025 ── */
+.historic-link{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:2px;white-space:nowrap;}
+.historic-link:hover{color:var(--gold);}
+.h25{display:grid;grid-template-columns:minmax(260px,1fr) 2fr;border:1px solid var(--border);background:#fff;}
+.h25-premis{background:var(--navy-dark);color:#fff;padding:32px 30px;}
+.h25-label{display:flex;align-items:center;gap:8px;font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#d4a96a;margin-bottom:12px;}
+.h25-nom{font-family:var(--font-serif);font-size:1.3rem;font-weight:700;line-height:1.25;margin:10px 0 0;}
+.h25-nom span{display:block;font-family:var(--font-body);font-size:.7rem;font-weight:400;letter-spacing:.06em;color:rgba(255,255,255,.55);margin-top:2px;}
+.h25-sep{height:1px;background:rgba(255,255,255,.12);margin:24px 0;}
+.h25-dreta{padding:30px 32px;}
+.h25-titol{font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
+.h25-llista{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:32px;}
+.h25-llista li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);}
+.h25-l-nom{font-family:var(--font-serif);font-size:1.02rem;font-weight:700;color:var(--navy-dark);}
+.h25-l-lloc{font-size:.72rem;color:var(--muted);text-align:right;}
+.historic-arxiu{display:flex;gap:28px;align-items:center;margin-top:28px;padding:26px 30px;border:1px dashed rgba(184,146,74,.5);}
+.historic-arxiu-any{font-family:var(--font-serif);font-style:italic;font-size:1.5rem;color:var(--gold);white-space:nowrap;}
+.historic-arxiu p{font-size:.9rem;font-weight:300;color:var(--muted);line-height:1.75;margin:0;}
+.historic-arxiu a{color:var(--navy);font-weight:700;border-bottom:1px solid var(--gold);}
+@media(max-width:860px){
+  .h25{grid-template-columns:1fr;}
+  .h25-llista{grid-template-columns:1fr;}
+  .h25-dreta{padding:24px 22px;}
+  .historic-arxiu{flex-direction:column;align-items:flex-start;gap:10px;padding:22px;}
+  .historic-any{flex-wrap:wrap;}
 }
-/* ── CARDS PENDENTS COMPACTES ── */
-.rest-card:has(.rest-card-pending-inner) .rest-card-pending-inner{height:90px;gap:6px;}
-.rest-card:has(.rest-card-pending-inner) .rest-card-pending-inner i{font-size:1.3rem;}
-.rest-card:has(.rest-card-pending-inner) .rest-card-body{padding:10px 16px 12px;}
-.rest-card:has(.rest-card-pending-inner) .rest-card-desc{display:none;}
-.rest-card:has(.rest-card-pending-inner) .rest-card-nom{margin-bottom:0;}
 </style>
 
 <script>
@@ -164,44 +204,55 @@ function setLang(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  var nav = document.getElementById('nav');
-  var menu = document.getElementById('mobileMenu');
-
-  if (menu && menu.parentNode !== document.body) document.body.appendChild(menu);
-
-  function positionMenu() {
-    if (!nav || !menu) return;
-    menu.style.top = nav.getBoundingClientRect().bottom + 'px';
-  }
-
-  window.addEventListener('scroll', function() {
-    if (nav) nav.classList.toggle('solid', window.scrollY > 50);
-    if (menu && menu.classList.contains('open')) positionMenu();
-  });
-
-  var burger = document.getElementById('hamburger');
-  if (burger) {
-    burger.addEventListener('click', function() {
-      if (nav) nav.classList.add('solid');
-      positionMenu();
-      menu.classList.toggle('open');
-    });
-  }
-
-  if (menu) {
-    menu.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() { menu.classList.remove('open'); });
-    });
-  }
-
   if (currentLang === 'ca') setLang('ca');
 });
 </script>
 <link rel="stylesheet" href="../assets/css/leaflet.css?v=1.9.4">
-<style>#gdt-mapa{width:100%!important;height:480px!important;display:block!important;z-index:1;}
-.mapa-filtre{display:inline-flex;align-items:center;padding:8px 16px;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--border,#ddd);background:#fff;color:var(--navy-dark,#122850);cursor:pointer;transition:all .2s;}
+<style>
+.mapa-head{margin-bottom:32px;}
+.mapa-filtres{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+.mapa-filtre{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--border,#ddd);background:#fff;color:var(--navy-dark,#122850);cursor:pointer;transition:all .2s;}
 .mapa-filtre:hover{border-color:var(--gold,#b8924a);color:var(--gold,#b8924a);}
 .mapa-filtre.actiu{background:var(--navy-dark,#122850);color:#fff;border-color:var(--navy-dark,#122850);}
+.mapa-filtre .fa{color:var(--gold,#b8924a);font-size:.72rem;}
+.mapa-dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none;}
+.mapa-dot-26{background:#b8924a;}
+.mapa-dot-25{background:#122850;box-shadow:0 0 0 1px rgba(255,255,255,.45);}
+.mapa-layout{display:grid;grid-template-columns:1fr 340px;border:1px solid var(--border);overflow:hidden;}
+.mapa-wrap{position:relative;min-width:0;}
+#gdt-mapa{width:100%;height:540px;z-index:1;background:#efece6;}
+#gdt-mapa .leaflet-tile-pane{filter:grayscale(.9) sepia(.14) brightness(1.03) contrast(.94);}
+.mapa-llegenda{position:absolute;bottom:16px;left:16px;z-index:1000;background:rgba(11,22,38,.88);backdrop-filter:blur(6px);padding:14px 18px;display:flex;flex-direction:column;gap:8px;pointer-events:none;}
+.mapa-llegenda div{display:flex;align-items:center;gap:8px;}
+.mapa-llegenda span:not(.mapa-dot):not(.fa){font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75);}
+.mapa-llegenda .fa{color:#b8924a;font-size:.7rem;width:9px;}
+.mapa-targetes{height:540px;overflow-y:auto;border-left:1px solid var(--border);background:#fafafa;}
+.mapa-item{border-bottom:1px solid #e8e0d4;cursor:pointer;transition:background .2s;}
+.mapa-item:hover,.mapa-item.actiu{background:#fff8f0;}
+.mapa-item:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+.mapa-item-img{height:104px;overflow:hidden;background:#e8e0d4;}
+.mapa-item-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.mapa-item-img.buit{height:56px;background:linear-gradient(135deg,#122850,#2d4a66);}
+.mapa-item-body{padding:12px 14px 14px;}
+.mapa-item-meta{display:block;font-size:.55rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:3px;}
+.mapa-item-nom{font-family:var(--font-serif);font-size:.98rem;font-weight:700;color:#0b1626;}
+.mapa-item-nom .fa,.mapa-pop-nom .fa{color:#b8924a;font-size:.65rem;margin-left:4px;vertical-align:1px;}
+.mapa-item-adr{display:block;font-size:.72rem;color:#777;margin-top:2px;}
+.mapa-item-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;}
+.mapa-item-links a,.mapa-pop-links a{display:inline-flex;align-items:center;gap:5px;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--navy,#122850);text-decoration:none;border-bottom:1px solid var(--gold,#b8924a);padding-bottom:1px;}
+.mapa-item-links a:hover,.mapa-pop-links a:hover{color:var(--gold,#b8924a);}
+.mapa-pop{min-width:190px;}
+.mapa-pop img{width:100%;height:90px;object-fit:cover;display:block;margin-bottom:8px;}
+.mapa-pop-meta{font-size:.55rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;}
+.mapa-pop-nom{font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:#0b1626;margin-bottom:3px;}
+.mapa-pop-adr{font-size:.75rem;color:#666;}
+.mapa-pop-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;}
+@media(max-width:767px){
+  .mapa-layout{grid-template-columns:1fr;}
+  #gdt-mapa{height:380px;}
+  .mapa-targetes{height:auto;border-left:none;border-top:1px solid var(--border);display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;}
+  .mapa-item{flex:0 0 72%;max-width:260px;border-bottom:none;border-right:1px solid #e8e0d4;scroll-snap-align:start;}
+}
 </style>
 <script>
 /* idioma: resol abans de pintar (parametre ?lang=, preferencia guardada o idioma del navegador) */
@@ -314,471 +365,454 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="page-hero">
   <div class="page-hero-bg"></div>
   <div class="page-hero-grad"></div>
+  <div class="page-hero-line"></div>
   <div class="page-hero-inner">
     <p class="t slabel"  data-es="El recorrido Gourmet" data-ca="El recorregut Gourmet">El recorrido Gourmet</p>
-    <h1 class="t stitle"  data-es="Restaurantes recomendados del Camp de Tarragona" data-ca="Restaurants recomanats del Camp de Tarragona">Restaurantes recomendados del Camp de Tarragona</h1>
-    <p class="t page-hero-desc"  data-es="Cada temporada visitamos ocho restaurantes de la provincia de Tarragona: en 2026, de Cambrils y Salou a Reus, la Part Alta y el Delta del Ebro. Los evaluamos con criterio, publicamos la crónica y el menú de cada cena y al final del año entregamos nuestros premios." data-ca="Cada temporada visitem vuit restaurants de la província de Tarragona: el 2026, de Cambrils i Salou a Reus, la Part Alta i el Delta de l'Ebre. Els avaluem amb criteri, publiquem la crònica i el menú de cada sopar i al final de l'any lliurem els nostres premis.">Cada temporada visitamos ocho restaurantes de la provincia de Tarragona: en 2026, de Cambrils y Salou a Reus, la Part Alta y el Delta del Ebro. Los evaluamos con criterio, publicamos la crónica y el menú de cada cena y al final del año entregamos nuestros premios.</p>
+    <h1 class="t stitle" data-es="Restaurantes recomendados <em>del Camp de Tarragona</em>" data-ca="Restaurants recomanats <em>del Camp de Tarragona</em>">Restaurantes recomendados <em>del Camp de Tarragona</em></h1>
+    <p class="t page-hero-desc" data-es="Ocho restaurantes por temporada, del Delta del Ebro a la Part Alta. De cada cena publicamos la crónica y el menú; al final del año, nuestros premios." data-ca="Vuit restaurants per temporada, del Delta de l'Ebre a la Part Alta. De cada sopar publiquem la crònica i el menú; a final d'any, els nostres premis.">Ocho restaurantes por temporada, del Delta del Ebro a la Part Alta. De cada cena publicamos la crónica y el menú; al final del año, nuestros premios.</p>
   </div>
 </div>
 
 <!-- TEMPORADA 2026 -->
 <section class="sec">
   <div class="sec-inner">
-    <div style="margin-bottom:40px;">
-      <p class="t slabel"  data-es="Temporada actual" data-ca="Temporada actual">Temporada actual</p>
-      <h2 class="t stitle"  data-es="Recorrido 2026" data-ca="Recorregut 2026">Recorrido 2026</h2>
+    <div class="reveal" style="margin-bottom:36px;">
+      <p class="t slabel" data-es="Temporada actual" data-ca="Temporada actual">Temporada actual</p>
+      <h2 class="t stitle" data-es="Recorrido 2026" data-ca="Recorregut 2026">Recorrido 2026</h2>
       <div class="sdiv"></div>
+    </div>
+    <!-- Progrés: quan es faci la visita 8, posa --p:100% i «8 de 8» -->
+    <div class="rec-progress reveal" style="--p:87.5%;">
+      <div class="rec-progress-track"><div class="rec-progress-fill"></div></div>
+      <span class="rec-progress-label t" data-es="7 de 8 visitas" data-ca="7 de 8 visites">7 de 8 visitas</span>
     </div>
     <div class="rest-grid">
 
-      <!-- 1. Kema — visitada -->
-      <div class="rest-card">
+      <!-- 1. Kema -->
+      <article class="rest-card reveal reveal-delay-1">
         <div class="rest-card-img">
-          <img loading="lazy" decoding="async" src="../assets/img/kema/brasa-carn.jpg" alt="Kema · Cambrils">
+          <img loading="lazy" decoding="async" src="../assets/img/_thumbs/kema/hero.webp" alt="Sala de Kema, en Cambrils">
           <div class="rest-card-badges">
-            <span class="t rest-badge badge-visitada"  data-es="Visitado" data-ca="Visitat">Visitado</span>
-            <span class="rest-num">1</span>
+            <span class="t rest-badge badge-visitada" data-es="Visitado" data-ca="Visitat">Visitado</span>
+            <span class="rest-num">01</span>
           </div>
         </div>
         <div class="rest-card-body">
           <div class="rest-card-meta">
             <span class="rest-card-lloc">Cambrils</span>
-            <span class="rest-card-data t" data-es="marzo de 2026" data-ca="març de 2026">marzo de 2026</span>
+            <span class="t rest-card-data" data-es="marzo de 2026" data-ca="març de 2026">marzo de 2026</span>
           </div>
           <h3 class="rest-card-nom">Kema</h3>
-          <p class="t rest-card-cuina"  data-es="Brasa contemporánea" data-ca="Brasa contemporània">Brasa contemporánea</p>
-          <p class="t rest-card-desc"  data-es="Primera visita de la temporada. Cocina de brasa con producto de calidad y una oferta de coctelería diferencial." data-ca="Primera visita de la temporada. Cuina de brasa amb producte de qualitat i una oferta de cocteleria singular.">Primera visita de la temporada. Cocina de brasa con producto de calidad y una oferta de coctelería diferencial.</p>
+          <p class="t rest-card-cuina" data-es="Brasa contemporánea" data-ca="Brasa contemporània">Brasa contemporánea</p>
+          <p class="t rest-card-desc" data-es="Brasa con producto de primera y una coctelería que marca la diferencia. Abrió nuestra temporada." data-ca="Brasa amb producte de primera i una cocteleria que marca la diferència. Va obrir la nostra temporada.">Brasa con producto de primera y una coctelería que marca la diferencia. Abrió nuestra temporada.</p>
           <div class="rest-card-links">
-            <a href="../entrades/kema-previa-2026.html" class="t rest-link"  data-es="Leer la previa →" data-ca="Llegir la prèvia →">Leer la previa →</a>
-            <a href="../entrades/kema-cronica-2026.html" class="t rest-link rest-link-primary"  data-es="Crónica completa →" data-ca="Crònica completa →">Crónica completa →</a>
+            <a href="../entrades/kema-cronica-2026.html" class="t rest-link rest-link-primary" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
+            <a href="../entrades/kema-previa-2026.html" class="t rest-link" data-es="Previa" data-ca="Prèvia">Previa</a>
           </div>
         </div>
-      </div>
+      </article>
 
-      <!-- 2. La Goleta — visitada -->
-      <div class="rest-card">
+      <!-- 2. La Goleta -->
+      <article class="rest-card reveal reveal-delay-2">
         <div class="rest-card-img">
-          <img loading="lazy" decoding="async" src="../assets/img/goleta/goleta-hero.jpg" alt="La Goleta · Salou">
+          <img loading="lazy" decoding="async" src="../assets/img/_thumbs/goleta/goleta-hero.webp" alt="Terraza de La Goleta frente al mar, en Salou">
           <div class="rest-card-badges">
-            <span class="rest-badge badge-visitada t" data-es="Visitado" data-ca="Visitat">Visitado</span>
-            <span class="rest-num">2</span>
+            <span class="t rest-badge badge-visitada" data-es="Visitado" data-ca="Visitat">Visitado</span>
+            <span class="rest-num">02</span>
           </div>
         </div>
         <div class="rest-card-body">
           <div class="rest-card-meta">
             <span class="rest-card-lloc">Salou</span>
-            <span class="rest-card-data t" data-es="9 de abril de 2026" data-ca="9 d'abril de 2026">9 de abril de 2026</span>
+            <span class="t rest-card-data" data-es="9 de abril de 2026" data-ca="9 d'abril de 2026">9 de abril de 2026</span>
           </div>
           <h3 class="rest-card-nom">La Goleta</h3>
-          <p class="t rest-card-cuina"  data-es="Pescados & Mariscos" data-ca="Peixos & Mariscs">Pescados & Mariscos</p>
-          <p class="t rest-card-desc"  data-es="40 años frente a la Platja dels Capellans. Cocina mediterránea de producto con protagonismo del mar." data-ca="40 anys davant la platja dels Capellans. Cuina mediterrània de producte amb protagonisme del mar.">40 años frente a la Platja dels Capellans. Cocina mediterránea de producto con protagonismo del mar.</p>
+          <p class="t rest-card-cuina" data-es="Pescados & Mariscos" data-ca="Peixos & Mariscs">Pescados & Mariscos</p>
+          <p class="t rest-card-desc" data-es="40 años frente a la Platja dels Capellans. Cocina mediterránea de producto con protagonismo del mar." data-ca="40 anys davant la platja dels Capellans. Cuina mediterrània de producte amb protagonisme del mar.">40 años frente a la Platja dels Capellans. Cocina mediterránea de producto con protagonismo del mar.</p>
           <div class="rest-card-links">
-            <a href="../entrades/la-goleta-previa-2026.html" class="rest-link t" data-es="Leer la previa →" data-ca="Llegir la prèvia →">Leer la previa →</a>
-            <a href="../entrades/la-goleta-cronica-2026.html" class="rest-link rest-link-primary t" data-es="Crónica completa →" data-ca="Crònica completa →">Crónica completa →</a>
+            <a href="../entrades/la-goleta-cronica-2026.html" class="t rest-link rest-link-primary" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
+            <a href="../entrades/la-goleta-previa-2026.html" class="t rest-link" data-es="Previa" data-ca="Prèvia">Previa</a>
           </div>
         </div>
-      </div>
+      </article>
 
-      <!-- 3. El Terrat — visitat -->
-      <div class="rest-card">
+      <!-- 3. El Terrat -->
+      <article class="rest-card reveal reveal-delay-3">
         <div class="rest-card-img">
-          <img loading="lazy" decoding="async" src="../assets/img/terrat/sala.jpg" alt="El Terrat · Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
+          <img loading="lazy" decoding="async" src="../assets/img/_thumbs/terrat/sala.webp" alt="Sala de El Terrat, en Tarragona">
           <div class="rest-card-badges">
-            <span class="rest-badge badge-visitada t" data-es="Visitado" data-ca="Visitat">Visitado</span>
-            <span class="rest-num">3</span>
+            <span class="t rest-badge badge-visitada" data-es="Visitado" data-ca="Visitat">Visitado</span>
+            <span class="rest-num">03</span>
           </div>
         </div>
         <div class="rest-card-body">
           <div class="rest-card-meta">
             <span class="rest-card-lloc">Tarragona</span>
-            <span class="rest-card-data t" data-es="7 de mayo de 2026" data-ca="7 de maig de 2026">7 de mayo de 2026</span>
+            <span class="t rest-card-data" data-es="7 de mayo de 2026" data-ca="7 de maig de 2026">7 de mayo de 2026</span>
           </div>
           <h3 class="rest-card-nom">El Terrat</h3>
-          <p class="t rest-card-cuina" data-es="Cocina mediterránea creativa" data-ca="Cuina mediterrània creativa">Cocina mediterránea creativa</p>
-          <p class="t rest-card-desc" data-es="Moha Quach, Sol Repsol y Guía Michelin. La cocina que Tarragona necesitaba y el nombre que el sector sitúa más cerca de la primera estrella." data-ca="Moha Quach, Sol Repsol i Guia Michelin. La cuina que Tarragona necessitava i el nom que el sector situa més a prop de la primera estrella.">Moha Quach, Sol Repsol y Guía Michelin. La cocina que Tarragona necesitaba y el nombre que el sector sitúa más cerca de la primera estrella.</p>
+          <p class="t rest-card-cuina" data-es="Mediterránea creativa" data-ca="Mediterrània creativa">Mediterránea creativa</p>
+          <p class="t rest-card-desc" data-es="Moha Quach, Sol Repsol y Guía Michelin: el nombre que el sector sitúa más cerca de la primera estrella." data-ca="Moha Quach, Sol Repsol i Guia Michelin: el nom que el sector situa més a prop de la primera estrella.">Moha Quach, Sol Repsol y Guía Michelin: el nombre que el sector sitúa más cerca de la primera estrella.</p>
           <div class="rest-card-links">
-            <a href="../entrades/terrat-previa-2026.html" class="t rest-link" data-es="Leer la previa →" data-ca="Llegir la prèvia →">Leer la previa →</a>
-            <a href="../entrades/terrat-cronica-2026.html" class="t rest-link rest-link-primary" data-es="Crónica completa →" data-ca="Crònica completa →">Crónica completa →</a>
+            <a href="../entrades/terrat-cronica-2026.html" class="t rest-link rest-link-primary" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
+            <a href="../entrades/terrat-previa-2026.html" class="t rest-link" data-es="Previa" data-ca="Prèvia">Previa</a>
           </div>
         </div>
-      </div>
+      </article>
 
-      <!-- Cervus — 4a visita 2026 -->
-      <div class="rest-card">
+      <!-- 4. Cervus -->
+      <article class="rest-card reveal reveal-delay-4">
         <div class="rest-card-img">
-          <img loading="lazy" decoding="async" src="../assets/img/cervus/exterior.jpg" alt="Cervus · Reus" onerror="this.parentElement.style.background='var(--cream)'">
+          <img loading="lazy" decoding="async" src="../assets/img/_thumbs/cervus/exterior-card.webp" alt="Entrada de Cervus, en Reus">
           <div class="rest-card-badges">
-            <span class="rest-badge badge-visitada t" data-es="Visitado" data-ca="Visitat">Visitado</span>
-            <span class="rest-num">4</span>
+            <span class="t rest-badge badge-visitada" data-es="Visitado" data-ca="Visitat">Visitado</span>
+            <span class="rest-num">04</span>
           </div>
         </div>
         <div class="rest-card-body">
           <div class="rest-card-meta">
             <span class="rest-card-lloc">Reus</span>
-            <span class="rest-card-data t" data-es="10 y 11 de junio de 2026" data-ca="10 i 11 de juny de 2026">10 y 11 de junio de 2026</span>
+            <span class="t rest-card-data" data-es="10 y 11 de junio de 2026" data-ca="10 i 11 de juny de 2026">10 y 11 de junio de 2026</span>
           </div>
           <h3 class="rest-card-nom">Cervus</h3>
-          <p class="t rest-card-cuina" data-es="Fusión catalana-andaluza · Menú degustación" data-ca="Fusió catalana-andalusa · Menú degustació">Fusión catalana-andaluza · Menú degustación</p>
-          <p class="t rest-card-desc" data-es="Nil Bono y Lucía Fernández. Un Sol Repsol en catorce meses y la historia de dos cocineros que abrieron en el Raval de Jesús de Reus porque ya no había manera de no hacerlo." data-ca="Nil Bono i Lucía Fernández. Un Sol Repsol en catorze mesos i la història de dos cuiners que van obrir al Raval de Jesús de Reus perquè ja no hi havia manera de no fer-ho.">Nil Bono y Lucía Fernández. Un Sol Repsol en catorce meses y la historia de dos cocineros que abrieron en el Raval de Jesús de Reus porque ya no había manera de no hacerlo.</p>
+          <p class="t rest-card-cuina" data-es="Fusión catalana-andaluza" data-ca="Fusió catalana-andalusa">Fusión catalana-andaluza</p>
+          <p class="t rest-card-desc" data-es="Nil Bono y Lucía Fernández, en el Raval de Jesús de Reus. Un Sol Repsol en solo catorce meses." data-ca="Nil Bono i Lucía Fernández, al Raval de Jesús de Reus. Un Sol Repsol en només catorze mesos.">Nil Bono y Lucía Fernández, en el Raval de Jesús de Reus. Un Sol Repsol en solo catorce meses.</p>
           <div class="rest-card-links">
-            <a href="../entrades/cervus-previa-2026.html" class="rest-link t" data-es="Leer la previa →" data-ca="Llegir la prèvia →">Leer la previa →</a>
-            <a href="../entrades/cervus-cronica-2026.html" class="rest-link rest-link-primary t" data-es="Crónica completa →" data-ca="Crònica completa →">Crónica completa →</a>
+            <a href="../entrades/cervus-cronica-2026.html" class="t rest-link rest-link-primary" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
+            <a href="../entrades/cervus-previa-2026.html" class="t rest-link" data-es="Previa" data-ca="Prèvia">Previa</a>
           </div>
         </div>
-      </div>
+      </article>
 
-      <!-- 5. Brumma — Visitada -->
-      <div class="rest-card">
+      <!-- 5. Brumma -->
+      <article class="rest-card reveal reveal-delay-1">
         <div class="rest-card-img">
-          <img loading="lazy" decoding="async" src="../assets/img/brumma/05_brumma_vistas_mar.jpg" alt="Brumma · Infinitum Resort · Salou" onerror="this.parentElement.style.background='var(--cream)'">
+          <img loading="lazy" decoding="async" src="../assets/img/_thumbs/brumma/05_brumma_vistas_mar.webp" alt="Vistas al mar desde Brumma, en Infinitum Resort (Salou)">
           <div class="rest-card-badges">
-            <span class="rest-badge badge-visitada t" data-es="Visitado" data-ca="Visitat">Visitado</span>
-            <span class="rest-num">5</span>
+            <span class="t rest-badge badge-visitada" data-es="Visitado" data-ca="Visitat">Visitado</span>
+            <span class="rest-num">05</span>
           </div>
         </div>
         <div class="rest-card-body">
           <div class="rest-card-meta">
             <span class="rest-card-lloc">Salou</span>
-            <span class="rest-card-data t" data-es="2 de julio de 2026" data-ca="2 de juliol de 2026">2 de julio de 2026</span>
+            <span class="t rest-card-data" data-es="2 de julio de 2026" data-ca="2 de juliol de 2026">2 de julio de 2026</span>
           </div>
           <h3 class="rest-card-nom">Brumma</h3>
-          <p class="t rest-card-cuina" data-es="Brasa, arroces y producto mediterráneo" data-ca="Brasa, arrossos i producte mediterrani">Brasa, arroces y producto mediterráneo</p>
-          <p class="t rest-card-desc" data-es="La sala interior de Flamma Beach Foodhouse en Infinitum Resort. Un viaje por las siete denominaciones de origen catalanas frente al Mediterráneo." data-ca="La sala interior del Flamma Beach Foodhouse a Infinitum Resort. Un viatge per les set denominacions d'origen catalanes davant el Mediterrani.">La sala interior de Flamma Beach Foodhouse en Infinitum Resort. Un viaje por las siete denominaciones de origen catalanas frente al Mediterráneo.</p>
+          <p class="t rest-card-cuina" data-es="Brasa, arroces y producto" data-ca="Brasa, arrossos i producte">Brasa, arroces y producto</p>
+          <p class="t rest-card-desc" data-es="En Infinitum Resort, frente al Mediterráneo: un viaje por las siete denominaciones de origen catalanas." data-ca="A Infinitum Resort, davant el Mediterrani: un viatge per les set denominacions d'origen catalanes.">En Infinitum Resort, frente al Mediterráneo: un viaje por las siete denominaciones de origen catalanas.</p>
           <div class="rest-card-links">
-            <a href="../entrades/brumma-previa-2026.html" class="rest-link t" data-es="Leer la previa →" data-ca="Llegir la prèvia →">Leer la previa →</a>
-            <a href="../entrades/brumma-cronica-2026.html" class="rest-link rest-link-primary t" data-es="Crónica completa →" data-ca="Crònica completa →">Crónica completa →</a>
+            <a href="../entrades/brumma-cronica-2026.html" class="t rest-link rest-link-primary" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
+            <a href="../entrades/brumma-previa-2026.html" class="t rest-link" data-es="Previa" data-ca="Prèvia">Previa</a>
           </div>
         </div>
-      </div>
+      </article>
 
-      <!-- 6. Les Dunes — Visitada -->
-      <div class="rest-card">
+      <!-- 6. Les Dunes -->
+      <article class="rest-card reveal reveal-delay-2">
         <div class="rest-card-img">
-          <img loading="lazy" decoding="async" src="../assets/img/lesdunes/sensacions-espai.jpg" alt="Les Dunes · Riumar" onerror="this.parentElement.style.background='var(--cream)'">
+          <img loading="lazy" decoding="async" src="../assets/img/_thumbs/lesdunes/sensacions-espai.webp" alt="Sala de Les Dunes, en Riumar">
           <div class="rest-card-badges">
-            <span class="rest-badge badge-visitada t" data-es="Visitado" data-ca="Visitat">Visitado</span>
-            <span class="rest-num">6</span>
+            <span class="t rest-badge badge-visitada" data-es="Visitado" data-ca="Visitat">Visitado</span>
+            <span class="rest-num">06</span>
           </div>
         </div>
         <div class="rest-card-body">
           <div class="rest-card-meta">
             <span class="rest-card-lloc">Riumar</span>
-            <span class="rest-card-data t" data-es="4 de septiembre de 2026" data-ca="4 de setembre de 2026">4 de septiembre de 2026</span>
+            <span class="t rest-card-data" data-es="4 de septiembre de 2026" data-ca="4 de setembre de 2026">4 de septiembre de 2026</span>
           </div>
           <h3 class="rest-card-nom">Les Dunes</h3>
           <p class="t rest-card-cuina" data-es="Cocina del Delta del Ebro" data-ca="Cuina del Delta de l'Ebre">Cocina del Delta del Ebro</p>
-          <p class="t rest-card-desc" data-es="Sergi Piñol y Noemi Ribes, once años de menú degustación en Riumar. Cena con el alcalde de Deltebre, Lluís Soler, como invitado." data-ca="Sergi Piñol i Noemi Ribes, onze anys de menú degustació a Riumar. Sopar amb l'alcalde de Deltebre, Lluís Soler, com a convidat.">Sergi Piñol y Noemi Ribes, once años de menú degustación en Riumar. Cena con el alcalde de Deltebre, Lluís Soler, como invitado.</p>
+          <p class="t rest-card-desc" data-es="Sergi Piñol y Noemi Ribes llevan once años contando el Delta del Ebro en un menú degustación." data-ca="Sergi Piñol i Noemi Ribes fa onze anys que expliquen el Delta de l'Ebre en un menú degustació.">Sergi Piñol y Noemi Ribes llevan once años contando el Delta del Ebro en un menú degustación.</p>
           <div class="rest-card-links">
-            <a href="../entrades/les-dunes-previa-2026.html" class="t rest-link" data-es="Leer la previa →" data-ca="Llegir la prèvia →">Leer la previa →</a>
-            <a href="../entrades/les-dunes-cronica-2026.html" class="t rest-link rest-link-primary" data-es="Crónica completa →" data-ca="Crònica completa →">Crónica completa →</a>
+            <a href="../entrades/les-dunes-cronica-2026.html" class="t rest-link rest-link-primary" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
+            <a href="../entrades/les-dunes-previa-2026.html" class="t rest-link" data-es="Previa" data-ca="Prèvia">Previa</a>
           </div>
         </div>
-      </div>
+      </article>
 
-      <!-- 7. El Galliner de l'Antiquari — Pròxima -->
-      <div class="rest-card">
+      <!-- 7. El Galliner de l'Antiquari -->
+      <article class="rest-card reveal reveal-delay-3">
         <div class="rest-card-img">
-          <img loading="lazy" decoding="async" src="../assets/img/galliner/facana.jpg" alt="El Galliner de l'Antiquari · Tarragona" onerror="this.parentElement.style.background='var(--cream)'">
+          <img loading="lazy" decoding="async" src="../assets/img/_thumbs/galliner/facana.webp" alt="Fachada de El Galliner de l'Antiquari, en la Part Alta de Tarragona">
           <div class="rest-card-badges">
-            <span class="rest-badge badge-visitada t" data-es="Visitada" data-ca="Visitada">Visitada</span>
-            <span class="rest-num">7</span>
+            <span class="t rest-badge badge-visitada" data-es="Visitado" data-ca="Visitat">Visitado</span>
+            <span class="rest-num">07</span>
           </div>
         </div>
         <div class="rest-card-body">
           <div class="rest-card-meta">
             <span class="rest-card-lloc">Tarragona</span>
-            <span class="rest-card-data t" data-es="1 de octubre de 2026" data-ca="1 d'octubre de 2026">1 de octubre de 2026</span>
+            <span class="t rest-card-data" data-es="1 de octubre de 2026" data-ca="1 d'octubre de 2026">1 de octubre de 2026</span>
           </div>
           <h3 class="rest-card-nom">El Galliner de l'Antiquari</h3>
           <p class="t rest-card-cuina" data-es="Brasa y cocina catalana" data-ca="Brasa i cuina catalana">Brasa y cocina catalana</p>
-          <p class="t rest-card-desc" data-es="En la Part Alta, sobre el muro del foro provincial romano. Tymur Duka en la cocina y Arnau González en la sala. Menú de brasa, mar y producto de Tarragona." data-ca="A la Part Alta, damunt el mur del fòrum provincial romà. Tymur Duka a la cuina i Arnau González a la sala. Menú de brasa, mar i producte de Tarragona.">En la Part Alta, sobre el muro del foro provincial romano. Tymur Duka en la cocina y Arnau González en la sala. Menú de brasa, mar y producto de Tarragona.</p>
+          <p class="t rest-card-desc" data-es="En la Part Alta, sobre el muro del foro provincial romano. Brasa, mar y producto de Tarragona." data-ca="A la Part Alta, damunt el mur del fòrum provincial romà. Brasa, mar i producte de Tarragona.">En la Part Alta, sobre el muro del foro provincial romano. Brasa, mar y producto de Tarragona.</p>
           <div class="rest-card-links">
-            <a href="../entrades/galliner-previa-2026.html" class="t rest-link" data-es="Leer la previa →" data-ca="Llegir la prèvia →">Leer la previa →</a>
-            <a href="../entrades/galliner-cronica-2026.html" class="t rest-link rest-link-primary" data-es="Crónica completa →" data-ca="Crònica completa →">Crónica completa →</a>
+            <a href="../entrades/galliner-cronica-2026.html" class="t rest-link rest-link-primary" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
+            <a href="../entrades/galliner-previa-2026.html" class="t rest-link" data-es="Previa" data-ca="Prèvia">Previa</a>
           </div>
         </div>
-      </div>
+      </article>
 
-    </div>
+      <!-- 8. Pròxima cita — quan es confirmi, substitueix-la per una targeta com les altres -->
+      <article class="rest-card rest-card-next reveal reveal-delay-4">
+        <div class="rest-card-img rest-next-img">
+          <span class="rest-next-num" aria-hidden="true">08</span>
+          <div class="rest-card-badges">
+            <span class="t rest-badge badge-proxima" data-es="Próxima cita" data-ca="Propera cita">Próxima cita</span>
+          </div>
+        </div>
+        <div class="rest-card-body">
+          <div class="rest-card-meta">
+            <span class="rest-card-lloc">Camp de Tarragona</span>
+            <span class="t rest-card-data" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span>
+          </div>
+          <h3 class="t rest-card-nom" data-es="Visita 8" data-ca="Visita 8">Visita 8</h3>
+          <p class="t rest-card-cuina" data-es="Cierre de temporada" data-ca="Tancament de temporada">Cierre de temporada</p>
+          <p class="t rest-card-desc" data-es="La Junta está cerrando la última cena de la temporada. La anunciaremos primero en la newsletter." data-ca="La Junta està tancant l'últim sopar de la temporada. L'anunciarem primer a la newsletter.">La Junta está cerrando la última cena de la temporada. La anunciaremos primero en la newsletter.</p>
+          <div class="rest-card-links">
+            <a href="newsletter.html" class="t rest-link rest-link-primary" data-es="Avísame →" data-ca="Avisa'm →">Avísame →</a>
+          </div>
+        </div>
+      </article>
 
-    <!-- Franja visites pendents -->
-    <div style="margin-top:12px;border:1px solid var(--border);background:var(--cream);padding:18px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
-      <div style="display:flex;gap:8px;">
-        <span style="font-size:.65rem;font-weight:700;letter-spacing:.1em;color:var(--muted);border:1px solid var(--border);padding:5px 11px;background:#fff;">8</span>
-      </div>
-      <p class="t" style="font-size:.78rem;color:var(--muted);font-weight:300;margin:0;font-style:italic;" data-es="Visita 8 · Pendiente de confirmar para la temporada 2026." data-ca="Visita 8 · Pendent de confirmar per a la temporada 2026.">Visita 8 · Pendiente de confirmar para la temporada 2026.</p>
     </div>
   </div>
 </section>
 
 <!-- MAPA RECORREGUT -->
-<section class="sec" id="mapa-recorregut" style="padding:80px 0;background:#fff;">
+<section class="sec" id="mapa-recorregut" style="background:#fff;">
   <div class="sec-inner">
-    <div style="margin-bottom:40px;">
+    <div class="mapa-head reveal">
       <p class="t slabel" data-es="Geografía Gourmet" data-ca="Geografia Gourmet">Geografía Gourmet</p>
       <h2 class="t stitle" data-es="El mapa del recorrido" data-ca="El mapa del recorregut">El mapa del recorrido</h2>
       <div class="sdiv"></div>
       <p class="t" style="font-size:.9rem;color:var(--muted);font-weight:300;line-height:1.8;max-width:580px;" data-es="Todos los restaurantes visitados en las temporadas 2025 y 2026, situados en el territorio que nos define: el Camp de Tarragona y la Costa Daurada." data-ca="Tots els restaurants visitats a les temporades 2025 i 2026, situats al territori que ens defineix: el Camp de Tarragona i la Costa Daurada.">Todos los restaurantes visitados en las temporadas 2025 y 2026, situados en el territorio que nos define: el Camp de Tarragona y la Costa Daurada.</p>
     </div>
 
-    <!-- Filtres -->
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
-      <button class="mapa-filtre actiu" data-f="tots" onclick="filtraMapa('tots',this)"><span class="t" data-es="Todos" data-ca="Tots">Todos</span></button>
-      <button class="mapa-filtre" data-f="2026" onclick="filtraMapa('2026',this)"><span style="width:8px;height:8px;border-radius:50%;background:#b8924a;display:inline-block;margin-right:6px;"></span>2026</button>
-      <button class="mapa-filtre" data-f="2025" onclick="filtraMapa('2025',this)"><span style="width:8px;height:8px;border-radius:50%;background:#122850;border:1px solid #aaa;display:inline-block;margin-right:6px;"></span>2025</button>
-      <button class="mapa-filtre" data-f="gastronia" onclick="filtraMapa('gastronia',this)"><span style="font-size:.7rem;margin-right:4px;">&#11088;</span><span class="t" data-es="Gastronia" data-ca="Gastronia">Gastronia</span></button>
+    <div class="mapa-filtres reveal" role="group" aria-label="Filtrar el mapa">
+      <button type="button" class="mapa-filtre actiu" data-f="tots" aria-pressed="true"><span class="t" data-es="Todos" data-ca="Tots">Todos</span></button>
+      <button type="button" class="mapa-filtre" data-f="2026" aria-pressed="false"><span class="mapa-dot mapa-dot-26"></span>2026</button>
+      <button type="button" class="mapa-filtre" data-f="2025" aria-pressed="false"><span class="mapa-dot mapa-dot-25"></span>2025</button>
+      <button type="button" class="mapa-filtre" data-f="gastronia" aria-pressed="false"><i class="fa fa-star" aria-hidden="true"></i><span class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</span></button>
     </div>
 
-    <!-- Layout mapa + targetes -->
-    <div id="mapa-layout" style="display:grid;grid-template-columns:1fr 340px;gap:0;border:1px solid var(--border);overflow:hidden;">
-
-      <!-- Mapa -->
-      <div style="position:relative;">
-        <div id="gdt-mapa" role="region" aria-label="Mapa de los restaurantes visitados. La misma lista está en las fichas de al lado." style="width:100%;height:540px;"></div>
-        <!-- Llegenda -->
-        <div style="position:absolute;bottom:16px;left:16px;z-index:1000;background:rgba(11,22,38,.88);backdrop-filter:blur(6px);padding:14px 18px;display:flex;flex-direction:column;gap:8px;pointer-events:none;">
-          <div style="display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;border-radius:50%;background:#b8924a;display:inline-block;"></span><span class="t" style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</span></div>
-          <div style="display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;border-radius:50%;background:#122850;display:inline-block;border:1px solid rgba(255,255,255,.3);"></span><span class="t" style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);" data-es="Temporada 2025" data-ca="Temporada 2025">Temporada 2025</span></div>
-          <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:.75rem;color:#b8924a;">&#11088;</span><span class="t" style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);" data-es="Premio Gastronia" data-ca="Premi Gastronia">Premio Gastronia</span></div>
+    <div id="mapa-layout" class="mapa-layout reveal">
+      <div class="mapa-wrap">
+        <div id="gdt-mapa" role="region" aria-label="Mapa de los restaurantes visitados. La misma lista está en las fichas de al lado."></div>
+        <div class="mapa-llegenda" aria-hidden="true">
+          <div><span class="mapa-dot mapa-dot-26"></span><span class="t" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</span></div>
+          <div><span class="mapa-dot mapa-dot-25"></span><span class="t" data-es="Temporada 2025" data-ca="Temporada 2025">Temporada 2025</span></div>
+          <div><i class="fa fa-star"></i><span class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</span></div>
         </div>
       </div>
-
-      <!-- Targetes laterals -->
-      <div id="mapa-targetes" style="height:540px;overflow-y:auto;border-left:1px solid var(--border);background:#fafafa;">
-      </div>
-
+      <div id="mapa-targetes" class="mapa-targetes"></div>
     </div>
-
-    <!-- Graella inferior — agrupada per any -->
-
-    <!-- 2026 -->
-    <div style="margin-top:2px;">
-      <div style="padding:8px 18px;background:var(--navy-dark);border:1px solid var(--navy-dark);">
-        <span class="t" style="font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);" data-es="Temporada 2026" data-ca="Temporada 2026">Temporada 2026</span>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:0;border:1px solid var(--border);border-top:none;">
-        <div style="padding:16px 20px;border-right:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">Cambrils</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Kema</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. Pau Casals, 37</span></div>
-        <div style="padding:16px 20px;border-right:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">Salou</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">La Goleta</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. de la Gavina, 2</span></div>
-        <div style="padding:16px 20px;border-right:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">Tarragona</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">El Terrat</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. Pons d&apos;Icart, 19</span></div>
-        <div style="padding:16px 20px;border-right:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">Reus</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Cervus</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Raval de Jes&uacute;s, Reus</span></div>
-        <div style="padding:16px 20px;border-right:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">Salou</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Brumma</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Infinitum Resort</span></div>
-        <div style="padding:16px 20px;"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">Riumar</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Les Dunes</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. del Coll Verd, 5-3</span></div>
-      </div>
-    </div>
-
-    <!-- 2025 -->
-    <div style="margin-top:8px;">
-      <div style="padding:8px 18px;background:var(--cream);border:1px solid var(--border);">
-        <span class="t" style="font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);" data-es="Temporada 2025" data-ca="Temporada 2025">Temporada 2025</span>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border);border-top:none;">
-        <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Reus</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Buidasacs &#11088;</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. Pintor Bergad&agrave;, 7</span></div>
-        <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Cambrils</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Cambium &#11088;</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. M.J. Verdaguer, 17</span></div>
-        <div style="padding:16px 20px;border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Tarragona</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">&Agrave;nima</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. de l&apos;Abat, 2</span></div>
-        <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Roda de Ber&agrave;</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Baramar</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Pg. Mar&iacute;tim, 1</span></div>
-        <div style="padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Tarragona</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Casapepe</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">C. dels Cavallers, 6</span></div>
-        <div style="padding:16px 20px;border-bottom:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Vilanova d&apos;Escornalbou</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Ca l&apos;Amadeu</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Pl. de la Font, s/n</span></div>
-        <div style="padding:16px 20px;border-right:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Salou</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">El Rac&oacute; de Nico</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Via Augusta, 19</span></div>
-        <div style="padding:16px 20px;border-right:1px solid var(--border);"><span style="font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Tarragona</span><span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy-dark);">Limboo</span><span style="display:block;font-size:.75rem;color:var(--muted);font-weight:300;margin-top:2px;">Platja del Miracle</span></div>
-        <div style="padding:16px 20px;"></div>
-      </div>
-    </div>
-    <p class="t" style="font-size:.72rem;color:var(--muted);margin-top:14px;font-style:italic;" data-es="&#11088; Premio Gastronia &middot; El mapa se actualiza cada temporada." data-ca="&#11088; Premi Gastronia &middot; El mapa s'actualitza cada temporada.">&#11088; Premio Gastronia &middot; El mapa se actualiza cada temporada.</p>
   </div>
 </section>
 
-<script src="../assets/js/leaflet.js?v=1.9.4"></script>
 <script>
-function gdtImgErr(el){el.style.display='none';if(el.parentNode)el.parentNode.style.background='#e8e0d4';}
+/* Mapa del recorregut. Leaflet només es descarrega quan el mapa és a prop de la pantalla.
+   Fons: OpenStreetMap (gratuït, sense clau) amb filtre càlid per encaixar amb la web.
+   Per afegir un restaurant: una línia a «d» (c:g = 2026 daurat, c:n = 2025 blau; s:true = Trofeu Gastronia). */
 (function(){
-  var map = L.map("gdt-mapa",{scrollWheelZoom:false}).setView([41.12,1.18],10);
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{
-    attribution:"&copy; OpenStreetMap &copy; CARTO",subdomains:"abcd",maxZoom:19
-  }).addTo(map);
-
-  function icon(color,star){
-    var s=star?"<text x='14' y='18' text-anchor='middle' font-size='9' fill='"+color+"'>&#9733;</text>":"";
-    return L.divIcon({html:"<svg xmlns='http://www.w3.org/2000/svg' width='28' height='38' viewBox='0 0 28 38'><path d='M14 0C6.27 0 0 6.27 0 14c0 9.33 14 24 14 24s14-14.67 14-24C28 6.27 21.73 0 14 0z' fill='"+color+"'/><circle cx='14' cy='14' r='6' fill='rgba(255,255,255,0.9)'/>"+s+"</svg>",className:"",iconSize:[28,38],iconAnchor:[14,38],popupAnchor:[0,-38]});
-  }
-
-  function iconActiu(color,star){
-    var s=star?"<text x='18' y='23' text-anchor='middle' font-size='11' fill='"+color+"'>&#9733;</text>":"";
-    return L.divIcon({html:"<svg xmlns='http://www.w3.org/2000/svg' width='36' height='48' viewBox='0 0 36 48'><path d='M18 0C8.06 0 0 8.06 0 18c0 12 18 30 18 30s18-18 18-30C36 8.06 27.94 0 18 0z' fill='"+color+"'/><circle cx='18' cy='18' r='8' fill='rgba(255,255,255,0.95)'/>"+s+"</svg>",className:"",iconSize:[36,48],iconAnchor:[18,48],popupAnchor:[0,-48]});
-  }
-
-  var g="#b8924a",n="#122850";
-  var d=[
-    {lat:41.0668837,lng:1.0617647,nom:"Kema",lloc:"Cambrils",any:"2026",adr:"C. Pau Casals, 37",c:g,s:false,tel:"977 364 054",web:"https://kemacambrils.com",img:"../assets/img/kema/hero-cronica.jpg"},
-    {lat:41.0681635,lng:1.1493959,nom:"La Goleta",lloc:"Salou",any:"2026",adr:"C. de la Gavina, 2",c:g,s:false,tel:"977 383 566",web:"https://lagoletasalou.com",img:"../assets/img/goleta/goleta-hero.jpg"},
-    {lat:41.1138541,lng:1.2524837,nom:"El Terrat",lloc:"Tarragona",any:"2026",adr:"C. Pons d'Icart, 19",c:g,s:false,tel:"977 248 485",web:"https://elterratrestaurant.com",img:"../assets/img/terrat/exterior.jpg"},
-    {lat:41.1556,lng:1.1047,nom:"Cervus",lloc:"Reus",any:"2026",adr:"Raval de Jesús, Reus",c:g,s:false,tel:"",web:"",img:"../assets/img/cervus/exterior.jpg"},
-    {lat:41.0535,lng:1.1200,nom:"Brumma",lloc:"Salou",any:"2026",adr:"Infinitum Resort, Salou",c:g,s:false,tel:"",web:"https://www.infinitumliving.com/es/restaurantes/flamma-beach-foodhouse",img:"../assets/img/brumma/05_brumma_vistas_mar.jpg"},
-    {lat:40.7263805,lng:0.8409715,nom:"Les Dunes",lloc:"Riumar",any:"2026",adr:"C. del Coll Verd, 5-3",c:g,s:false,tel:"639 02 97 41",web:"https://lesdunesrestaurant.com",img:"../assets/img/lesdunes/sensacions-espai.jpg"},
-    {lat:41.1176,lng:1.2575,nom:"El Galliner de l'Antiquari",lloc:"Tarragona",any:"2026",adr:"C. de Santa Anna, 3",c:g,s:false,tel:"671 477 099",web:"https://elgallinerdelantiquari.net",img:"../assets/img/galliner/facana.jpg"},
-    {lat:41.1520917,lng:1.1091041,nom:"Buidasacs",lloc:"Reus",any:"2025",adr:"C. Pintor Bergadà, 7",c:n,s:true,tel:"877 219 097",web:"",img:"../assets/img/gala2025/sala-gala.jpg"},
-    {lat:41.0721909,lng:1.0535021,nom:"Cambium",lloc:"Cambrils",any:"2025",adr:"C. M.J. Verdaguer, 17",c:n,s:true,tel:"",web:"https://cambiumrestaurant.com",img:""},
-    {lat:41.117998,lng:1.2570257,nom:"Ànima",lloc:"Tarragona",any:"2025",adr:"C. de l'Abat, 2",c:n,s:false,tel:"",web:"",img:""},
-    {lat:41.1668411,lng:1.469315,nom:"Baramar",lloc:"Roda de Berà",any:"2025",adr:"Pg. Marítim, 1",c:n,s:false,tel:"",web:"",img:""},
-    {lat:41.1175787,lng:1.2561823,nom:"Casapepe",lloc:"Tarragona",any:"2025",adr:"C. dels Cavallers, 6",c:n,s:false,tel:"",web:"",img:""},
-    {lat:41.1141067,lng:0.9362198,nom:"Ca l'Amadeu",lloc:"Vilanova d'Escornalbou",any:"2025",adr:"Pl. de la Font, s/n",c:n,s:false,tel:"",web:"",img:""},
-    {lat:41.079836,lng:1.1328679,nom:"El Racó de Nico",lloc:"Salou",any:"2025",adr:"Via Augusta, 19",c:n,s:false,tel:"",web:"",img:""},
-    {lat:41.1145692,lng:1.2652235,nom:"Limboo",lloc:"Tarragona",any:"2025",adr:"Platja del Miracle",c:n,s:false,tel:"",web:"",img:""}
+  var sec = document.getElementById('mapa-recorregut');
+  if (!sec) return;
+  var g = '#b8924a', n = '#122850', E = '../entrades/', I = '../assets/img/_thumbs/';
+  var d = [
+    {lat:41.0668837,lng:1.0617647,nom:"Kema",lloc:"Cambrils",any:"2026",adr:"C. Pau Casals, 37",c:g,tel:"977 364 054",web:"https://kemacambrils.com",img:I+"kema/hero.webp",cr:E+"kema-cronica-2026.html"},
+    {lat:41.0681635,lng:1.1493959,nom:"La Goleta",lloc:"Salou",any:"2026",adr:"C. de la Gavina, 2",c:g,tel:"977 383 566",web:"https://lagoletasalou.com",img:I+"goleta/goleta-hero.webp",cr:E+"la-goleta-cronica-2026.html"},
+    {lat:41.1138541,lng:1.2524837,nom:"El Terrat",lloc:"Tarragona",any:"2026",adr:"C. Pons d'Icart, 19",c:g,tel:"977 248 485",web:"https://elterratrestaurant.com",img:I+"terrat/sala.webp",cr:E+"terrat-cronica-2026.html"},
+    {lat:41.1556,lng:1.1047,nom:"Cervus",lloc:"Reus",any:"2026",adr:"Raval de Jesús, Reus",c:g,img:I+"cervus/exterior-card.webp",cr:E+"cervus-cronica-2026.html"},
+    {lat:41.0535,lng:1.1200,nom:"Brumma",lloc:"Salou",any:"2026",adr:"Infinitum Resort, Salou",c:g,web:"https://www.infinitumliving.com/es/restaurantes/flamma-beach-foodhouse",img:I+"brumma/05_brumma_vistas_mar.webp",cr:E+"brumma-cronica-2026.html"},
+    {lat:40.7263805,lng:0.8409715,nom:"Les Dunes",lloc:"Riumar",any:"2026",adr:"C. del Coll Verd, 5-3",c:g,tel:"639 02 97 41",web:"https://lesdunesrestaurant.com",img:I+"lesdunes/sensacions-espai.webp",cr:E+"les-dunes-cronica-2026.html"},
+    {lat:41.1176,lng:1.2575,nom:"El Galliner de l'Antiquari",lloc:"Tarragona",any:"2026",adr:"C. de Santa Anna, 3",c:g,tel:"671 477 099",web:"https://elgallinerdelantiquari.net",img:I+"galliner/facana.webp",cr:E+"galliner-cronica-2026.html"},
+    {lat:41.1520917,lng:1.1091041,nom:"Buidasacs",lloc:"Reus",any:"2025",adr:"C. Pintor Bergadà, 7",c:n,s:true,tel:"877 219 097",img:I+"gala2025/gastronia1-buidasacs.webp",gala:true},
+    {lat:41.0721909,lng:1.0535021,nom:"Cambium",lloc:"Cambrils",any:"2025",adr:"C. M.J. Verdaguer, 17",c:n,s:true,web:"https://cambiumrestaurant.com",gala:true},
+    {lat:41.117998,lng:1.2570257,nom:"Ànima",lloc:"Tarragona",any:"2025",adr:"C. de l'Abat, 2",c:n},
+    {lat:41.1668411,lng:1.469315,nom:"Baramar",lloc:"Roda de Berà",any:"2025",adr:"Pg. Marítim, 1",c:n},
+    {lat:41.1175787,lng:1.2561823,nom:"Casapepe",lloc:"Tarragona",any:"2025",adr:"C. dels Cavallers, 6",c:n},
+    {lat:41.1141067,lng:0.9362198,nom:"Ca l'Amadeu",lloc:"Vilanova d'Escornalbou",any:"2025",adr:"Pl. de la Font, s/n",c:n},
+    {lat:41.079836,lng:1.1328679,nom:"El Racó de Nico",lloc:"Salou",any:"2025",adr:"Via Augusta, 19",c:n},
+    {lat:41.1145692,lng:1.2652235,nom:"Limboo",lloc:"Tarragona",any:"2025",adr:"Platja del Miracle",c:n}
   ];
 
-  var mk=[];
-  var activeIdx=null;
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
+  /* text bilingüe: setLang() el tradueix com la resta de la pàgina */
+  function T(es, ca){ return '<span class="t" data-es="'+esc(es)+'" data-ca="'+esc(ca)+'">'+(window.currentLang === 'ca' ? ca : es)+'</span>'; }
+  function star(r){ return r.s ? '<i class="fa fa-star" aria-label="Trofeo Gastronia"></i>' : ''; }
+  function links(r){
+    var h = '';
+    if (r.cr) h += '<a href="'+r.cr+'">'+T('Crónica','Crònica')+' &rarr;</a>';
+    if (r.gala) h += '<a href="'+E+'gala-premis-2025.html">'+T('Gala 2025','Gala 2025')+' &rarr;</a>';
+    if (r.tel) h += '<a href="tel:+34'+r.tel.replace(/ /g,'')+'"><i class="fa fa-phone" aria-hidden="true"></i>'+esc(r.tel)+'</a>';
+    if (r.web) h += '<a href="'+esc(r.web)+'" target="_blank" rel="noopener"><i class="fa fa-globe" aria-hidden="true"></i>Web</a>';
+    return h;
+  }
 
-  function buildTargetes(llista){
-    var cont=document.getElementById("mapa-targetes");
-    cont.innerHTML="";
-    llista.forEach(function(r,i){
-      var orig=d.indexOf(r);
-      var div=document.createElement("div");
-      div.id="targeta-"+orig;
-      div.style.cssText="border-bottom:1px solid #e8e0d4;cursor:pointer;transition:background .2s;";
-      var imgHtml=r.img
-        ? "<div style='width:100%;height:110px;overflow:hidden;background:#e8e0d4;'><img loading='lazy' decoding='async' src='"+r.img+"' alt='"+r.nom+"' style='width:100%;height:100%;object-fit:cover;' onerror='gdtImgErr(this)'></div>"
-        : "<div style='width:100%;height:80px;background:linear-gradient(135deg,#122850,#2d4a66);display:flex;align-items:center;justify-content:center;'><span style='color:rgba(255,255,255,.2);font-size:2rem;'>&#xb7;</span></div>";
-      var starHtml=r.s?"<span style='color:#b8924a;font-size:.7rem;'> &#9733;</span>":"";
-      var telHtml=r.tel?"<span style='display:block;font-size:.7rem;color:#888;margin-top:2px;'>&#128222; "+r.tel+"</span>":"";
-      var webHtml=r.web?"<a href='"+r.web+"' target='_blank' rel='noopener' style='display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:"+r.c+";margin-top:6px;text-decoration:none;border-bottom:1px solid "+r.c+";'>Web &rarr;</a>":"";
-      div.innerHTML=imgHtml+"<div style='padding:12px 14px;'>"
-        +"<span style='font-size:.55rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:"+r.c+";display:block;margin-bottom:3px;'>"+r.any+" &middot; "+r.lloc+"</span>"
-        +"<span style='font-family:Playfair Display,serif;font-size:.95rem;font-weight:700;color:#0b1626;'>"+r.nom+starHtml+"</span>"
-        +"<span style='display:block;font-size:.72rem;color:#888;margin-top:2px;'>"+r.adr+"</span>"
-        +telHtml+webHtml
-        +"</div>";
-      div.addEventListener("mouseenter",function(){ activaRestaurant(orig,false); });
-      div.addEventListener("mouseleave",function(){ desactivaRestaurant(orig); });
-      div.addEventListener("click",function(){ map.setView([r.lat,r.lng],14); mk[orig].openPopup(); });
-      cont.appendChild(div);
+  function init(){
+    var map = L.map('gdt-mapa', {scrollWheelZoom:false});
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>', maxZoom:19
+    }).addTo(map);
+    map.fitBounds(L.latLngBounds(d.map(function(r){ return [r.lat, r.lng]; })), {padding:[36,36]});
+
+    function pin(color, star, big){
+      var w = big ? 36 : 28, h = big ? 48 : 38;
+      var s = star ? "<text x='14' y='18' text-anchor='middle' font-size='9' fill='"+color+"'>&#9733;</text>" : "";
+      return L.divIcon({html:"<svg xmlns='http://www.w3.org/2000/svg' width='"+w+"' height='"+h+"' viewBox='0 0 28 38'><path d='M14 0C6.27 0 0 6.27 0 14c0 9.33 14 24 14 24s14-14.67 14-24C28 6.27 21.73 0 14 0z' fill='"+color+"'/><circle cx='14' cy='14' r='6' fill='rgba(255,255,255,0.92)'/>"+s+"</svg>",
+        className:'', iconSize:[w,h], iconAnchor:[w/2,h], popupAnchor:[0,-h]});
+    }
+
+    var mk = [], actiu = null, llista = document.getElementById('mapa-targetes');
+
+    function activa(i, scroll){
+      if (actiu !== null && actiu !== i) desactiva(actiu);
+      actiu = i;
+      mk[i].setIcon(pin(d[i].c, d[i].s, true));
+      var el = document.getElementById('mapa-item-'+i);
+      if (el){
+        el.classList.add('actiu');
+        if (scroll) llista.scrollTo({top:el.offsetTop - llista.offsetTop, left:el.offsetLeft - llista.offsetLeft, behavior:'smooth'});
+      }
+    }
+    function desactiva(i){
+      mk[i].setIcon(pin(d[i].c, d[i].s, false));
+      var el = document.getElementById('mapa-item-'+i);
+      if (el) el.classList.remove('actiu');
+      if (actiu === i) actiu = null;
+    }
+
+    function fitxes(visibles){
+      llista.innerHTML = '';
+      visibles.forEach(function(r){
+        var i = d.indexOf(r);
+        var el = document.createElement('div');
+        el.className = 'mapa-item';
+        el.id = 'mapa-item-'+i;
+        el.tabIndex = 0;
+        el.setAttribute('role', 'button');
+        el.setAttribute('aria-label', r.nom+' · '+r.lloc);
+        el.innerHTML = (r.img
+            ? "<div class='mapa-item-img'><img loading='lazy' decoding='async' src='"+r.img+"' alt=''></div>"
+            : "<div class='mapa-item-img buit'></div>")
+          + "<div class='mapa-item-body'>"
+          + "<span class='mapa-item-meta' style='color:"+r.c+"'>"+r.any+" &middot; "+esc(r.lloc)+"</span>"
+          + "<span class='mapa-item-nom'>"+esc(r.nom)+star(r)+"</span>"
+          + "<span class='mapa-item-adr'>"+esc(r.adr)+"</span>"
+          + "<div class='mapa-item-links'>"+links(r)+"</div></div>";
+        function obre(){ map.setView([r.lat, r.lng], 14); mk[i].openPopup(); }
+        el.addEventListener('mouseenter', function(){ activa(i, false); });
+        el.addEventListener('mouseleave', function(){ if (!mk[i].isPopupOpen()) desactiva(i); });
+        el.addEventListener('click', function(e){ if (!e.target.closest('a')) obre(); });
+        el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); obre(); } });
+        llista.appendChild(el);
+      });
+    }
+
+    d.forEach(function(r, i){
+      var pop = "<div class='mapa-pop'>"
+        + (r.img ? "<img src='"+r.img+"' alt=''>" : "")
+        + "<div class='mapa-pop-meta' style='color:"+r.c+"'>"+r.any+" &middot; "+esc(r.lloc)+"</div>"
+        + "<div class='mapa-pop-nom'>"+esc(r.nom)+star(r)+"</div>"
+        + "<div class='mapa-pop-adr'>"+esc(r.adr)+"</div>"
+        + "<div class='mapa-pop-links'>"+links(r)+"</div></div>";
+      var m = L.marker([r.lat, r.lng], {icon:pin(r.c, r.s, false), title:r.nom+' · '+r.lloc, alt:r.nom, keyboard:true})
+        .addTo(map).bindPopup(pop, {maxWidth:230});
+      m.on('mouseover', function(){ activa(i, true); });
+      m.on('mouseout', function(){ if (!m.isPopupOpen()) desactiva(i); });
+      m.on('popupopen', function(){ activa(i, true); });
+      m.on('popupclose', function(){ desactiva(i); });
+      mk.push(m);
+    });
+    fitxes(d);
+
+    /* Ruta 2026 en ordre de visita (sense animació si l'usuari prefereix menys moviment) */
+    var ruta = d.filter(function(r){ return r.any === '2026'; }).map(function(r){ return [r.lat, r.lng]; });
+    var linia = L.polyline([], {color:g, weight:2, opacity:.6, dashArray:'6,8'}).addTo(map);
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { linia.setLatLngs(ruta); }
+    else { var k = 0; (function pas(){ if (k < ruta.length) { linia.addLatLng(ruta[k++]); setTimeout(pas, 500); } })(); }
+
+    document.querySelectorAll('.mapa-filtre').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var f = btn.classList.contains('actiu') ? 'tots' : btn.getAttribute('data-f');
+        document.querySelectorAll('.mapa-filtre').forEach(function(b){
+          var on = b.getAttribute('data-f') === f;
+          b.classList.toggle('actiu', on);
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        var vis = [];
+        d.forEach(function(r, i){
+          var show = f === 'tots' || (f === 'gastronia' ? !!r.s : r.any === f);
+          if (show) { if (!map.hasLayer(mk[i])) map.addLayer(mk[i]); vis.push(r); }
+          else if (map.hasLayer(mk[i])) map.removeLayer(mk[i]);
+        });
+        fitxes(vis);
+      });
     });
   }
 
-  function activaRestaurant(idx,scroll){
-    if(activeIdx!==null && activeIdx!==idx) desactivaRestaurant(activeIdx);
-    activeIdx=idx;
-    var r=d[idx];
-    mk[idx].setIcon(iconActiu(r.c,r.s));
-    var t=document.getElementById("targeta-"+idx);
-    if(t){ t.style.background=r.c===""+g?"#fff8f0":"#f0f4f8"; }
-    if(scroll && t){ document.getElementById("mapa-targetes").scrollTo({top:t.offsetTop,behavior:"smooth"}); }
+  function carrega(){
+    if (window.L) { init(); return; }
+    var s = document.createElement('script');
+    s.src = '../assets/js/leaflet.js?v=1.9.4';
+    s.onload = init;
+    document.body.appendChild(s);
   }
-
-  function desactivaRestaurant(idx){
-    var r=d[idx];
-    mk[idx].setIcon(icon(r.c,r.s));
-    var t=document.getElementById("targeta-"+idx);
-    if(t){ t.style.background=""; }
-    activeIdx=null;
-  }
-
-  // Animacio ruta
-  var rutaCoords=d.filter(function(r){return r.any==="2026";}).map(function(r){return [r.lat,r.lng];});
-  var rutaLine=L.polyline([],{color:"#b8924a",weight:2,opacity:.6,dashArray:"6,8"}).addTo(map);
-  var rutaIdx=0;
-  function animaRuta(){
-    if(rutaIdx<rutaCoords.length){
-      rutaLine.addLatLng(rutaCoords[rutaIdx]);
-      rutaIdx++;
-      setTimeout(animaRuta,600);
-    }
-  }
-  setTimeout(animaRuta,800);
-
-  // Crear markers
-  d.forEach(function(r,i){
-    var telHtml=r.tel?"<a href='tel:+34"+r.tel.replace(/ /g,"")+"' style='display:block;font-size:.75rem;color:"+r.c+";margin-top:5px;text-decoration:none;'>&#128222; "+r.tel+"</a>":"";
-    var webHtml=r.web?"<a href='"+r.web+"' target='_blank' rel='noopener' style='display:block;font-size:.72rem;color:"+r.c+";margin-top:3px;text-decoration:none;'>&#127758; Web</a>":"";
-    var imgHtml=r.img?"<img loading='lazy' decoding='async' src='"+r.img+"' alt='"+r.nom+"' style='width:100%;height:90px;object-fit:cover;display:block;margin-bottom:8px;' onerror='gdtImgErr(this)'>":"";
-    var pop="<div style='min-width:190px;'>"+imgHtml
-      +"<div style='padding:2px 0 4px;'>"
-      +"<div style='font-size:.55rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:"+r.c+";margin-bottom:4px;'>"+r.any+" &middot; "+r.lloc+"</div>"
-      +"<div style='font-size:1.05rem;font-weight:700;color:#0b1626;margin-bottom:3px;'>"+r.nom+(r.s?" &#9733;":"")+"</div>"
-      +"<div style='font-size:.75rem;color:#666;'>"+r.adr+"</div>"
-      +telHtml+webHtml+"</div></div>";
-    var m=L.marker([r.lat,r.lng],{icon:icon(r.c,r.s),title:r.nom+" · "+r.lloc,alt:r.nom,keyboard:true}).addTo(map).bindPopup(pop,{maxWidth:220});
-    m.on("mouseover",function(){ activaRestaurant(i,true); });
-    m.on("mouseout",function(){ if(!m.isPopupOpen()) desactivaRestaurant(i); });
-    m.on("popupopen",function(){ activaRestaurant(i,true); });
-    m.on("popupclose",function(){ desactivaRestaurant(i); });
-    mk.push(m);
-  });
-
-  buildTargetes(d);
-
-  window.filtraMapa=function(f,btn){
-    var jaActiu=btn.classList.contains("actiu");
-    document.querySelectorAll(".mapa-filtre").forEach(function(b){b.classList.remove("actiu");});
-    if(!jaActiu){
-      btn.classList.add("actiu");
-    } else {
-      document.querySelector(".mapa-filtre[data-f='tots']").classList.add("actiu");
-      f="tots";
-    }
-    var visibles=[];
-    d.forEach(function(r,i){
-      var show=(f==="tots")||(f==="2026"&&r.any==="2026")||(f==="2025"&&r.any==="2025")||(f==="gastronia"&&r.s);
-      show?(!map.hasLayer(mk[i])&&map.addLayer(mk[i])):(map.hasLayer(mk[i])&&map.removeLayer(mk[i]));
-      if(show) visibles.push(r);
-    });
-    buildTargetes(visibles);
-  };
-
-  // Responsive
-  if(window.innerWidth<768){
-    document.getElementById("mapa-layout").style.gridTemplateColumns="1fr";
-    document.getElementById("mapa-targetes").style.height="300px";
-    document.getElementById("gdt-mapa").style.height="360px";
-  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      if (entries[0].isIntersecting) { io.disconnect(); carrega(); }
+    }, {rootMargin:'600px 0px'});
+    io.observe(sec);
+  } else { carrega(); }
 })();
 </script>
-
 
 <!-- HISTORIAL -->
 <section class="sec sec-gray" id="historic">
   <div class="sec-inner">
-    <div style="margin-bottom:48px;">
-      <p class="t slabel"  data-es="Historial" data-ca="Historial">Historial</p>
-      <h2 class="t stitle"  data-es="Temporadas anteriores" data-ca="Temporades anteriors">Temporadas anteriores</h2>
+    <div class="reveal" style="margin-bottom:44px;">
+      <p class="t slabel" data-es="Historial" data-ca="Historial">Historial</p>
+      <h2 class="t stitle" data-es="Temporadas anteriores" data-ca="Temporades anteriors">Temporadas anteriores</h2>
       <div class="sdiv"></div>
-      <p class="t" style="font-size:.9rem;color:var(--muted);font-weight:300;line-height:1.8;max-width:580px;"  data-es="Registro de todas las visitas realizadas desde la fundación de la asociación. Documentación en proceso de recuperación." data-ca="Registre de totes les visites fetes des de la fundació de l'associació. Documentació en procés de recuperació.">Registro de todas las visitas realizadas desde la fundación de la asociación. Documentación en proceso de recuperación.</p>
     </div>
 
-    <!-- 2024 -->
-    <div class="historic-bloc">
+    <!-- 2025 -->
+    <div class="historic-bloc reveal">
       <div class="historic-any">
-        <span class="historic-any-num">2024</span>
+        <span class="historic-any-num">2025</span>
         <div class="historic-any-line"></div>
-        <span class="historic-wip"><i class="fa fa-clock"></i> <span class="t"  data-es="En proceso de recuperación" data-ca="En procés de recuperació">En proceso de recuperación</span></span>
+        <a class="historic-link t" href="../entrades/gala-premis-2025.html" data-es="Crónica de la gala →" data-ca="Crònica de la gala →">Crónica de la gala →</a>
       </div>
-      <table class="historic-taula">
-        <tr><td>—</td><td class="t" style="color:var(--muted);font-style:italic;" colspan="2"  data-es="En proceso de recuperación" data-ca="En procés de recuperació">En proceso de recuperación</td></tr>
-      </table>
+      <div class="h25">
+        <div class="h25-premis">
+          <p class="h25-label"><i class="fa fa-trophy" aria-hidden="true"></i><span class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</span></p>
+          <p class="h25-nom">Buidasacs <span>Reus</span></p>
+          <p class="h25-nom">Cambium <span>Cambrils</span></p>
+          <div class="h25-sep"></div>
+          <p class="h25-label"><i class="fa fa-wine-glass-alt" aria-hidden="true"></i><span class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</span></p>
+          <p class="h25-nom">Cirerets <span>Mas Alta · Priorat</span></p>
+        </div>
+        <div class="h25-dreta">
+          <p class="h25-titol t" data-es="También en el recorrido" data-ca="També al recorregut">También en el recorrido</p>
+          <ul class="h25-llista">
+            <li><span class="h25-l-nom">Ànima</span><span class="h25-l-lloc">Tarragona</span></li>
+            <li><span class="h25-l-nom">Baramar</span><span class="h25-l-lloc">Roda de Berà</span></li>
+            <li><span class="h25-l-nom">Casapepe</span><span class="h25-l-lloc">Tarragona</span></li>
+            <li><span class="h25-l-nom">Ca l'Amadeu</span><span class="h25-l-lloc">Vilanova d'Escornalbou</span></li>
+            <li><span class="h25-l-nom">El Racó de Nico</span><span class="h25-l-lloc">Salou</span></li>
+            <li><span class="h25-l-nom">Limboo</span><span class="h25-l-lloc">Tarragona</span></li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <!-- 2023 -->
-    <div class="historic-bloc">
-      <div class="historic-any">
-        <span class="historic-any-num">2023</span>
-        <div class="historic-any-line"></div>
-        <span class="historic-wip"><i class="fa fa-clock"></i> <span class="t"  data-es="En proceso de recuperación" data-ca="En procés de recuperació">En proceso de recuperación</span></span>
-      </div>
-      <table class="historic-taula">
-        <tr><td>—</td><td class="t" style="color:var(--muted);font-style:italic;" colspan="2"  data-es="En proceso de recuperación" data-ca="En procés de recuperació">En proceso de recuperación</td></tr>
-      </table>
-    </div>
-
-    <!-- 2022 -->
-    <div class="historic-bloc">
-      <div class="historic-any">
-        <span class="historic-any-num">2022</span>
-        <div class="historic-any-line"></div>
-        <span class="historic-wip"><i class="fa fa-clock"></i> <span class="t"  data-es="En proceso de recuperación" data-ca="En procés de recuperació">En proceso de recuperación</span></span>
-      </div>
-      <table class="historic-taula">
-        <tr><td>—</td><td class="t" style="color:var(--muted);font-style:italic;" colspan="2"  data-es="En proceso de recuperación" data-ca="En procés de recuperació">En proceso de recuperación</td></tr>
-      </table>
+    <!-- Arxiu 1998–2024: quan es recuperi una temporada, afegeix un bloc com el de 2025 -->
+    <div class="historic-arxiu reveal">
+      <span class="historic-arxiu-any">1998 — 2024</span>
+      <p class="t" data-es="Estamos recuperando el archivo de las temporadas anteriores. ¿Guardas menús, fotos o crónicas de alguna cena? &lt;a href=&quot;mailto:gourmetsdetarragona@gourmetsdetarragona.com?subject=Archivo%20hist%C3%B3rico&quot;&gt;Escríbenos&lt;/a&gt; y lo añadiremos." data-ca="Estem recuperant l'arxiu de les temporades anteriors. Guardes menús, fotos o cròniques d'algun sopar? &lt;a href=&quot;mailto:gourmetsdetarragona@gourmetsdetarragona.com?subject=Arxiu%20hist%C3%B2ric&quot;&gt;Escriu-nos&lt;/a&gt; i ho afegirem.">Estamos recuperando el archivo de las temporadas anteriores. ¿Guardas menús, fotos o crónicas de alguna cena? <a href="mailto:gourmetsdetarragona@gourmetsdetarragona.com?subject=Archivo%20hist%C3%B3rico">Escríbenos</a> y lo añadiremos.</p>
     </div>
 
   </div>
@@ -834,5 +868,6 @@ function gdtImgErr(el){el.style.display='none';if(el.parentNode)el.parentNode.st
   </div>
 </footer>
 
+<script src="../assets/js/main.js?v=20261007"></script>
 </body>
 </html>
