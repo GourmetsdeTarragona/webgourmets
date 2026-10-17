@@ -12,8 +12,8 @@
 
 
 <!-- ═══════ SEO BÀSIC ═══════ -->
-<title>Esdeveniments · Gourmets de Tarragona — Agenda 2026</title>
-<meta name="description" content="L'agenda dels Gourmets de Tarragona: tast de vins DO Tarragona, sopar d'estiu i sopar de Nadal 2026 amb el lliurament del Trofeu Gastronia i el Premi Bacus.">
+<title>Eventos · Gourmets de Tarragona — Agenda 2026</title>
+<meta name="description" content="La agenda de Gourmets de Tarragona: las ocho cenas del recorrido 2026, la Cena de Verano, la cata DO Tarragona, la Cena de Navidad y la gala de premios de febrero de 2027.">
 <meta name="keywords" content="esdeveniments gourmets tarragona, agenda gourmets, tast vins do tarragona, sopar estiu, sopar nadal, gala premis gastronia bacus">
 <meta name="author" content="Gourmets de Tarragona">
 <meta name="robots" content="index, follow">
@@ -22,20 +22,20 @@
 <!-- ═══════ OPEN GRAPH ═══════ -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.gourmetsdetarragona.com/pages/esdeveniments.html">
-<meta property="og:title" content="Esdeveniments · Gourmets de Tarragona — Agenda 2026">
-<meta property="og:description" content="Tast de vins DO Tarragona, sopar d'estiu i sopar de Nadal 2026 amb el lliurament dels premis Gastronia i Bacus.">
+<meta property="og:title" content="Eventos · Gourmets de Tarragona — Agenda 2026">
+<meta property="og:description" content="Las cenas del recorrido, las catas y las celebraciones de la temporada 2026.">
 <meta property="og:image" content="https://www.gourmetsdetarragona.com/assets/img/og-gourmets.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Esdeveniments dels Gourmets de Tarragona">
+<meta property="og:image:alt" content="Eventos de Gourmets de Tarragona">
 <meta property="og:site_name" content="Gourmets de Tarragona">
-<meta property="og:locale" content="ca_ES">
-<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="ca_ES">
 
 <!-- ═══════ TWITTER CARD ═══════ -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Esdeveniments · Gourmets de Tarragona — Agenda 2026">
-<meta name="twitter:description" content="Tast de vins, sopar d'estiu i sopar de Nadal 2026.">
+<meta name="twitter:title" content="Eventos · Gourmets de Tarragona — Agenda 2026">
+<meta name="twitter:description" content="Las cenas del recorrido, las catas y las celebraciones de la temporada 2026.">
 <meta name="twitter:image" content="https://www.gourmetsdetarragona.com/assets/img/og-gourmets.jpg">
 
 <!-- ═══════ STRUCTURED DATA — CollectionPage ═══════ -->
@@ -43,7 +43,7 @@
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "Esdeveniments — Gourmets de Tarragona",
+  "name": "Eventos — Gourmets de Tarragona",
   "url": "https://www.gourmetsdetarragona.com/pages/esdeveniments.html",
   "inLanguage": ["ca", "es"],
   "isPartOf": {
@@ -61,37 +61,109 @@
 <link rel="preload" href="../assets/fonts/playfair-display-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/fonts.css?v=20261010">
+<link rel="preload" as="image" href="../assets/img/pages/eventos-hero.webp" type="image/webp" media="(min-width: 681px)" fetchpriority="high">
+<link rel="preload" as="image" href="../assets/img/pages/eventos-hero-mobile.webp" type="image/webp" media="(max-width: 680px)" fetchpriority="high">
 <link rel="stylesheet" href="../assets/css/icons.css?v=20261010">
 <link rel="stylesheet" href="../assets/css/variables.css?v=20261006">
 <link rel="stylesheet" href="../assets/css/nav.css?v=20261017">
 <link rel="stylesheet" href="../assets/css/seccions.css?v=20261006">
 <style>
-.page-hero{position:relative;min-height:52vh;display:flex;align-items:flex-end;overflow:hidden;padding:0;background:#0b1626;}
-.page-hero-bg{position:absolute;inset:0;background-image:url('../assets/img/gala2025/sala-gala.jpg');background-size:cover;background-position:center 40%;opacity:.65;filter:brightness(1.08) contrast(1.05);transform:scale(1.02);transition:transform 8s ease;}
-.page-hero:hover .page-hero-bg{transform:scale(1);}
-.page-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,38,.92) 0%,rgba(11,22,38,.38) 50%,rgba(11,22,38,.05) 100%);}
-.page-hero-inner{position:relative;z-index:2;max-width:640px;margin:0 auto;padding:0 5% 64px;width:100%;text-align:center;}
-.page-hero .slabel{color:var(--gold);justify-content:center;display:flex;}
-.page-hero .stitle{color:#fff;font-size:clamp(2rem,4vw,3rem);margin-top:10px;}
-.page-hero-desc{font-size:.95rem;color:rgba(255,255,255,.65);font-weight:300;line-height:1.8;margin-top:10px;}
+/* ── HERO (mateix sistema que la resta de pàgines) ── */
+@keyframes evSettle{from{transform:scale(1.08);}to{transform:scale(1);}}
+@keyframes clipReveal{from{clip-path:inset(0 0 100% 0);}to{clip-path:inset(0 0 0% 0);}}
+.page-hero{position:relative;min-height:60vh;display:flex;align-items:flex-end;overflow:hidden;padding:120px 0 0;background:#0b1626;}
+.page-hero-bg{position:absolute;inset:0;background-image:url('../assets/img/pages/eventos-hero.webp');background-size:cover;background-position:center 40%;opacity:.68;filter:brightness(1.05) contrast(1.05);animation:evSettle 2.8s var(--ease-out) both;}
+.page-hero-grad{position:absolute;inset:0;background:linear-gradient(to right,rgba(11,22,38,.65) 0%,rgba(11,22,38,.25) 55%,transparent 80%),linear-gradient(to top,rgba(11,22,38,.95) 0%,rgba(11,22,38,.55) 50%,rgba(11,22,38,.3) 100%);}
+.page-hero-line{position:absolute;left:4%;top:22%;bottom:15%;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.4),transparent);animation:clipReveal 1.2s var(--ease-out) .4s both;}
+.page-hero-inner{position:relative;z-index:2;max-width:860px;margin:0 auto;padding:0 5% 72px;width:100%;}
+.page-hero .slabel{color:var(--gold);letter-spacing:.24em;animation:fadeUp .7s var(--ease-out) .1s both;}
+.page-hero .stitle{color:#fff;font-size:clamp(2.3rem,5vw,3.8rem);line-height:1.08;margin-top:16px;animation:fadeUp .8s var(--ease-out) .22s both;}
+.page-hero .stitle em{font-style:italic;color:rgba(212,169,106,.9);font-weight:400;}
+.page-hero-desc{font-size:1.08rem;color:rgba(255,255,255,.88);font-weight:400;line-height:1.75;margin-top:20px;max-width:540px;animation:fadeUp .8s var(--ease-out) .36s both;}
+@media(prefers-reduced-motion:reduce){.page-hero-bg,.page-hero-line,.page-hero .slabel,.page-hero .stitle,.page-hero-desc,.propera-punt{animation:none;}}
+.stitle em{font-style:italic;font-weight:400;color:var(--gold-text,var(--gold));}
 
-.ev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
-.ev-card{background:#fff;border:1px solid var(--border);overflow:hidden;transition:transform .3s,box-shadow .3s;}
-.ev-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
-.ev-card-img{height:220px;overflow:hidden;position:relative;background:var(--cream);}
-.ev-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
-.ev-card:hover .ev-card-img img{transform:scale(1.05);}
-.ev-badge{position:absolute;top:14px;left:14px;font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:var(--navy);color:#fff;padding:5px 12px;}
-.ev-body{padding:28px 24px;}
-.ev-date{font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
-.ev-title{font-family:var(--font-serif);font-size:1.25rem;color:var(--navy-dark);margin-bottom:10px;line-height:1.3;}
-.ev-desc{font-size:.88rem;color:var(--muted);line-height:1.75;font-weight:300;margin-bottom:16px;}
-.ev-foot{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--muted);padding-top:16px;border-top:1px solid var(--border);}
-.ev-foot i{color:var(--gold);font-size:.8rem;}
-.ev-nota{text-align:center;margin-top:48px;font-size:.88rem;color:var(--muted);font-style:italic;line-height:1.8;}
+/* ── PROPERA CITA ── */
+.propera{background:var(--navy-dark);color:#fff;padding:34px 0;}
+.propera-inner{display:grid;grid-template-columns:auto 1fr auto;gap:36px;align-items:center;}
+.propera-etiqueta{display:flex;align-items:center;gap:10px;font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#d4a96a;white-space:nowrap;}
+@keyframes evPols{0%,100%{box-shadow:0 0 0 0 rgba(212,169,106,.55);}50%{box-shadow:0 0 0 7px rgba(212,169,106,0);}}
+.propera-punt{width:9px;height:9px;border-radius:50%;background:#d4a96a;animation:evPols 2.2s ease-in-out infinite;}
+.propera-cos h2{font-family:var(--font-serif);font-size:1.5rem;font-weight:700;line-height:1.2;margin:0 0 6px;}
+.propera-cos h2 em{font-style:italic;font-weight:400;color:rgba(212,169,106,.9);}
+.propera-cos p{font-size:.9rem;font-weight:300;color:rgba(255,255,255,.72);line-height:1.6;margin:0;max-width:560px;}
+.propera-accio{display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+.propera-data{font-family:var(--font-serif);font-style:italic;font-size:1.1rem;color:rgba(255,255,255,.85);white-space:nowrap;}
+.propera-btn{display:inline-block;background:var(--gold);color:var(--navy-dark);font-size:.64rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:11px 20px;white-space:nowrap;transition:background .2s;}
+.propera-btn:hover{background:#fff;}
 
-@media(max-width:1024px){.ev-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:640px){.ev-grid{grid-template-columns:1fr;}.page-hero-inner{padding:0 5% 44px;}}
+/* ── CALENDARI ── */
+#calendari,#cates{scroll-margin-top:90px;}
+.cal-llegenda{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:18px;font-size:.72rem;color:var(--muted);}
+.cal-llegenda > span{display:inline-flex;align-items:center;gap:8px;}
+.cal-tag{display:inline-block;width:10px;height:10px;border-radius:50%;}
+.cal-visita{background:var(--navy);}
+.cal-especial{background:var(--gold);}
+.cal-gala{background:#6b2737;}
+.cal{list-style:none;margin:0;padding:0;position:relative;}
+.cal::before{content:'';position:absolute;left:150px;top:8px;bottom:8px;width:1px;background:var(--border);}
+.cal li{display:grid;grid-template-columns:130px 1fr auto;gap:40px;align-items:center;padding:16px 0;position:relative;}
+.cal li::before{content:'';position:absolute;left:145px;top:50%;width:11px;height:11px;margin-top:-6px;border-radius:50%;background:var(--navy);box-shadow:0 0 0 4px #fff;}
+.cal li.especial::before{background:var(--gold);}
+.cal li.gala::before{background:#6b2737;}
+.cal li + li{border-top:1px solid #f1ebe0;}
+.cal-data{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);text-align:right;}
+.cal-cos{padding-left:4px;}
+.cal-tipus{display:block;font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text,var(--gold));margin-bottom:3px;}
+.cal-cos h3{font-family:var(--font-serif);font-size:1.12rem;font-weight:700;color:var(--navy-dark);margin:0;line-height:1.3;}
+.cal-cos h3 span{font-family:var(--font-body);font-size:.76rem;font-weight:400;color:var(--muted);margin-left:8px;}
+.cal-link{font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:2px;white-space:nowrap;}
+a.cal-link:hover{color:var(--gold);}
+.cal-proxim{border-bottom:none;color:var(--gold-text,var(--gold));font-style:italic;letter-spacing:.06em;text-transform:none;font-size:.78rem;font-weight:400;}
+/* fets: més discrets; els que vénen: destacats */
+.cal li.fet .cal-data,.cal li.fet .cal-cos h3{opacity:.62;}
+.cal li.fet:hover .cal-data,.cal li.fet:hover .cal-cos h3{opacity:1;}
+.cal li.ve{background:linear-gradient(to right,transparent 0,transparent 160px,rgba(184,146,74,.06) 160px);}
+.cal li.ve::before{box-shadow:0 0 0 4px #fff,0 0 0 6px rgba(184,146,74,.35);}
+
+/* ── CITES ESPECIALS ── */
+.especials-sec{background:var(--cream);}
+.especials{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.esp{background:#fff;border:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;}
+.esp-foto{position:relative;aspect-ratio:4/3;overflow:hidden;background:#efe9df;}
+.esp-foto img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out);}
+.esp:hover .esp-foto img{transform:scale(1.05);}
+.esp-foto-text{background:linear-gradient(135deg,#0b1626,#1b3358);display:flex;align-items:center;justify-content:center;}
+.esp-mes{font-family:var(--font-serif);font-style:italic;font-size:2.2rem;color:rgba(212,169,106,.75);}
+.esp-badge{position:absolute;top:12px;left:12px;font-size:.56rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--navy);color:#fff;padding:5px 10px;}
+.esp-badge-ve{background:var(--gold);color:var(--navy-dark);}
+.esp-cos{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1;}
+.esp-data{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text,var(--gold));margin-bottom:8px;}
+.esp-cos h3{font-family:var(--font-serif);font-size:1.18rem;font-weight:700;color:var(--navy-dark);margin:0 0 10px;line-height:1.25;}
+.esp-cos p.t:not(.esp-data){font-size:.86rem;font-weight:300;color:var(--muted);line-height:1.7;margin:0 0 16px;flex:1;}
+.esp-link{align-self:flex-start;font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:2px;}
+.esp-link:hover{color:var(--gold);}
+.esp-nota{font-size:.86rem;color:var(--muted);text-align:center;margin-top:36px;line-height:1.7;}
+.esp-nota a{color:var(--navy);font-weight:700;border-bottom:1px solid var(--gold);}
+
+@media(max-width:1100px){.especials{grid-template-columns:1fr 1fr;}}
+@media(max-width:860px){
+  .propera-inner{grid-template-columns:1fr;gap:14px;}
+  .propera-accio{flex-direction:row;align-items:center;justify-content:space-between;}
+}
+@media(max-width:680px){
+  .page-hero{min-height:74vh;}
+  .page-hero-inner{padding-bottom:48px;}
+  .page-hero-bg{background-image:url('../assets/img/pages/eventos-hero-mobile.webp');background-position:center;}
+  .page-hero-line{display:none;}
+  .cal::before{left:6px;}
+  .cal li{grid-template-columns:1fr auto;gap:4px 14px;padding:14px 0 14px 28px;}
+  .cal li::before{left:1px;top:22px;margin-top:0;}
+  .cal-data{grid-column:1/-1;text-align:left;font-size:.64rem;}
+  .cal-cos h3 span{display:block;margin-left:0;}
+  .cal li.ve{background:none;}
+  .especials{grid-template-columns:1fr;}
+}
 </style>
 
 <script>
@@ -106,25 +178,6 @@ const t = {
     footer_nav:'Navegación',footer_legal:'Legal',footer_contacte:'Contacto',
     footer_avis:'Aviso Legal',footer_privacitat:'Política de Privacidad',footer_cookies:'Política de Cookies',
     footer_copy:'© 2026 Gourmets de Tarragona · Todos los derechos reservados',
-    ev_label:'Agenda 2026',
-    ev_title:'Próximos Eventos',
-    ev_desc:'Los encuentros anuales de la asociación: cata de vinos, cena de verano y cena de Navidad.',
-    ev1_badge:'Cata',
-    ev1_date:'Fecha por determinar',
-    ev1_title:'Cata de Vinos DO Tarragona',
-    ev1_desc:'Una noche de descubrimiento a través de los mejores vinos de la DO Tarragona. Fecha y lugar por confirmar.',
-    ev1_loc:'Camp de Tarragona',
-    ev2_badge:'Crónica',
-    ev2_date:'31 de julio de 2026',
-    ev2_title:'Cena de Verano 2026',
-    ev2_desc:'52 comensales en el Club Nàutic de Salou. Cóctel en la terraza frente al mar, cena en el salón y pista de baile. La temporada 2026 cerró su primera mitad con una noche memorable.',
-    ev2_loc:'Club Nàutic de Salou',
-    ev3_badge:'Gala',
-    ev3_date:'diciembre de 2026',
-    ev3_title:'Cena de Navidad 2026',
-    ev3_desc:'Cena de cierre de la temporada 2026. La entrega del Trofeo Gastronia y el Premio Bacus se celebrará en febrero de 2027.',
-    ev3_loc:'Por determinar',
-    ev_nota:'La información de fechas y lugares se actualizará a medida que se confirme. Síguenos en Instagram para estar al día.',
   },
   ca:{
     nav_inicio:'Inici',nav_asoc:"L'Associació",nav_rest:'Restaurants',
@@ -136,25 +189,6 @@ const t = {
     footer_nav:'Navegació',footer_legal:'Legal',footer_contacte:'Contacte',
     footer_avis:'Avís Legal',footer_privacitat:'Política de Privacitat',footer_cookies:'Política de Cookies',
     footer_copy:'© 2026 Gourmets de Tarragona · Tots els drets reservats',
-    ev_label:'Agenda 2026',
-    ev_title:'Propers Esdeveniments',
-    ev_desc:"Les trobades anuals de l'associació: tast de vins, sopar d'estiu i sopar de Nadal.",
-    ev1_badge:'Tast',
-    ev1_date:'Data per determinar',
-    ev1_title:'Tast de Vins DO Tarragona',
-    ev1_desc:"Una nit de descoberta a través dels millors vins de la DO Tarragona. Data i lloc per confirmar.",
-    ev1_loc:'Camp de Tarragona',
-    ev2_badge:'Crònica',
-    ev2_date:'31 de juliol de 2026',
-    ev2_title:"Sopar d'Estiu 2026",
-    ev2_desc:"52 comensals al Club Nàutic de Salou. Còctel a la terrassa davant del mar, sopar al saló i pista de ball. La temporada 2026 va tancar la primera meitat amb una nit memorable.",
-    ev2_loc:'Club Nàutic de Salou',
-    ev3_badge:'Gala',
-    ev3_date:'desembre de 2026',
-    ev3_title:'Sopar de Nadal 2026',
-    ev3_desc:"Sopar de tancament de la temporada 2026. El lliurament del Trofeu Gastronia i el Premi Bacus es celebrarà el febrer de 2027.",
-    ev3_loc:'Per determinar',
-    ev_nota:"La informació de dates i llocs s'actualitzarà a mesura que es confirmi. Segueix-nos a Instagram per estar al dia.",
   }
 };
 let currentLang = (function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ca'||p==='es'){localStorage.setItem('gdt-lang',p);return p;}return localStorage.getItem('gdt-lang')||((navigator.language||'es').toLowerCase().indexOf('ca')===0?'ca':'es');}catch(e){return 'es';}})();
@@ -287,79 +321,166 @@ function setLang(lang) {
 
 <!-- HERO -->
 <div class="page-hero">
-  <div class="page-hero-bg"></div>
+  <div class="page-hero-bg" role="img" aria-label="Cóctel en la terraza del Club Nàutic de Salou durante la Cena de Verano 2026"></div>
   <div class="page-hero-grad"></div>
+  <div class="page-hero-line"></div>
   <div class="page-hero-inner">
-    <p class="slabel" data-i18n="ev_label">Agenda 2026</p>
-    <h1 class="stitle" data-i18n="ev_title">Próximos Eventos</h1>
-    <p class="page-hero-desc" data-i18n="ev_desc">Los encuentros anuales de la asociación: cata de vinos, cena de verano y cena de Navidad.</p>
+    <p class="slabel t" data-es="Agenda 2026" data-ca="Agenda 2026">Agenda 2026</p>
+    <h1 class="stitle t" data-es="La temporada, <em>cita a cita</em>" data-ca="La temporada, <em>cita a cita</em>">La temporada, <em>cita a cita</em></h1>
+    <p class="page-hero-desc t" data-es="Las cenas del recorrido, las catas y las celebraciones de la asociación: lo que ya hemos vivido y lo que viene." data-ca="Els sopars del recorregut, els tasts i les celebracions de l'associació: el que ja hem viscut i el que ve.">Las cenas del recorrido, las catas y las celebraciones de la asociación: lo que ya hemos vivido y lo que viene.</p>
   </div>
 </div>
 
-<!-- EVENTS -->
-<section class="sec">
+<!-- PROPERA CITA — quan es confirmi, canvia el títol, la data i el text -->
+<section class="propera">
+  <div class="sec-inner propera-inner reveal">
+    <div class="propera-etiqueta">
+      <span class="propera-punt" aria-hidden="true"></span>
+      <span class="t" data-es="Próxima cita" data-ca="Propera cita">Próxima cita</span>
+    </div>
+    <div class="propera-cos">
+      <h2 class="t" data-es="Visita 8 · <em>cierre del recorrido</em>" data-ca="Visita 8 · <em>tancament del recorregut</em>">Visita 8 · <em>cierre del recorrido</em></h2>
+      <p class="t" data-es="La Junta está cerrando la fecha y el restaurante de la última cena de la temporada. Lo anunciamos primero en la newsletter." data-ca="La Junta està tancant la data i el restaurant de l'últim sopar de la temporada. L'anunciem primer a la newsletter.">La Junta está cerrando la fecha y el restaurante de la última cena de la temporada. Lo anunciamos primero en la newsletter.</p>
+    </div>
+    <div class="propera-accio">
+      <span class="propera-data t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span>
+      <a class="propera-btn t" href="newsletter.html" data-es="Avísame →" data-ca="Avisa'm →">Avísame →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDARI 2026 -->
+<section class="sec" id="calendari">
   <div class="sec-inner">
-    <div class="ev-grid">
-
-      <!-- Cata de Vins -->
-      <div class="ev-card">
-        <div class="ev-card-img">
-          <img loading="lazy" decoding="async" src="../assets/img/brumma/cronica/vinos.jpg" alt="Tast de vins"
-               onerror="this.parentElement.style.background='var(--cream)'">
-          <span class="ev-badge" data-i18n="ev1_badge">Cata</span>
-        </div>
-        <div class="ev-body">
-          <p class="ev-date" data-i18n="ev1_date">Fecha por determinar</p>
-          <h2 class="ev-title" data-i18n="ev1_title">Cata de Vinos DO Tarragona</h2>
-          <p class="ev-desc" data-i18n="ev1_desc">Una noche de descubrimiento a través de los mejores vinos de la DO Tarragona. Fecha y lugar por confirmar.</p>
-          <div class="ev-foot">
-            <i class="fa fa-map-marker-alt"></i>
-            <span data-i18n="ev1_loc">Camp de Tarragona</span>
-          </div>
-        </div>
+    <div class="reveal" style="margin-bottom:40px;">
+      <p class="slabel t" data-es="Calendario" data-ca="Calendari">Calendario</p>
+      <h2 class="stitle t" data-es="Temporada 2026, <em>de principio a fin</em>" data-ca="Temporada 2026, <em>de principi a fi</em>">Temporada 2026, <em>de principio a fin</em></h2>
+      <div class="sdiv"></div>
+      <div class="cal-llegenda">
+        <span><i class="cal-tag cal-visita"></i><span class="t" data-es="Visita del recorrido" data-ca="Visita del recorregut">Visita del recorrido</span></span>
+        <span><i class="cal-tag cal-especial"></i><span class="t" data-es="Cena especial o cata" data-ca="Sopar especial o tast">Cena especial o cata</span></span>
+        <span><i class="cal-tag cal-gala"></i><span class="t" data-es="Gala de premios" data-ca="Gala de premis">Gala de premios</span></span>
       </div>
+    </div>
 
-      <!-- Sopar d'Estiu -->
-      <div class="ev-card">
-        <a href="../entrades/sopar-estiu-2026.html" class="ev-card-img" style="display:block;text-decoration:none;">
-          <img loading="lazy" decoding="async" src="../assets/img/nautic/p204059.jpg" alt="Sopar d'Estiu 2026 · Club Nàutic de Salou"
-               style="object-position:center top;"
-               onerror="this.parentElement.style.background='var(--cream)'">
-          <span class="ev-badge" data-i18n="ev2_badge">Crónica</span>
-        </a>
-        <div class="ev-body">
-          <p class="ev-date" data-i18n="ev2_date">31 de julio de 2026</p>
-          <h2 class="ev-title" data-i18n="ev2_title">Cena de Verano 2026</h2>
-          <p class="ev-desc" data-i18n="ev2_desc">52 comensales en el Club Nàutic de Salou. Cóctel en la terraza frente al mar, cena en el salón y pista de baile. La temporada 2026 cerró su primera mitad con una noche memorable.</p>
-          <div class="ev-foot">
-            <i class="fa fa-map-marker-alt"></i>
-            <span data-i18n="ev2_loc">Club Nàutic de Salou</span>
-          </div>
-          <a href="../entrades/sopar-estiu-2026.html" class="btn-outline t" style="display:inline-block;margin-top:16px;font-size:.85rem;"
-             data-es="Leer la crónica →" data-ca="Llegir la crònica →">Leer la crónica →</a>
-        </div>
-      </div>
+    <!-- Per actualitzar: canvia la classe «fet» / «ve» i afegeix l'enllaç a la crònica quan n'hi hagi -->
+    <ol class="cal reveal">
+      <li class="fet visita">
+        <span class="cal-data t" data-es="Marzo" data-ca="Març">Marzo</span>
+        <div class="cal-cos"><span class="cal-tipus t" data-es="Visita 1" data-ca="Visita 1">Visita 1</span><h3>Kema <span>Cambrils</span></h3></div>
+        <a class="cal-link t" href="../entrades/kema-cronica-2026.html" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
+      </li>
+      <li class="fet visita">
+        <span class="cal-data t" data-es="9 abril" data-ca="9 abril">9 abril</span>
+        <div class="cal-cos"><span class="cal-tipus t" data-es="Visita 2" data-ca="Visita 2">Visita 2</span><h3>La Goleta <span>Salou</span></h3></div>
+        <a class="cal-link t" href="../entrades/la-goleta-cronica-2026.html" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
+      </li>
+      <li class="fet visita">
+        <span class="cal-data t" data-es="7 mayo" data-ca="7 maig">7 mayo</span>
+        <div class="cal-cos"><span class="cal-tipus t" data-es="Visita 3" data-ca="Visita 3">Visita 3</span><h3>El Terrat <span>Tarragona</span></h3></div>
+        <a class="cal-link t" href="../entrades/terrat-cronica-2026.html" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
+      </li>
+      <li class="fet visita">
+        <span class="cal-data t" data-es="10–11 junio" data-ca="10–11 juny">10–11 junio</span>
+        <div class="cal-cos"><span class="cal-tipus t" data-es="Visita 4" data-ca="Visita 4">Visita 4</span><h3>Cervus <span>Reus</span></h3></div>
+        <a class="cal-link t" href="../entrades/cervus-cronica-2026.html" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
+      </li>
+      <li class="fet visita">
+        <span class="cal-data t" data-es="2 julio" data-ca="2 juliol">2 julio</span>
+        <div class="cal-cos"><span class="cal-tipus t" data-es="Visita 5" data-ca="Visita 5">Visita 5</span><h3>Brumma <span>Salou</span></h3></div>
+        <a class="cal-link t" href="../entrades/brumma-cronica-2026.html" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
+      </li>
+      <li class="fet especial">
+        <span class="cal-data t" data-es="31 julio" data-ca="31 juliol">31 julio</span>
+        <div class="cal-cos"><span class="cal-tipus t" data-es="Cena especial" data-ca="Sopar especial">Cena especial</span><h3 class="t" data-es="Cena de Verano <span>Club Nàutic de Salou</span>" data-ca="Sopar d'Estiu <span>Club Nàutic de Salou</span>">Cena de Verano <span>Club Nàutic de Salou</span></h3></div>
+        <a class="cal-link t" href="../entrades/sopar-estiu-2026.html" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
+      </li>
+      <li class="fet visita">
+        <span class="cal-data t" data-es="4 septiembre" data-ca="4 setembre">4 septiembre</span>
+        <div class="cal-cos"><span class="cal-tipus t" data-es="Visita 6" data-ca="Visita 6">Visita 6</span><h3>Les Dunes <span>Riumar</span></h3></div>
+        <a class="cal-link t" href="../entrades/les-dunes-cronica-2026.html" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
+      </li>
+      <li class="fet visita">
+        <span class="cal-data t" data-es="1 octubre" data-ca="1 octubre">1 octubre</span>
+        <div class="cal-cos"><span class="cal-tipus t" data-es="Visita 7" data-ca="Visita 7">Visita 7</span><h3>El Galliner de l'Antiquari <span>Tarragona</span></h3></div>
+        <a class="cal-link t" href="../entrades/galliner-cronica-2026.html" data-es="Crónica →" data-ca="Crònica →">Crónica →</a>
+      </li>
+      <li class="ve visita">
+        <span class="cal-data t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span>
+        <div class="cal-cos"><span class="cal-tipus t" data-es="Visita 8" data-ca="Visita 8">Visita 8</span><h3 class="t" data-es="Cierre del recorrido <span>Camp de Tarragona</span>" data-ca="Tancament del recorregut <span>Camp de Tarragona</span>">Cierre del recorrido <span>Camp de Tarragona</span></h3></div>
+        <span class="cal-link cal-proxim t" data-es="Próximamente" data-ca="Properament">Próximamente</span>
+      </li>
+      <li class="ve especial" id="cates">
+        <span class="cal-data t" data-es="Por confirmar" data-ca="Per confirmar">Por confirmar</span>
+        <div class="cal-cos"><span class="cal-tipus t" data-es="Cata" data-ca="Tast">Cata</span><h3 class="t" data-es="Cata de vinos DO Tarragona <span>Camp de Tarragona</span>" data-ca="Tast de vins DO Tarragona <span>Camp de Tarragona</span>">Cata de vinos DO Tarragona <span>Camp de Tarragona</span></h3></div>
+        <span class="cal-link cal-proxim t" data-es="Próximamente" data-ca="Properament">Próximamente</span>
+      </li>
+      <li class="ve especial">
+        <span class="cal-data t" data-es="Diciembre" data-ca="Desembre">Diciembre</span>
+        <div class="cal-cos"><span class="cal-tipus t" data-es="Cena especial" data-ca="Sopar especial">Cena especial</span><h3 class="t" data-es="Cena de Navidad <span>Lugar por confirmar</span>" data-ca="Sopar de Nadal <span>Lloc per confirmar</span>">Cena de Navidad <span>Lugar por confirmar</span></h3></div>
+        <span class="cal-link cal-proxim t" data-es="Próximamente" data-ca="Properament">Próximamente</span>
+      </li>
+      <li class="ve gala">
+        <span class="cal-data t" data-es="Febrero 2027" data-ca="Febrer 2027">Febrero 2027</span>
+        <div class="cal-cos"><span class="cal-tipus t" data-es="Gala de premios" data-ca="Gala de premis">Gala de premios</span><h3 class="t" data-es="Trofeo Gastronia y Premio Bacus 2026 <span>Lugar por confirmar</span>" data-ca="Trofeu Gastronia i Premi Bacus 2026 <span>Lloc per confirmar</span>">Trofeo Gastronia y Premio Bacus 2026 <span>Lugar por confirmar</span></h3></div>
+        <a class="cal-link t" href="premis.html" data-es="Los premios →" data-ca="Els premis →">Los premios →</a>
+      </li>
+    </ol>
+  </div>
+</section>
 
-      <!-- Sopar de Nadal -->
-      <div class="ev-card">
-        <div class="ev-card-img">
-          <img loading="lazy" decoding="async" src="../assets/img/gala2025/sala-gala.jpg" alt="Sopar de Nadal"
-               onerror="this.parentElement.style.background='var(--cream)'">
-          <span class="ev-badge" data-i18n="ev3_badge">Gala</span>
+<!-- CITES ESPECIALS -->
+<section class="sec especials-sec">
+  <div class="sec-inner">
+    <div class="reveal" style="margin-bottom:40px;">
+      <p class="slabel t" data-es="Más allá del recorrido" data-ca="Més enllà del recorregut">Más allá del recorrido</p>
+      <h2 class="stitle t" data-es="Las citas <em>especiales</em>" data-ca="Les cites <em>especials</em>">Las citas <em>especiales</em></h2>
+      <div class="sdiv"></div>
+    </div>
+    <div class="especials">
+
+      <article class="esp reveal reveal-delay-1">
+        <div class="esp-foto"><img src="../assets/img/_thumbs/nautic/p204059.webp" alt="Cena de Verano 2026 en el Club Nàutic de Salou" loading="lazy" decoding="async"><span class="esp-badge t" data-es="Crónica" data-ca="Crònica">Crónica</span></div>
+        <div class="esp-cos">
+          <p class="esp-data t" data-es="31 de julio de 2026" data-ca="31 de juliol de 2026">31 de julio de 2026</p>
+          <h3 class="t" data-es="Cena de Verano 2026" data-ca="Sopar d'Estiu 2026">Cena de Verano 2026</h3>
+          <p class="t" data-es="52 comensales en el Club Nàutic de Salou: cóctel en la terraza frente al mar, cena en el salón y pista de baile." data-ca="52 comensals al Club Nàutic de Salou: còctel a la terrassa davant del mar, sopar al saló i pista de ball.">52 comensales en el Club Nàutic de Salou: cóctel en la terraza frente al mar, cena en el salón y pista de baile.</p>
+          <a class="esp-link t" href="../entrades/sopar-estiu-2026.html" data-es="Leer la crónica →" data-ca="Llegir la crònica →">Leer la crónica →</a>
         </div>
-        <div class="ev-body">
-          <p class="ev-date" data-i18n="ev3_date">diciembre de 2026</p>
-          <h2 class="ev-title" data-i18n="ev3_title">Cena de Navidad 2026</h2>
-          <p class="ev-desc" data-i18n="ev3_desc">Cena de cierre de la temporada 2026. La entrega del Trofeo Gastronia y el Premio Bacus se celebrará en febrero de 2027.</p>
-          <div class="ev-foot">
-            <i class="fa fa-map-marker-alt"></i>
-            <span data-i18n="ev3_loc">Por determinar</span>
-          </div>
+      </article>
+
+      <article class="esp reveal reveal-delay-2">
+        <div class="esp-foto"><img src="../assets/img/_thumbs/brumma/cronica/vinos.webp" alt="Vinos de una cata de la asociación" loading="lazy" decoding="async"><span class="esp-badge esp-badge-ve t" data-es="Próximamente" data-ca="Properament">Próximamente</span></div>
+        <div class="esp-cos">
+          <p class="esp-data t" data-es="Fecha por confirmar" data-ca="Data per confirmar">Fecha por confirmar</p>
+          <h3 class="t" data-es="Cata de vinos DO Tarragona" data-ca="Tast de vins DO Tarragona">Cata de vinos DO Tarragona</h3>
+          <p class="t" data-es="Una noche para descubrir los vinos de la DO Tarragona. Fecha y lugar por confirmar." data-ca="Una nit per descobrir els vins de la DO Tarragona. Data i lloc per confirmar.">Una noche para descubrir los vinos de la DO Tarragona. Fecha y lugar por confirmar.</p>
+          <a class="esp-link t" href="newsletter.html" data-es="Avísame →" data-ca="Avisa'm →">Avísame →</a>
         </div>
-      </div>
+      </article>
+
+      <article class="esp reveal reveal-delay-3">
+        <div class="esp-foto esp-foto-text" aria-hidden="true"><span class="esp-mes t" data-es="Diciembre" data-ca="Desembre">Diciembre</span><span class="esp-badge esp-badge-ve t" data-es="Próximamente" data-ca="Properament">Próximamente</span></div>
+        <div class="esp-cos">
+          <p class="esp-data t" data-es="Diciembre de 2026" data-ca="Desembre de 2026">Diciembre de 2026</p>
+          <h3 class="t" data-es="Cena de Navidad 2026" data-ca="Sopar de Nadal 2026">Cena de Navidad 2026</h3>
+          <p class="t" data-es="La cena que cierra la temporada 2026. Los premios se entregan después, en la gala de febrero de 2027." data-ca="El sopar que tanca la temporada 2026. Els premis es lliuren després, a la gala de febrer del 2027.">La cena que cierra la temporada 2026. Los premios se entregan después, en la gala de febrero de 2027.</p>
+          <a class="esp-link t" href="newsletter.html" data-es="Avísame →" data-ca="Avisa'm →">Avísame →</a>
+        </div>
+      </article>
+
+      <article class="esp reveal reveal-delay-4">
+        <div class="esp-foto"><img src="../assets/img/_thumbs/gala2025/sala-gala.webp" alt="Sala de la Gala de Premios 2025 en los Vermuts Rofes de Reus" loading="lazy" decoding="async"><span class="esp-badge t" data-es="Crónica" data-ca="Crònica">Crónica</span></div>
+        <div class="esp-cos">
+          <p class="esp-data t" data-es="Temporada 2025" data-ca="Temporada 2025">Temporada 2025</p>
+          <h3 class="t" data-es="Gala de Premios 2025" data-ca="Gala de Premis 2025">Gala de Premios 2025</h3>
+          <p class="t" data-es="En los Vermuts Rofes de Reus: Trofeo Gastronia para Buidasacs y Cambium, Premio Bacus para Cirerets de Mas Alta." data-ca="Als Vermuts Rofes de Reus: Trofeu Gastronia per a Buidasacs i Cambium, Premi Bacus per a Cirerets de Mas Alta.">En los Vermuts Rofes de Reus: Trofeo Gastronia para Buidasacs y Cambium, Premio Bacus para Cirerets de Mas Alta.</p>
+          <a class="esp-link t" href="../entrades/gala-premis-2025.html" data-es="Leer la crónica →" data-ca="Llegir la crònica →">Leer la crónica →</a>
+        </div>
+      </article>
 
     </div>
-    <p class="ev-nota" data-i18n="ev_nota">La información de fechas y lugares se actualizará a medida que se confirme. Síguenos en Instagram para estar al día.</p>
+    <p class="esp-nota reveal t" data-es="Las fechas y los lugares se confirman a lo largo de la temporada. La forma más rápida de enterarte es la &lt;a href=&quot;newsletter.html&quot;&gt;newsletter&lt;/a&gt; o nuestro &lt;a href=&quot;https://www.instagram.com/gourmetsdetarragona/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Instagram&lt;/a&gt;." data-ca="Les dates i els llocs es confirmen al llarg de la temporada. La manera més ràpida d'assabentar-te'n és la &lt;a href=&quot;newsletter.html&quot;&gt;newsletter&lt;/a&gt; o el nostre &lt;a href=&quot;https://www.instagram.com/gourmetsdetarragona/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Instagram&lt;/a&gt;.">Las fechas y los lugares se confirman a lo largo de la temporada. La forma más rápida de enterarte es la <a href="newsletter.html">newsletter</a> o nuestro <a href="https://www.instagram.com/gourmetsdetarragona/" target="_blank" rel="noopener">Instagram</a>.</p>
   </div>
 </section>
 
