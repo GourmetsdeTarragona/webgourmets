@@ -42,7 +42,7 @@ button { font-family: var(--font-body); cursor: pointer; }
 
 /* ---- Etiquetes de secció ---- */
 .slabel {
-  font-size: .72rem; letter-spacing: 4px; text-transform: uppercase;
+  font-size: .75rem; letter-spacing: 4px; text-transform: uppercase;
   color: var(--navy); margin-bottom: 12px; font-weight: 700;
   display: block;
 }
@@ -82,7 +82,7 @@ button { font-family: var(--font-body); cursor: pointer; }
 .btn-n {
   display: inline-block; padding: 8px 18px;
   background: var(--navy); color: #fff;
-  font-size: .72rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
+  font-size: .75rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
   border: none; transition: background 220ms var(--ease-out);
 }
 .btn-n:hover { background: var(--navy-dark); }
@@ -178,3 +178,46 @@ body .e-recepta-pas-num { color: var(--navy-dark); }
 /* Peus de foto: sense opacitat afegida */
 body .e-foto-peu, body .e-fotos-2-peu, body .e-fotos-2-peu span { color: #5f5f5f; opacity: 1; }
 body .destacat-cat.cat-cronica { color: var(--navy-dark); }
+
+/* ===== Pautes UX (ui-ux-pro-max, 17/10/2026) ===== */
+
+/* Text només per a lectors de pantalla */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* Àncores: que la capçalera fixa no tapi el destí */
+html { scroll-padding-top: 88px; }
+
+/* Focus visible també als camps que porten outline:none */
+body input:focus-visible, body textarea:focus-visible, body select:focus-visible {
+  outline: 2px solid var(--gold); outline-offset: 2px;
+}
+
+/* Articles: línia de lectura d'uns 75 caràcters a escriptori; fotos i blocs mantenen l'amplada */
+@media (min-width: 1024px) {
+  body :is(.entrada-cos, .entrada-cos > section) > .e-p { font-size: 1.125rem; }
+  body :is(.entrada-cos, .entrada-cos > section) > :is(.e-p, .e-label, .e-title, .e-divider, h2, h3, ul, ol) {
+    max-width: 36rem;
+    margin-left: max(0px, calc((100% - 36rem) / 2));
+  }
+}
+
+/* Zones tàctils de 24 px o més sense canviar l'aspecte: àrea invisible al voltant de l'enllaç */
+body :is(.entrada-back, .ef-tornar, .cal-link, .drecera-link, .rec-link, .esp-link, .e-relacionat-link,
+  .blog-preview-cta, .soci-nl, .rss, .palmares-link, .premi-link, .rest-link, .historic-link, .e-rest-link,
+  .strip-item, .e-migues a, .legal-links a, .e404-links a, .nl-posts-cta a, .bc-dos a,
+  footer a:not(.footer-social a)) { position: relative; }
+body :is(.entrada-back, .ef-tornar, .cal-link, .drecera-link, .rec-link, .esp-link, .e-relacionat-link,
+  .blog-preview-cta, .soci-nl, .rss, .palmares-link, .premi-link, .rest-link, .historic-link, .e-rest-link,
+  .strip-item, .e-migues a, .legal-links a, .e404-links a, .nl-posts-cta a, .bc-dos a,
+  footer a:not(.footer-social a))::after { content: ""; position: absolute; inset: -10px -4px; }
+body #nl-toast-close::after { content: ""; position: absolute; inset: -10px; }
+
+/* Icones socials del peu: 44 x 44 px */
+body .footer-social { gap: 0; margin-left: -13px; }
+body .footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; }
+
+/* Text corregut a 16 px al mòbil (Contacte, Esdeveniments, pàgines legals) */
+@media (max-width: 767px) {
+  body .legal-body p, body .drecera p, body .contacte-intro, body .propera-cos p,
+  body .esp-cos p.t:not(.esp-data), body .esp-nota { font-size: 1rem; }
+}

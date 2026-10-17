@@ -181,7 +181,7 @@
   animation: fadeUp .7s var(--ease-out, ease) .6s both;
 }
 .hero-meta-label {
-  font-size: .74rem; letter-spacing: 2.5px; text-transform: uppercase;
+  font-size: .75rem; letter-spacing: 2.5px; text-transform: uppercase;
   color: rgba(212,169,106,.9);
 }
 .hero-meta-title {
@@ -189,7 +189,7 @@
   font-size: 1.15rem; color: #fff; line-height: 1.25;
 }
 .hero-meta-link {
-  font-size: .68rem; letter-spacing: 2.5px; text-transform: uppercase;
+  font-size: .75rem; letter-spacing: 2.5px; text-transform: uppercase;
   color: rgba(255,255,255,.7);
   display: inline-flex; align-items: center; gap: 8px;
   transition: color .2s, gap .3s var(--ease-out, ease);
@@ -235,7 +235,7 @@
   display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
 }
 .strip-item {
-  font-size: .72rem; letter-spacing: 3px; text-transform: uppercase;
+  font-size: .75rem; letter-spacing: 3px; text-transform: uppercase;
   color: rgba(255,255,255,.8); text-decoration: none;
   display: flex; align-items: center; gap: 10px;
 }
@@ -264,7 +264,7 @@ a.strip-item:hover { color: var(--gold-light); }
       rgba(11,22,38,.25) 100%
     );
   }
-  .hero-label { letter-spacing: 3px; font-size: .74rem; }
+  .hero-label { letter-spacing: 3px; font-size: .75rem; }
   .hero-label-long { display: none; }
   .hero-content { padding: 0 5% 32px; padding-top: 88px; }
   /* En mòbil la cita va a sota dels botons, alineada a l'esquerra */
@@ -288,5 +288,5 @@ a.strip-item:hover { color: var(--gold-light); }
   }
   /* Franja en 2×2 ordenat en lloc de 3 línies desordenades */
   .strip-inner  { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; padding: 0 5%; }
-  .strip-item   { font-size: .66rem; letter-spacing: 1.5px; }
+  .strip-item   { font-size: .75rem; letter-spacing: 1.5px; }
 }
