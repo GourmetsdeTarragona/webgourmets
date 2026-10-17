@@ -108,3 +108,44 @@
 
 /* dins el contingut de l'article el bloc ja té marges */
 .entrada-cos .ef,.cronica-cos .ef{padding-left:0;padding-right:0;}
+
+
+/* ============================================================
+   Escala tipogràfica única dels articles (6 nivells).
+   Les plantilles antigues tenien ~15 mides diferents (12–17,6 px) i el text
+   secundari quedava massa petit al costat del cos. Selectors amb 'main' perquè
+   guanyin als estils propis de cada pàgina.
+   ============================================================ */
+:root{
+  --e-cos:1.125rem;   /* 18 px · text principal */
+  --e-sec:1rem;       /* 16 px · text secundari */
+  --e-nom:1.0625rem;  /* 17 px · noms (vi, xef, plat) */
+  --e-peu:.875rem;    /* 14 px · peus de foto */
+  --e-etq:.75rem;     /* 12 px · etiquetes en versaletes */
+  --e-h2:1.75rem;     /* 28 px · títol de secció */
+  --e-h3:1.5rem;      /* 24 px · subtítol (vins, menú) */
+  --e-cita:1.375rem;  /* 22 px · cites */
+}
+@media(max-width:680px){
+  :root{--e-cos:1.0625rem;--e-sec:.9375rem;--e-nom:1rem;--e-peu:.8125rem;--e-h2:1.5rem;--e-h3:1.3rem;--e-cita:1.2rem;}
+}
+/* text principal */
+main .e-p,main .e-moment-p,main .e-plats-llista li,main .entrada-cos li,main .cronica-cos li{font-size:var(--e-cos);line-height:1.85;}
+/* text secundari */
+main .e-vins-desc,main .e-equip-desc,main .e-convidat-desc,main .e-maridatge-plat,main .e-maridatge-vi,main .e-maridatge-text,
+main .e-menu-plat-nom,main .e-menu-desc,main .e-menu-vi-text,main .e-programa-desc,main .e-fitxa-text,main .e-fitxa-valor,
+main .e-val,main .e-val span,main .e-fitxa-cta p,main .e-xef-fact span,main .e-reconeix-item span,main .e-vins-nota,main .e-nota-final{font-size:var(--e-sec);line-height:1.7;font-weight:400;}
+/* noms */
+main .e-vi-nom,main .e-equip-nom,main .e-convidat-nom,main .e-menu-plat,main .e-xef-nom{font-size:var(--e-nom);line-height:1.4;}
+/* peus de foto (també els que porten l'estil escrit a mà) */
+main .e-foto-peu,main .e-foto-gran-peu,main .e-plat-foto-peu,main .e-grup-peu,
+main p[style*="font-size:.75rem"][style*="italic"]{font-size:var(--e-peu)!important;line-height:1.55;}
+/* etiquetes */
+main .e-label,main .e-vins-label,main .e-convidat-label,main .e-equip-rol,main .e-xef-rol,main .e-vi-num,
+main .e-cita-autor,main .e-aniv-text{font-size:var(--e-etq);line-height:1.5;}
+/* línia de raïm, celler o detall sota un nom: es llegeix, no és una etiqueta */
+main .e-vi-do,main .e-menu-sub{font-size:var(--e-peu);line-height:1.5;}
+/* títols i cites */
+main .e-title,main .e-acte .e-title{font-size:var(--e-h2);line-height:1.2;}
+main .e-vins-title,main .e-menu-title{font-size:var(--e-h3);line-height:1.25;}
+main .e-cita-text,main .e-cita > p{font-size:var(--e-cita);line-height:1.5;}
