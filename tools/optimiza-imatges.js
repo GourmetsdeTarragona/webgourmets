@@ -121,13 +121,14 @@ async function thumbsAndHtml() {
     t = t.replace(/(class="e-tambe-card-img"[^>]*>\s*<img\b[^>]*?\ssrc=")((?:\.\.\/)?assets\/img\/[^"]+)/g, toThumb);
     // Logo gran → logo petit (només dins <img>, no a les dades estructurades)
     t = t.replace(/(<img\b[^>]*?\ssrc=")((?:\.\.\/)?assets\/img\/)logo\.png"/g, (m, a, b) => { nLogo++; return a + b + 'logo-160.webp"'; });
-    // Càrrega diferida
-    t = t.replace(/<img\b(?![^>]*\sloading=)([^>]*)>/g, (m, attrs) => {
-      // logo i imatges "hero" es veuen d'entrada; lb-img és el visor de fotos (s'omple per JS)
-      if (/logo|hero|lb-img|data-no-lazy/i.test(attrs)) return m;
-      nLazy++;
-      return '<img loading="lazy" decoding="async"' + attrs + '>';
-    });
+    // Càrrega diferida — mai dins <script>: allà l'<img> és un text JS i les cometes el trencarien
+    t = t.split(/(<script\b[\s\S]*?<\/script>)/i).map(part => /^<script\b/i.test(part) ? part :
+      part.replace(/<img\b(?![^>]*\sloading=)([^>]*)>/g, (m, attrs) => {
+        // logo i imatges "hero" es veuen d'entrada; lb-img és el visor de fotos (s'omple per JS)
+        if (/logo|hero|lb-img|data-no-lazy/i.test(attrs)) return m;
+        nLazy++;
+        return '<img loading="lazy" decoding="async"' + attrs + '>';
+      })).join('');
     if (t !== orig) { htmlChanged++; if (!DRY) fs.writeFileSync(f, t); }
   }
   // Miniatures que l'HTML ja enllaça (execucions anteriors): busca la foto original corresponent
