@@ -194,11 +194,9 @@ body input:focus-visible, body textarea:focus-visible, body select:focus-visible
 
 /* Articles: línia de lectura d'uns 75 caràcters a escriptori; fotos i blocs mantenen l'amplada */
 @media (min-width: 1024px) {
-  body :is(.entrada-cos, .entrada-cos > section) > .e-p { font-size: 1.125rem; }
-  body :is(.entrada-cos, .entrada-cos > section) > :is(.e-p, .e-label, .e-title, .e-divider, h2, h3, ul, ol) {
-    max-width: 36rem;
-    margin-left: max(0px, calc((100% - 36rem) / 2));
-  }
+  body .entrada-cos .e-p { font-size: 1.125rem; }
+  body .entrada-cos .e-foto-inline-text .e-p { font-size: 1rem; }
+  body :is(.entrada-cos, .entrada-cos > section) > :is(.e-p, ul, ol) { max-width: 38rem; }
 }
 
 /* Zones tàctils de 24 px o més sense canviar l'aspecte: àrea invisible al voltant de l'enllaç */
