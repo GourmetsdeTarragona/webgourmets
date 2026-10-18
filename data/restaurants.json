@@ -62,5 +62,14 @@
     "web": "https://elgallinerdelantiquari.net",
     "lat": 41.1176,
     "lng": 1.2575
+  },
+  "posit-pineda-2026": {
+    "nom": "El Pòsit de la Pineda",
+    "lloc": "La Pineda, Vila-seca",
+    "adreca": "Pl. de Manuel de Falla, 2",
+    "telefon": "877 266 464",
+    "web": "https://www.elposit.com/ca/restaurants/el-posit-de-la-pineda",
+    "lat": 41.0794771,
+    "lng": 1.1844334
   }
 }

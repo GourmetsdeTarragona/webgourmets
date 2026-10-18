@@ -1,5 +1,19 @@
 [
   {
+    "slug": "posit-pineda-previa-2026",
+    "categoria": "previa",
+    "data": "2026-10-26",
+    "titol_es": "El Pòsit de la Pineda · Vila-seca",
+    "titol_ca": "El Pòsit de la Pineda · Vila-seca",
+    "subtitol_es": "Previa · 8ª visita 2026",
+    "subtitol_ca": "Prèvia · 8a visita 2026",
+    "resum_es": "Medio siglo de cocina marinera, de la lonja de Cambrils a una antigua discoteca de La Pineda. Cerramos la temporada el 5 de noviembre.",
+    "resum_ca": "Mig segle de cuina marinera, de la llotja de Cambrils a una antiga discoteca de la Pineda. Tanquem la temporada el 5 de novembre.",
+    "img": "assets/img/posit/pineda-hero.webp",
+    "min_lectura": 5,
+    "restaurant": "posit-pineda-2026"
+  },
+  {
     "slug": "la-clotxa",
     "categoria": "curiositats",
     "data": "2026-11-09",

@@ -428,4 +428,9 @@ for (const p of POSTS) {
 }
 
 console.log(`\nFet${DRY ? ' (simulació)' : ''}: blog.html (${UNITATS.length} targetes), blog-publicats.json, feed.xml (${publicats.length}), sitemap.xml (${altres.length} pàgines + ${entrades.length} entrades), ${articlesCanviats} articles actualitzats.`);
-if (!DRY) console.log('Puja per FileZilla: pages/blog.html, data/blog-posts.json, data/blog-publicats.json, feed.xml, sitemap.xml, index.html (si ha canviat) i els articles actualitzats (entrades/).');
+/* Guia per temes (pages/gastronomia-tarragona.html): mateixos articles publicats */
+if (!DRY) {
+  try { require('./genera-guia.js'); }
+  catch (e) { console.log('ATENCIÓ: la guia no s\'ha pogut actualitzar: ' + e.message); }
+}
+if (!DRY) console.log('Puja per FileZilla: pages/blog.html, pages/gastronomia-tarragona.html, data/blog-posts.json, data/blog-publicats.json, feed.xml, sitemap.xml, index.html (si ha canviat) i els articles actualitzats (entrades/).');
