@@ -420,7 +420,7 @@ for (const p of POSTS) {
     const k = text.lastIndexOf('</main>');
     return k >= 0 ? text.slice(0, k) + bloc + '\n' + text.slice(k) : text;
   });
-  if (!h.includes('entrada-final.css')) h = h.replace('</head>', '<link rel="stylesheet" href="../assets/css/entrada-final.css?v=20261018b">\n</head>');
+  if (!h.includes('entrada-final.css')) h = h.replace('</head>', '<link rel="stylesheet" href="../assets/css/entrada-final.css?v=20261019">\n</head>');
   if (!/<\/body>/i.test(h)) h = h.replace(/\s*$/, '\n</body>\n</html>\n');   // algun article antic no tancava el document
   if (!h.includes('entrada.js')) h = h.replace(/<\/body>(?![\s\S]*<\/body>)/, '<script src="../assets/js/newsletter-form.js?v=20261017"></script>\n<script src="../assets/js/entrada.js?v=20261017"></script>\n</body>');
   if (crlf) h = h.replace(/\n/g, '\r\n');

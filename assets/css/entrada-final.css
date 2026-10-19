@@ -7,64 +7,64 @@
 
 /* ── Molles de pa ── */
 .e-migues{background:var(--cream,#F8F4EC);border-bottom:1px solid var(--border,#E2D9C8);}
-.e-migues ol{list-style:none;margin:0 auto;max-width:900px;padding:14px 4%;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted,#6B6B6B);}
+.e-migues ol{list-style:none;margin:0 auto;max-width:900px;padding:14px 4%;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-size:var(--fs-xs);letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--muted,#6B6B6B);}
 .e-migues li{display:flex;align-items:center;gap:10px;}
-.e-migues li + li::before{content:'›';color:var(--gold,#b8924a);font-size:.9rem;}
-.e-migues a{color:var(--navy,#1B3A6B);font-weight:700;border-bottom:1px solid transparent;transition:border-color .2s;}
-.e-migues a:hover{border-bottom-color:var(--gold,#b8924a);}
-.e-migues [aria-current]{color:var(--muted,#6B6B6B);text-transform:none;letter-spacing:.02em;font-size:.76rem;max-width:42ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.e-migues .e-meta-linia{margin-left:auto;text-transform:none;letter-spacing:.02em;font-size:.75rem;}
+.e-migues li + li::before{content:'›';color:var(--gold);font-size:var(--fs-sm);}
+.e-migues a{color:var(--navy,#1B3A6B);font-weight:700;border-bottom:1px solid transparent;transition:border-color var(--dur);}
+.e-migues a:hover{border-bottom-color:var(--gold);}
+.e-migues [aria-current]{color:var(--muted,#6B6B6B);text-transform:none;letter-spacing:var(--ls-normal);font-size:var(--fs-xs);max-width:42ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.e-migues .e-meta-linia{margin-left:auto;text-transform:none;letter-spacing:var(--ls-normal);font-size:var(--fs-xs);}
 .e-migues .e-meta-linia::before{display:none;}
 
 /* ── Bloc final ── */
 .ef{max-width:900px;margin:0 auto;padding:8px 4% 72px;}
 .ef-sec{margin-top:56px;}
-.ef-tit{font-size:.75rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-text,#8A6A2E);margin:0 0 16px;}
+.ef-tit{font-size:var(--fs-xs);font-weight:700;letter-spacing:var(--ls-wider);text-transform:uppercase;color:var(--gold-text);margin:0 0 16px;}
 
 /* fitxa del restaurant */
 .ef-fitxa{display:grid;grid-template-columns:1fr auto;gap:20px 32px;align-items:center;background:var(--cream,#F8F4EC);border:1px solid var(--border,#E2D9C8);padding:26px 28px;}
-.ef-fitxa-nom{font-family:var(--font-serif,'Playfair Display',serif);font-size:1.35rem;font-weight:700;color:var(--navy-dark,#122850);margin:0 0 6px;}
-.ef-fitxa-dades{margin:0;font-size:.9rem;color:var(--muted,#6B6B6B);line-height:1.7;}
+.ef-fitxa-nom{font-family:var(--font-serif,'Playfair Display',serif);font-size:var(--fs-lg);font-weight:700;color:var(--navy-dark);margin:0 0 6px;}
+.ef-fitxa-dades{margin:0;font-size:var(--fs-sm);color:var(--muted,#6B6B6B);line-height:1.7;}
 .ef-fitxa-dades a{color:var(--navy,#1B3A6B);border-bottom:1px solid rgba(184,146,74,.5);}
 .ef-accions{display:flex;flex-wrap:wrap;gap:8px;}
-.ef-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--navy-dark,#122850);color:var(--navy-dark,#122850);background:#fff;transition:background .2s,color .2s;cursor:pointer;font-family:inherit;}
-.ef-btn:hover{background:var(--navy-dark,#122850);color:#fff;}
-.ef-btn-prim{background:var(--navy-dark,#122850);color:#fff;}
-.ef-btn-prim:hover{background:var(--gold,#b8924a);border-color:var(--gold,#b8924a);color:var(--navy-dark,#122850);}
-.ef-btn .fa{font-size:.8rem;}
+.ef-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;font-size:var(--fs-xs);font-weight:700;letter-spacing:var(--ls-wide);text-transform:uppercase;border:1px solid var(--navy-dark);color:var(--navy-dark);background:#fff;transition:background var(--dur),color var(--dur);cursor:pointer;font-family:inherit;}
+.ef-btn:hover{background:var(--navy-dark);color:#fff;}
+.ef-btn-prim{background:var(--navy-dark);color:#fff;}
+.ef-btn-prim:hover{background:var(--gold);border-color:var(--gold);color:var(--navy-dark);}
+.ef-btn .fa{font-size:var(--fs-xs);}
 
 /* compartir */
 .ef-comp{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:22px 0;border-top:1px solid var(--border,#E2D9C8);border-bottom:1px solid var(--border,#E2D9C8);}
 .ef-comp .ef-tit{margin:0 12px 0 0;}
 .ef-btn-wa{border-color:#1f9d55;color:#1f7a45;}
 .ef-btn-wa:hover{background:#1f9d55;border-color:#1f9d55;color:#fff;}
-.ef-copiat{font-size:.75rem;color:var(--gold-text,#8A6A2E);opacity:0;transition:opacity .3s;}
+.ef-copiat{font-size:var(--fs-xs);color:var(--gold-text);opacity:0;transition:opacity var(--dur);}
 .ef-copiat.vis{opacity:1;}
 
 /* anterior / següent */
 .ef-nav{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.ef-nav a{display:block;padding:20px 22px;border:1px solid var(--border,#E2D9C8);background:#fff;transition:border-color .2s,box-shadow .2s;}
-.ef-nav a:hover{border-color:var(--gold,#b8924a);box-shadow:0 8px 24px rgba(11,22,38,.07);}
+.ef-nav a{display:block;padding:20px 22px;border:1px solid var(--border,#E2D9C8);background:#fff;transition:border-color var(--dur),box-shadow var(--dur);}
+.ef-nav a:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(11,22,38,.07);}
 .ef-nav .seg{text-align:right;grid-column:2;}
-.ef-nav small{display:block;font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text,#8A6A2E);margin-bottom:6px;}
-.ef-nav strong{font-family:var(--font-serif,'Playfair Display',serif);font-size:1.02rem;color:var(--navy-dark,#122850);line-height:1.3;}
+.ef-nav small{display:block;font-size:var(--fs-xs);font-weight:700;letter-spacing:var(--ls-wider);text-transform:uppercase;color:var(--gold-text);margin-bottom:6px;}
+.ef-nav strong{font-family:var(--font-serif,'Playfair Display',serif);font-size:var(--fs-base);color:var(--navy-dark);line-height:1.3;}
 
 /* newsletter */
-.ef-nl{background:var(--navy-dark,#122850);color:#fff;padding:34px 32px;display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:center;}
-.ef-nl h2{font-family:var(--font-serif,'Playfair Display',serif);font-size:1.5rem;line-height:1.2;margin:0 0 6px;color:#fff;font-weight:700;}
+.ef-nl{background:var(--navy-dark);color:#fff;padding:34px 32px;display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:center;}
+.ef-nl h2{font-family:var(--font-serif,'Playfair Display',serif);font-size:var(--fs-lg);line-height:1.2;margin:0 0 6px;color:#fff;font-weight:700;}
 .ef-nl h2 em{font-style:italic;font-weight:400;color:rgba(212,169,106,.92);}
-.ef-nl p.t{margin:0;font-size:.88rem;color:rgba(255,255,255,.72);line-height:1.6;}
+.ef-nl p.t{margin:0;font-size:var(--fs-sm);color:rgba(255,255,255,.72);line-height:1.6;}
 .ef .nl-form-fila{display:flex;gap:8px;flex-wrap:wrap;}
-.ef .nl-form input[type="email"]{flex:1;min-width:180px;padding:14px 16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);color:#fff;font-family:inherit;font-size:.9rem;outline:none;border-radius:0;}
+.ef .nl-form input[type="email"]{flex:1;min-width:180px;padding:14px 16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);color:#fff;font-family:inherit;font-size:var(--fs-sm);outline:none;border-radius:0;}
 .ef .nl-form input[type="email"]:focus{border-color:rgba(212,169,106,.8);}
 .ef .nl-form input[type="email"][aria-invalid="true"]{border-color:#e38b8b;}
 .ef .nl-form input::placeholder{color:rgba(255,255,255,.45);}
-.ef .nl-form button{padding:14px 22px;background:var(--gold,#b8924a);color:var(--navy-dark,#122850);border:0;font-family:inherit;font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;}
+.ef .nl-form button{padding:14px 22px;background:var(--gold);color:var(--navy-dark);border:0;font-family:inherit;font-size:var(--fs-xs);font-weight:700;letter-spacing:var(--ls-wider);text-transform:uppercase;cursor:pointer;}
 .ef .nl-form button:hover{background:#fff;}
 .ef .nl-form button[disabled]{opacity:.6;cursor:wait;}
-.ef .nl-priv{font-size:.75rem;color:rgba(255,255,255,.62);line-height:1.6;margin:10px 0 0;}
+.ef .nl-priv{font-size:var(--fs-xs);color:rgba(255,255,255,.62);line-height:1.6;margin:10px 0 0;}
 .ef .nl-priv a{color:rgba(255,255,255,.85);border-bottom:1px solid rgba(212,169,106,.55);}
-.ef .nl-estat{font-size:.86rem;line-height:1.6;margin:12px 0 0;}
+.ef .nl-estat{font-size:var(--fs-sm);line-height:1.6;margin:12px 0 0;}
 .ef .nl-estat:empty{display:none;}
 .ef .nl-estat.ok{color:#cfe8d6;background:rgba(45,106,69,.28);border-left:3px solid #7cc496;padding:10px 12px;}
 .ef .nl-estat.error{color:#f3c6c6;background:rgba(162,59,59,.25);border-left:3px solid #e38b8b;padding:10px 12px;}
@@ -75,16 +75,16 @@
 .ef-rel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
 .ef-rel article{position:relative;}
 .ef-rel-img{aspect-ratio:3/2;overflow:hidden;background:var(--cream,#F8F4EC);margin-bottom:12px;}
-.ef-rel-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
+.ef-rel-img img{width:100%;height:100%;object-fit:cover;transition:transform var(--dur-reveal);}
 .ef-rel article:hover .ef-rel-img img{transform:scale(1.04);}
-.ef-rel-cat{font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text,#8A6A2E);margin:0 0 6px;}
-.ef-rel h3{font-family:var(--font-serif,'Playfair Display',serif);font-size:1.02rem;line-height:1.3;margin:0;font-weight:700;}
-.ef-rel h3 a{color:var(--navy-dark,#122850);}
+.ef-rel-cat{font-size:var(--fs-xs);font-weight:700;letter-spacing:var(--ls-wider);text-transform:uppercase;color:var(--gold-text);margin:0 0 6px;}
+.ef-rel h3{font-family:var(--font-serif,'Playfair Display',serif);font-size:var(--fs-base);line-height:1.3;margin:0;font-weight:700;}
+.ef-rel h3 a{color:var(--navy-dark);}
 .ef-rel h3 a::after{content:'';position:absolute;inset:0;}
-.ef-rel article:focus-within{outline:2px solid var(--gold,#b8924a);outline-offset:4px;}
+.ef-rel article:focus-within{outline:2px solid var(--gold);outline-offset:4px;}
 
-.ef-tornar{display:inline-flex;align-items:center;gap:8px;margin-top:48px;font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--navy,#1B3A6B);border-bottom:1px solid var(--gold,#b8924a);padding-bottom:2px;}
-.ef-tornar:hover{color:var(--gold-text,#8A6A2E);}
+.ef-tornar{display:inline-flex;align-items:center;gap:8px;margin-top:48px;font-size:var(--fs-xs);font-weight:700;letter-spacing:var(--ls-wider);text-transform:uppercase;color:var(--navy,#1B3A6B);border-bottom:1px solid var(--gold);padding-bottom:2px;}
+.ef-tornar:hover{color:var(--gold-text);}
 
 /* barra d'accions del restaurant al mòbil */
 .ef-barra{display:none;}
@@ -99,10 +99,10 @@
   .ef .nl-form-fila{flex-direction:column;}
   .ef .nl-form input[type="email"],.ef .nl-form button{width:100%;min-width:0;}
   .ef-rel{grid-template-columns:1fr;}
-  .ef-barra{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--navy-dark,#122850);box-shadow:0 -6px 20px rgba(0,0,0,.18);padding-bottom:env(safe-area-inset-bottom);}
-  .ef-barra a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:54px;color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-right:1px solid rgba(255,255,255,.12);}
+  .ef-barra{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--navy-dark);box-shadow:0 -6px 20px rgba(0,0,0,.18);padding-bottom:env(safe-area-inset-bottom);}
+  .ef-barra a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:54px;color:#fff;font-size:var(--fs-xs);font-weight:700;letter-spacing:var(--ls-wide);text-transform:uppercase;border-right:1px solid rgba(255,255,255,.12);}
   .ef-barra a:last-child{border-right:0;}
-  .ef-barra .fa{color:#d4a96a;}
+  .ef-barra .fa{color:var(--gold-light);}
 }
 @media print{.ef-comp,.ef-nl,.ef-barra,.ef-rel,.ef-nav{display:none;}}
 
@@ -139,7 +139,7 @@ main .e-val,main .e-val span,main .e-fitxa-cta p,main .e-xef-fact span,main .e-r
 main .e-vi-nom,main .e-equip-nom,main .e-convidat-nom,main .e-menu-plat,main .e-xef-nom{font-size:var(--e-nom);line-height:1.4;}
 /* peus de foto (també els que porten l'estil escrit a mà) */
 main .e-foto-peu,main .e-foto-gran-peu,main .e-plat-foto-peu,main .e-grup-peu,
-main p[style*="font-size:.75rem"][style*="italic"]{font-size:var(--e-peu)!important;line-height:1.55;}
+main p[style*="font-size:var(--fs-xs)"][style*="italic"]{font-size:var(--e-peu)!important;line-height:1.55;}
 /* etiquetes */
 main .e-label,main .e-vins-label,main .e-convidat-label,main .e-equip-rol,main .e-xef-rol,main .e-vi-num,
 main .e-cita-autor,main .e-aniv-text{font-size:var(--e-etq);line-height:1.5;}

@@ -41,6 +41,7 @@
   --fs-2xl:  2.5rem;
   --fs-3xl:  3rem;
   --fs-4xl:  4.5rem;
+  --fs-art:  3.75rem; /* títol d'article (60 px) */
 
   --ls-tight:  -.01em;
   --ls-normal: 0;

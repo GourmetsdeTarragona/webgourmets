@@ -59,7 +59,7 @@ Si una página necesita algo que aquí no existe, se añade aquí primero y lueg
 Decidido el 19/10/2026 tras comparar con Inter: **se mantiene Lato** (más cálida y editorial, ocupa menos líneas).
 Ambas servidas desde el propio servidor (`assets/fonts/`). Jost existe pero no se usa en páginas nuevas.
 
-### Escala (9 niveles)
+### Escala (9 niveles + título de artículo)
 
 | Token | Escritorio | Móvil | Uso |
 |---|---|---|---|
@@ -72,6 +72,7 @@ Ambas servidas desde el propio servidor (`assets/fonts/`). Jost existe pero no s
 | `--fs-2xl` | 40 px · 2.5rem | 28 px | Títulos de sección (máximo del clamp) |
 | `--fs-3xl` | 48 px · 3rem | 40 px | H1 de página, mínimo del hero |
 | `--fs-4xl` | 72 px · 4.5rem | 48 px | Hero de portada |
+| `--fs-art` | 60 px · 3.75rem | 40 px | Título de artículo del blog (clamp desde `--fs-2xl`) |
 
 Los niveles grandes pueden ser fluidos con `clamp(móvil, …, escritorio)` usando exactamente esos extremos.
 
@@ -178,4 +179,4 @@ Los niveles grandes pueden ser fluidos con `clamp(móvil, …, escritorio)` usan
 |---|---|
 | 1. Este documento | ✅ 19/10/2026 |
 | 2. Corrección de contraste (dorado, botones, grises) | ✅ 19/10/2026 · 35 archivos. Los adornos «· · ·» (.e-sep) se quedan dorados a propósito |
-| 3. Tokens en el código, página por página | En curso · ✅ Portada + CSS comunes (nav, hero, seccions, variables) 19/10/2026 |
+| 3. Tokens en el código, página por página | ✅ 19/10/2026 · todas las páginas, los 48 artículos y entrada-final.css |
