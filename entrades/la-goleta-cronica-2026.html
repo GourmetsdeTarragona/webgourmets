@@ -79,9 +79,6 @@
 .e-vins-nota{font-size:.82rem;color:rgba(255,255,255,.35);font-style:italic;margin-top:20px;}
 
 /* ── GRUP ── */
-.e-grup{margin:52px 0;}
-.e-grup img{width:100%;height:440px;object-fit:cover;object-position:center 30%;}
-.e-grup-peu{text-align:center;font-size:.85rem;color:var(--muted);margin-top:12px;font-style:italic;}
 
 /* ── FITXA ── */
 .e-fitxa{background:var(--cream);border:1px solid var(--border);display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:52px 0;text-align:center;}
@@ -101,7 +98,7 @@
   .e-grid-2,.e-sala-grid{grid-template-columns:1fr;gap:32px;}
   .e-img::after{display:none;}
   .e-fotos-2{grid-template-columns:1fr;}
-  .e-foto-gran img,.e-grup img{height:260px;}
+  .e-foto-gran img{height:260px;}
   .e-vins{padding:32px 20px;}
   .e-vins-grid{grid-template-columns:1fr 1fr;}
   .e-fitxa{grid-template-columns:1fr;}
@@ -525,12 +522,6 @@
   <div style="width:48px;height:3px;background:var(--gold);opacity:.35;margin-bottom:24px;"></div>
   <p class="e-p" data-i18n="goleta_reflex_p1">La Goleta no nos sorprendió con alardes. Nos confortó con coherencia. Y eso, en el contexto actual, donde la tendencia es reinventarse constantemente, es un lujo que la Costa Daurada merece conservar. <strong>Cuarenta años. Y sin intención de cambiar lo que funciona.</strong></p>
 
-  <!-- FOTO GRUP -->
-  <div class="e-grup">
-    <img loading="lazy" decoding="async" src="../assets/img/goleta/grup.jpg" alt="Gourmets de Tarragona a La Goleta — Salou, abril 2026" onerror="this.parentElement.style.display='none'">
-    <p class="e-grup-peu" data-i18n="goleta_grup_peu">Miembros de Gourmets de Tarragona durante la visita a La Goleta · Salou — Abril 2026</p>
-  </div>
-
   <!-- FITXA -->
   <div class="e-fitxa">
     <div class="e-fitxa-item">
@@ -758,7 +749,6 @@ var T = {
   goleta_reflex_label:{ es: 'Reflexión final', ca: 'Reflexió final' },
   goleta_reflex_title:{ es: 'Cuarenta años de coherencia', ca: 'Quaranta anys de coherència' },
   goleta_reflex_p1: { es: 'La Goleta no nos sorprendió con alardes. Nos confortó con coherencia. Y eso, en el contexto actual, donde la tendencia es reinventarse constantemente, es un lujo que la Costa Daurada merece conservar. <strong>Cuarenta años. Y sin intención de cambiar lo que funciona.</strong>', ca: "La Goleta no ens va sorprendre amb ostentació. Ens va confortar amb coherència. I això, en el context actual, on la tendència és reinventar-se constantment, és un luxe que la Costa Daurada mereix conservar. <strong>Quaranta anys. I sense intenció de canviar allò que funciona.</strong>" },
-  goleta_grup_peu:  { es: 'Miembros de Gourmets de Tarragona durante la visita a La Goleta · Salou — Abril 2026', ca: 'Membres de Gourmets de Tarragona durant la visita a La Goleta · Salou — Abril 2026' },
   goleta_fitxa1_label:{ es: 'Restaurante', ca: 'Restaurant' },
   goleta_fitxa2_label:{ es: 'Tipo de cocina', ca: 'Tipus de cuina' },
   goleta_fitxa2_valor:{ es: 'Cocina mediterránea · 40 años', ca: 'Cuina mediterrània · 40 anys' },
