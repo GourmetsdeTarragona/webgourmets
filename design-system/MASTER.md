@@ -14,7 +14,8 @@ Si una página necesita algo que aquí no existe, se añade aquí primero y lueg
 | Token | Valor | Uso |
 |---|---|---|
 | `--navy` | `#1B3A6B` | Color principal: titulares de sección, botón principal, enlaces |
-| `--navy-dark` | `#122850` | Fondos oscuros (hero, pie, bandas), títulos grandes |
+| `--navy-dark` | `#122850` | Fondos oscuros (bandas, newsletter), títulos grandes |
+| `--navy-ink` | `#0b1626` | Azul casi negro: hero, manifiesto, pie, avisos flotantes |
 | `--gold` | `#b8924a` | **Solo sobre fondo oscuro** o como detalle (líneas, bordes, iconos grandes) |
 | `--gold-light` | `#d4a96a` | Texto dorado sobre azul marino |
 | `--gold-text` | `#8A6A2E` | **Texto dorado sobre fondo claro** (blanco o crema) |
@@ -59,15 +60,15 @@ Ambas servidas desde el propio servidor (`assets/fonts/`). Jost existe pero no s
 
 | Token | Escritorio | Móvil | Uso |
 |---|---|---|---|
-| `--fs-xs` | 12 px · .75rem | 12 px | Etiquetas en mayúsculas, botones |
+| `--fs-xs` | 12 px · .75rem | 12 px | Etiquetas en mayúsculas, botones, menú |
 | `--fs-sm` | 14 px · .875rem | 13 px | Fechas, pies de foto, metadatos |
 | `--fs-base` | 16 px · 1rem | 15 px | Texto de interfaz, tarjetas |
 | `--fs-md` | 18 px · 1.125rem | 17 px | Texto de artículo |
 | `--fs-lg` | 22 px · 1.375rem | 19 px | Citas, títulos de tarjeta |
 | `--fs-xl` | 28 px · 1.75rem | 24 px | H2 de artículo y secciones |
-| `--fs-2xl` | 36 px · 2.25rem | 28 px | Títulos de sección grandes |
-| `--fs-3xl` | 48 px · 3rem | 34 px | H1 de página |
-| `--fs-4xl` | 60 px · 3.75rem | 40 px | Hero de portada |
+| `--fs-2xl` | 40 px · 2.5rem | 28 px | Títulos de sección (máximo del clamp) |
+| `--fs-3xl` | 48 px · 3rem | 40 px | H1 de página, mínimo del hero |
+| `--fs-4xl` | 72 px · 4.5rem | 48 px | Hero de portada |
 
 Los niveles grandes pueden ser fluidos con `clamp(móvil, …, escritorio)` usando exactamente esos extremos.
 
@@ -125,7 +126,8 @@ Los niveles grandes pueden ser fluidos con `clamp(móvil, …, escritorio)` usan
 |---|---|---|
 | `--dur-fast` | 150 ms | Color, opacidad (hover de enlaces) |
 | `--dur` | 250 ms | Botones, tarjetas, menús |
-| `--dur-slow` | 400 ms | Entradas de sección, visor |
+| `--dur-slow` | 400 ms | Zoom de fotos, visor, ventanas |
+| `--dur-reveal` | 600 ms | Entradas de sección al hacer scroll (ritmo pausado de revista) |
 | `--ease-out` | `cubic-bezier(0.23,1,0.32,1)` | Todo lo que entra |
 | `--ease-in-out` | `cubic-bezier(0.77,0,0.175,1)` | Desplazamientos |
 
@@ -173,4 +175,4 @@ Los niveles grandes pueden ser fluidos con `clamp(móvil, …, escritorio)` usan
 |---|---|
 | 1. Este documento | ✅ 19/10/2026 |
 | 2. Corrección de contraste (dorado, botones, grises) | ✅ 19/10/2026 · 35 archivos. Los adornos «· · ·» (.e-sep) se quedan dorados a propósito |
-| 3. Tokens en el código, página por página | Pendiente |
+| 3. Tokens en el código, página por página | En curso · ✅ Portada + CSS comunes (nav, hero, seccions, variables) 19/10/2026 |

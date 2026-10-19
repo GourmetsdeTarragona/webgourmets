@@ -14,6 +14,7 @@
   --text:        #2C2C2C;
   --muted:       #6B6B6B;
   --border:      #E2D9C8;
+  --navy-ink:    #0b1626; /* blau gairebé negre: hero, manifest, peu */
 
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-body:  'Lato', system-ui, sans-serif;
@@ -26,6 +27,31 @@
   /* ── Easing curves — Emil Kowalski philosophy ── */
   --ease-out:    cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+
+  /* ── Sistema de disseny (design-system/MASTER.md) ── */
+  /* Escala tipogràfica: 12 · 14 · 16 · 18 · 22 · 28 · 40 · 48 · 72 */
+  --fs-xs:   .75rem;
+  --fs-sm:   .875rem;
+  --fs-base: 1rem;
+  --fs-md:   1.125rem;
+  --fs-lg:   1.375rem;
+  --fs-xl:   1.75rem;
+  --fs-2xl:  2.5rem;
+  --fs-3xl:  3rem;
+  --fs-4xl:  4.5rem;
+
+  --ls-tight:  -.01em;
+  --ls-normal: 0;
+  --ls-wide:   .12em;
+  --ls-wider:  .2em;
+
+  --sp-1: 8px;  --sp-2: 16px; --sp-3: 24px; --sp-4: 32px;
+  --sp-6: 48px; --sp-8: 64px; --sp-12: 96px;
+
+  --dur-fast:   150ms;
+  --dur:        250ms;
+  --dur-slow:   400ms;
+  --dur-reveal: 600ms; /* entrades en fer scroll */
 }
 
 /* ---- Reset ---- */
@@ -42,13 +68,13 @@ button { font-family: var(--font-body); cursor: pointer; }
 
 /* ---- Etiquetes de secció ---- */
 .slabel {
-  font-size: .75rem; letter-spacing: 4px; text-transform: uppercase;
+  font-size: var(--fs-xs); letter-spacing: var(--ls-wider); text-transform: uppercase;
   color: var(--navy); margin-bottom: 12px; font-weight: 700;
   display: block;
 }
 .stitle {
   font-family: var(--font-serif);
-  font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+  font-size: clamp(var(--fs-xl), 3.5vw, var(--fs-2xl));
   color: var(--navy-dark); margin-bottom: 16px; line-height: 1.2;
 }
 .sdiv {
@@ -60,9 +86,9 @@ button { font-family: var(--font-body); cursor: pointer; }
 .btn-primary {
   display: inline-block; padding: 13px 30px;
   background: var(--navy); color: #fff;
-  font-size: .78rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+  font-size: var(--fs-xs); letter-spacing: var(--ls-wider); text-transform: uppercase; font-weight: 700;
   border: 2px solid var(--navy);
-  transition: background 220ms var(--ease-out), border-color 220ms var(--ease-out);
+  transition: background var(--dur) var(--ease-out), border-color var(--dur) var(--ease-out);
 }
 .btn-primary:hover { background: var(--navy-dark); border-color: var(--navy-dark); }
 .btn-primary:active { transform: scale(0.97); }
@@ -71,9 +97,9 @@ button { font-family: var(--font-body); cursor: pointer; }
 .btn-outline {
   display: inline-block; padding: 12px 30px;
   background: transparent; color: var(--navy);
-  font-size: .78rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+  font-size: var(--fs-xs); letter-spacing: var(--ls-wider); text-transform: uppercase; font-weight: 700;
   border: 2px solid var(--navy);
-  transition: background 220ms var(--ease-out), color 220ms var(--ease-out);
+  transition: background var(--dur) var(--ease-out), color var(--dur) var(--ease-out);
 }
 .btn-outline:hover { background: var(--navy); color: #fff; }
 .btn-outline:active { transform: scale(0.97); }
@@ -82,8 +108,8 @@ button { font-family: var(--font-body); cursor: pointer; }
 .btn-n {
   display: inline-block; padding: 8px 18px;
   background: var(--navy); color: #fff;
-  font-size: .75rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
-  border: none; transition: background 220ms var(--ease-out);
+  font-size: var(--fs-xs); letter-spacing: var(--ls-wide); text-transform: uppercase; font-weight: 700;
+  border: none; transition: background var(--dur) var(--ease-out);
 }
 .btn-n:hover { background: var(--navy-dark); }
 .btn-n:active { transform: scale(0.97); }
@@ -92,7 +118,7 @@ button { font-family: var(--font-body); cursor: pointer; }
 /* ---- Reveal on scroll ---- */
 .reveal {
   opacity: 0; transform: translateY(20px);
-  transition: opacity .6s var(--ease-out), transform .6s var(--ease-out);
+  transition: opacity var(--dur-reveal) var(--ease-out), transform var(--dur-reveal) var(--ease-out);
 }
 .reveal.vis { opacity: 1; transform: translateY(0); }
 
@@ -129,7 +155,7 @@ textarea:focus-visible, [tabindex]:focus-visible, summary:focus-visible {
 .skip-link {
   position: absolute; left: 12px; top: -60px; z-index: 10001;
   background: var(--navy-dark); color: #fff; padding: 12px 18px;
-  font-size: .85rem; font-weight: 700; letter-spacing: 1px;
+  font-size: var(--fs-sm); font-weight: 700; letter-spacing: var(--ls-wide);
 }
 .skip-link:focus { top: 12px; }
 main:focus { outline: none; }
@@ -165,7 +191,7 @@ body .entrada-badge-previa, body .entrada-badge-noticia, body .entrada-badge-cul
 body .entrada-badge-vi { color: #fff; }
 
 /* Peus de foto grisos */
-body .e-foto-peu, body .e-foto-peu-inline { color: #5f5f5f; }
+body .e-foto-peu, body .e-foto-peu-inline { color: var(--muted); }
 
 /* Segona tanda (casos d'una o dues pàgines) */
 body .rest-card-lloc, body .e-palmares-premi, body .e-rest-lloc, body .e-fitxa-resum-label,
@@ -176,7 +202,7 @@ body .e-putt-desc, body .palmares-lloc { color: rgba(255,255,255,.78); }
 body .e-recepta-pas-num { color: var(--navy-dark); }
 
 /* Peus de foto: sense opacitat afegida */
-body .e-foto-peu, body .e-fotos-2-peu, body .e-fotos-2-peu span { color: #5f5f5f; opacity: 1; }
+body .e-foto-peu, body .e-fotos-2-peu, body .e-fotos-2-peu span { color: var(--muted); opacity: 1; }
 body .destacat-cat.cat-cronica { color: var(--navy-dark); }
 
 /* ===== Pautes UX (ui-ux-pro-max, 17/10/2026) ===== */
@@ -194,8 +220,8 @@ body input:focus-visible, body textarea:focus-visible, body select:focus-visible
 
 /* Articles: línia de lectura d'uns 75 caràcters a escriptori; fotos i blocs mantenen l'amplada */
 @media (min-width: 1024px) {
-  body .entrada-cos .e-p { font-size: 1.125rem; }
-  body .entrada-cos .e-foto-inline-text .e-p { font-size: 1rem; }
+  body .entrada-cos .e-p { font-size: var(--fs-md); }
+  body .entrada-cos .e-foto-inline-text .e-p { font-size: var(--fs-base); }
   body :is(.entrada-cos, .entrada-cos > section) > :is(.e-p, ul, ol) { max-width: 38rem; }
 }
 
@@ -217,5 +243,5 @@ body .footer-social a { display: inline-flex; align-items: center; justify-conte
 /* Text corregut a 16 px al mòbil (Contacte, Esdeveniments, pàgines legals) */
 @media (max-width: 767px) {
   body .legal-body p, body .drecera p, body .contacte-intro, body .propera-cos p,
-  body .esp-cos p.t:not(.esp-data), body .esp-nota { font-size: 1rem; }
+  body .esp-cos p.t:not(.esp-data), body .esp-nota { font-size: var(--fs-base); }
 }
