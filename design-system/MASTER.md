@@ -44,6 +44,7 @@ Si una página necesita algo que aquí no existe, se añade aquí primero y lueg
 - **Botón dorado → texto `--navy-dark`**, nunca blanco.
 - **Prohibidos los grises claros** (`#888`, `#999`, `#aaa`…) para texto: usar `--muted`.
 - **Sin hexadecimales sueltos** en páginas: usar siempre el token. Excepciones: colores de marca de terceros (WhatsApp, Facebook) solo en sus propios iconos, y el acento «vino» del Premio Bacus (`#2a1d1f` fondo y `#e2a9b4` etiqueta en Premios; `#6b2737` para la gala en el calendario de Eventos).
+- Mensajes del formulario de la newsletter sobre azul: tonos claros propios (`#f3c6c6`/`#e38b8b` error, `#cfe8d6`/`#7cc496` éxito), pensados para fondo oscuro.
 - Blancos con transparencia (`rgba(255,255,255,.75)`) se permiten sobre fondos oscuros, con mínimo `.7` para texto.
 
 ---

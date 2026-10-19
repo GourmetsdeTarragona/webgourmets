@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="/assets/css/variables.css?v=20261019">
 <style>
 html,body{height:100%;}
-body{margin:0;background:#0b1626;color:#fff;font-family:var(--font-body);}
+body{margin:0;background:var(--navy-ink);color:#fff;font-family:var(--font-body);}
 .e404{position:relative;min-height:100%;display:flex;flex-direction:column;overflow:hidden;}
 .e404-bg{position:absolute;inset:0;background:url('/assets/img/hero.webp') center/cover no-repeat;opacity:.32;filter:saturate(.8);animation:e404Settle 3s var(--ease-out) both;}
 .e404-grad{position:absolute;inset:0;background:linear-gradient(to right,rgba(11,22,38,.92) 0%,rgba(11,22,38,.65) 60%,rgba(11,22,38,.45) 100%);}
@@ -23,20 +23,20 @@ body{margin:0;background:#0b1626;color:#fff;font-family:var(--font-body);}
 .e404-top{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:22px 5%;}
 .e404-top img{width:58px;height:auto;filter:brightness(0) invert(1);}
 .e404-lang{display:flex;gap:6px;}
-.e404-lang button{background:none;border:1px solid transparent;color:rgba(255,255,255,.7);font:700 .75rem var(--font-body);letter-spacing:.14em;padding:7px 10px;cursor:pointer;}
+.e404-lang button{background:none;border:1px solid transparent;color:rgba(255,255,255,.7);font:700 .75rem var(--font-body);letter-spacing:var(--ls-wide);padding:7px 10px;cursor:pointer;}
 .e404-lang button.active{border-color:var(--gold);color:#fff;}
 .e404-cos{position:relative;z-index:2;flex:1;display:flex;align-items:center;padding:40px 5% 80px;}
 .e404-inner{max-width:640px;}
 .e404-num{font-family:var(--font-serif);font-style:italic;font-size:clamp(4.5rem,12vw,8rem);line-height:1;color:rgba(212,169,106,.85);animation:e404Up .8s var(--ease-out) .05s both;}
-.e404-label{font-size:.75rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin:18px 0 0;animation:e404Up .8s var(--ease-out) .15s both;}
-h1{font-family:var(--font-serif);font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.1;margin:12px 0 0;font-weight:700;animation:e404Up .8s var(--ease-out) .25s both;}
+.e404-label{font-size:var(--fs-xs);font-weight:700;letter-spacing:var(--ls-wider);text-transform:uppercase;color:var(--gold);margin:18px 0 0;animation:e404Up .8s var(--ease-out) .15s both;}
+h1{font-family:var(--font-serif);font-size:clamp(var(--fs-xl),4.6vw,var(--fs-3xl));line-height:1.1;margin:12px 0 0;font-weight:700;animation:e404Up .8s var(--ease-out) .25s both;}
 h1 em{font-style:italic;font-weight:400;color:rgba(212,169,106,.9);}
-.e404-desc{font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,.82);margin:18px 0 32px;max-width:520px;animation:e404Up .8s var(--ease-out) .35s both;}
+.e404-desc{font-size:var(--fs-base);line-height:1.75;color:rgba(255,255,255,.82);margin:18px 0 32px;max-width:520px;animation:e404Up .8s var(--ease-out) .35s both;}
 .e404-btns{display:flex;flex-wrap:wrap;gap:14px;align-items:center;animation:e404Up .8s var(--ease-out) .45s both;}
-.e404-btn{display:inline-block;background:var(--gold);color:var(--navy-dark);font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:14px 26px;text-decoration:none;transition:background .2s;}
+.e404-btn{display:inline-block;background:var(--gold);color:var(--navy-dark);font-size:var(--fs-xs);font-weight:700;letter-spacing:var(--ls-wider);text-transform:uppercase;padding:14px 26px;text-decoration:none;transition:background var(--dur);}
 .e404-btn:hover{background:#fff;}
 .e404-links{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);animation:e404Up .8s var(--ease-out) .55s both;}
-.e404-links a{color:rgba(255,255,255,.75);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(212,169,106,.45);padding-bottom:2px;}
+.e404-links a{color:rgba(255,255,255,.75);font-size:var(--fs-xs);font-weight:700;letter-spacing:var(--ls-wide);text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(212,169,106,.45);padding-bottom:2px;}
 .e404-links a:hover{color:#fff;}
 @media(prefers-reduced-motion:reduce){.e404-bg,.e404-num,.e404-label,h1,.e404-desc,.e404-btns,.e404-links{animation:none;}}
 </style>
