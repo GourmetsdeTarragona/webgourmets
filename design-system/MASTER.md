@@ -24,6 +24,8 @@ Si una página necesita algo que aquí no existe, se añade aquí primero y lueg
 | `--text` | `#2C2C2C` | Texto general |
 | `--muted` | `#6B6B6B` | Texto secundario (fechas, pies de foto, ayudas). El gris más claro permitido |
 | `--border` | `#E2D9C8` | Bordes y separadores |
+| `--error` · `--error-bg` | `#a23b3b` · `#fdf3f3` | Errores de formulario (siempre con texto, no solo color) |
+| `--success` · `--success-bg` | `#2d6a45` · `#eef6f0` | Envío correcto |
 
 ### Combinaciones permitidas (contraste mínimo 4,5:1)
 
@@ -147,7 +149,7 @@ Los niveles grandes pueden ser fluidos con `clamp(móvil, …, escritorio)` usan
 | **Etiqueta de sección** | `--fs-xs` 700 `--ls-wider` mayúsculas, `--gold-text` sobre claro / `--gold` sobre oscuro |
 | **Tarjeta** | Fondo blanco, `--shadow-sm`, esquinas rectas, foto 16:9 o 4:3; hover `--shadow-md` + `translateY(-4px)` |
 | **Enlace en texto** | `--navy`, subrayado 1 px dorado; hover subrayado `--navy` |
-| **Campo de formulario** | Etiqueta visible encima, borde `--border`, alto ≥ 44 px, error debajo en texto |
+| **Campo de formulario** | Fondo blanco, etiqueta visible encima, borde `--border`, texto 16 px (evita el zoom del iPhone), alto ≥ 44 px, error debajo en texto |
 
 ---
 
