@@ -41,7 +41,7 @@ Si una página necesita algo que aquí no existe, se añade aquí primero y lueg
 - **Dorado sobre claro → siempre `--gold-text`.** `--gold` como texto solo sobre oscuro.
 - **Botón dorado → texto `--navy-dark`**, nunca blanco.
 - **Prohibidos los grises claros** (`#888`, `#999`, `#aaa`…) para texto: usar `--muted`.
-- **Sin hexadecimales sueltos** en páginas: usar siempre el token. Excepción: colores de marca de terceros (WhatsApp, Facebook) solo en sus propios iconos.
+- **Sin hexadecimales sueltos** en páginas: usar siempre el token. Excepciones: colores de marca de terceros (WhatsApp, Facebook) solo en sus propios iconos, y el acento «vino» del Premio Bacus en Premios (`#2a1d1f` fondo, `#e2a9b4` etiqueta sobre oscuro).
 - Blancos con transparencia (`rgba(255,255,255,.75)`) se permiten sobre fondos oscuros, con mínimo `.7` para texto.
 
 ---
