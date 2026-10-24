@@ -89,7 +89,7 @@
 <link rel="preload" href="assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css?v=20261010">
 <link rel="stylesheet" href="assets/css/icons.css?v=20261010">
-<link rel="stylesheet" href="assets/css/variables.css?v=20261024d">
+<link rel="stylesheet" href="assets/css/variables.css?v=20261024e">
 <link rel="stylesheet" href="assets/css/nav.css?v=20261019">
 <link rel="preload" as="image" href="assets/img/hero.webp" type="image/webp" media="(min-width: 681px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/img/hero-mobile.webp" type="image/webp" media="(max-width: 680px)" fetchpriority="high">
@@ -1020,12 +1020,14 @@ document.addEventListener('DOMContentLoaded', function() {
   function showToast(){
     if(shown) return;
     shown = true;
+    toast.style.transitionDuration = '';
     toast.style.pointerEvents = 'auto';
     toast.style.transform = 'translateY(0)';
     toast.style.opacity   = '1';
   }
 
   function hideToast(){
+    toast.style.transitionDuration = '200ms'; // la sortida, més ràpida que l'entrada
     toast.style.transform = 'translateY(calc(100% + 40px))';
     toast.style.opacity   = '0';
     toast.style.pointerEvents = 'none';

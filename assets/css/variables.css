@@ -318,3 +318,23 @@ body #hero .hero-gradient, body .page-hero-grad, body .nl-hero-grad, body .bh-gr
       linear-gradient(to top, rgba(11,22,38,.96) 0%, rgba(11,22,38,.85) 52%, rgba(11,22,38,.55) 74%, rgba(11,22,38,.2) 90%, rgba(11,22,38,0) 100%);
   }
 }
+
+/* ===== Microinteraccions (emil-design-eng, 24/10/2026) ===== */
+/* Tot el que es prem respon en prémer (escala 0,97) i només s'animen les propietats necessàries */
+body :is(.btn-primary, .btn-outline, .btn-n, .btn-hero-primary, .btn-hero-ghost, .nav-item > a.nav-cta,
+  .rest-card-link-primary, .form-submit, .nl-form button, .filtre, .mapa-filtre, .lang-btn,
+  #newsletter form button, #nl-toast-form button, .e404-btn, .e-nl-cta-btn) {
+  transition: background-color var(--dur) var(--ease-out), border-color var(--dur) var(--ease-out),
+    color var(--dur) var(--ease-out), opacity var(--dur) var(--ease-out), transform 160ms var(--ease-out) !important;
+}
+body :is(.btn-primary, .btn-outline, .btn-n, .btn-hero-primary, .btn-hero-ghost, .nav-item > a.nav-cta,
+  .rest-card-link-primary, .form-submit, .nl-form button, .filtre, .mapa-filtre, .lang-btn,
+  #newsletter form button, #nl-toast-form button, .e404-btn, .e-nl-cta-btn):active { transform: scale(.97); }
+/* Hamburguesa: només transform i opacitat */
+body .hamburger span { transition: transform var(--dur) var(--ease-out), opacity var(--dur-fast) var(--ease-out), background-color var(--dur) var(--ease-out); }
+/* Al mòbil (sense ratolí) les targetes no es queden "aixecades" després de tocar-les */
+@media (hover: none) {
+  body .rest-card:hover { transform: none; box-shadow: none; }
+  body .bp-card:hover { transform: none; box-shadow: var(--shadow-sm); }
+  body :is(.rest-card, .bp-card):hover img { transform: none; }
+}
