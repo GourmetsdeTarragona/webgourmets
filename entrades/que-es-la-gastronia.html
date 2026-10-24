@@ -16,7 +16,7 @@
 <link rel="preload" href="../assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/fonts.css?v=20261010">
 <link rel="stylesheet" href="../assets/css/icons.css?v=20261010">
-<link rel="stylesheet" href="../assets/css/variables.css?v=20261024b">
+<link rel="stylesheet" href="../assets/css/variables.css?v=20261024c">
 <link rel="stylesheet" href="../assets/css/nav.css?v=20261019">
 <link rel="stylesheet" href="../assets/css/seccions.css?v=20261019">
 <style>
@@ -302,7 +302,7 @@ function setLang(lang) {
         <a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a>
       </div>
       <div class="nav-item">
-        <span class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</span>
+        <a href="../pages/associacio.html" class="t" aria-haspopup="true" data-es="La Asociación" data-ca="L'Associació">La Asociación</a>
         <div class="dropdown">
           <a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a>
           <a href="../pages/associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a>
@@ -310,14 +310,14 @@ function setLang(lang) {
         </div>
       </div>
       <div class="nav-item">
-        <span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span>
+        <a href="../pages/restaurants.html" class="t" aria-haspopup="true" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a>
         <div class="dropdown">
           <a href="../pages/restaurants.html" class="t" data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visitas 2025–26</a>
           <a href="../pages/restaurants.html#historic" class="t" data-es="Histórico de visitas" data-ca="Històric de visites">Histórico de visitas</a>
         </div>
       </div>
       <div class="nav-item">
-        <span class="t" data-es="Premios" data-ca="Premis">Premios</span>
+        <a href="../pages/premis.html" class="t" aria-haspopup="true" data-es="Premios" data-ca="Premis">Premios</a>
         <div class="dropdown">
           <a href="../pages/premis.html" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</a>
           <a href="../pages/premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a>
@@ -325,7 +325,7 @@ function setLang(lang) {
         </div>
       </div>
       <div class="nav-item">
-        <span class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</span>
+        <a href="../pages/esdeveniments.html" class="t" aria-haspopup="true" data-es="Eventos" data-ca="Esdeveniments">Eventos</a>
         <div class="dropdown">
           <a href="../pages/esdeveniments.html" class="t" data-es="Cenas especiales" data-ca="Sopars especials">Cenas especiales</a>
           <a href="../pages/esdeveniments.html#cates" class="t" data-es="Catas & Visitas" data-ca="Tasts & Visites">Catas & Visitas</a>
@@ -405,7 +405,7 @@ function setLang(lang) {
   <p class="e-p" data-i18n="g_p1">En algún rincón de la mitología mediterránea, entre los banquetes del Olimpo y los festines de los héroes, debería existir una figura como <strong>Gastronia</strong>. Una presencia femenina que presidiera la mesa, que velara por el producto, la técnica y el placer de comer bien. Si los antiguos griegos y romanos tenían deidades para el vino, la cosecha y el fuego del hogar, no sería descabellado imaginar que también tuvieran una para el arte de la buena mesa.</p>
   <p class="e-p" data-i18n="g_p2">El nombre <strong>Gastronia</strong> evoca esa figura. Nace de las raíces del Mediterráneo clásico, con una sonoridad que recuerda a las grandes diosas de la Antigüedad. Si existe o no en algún texto olvidado de la mitología antigua, es una cuestión que preferimos dejar abierta — y que invitamos a investigar.</p>
 
-  <div class="e-sep">· · ·</div>
+  <div class="e-sep" aria-hidden="true">· · ·</div>
   <span class="e-label" data-i18n="g_l2">El trofeo</span>
   <h2 class="e-title" data-i18n="g_t2">Una pieza diseñada por Joan Blázquez</h2>
   <div class="e-divider"></div>
@@ -422,7 +422,7 @@ function setLang(lang) {
   </div>
   <p class="e-p" data-i18n="g_p4">Cada pieza es única y artesanal. La base de cristal lleva grabada la inscripción con el nombre del restaurante galardonado y el año de concesión, convirtiéndola en un documento permanente de la historia gastronómica del Camp de Tarragona. Una joya, en todos los sentidos.</p>
 
-  <div class="e-sep">· · ·</div>
+  <div class="e-sep" aria-hidden="true">· · ·</div>
   <span class="e-label" data-i18n="g_l3">El proceso</span>
   <h2 class="e-title" data-i18n="g_t3">Ocho criterios, muchos paladares</h2>
   <div class="e-divider"></div>
@@ -441,7 +441,7 @@ function setLang(lang) {
   <p class="e-criteris-nota" data-i18n="g_criteris_nota">Cada socio puntúa de forma independiente. La puntuación final es la media acumulada de todas las visitas de la temporada.</p>
   <p class="e-p" data-i18n="g_p6">Al final del recorrido anual, se suman todas las puntuaciones y se calculan las medias. El restaurante con la puntuación más alta recibe el <strong>1.er Trofeo Gastronia</strong>. El segundo clasificado recibe el <strong>2.º Trofeo</strong>.</p>
 
-  <div class="e-sep">· · ·</div>
+  <div class="e-sep" aria-hidden="true">· · ·</div>
   <span class="e-label" data-i18n="g_l4">Palmarés</span>
   <h2 class="e-title" data-i18n="g_t4">Los galardonados</h2>
   <div class="e-divider"></div>

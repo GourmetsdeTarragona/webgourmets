@@ -16,7 +16,7 @@
 <link rel="preload" href="../assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/fonts.css?v=20261010">
 <link rel="stylesheet" href="../assets/css/icons.css?v=20261010">
-<link rel="stylesheet" href="../assets/css/variables.css?v=20261024b">
+<link rel="stylesheet" href="../assets/css/variables.css?v=20261024c">
 <link rel="stylesheet" href="../assets/css/nav.css?v=20261019">
 <link rel="stylesheet" href="../assets/css/seccions.css?v=20261019">
 <style>
@@ -108,7 +108,7 @@
 .e-guia-item{display:flex;gap:20px;padding:20px 0;border-top:1px solid rgba(255,255,255,.1);align-items:flex-start;}
 .e-guia-item:last-child{border-bottom:1px solid rgba(255,255,255,.1);}
 .e-guia-num{font-family:var(--font-serif);font-size:var(--fs-xl);color:var(--gold);font-weight:700;line-height:1;flex-shrink:0;min-width:44px;}
-.e-guia-text h4{font-family:var(--font-serif);font-size:var(--fs-md);color:#fff;margin-bottom:6px;font-weight:700;}
+.e-guia-text h3{font-family:var(--font-serif);font-size:var(--fs-md);color:#fff;margin-bottom:6px;font-weight:700;}
 .e-guia-text p{font-size:var(--fs-sm);color:rgba(255,255,255,.65);line-height:1.75;font-weight:300;margin:0;}
 .e-guia-text p strong{color:rgba(212,169,106,.95);font-weight:700;}
 
@@ -312,7 +312,7 @@ function setLang(lang) {
         <a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a>
       </div>
       <div class="nav-item">
-        <span class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</span>
+        <a href="../pages/associacio.html" class="t" aria-haspopup="true" data-es="La Asociación" data-ca="L'Associació">La Asociación</a>
         <div class="dropdown">
           <a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a>
           <a href="../pages/associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a>
@@ -320,14 +320,14 @@ function setLang(lang) {
         </div>
       </div>
       <div class="nav-item">
-        <span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span>
+        <a href="../pages/restaurants.html" class="t" aria-haspopup="true" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a>
         <div class="dropdown">
           <a href="../pages/restaurants.html" class="t" data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visitas 2025–26</a>
           <a href="../pages/restaurants.html#historic" class="t" data-es="Histórico de visitas" data-ca="Històric de visites">Histórico de visitas</a>
         </div>
       </div>
       <div class="nav-item">
-        <span class="t" data-es="Premios" data-ca="Premis">Premios</span>
+        <a href="../pages/premis.html" class="t" aria-haspopup="true" data-es="Premios" data-ca="Premis">Premios</a>
         <div class="dropdown">
           <a href="../pages/premis.html" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</a>
           <a href="../pages/premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a>
@@ -335,7 +335,7 @@ function setLang(lang) {
         </div>
       </div>
       <div class="nav-item">
-        <span class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</span>
+        <a href="../pages/esdeveniments.html" class="t" aria-haspopup="true" data-es="Eventos" data-ca="Esdeveniments">Eventos</a>
         <div class="dropdown">
           <a href="../pages/esdeveniments.html" class="t" data-es="Cenas especiales" data-ca="Sopars especials">Cenas especiales</a>
           <a href="../pages/esdeveniments.html#cates" class="t" data-es="Catas & Visitas" data-ca="Tasts & Visites">Catas & Visitas</a>
@@ -436,7 +436,7 @@ function setLang(lang) {
     </div>
   </div>
 
-  <div class="e-sep">· · ·</div>
+  <div class="e-sep" aria-hidden="true">· · ·</div>
 
   <!-- HISTORIA -->
   <span class="e-label t" data-es="Primera parada · Historia" data-ca="Primera parada · Història">Primera parada · Historia</span>
@@ -492,7 +492,7 @@ function setLang(lang) {
     </div>
   </div>
 
-  <div class="e-sep">· · ·</div>
+  <div class="e-sep" aria-hidden="true">· · ·</div>
 
   <!-- LES 6 DOs -->
   <span class="e-label t" data-es="Segunda parada · Las ocho denominaciones" data-ca="Segona parada · Les vuit denominacions">Segunda parada · Las ocho denominaciones</span>
@@ -640,7 +640,7 @@ function setLang(lang) {
     </div>
   </div>
 
-  <div class="e-sep">· · ·</div>
+  <div class="e-sep" aria-hidden="true">· · ·</div>
 
   <!-- SÒLS -->
   <span class="e-label t" data-es="Tercera parada · Los suelos" data-ca="Tercera parada · Els sòls">Tercera parada · Los suelos</span>
@@ -665,7 +665,7 @@ function setLang(lang) {
   <h3 class="e-subtitle t" data-es="Francoarcilloso — Conca, partes bajas" data-ca="Francoargilós — Conca, parts baixes">Francoarcilloso — Conca, partes bajas</h3>
   <p class="e-p t" data-es="Mezcla equilibrada de arena, limo y arcilla. El suelo más «fácil» para la viticultura. Vinos con <strong>más redondez y menos angulosidad</strong>. Suelo habitual de los tintos jóvenes de la Conca y gran parte del Camp." data-ca="Barreja equilibrada de sorra, llim i argila. El sòl més «fàcil» per a la viticultura. Vins amb <strong>més rodonesa i menys angulositat</strong>. Sòl habitual dels negres joves de la Conca i de gran part del Camp.">Mezcla equilibrada de arena, limo y arcilla. El suelo más «fácil» para la viticultura. Vinos con <strong>más redondez y menos angulosidad</strong>. Suelo habitual de los tintos jóvenes de la Conca y gran parte del Camp.</p>
 
-  <div class="e-sep">· · ·</div>
+  <div class="e-sep" aria-hidden="true">· · ·</div>
 
   <!-- VARIETATS -->
   <span class="e-label t" data-es="Cuarta parada · Las variedades" data-ca="Quarta parada · Les varietats">Cuarta parada · Las variedades</span>
@@ -759,7 +759,7 @@ function setLang(lang) {
     </div>
   </div>
 
-  <div class="e-sep">· · ·</div>
+  <div class="e-sep" aria-hidden="true">· · ·</div>
 
   <!-- ELABORACIÓ -->
   <div class="e-grid-2">
@@ -783,7 +783,7 @@ function setLang(lang) {
     </div>
   </div>
 
-  <div class="e-sep">· · ·</div>
+  <div class="e-sep" aria-hidden="true">· · ·</div>
 
   <!-- MARIDATGES -->
   <span class="e-label t" data-es="Sexta parada · La mesa" data-ca="Sisena parada · La taula">Sexta parada · La mesa</span>
@@ -823,7 +823,7 @@ function setLang(lang) {
     </div>
   </div>
 
-  <div class="e-sep">· · ·</div>
+  <div class="e-sep" aria-hidden="true">· · ·</div>
 
   <!-- GUIA SOCI -->
   <div class="e-guia">
@@ -837,35 +837,35 @@ function setLang(lang) {
     <div class="e-guia-item">
       <span class="e-guia-num">01</span>
       <div class="e-guia-text">
-        <h4 class="t" data-es="Decide el vino a la vez que el plato" data-ca="Decideix el vi alhora que el plat">Decide el vino a la vez que el plato</h4>
+        <h3 class="t" data-es="Decide el vino a la vez que el plato" data-ca="Decideix el vi alhora que el plat">Decide el vino a la vez que el plato</h3>
         <p class="t" data-es="Abre la carta de vinos al mismo tiempo que la de platos. <strong>El vino no es un accesorio</strong>: elegirlo con calma te ahorra la mitad de los disgustos." data-ca="Obre la carta de vins al mateix temps que la de plats. <strong>El vi no és un accessori</strong>: triar-lo amb calma t'estalvia la meitat dels disgustos.">Abre la carta de vinos al mismo tiempo que la de platos. <strong>El vino no es un accesorio</strong>: elegirlo con calma te ahorra la mitad de los disgustos.</p>
       </div>
     </div>
     <div class="e-guia-item">
       <span class="e-guia-num">02</span>
       <div class="e-guia-text">
-        <h4 class="t" data-es="Ajusta el vino al plato principal" data-ca="Ajusta el vi al plat principal">Ajusta el vino al plato principal</h4>
+        <h3 class="t" data-es="Ajusta el vino al plato principal" data-ca="Ajusta el vi al plat principal">Ajusta el vino al plato principal</h3>
         <p class="t" data-es="<strong>Pescado, arroz o marisco → blanco o rosado.</strong> <strong>Carne, guiso o caza → tinto.</strong> Es la regla más básica y la que falla menos." data-ca="<strong>Peix, arròs o marisc → blanc o rosat.</strong> <strong>Carn, guisat o caça → negre.</strong> És la regla més bàsica i la que falla menys."><strong>Pescado, arroz o marisco → blanco o rosado.</strong> <strong>Carne, guiso o caza → tinto.</strong> Es la regla más básica y la que falla menos.</p>
       </div>
     </div>
     <div class="e-guia-item">
       <span class="e-guia-num">03</span>
       <div class="e-guia-text">
-        <h4 class="t" data-es="Pide vino del territorio" data-ca="Demana vi del territori">Pide vino del territorio</h4>
+        <h3 class="t" data-es="Pide vino del territorio" data-ca="Demana vi del territori">Pide vino del territorio</h3>
         <p class="t" data-es="Si estás en Tarragona, elige un vino de la provincia. <strong>Priorat, Montsant, Tarragona, Conca de Barberà, Terra Alta y Penedès</strong> ofrecen propuestas para todos los gustos y presupuestos." data-ca="Si ets a Tarragona, tria un vi de la província. <strong>Priorat, Montsant, Tarragona, Conca de Barberà, Terra Alta i Penedès</strong> ofereixen propostes per a tots els gustos i pressupostos.">Si estás en Tarragona, elige un vino de la provincia. <strong>Priorat, Montsant, Tarragona, Conca de Barberà, Terra Alta y Penedès</strong> ofrecen propuestas para todos los gustos y presupuestos.</p>
       </div>
     </div>
     <div class="e-guia-item">
       <span class="e-guia-num">04</span>
       <div class="e-guia-text">
-        <h4 class="t" data-es="Si el tinto llega caliente, pídelo en hielo" data-ca="Si el negre arriba calent, demana'l en gel">Si el tinto llega caliente, pídelo en hielo</h4>
+        <h3 class="t" data-es="Si el tinto llega caliente, pídelo en hielo" data-ca="Si el negre arriba calent, demana'l en gel">Si el tinto llega caliente, pídelo en hielo</h3>
         <p class="t" data-es="Un tinto a temperatura de comedor en verano sabe a alcohol y poco más. Debe estar <strong>fresco al tacto</strong>. No es una pijada, es lo correcto." data-ca="Un negre a temperatura de menjador a l'estiu sap a alcohol i poca cosa més. Ha d'estar <strong>fresc al tacte</strong>. No és cap caprici, és el que toca.">Un tinto a temperatura de comedor en verano sabe a alcohol y poco más. Debe estar <strong>fresco al tacto</strong>. No es una pijada, es lo correcto.</p>
       </div>
     </div>
     <div class="e-guia-item">
       <span class="e-guia-num">05</span>
       <div class="e-guia-text">
-        <h4 class="t" data-es="Si hay sumiller, dale tres datos y déjale elegir" data-ca="Si hi ha sommelier, dona-li tres dades i deixa'l triar">Si hay sumiller, dale tres datos y déjale elegir</h4>
+        <h3 class="t" data-es="Si hay sumiller, dale tres datos y déjale elegir" data-ca="Si hi ha sommelier, dona-li tres dades i deixa'l triar">Si hay sumiller, dale tres datos y déjale elegir</h3>
         <p class="t" data-es="No hace falta fingir conocimientos. Dile tres cosas: <strong>cuánto quieres gastar, qué vais a comer y qué tipo de vino te apetece</strong>. Un buen sumiller te llevará a un vino que no conocías." data-ca="No cal fingir coneixements. Digues-li tres coses: <strong>quant vols gastar, què menjareu i quin tipus de vi et ve de gust</strong>. Un bon sommelier et portarà a un vi que no coneixies.">No hace falta fingir conocimientos. Dile tres cosas: <strong>cuánto quieres gastar, qué vais a comer y qué tipo de vino te apetece</strong>. Un buen sumiller te llevará a un vino que no conocías.</p>
       </div>
     </div>

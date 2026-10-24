@@ -158,12 +158,12 @@ function blocPortada() {
       ${enllacosRestaurant(destacat, 'bc-dos dest-dos') || `<p class="bc-dos dest-dos"><a class="t" href="../entrades/${d.slug}.html" data-es="Leer el artículo →" data-ca="Llegir l'article →">Leer el artículo →</a></p>`}
     </div>
   </article>
-  <aside class="impr" aria-labelledby="impr-tit">
+  <section class="impr" aria-labelledby="impr-tit">
     ${t('impr-tit', 'Imprescindibles', 'Imprescindibles', 'h2', ' id="impr-tit"')}
     <ol>
 ${imprescindibles.map((p, i) => `      <li><span class="impr-num" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span><a class="t" href="../entrades/${p.slug}.html" data-es="${esc(p.titol_es)}" data-ca="${esc(p.titol_ca)}">${esc(p.titol_es)}</a></li>`).join('\n')}
     </ol>
-  </aside>
+  </section>
 </section>
 <section class="secundaris" aria-label="Más recientes">
 ${secundaris.map(u => targeta(u, true)).join('\n')}

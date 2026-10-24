@@ -16,7 +16,7 @@
 <link rel="preload" href="../assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/fonts.css?v=20261010">
 <link rel="stylesheet" href="../assets/css/icons.css?v=20261010">
-<link rel="stylesheet" href="../assets/css/variables.css?v=20261024b">
+<link rel="stylesheet" href="../assets/css/variables.css?v=20261024c">
 <link rel="stylesheet" href="../assets/css/nav.css?v=20261019">
 <link rel="stylesheet" href="../assets/css/seccions.css?v=20261019">
 <style>
@@ -254,7 +254,7 @@
         <a href="../index.html" class="t" data-es="Inicio" data-ca="Inici">Inicio</a>
       </div>
       <div class="nav-item">
-        <span class="t" data-es="La Asociación" data-ca="L'Associació">La Asociación</span>
+        <a href="../pages/associacio.html" class="t" aria-haspopup="true" data-es="La Asociación" data-ca="L'Associació">La Asociación</a>
         <div class="dropdown">
           <a href="../pages/associacio.html" class="t" data-es="Quiénes somos" data-ca="Qui som">Quiénes somos</a>
           <a href="../pages/associacio.html#funcionament" class="t" data-es="Cómo funcionamos" data-ca="Com funcionem">Cómo funcionamos</a>
@@ -262,14 +262,14 @@
         </div>
       </div>
       <div class="nav-item">
-        <span class="t" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</span>
+        <a href="../pages/restaurants.html" class="t" aria-haspopup="true" data-es="Restaurantes" data-ca="Restaurants">Restaurantes</a>
         <div class="dropdown">
           <a href="../pages/restaurants.html" class="t" data-es="Visitas 2025–26" data-ca="Visites 2025–26">Visitas 2025–26</a>
           <a href="../pages/restaurants.html#historic" class="t" data-es="Histórico de visitas" data-ca="Històric de visites">Histórico de visitas</a>
         </div>
       </div>
       <div class="nav-item">
-        <span class="t" data-es="Premios" data-ca="Premis">Premios</span>
+        <a href="../pages/premis.html" class="t" aria-haspopup="true" data-es="Premios" data-ca="Premis">Premios</a>
         <div class="dropdown">
           <a href="../pages/premis.html" class="t" data-es="Trofeo Gastronia" data-ca="Trofeu Gastronia">Trofeo Gastronia</a>
           <a href="../pages/premis.html#bacus" class="t" data-es="Premio Bacus" data-ca="Premi Bacus">Premio Bacus</a>
@@ -277,7 +277,7 @@
         </div>
       </div>
       <div class="nav-item">
-        <span class="t" data-es="Eventos" data-ca="Esdeveniments">Eventos</span>
+        <a href="../pages/esdeveniments.html" class="t" aria-haspopup="true" data-es="Eventos" data-ca="Esdeveniments">Eventos</a>
         <div class="dropdown">
           <a href="../pages/esdeveniments.html" class="t" data-es="Cenas especiales" data-ca="Sopars especials">Cenas especiales</a>
           <a href="../pages/esdeveniments.html#cates" class="t" data-es="Catas & Visitas" data-ca="Tasts & Visites">Catas & Visitas</a>
@@ -380,7 +380,7 @@
     </div>
   </div>
 
-  <div class="e-sep">· · ·</div>
+  <div class="e-sep" aria-hidden="true">· · ·</div>
 
   <!-- ACTE 1: ENTRANTS FREDS -->
   <div class="e-acte">
@@ -399,7 +399,7 @@
     <img loading="lazy" decoding="async" src="../assets/img/goleta/goleta-langostins.jpg" alt="Amanida de llagostins amb vinagreta d'alvocat i caviar">
   </div>
 
-  <div class="e-sep">· · ·</div>
+  <div class="e-sep" aria-hidden="true">· · ·</div>
 
   <!-- ACTE 2: ENTRANTS CALENTS -->
   <div class="e-acte">
@@ -418,7 +418,7 @@
     <div class="e-foto-gran-peu" data-i18n="goleta_calamars_peu">Calamares de la ría salteados con habitas y almejas</div>
   </div>
 
-  <div class="e-sep">· · ·</div>
+  <div class="e-sep" aria-hidden="true">· · ·</div>
 
   <!-- ACTE 3: RAPES -->
   <div class="e-acte">
@@ -441,7 +441,7 @@
     <div class="e-foto-gran-peu" data-i18n="goleta_tempura_peu">Tempura de rape con crema de roquefort — el plato más comentado de la noche</div>
   </div>
 
-  <div class="e-sep">· · ·</div>
+  <div class="e-sep" aria-hidden="true">· · ·</div>
 
   <!-- ACTE 4: POSTRE -->
   <div class="e-grid-2" style="margin-top:0;margin-bottom:0;">
@@ -460,7 +460,7 @@
 
   <!-- BLOC VINS -->
   <div class="e-vins">
-    <span class="e-label" style="color:rgba(184,146,74,.8);" data-i18n="goleta_vins_label">El vino de la velada</span>
+    <span class="e-label" style="color:var(--gold-light);" data-i18n="goleta_vins_label">El vino de la velada</span>
     <h3 class="e-vins-title" data-i18n="goleta_vins_title">Un vino único para toda la noche</h3>
     <p class="e-vins-desc" data-i18n="goleta_vins_desc">Ignacio Ureña tomó una decisión poco habitual: un único vino para acompañar todos los platos. La coherencia del maridaje resultó más poderosa que la variedad.</p>
     <div class="e-vins-grid">
@@ -497,7 +497,7 @@
     </div>
   </div>
 
-  <div class="e-sep">· · ·</div>
+  <div class="e-sep" aria-hidden="true">· · ·</div>
 
   <!-- MOMENT FINAL -->
   <div class="e-acte">

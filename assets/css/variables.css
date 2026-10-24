@@ -278,3 +278,21 @@ body .entrada-hero-content { box-sizing: border-box; width: 100%; max-width: 900
 @media (max-width: 680px) {
   body #hero .hero-content, body .page-hero-inner, body .nl-hero-inner, body .entrada-hero-content { padding-left: 5%; padding-right: 5%; }
 }
+
+/* ===== Revisió d'accessibilitat WCAG 2.1 AA (24/10/2026) ===== */
+/* Focus: anell daurat amb halo blau marí, visible tant sobre clar com sobre fosc (3:1) */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible,
+textarea:focus-visible, [tabindex]:focus-visible, summary:focus-visible {
+  box-shadow: 0 0 0 6px var(--navy) !important;
+}
+/* Textos amb transparència que no arribaven a 4,5:1 */
+body .rest-card-data, body .e-foto-gran-peu, body .e-foto-peu, body .e-foto-2col figcaption, body .e-set-com { opacity: 1; }
+body .fet .cal-data, body .cal li.fet .cal-cos h3 { opacity: .8; }
+body .historic-any-num { opacity: .55; }
+body .nl-priv, body .nl-cta-inner p { color: rgba(255,255,255,.8); }
+body .nl-cta-note { color: rgba(255,255,255,.7); }
+body .llibre-bloc:nth-child(even) .llibre-num { color: #fff; }
+body .llibre-tag { background: transparent; }
+/* Zones tàctils de 24 px o més (sense canviar l'aspecte) */
+body :is(.impr li > a, .contacte-info-val a, .faq-link) { position: relative; }
+body :is(.impr li > a, .contacte-info-val a, .faq-link)::after { content: ""; position: absolute; inset: -10px -4px; }
