@@ -64,7 +64,7 @@
 <link rel="preload" as="image" href="../assets/img/pages/blog-hero.webp" type="image/webp" media="(min-width: 681px)" fetchpriority="high">
 <link rel="preload" as="image" href="../assets/img/pages/blog-hero-mobile.webp" type="image/webp" media="(max-width: 680px)" fetchpriority="high">
 <link rel="stylesheet" href="../assets/css/icons.css?v=20261010">
-<link rel="stylesheet" href="../assets/css/variables.css?v=20261024">
+<link rel="stylesheet" href="../assets/css/variables.css?v=20261024b">
 <link rel="stylesheet" href="../assets/css/nav.css?v=20261019">
 <link rel="stylesheet" href="../assets/css/seccions.css?v=20261019">
 
@@ -97,6 +97,8 @@
 /* ── Filtres fixos en fer scroll ── */
 .filtres{position:sticky;top:69px;z-index:50;background:rgba(248,244,236,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);}
 .filtres-inner{max-width:1180px;margin:0 auto;padding:0 4%;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
+/* Al mòbil les pestanyes s'esvaeixen a la dreta: indica que n'hi ha més lliscant */
+@media(max-width:760px){.filtres-inner{-webkit-mask-image:linear-gradient(to right,#000 85%,transparent);mask-image:linear-gradient(to right,#000 85%,transparent);}}
 .filtres-inner::-webkit-scrollbar{display:none;}
 .filtre{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;background:none;border:0;border-bottom:2px solid transparent;padding:16px 14px 14px;font-family:var(--font-body);font-size:var(--fs-xs);font-weight:700;letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--muted);cursor:pointer;transition:color var(--dur),border-color var(--dur);min-height:48px;}
 .filtre:hover{color:var(--navy);}

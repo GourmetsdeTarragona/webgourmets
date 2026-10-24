@@ -266,3 +266,15 @@ body .page-hero-grad, body .nl-hero-grad, body .bh-grad, body .entrada-hero-grad
       linear-gradient(to top, rgba(11,22,38,.96) 0%, rgba(11,22,38,.7) 45%, rgba(11,22,38,0) 78%);
   }
 }
+
+/* ===== Marge de les capçaleres (24/10/2026) =====
+   El text de la capçalera comença al mateix marge que el contingut de sota:
+   pàgines i portada com .sec-inner; articles com la columna de lectura (.entrada-cos). */
+body #hero .hero-content, body .page-hero-inner, body .nl-hero-inner {
+  box-sizing: border-box; width: 100%; max-width: var(--max); margin-left: auto; margin-right: auto; padding-left: 4%; padding-right: 4%;
+}
+body #hero .hero-content > *, body .page-hero-inner > *, body .nl-hero-inner > * { max-width: 760px; }
+body .entrada-hero-content { box-sizing: border-box; width: 100%; max-width: 900px; margin-left: auto; margin-right: auto; padding-left: 4%; padding-right: 4%; }
+@media (max-width: 680px) {
+  body #hero .hero-content, body .page-hero-inner, body .nl-hero-inner, body .entrada-hero-content { padding-left: 5%; padding-right: 5%; }
+}
