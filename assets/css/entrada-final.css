@@ -149,3 +149,18 @@ main .e-vi-do,main .e-menu-sub{font-size:var(--e-peu);line-height:1.5;}
 main .e-title,main .e-acte .e-title{font-size:var(--e-h2);line-height:1.2;}
 main .e-vins-title,main .e-menu-title{font-size:var(--e-h3);line-height:1.25;}
 main .e-cita-text,main .e-cita > p{font-size:var(--e-cita);line-height:1.5;}
+
+/* ===== Capçalera de l'article (design-system/MASTER.md, 24/10/2026) =====
+   Sense "Tornar al blog" (ja hi ha les engrunes a sota), una sola línia de dades
+   (sense autor ni minuts, que ja surten a les engrunes) i el subtítol separat del títol. */
+body .entrada-hero .entrada-back { display: none; }
+body .entrada-meta-info { display: flex; flex-wrap: wrap; align-items: center; gap: 0; }
+body .entrada-meta-item:has(.fa-pen-nib), body .entrada-meta-item:has(.fa-book-open) { display: none; }
+body .entrada-meta-item i { display: none; }
+body .entrada-meta-item:not(:has(.fa-pen-nib, .fa-book-open)) ~ .entrada-meta-item:not(:has(.fa-pen-nib, .fa-book-open))::before { content: "·"; margin: 0 .6em; opacity: .7; }
+body .entrada-titol.amb-sub em { display: block; font-size: clamp(var(--fs-lg), 2.6vw, var(--fs-xl)); line-height: 1.25; margin-top: .4em; }
+@media (max-width: 680px) {
+  body .entrada-meta-info { gap: 4px 1.2em; }
+  body .entrada-meta-item::before { content: none !important; }
+  body .entrada-subtitol { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+}

@@ -171,6 +171,7 @@ Los niveles grandes pueden ser fluidos con `clamp(móvil, …, escritorio)` usan
 - WebP, `width`/`height` declarados, `loading="lazy"` salvo la principal (`fetchpriority="high"`).
 - Antes de subir: `node tools/optimiza-imatges.js`.
 - **Cabeceras con foto:** la foto siempre al 100 % de opacidad; la sombra solo detrás del texto (abajo, izquierda y franja fina arriba para el menú). Regla común al final de `variables.css`; no oscurecer la foto en cada página. Si una foto es oscura de origen, se le sube el brillo solo a ella (Premios: +35 %).
+- **Cabecera de artículo:** etiqueta + una sola línea de datos (lugar · fecha; sin autor ni minutos, que ya están en las migas) y sin «Volver al blog». Título con frase larga: `<h1 class="entrada-titol amb-sub">Nombre <em>frase</em></h1>` (sin « · »); la frase sale debajo, más pequeña. En móvil la entradilla se corta a 3 líneas. Estilos en `entrada-final.css`.
 
 ---
 
