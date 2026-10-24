@@ -5,8 +5,18 @@
     <link>https://www.gourmetsdetarragona.com/pages/blog.html</link>
     <description>Crónicas de restaurantes, vinos, producto y cultura gastronómica del Camp de Tarragona.</description>
     <language>es-ES</language>
-    <lastBuildDate>Fri, 16 Oct 2026 09:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 09:00:00 +0200</lastBuildDate>
     <atom:link href="https://www.gourmetsdetarragona.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>El Pòsit de la Pineda · Vila-seca — Previa · 8ª visita 2026</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/posit-pineda-previa-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/posit-pineda-previa-2026.html</guid>
+      <pubDate>Sat, 24 Oct 2026 09:00:00 +0200</pubDate>
+      <category>Previa</category>
+      <description>Medio siglo de cocina marinera, de la lonja de Cambrils a una antigua discoteca de La Pineda. Cerramos la temporada el 5 de noviembre.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/posit/pineda-hero.webp" medium="image"/>
+    </item>
 
     <item>
       <title>Las catedrales del vino — Cèsar Martinell, discípulo de Gaudí</title>
