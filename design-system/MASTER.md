@@ -170,6 +170,7 @@ Los niveles grandes pueden ser fluidos con `clamp(móvil, …, escritorio)` usan
 - Solo fotos reales. Fotos de restaurantes y Michelin: solo en su artículo.
 - WebP, `width`/`height` declarados, `loading="lazy"` salvo la principal (`fetchpriority="high"`).
 - Antes de subir: `node tools/optimiza-imatges.js`.
+- **Cabeceras con foto:** la foto siempre al 100 % de opacidad; la sombra solo detrás del texto (abajo, izquierda y franja fina arriba para el menú). Regla común al final de `variables.css`; no oscurecer la foto en cada página. Si una foto es oscura de origen, se le sube el brillo solo a ella (Premios: +35 %).
 
 ---
 

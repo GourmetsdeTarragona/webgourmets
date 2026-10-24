@@ -64,7 +64,7 @@
 <link rel="preload" as="image" href="../assets/img/premis/premis-hero.webp" type="image/webp" media="(min-width: 681px)" fetchpriority="high">
 <link rel="preload" as="image" href="../assets/img/premis/premis-hero-mobile.webp" type="image/webp" media="(max-width: 680px)" fetchpriority="high">
 <link rel="stylesheet" href="../assets/css/icons.css?v=20261010">
-<link rel="stylesheet" href="../assets/css/variables.css?v=20261019b">
+<link rel="stylesheet" href="../assets/css/variables.css?v=20261024">
 <link rel="stylesheet" href="../assets/css/nav.css?v=20261019">
 <link rel="stylesheet" href="../assets/css/seccions.css?v=20261019">
 <style>
@@ -73,6 +73,8 @@
 @keyframes clipReveal{from{clip-path:inset(0 0 100% 0);}to{clip-path:inset(0 0 0% 0);}}
 .page-hero{position:relative;min-height:64vh;display:flex;align-items:flex-end;overflow:hidden;padding:120px 0 0;background:var(--navy-ink);}
 .page-hero-bg{position:absolute;inset:0;background-image:url('../assets/img/premis/premis-hero.webp');background-size:cover;background-position:center 45%;opacity:.7;filter:brightness(1.05) contrast(1.05);animation:premisSettle 2.8s var(--ease-out) both;}
+/* La foto de les bótes és fosca d'origen: una mica més de llum (24/10/2026) */
+html body .page-hero-bg{filter:brightness(1.35) saturate(1.05);}
 .page-hero-grad{position:absolute;inset:0;background:linear-gradient(to right,rgba(11,22,38,.6) 0%,rgba(11,22,38,.2) 55%,transparent 80%),linear-gradient(to top,rgba(11,22,38,.95) 0%,rgba(11,22,38,.55) 50%,rgba(11,22,38,.25) 100%);}
 .page-hero-line{position:absolute;left:4%;top:22%;bottom:15%;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.4),transparent);animation:clipReveal 1.2s var(--ease-out) .4s both;}
 .page-hero-inner{position:relative;z-index:2;max-width:860px;margin:0 auto;padding:0 5% 72px;width:100%;}
