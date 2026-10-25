@@ -85,6 +85,26 @@
 .e-set-com{display:block;color:var(--muted);opacity:.85;font-style:italic;}
 @media(max-width:860px){.e-set{grid-template-columns:1fr 1fr;}.e-set figure:first-child{grid-column:span 2;}}
 @media(max-width:480px){.e-set{grid-template-columns:1fr;}.e-set figure:first-child{grid-column:span 1;}}
+.e-programa{background:var(--cream);border:1px solid var(--border);padding:36px;margin:40px 0;}
+.e-programa-title{font-family:var(--font-serif);font-size:var(--fs-md);color:var(--navy-dark);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+.e-programa-title i{color:var(--gold);}
+.e-programa-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:12px;}
+.e-programa-hora{font-size:var(--fs-xs);font-weight:700;color:var(--gold);letter-spacing:1px;white-space:nowrap;padding-top:2px;min-width:58px;}
+.e-programa-desc{font-size:var(--fs-sm);color:var(--muted);line-height:1.6;}
+.e-convidat{background:var(--navy-dark);padding:36px;margin:40px 0;display:flex;gap:28px;align-items:flex-start;}
+.e-convidat-avatar{width:56px;height:56px;border-radius:50%;background:rgba(184,146,74,.2);border:1px solid rgba(184,146,74,.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:var(--fs-md);color:var(--gold);}
+.e-convidat-label{font-size:var(--fs-xs);font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(184,146,74,.7);margin-bottom:6px;}
+.e-convidat-nom{font-family:var(--font-serif);font-size:var(--fs-md);color:#fff;margin-bottom:4px;}
+.e-convidat-desc{font-size:var(--fs-sm);color:rgba(255,255,255,.55);font-weight:300;line-height:1.7;}
+.e-menu{background:var(--cream);border:1px solid var(--border);padding:48px;margin:52px 0;}
+.e-menu-title{font-family:var(--font-serif);font-size:var(--fs-lg);color:var(--navy-dark);margin-bottom:6px;text-align:center;}
+.e-menu-sub{font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:30px;}
+.e-plats-grup{margin-bottom:28px;}
+.e-plats-grup:last-child{margin-bottom:0;}
+.e-plats-tit{font-size:var(--fs-xs);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-align:center;padding-bottom:10px;border-bottom:1px solid var(--border);margin-bottom:14px;}
+.e-plats-llista{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+.e-plats-llista li{font-size:var(--fs-sm);font-weight:300;color:var(--navy-dark);line-height:1.6;text-align:center;}
+@media(max-width:768px){.e-menu{padding:28px 18px;}.e-convidat{flex-direction:column;gap:16px;}.e-programa{padding:26px 18px;}}
 .e-compartir{position:relative;margin:64px 0 0;padding:56px 40px 52px;background:linear-gradient(135deg,var(--navy-ink) 0%,#122850 100%);overflow:hidden;}
 .e-compartir::before{content:'';position:absolute;top:-1px;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#b8924a 30%,#d4a96a 50%,#b8924a 70%,transparent);}
 .e-compartir::after{content:'"';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:14rem;font-weight:700;color:rgba(184,146,74,.06);line-height:1;pointer-events:none;user-select:none;}
@@ -418,19 +438,89 @@
   </div>
 
   <div class="e-divider"></div>
+  <span class="e-label t" data-es="El invitado" data-ca="El convidat">El invitado</span>
+  <h2 class="e-title t" data-es="Turismo en Salou, contado desde dentro" data-ca="Turisme a Salou, explicat des de dins">Turismo en Salou, contado desde dentro</h2>
+
+  <div class="e-convidat">
+    <div class="e-convidat-avatar">AF</div>
+    <div>
+      <div class="e-convidat-label t" data-es="Ponente invitado" data-ca="Ponent convidat">Ponente invitado</div>
+      <div class="e-convidat-nom">Agustín Falcón</div>
+      <div class="e-convidat-desc t" data-es="Responsable de calidad y director técnico de los Hoteles Best. Nos hablará del turismo en Salou, que es el vecino de al lado de La Pineda y buena parte de la razón de que esta costa sea como es." data-ca="Responsable de qualitat i director tècnic dels Hotels Best. Ens parlarà del turisme a Salou, que és el veí del costat de la Pineda i bona part de la raó que aquesta costa sigui com és.">Responsable de calidad y director técnico de los Hoteles Best. Nos hablará del turismo en Salou, que es el vecino de al lado de La Pineda y buena parte de la razón de que esta costa sea como es.</div>
+    </div>
+  </div>
+
+  <div class="e-programa">
+    <p class="e-programa-title"><i class="fa fa-clock" aria-hidden="true"></i> <span class="t" data-es="Programa de la velada" data-ca="Programa de la vetllada">Programa de la velada</span></p>
+    <div class="e-programa-item"><span class="e-programa-hora">20:30 h</span><span class="e-programa-desc t" data-es="Recepción y encuentro de los socios" data-ca="Recepció i trobada dels socis">Recepción y encuentro de los socios</span></div>
+    <div class="e-programa-item"><span class="e-programa-hora">20:45 h</span><span class="e-programa-desc t" data-es="Presentación del restaurante y del invitado" data-ca="Presentació del restaurant i del convidat">Presentación del restaurante y del invitado</span></div>
+    <div class="e-programa-item"><span class="e-programa-hora">21:00 h</span><span class="e-programa-desc t" data-es="Inicio de la cena" data-ca="Inici del sopar">Inicio de la cena</span></div>
+    <div class="e-programa-item"><span class="e-programa-hora">23:30 h</span><span class="e-programa-desc t" data-es="Final de la velada y entrega del premio" data-ca="Final de la vetllada i lliurament del premi">Final de la velada y entrega del premio</span></div>
+  </div>
+
+  <div class="e-divider"></div>
   <span class="e-label t" data-es="El menú" data-ca="El menú">El menú</span>
-  <h2 class="e-title t" data-es="Lo sabremos unos días antes" data-ca="Ho sabrem uns dies abans">Lo sabremos unos días antes</h2>
+  <h2 class="e-title t" data-es="Lo que saldrá a la mesa" data-ca="El que sortirà a taula">Lo que saldrá a la mesa</h2>
 
   <p class="e-p t"
-     data-es="El menú de la velada todavía no está cerrado, y lo publicaremos aquí en cuanto lo tengamos. Mientras tanto, lo que la casa defiende en su carta da bastantes pistas: <strong>arroces</strong> —de gamba roja de Tarragona, de pato del Delta, senyoret, negro de sepia—, <strong>romescada de rape</strong>, <strong>bacalao en suquet de pescador</strong> y la <strong>brasa de mar</strong>, con pulpo, calamar y rodaballo."
-     data-ca="El menú de la vetllada encara no està tancat, i el publicarem aquí tan bon punt el tinguem. Mentrestant, el que la casa defensa a la carta ja dona bastants pistes: <strong>arrossos</strong> —de gamba vermella de Tarragona, d'ànec del Delta, senyoret, negre de sípia—, <strong>romescada de rap</strong>, <strong>bacallà en suquet de pescador</strong> i la <strong>brasa de mar</strong>, amb pop, calamar i rèmol.">
-    El menú de la velada todavía no está cerrado, y lo publicaremos aquí en cuanto lo tengamos. Mientras tanto, lo que la casa defiende en su carta da bastantes pistas: <strong>arroces</strong> —de gamba roja de Tarragona, de pato del Delta, senyoret, negro de sepia—, <strong>romescada de rape</strong>, <strong>bacalao en suquet de pescador</strong> y la <strong>brasa de mar</strong>, con pulpo, calamar y rodaballo.
+     data-es="Ya está cerrado, y sorprende: no es el recetario marinero de la carta, sino un menú pensado para la ocasión. Tres aperitivos, tres platos y un postre, con el territorio asomando donde menos se espera: la <strong>avellana DOP de Reus</strong> convertida en aceite, y la <strong>ratafía de Apropposit</strong>, la marca de la casa, reducida sobre un solomillo."
+     data-ca="Ja està tancat, i sorprèn: no és el receptari mariner de la carta, sinó un menú pensat per a l'ocasió. Tres aperitius, tres plats i unes postres, amb el territori apareixent on menys s'espera: l'<strong>avellana DOP de Reus</strong> convertida en oli, i la <strong>ratafia d'Apropposit</strong>, la marca de la casa, reduïda damunt un filet.">
+    Ya está cerrado, y sorprende: no es el recetario marinero de la carta, sino un menú pensado para la ocasión. Tres aperitivos, tres platos y un postre, con el territorio asomando donde menos se espera: la <strong>avellana DOP de Reus</strong> convertida en aceite, y la <strong>ratafía de Apropposit</strong>, la marca de la casa, reducida sobre un solomillo.
   </p>
 
+  <div class="e-menu">
+    <p class="e-menu-title t" data-es="Menú Gourmets de Tarragona" data-ca="Menú Gourmets de Tarragona">Menú Gourmets de Tarragona</p>
+    <p class="e-menu-sub t" data-es="El Pòsit de la Pineda · 5 de noviembre de 2026" data-ca="El Pòsit de la Pineda · 5 de novembre del 2026">El Pòsit de la Pineda · 5 de noviembre de 2026</p>
+
+    <div class="e-plats-grup">
+      <p class="e-plats-tit t" data-es="Aperitivos de bienvenida" data-ca="Aperitius de benvinguda">Aperitivos de bienvenida</p>
+      <ul class="e-plats-llista">
+        <li class="t" data-es="Carpaccio de picaña madurada con pan crujiente" data-ca="Carpaccio de picanya madurada amb pa cruixent">Carpaccio de picaña madurada con pan crujiente</li>
+        <li class="t" data-es="Croqueta melosa coronada con velo de ibérico Joselito" data-ca="Croqueta melosa coronada amb vel d&#39;ibèric Joselito">Croqueta melosa coronada con velo de ibérico Joselito</li>
+        <li class="t" data-es="Langostino en crujiente dorado con salsa suave de zanahoria, coco y lima" data-ca="Llagostí en cruixent daurat amb salsa suau de pastanaga, coco i llima">Langostino en crujiente dorado con salsa suave de zanahoria, coco y lima</li>
+      </ul>
+    </div>
+
+    <div class="e-plats-grup">
+      <p class="e-plats-tit t" data-es="Primer plato" data-ca="Primer plat">Primer plato</p>
+      <ul class="e-plats-llista">
+        <li class="t" data-es="Crema sedosa de coliflor con vieira asada y aceite puro de Avellana de Reus DOP" data-ca="Crema sedosa de col-i-flor amb vieira rostida i oli pur d&#39;Avellana de Reus DOP">Crema sedosa de coliflor con vieira asada y aceite puro de Avellana de Reus DOP</li>
+      </ul>
+    </div>
+
+    <div class="e-plats-grup">
+      <p class="e-plats-tit t" data-es="Segundo plato" data-ca="Segon plat">Segundo plato</p>
+      <ul class="e-plats-llista">
+        <li class="t" data-es="Rodaballo asado sobre patata panadera, con salsa de cava, azafrán y mostaza antigua" data-ca="Rèmol rostit damunt patata panadera, amb salsa de cava, safrà i mostassa antiga">Rodaballo asado sobre patata panadera, con salsa de cava, azafrán y mostaza antigua</li>
+      </ul>
+    </div>
+
+    <div class="e-plats-grup">
+      <p class="e-plats-tit t" data-es="Tercer plato" data-ca="Tercer plat">Tercer plato</p>
+      <ul class="e-plats-llista">
+        <li class="t" data-es="Solomillo de vaca con reducción de ratafía Apropposit y setas de temporada" data-ca="Filet de vaca amb reducció de ratafia Apropposit i bolets de temporada">Solomillo de vaca con reducción de ratafía Apropposit y setas de temporada</li>
+      </ul>
+    </div>
+
+    <div class="e-plats-grup">
+      <p class="e-plats-tit t" data-es="El toque dulce" data-ca="El toc dolç">El toque dulce</p>
+      <ul class="e-plats-llista">
+        <li class="t" data-es="Pastel especial Gourmets de Tarragona" data-ca="Pastís especial Gourmets de Tarragona">Pastel especial Gourmets de Tarragona</li>
+      </ul>
+    </div>
+
+    <div class="e-plats-grup">
+      <p class="e-plats-tit t" data-es="Los vinos" data-ca="Els vins">Los vinos</p>
+      <ul class="e-plats-llista">
+        <li class="t" data-es="Vinos de las distintas denominaciones de origen de la provincia de Tarragona" data-ca="Vins de les diferents denominacions d&#39;origen de la província de Tarragona">Vinos de las distintas denominaciones de origen de la provincia de Tarragona</li>
+      </ul>
+    </div>
+  </div>
+
   <p class="e-p t"
-     data-es="Nos vemos el 5 de noviembre. La crónica, como siempre, unos días después."
-     data-ca="Ens veiem el 5 de novembre. La crònica, com sempre, uns dies després.">
-    Nos vemos el 5 de noviembre. La crónica, como siempre, unos días después.
+     data-es="Nos vemos el 5 de noviembre, con la temporada cerrándose. La crónica, como siempre, unos días después."
+     data-ca="Ens veiem el 5 de novembre, amb la temporada tancant-se. La crònica, com sempre, uns dies després.">
+    Nos vemos el 5 de noviembre, con la temporada cerrándose. La crónica, como siempre, unos días después.
   </p>
 
   <p style="font-size:var(--fs-xs);color:var(--muted);font-style:italic;margin-top:32px;padding-top:16px;border-top:1px solid var(--border);" class="t"
