@@ -1,5 +1,18 @@
 [
   {
+    "slug": "que-comer-camp-tarragona-mes-a-mes",
+    "categoria": "curiositats",
+    "data": "2026-11-03",
+    "titol_es": "Qué comer en el Camp de Tarragona, mes a mes",
+    "titol_ca": "Què menjar al Camp de Tarragona, mes a mes",
+    "subtitol_es": "De enero a diciembre, el calendario de temporada",
+    "subtitol_ca": "De gener a desembre, el calendari de temporada",
+    "resum_es": "El calçot, la galera, la carxofa, las cireres, la gamba, la avellana, los bolets y el oli nou. Doce meses de producto de temporada y las ferias que caen siempre por las mismas semanas.",
+    "resum_ca": "El calçot, la galera, la carxofa, les cireres, la gamba, l'avellana, els bolets i l'oli nou. Dotze mesos de producte de temporada i les fires que cauen sempre per les mateixes setmanes.",
+    "img": "assets/img/calcotada/ingredients.jpg",
+    "min_lectura": 4
+  },
+  {
     "slug": "que-miramos-en-un-restaurante",
     "categoria": "cultura",
     "data": "2026-11-03",
