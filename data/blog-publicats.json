@@ -1,5 +1,17 @@
 [
   {
+    "slug": "calcotada-manual-supervivencia",
+    "categoria": "curiositats",
+    "data": "2026-11-03",
+    "titol_es": "Manual de supervivencia en una calçotada",
+    "titol_ca": "Manual de supervivència en una calçotada",
+    "resum_es": "Cómo se coge, se pela y se come un calçot sin delatarte. La guerra del babero, el examen del porró y el aviso más importante: no te llenes.",
+    "resum_ca": "Com s'agafa, es pela i es menja un calçot sense delatar-te. La guerra del pitet, l'examen del porró i l'avís més important: no t'omplis.",
+    "img": "assets/img/calcotada/teula.jpg",
+    "min_lectura": 8,
+    "color_bg": "#122850"
+  },
+  {
     "slug": "posit-pineda-previa-2026",
     "categoria": "previa",
     "data": "2026-10-24",
