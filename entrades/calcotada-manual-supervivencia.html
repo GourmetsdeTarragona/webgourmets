@@ -146,6 +146,16 @@
   .e-pasos li::before{font-size:var(--fs-xl);}
   .e-pasos li::after{left:16px;}
 }
+.e-seguir{margin:56px 0 0;padding:30px 34px;background:var(--cream);border:1px solid var(--border);border-left:4px solid var(--gold);}
+.e-seguir-label{font-size:var(--fs-xs);font-weight:700;letter-spacing:var(--ls-wider);text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:block;}
+.e-seguir ul{list-style:none;margin:0;padding:0;}
+.e-seguir li{display:flex;gap:12px;align-items:baseline;margin-bottom:18px;}
+.e-seguir li:last-child{margin-bottom:0;}
+.e-seguir li>i{color:var(--gold);font-size:.7rem;flex-shrink:0;}
+.e-seguir-nom{font-family:var(--font-serif);font-size:var(--fs-md);color:var(--navy-dark);line-height:1.35;border-bottom:1px solid rgba(184,146,74,.5);padding-bottom:2px;display:inline;transition:color var(--dur),border-color var(--dur);}
+.e-seguir a:hover .e-seguir-nom{color:var(--gold);border-color:var(--gold);}
+.e-seguir-desc{display:block;font-size:var(--fs-sm);font-weight:300;color:var(--muted);line-height:1.6;margin-top:7px;}
+@media(max-width:768px){.e-seguir{padding:24px 20px;}}
 </style>
 </style>
 <script>
@@ -413,7 +423,27 @@
 
   <p class="e-p t" data-es="La temporada ya está abierta: va de noviembre a abril, y en el Camp de Tarragona eso significa que durante cinco meses no hay fin de semana sin humo de sarmiento en algún patio. Cerca de veinte millones de calçots con sello de la IGP salen cada campaña de estas tierras, y te garantizamos que ninguno de ellos se come con cubiertos." data-ca="La temporada ja és oberta: va de novembre a abril, i al Camp de Tarragona això vol dir que durant cinc mesos no hi ha cap cap de setmana sense fum de sarment en algun pati. Prop de vint milions de calçots amb segell de la IGP surten cada campanya d'aquestes terres, i et garantim que cap d'ells no es menja amb coberts.">La temporada ya está abierta: va de noviembre a abril, y en el Camp de Tarragona eso significa que durante cinco meses no hay fin de semana sin humo de sarmiento en algún patio. Cerca de veinte millones de calçots con sello de la IGP salen cada campaña de estas tierras, y te garantizamos que ninguno de ellos se come con cubiertos.</p>
 
-  <p class="e-p t" data-es="Así que ya lo sabes: por el verde, tira hacia abajo, solo la punteta, mira al cielo y no te llenes. El resto lo aprenderás manchándote, que es como se aprende de verdad. Y si te apetece saber de dónde sale todo esto —por qué una cebolla, por qué Valls, por qué esa salsa— lo contamos despacio en <a href='calcot-valls-historia.html'>la historia del calçot de Valls</a> y en <a href='el-romesco.html'>el artículo del romesco</a>." data-ca="Així que ja ho saps: pel verd, estira cap avall, només la punteta, mira al cel i no t'omplis. La resta l'aprendràs embrutant-te, que és com s'aprèn de debò. I si et ve de gust saber d'on surt tot això —per què una ceba, per què Valls, per què aquella salsa— ho expliquem a poc a poc a <a href='calcot-valls-historia.html'>la història del calçot de Valls</a> i a <a href='el-romesco.html'>l'article del romesco</a>.">Así que ya lo sabes: por el verde, tira hacia abajo, solo la punteta, mira al cielo y no te llenes. El resto lo aprenderás manchándote, que es como se aprende de verdad. Y si te apetece saber de dónde sale todo esto —por qué una cebolla, por qué Valls, por qué esa salsa— lo contamos despacio en <a href="calcot-valls-historia.html">la historia del calçot de Valls</a> y en <a href="el-romesco.html">el artículo del romesco</a>.</p>
+  <p class="e-p t" data-es="Así que ya lo sabes: por el verde, tira hacia abajo, solo la punteta, mira al cielo y no te llenes. El resto lo aprenderás manchándote, que es como se aprende de verdad." data-ca="Així que ja ho saps: pel verd, estira cap avall, només la punteta, mira al cel i no t'omplis. La resta l'aprendràs embrutant-te, que és com s'aprèn de debò.">Así que ya lo sabes: por el verde, tira hacia abajo, solo la punteta, mira al cielo y no te llenes. El resto lo aprenderás manchándote, que es como se aprende de verdad.</p>
+
+  <div class="e-seguir">
+    <span class="e-seguir-label t" data-es="Para seguir leyendo" data-ca="Per continuar llegint">Para seguir leyendo</span>
+    <ul>
+      <li>
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        <a href="calcot-valls-historia.html">
+          <span class="e-seguir-nom t" data-es="La historia del calçot de Valls" data-ca="La història del calçot de Valls">La historia del calçot de Valls</span>
+          <span class="e-seguir-desc t" data-es="De dónde sale la cebolla, por qué Valls, la Gran Festa y la discusión eterna sobre la salsa." data-ca="D'on surt la ceba, per què Valls, la Gran Festa i la discussió eterna sobre la salsa.">De dónde sale la cebolla, por qué Valls, la Gran Festa y la discusión eterna sobre la salsa.</span>
+        </a>
+      </li>
+      <li>
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        <a href="el-romesco.html">
+          <span class="e-seguir-nom t" data-es="El romesco" data-ca="El romesco">El romesco</span>
+          <span class="e-seguir-desc t" data-es="La salsa que en esta provincia acompaña casi todo, contada a fondo." data-ca="La salsa que en aquesta província acompanya gairebé tot, explicada a fons.">La salsa que en esta provincia acompaña casi todo, contada a fondo.</span>
+        </a>
+      </li>
+    </ul>
+  </div>
 
   <p class="t" style="font-size:var(--fs-xs);color:var(--muted);font-style:italic;margin-top:40px;padding-top:18px;border-top:1px solid var(--border);" data-es="<strong style='font-style:normal;color:var(--navy-dark);'>Dami Molina</strong> es vocal cultural de Gourmets de Tarragona." data-ca="<strong style='font-style:normal;color:var(--navy-dark);'>Dami Molina</strong> és vocal cultural de Gourmets de Tarragona."><strong style="font-style:normal;color:var(--navy-dark);">Dami Molina</strong> es vocal cultural de Gourmets de Tarragona.</p>
 
