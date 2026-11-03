@@ -12,6 +12,42 @@
     "color_bg": "#122850"
   },
   {
+    "slug": "la-clotxa",
+    "categoria": "curiositats",
+    "data": "2026-11-03",
+    "titol_es": "Aquí el plato también se come",
+    "titol_ca": "Aquí el plat també es menja",
+    "resum_es": "Se vacía un pan, se rellena con lo asado al rescoldo y se come el recipiente. Y según el pueblo se llama clotxa, crostó, canto de pa o clotxina.",
+    "resum_ca": "Es buida un pa, s'omple amb el que s'ha rostit al caliu i es menja el recipient. I segons el poble se'n diu clotxa, crostó, canto de pa o clotxina.",
+    "img": "assets/img/clotxa/clotxa-hero.jpg",
+    "min_lectura": 5,
+    "color_bg": "#122850"
+  },
+  {
+    "slug": "oli-nou-siurana",
+    "categoria": "curiositats",
+    "data": "2026-11-03",
+    "titol_es": "Por qué el aceite nuevo pica",
+    "titol_ca": "Per què l'oli nou pica",
+    "resum_es": "Si raspa la garganta no está malo: es oleocanthal, el polifenol que actúa como el ibuprofeno. Y está en la definición oficial del Siurana.",
+    "resum_ca": "Si raspa la gola no està dolent: és oleocantal, el polifenol que actua com l'ibuprofè. I és a la definició oficial del Siurana.",
+    "img": "assets/img/oli/oliveres-cabaces.jpg",
+    "min_lectura": 4,
+    "color_bg": "#122850"
+  },
+  {
+    "slug": "que-miramos-en-un-restaurante",
+    "categoria": "cultura",
+    "data": "2026-11-03",
+    "titol_es": "Lo que miramos cuando entramos en un restaurante",
+    "titol_ca": "Què mirem quan entrem en un restaurant",
+    "resum_es": "No elegimos el menú: lo propone la casa, con el mismo presupuesto que todas y sabiendo que seremos treinta. Los criterios con los que valoramos, y por qué el voto es secreto hasta la Gala.",
+    "resum_ca": "No triem el menú: el proposa la casa, amb el mateix pressupost que totes i sabent que serem trenta. Els criteris amb què valorem, i per què el vot és secret fins a la Gala.",
+    "img": "assets/img/galliner/cronica/foto-grup.jpg",
+    "min_lectura": 8,
+    "color_bg": "#122850"
+  },
+  {
     "slug": "posit-pineda-previa-2026",
     "categoria": "previa",
     "data": "2026-10-24",
