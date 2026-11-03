@@ -1,5 +1,18 @@
 [
   {
+    "slug": "que-miramos-en-un-restaurante",
+    "categoria": "cultura",
+    "data": "2026-11-16",
+    "titol_es": "Lo que miramos cuando entramos en un restaurante",
+    "titol_ca": "Què mirem quan entrem en un restaurant",
+    "subtitol_es": "Treinta comensales ven cosas que una pareja no ve nunca",
+    "subtitol_ca": "Trenta comensals veuen coses que una parella no veu mai",
+    "resum_es": "No elegimos el menú: lo propone la casa, con el mismo presupuesto que todas y sabiendo que seremos treinta. Los criterios con los que valoramos, y por qué el voto es secreto hasta la Gala.",
+    "resum_ca": "No triem el menú: el proposa la casa, amb el mateix pressupost que totes i sabent que serem trenta. Els criteris amb què valorem, i per què el vot és secret fins a la Gala.",
+    "img": "assets/img/galliner/cronica/foto-grup.jpg",
+    "min_lectura": 8
+  },
+  {
     "slug": "calcotada-manual-supervivencia",
     "categoria": "curiositats",
     "data": "2026-11-03",
