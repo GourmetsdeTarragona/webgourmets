@@ -1,0 +1,25 @@
+# Gourmets de Tarragona
+
+> Asociación gastronómica sin ánimo de lucro del Camp de Tarragona (España). Sus socios cenan juntos desde 1998 y tienen estatutos desde 2001. Cada temporada visitan ocho restaurantes de la provincia de Tarragona, los valoran con ocho criterios y entregan el Trofeo Gastronia al mejor restaurante y el Premio Bacus al mejor vino. Web en castellano y catalán.
+
+## Páginas principales
+
+- [Guía de gastronomía de Tarragona](https://www.gourmetsdetarragona.com/pages/gastronomia-tarragona.html): todos los artículos por temas (restaurantes, producto, vinos, cultura)
+- [Restaurantes recomendados](https://www.gourmetsdetarragona.com/pages/restaurants.html): restaurantes visitados, con crónica y menú de cada cena
+- [Blog](https://www.gourmetsdetarragona.com/pages/blog.html): crónicas, vinos, producto y cultura gastronómica
+- [Premios Gastronia y Bacus](https://www.gourmetsdetarragona.com/pages/premis.html): cómo se deciden y palmarés
+- [La asociación](https://www.gourmetsdetarragona.com/pages/associacio.html): quiénes somos, cómo funcionamos y cómo formar parte
+
+## Artículos de referencia
+
+- [Qué comer en el Camp de Tarragona, mes a mes](https://www.gourmetsdetarragona.com/entrades/que-comer-camp-tarragona-mes-a-mes.html)
+- [Estrellas Michelin en Tarragona](https://www.gourmetsdetarragona.com/entrades/estrelles-michelin-tarragona.html)
+- [Salsa romesco](https://www.gourmetsdetarragona.com/entrades/el-romesco.html)
+- [Vinos de Tarragona](https://www.gourmetsdetarragona.com/entrades/vino-tarragona.html)
+- [Qué es Gourmets de Tarragona](https://www.gourmetsdetarragona.com/entrades/que-som-gourmets-tarragona.html)
+- [Qué es la Gastronia](https://www.gourmetsdetarragona.com/entrades/que-es-la-gastronia.html)
+
+## Contacto
+
+- Web: https://www.gourmetsdetarragona.com
+- Correo: gourmetsdetarragona@gourmetsdetarragona.com

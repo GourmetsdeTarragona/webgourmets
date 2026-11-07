@@ -5,8 +5,18 @@
     <link>https://www.gourmetsdetarragona.com/pages/blog.html</link>
     <description>Crónicas de restaurantes, vinos, producto y cultura gastronómica del Camp de Tarragona.</description>
     <language>es-ES</language>
-    <lastBuildDate>Tue, 03 Nov 2026 09:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 09:00:00 +0100</lastBuildDate>
     <atom:link href="https://www.gourmetsdetarragona.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>El Pòsit de la Pineda · Vila-seca — Crónica · 8ª visita 2026</title>
+      <link>https://www.gourmetsdetarragona.com/entrades/posit-pineda-cronica-2026.html</link>
+      <guid>https://www.gourmetsdetarragona.com/entrades/posit-pineda-cronica-2026.html</guid>
+      <pubDate>Sat, 07 Nov 2026 09:00:00 +0100</pubDate>
+      <category>Crónica</category>
+      <description>Nos recibieron con nueve vinos propios sobre una mesa y nos sirvieron el blanco y el tinto a la vez para que cada uno eligiera. Un rodaballo memorable, un postre que nadie esperaba y el cierre del recorrido 2026.</description>
+      <media:content url="https://www.gourmetsdetarragona.com/assets/img/posit/cronica/foto-grup.jpg" medium="image"/>
+    </item>
 
     <item>
       <title>Manual de supervivencia en una calçotada — Lo que nadie te explica antes de tu primera teja</title>

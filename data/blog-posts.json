@@ -1,5 +1,19 @@
 [
   {
+    "slug": "posit-pineda-cronica-2026",
+    "categoria": "cronica",
+    "data": "2026-11-07",
+    "titol_es": "El Pòsit de la Pineda · Vila-seca",
+    "titol_ca": "El Pòsit de la Pineda · Vila-seca",
+    "subtitol_es": "Crónica · 8ª visita 2026",
+    "subtitol_ca": "Crònica · 8a visita 2026",
+    "resum_es": "Nos recibieron con nueve vinos propios sobre una mesa y nos sirvieron el blanco y el tinto a la vez para que cada uno eligiera. Un rodaballo memorable, un postre que nadie esperaba y el cierre del recorrido 2026.",
+    "resum_ca": "Ens van rebre amb nou vins propis damunt d'una taula i ens van servir el blanc i el negre alhora perquè cadascú triés. Un turbot memorable, unes postres que ningú no esperava i el tancament del recorregut 2026.",
+    "img": "assets/img/posit/cronica/foto-grup.jpg",
+    "min_lectura": 7,
+    "restaurant": "posit-pineda-2026"
+  },
+  {
     "slug": "que-comer-camp-tarragona-mes-a-mes",
     "categoria": "curiositats",
     "data": "2026-11-03",
