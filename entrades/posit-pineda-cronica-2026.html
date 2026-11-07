@@ -136,7 +136,9 @@
 .e-plats figure{margin:0;}
 .e-plats img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;background:#f3efe7;}
 .e-plats figcaption{font-size:var(--fs-xs);color:var(--muted);font-style:italic;margin-top:8px;padding-left:8px;border-left:2px solid var(--gold);opacity:.85;line-height:1.5;}
-@media(max-width:600px){.e-plats{grid-template-columns:1fr;}}
+.e-plats-3{grid-template-columns:repeat(3,1fr);gap:14px;}
+@media(max-width:860px){.e-plats-3{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.e-plats,.e-plats-3{grid-template-columns:1fr;}}
 </style>
 </style>
 <script>
@@ -230,7 +232,7 @@
   <li><a class="t" href="../pages/blog.html" data-es="Blog" data-ca="Blog">Blog</a></li>
   <li><a class="t" href="../pages/blog.html?cat=recorregut" data-es="Recorrido" data-ca="Recorregut">Recorrido</a></li>
   <li aria-current="page" class="t" data-es="El Pòsit de la Pineda · Vila-seca" data-ca="El Pòsit de la Pineda · Vila-seca">El Pòsit de la Pineda · Vila-seca</li>
-  <li class="e-meta-linia"><time class="t" datetime="2026-11-07" data-es="7 nov 2026" data-ca="7 nov 2026">7 nov 2026</time><span aria-hidden="true">·</span><span>7 min</span></li>
+  <li class="e-meta-linia"><time class="t" datetime="2026-11-07" data-es="7 nov 2026" data-ca="7 nov 2026">7 nov 2026</time><span aria-hidden="true">·</span><span>9 min</span></li>
 </ol></nav>
 <!-- /BLOG:AUTO:MIGES -->
 
@@ -264,10 +266,14 @@
 
   <p class="e-p t" data-es="Los aperitivos fueron tres y los tres iban en serio: carpaccio de picaña madurada sobre pan crujiente, croqueta melosa coronada con un velo de ibérico Joselito, y langostino en crujiente dorado con una salsa suave de zanahoria, coco y lima." data-ca="Els aperitius van ser tres i tots tres anaven de debò: carpaccio de picanya madurada sobre pa cruixent, croqueta melosa coronada amb un vel d'ibèric Joselito, i llagostí en cruixent daurat amb una salsa suau de pastanaga, coco i llima.">Los aperitivos fueron tres y los tres iban en serio: carpaccio de picaña madurada sobre pan crujiente, croqueta melosa coronada con un velo de ibérico Joselito, y langostino en crujiente dorado con una salsa suave de zanahoria, coco y lima.</p>
 
-  <div class="e-plats">
+  <div class="e-plats e-plats-3">
     <figure>
       <img src="../assets/img/posit/cronica/recepcio.jpg" alt="Socios de pie durante el aperitivo, con el servicio de la casa al fondo" loading="lazy">
       <figcaption class="t" data-es="La recepción, antes de sentarse" data-ca="La recepció, abans de seure">La recepción, antes de sentarse</figcaption>
+    </figure>
+    <figure>
+      <img src="../assets/img/posit/cronica/carpaccio.jpg" alt="Carpaccio de picaña madurada sobre pan crujiente, servido en tenedores individuales" loading="lazy">
+      <figcaption class="t" data-es="Carpaccio de picaña madurada" data-ca="Carpaccio de picanya madurada">Carpaccio de picaña madurada</figcaption>
     </figure>
     <figure>
       <img src="../assets/img/posit/cronica/minuta.jpg" alt="La minuta impresa de la cena, en catalán, con el maridaje de cada plato" loading="lazy">
@@ -277,25 +283,43 @@
 
   <div class="e-divider"></div>
   <span class="e-label t" data-es="El parlamento" data-ca="El parlament">El parlamento</span>
-  <h2 class="e-title t" data-es="La casa contada por Àngel Pérez" data-ca="La casa explicada per l'Àngel Pérez">La casa contada por Àngel Pérez</h2>
+  <h2 class="e-title t" data-es="«Hoy podéis estar en mi casa»" data-ca="«Avui podeu ser a casa meva»">«Hoy podéis estar en mi casa»</h2>
 
   <p class="e-p t" data-es="Ya sentados, tomó la palabra Yarritu: unas notas para los socios, el repaso de los próximos compromisos —que a estas alturas del año son los que de verdad importan— y la presentación del restaurante." data-ca="Ja asseguts, va prendre la paraula en Yarritu: unes notes per als socis, el repàs dels pròxims compromisos —que a aquestes altures de l'any són els que de debò importen— i la presentació del restaurant.">Ya sentados, tomó la palabra Yarritu: unas notas para los socios, el repaso de los próximos compromisos —que a estas alturas del año son los que de verdad importan— y la presentación del restaurante.</p>
 
-  <p class="e-p t" data-es="Y entonces habló <strong>Àngel Pérez</strong>, y la cena se detuvo un rato." data-ca="I llavors va parlar l'<strong>Àngel Pérez</strong>, i el sopar es va aturar una estona.">Y entonces habló <strong>Àngel Pérez</strong>, y la cena se detuvo un rato.</p>
+  <p class="e-p t" data-es="Y entonces habló <strong>Àngel Pérez</strong>, y la cena se detuvo un rato. Empezó recordando que ya había compartido mesa con nosotros: <em>«como dice Yarritu, estuve en El Terrat. Cenamos muy bien, estuvimos muy a gusto»</em>. Y siguió con una frase que explica bastante bien cómo se vivió la noche: <em>«hoy, la satisfacción de que podéis estar en mi casa, y espero que también aquí, a nuestra manera, lo disfrutéis»</em>." data-ca="I llavors va parlar l'<strong>Àngel Pérez</strong>, i el sopar es va aturar una estona. Va començar recordant que ja havia compartit taula amb nosaltres: <em>«com diu en Yarritu, vaig ser a El Terrat. Vam sopar molt bé, hi vam estar molt a gust»</em>. I va continuar amb una frase que explica força bé com es va viure la nit: <em>«avui, la satisfacció que pugueu ser a casa meva, i espero que també aquí, a la nostra manera, ho gaudiu»</em>.">Y entonces habló <strong>Àngel Pérez</strong>, y la cena se detuvo un rato. Empezó recordando que ya había compartido mesa con nosotros: <em>«como dice Yarritu, estuve en El Terrat. Cenamos muy bien, estuvimos muy a gusto»</em>. Y siguió con una frase que explica bastante bien cómo se vivió la noche: <em>«hoy, la satisfacción de que podéis estar en mi casa, y espero que también aquí, a nuestra manera, lo disfrutéis»</em>.</p>
 
-  <p class="e-p t" data-es="Contó los inicios: de dónde sale el grupo El Pòsit y cómo se ha ido haciendo a lo largo de medio siglo, desde la cocina marinera de Cambrils hasta hoy. Habló del estilo de la casa y de su cocina con nombres y detalles concretos, que es como se habla cuando se conoce de verdad lo que se cuenta. Y tuvo la elegancia de hablar también de nosotros, poniendo en alto los valores que, dijo, caracterizan a esta asociación." data-ca="Va explicar els inicis: d'on surt el grup El Pòsit i com s'ha anat fent al llarg de mig segle, des de la cuina marinera de Cambrils fins avui. Va parlar de l'estil de la casa i de la seva cuina amb noms i detalls concrets, que és com es parla quan es coneix de debò el que s'explica. I va tenir l'elegància de parlar també de nosaltres, posant en alt els valors que, va dir, caracteritzen aquesta associació.">Contó los inicios: de dónde sale el grupo El Pòsit y cómo se ha ido haciendo a lo largo de medio siglo, desde la cocina marinera de Cambrils hasta hoy. Habló del estilo de la casa y de su cocina con nombres y detalles concretos, que es como se habla cuando se conoce de verdad lo que se cuenta. Y tuvo la elegancia de hablar también de nosotros, poniendo en alto los valores que, dijo, caracterizan a esta asociación.</p>
+  <p class="e-p t" data-es="Contó los inicios: de dónde sale el grupo El Pòsit y cómo se ha ido haciendo a lo largo de medio siglo, desde la cocina marinera de Cambrils hasta hoy. Y definió lo suyo sin adornos: <strong>«nuestra cocina es una cocina sencilla»</strong>. Dicho por alguien que acaba de poner nueve vinos propios sobre una mesa, esa modestia tiene su gracia." data-ca="Va explicar els inicis: d'on surt el grup El Pòsit i com s'ha anat fent al llarg de mig segle, des de la cuina marinera de Cambrils fins avui. I va definir el que és seu sense adorns: <strong>«la nostra cuina és una cuina senzilla»</strong>. Dit per algú que acaba de posar nou vins propis damunt d'una taula, aquesta modèstia té la seva gràcia.">Contó los inicios: de dónde sale el grupo El Pòsit y cómo se ha ido haciendo a lo largo de medio siglo, desde la cocina marinera de Cambrils hasta hoy. Y definió lo suyo sin adornos: <strong>«nuestra cocina es una cocina sencilla»</strong>. Dicho por alguien que acaba de poner nueve vinos propios sobre una mesa, esa modestia tiene su gracia.</p>
 
-  <p class="e-p t" data-es="Fue una charla amena, de las que no se hacen largas." data-ca="Va ser una xerrada amena, de les que no es fan llargues.">Fue una charla amena, de las que no se hacen largas.</p>
+  <p class="e-p t" data-es="Tuvo además la elegancia de hablar de nosotros, poniendo en alto los valores que, dijo, caracterizan a esta asociación. Fue una charla amena, de las que no se hacen largas." data-ca="Va tenir a més l'elegància de parlar de nosaltres, posant en alt els valors que, va dir, caracteritzen aquesta associació. Va ser una xerrada amena, de les que no es fan llargues.">Tuvo además la elegancia de hablar de nosotros, poniendo en alto los valores que, dijo, caracterizan a esta asociación. Fue una charla amena, de las que no se hacen largas.</p>
+
+  <div class="e-plats">
+    <figure>
+      <img src="../assets/img/posit/cronica/parlament.jpg" alt="Los parlamentos, con el atril y el roll-up de Gourmets de Tarragona al fondo" loading="lazy">
+      <figcaption class="t" data-es="Los parlamentos, con una botella de Apropòsit en primer término" data-ca="Els parlaments, amb una ampolla d'Apropòsit en primer terme">Los parlamentos, con una botella de Apropòsit en primer término</figcaption>
+    </figure>
+    <figure>
+      <img src="../assets/img/posit/cronica/sala-sopar.jpg" alt="Socios escuchando desde las mesas redondas, con las copas ya servidas" loading="lazy">
+      <figcaption class="t" data-es="La sala, escuchando. Las copas ya estaban servidas" data-ca="La sala, escoltant. Les copes ja estaven servides">La sala, escuchando. Las copas ya estaban servidas</figcaption>
+    </figure>
+  </div>
 
   <div class="e-divider"></div>
   <span class="e-label t" data-es="El invitado" data-ca="El convidat">El invitado</span>
-  <h2 class="e-title t" data-es="Agustín Falcón y la Costa Daurada que viene" data-ca="Agustín Falcón i la Costa Daurada que ve">Agustín Falcón y la Costa Daurada que viene</h2>
+  <h2 class="e-title t" data-es="«En el turismo hay cosas que cambian; una, no»" data-ca="«Al turisme hi ha coses que canvien; una, no»">«En el turismo hay cosas que cambian; una, no»</h2>
 
-  <p class="e-p t" data-es="El ponente invitado de la noche fue <strong>Agustín Falcón</strong>, responsable de calidad y director técnico de Best Hotels." data-ca="El ponent convidat de la nit va ser l'<strong>Agustín Falcón</strong>, responsable de qualitat i director tècnic de Best Hotels.">El ponente invitado de la noche fue <strong>Agustín Falcón</strong>, responsable de calidad y director técnico de Best Hotels.</p>
+  <p class="e-p t" data-es="El ponente invitado de la noche fue <strong>Agustín Falcón García</strong>, nacido en Las Palmas de Gran Canaria, responsable de calidad y director técnico de Best Hotels." data-ca="El ponent convidat de la nit va ser l'<strong>Agustín Falcón García</strong>, nascut a Las Palmas de Gran Canària, responsable de qualitat i director tècnic de Best Hotels.">El ponente invitado de la noche fue <strong>Agustín Falcón García</strong>, nacido en Las Palmas de Gran Canaria, responsable de calidad y director técnico de Best Hotels.</p>
 
-  <p class="e-p t" data-es="Habló del turismo de la Costa Daurada sin venderlo. Puso sobre la mesa los objetivos y los planes de futuro, sí, pero también los avances ya conseguidos, los inconvenientes que siguen ahí y las mejoras que habrá que afrontar si se quiere llegar a alguna parte. Para una asociación que lleva todo el año hablando de producto y de territorio, escuchar al sector que trae a la gente hasta aquí resultó un cierre más coherente de lo que parece." data-ca="Va parlar del turisme de la Costa Daurada sense vendre'l. Va posar damunt la taula els objectius i els plans de futur, sí, però també els avenços ja aconseguits, els inconvenients que encara hi són i les millores que caldrà afrontar si es vol arribar enlloc. Per a una associació que fa tot l'any parlant de producte i de territori, escoltar el sector que porta la gent fins aquí va resultar un tancament més coherent del que sembla.">Habló del turismo de la Costa Daurada sin venderlo. Puso sobre la mesa los objetivos y los planes de futuro, sí, pero también los avances ya conseguidos, los inconvenientes que siguen ahí y las mejoras que habrá que afrontar si se quiere llegar a alguna parte. Para una asociación que lleva todo el año hablando de producto y de territorio, escuchar al sector que trae a la gente hasta aquí resultó un cierre más coherente de lo que parece.</p>
+  <p class="e-p t" data-es="Arrancó con una confesión que le ganó la sala de entrada: <em>«en el turismo hay cosas que cambian, pero hay una que no cambia: lo poco que me gusta hablar por el micro»</em>. Y, un segundo después, mirando al aparato: <em>«uy, ¿ves? Y ahora, los nervios»</em>." data-ca="Va arrencar amb una confessió que li va guanyar la sala d'entrada: <em>«al turisme hi ha coses que canvien, però n'hi ha una que no canvia: el poc que m'agrada parlar pel micro»</em>. I, un segon després, mirant l'aparell: <em>«ui, ho veus? I ara, els nervis»</em>.">Arrancó con una confesión que le ganó la sala de entrada: <em>«en el turismo hay cosas que cambian, pero hay una que no cambia: lo poco que me gusta hablar por el micro»</em>. Y, un segundo después, mirando al aparato: <em>«uy, ¿ves? Y ahora, los nervios»</em>.</p>
+
+  <p class="e-p t" data-es="Después habló del turismo de la Costa Daurada sin venderlo. Puso sobre la mesa los objetivos y los planes de futuro, sí, pero también los avances ya conseguidos, los inconvenientes que siguen ahí y las mejoras que habrá que afrontar si se quiere llegar a alguna parte. Para una asociación que lleva todo el año hablando de producto y de territorio, escuchar al sector que trae a la gente hasta aquí resultó un cierre más coherente de lo que parece." data-ca="Després va parlar del turisme de la Costa Daurada sense vendre'l. Va posar damunt la taula els objectius i els plans de futur, sí, però també els avenços ja aconseguits, els inconvenients que encara hi són i les millores que caldrà afrontar si es vol arribar enlloc. Per a una associació que fa tot l'any parlant de producte i de territori, escoltar el sector que porta la gent fins aquí va resultar un tancament més coherent del que sembla.">Después habló del turismo de la Costa Daurada sin venderlo. Puso sobre la mesa los objetivos y los planes de futuro, sí, pero también los avances ya conseguidos, los inconvenientes que siguen ahí y las mejoras que habrá que afrontar si se quiere llegar a alguna parte. Para una asociación que lleva todo el año hablando de producto y de territorio, escuchar al sector que trae a la gente hasta aquí resultó un cierre más coherente de lo que parece.</p>
 
   <p class="e-p t" data-es="Como con todos nuestros invitados, se le entregó el trofeo con la imagen de Gastronia." data-ca="Com amb tots els nostres convidats, se li va lliurar el trofeu amb la imatge de Gastronia.">Como con todos nuestros invitados, se le entregó el trofeo con la imagen de Gastronia.</p>
+
+  <figure class="e-foto-gran">
+    <img src="../assets/img/posit/cronica/trofeu.jpg" alt="Agustín Falcón recibiendo el trofeo con la imagen de Gastronia, ante el roll-up de los Gourmets" style="width:auto;max-width:100%;height:auto;max-height:72vh;margin:0 auto;display:block;" loading="lazy">
+    <figcaption class="e-foto-peu t" data-es="Agustín Falcón, con el trofeo Gastronia que entregamos a cada invitado" data-ca="L'Agustín Falcón, amb el trofeu Gastronia que lliurem a cada convidat">Agustín Falcón, con el trofeo Gastronia que entregamos a cada invitado</figcaption>
+  </figure>
 
   <div class="e-divider"></div>
   <span class="e-label t" data-es="Primer plato" data-ca="Primer plat">Primer plato</span>
@@ -305,55 +329,68 @@
 
   <p class="e-p t" data-es="El aceite era de avellana de la <strong>DOP Avellana de Reus</strong>. En esta provincia, eso es casi una declaración de principios: la casa es marinera, pero el campo que tiene detrás también cuenta." data-ca="L'oli era d'avellana de la <strong>DOP Avellana de Reus</strong>. En aquesta província, això és gairebé una declaració de principis: la casa és marinera, però el camp que té al darrere també compta.">El aceite era de avellana de la <strong>DOP Avellana de Reus</strong>. En esta provincia, eso es casi una declaración de principios: la casa es marinera, pero el campo que tiene detrás también cuenta.</p>
 
+  <div class="e-plats e-plats-3">
+    <figure>
+      <img src="../assets/img/posit/cronica/vieira.jpg" alt="Vieira a la plancha con coliflor blanca y morada, brócoli y avellanas, antes de la crema" loading="lazy">
+      <figcaption class="t" data-es="1. Lo que había debajo" data-ca="1. El que hi havia a sota">1. Lo que había debajo</figcaption>
+    </figure>
+    <figure>
+      <img src="../assets/img/posit/cronica/crema-abocant.jpg" alt="Un camarero vierte la crema de coliflor sobre el plato, ya en la mesa" loading="lazy">
+      <figcaption class="t" data-es="2. La crema, vertida en mesa" data-ca="2. La crema, abocada a taula">2. La crema, vertida en mesa</figcaption>
+    </figure>
+    <figure>
+      <img src="../assets/img/posit/cronica/crema.jpg" alt="El primer plato ya terminado, con la crema cubriendo la vieira y las verduras" loading="lazy">
+      <figcaption class="t" data-es="3. Y el plato, ya entero" data-ca="3. I el plat, ja sencer">3. Y el plato, ya entero</figcaption>
+    </figure>
+  </div>
+
   <div class="e-divider"></div>
-  <span class="e-label t" data-es="Segundo plato" data-ca="Segon plat">Segundo plato</span>
+  <span class="e-label t" data-es="Segundo y tercero" data-ca="Segon i tercer">Segundo y tercero</span>
   <h2 class="e-title t" data-es="El rodaballo, que probablemente ganó la noche" data-ca="El turbot, que probablement va guanyar la nit">El rodaballo, que probablemente ganó la noche</h2>
 
-  <p class="e-p t" data-es="<strong>Rodaballo asado sobre patata panadera</strong>, con una salsa delicada de cava, azafrán y mostaza antigua. Punto exacto, lámina que se abría sola y una salsa que acompañaba sin tapar, que con el azafrán de por medio es más difícil de lo que parece." data-ca="<strong>Turbot rostit sobre patata fornera</strong>, amb una salsa delicada de cava, safrà i mostassa antiga. Punt exacte, làmina que s'obria sola i una salsa que acompanyava sense tapar, que amb el safrà pel mig és més difícil del que sembla.">Rodaballo asado sobre patata panadera, con una salsa delicada de cava, azafrán y mostaza antigua. Punto exacto, lámina que se abría sola y una salsa que acompañaba sin tapar, que con el azafrán de por medio es más difícil de lo que parece.</p>
+  <p class="e-p t" data-es="<strong>Rodaballo asado sobre patata panadera</strong>, con una salsa delicada de cava, azafrán y mostaza antigua. Punto exacto, lámina que se abría sola y una salsa que acompañaba sin tapar, que con el azafrán de por medio es más difícil de lo que parece. Si hubiera que quedarse con un plato por puro sabor, y no es fácil, probablemente sería este." data-ca="<strong>Turbot rostit sobre patata fornera</strong>, amb una salsa delicada de cava, safrà i mostassa antiga. Punt exacte, làmina que s'obria sola i una salsa que acompanyava sense tapar, que amb el safrà pel mig és més difícil del que sembla. Si calgués quedar-se amb un plat per pur sabor, i no és fàcil, probablement seria aquest.">Rodaballo asado sobre patata panadera, con una salsa delicada de cava, azafrán y mostaza antigua. Punto exacto, lámina que se abría sola y una salsa que acompañaba sin tapar, que con el azafrán de por medio es más difícil de lo que parece. Si hubiera que quedarse con un plato por puro sabor, y no es fácil, probablemente sería este.</p>
 
-  <p class="e-p t" data-es="Si hubiera que quedarse con un plato por puro sabor, y no es fácil, probablemente sería este." data-ca="Si calgués quedar-se amb un plat per pur sabor, i no és fàcil, probablement seria aquest.">Si hubiera que quedarse con un plato por puro sabor, y no es fácil, probablemente sería este.</p>
+  <p class="e-p t" data-es="Detrás llegó el <strong>filete de vaca</strong> con setas de temporada —noviembre manda— y una reducción de ratafía Apropòsit. La misma ratafía que habíamos visto en la mesa de la entrada, ahora convertida en salsa. La casa firmando otra vez con lo suyo, sin necesidad de decirlo." data-ca="Al darrere va arribar el <strong>filet de vaca</strong> amb bolets de temporada —el novembre mana— i una reducció de ratafia Apropòsit. La mateixa ratafia que havíem vist a la taula de l'entrada, ara convertida en salsa. La casa signant un altre cop amb el que és seu, sense necessitat de dir-ho.">Detrás llegó el filete de vaca con setas de temporada —noviembre manda— y una reducción de ratafía Apropòsit. La misma ratafía que habíamos visto en la mesa de la entrada, ahora convertida en salsa. La casa firmando otra vez con lo suyo, sin necesidad de decirlo.</p>
 
-  <div class="e-divider"></div>
-  <span class="e-label t" data-es="Tercer plato" data-ca="Tercer plat">Tercer plato</span>
-  <h2 class="e-title t" data-es="Filete de vaca, setas y otra vez la casa" data-ca="Filet de vaca, bolets i un altre cop la casa">Filete de vaca, setas y otra vez la casa</h2>
-
-  <p class="e-p t" data-es="<strong>Filete de vaca</strong> con setas de temporada —noviembre manda— y una reducción de ratafía Apropòsit. La misma ratafía que habíamos visto en la mesa de la entrada, ahora convertida en salsa. La casa firmando otra vez con lo suyo, sin necesidad de decirlo." data-ca="<strong>Filet de vaca</strong> amb bolets de temporada —el novembre mana— i una reducció de ratafia Apropòsit. La mateixa ratafia que havíem vist a la taula de l'entrada, ara convertida en salsa. La casa signant un altre cop amb el que és seu, sense necessitat de dir-ho.">Filete de vaca con setas de temporada —noviembre manda— y una reducción de ratafía Apropòsit. La misma ratafía que habíamos visto en la mesa de la entrada, ahora convertida en salsa. La casa firmando otra vez con lo suyo, sin necesidad de decirlo.</p>
-
-  <div class="e-plats e-plats-4">
-    <figure>
-      <img src="../assets/img/posit/cronica/carpaccio.jpg" alt="Carpaccio de picaña madurada sobre pan crujiente, servido en tenedores individuales" loading="lazy">
-      <figcaption class="t" data-es="Carpaccio de picaña madurada" data-ca="Carpaccio de picanya madurada">Carpaccio de picaña madurada</figcaption>
-    </figure>
-    <figure>
-      <img src="../assets/img/posit/cronica/vieira.jpg" alt="Vieira a la plancha con coliflor blanca y morada, brócoli y avellanas en un bol negro" loading="lazy">
-      <figcaption class="t" data-es="La vieira, antes de la crema" data-ca="La vieira, abans de la crema">La vieira, antes de la crema</figcaption>
-    </figure>
+  <div class="e-plats">
     <figure>
       <img src="../assets/img/posit/cronica/rodaballo.jpg" alt="Rodaballo asado sobre patata panadera con salsa de cava, azafrán y mostaza antigua" loading="lazy">
       <figcaption class="t" data-es="Rodaballo, cava y azafrán" data-ca="Turbot, cava i safrà">Rodaballo, cava y azafrán</figcaption>
     </figure>
     <figure>
       <img src="../assets/img/posit/cronica/filet.jpg" alt="Filete de vaca con setas de temporada y patata al horno" loading="lazy">
-      <figcaption class="t" data-es="Filete de vaca con setas" data-ca="Filet de vaca amb bolets">Filete de vaca con setas</figcaption>
+      <figcaption class="t" data-es="Filete de vaca, setas y ratafía de la casa" data-ca="Filet de vaca, bolets i ratafia de la casa">Filete de vaca, setas y ratafía de la casa</figcaption>
     </figure>
   </div>
 
   <div class="e-divider"></div>
   <span class="e-label t" data-es="El plato de la noche" data-ca="El plat de la nit">El plato de la noche</span>
-  <h2 class="e-title t" data-es="El postre que nadie esperaba" data-ca="Les postres que ningú no esperava">El postre que nadie esperaba</h2>
+  <h2 class="e-title t" data-es="Un postre que era un árbol genealógico" data-ca="Unes postres que eren un arbre genealògic">Un postre que era un árbol genealógico</h2>
 
   <p class="e-p t" data-es="La minuta decía «Pastís especial Gourmets Tarragona» y no decía nada más. Ni ingredientes, ni descripción, ni pista. Treinta personas llevaban toda la cena preguntándose qué sería aquello." data-ca="La minuta deia «Pastís especial Gourmets Tarragona» i no deia res més. Ni ingredients, ni descripció, ni pista. Trenta persones portaven tot el sopar preguntant-se què seria allò.">La minuta decía «Pastís especial Gourmets Tarragona» y no decía nada más. Ni ingredientes, ni descripción, ni pista. Treinta personas llevaban toda la cena preguntándose qué sería aquello.</p>
 
-  <p class="e-p t" data-es="Llegó en vaso, con el merengue tostado por encima y las capas asomando por el cristal. Y entonces salieron <strong>Fran y Merce</strong> a explicarlo." data-ca="Va arribar en got, amb la merenga torrada per sobre i les capes guaitant pel vidre. I llavors van sortir en <strong>Fran i la Merce</strong> a explicar-lo.">Llegó en vaso, con el merengue tostado por encima y las capas asomando por el cristal. Y entonces salieron <strong>Fran y Merce</strong> a explicarlo.</p>
+  <p class="e-p t" data-es="Llegó en vaso, con el merengue tostado por encima y las capas asomando por el cristal. Y entonces salieron de la cocina <strong>Fran y Merce</strong>, micrófono en mano, a contarlo." data-ca="Va arribar en got, amb la merenga torrada per sobre i les capes guaitant pel vidre. I llavors van sortir de la cuina en <strong>Fran i la Merce</strong>, micròfon a la mà, a explicar-ho.">Llegó en vaso, con el merengue tostado por encima y las capas asomando por el cristal. Y entonces salieron de la cocina <strong>Fran y Merce</strong>, micrófono en mano, a contarlo.</p>
 
-  <p class="e-p t" data-es="No vamos a destriparlo aquí. Diremos solo que fue <strong>un momento emotivo</strong>, de los que no se preparan y que una sala entera reconoce al instante, y que aquel postre se comió en un silencio distinto del de los otros platos." data-ca="No ho esbudellarem aquí. Direm només que va ser <strong>un moment emotiu</strong>, d'aquells que no es preparen i que una sala sencera reconeix a l'instant, i que aquelles postres es van menjar en un silenci diferent del dels altres plats.">No vamos a destriparlo aquí. Diremos solo que fue <strong>un momento emotivo</strong>, de los que no se preparan y que una sala entera reconoce al instante, y que aquel postre se comió en un silencio distinto del de los otros platos.</p>
+  <p class="e-p t" data-es="Aquel postre no era un postre. Era, dijeron, <strong>«un homenaje a toda la trayectoria y a todos los gustos personales de la familia del Pòsit»</strong>. Y lo fueron desmontando capa por capa, que es cuando la sala entendió lo que tenía delante." data-ca="Aquelles postres no eren unes postres. Eren, van dir, <strong>«un homenatge a tota la trajectòria i a tots els gustos personals de la família del Pòsit»</strong>. I les van anar desmuntant capa per capa, que és quan la sala va entendre el que tenia al davant.">Aquel postre no era un postre. Era, dijeron, <strong>«un homenaje a toda la trayectoria y a todos los gustos personales de la familia del Pòsit»</strong>. Y lo fueron desmontando capa por capa, que es cuando la sala entendió lo que tenía delante.</p>
+
+  <p class="e-p t" data-es="Empezaron por el principio: <strong>una de las fundadoras era una apasionada de la almendra</strong>. De ahí el crujiente de almendra natural de una de las capas y, debajo del todo, el frangipane, que también es almendra. Subiendo, la segunda generación, muy de vainilla: un cremoso de vainilla. Y después una gianduja, esta vez de chocolate blanco. Arriba, para cerrar, algo refrescante." data-ca="Van començar pel principi: <strong>una de les fundadores era una apassionada de l'ametlla</strong>. D'aquí el cruixent d'ametlla natural d'una de les capes i, a sota de tot, el frangipane, que també és ametlla. Pujant, la segona generació, molt de vainilla: un cremós de vainilla. I després una gianduja, aquesta vegada de xocolata blanca. A dalt, per tancar, alguna cosa refrescant.">Empezaron por el principio: <strong>una de las fundadoras era una apasionada de la almendra</strong>. De ahí el crujiente de almendra natural de una de las capas y, debajo del todo, el frangipane, que también es almendra. Subiendo, la segunda generación, muy de vainilla: un cremoso de vainilla. Y después una gianduja, esta vez de chocolate blanco. Arriba, para cerrar, algo refrescante.</p>
+
+  <p class="e-p t" data-es="Es decir: <strong>cada capa de aquel vaso era el gusto preferido de alguien de la casa</strong>, por orden de llegada al mundo. Medio siglo de familia, de abajo arriba, en una cucharada." data-ca="És a dir: <strong>cada capa d'aquell got era el gust preferit d'algú de la casa</strong>, per ordre d'arribada al món. Mig segle de família, de baix a dalt, en una cullerada.">Es decir: <strong>cada capa de aquel vaso era el gusto preferido de alguien de la casa</strong>, por orden de llegada al mundo. Medio siglo de familia, de abajo arriba, en una cucharada.</p>
+
+  <p class="e-p t" data-es="No hace falta explicar por qué fue un momento emotivo, ni por qué aquel postre se comió en un silencio distinto del de los otros platos." data-ca="No cal explicar per què va ser un moment emotiu, ni per què aquelles postres es van menjar en un silenci diferent del dels altres plats.">No hace falta explicar por qué fue un momento emotivo, ni por qué aquel postre se comió en un silencio distinto del de los otros platos.</p>
 
   <p class="e-p t" data-es="Por sabor, el rodaballo. Por lo que ocurrió en la sala, el postre. Y esa es, probablemente, la mejor manera de acabar una temporada." data-ca="Per sabor, el turbot. Pel que va passar a la sala, les postres. I aquesta és, probablement, la millor manera d'acabar una temporada.">Por sabor, el rodaballo. Por lo que ocurrió en la sala, el postre. Y esa es, probablemente, la mejor manera de acabar una temporada.</p>
 
-  <figure class="e-foto-gran">
-    <img src="../assets/img/posit/cronica/postre.jpg" alt="El pastel especial Gourmets Tarragona, servido en vaso con merengue tostado" style="width:auto;max-width:100%;height:auto;max-height:70vh;margin:0 auto;display:block;" loading="lazy">
-    <figcaption class="e-foto-peu t" data-es="El «Pastís especial Gourmets Tarragona». La minuta no decía nada más, y así estaba previsto" data-ca="El «Pastís especial Gourmets Tarragona». La minuta no deia res més, i així estava previst">El «Pastís especial Gourmets Tarragona». La minuta no decía nada más, y así estaba previsto</figcaption>
-  </figure>
+  <div class="e-plats">
+    <figure>
+      <img src="../assets/img/posit/cronica/postre-fran-merce.jpg" alt="Fran y Merce, de cocina, explicando el postre ante la pantalla de El Pòsit" loading="lazy">
+      <figcaption class="t" data-es="Fran y Merce, saliendo de cocina a contar lo que había dentro del vaso" data-ca="En Fran i la Merce, sortint de cuina a explicar què hi havia dins del got">Fran y Merce, saliendo de cocina a contar lo que había dentro del vaso</figcaption>
+    </figure>
+    <figure>
+      <img src="../assets/img/posit/cronica/postre.jpg" alt="El pastel especial Gourmets Tarragona, en vaso y con merengue tostado" loading="lazy">
+      <figcaption class="t" data-es="Cada capa, el gusto preferido de alguien de la familia" data-ca="Cada capa, el gust preferit d'algú de la família">Cada capa, el gusto preferido de alguien de la familia</figcaption>
+    </figure>
+  </div>
 
   <div class="e-divider"></div>
   <span class="e-label t" data-es="Los vinos" data-ca="Els vins">Los vinos</span>
@@ -363,7 +400,7 @@
 
   <p class="e-p t" data-es="Pero hubo una decisión de servicio que merece contarse, porque no la habíamos visto así en ninguna de las ocho visitas. En lugar de imponer el maridaje plato a plato, <strong>la casa sirvió el blanco y el tinto al unísono y dejó que cada comensal eligiera</strong>. Suena a detalle menor y no lo es: convierte el maridaje en una conversación en vez de en una instrucción. Buena experiencia." data-ca="Però hi va haver una decisió de servei que mereix explicar-se, perquè no l'havíem vista així en cap de les vuit visites. En comptes d'imposar el maridatge plat a plat, <strong>la casa va servir el blanc i el negre alhora i va deixar que cada comensal triés</strong>. Sona a detall menor i no ho és: converteix el maridatge en una conversa en lloc d'en una instrucció. Bona experiència.">Pero hubo una decisión de servicio que merece contarse, porque no la habíamos visto así en ninguna de las ocho visitas. En lugar de imponer el maridaje plato a plato, la casa sirvió el blanco y el tinto al unísono y dejó que cada comensal eligiera. Suena a detalle menor y no lo es: convierte el maridaje en una conversación en vez de en una instrucción. Buena experiencia.</p>
 
-  <p class="e-p t" data-es="Pedro fue explicando, uno a uno, los vinos y los platos. Claro, correcto y sin excederse, que es exactamente lo que hay que hacer cuando delante hay treinta personas con ganas de hablar entre ellas." data-ca="En Pedro va anar explicant, un a un, els vins i els plats. Clar, correcte i sense excedir-se, que és exactament el que cal fer quan al davant hi ha trenta persones amb ganes de parlar entre elles.">Pedro fue explicando, uno a uno, los vinos y los platos. Claro, correcto y sin excederse, que es exactamente lo que hay que hacer cuando delante hay treinta personas con ganas de hablar entre ellas.</p>
+  <p class="e-p t" data-es="Pedro fue explicando, uno a uno, los vinos y los platos —también buena parte del postre, antes de que salieran de cocina—. Claro, correcto y sin excederse, que es exactamente lo que hay que hacer cuando delante hay treinta personas con ganas de hablar entre ellas." data-ca="En Pedro va anar explicant, un a un, els vins i els plats —també bona part de les postres, abans que sortissin de cuina—. Clar, correcte i sense excedir-se, que és exactament el que cal fer quan al davant hi ha trenta persones amb ganes de parlar entre elles.">Pedro fue explicando, uno a uno, los vinos y los platos —también buena parte del postre, antes de que salieran de cocina—. Claro, correcto y sin excederse, que es exactamente lo que hay que hacer cuando delante hay treinta personas con ganas de hablar entre ellas.</p>
 
   <div class="e-divider"></div>
   <span class="e-label t" data-es="La sala" data-ca="La sala">La sala</span>
@@ -371,26 +408,33 @@
 
   <p class="e-p t" data-es="La mesa redonda tiene una virtud que la mesa larga no tiene: todo el mundo se ve la cara. Se conversa en grupo y no por parejas, y nadie queda desterrado en una punta. Las mesas estaban bien adornadas, se estaba cómodo y, sencillamente, se estaba bien." data-ca="La taula rodona té una virtut que la taula llarga no té: tothom es veu la cara. Es conversa en grup i no per parelles, i ningú no queda desterrat en una punta. Les taules estaven ben guarnides, s'hi estava còmode i, senzillament, s'hi estava bé.">La mesa redonda tiene una virtud que la mesa larga no tiene: todo el mundo se ve la cara. Se conversa en grupo y no por parejas, y nadie queda desterrado en una punta. Las mesas estaban bien adornadas, se estaba cómodo y, sencillamente, se estaba bien.</p>
 
-  <p class="e-p t" data-es="El servicio fue acertado y de buen ritmo de principio a fin. Y la prueba es siempre la misma, la que no se puede fingir: <strong>no nos dimos cuenta de la hora</strong>, y cuando quisimos mirar habíamos terminado a una hora perfectamente decente." data-ca="El servei va ser encertat i de bon ritme de principi a fi. I la prova és sempre la mateixa, la que no es pot fingir: <strong>no ens vam adonar de l'hora</strong>, i quan vam voler mirar havíem acabat a una hora perfectament decent.">El servicio fue acertado y de buen ritmo de principio a fin. Y la prueba es siempre la misma, la que no se puede fingir: no nos dimos cuenta de la hora, y cuando quisimos mirar habíamos terminado a una hora perfectamente decente.</p>
+  <p class="e-p t" data-es="El servicio, dirigido por Pedro, fue acertado y de buen ritmo de principio a fin. Y la prueba es siempre la misma, la que no se puede fingir: <strong>no nos dimos cuenta de la hora</strong>, y cuando quisimos mirar habíamos terminado a una hora perfectamente decente." data-ca="El servei, dirigit per en Pedro, va ser encertat i de bon ritme de principi a fi. I la prova és sempre la mateixa, la que no es pot fingir: <strong>no ens vam adonar de l'hora</strong>, i quan vam voler mirar havíem acabat a una hora perfectament decent.">El servicio, dirigido por Pedro, fue acertado y de buen ritmo de principio a fin. Y la prueba es siempre la misma, la que no se puede fingir: no nos dimos cuenta de la hora, y cuando quisimos mirar habíamos terminado a una hora perfectamente decente.</p>
 
   <p class="e-p t" data-es="Al final llegaron los cafés, los licores y la ratafía, y todo lo que hiciera falta." data-ca="Al final van arribar els cafès, els licors i la ratafia, i tot el que calgués.">Al final llegaron los cafés, los licores y la ratafía, y todo lo que hiciera falta.</p>
 
   <div class="e-divider"></div>
   <span class="e-label t" data-es="El reconocimiento" data-ca="El reconeixement">El reconocimiento</span>
-  <h2 class="e-title t" data-es="El diploma, de mano del invitado" data-ca="El diploma, de mà del convidat">El diploma, de mano del invitado</h2>
+  <h2 class="e-title t" data-es="«Que lo pongas abajo, en la sala»" data-ca="«Que el posis a baix, a la sala»">«Que lo pongas abajo, en la sala»</h2>
 
   <p class="e-p t" data-es="El diploma conmemorativo de los Gourmets de Tarragona se entregó al terminar. Y hubo un gesto que nos gustó: <strong>no lo entregamos nosotros</strong>. Lo entregó Agustín Falcón, el invitado de la noche, a Pedro." data-ca="El diploma commemoratiu dels Gourmets de Tarragona es va lliurar en acabar. I hi va haver un gest que ens va agradar: <strong>no el vam lliurar nosaltres</strong>. El va lliurar l'Agustín Falcón, el convidat de la nit, a en Pedro.">El diploma conmemorativo de los Gourmets de Tarragona se entregó al terminar. Y hubo un gesto que nos gustó: no lo entregamos nosotros. Lo entregó Agustín Falcón, el invitado de la noche, a Pedro.</p>
 
+  <p class="e-p t" data-es="La entrega fue de todo menos solemne. Entre bromas sobre cuántas botellas de ratafía acaban en según qué casas, alguien resumió el sentido de la placa mejor de lo que lo haría cualquier discurso: <em>«lo que te queremos dar es nuestra presencia, que hemos estado aquí»</em>. Y, acto seguido, la petición práctica: <em>«que lo pongas abajo, en la sala»</em>. Más claro, imposible." data-ca="El lliurament va ser de tot menys solemne. Entre bromes sobre quantes ampolles de ratafia acaben a segons quines cases, algú va resumir el sentit de la placa millor del que ho faria cap discurs: <em>«el que et volem donar és la nostra presència, que hem estat aquí»</em>. I, tot seguit, la petició pràctica: <em>«que el posis a baix, a la sala»</em>. Més clar, impossible.">La entrega fue de todo menos solemne. Entre bromas sobre cuántas botellas de ratafía acaban en según qué casas, alguien resumió el sentido de la placa mejor de lo que lo haría cualquier discurso: <em>«lo que te queremos dar es nuestra presencia, que hemos estado aquí»</em>. Y, acto seguido, la petición práctica: <em>«que lo pongas abajo, en la sala»</em>. Más claro, imposible.</p>
+
+  <figure class="e-foto-gran">
+    <img src="../assets/img/posit/cronica/diploma.jpg" alt="Entrega del diploma de los Gourmets de Tarragona a El Pòsit, de manos del invitado" style="width:auto;max-width:100%;height:auto;max-height:72vh;margin:0 auto;display:block;" loading="lazy">
+    <figcaption class="e-foto-peu t" data-es="El diploma a El Pòsit, entregado por el invitado de la noche a Pedro" data-ca="El diploma a El Pòsit, lliurat pel convidat de la nit a en Pedro">El diploma a El Pòsit, entregado por el invitado de la noche a Pedro</figcaption>
+  </figure>
+
   <p class="e-p t" data-es="Después, la foto de grupo delante de la pantalla, con las dos palabras azules al fondo. Y a casa." data-ca="Després, la foto de grup davant de la pantalla, amb les dues paraules blaves al fons. I cap a casa.">Después, la foto de grupo delante de la pantalla, con las dos palabras azules al fondo. Y a casa.</p>
+
+  <div class="e-divider"></div>
+  <span class="e-label t" data-es="Nuestra mirada" data-ca="La nostra mirada">Nuestra mirada</span>
+  <h2 class="e-title t" data-es="Se cierra el recorrido" data-ca="Es tanca el recorregut">Se cierra el recorrido</h2>
 
   <figure class="e-foto-gran">
     <img src="../assets/img/posit/cronica/foto-grup.jpg" alt="Foto de grupo de los Gourmets de Tarragona con el diploma, delante de la pantalla de El Pòsit" loading="lazy">
     <figcaption class="e-foto-peu t" data-es="La foto de grupo de la octava visita. Con esta se cierra el recorrido de 2026" data-ca="La foto de grup de la vuitena visita. Amb aquesta es tanca el recorregut del 2026">La foto de grupo de la octava visita. Con esta se cierra el recorrido de 2026</figcaption>
   </figure>
-
-  <div class="e-divider"></div>
-  <span class="e-label t" data-es="Nuestra mirada" data-ca="La nostra mirada">Nuestra mirada</span>
-  <h2 class="e-title t" data-es="Se cierra el recorrido" data-ca="Es tanca el recorregut">Se cierra el recorrido</h2>
 
   <p class="e-p t" data-es="Con El Pòsit de la Pineda se acaban las ocho." data-ca="Amb El Pòsit de la Pineda s'acaben les vuit.">Con El Pòsit de la Pineda se acaban las ocho.</p>
 
@@ -399,6 +443,8 @@
   <p class="e-p t" data-es="Lo que sí podemos decir hoy, sin esperar a ningún recuento, es lo otro: que el orgullo de esta noche no era haber cenado bien —que también—, sino <strong>haber completado el recorrido entero un año más</strong>. Y que toca dar las gracias, sin fórmulas, a los ocho restaurantes que nos han abierto la puerta y nos han dejado mirar." data-ca="El que sí que podem dir avui, sense esperar cap recompte, és l'altra cosa: que l'orgull d'aquesta nit no era haver sopat bé —que també—, sinó <strong>haver completat el recorregut sencer un any més</strong>. I que toca donar les gràcies, sense fórmules, als vuit restaurants que ens han obert la porta i ens han deixat mirar.">Lo que sí podemos decir hoy, sin esperar a ningún recuento, es lo otro: que el orgullo de esta noche no era haber cenado bien —que también—, sino haber completado el recorrido entero un año más. Y que toca dar las gracias, sin fórmulas, a los ocho restaurantes que nos han abierto la puerta y nos han dejado mirar.</p>
 
   <p class="e-p t" data-es="Porque es lo único que pretendemos: divulgar la gastronomía del Camp desde una perspectiva sencilla y local, y que llegue lo más lejos posible. Disfrutarla nosotros, de paso. Y, por el camino, hacer sociedad, paisaje y territorio, y poner en valor a las personas —y a los personajes— que hay detrás de cada cocina." data-ca="Perquè és l'única cosa que pretenem: divulgar la gastronomia del Camp des d'una perspectiva senzilla i local, i que arribi tan lluny com es pugui. Gaudir-la nosaltres, de passada. I, pel camí, fer societat, paisatge i territori, i posar en valor les persones —i els personatges— que hi ha darrere de cada cuina.">Porque es lo único que pretendemos: divulgar la gastronomía del Camp desde una perspectiva sencilla y local, y que llegue lo más lejos posible. Disfrutarla nosotros, de paso. Y, por el camino, hacer sociedad, paisaje y territorio, y poner en valor a las personas —y a los personajes— que hay detrás de cada cocina.</p>
+
+  <p class="e-p t" data-es="Como aquel postre, que resultó ser una familia entera servida en un vaso." data-ca="Com aquelles postres, que van resultar ser una família sencera servida en un got.">Como aquel postre, que resultó ser una familia entera servida en un vaso.</p>
 
   <p class="e-p t" data-es="Nos vemos en la Gala." data-ca="Ens veiem a la Gala.">Nos vemos en la Gala.</p>
 
